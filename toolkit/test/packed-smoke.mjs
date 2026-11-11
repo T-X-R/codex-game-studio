@@ -19,7 +19,7 @@ try {
   assert.ok(packed.files.every(file => !file.path.startsWith('src/') && !file.path.includes('.claude')));
   const archive = join(temp, packed.filename);
   const prefix = join(temp, 'cli');
-  execute(npm, ['install', '--prefix', prefix, archive, '--ignore-scripts', '--no-audit', '--no-fund', '--offline']);
+  execute(npm, ['install', '--prefix', prefix, archive, '--ignore-scripts', '--no-audit', '--no-fund', '--prefer-offline']);
   const globalRoot = join(prefix, 'node_modules/@t-x-r/game-studio');
   const globalCli = join(globalRoot, 'dist/cli.js');
   assert.equal(command(globalCli, 'version').status, 'ok');

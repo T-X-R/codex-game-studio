@@ -125,8 +125,8 @@ npm --prefix toolkit run test:browser
 npm pack ./toolkit --pack-destination /path/to/output --ignore-scripts
 ```
 
-`test:pack` exercises a real archive install and uses npm's offline cache; run
-`npm ci` first to populate the locked dependencies. `test:browser` requires an
+`test:pack` bootstraps a real archive install, fetching dependency metadata when
+needed, then verifies subsequent project restores with npm offline mode. `test:browser` requires an
 installed browser. Neither test downloads a browser automatically.
 
 Canonical Codex content lives in `.agents/skills/` and `studio/`. Build output in
