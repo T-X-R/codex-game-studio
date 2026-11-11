@@ -1,5 +1,19 @@
 # Changelog
 
+## Codex Game Studio 0.1.0-alpha.0 — 2026-11-11
+
+Initial executable CLI-and-Skills adaptation: protected project attachment and
+recovery, exact portable runtime restoration, onboarding and three project Skill
+entry points, Web scaffolding/import, static checks, local preview, seeded browser
+capture and static export. Distributed through GitHub as an installation archive;
+not published to the npm registry.
+
+This is not the complete upstream migration. Full role/workflow/hook conversion,
+desktop host validation and advanced engine operations remain open. See
+[implementation status](docs/implementation-status.md).
+
+## Upstream history
+
 What's new in Claude Code Game Studios, written for the people using it.
 
 See [UPGRADING.md](UPGRADING.md) for step-by-step upgrade instructions, and

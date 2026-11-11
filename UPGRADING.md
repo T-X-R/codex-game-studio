@@ -1,3 +1,20 @@
+# Codex Game Studio runtime restoration
+
+The initial alpha has no automatic version upgrade command. A global CLI update
+does not change a project's exact runtime pin. Reattaching with a different version
+is refused; do not delete managed files or overwrite local edits to bypass this.
+
+To restore the existing version, run `game-studio restore --project <directory>`
+using the committed private lock and `runtime.tgz`. For a first installation, supply
+`--archive <downloaded-tgz>` as documented in [README](README.md). Detach previews
+and restores unchanged integration while retaining game artifacts and runtime
+backups. It is not an engine or game-code migration.
+
+The guide below is preserved upstream history for Claude Code Game Studios. Its
+commands and version ladder do not describe Codex Game Studio upgrades.
+
+---
+
 # Upgrading Claude Code Game Studios
 
 This guide covers upgrading your existing game project repo from one version
