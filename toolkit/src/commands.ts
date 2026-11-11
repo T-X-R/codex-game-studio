@@ -1,9 +1,9 @@
-import { readFileSync } from 'node:fs';
+import { metadata } from './metadata.js';
 import { success, StudioError, type Result } from './contract.js';
 import { resolveProject } from './project.js';
 import { readSettings } from './config.js';
+import { setupCommands } from './setup-commands.js';
 
-export const metadata: { name: string; version: string } = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
 export interface Option { type: 'string' | 'boolean'; description: string }
 export interface Input { args: string[]; values: Record<string, string | boolean | undefined> }
 export interface Command {
@@ -19,6 +19,7 @@ export const commonOptions: Record<string, Option> = {
   help: { type: 'boolean', description: 'Show command usage' },
 };
 export const commands: Record<string, Command> = {
+  ...setupCommands,
   'config get': {
     description: 'Read effective project settings with provenance', effect: 'read', maxArgs: 1,
     options: { project: { type: 'string', description: 'Game workspace directory' } },

@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+const fs = require('node:fs');
+const path = require('node:path');
+const { pathToFileURL } = require('node:url');
+const packageName = '@t-x-r/game-studio';
+try {
+  const pinned = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json'), 'utf8'));
+  const runtime = path.join(__dirname, 'node_modules', packageName);
+  const installed = JSON.parse(fs.readFileSync(path.join(runtime, 'package.json'), 'utf8'));
+  if (installed.name !== packageName || installed.version !== pinned.dependencies[packageName]) {
+    throw new Error('Project runtime version differs from its exact pin');
+  }
+  import(pathToFileURL(path.join(runtime, 'dist/cli.js')).href).catch(fail);
+} catch (error) { fail(error); }
+function fail(error) {
+  process.stdout.write(JSON.stringify({ schemaVersion: 1, command: process.argv[2] || 'help',
+    status: 'not_assessed', data: null, artifacts: [], warnings: [],
+    error: { code: 'RUNTIME_UNAVAILABLE', message: `${error.message}. Run game-studio restore --project ${JSON.stringify(path.dirname(__dirname))}.` }
+  }) + '\n');
+  process.exitCode = 3;
+}
