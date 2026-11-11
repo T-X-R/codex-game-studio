@@ -25,9 +25,14 @@ try {
   assert.equal(command(globalCli, 'version').status, 'ok');
   const project = join(temp, '我的 game');
   assert.equal(command(globalCli, 'init', project, '--engine', 'web').status, 'ok');
+  assert.match(await readFile(join(project, '.agents/skills/game-studio-prototype/SKILL.md'), 'utf8'), /name: game-studio-prototype/);
   command(globalCli, 'restore', '--project', project, '--archive', archive, '--offline');
   const launcher = join(project, '.game-studio/run.cjs');
   assert.equal(command(launcher, 'status', '--project', project).data.settings['engine.name'].value, 'Web');
+  command(globalCli, 'prototype', 'scaffold', 'smoke', '--project', project);
+  assert.equal(command(globalCli, 'check', 'prototypes/smoke', '--project', project).status, 'ok');
+  command(globalCli, 'package', 'prototypes/smoke', '--output', 'builds/smoke', '--project', project);
+  assert.ok(await readFile(join(project, 'builds/smoke/index.html')));
   const lock = await readFile(join(project, '.game-studio/package-lock.json'), 'utf8');
   assert.equal(JSON.parse(lock).packages['node_modules/@t-x-r/game-studio'].resolved, 'file:runtime.tgz');
   await rm(archive);

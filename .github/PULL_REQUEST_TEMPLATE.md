@@ -1,27 +1,13 @@
-## Summary
+## Change
 
-Brief description of what this PR does.
+Describe the problem and resulting behavior.
 
-## Type of Change
+## Verification
 
-- [ ] New agent
-- [ ] New skill
-- [ ] New hook or rule
-- [ ] Bug fix
-- [ ] Documentation improvement
-- [ ] Other:
+Record the relevant build, unit, packed-install and live browser/host evidence.
+Name checks that could not run and their practical limits.
 
-## Changes
-
--
--
--
-
-## Checklist
-
-- [ ] I've tested this in a Claude Code session
-- [ ] New agents include the Collaboration Protocol section
-- [ ] New skills use the subdirectory format (`.claude/skills/<name>/SKILL.md`)
-- [ ] Reference docs are updated (agent-roster, skills-reference, hooks-reference, rules-reference)
-- [ ] Hooks use `grep -E` (POSIX) and fail gracefully without jq/python
-- [ ] No hardcoded paths or platform-specific assumptions
+- [ ] Canonical content was changed, not generated package copies.
+- [ ] Existing project files and explicit user scope are preserved.
+- [ ] No unobserved browser, engine, hook or role capability is claimed as passing.
+- [ ] Migration inventory/status was updated when its acceptance evidence changed.

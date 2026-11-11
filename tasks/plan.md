@@ -23,7 +23,7 @@ This proposal covers product requirements, architecture, command contracts, inst
 | R05 | Provide the CLI-plus-Skills experience exemplified by DingTalk Workspace CLI: install capabilities, then use them from Codex conversation. The CLI must perform real operations, not only installation. |
 | R06 | After the user confirms goals and important decisions, continue implementation, verification, and fixes within that scope without approval for every file. |
 | R07 | Publish the adapted project to a new repository owned by the user, with a potentially new name. |
-| R08 | Complete requirements and design before implementation. This deliverable changes documentation only. |
+| R08 | Complete requirements and design before implementation. Design was completed before implementation, which the owner subsequently authorized. |
 
 ### Proposed defaults
 
@@ -31,7 +31,7 @@ The owner authorized implementation according to this plan on 2026-11-11. Use th
 
 | Decision | Proposal | Reason and alternative |
 | --- | --- | --- |
-| Product identity | `Codex Game Studio`; command `game-studio`; scoped npm package `@<owner>/game-studio` | Clear purpose. GitHub/npm ownership and name availability remain to be checked. |
+| Product identity | `Codex Game Studio`; command `game-studio`; scoped npm package `@<owner>/game-studio` | Clear purpose. GitHub owner is T-X-R; npm registry publication is deferred. The scoped package identity is used inside downloadable archives. |
 | Implementation | TypeScript, Node.js 24 LTS minimum; test Node.js 24 and 26 | Fits the existing JavaScript browser driver and Web templates. Go offers standalone binaries but adds another language without removing browser/engine dependencies. |
 | Package structure | One npm package, one repository, no service or daemon | Keeps release and dependency management small. |
 | Installation | Explicit CLI install followed by explicit Codex Skill setup | Avoids silently changing Agent configuration during npm installation. |

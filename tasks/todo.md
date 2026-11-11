@@ -1,17 +1,21 @@
 # Codex Game Studio implementation tasks
 
-Status: Planning only. No task below has been implemented or verified.  
+Status: Implementation in progress. Initial executable alpha; full migration gates remain open. See [implementation evidence](../docs/implementation-status.md).
 Requirements and interfaces: [plan.md](plan.md)  
 Source identities and proposed dispositions: [migration-inventory.md](migration-inventory.md)
 
 ## Execution rules
 
-- Start implementation only in a later authorized task. Keep confirmed requirements; resolve only the proposed decisions that affect the next slice.
+- Implementation was authorized on 2026-11-11. GitHub owner is T-X-R; deliver a GitHub repository and local installation archive, without npm registry publication.
 - Complete dependencies before a task. Record changed paths and evidence below its checkbox when finishing it.
 - Limit one execution slice to approximately five implementation/test/content files. A Skill with many references must be split into numbered child slices before editing, and its parent stays open until all references and behavior pass. The same rule applies to the script/rule work queues.
-- All verification commands in this file are proposed maintainer scripts to be implemented under `toolkit/`; they are not currently available. Live host checks use disposable projects and a test-specific Codex session.
+- Use implemented maintainer scripts under `toolkit/`; remaining verification commands below are target contracts. Current names are `build`, `typecheck`, `test`, `test:pack` and `test:browser`. Live host checks require fresh disposable projects.
 - A migration row requires static validation and the stated behavioral evidence. No row is completed solely because its name/path changed.
 - Checkpoints are release criteria, not requests to reapprove an unchanged scope. User decisions or external publication actions still follow their actual authorization.
+
+## Progress note
+
+The initial alpha implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Three project Skill entry points exist, but their full S-row behavioral migration remains open. All role rows remain open.
 
 ## M0 Compatibility and contracts
 
@@ -28,7 +32,8 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
   - Verification: representative valid/invalid result and argument fixtures; help/schema have one source.
   - Likely files: `toolkit/src/contract.ts`, `toolkit/src/commands.ts`, `toolkit/test/contract.test.ts`, `docs/cli-contract.md`. Scope: M.
 
-- [ ] T03 Create a minimal packaged CLI
+- [x] T03 Create a minimal packaged CLI
+  - Evidence: implemented and covered by unit/packed-install tests; see `docs/implementation-status.md`. Host compatibility remains independently gated.
   - Module: `cli-core`. Dependencies: T02.
   - Acceptance: `version`, `--help`, `schema`, and a JSON error work from an installed archive; no install script changes Agent directories.
   - Verification: build, typecheck and CLI subprocess tests; inspect `npm pack` contents.
@@ -45,7 +50,8 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
   - Verification: fixture matrix for empty/missing/legacy config, nested roots, worktrees, spaces and Unicode; `status --json` never invents a stage.
   - Likely files: `toolkit/src/project.ts`, `toolkit/src/config.ts`, `toolkit/src/status.ts`, `toolkit/test/project.test.ts`, `toolkit/test/config.test.ts`. Scope: M.
 
-- [ ] T05 Build the canonical content archive
+- [x] T05 Build the canonical content archive
+  - Evidence: implemented and covered by unit/packed-install tests; see `docs/implementation-status.md`. Host compatibility remains independently gated.
   - Module: `distribution`. Dependencies: T03.
   - Acceptance: package assets come from one canonical tree; references resolve without the maintainer checkout; document assets are read-only resources.
   - Verification: pack/install into a clean temporary home; resolve a shared resource and a Skill reference; check all paths stay in the payload.
@@ -63,7 +69,8 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
   - Verification: missing runtime, version mismatch, offline operation, local packed archive, and global CLI upgrade while old project remains pinned.
   - Likely files: `toolkit/src/runtime.ts`, `studio/codex/run.cjs.template`, `studio/templates/runtime-package.json`, `toolkit/test/runtime.test.ts`. Scope: M.
 
-- [ ] T08 Implement owned file planning and rollback
+- [x] T08 Implement owned file planning and rollback
+  - Evidence: implemented and covered by unit/packed-install tests; see `docs/implementation-status.md`. Host compatibility remains independently gated.
   - Module: `codex-integration`. Dependencies: T04.
   - Acceptance: mutation plans list all effects; expected hashes protect modified/unowned files; journal and project lock recover partial installation.
   - Verification: dry-run creates nothing; failure injection restores prior owned files; repeated application is a no-op; concurrent change yields conflict.
@@ -212,7 +219,7 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
   - Acceptance: reviewed release notes, compatibility matrix, archive/checksums and exact source commit are ready before any publish; final repository/npm names match the user's ownership.
   - Verification: release artifact inspection, then public clean install and repository-template walkthrough after authorized publication.
   - Likely files: release notes, compatibility record, release workflow and at most two metadata files. Scope: M plus external actions.
-  - Publishing is not authorized by this planning task. Do not create a repository or reserve an npm package now.
+  - The owner has since authorized implementation and GitHub/archive delivery. npm registry publication is explicitly deferred. Initial alpha publication does not close this full-migration release task.
 
 - [ ] C5 Completion checkpoint
   - All requirements R01–R08 have traceable outcomes. All claimed supported paths have evidence. No open item is hidden by a passing static scan. Optional plugin distribution stays outside this release gate.

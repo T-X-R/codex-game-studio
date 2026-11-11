@@ -9,14 +9,30 @@
     "type": "git",
     "url": "https://github.com/T-X-R/codex-game-studio.git"
   },
-  "bin": { "game-studio": "dist/cli.js" },
-  "engines": { "node": ">=24 <27" },
-  "files": ["dist", "resources", "LICENSE", "README.md"],
+  "bin": {
+    "game-studio": "dist/cli.js"
+  },
+  "engines": {
+    "node": ">=24 <27"
+  },
+  "files": [
+    "dist",
+    "resources",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc && node build.mjs",
     "typecheck": "tsc --noEmit",
-    "test": "node --test test/*.test.mjs"
+    "test": "node --test test/*.test.mjs",
+    "test:pack": "node test/packed-smoke.mjs",
+    "test:browser": "node test/browser-smoke.mjs"
   },
-  "dependencies": { "yaml": "2.9.1", "smol-toml": "1.9.1" },
-  "devDependencies": { "@types/node": "24.19.2", "typescript": "5.9.3" }
+  "dependencies": {
+    "yaml": "2.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "typescript": "5.9.3"
+  }
 }

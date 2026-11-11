@@ -5,7 +5,7 @@ import { StudioError } from './contract.js';
 import { canonicalRoot, readText, safePath } from './files.js';
 import { planInstall } from './install.js';
 import { metadata } from './metadata.js';
-import { runtimeFiles } from './runtime.js';
+import { runtimeFiles, inspectRuntime } from './runtime.js';
 import { resourceFiles, resourcePath } from './resources.js';
 import { readConfig } from './config.js';
 
@@ -31,7 +31,7 @@ project.local.yaml
 
 function appendBlock(before: string | null, block: string, start: string, end: string) {
   if (before?.includes(start)) {
-    if (before.split(start).length !== 2 || before.split(end).length !== 2) {
+    if (before.split(start).length !== 2 || before.split(end).length !== 2 || before.indexOf(end) < before.indexOf(start)) {
       throw new StudioError('FILE_CONFLICT', 'Malformed or duplicate managed integration markers', 4);
     }
     return before.slice(0, before.indexOf(start)) + block + before.slice(before.indexOf(end) + end.length);
@@ -55,6 +55,10 @@ export async function planAttach(rootInput: string, options: { initialize?: bool
     if (!engine) throw new StudioError('NEEDS_INPUT', 'Choose --engine web, godot, unity, or unreal', 4);
   }
   await readConfig(await safePath(root, 'project.yaml'));
+  const runtime = await inspectRuntime(root);
+  if (runtime.expectedVersion && runtime.expectedVersion !== metadata.version) {
+    throw new StudioError('UNSUPPORTED_MIGRATION', 'This project pins a different toolkit version. Attach cannot silently upgrade it; use its matching archive.', 4);
+  }
   const files = await runtimeFiles();
   const merges: Record<string, string> = {};
   for (const [path, block, start, end] of [

@@ -46,3 +46,15 @@ test('onboarding setup previews, is idempotent, and removes only its own files',
   await setupSkill(root, true);
   assert.equal(await readFile(join(root, 'skills/game-studio/personal.md'), 'utf8'), 'keep');
 });
+
+
+test('reattach cannot silently replace a project runtime pin with a newer global version', async t => {
+  const root = await fixture(t);
+  await applyInstall(await planAttach(root));
+  const path = join(root, '.game-studio/package.json');
+  const original = JSON.parse(await readFile(path, 'utf8'));
+  original.dependencies['@t-x-r/game-studio'] = '0.0.1';
+  await writeFile(path, JSON.stringify(original));
+  await assert.rejects(planAttach(root), { code: 'UNSUPPORTED_MIGRATION' });
+  assert.equal(JSON.parse(await readFile(path, 'utf8')).dependencies['@t-x-r/game-studio'], '0.0.1');
+});
