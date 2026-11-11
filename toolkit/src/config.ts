@@ -73,6 +73,11 @@ function flatten(value: ObjectValue, prefix = '', result: ObjectValue = {}): Obj
 }
 
 export async function readSettings(root: string, requested?: string[]): Promise<{ settings: Record<string, Setting>; warnings: string[] }> {
+  for (const key of requested ?? []) {
+    if (!/^[a-zA-Z0-9_]+(?:\.[a-zA-Z0-9_]+)*$/.test(key) || key.split('.').some(part => ['__proto__', 'prototype', 'constructor'].includes(part))) {
+      throw new StudioError('INVALID_ARGUMENT', `Invalid configuration key: ${key}`);
+    }
+  }
   const project = flatten(await readConfig(join(root, 'project.yaml')));
   const local = flatten(await readConfig(join(root, 'project.local.yaml')));
   const warnings: string[] = [];

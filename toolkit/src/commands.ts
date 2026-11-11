@@ -42,14 +42,14 @@ export const commands: Record<string, Command> = {
   },
   version: {
     description: 'Show the running toolkit version', effect: 'read',
-    run: () => success('version', metadata),
+    run: () => success('version', { name: metadata.name, version: metadata.version }),
   },
   schema: {
     description: 'Describe an implemented command', effect: 'read', minArgs: 1, maxArgs: 2,
     run: ({ args }) => {
       const name = args.join(' ');
       const command = commands[name];
-      if (!command) throw new StudioError('INVALID_ARGUMENT', `Unknown command: ${name}`);
+      if (!Object.hasOwn(commands, name) || !command) throw new StudioError('INVALID_ARGUMENT', `Unknown command: ${name}`);
       return success('schema', { name, description: command.description, effect: command.effect,
         minArgs: command.minArgs ?? 0, maxArgs: command.maxArgs ?? 0,
         options: { ...commonOptions, ...command.options } });

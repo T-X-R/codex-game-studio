@@ -6,11 +6,33 @@ import { safePath } from './files.js';
 import { scaffoldPrototype, importPrototype, packagePrototype } from './prototype.js';
 import { startPreview } from './preview.js';
 import { checkPrototype } from './check.js';
+import { capturePrototype } from './capture.js';
 
 const project: Option = { type: 'string', description: 'Game workspace directory' };
 const dryRun: Option = { type: 'boolean', description: 'Describe effects without creating files or starting a server' };
 async function root(input: Input) { return resolveProject(input.values.project as string | undefined); }
 export const gameCommands: Record<string, Command> = {
+  capture: { description: 'Record a seeded Web replay, browser log and screenshot from a temporary game copy', effect: 'process', minArgs: 1, maxArgs: 1,
+    options: { project, 'dry-run': dryRun, output: { type: 'string', description: 'New project-relative evidence directory' },
+      browser: { type: 'string', description: 'Installed Chromium-family executable path' },
+      log: { type: 'string', description: 'Replay inputs, e.g. Enter ArrowRight:1.5 wait:1' }, seed: { type: 'string', description: 'Positive deterministic seed (default 1)' },
+      timeout: { type: 'string', description: 'Maximum real time in milliseconds (1000–600000, default 60000)' },
+      hookless: { type: 'boolean', description: 'Instrument an imported game without window.game; CSS animation, workers and pointer lock are not covered' } },
+    run: async input => {
+      const data = await capturePrototype(await root(input), input.args[0]!, input.values.output as string ?? `production/evidence/capture-${Date.now()}`, {
+        browser: input.values.browser as string | undefined, log: input.values.log as string | undefined,
+        seed: input.values.seed === undefined ? undefined : Number(input.values.seed),
+        timeoutMs: input.values.timeout === undefined ? undefined : Number(input.values.timeout),
+        hookless: !!input.values.hookless, dryRun: !!input.values['dry-run'],
+      });
+      const result = success('capture', data);
+      if ('artifacts' in data && data.artifacts) result.artifacts = data.artifacts.files.map(file => ({ path: file.path, type: file.path.endsWith('.png') ? 'screenshot' : 'evidence', sha256: file.sha256 }));
+      if (data.exitCode !== 0) {
+        process.exitCode = data.exitCode; result.status = data.exitCode === 3 ? 'not_assessed' : 'failed';
+        result.error = { code: data.exitCode === 124 ? 'TIMEOUT' : data.exitCode === 130 ? 'INTERRUPTED' : data.exitCode === 5 ? 'CHECK_FAILED' : 'ASSESSMENT_INCOMPLETE', message: 'Inspect the captured report and browser log.' };
+      }
+      return result;
+    } },
   'prototype scaffold': { description: 'Create the fixed-step Web prototype starter in prototypes/<name>', effect: 'write', minArgs: 1, maxArgs: 1,
     options: { project, 'dry-run': dryRun, title: { type: 'string', description: 'Player-facing title' }, question: { type: 'string', description: 'The prototype hypothesis' } },
     run: async input => success('prototype scaffold', await scaffoldPrototype(await root(input), input.args[0]!,

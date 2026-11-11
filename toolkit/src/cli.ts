@@ -41,17 +41,17 @@ try {
   }
   const { values, positionals } = parsed;
   if (positionals.length === 0) {
-    if (Object.keys(values).some(key => !(key in commonOptions))) throw new StudioError('INVALID_ARGUMENT', 'A command is required');
+    if (Object.keys(values).some(key => !Object.hasOwn(commonOptions, key))) throw new StudioError('INVALID_ARGUMENT', 'A command is required');
     process.stdout.write(values.json ? `${JSON.stringify(success('help', { commands: Object.fromEntries(Object.entries(commands).map(([key, value]) => [key, value.description])) }))}\n`
       : `Codex Game Studio\n\n${Object.entries(commands).map(([key, value]) => `  ${key.padEnd(22)} ${value.description}`).join('\n')}\n`);
   } else {
     const pair = positionals.slice(0, 2).join(' ');
-    name = pair in commands ? pair : positionals[0]!;
+    name = Object.hasOwn(commands, pair) ? pair : positionals[0]!;
     const command = commands[name];
-    if (!command) throw new StudioError('INVALID_ARGUMENT', `Unknown command: ${name}`);
+    if (!Object.hasOwn(commands, name) || !command) throw new StudioError('INVALID_ARGUMENT', `Unknown command: ${name}`);
     const allowed = { ...commonOptions, ...command.options };
     for (const key of Object.keys(values)) {
-      if (!(key in allowed)) throw new StudioError('INVALID_ARGUMENT', `--${key} is not accepted by ${name}`);
+      if (!Object.hasOwn(allowed, key)) throw new StudioError('INVALID_ARGUMENT', `--${key} is not accepted by ${name}`);
     }
     const args = positionals.slice(name.split(' ').length);
     if (values.help) {

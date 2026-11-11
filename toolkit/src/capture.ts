@@ -1,0 +1,75 @@
+import { access, mkdtemp, readFile, rm, mkdir, writeFile } from 'node:fs/promises';
+import { constants } from 'node:fs';
+import { delimiter, dirname, join, resolve } from 'node:path';
+import { tmpdir } from 'node:os';
+import { pathToFileURL } from 'node:url';
+import { StudioError } from './contract.js';
+import { safePath } from './files.js';
+import { exists } from './project.js';
+import { resourcePath } from './resources.js';
+import { collect, writeNewDirectory } from './prototype.js';
+import { runProcess } from './process.js';
+
+export async function findBrowser(explicit = process.env.GAME_STUDIO_BROWSER): Promise<string> {
+  const candidates = explicit ? [resolve(explicit)] : [
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+    ...['PROGRAMFILES', 'PROGRAMFILES(X86)', 'LOCALAPPDATA'].flatMap(key => process.env[key] ? [join(process.env[key]!, 'Google/Chrome/Application/chrome.exe'), join(process.env[key]!, 'Microsoft/Edge/Application/msedge.exe')] : []),
+    ...(process.env.PATH ?? '').split(delimiter).flatMap(path => ['chromium', 'chromium-browser', 'google-chrome', 'chrome-headless-shell'].map(name => join(path, name))),
+  ];
+  for (const candidate of candidates) {
+    try { await access(candidate, constants.X_OK); return candidate; }
+    catch (error) { if (!['ENOENT', 'EACCES', 'ENOTDIR'].includes((error as NodeJS.ErrnoException).code ?? '')) throw error; }
+  }
+  throw new StudioError('DEPENDENCY_MISSING', 'Configure --browser or GAME_STUDIO_BROWSER with an installed Chromium-family executable', 3);
+}
+
+export function parseConsole(stderr: string) {
+  const consoleLines = stderr.split('\n').filter(line => /:CONSOLE[:(]/.test(line))
+    .map(line => line.replace(/^[^\]]*\]\s*"/, '').replace(/", source: .*$/, ''));
+  return { console: consoleLines, rows: consoleLines.filter(line => line.startsWith('RUN|')).map(line => line.slice(4).split('|')),
+    uncaught: consoleLines.filter(line => line.startsWith('Uncaught')) };
+}
+
+export async function capturePrototype(project: string, folder: string, output: string,
+  options: { browser?: string; log?: string; seed?: number; timeoutMs?: number; hookless?: boolean; dryRun?: boolean } = {}) {
+  const browser = await findBrowser(options.browser);
+  const seed = options.seed ?? 1;
+  const timeoutMs = options.timeoutMs ?? 60_000;
+  if (!Number.isSafeInteger(seed) || seed < 1 || !Number.isSafeInteger(timeoutMs) || timeoutMs < 1000 || timeoutMs > 600_000) {
+    throw new StudioError('INVALID_ARGUMENT', 'Seed must be a positive integer; timeout must be 1000–600000 ms');
+  }
+  const source = await safePath(project, folder);
+  const destination = await safePath(project, output);
+  if (await exists(destination)) throw new StudioError('FILE_CONFLICT', 'Capture output must be a new evidence directory', 4);
+  if (options.dryRun) return { exitCode: 0, project, source, output, browser, seed, log: options.log ?? 'wait:1', temporaryGameCopy: true };
+  const files = await collect(source);
+  const driver = await readFile(await resourcePath('studio/scripts/one-shot-driver.js'), 'utf8');
+  const html = files['index.html']!.toString('utf8');
+  if (!/<script\b/i.test(html)) throw new StudioError('ASSESSMENT_UNAVAILABLE', 'Replay requires a script-bearing HTML game', 3);
+  files['index.html'] = Buffer.from(html.replace(/<script\b/i, () => `<script>\n${driver}\n</script>\n<script`));
+  const temporary = await mkdtemp(join(tmpdir(), 'game-studio-capture-'));
+  try {
+    for (const [path, content] of Object.entries(files)) {
+      const target = join(temporary, 'game', path);
+      await mkdir(dirname(target), { recursive: true }); await writeFile(target, content);
+    }
+    const page = pathToFileURL(join(temporary, 'game/index.html'));
+    page.search = new URLSearchParams({ manual: '1', seed: String(seed), log: options.log ?? 'wait:1',
+      limit: String(Math.max(1000, timeoutMs - 5000)), render: 'cheap', ...(options.hookless ? { hookless: '1' } : {}) }).toString();
+    const screenshot = join(temporary, 'screenshot.png');
+    const execution = await runProcess(browser, ['--headless=new', `--user-data-dir=${join(temporary, 'profile')}`, '--no-first-run',
+      '--no-default-browser-check', '--hide-scrollbars', '--enable-logging=stderr', '--v=0', '--use-gl=angle', '--use-angle=swiftshader-webgl',
+      '--enable-unsafe-swiftshader', '--window-size=1280,720', '--virtual-time-budget=500', `--screenshot=${screenshot}`, page.href], { timeoutMs });
+    const observations = parseConsole(execution.stderr);
+    const png = await exists(screenshot) ? await readFile(screenshot) : null;
+    const complete = observations.rows.some(row => row[0] === 'done' && row[3] !== 'real time');
+    const failed = observations.uncaught.length > 0 || observations.rows.some(row => ['crash', 'error', 'nonfinite', 'badinput', 'botfail'].includes(row[0]!));
+    const exitCode = [124, 130].includes(execution.exitCode) ? execution.exitCode : failed ? 5 : !png || !complete || execution.exitCode !== 0 ? 3 : 0;
+    const report = { exitCode, browser, seed, log: options.log ?? 'wait:1', hookless: !!options.hookless, source: folder,
+      browserExitCode: execution.exitCode, replayComplete: complete, ...observations, judgment: 'Recorded replay evidence; design quality and human play acceptance are not assessed.' };
+    const evidence: Record<string, Buffer> = { 'report.json': Buffer.from(`${JSON.stringify(report, null, 2)}\n`), 'browser.log': Buffer.from(execution.stderr) };
+    if (png) evidence['screenshot.png'] = png;
+    const artifacts = await writeNewDirectory(project, output, evidence, false);
+    return { ...report, artifacts };
+  } finally { await rm(temporary, { recursive: true, force: true }); }
+}

@@ -11,7 +11,7 @@ function prototypeName(name: string) {
   if (!/^[a-z0-9][a-z0-9-]{0,39}$/.test(name)) throw new StudioError('INVALID_ARGUMENT', 'Prototype name must contain 1–40 lowercase letters, digits or hyphens, starting with a letter or digit');
   return `prototypes/${name}`;
 }
-async function writeNewDirectory(project: string, relative: string, files: Files, dryRun: boolean) {
+export async function writeNewDirectory(project: string, relative: string, files: Files, dryRun: boolean) {
   const target = await safePath(project, relative);
   if (await exists(target)) throw new StudioError('FILE_CONFLICT', `Destination already exists: ${relative}`, 4);
   for (const path of Object.keys(files)) await safePath(target, path);
@@ -53,7 +53,7 @@ export async function scaffoldPrototype(project: string, name: string, title = n
   return writeNewDirectory(project, relative, files, dryRun);
 }
 
-async function collect(source: string, packaging = false): Promise<Files> {
+export async function collect(source: string, packaging = false): Promise<Files> {
   const files: Files = {};
   const excluded = new Set(['node_modules', 'dist', ...(packaging ? ['evidence', 'tune.js', 'bot.js', 'brief.md', 'feel-log.md', 'REPORT.md'] : [])]);
   async function visit(relative: string) {

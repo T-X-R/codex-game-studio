@@ -18,7 +18,7 @@ test('version returns one structured result without diagnostics on stdout', () =
 });
 
 test('unknown commands and flags fail with a machine-readable error', () => {
-  for (const args of [['invented'], ['version', '--invented'], ['version', 'extra']]) {
+  for (const args of [['invented'], ['constructor'], ['toString'], ['schema', 'constructor'], ['version', '--invented'], ['version', 'extra']]) {
     const result = run(...args, '--json');
     assert.equal(result.status, 2);
     assert.equal(result.body().status, 'failed');

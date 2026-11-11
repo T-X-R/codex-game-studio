@@ -29,6 +29,9 @@ try {
   const launcher = join(project, '.game-studio/run.cjs');
   assert.equal(command(launcher, 'status', '--project', project).data.settings['engine.name'].value, 'Web');
   const lock = await readFile(join(project, '.game-studio/package-lock.json'), 'utf8');
+  assert.equal(JSON.parse(lock).packages['node_modules/@t-x-r/game-studio'].resolved, 'file:runtime.tgz');
+  await rm(archive);
+  assert.ok((await readFile(join(project, '.game-studio/runtime.tgz'))).length > 0);
   command(globalCli, 'restore', '--project', project, '--offline');
   assert.equal(await readFile(join(project, '.game-studio/package-lock.json'), 'utf8'), lock);
   const packageFile = join(globalRoot, 'package.json');

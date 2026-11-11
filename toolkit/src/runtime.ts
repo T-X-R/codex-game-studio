@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
@@ -54,15 +54,23 @@ export async function restoreRuntime(project: string, archive?: string, dryRun =
   const lock = await safePath(project, '.game-studio/package-lock.json');
   const locked = await exists(lock);
   if (archive && locked) throw new StudioError('FILE_CONFLICT', 'A runtime lock already exists; restore it without --archive', 4);
+  if (!locked && !archive && metadata.private) throw new StudioError('DEPENDENCY_MISSING', 'This build is distributed as a GitHub archive. For the first restore, supply --archive /path/to/game-studio.tgz.', 3);
   const args = [locked ? 'ci' : 'install', '--ignore-scripts', '--no-audit', '--no-fund'];
-  if (archive) args.push(resolve(archive));
+  if (archive) args.push(join(root, 'runtime.tgz'));
   if (offline) args.push('--offline');
   const plan = { project, expectedVersion: runtime.expectedVersion, process: { executable: 'npm', args, cwd: root },
-    network: !offline, writes: ['.game-studio/node_modules/', ...(!locked ? ['.game-studio/package-lock.json'] : [])],
+    network: !offline, writes: ['.game-studio/node_modules/', ...(!locked ? ['.game-studio/package-lock.json'] : []), ...(archive ? ['.game-studio/runtime.tgz'] : [])],
     archive: archive ? resolve(archive) : null };
   if (dryRun) return plan;
   const packagePath = await safePath(project, '.game-studio/package.json');
   const original = (await readText(packagePath))!;
+  if (archive) {
+    const target = await safePath(project, '.game-studio/runtime.tgz');
+    const content = await readFile(resolve(archive));
+    if (await exists(target)) {
+      if (!(await readFile(target)).equals(content)) throw new StudioError('FILE_CONFLICT', 'Project runtime.tgz differs from the selected archive', 4);
+    } else await writeFile(target, content, { flag: 'wx' });
+  }
   try {
     await execute(process.execPath, [await npmPath(), ...args], { cwd: root, timeout: 120_000, maxBuffer: 2 * 1024 * 1024,
       env: { ...process.env, npm_config_ignore_scripts: 'true' } });
@@ -72,6 +80,8 @@ export async function restoreRuntime(project: string, archive?: string, dryRun =
   if (archive) {
     const value = JSON.parse((await readText(lock))!);
     value.packages[''].dependencies = JSON.parse(original).dependencies;
+    if (!value.packages[`node_modules/${metadata.name}`]) throw new StudioError('RUNTIME_MISMATCH', 'Archive did not install the expected toolkit package', 4);
+    value.packages[`node_modules/${metadata.name}`].resolved = 'file:runtime.tgz';
     await atomicWrite(lock, `${JSON.stringify(value, null, 2)}\n`);
   }
   if ((await inspectRuntime(project)).state !== 'ready') throw new StudioError('RUNTIME_MISMATCH', 'Restored archive does not match the project version pin', 4);
