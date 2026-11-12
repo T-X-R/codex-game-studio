@@ -70,3 +70,23 @@ not a behavioral pass; manually review outcomes against this matrix.
 Static/resource/pack tests do not close a native scenario. Keep unrun cases and
 the full source matrix open; report actual limitations rather than a percentage
 derived from passing unit tests.
+
+## Recorded CLI subset — 2026-11-12
+
+[The reviewed record](../../../docs/evidence/gate-check-skill-2026-11-12.json)
+covers 13 fresh installed-project scenarios and preserves three earlier attempts
+with their fixture/documentation corrections. Actual 0/1/2/4-role panels and
+three authorized stage transactions are observed; this is not full matrix
+completion. In particular, the standard-panel fixture correctly rejects thin,
+inconsistent GDDs. It does not replace the source's fully adequate positive
+Technical Setup context fixture or its missing-architecture variant.
+
+After building, run `node toolkit/test/gate-check-host.mjs <scenario>` with
+supported Node and an authenticated native Codex CLI. Available scenarios:
+`concept-advance`, `missing-no-bypass`, `placeholder`, `production-unplayed`,
+`not-applicable`, `standard-panel`, `full-panel`, `minimal-panel`, `missing-panel`,
+`concerns-unknown`, `concerns-advance`, `choose-target`, `negative`.
+The runner creates an isolated project, validates packed resources, checks
+allowed file effects and removes its temporary project-trust profile. It does
+not trust Hooks. Native exit zero deliberately yields wrapper exit 3 pending
+semantic/trace review; do not count that wrapper result alone as a pass.

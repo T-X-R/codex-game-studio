@@ -1,0 +1,612 @@
+{
+  "date": "2026-11-12",
+  "status": "partial",
+  "scope": "Selected native gate-check behavior, not complete S025 or host acceptance",
+  "implementationCommit": "1d69b28",
+  "integrationCorrectionCommit": "96b420a",
+  "environment": {
+    "codex": "0.162.0",
+    "node": "24.22.2",
+    "platform": "macOS ARM64"
+  },
+  "method": "Fresh packed install and Unicode project per scenario; before/after regular-file hashes; native parent and child traces; manual review of reports and actual tool use. Wrapper exit 3 means review pending, not failure or automatic pass.",
+  "syntheticHumanEvidence": true,
+  "cases": [
+    {
+      "scenario": "concept-advance",
+      "status": "PASS",
+      "scopeOfPass": "Authorized PASS advancement; no extra catalog blockers; both stage records synchronized.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-hE0cMR",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf80-c1d8-7211-b7a9-47a0d5ae669e",
+      "parentTraceSha256": "c2d8ca5cabbcfc86115f2499e4341e5dfb61e3b4c8d23e3cca32332e7f57fc68",
+      "fixtureSha256": "4c91af0dcd0b83f62db86ae81b0bf42e8f2804175e603231111d8840fc23828c",
+      "packageIntegrity": "sha512-aIAst+j9OtB2uxVIj+Jpo/TUhf3YQzhOvjQelBDfOXpG2aMT1dJp3+VkyUcezsYbYNLlggu8Rh8TueMOdjz1WA==",
+      "finalSha256": "3615237c7e25e54413f1adbad42d393cbdd3d701d08bc3e05beae068b79705d2",
+      "gateVerdict": "PASS",
+      "stageBefore": "Concept",
+      "stageAfter": "Systems Design",
+      "preservedRegularFiles": 421,
+      "changed": [
+        "project.yaml",
+        "production/stage.txt"
+      ],
+      "added": [
+        "production/gate-checks/concept.md",
+        ".game-studio/backups/e038c771-1c30-445c-b37e-7b7ace7a2f28.json"
+      ],
+      "transactionBackups": [
+        ".game-studio/backups/e038c771-1c30-445c-b37e-7b7ace7a2f28.json"
+      ],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": true,
+      "phaseFilesRead": [
+        "gate-systems-design.md"
+      ],
+      "reports": {
+        "production/gate-checks/concept.md": "5ec75bf4710638928ff0059fd8b9493c3cf1642f9451c2aecaabd6c6b21300e4"
+      },
+      "reviews": [],
+      "integrationGuideSha256": "9f144ae1eec83c5e698250df7bf8f75f7c9877ce6d3e1acde3f36ff6eb94bb77"
+    },
+    {
+      "scenario": "missing-no-bypass",
+      "status": "PASS",
+      "scopeOfPass": "Missing required concept; bypass request did not manufacture artifacts or advance.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-rjRujs",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf7d-a98e-7c32-bb8b-f7ccec5211af",
+      "parentTraceSha256": "3e90ee6bc609d06b3d86ec6a00ee0e7217ea4d632cfd1f59c6390ae203b995fd",
+      "fixtureSha256": "6c9fa42829babc63db13103d7761adff7c0adac7a167438017a5103e69713adb",
+      "packageIntegrity": "sha512-aIAst+j9OtB2uxVIj+Jpo/TUhf3YQzhOvjQelBDfOXpG2aMT1dJp3+VkyUcezsYbYNLlggu8Rh8TueMOdjz1WA==",
+      "finalSha256": "300f527bf1681f8b03c1a583fb5c73ff3e20a0c8a71a393fcb2877810b0b89e7",
+      "gateVerdict": "FAIL",
+      "stageBefore": "Concept",
+      "stageAfter": "Concept",
+      "preservedRegularFiles": 419,
+      "changed": [],
+      "added": [
+        "production/gate-checks/missing.md"
+      ],
+      "transactionBackups": [],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": true,
+      "phaseFilesRead": [
+        "gate-systems-design.md"
+      ],
+      "reports": {
+        "production/gate-checks/missing.md": "8c8191f587bfe43d0614961315b690e87e7168065be0f67417e94ed90374c888"
+      },
+      "reviews": [],
+      "integrationGuideSha256": "9f144ae1eec83c5e698250df7bf8f75f7c9877ce6d3e1acde3f36ff6eb94bb77"
+    },
+    {
+      "scenario": "placeholder",
+      "status": "PASS",
+      "scopeOfPass": "Placeholder content remained unknown despite an old approval; response-only audit preserved all files.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-wIXwKP",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf7d-a98e-7ff2-8160-98cf48aebcbf",
+      "parentTraceSha256": "7485722a6514e6bf7283f8a402b58a6bcc0d6bc876dee3132c10dc4ca8b8cc31",
+      "fixtureSha256": "120e80f1d2f6a1b2d2433650273af38f2589a26d3004fb22036b594d2c75cc3f",
+      "packageIntegrity": "sha512-aIAst+j9OtB2uxVIj+Jpo/TUhf3YQzhOvjQelBDfOXpG2aMT1dJp3+VkyUcezsYbYNLlggu8Rh8TueMOdjz1WA==",
+      "finalSha256": "fc53f5fe65c60531c0f00d5211acd5e5a9e04560f06c1a3327e552e5da59a140",
+      "gateVerdict": "NOT ASSESSED",
+      "stageBefore": "Concept",
+      "stageAfter": "Concept",
+      "preservedRegularFiles": 423,
+      "changed": [],
+      "added": [],
+      "transactionBackups": [],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": true,
+      "phaseFilesRead": [
+        "gate-systems-design.md"
+      ],
+      "reports": {},
+      "reviews": [],
+      "integrationGuideSha256": "9f144ae1eec83c5e698250df7bf8f75f7c9877ce6d3e1acde3f36ff6eb94bb77"
+    },
+    {
+      "scenario": "production-unplayed",
+      "status": "PASS",
+      "scopeOfPass": "Minimal current-build cycle executed six VM assertions; unplayed fun remained unknown, with no dropped slice requirement.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-r4mbZN",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf80-cd2d-7510-9121-6bfbf030816f",
+      "parentTraceSha256": "a181d50d4e2acab409c6d6e02511b6e9489d88a6fa28891fddaf75eca2b9bf79",
+      "fixtureSha256": "733fd9f4cdb8cfaf1dbeeb9448bef85b2945ec8e16c8fcce8cbcea575bd0d8aa",
+      "packageIntegrity": "sha512-aIAst+j9OtB2uxVIj+Jpo/TUhf3YQzhOvjQelBDfOXpG2aMT1dJp3+VkyUcezsYbYNLlggu8Rh8TueMOdjz1WA==",
+      "finalSha256": "1dd3b84919a826e1a8e633aa805af882b9278c936dcd531544ec318b382b6c25",
+      "gateVerdict": "NOT ASSESSED",
+      "stageBefore": "Pre-Production",
+      "stageAfter": "Pre-Production",
+      "preservedRegularFiles": 424,
+      "changed": [],
+      "added": [
+        "production/gate-checks/production.md"
+      ],
+      "transactionBackups": [],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": true,
+      "phaseFilesRead": [
+        "gate-production.md"
+      ],
+      "reports": {
+        "production/gate-checks/production.md": "8848c0dca0848575f499f6f38a09a9212e768f0323781914bf71485cc9d453b5"
+      },
+      "reviews": [],
+      "integrationGuideSha256": "9f144ae1eec83c5e698250df7bf8f75f7c9877ce6d3e1acde3f36ff6eb94bb77"
+    },
+    {
+      "scenario": "not-applicable",
+      "status": "PASS",
+      "scopeOfPass": "Explicit not-applicable minimal design gate skipped directors despite lean review; authorized stage transaction completed.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-p44hxl",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf80-c8d7-7343-9c59-e709adb2836b",
+      "parentTraceSha256": "34cb5dc405cd06271b0117f985a1378f55175d31042e04ea420f527a3dd3c3fc",
+      "fixtureSha256": "ba951bcea255e974d04bb4088642661125c88fac8d1326f2bb572f0f9dbd3479",
+      "packageIntegrity": "sha512-aIAst+j9OtB2uxVIj+Jpo/TUhf3YQzhOvjQelBDfOXpG2aMT1dJp3+VkyUcezsYbYNLlggu8Rh8TueMOdjz1WA==",
+      "finalSha256": "56205ba75e213aaa1ae310972117577e7aee3dc2b72933efb7b08edaeb1e8dfc",
+      "gateVerdict": "PASS",
+      "stageBefore": "Systems Design",
+      "stageAfter": "Technical Setup",
+      "preservedRegularFiles": 418,
+      "changed": [
+        "project.yaml",
+        "production/stage.txt"
+      ],
+      "added": [
+        "production/gate-checks/technical.md",
+        ".game-studio/backups/4e5abcc0-f6d2-4473-b4de-175229f63397.json"
+      ],
+      "transactionBackups": [
+        ".game-studio/backups/4e5abcc0-f6d2-4473-b4de-175229f63397.json"
+      ],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": true,
+      "phaseFilesRead": [
+        "gate-technical-setup.md"
+      ],
+      "reports": {
+        "production/gate-checks/technical.md": "31da07d19f030d373493c2a9ae1b41820bf62b65843ff2a1e47a961511b341b5"
+      },
+      "reviews": [],
+      "integrationGuideSha256": "9f144ae1eec83c5e698250df7bf8f75f7c9877ce6d3e1acde3f36ff6eb94bb77"
+    },
+    {
+      "scenario": "standard-panel",
+      "status": "PASS",
+      "scopeOfPass": "Two actual directors; technical rejection of generic rules and unexplained integration retained; future architecture not a blocker.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-DtuwtG",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf85-21f4-7ff0-b5b5-010a34ab5948",
+      "parentTraceSha256": "6056b26ead852872361cd7f6828effaf0188a0f8c2147ac22df606c9bfef40eb",
+      "fixtureSha256": "caf8198217960d23926bda7eb1aad634db46ba7d180808b9467dd7a505de3009",
+      "packageIntegrity": "sha512-aIAst+j9OtB2uxVIj+Jpo/TUhf3YQzhOvjQelBDfOXpG2aMT1dJp3+VkyUcezsYbYNLlggu8Rh8TueMOdjz1WA==",
+      "finalSha256": "4f1ba0d9adce756389695239d605a06383774b81bb12a0f36cacaf1e463d870b",
+      "gateVerdict": "FAIL",
+      "stageBefore": "Systems Design",
+      "stageAfter": "Systems Design",
+      "preservedRegularFiles": 428,
+      "changed": [],
+      "added": [
+        "production/gate-checks/standard-panel.md"
+      ],
+      "transactionBackups": [],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": true,
+      "phaseFilesRead": [
+        "gate-technical-setup.md"
+      ],
+      "reports": {
+        "production/gate-checks/standard-panel.md": "3bcfc1e9f60d3b1744ec8d76ab5199dcc951654ce4ee77db260646385accd6cf"
+      },
+      "reviews": [
+        {
+          "role": "game-studio-technical-director",
+          "childThreadId": "01a1cf85-e097-7c61-9b01-fa19418e4d3e",
+          "traceSha256": "5428c81184a37918f8530b2441540ef37d9ae5322b62c2e9ef35edbab28b5b6d",
+          "startedAt": "2026-11-12T11:30:19.958Z",
+          "finalAt": "2026-11-12T11:31:07.906Z",
+          "gateRead": "td-phase-gate.md",
+          "verdict": "TD-PHASE-GATE: NOT READY",
+          "inheritedParentSettings": true,
+          "roleSha256": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd"
+        },
+        {
+          "role": "game-studio-producer",
+          "childThreadId": "01a1cf86-1785-7233-9a87-1d91cda3ba0c",
+          "traceSha256": "739a98498216de4fc4d6b8cbbcf2f6bf40d2282b3a73e86496c50181d5e9d129",
+          "startedAt": "2026-11-12T11:30:34.020Z",
+          "finalAt": "2026-11-12T11:31:25.021Z",
+          "gateRead": "pr-phase-gate.md",
+          "verdict": "PR-PHASE-GATE: READY",
+          "inheritedParentSettings": true,
+          "roleSha256": "bd05d4e2a1489c7a50898252d559e4c21bd66d476fe5ec82d3d9e761eb669ff6"
+        }
+      ],
+      "integrationGuideSha256": "9f144ae1eec83c5e698250df7bf8f75f7c9877ce6d3e1acde3f36ff6eb94bb77"
+    },
+    {
+      "scenario": "full-panel",
+      "status": "PASS",
+      "scopeOfPass": "Four actual directors; creative/producer concerns retained alongside technical/art READY; no stage authorization inferred.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-mbapdO",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf85-134a-7672-a3da-e3cb0847466b",
+      "parentTraceSha256": "9614e05b03cb3939f36a787531a1cc76a6895edf60c688a7b2f2f48a370f471e",
+      "fixtureSha256": "76ab41e55aa4a3bdd7df59d2ba0c5ac61c3a1032c362f62351904b02229b3521",
+      "packageIntegrity": "sha512-aIAst+j9OtB2uxVIj+Jpo/TUhf3YQzhOvjQelBDfOXpG2aMT1dJp3+VkyUcezsYbYNLlggu8Rh8TueMOdjz1WA==",
+      "finalSha256": "a03ef5b3da63c502d710b3c5e6f998776a576665506f7b50dc991870b66c991a",
+      "gateVerdict": "CONCERNS",
+      "stageBefore": "Concept",
+      "stageAfter": "Concept",
+      "preservedRegularFiles": 423,
+      "changed": [],
+      "added": [
+        "production/gate-checks/full-panel.md"
+      ],
+      "transactionBackups": [],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": true,
+      "phaseFilesRead": [
+        "gate-systems-design.md"
+      ],
+      "reports": {
+        "production/gate-checks/full-panel.md": "eb673306348ebbc972ea1cc717e3a59ec615221b82b74ad28e0f7763f0e8a448"
+      },
+      "reviews": [
+        {
+          "role": "game-studio-creative-director",
+          "childThreadId": "01a1cf85-ab79-7192-a6c6-3b00462f61b6",
+          "traceSha256": "34e877176d9874555a57ea91fc806c4cf92dd90bd79148aa56a6bbeb7c011632",
+          "startedAt": "2026-11-12T11:30:06.364Z",
+          "finalAt": "2026-11-12T11:30:50.037Z",
+          "gateRead": "cd-phase-gate.md",
+          "verdict": "CD-PHASE-GATE: CONCERNS",
+          "inheritedParentSettings": true,
+          "roleSha256": "6c8f2bbc9c3214223c3a76973e64341752cbf1e2dec9cb595271d3a2b91aeb40"
+        },
+        {
+          "role": "game-studio-technical-director",
+          "childThreadId": "01a1cf85-dccf-7482-8274-5b9b814f7da1",
+          "traceSha256": "0ca502d8d3c23a923a1e0134e54d2dd3b6c8bd23c64862f3f1766a47a8e53fcf",
+          "startedAt": "2026-11-12T11:30:18.989Z",
+          "finalAt": "2026-11-12T11:30:50.087Z",
+          "gateRead": "td-phase-gate.md",
+          "verdict": "TD-PHASE-GATE: READY",
+          "inheritedParentSettings": true,
+          "roleSha256": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd"
+        },
+        {
+          "role": "game-studio-producer",
+          "childThreadId": "01a1cf86-09f2-7cf2-b26a-55c8fba13017",
+          "traceSha256": "37bbe954f935903ddb63b86805b8ebfc57e71ef6272eab40bf888c1ddf536e20",
+          "startedAt": "2026-11-12T11:30:30.552Z",
+          "finalAt": "2026-11-12T11:30:59.485Z",
+          "gateRead": "pr-phase-gate.md",
+          "verdict": "PR-PHASE-GATE: CONCERNS",
+          "inheritedParentSettings": true,
+          "roleSha256": "bd05d4e2a1489c7a50898252d559e4c21bd66d476fe5ec82d3d9e761eb669ff6"
+        },
+        {
+          "role": "game-studio-art-director",
+          "childThreadId": "01a1cf86-909c-78a3-81b5-b3e0822fadc6",
+          "traceSha256": "b5f1cab93999965f7c48d034da4001113dfc28992150a06119880674f36b4fac",
+          "startedAt": "2026-11-12T11:31:05.021Z",
+          "finalAt": "2026-11-12T11:31:38.671Z",
+          "gateRead": "ad-phase-gate.md",
+          "verdict": "AD-PHASE-GATE: READY",
+          "inheritedParentSettings": true,
+          "roleSha256": "0ec48b5b04954bf89ecc71a70f0b943233988c86decbb4fefe0b3a1b8ed34a9f"
+        }
+      ],
+      "integrationGuideSha256": "9f144ae1eec83c5e698250df7bf8f75f7c9877ce6d3e1acde3f36ff6eb94bb77"
+    },
+    {
+      "scenario": "missing-panel",
+      "status": "PASS",
+      "scopeOfPass": "Four deliberately removed roles remained unavailable despite package documentation; no substitute reviewer or stage change.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-HuvikB",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf8d-ef23-7712-a30e-53348897c002",
+      "parentTraceSha256": "ff940f532b1ac62433c3bf5fe509fec0a0639ef2d191658ed6343e3be40bbee6",
+      "fixtureSha256": "317d370b9656c2aede8a73c4dd3d59b01953a617b2f6eb09f1d80dc06c29fd5e",
+      "packageIntegrity": "sha512-ADjw0TweRBN7mRTq4DkVei8Isf7tgsT2Xo+2NroSbF2i13i6Vwv9CNEcAX51coJ2BHVTtMbHjgJPE/QZ6Md4Ew==",
+      "finalSha256": "3504aa644942b4b7c586b4bd977077418f877d005c7eb2a10a8dbb95e5f3959f",
+      "gateVerdict": "NOT ASSESSED",
+      "stageBefore": "Concept",
+      "stageAfter": "Concept",
+      "preservedRegularFiles": 419,
+      "changed": [],
+      "added": [
+        "production/gate-checks/missing-panel.md"
+      ],
+      "transactionBackups": [],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": true,
+      "phaseFilesRead": [
+        "gate-systems-design.md"
+      ],
+      "reports": {
+        "production/gate-checks/missing-panel.md": "8781967aebaaad9931301103e04c43bb41c8ceb78be89cb7d84a104c374f62ad"
+      },
+      "reviews": [],
+      "integrationGuideSha256": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928"
+    },
+    {
+      "scenario": "concerns-unknown",
+      "status": "PASS",
+      "scopeOfPass": "Accepted prototype concern did not clear required unknown concept/review evidence or permit advancement.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-LlULo8",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf88-b120-7522-be69-6c5715c778c5",
+      "parentTraceSha256": "90a5e3961bdc3e9349baac9344868f7f082bc2a56dcd9eea237d93aeabe0237e",
+      "fixtureSha256": "c9fad3bcc2619e8ca567579754c8375186fbbe6f5af38fc502962dee992f220e",
+      "packageIntegrity": "sha512-aIAst+j9OtB2uxVIj+Jpo/TUhf3YQzhOvjQelBDfOXpG2aMT1dJp3+VkyUcezsYbYNLlggu8Rh8TueMOdjz1WA==",
+      "finalSha256": "dbc9e231df008a68f9727ac807478dc966665aab323205347e4608e40927c6a4",
+      "gateVerdict": "CONCERNS",
+      "stageBefore": "Concept",
+      "stageAfter": "Concept",
+      "preservedRegularFiles": 420,
+      "changed": [],
+      "added": [
+        "production/gate-checks/concerns-unknown.md"
+      ],
+      "transactionBackups": [],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": true,
+      "phaseFilesRead": [
+        "gate-systems-design.md"
+      ],
+      "reports": {
+        "production/gate-checks/concerns-unknown.md": "774faf266da82bc858fddd358ce6f6c8bb579b3e53c61d515f3efd549acd32dd"
+      },
+      "reviews": [],
+      "integrationGuideSha256": "9f144ae1eec83c5e698250df7bf8f75f7c9877ce6d3e1acde3f36ff6eb94bb77"
+    },
+    {
+      "scenario": "choose-target",
+      "status": "PASS",
+      "scopeOfPass": "Unspecified target prompted confirmation after reading stage; no phase definition or gate checks executed.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-FdZRcj",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf89-9d6b-7eb1-8b42-e5be811c8117",
+      "parentTraceSha256": "f72e4cc06740c559c5d60091e7e0451affd504922cea8d8616d3e6b359a8b7c1",
+      "fixtureSha256": "ddfd09e78116ff8654f88166fb3d8b3c9467d122acbe5d2f0b7873952f87fe1c",
+      "packageIntegrity": "sha512-aIAst+j9OtB2uxVIj+Jpo/TUhf3YQzhOvjQelBDfOXpG2aMT1dJp3+VkyUcezsYbYNLlggu8Rh8TueMOdjz1WA==",
+      "finalSha256": "3092f45d8ceac5025077c6491863a97d1117ae4c595e7073205772286417b0fb",
+      "gateVerdict": null,
+      "stageBefore": "Concept",
+      "stageAfter": "Concept",
+      "preservedRegularFiles": 419,
+      "changed": [],
+      "added": [],
+      "transactionBackups": [],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": true,
+      "phaseFilesRead": [],
+      "reports": {},
+      "reviews": [],
+      "integrationGuideSha256": "9f144ae1eec83c5e698250df7bf8f75f7c9877ce6d3e1acde3f36ff6eb94bb77"
+    },
+    {
+      "scenario": "negative",
+      "status": "PASS",
+      "scopeOfPass": "Ordinary score question read the implementation and explained subtraction; no gate Skill or assessment ran.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-WP7z6M",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf8a-d5b7-7c63-b9e0-36f2d43be67f",
+      "parentTraceSha256": "bc0fe3da11def57b7983e3b7709eb6db4b07dd32d38e0af16fad5b69c3479003",
+      "fixtureSha256": "6cacf3083d676aee05943356faec097d22ebde278a6f8b455aed4e931a912d4f",
+      "packageIntegrity": "sha512-aIAst+j9OtB2uxVIj+Jpo/TUhf3YQzhOvjQelBDfOXpG2aMT1dJp3+VkyUcezsYbYNLlggu8Rh8TueMOdjz1WA==",
+      "finalSha256": "bef781791806cf50adaa1dbcc1575e4598596645f3397179542baed7407b8c7a",
+      "gateVerdict": null,
+      "stageBefore": "Concept",
+      "stageAfter": "Concept",
+      "preservedRegularFiles": 420,
+      "changed": [],
+      "added": [],
+      "transactionBackups": [],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": false,
+      "phaseFilesRead": [],
+      "reports": {},
+      "reviews": [],
+      "integrationGuideSha256": "9f144ae1eec83c5e698250df7bf8f75f7c9877ce6d3e1acde3f36ff6eb94bb77"
+    },
+    {
+      "scenario": "minimal-panel",
+      "status": "PASS",
+      "scopeOfPass": "Only Producer ran under minimal/lean; full concept requirements dropped, recommended prototype gap retained as advisory.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-VLo41Y",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf8c-8dce-7562-ace4-a63b4628840e",
+      "parentTraceSha256": "49ae95b49d66c695a421c1e323acc6a83d981d5f214b25ead85c847669354154",
+      "fixtureSha256": "89e694b8c5b39734c2a3e60ae57d2c68aec90acb39cd831a542b3a556dbe6db8",
+      "packageIntegrity": "sha512-aIAst+j9OtB2uxVIj+Jpo/TUhf3YQzhOvjQelBDfOXpG2aMT1dJp3+VkyUcezsYbYNLlggu8Rh8TueMOdjz1WA==",
+      "finalSha256": "5a7b5a8a1a0701ee99d7731d3f298537e7d18e02801bfc33cec80c513be4fc56",
+      "gateVerdict": "CONCERNS",
+      "stageBefore": "Concept",
+      "stageAfter": "Concept",
+      "preservedRegularFiles": 420,
+      "changed": [],
+      "added": [
+        "production/gate-checks/minimal-panel.md"
+      ],
+      "transactionBackups": [],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": true,
+      "phaseFilesRead": [
+        "gate-systems-design.md"
+      ],
+      "reports": {
+        "production/gate-checks/minimal-panel.md": "e51510f3f65802db8a9ff43dab8d6fd1aeee58f369911ec02bc189e3c1d3c34c"
+      },
+      "reviews": [
+        {
+          "role": "game-studio-producer",
+          "childThreadId": "01a1cf8d-3bf4-7d60-bf41-deb4f293bf76",
+          "traceSha256": "37b3d13af16c4c9100d2a4eaeeda9325299cf1af3470a6723171cb5e0902c0b4",
+          "startedAt": "2026-11-12T11:38:22.100Z",
+          "finalAt": "2026-11-12T11:39:42.244Z",
+          "gateRead": "pr-phase-gate.md",
+          "verdict": "PR-PHASE-GATE: READY",
+          "inheritedParentSettings": true,
+          "roleSha256": "bd05d4e2a1489c7a50898252d559e4c21bd66d476fe5ec82d3d9e761eb669ff6"
+        }
+      ],
+      "integrationGuideSha256": "9f144ae1eec83c5e698250df7bf8f75f7c9877ce6d3e1acde3f36ff6eb94bb77"
+    },
+    {
+      "scenario": "concerns-advance",
+      "status": "PASS",
+      "scopeOfPass": "Specific acceptance of the sole disclosed prototype risk allowed advancement; Accepted Risks recorded without additional acceptance.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-EwBfg3",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf8c-8e08-7dd3-8104-3490a566532d",
+      "parentTraceSha256": "4143fd242133cef035f825f1d9324af1aa2d39522cb0b0ce549abd44a8c8793b",
+      "fixtureSha256": "2c8e302169e629272631871998f7da174fb0bccb536d297bc36267c085d37cf9",
+      "packageIntegrity": "sha512-aIAst+j9OtB2uxVIj+Jpo/TUhf3YQzhOvjQelBDfOXpG2aMT1dJp3+VkyUcezsYbYNLlggu8Rh8TueMOdjz1WA==",
+      "finalSha256": "44e0fb3b8e3361f56e61a220926794b352e373b8a18d5bcae8da2037a275f10f",
+      "gateVerdict": "CONCERNS",
+      "stageBefore": "Concept",
+      "stageAfter": "Systems Design",
+      "preservedRegularFiles": 419,
+      "changed": [
+        "project.yaml",
+        "production/stage.txt"
+      ],
+      "added": [
+        "production/gate-checks/concerns-advance.md",
+        ".game-studio/backups/2f576df4-dad7-468d-8a5e-1ca3ea37d2af.json"
+      ],
+      "transactionBackups": [
+        ".game-studio/backups/2f576df4-dad7-468d-8a5e-1ca3ea37d2af.json"
+      ],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "skillRead": true,
+      "phaseFilesRead": [
+        "gate-systems-design.md"
+      ],
+      "reports": {
+        "production/gate-checks/concerns-advance.md": "ff6ede4f483e0c03f867646830c59087fd9295be081a889a194987568fa6b615"
+      },
+      "reviews": [],
+      "integrationGuideSha256": "9f144ae1eec83c5e698250df7bf8f75f7c9877ce6d3e1acde3f36ff6eb94bb77"
+    }
+  ],
+  "resourceHashes": {
+    ".agents/skills/game-studio-gate-check/SKILL.md": "c44235895fa2e7ca9d74b81e7ddc1a85b47dcf3d8d29f2386851b91aa9f6afa2",
+    "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+    ".agents/skills/game-studio-gate-check/references/tiers.md": "7b83670f1896d6afec730680d8e66f8a2da93e8c6d2b367ef329b74bfab1129d",
+    ".agents/skills/game-studio-gate-check/references/checks.md": "6dc8613a624a5e006ed598c332e3b45cbe0e515877f4bc7297b888d4154092fc",
+    ".agents/skills/game-studio-gate-check/references/assessment.md": "3544a911f45850ed9635a20a8ac31e915cc42dd0908de073623d7e74cf8eb507",
+    ".agents/skills/game-studio-gate-check/references/verdict.md": "78dede610abe38fe28b6707335873dc74108f8562dbd037c89b58482007e977e",
+    ".agents/skills/game-studio-gate-check/references/stage.md": "cd03851f8215590edcba87c2a1c91f44f5d69d6b73b1756566b91ab252fa6026",
+    ".agents/skills/game-studio-gate-check/references/next-steps.md": "6443e4dfe7ea98eb4cf5e0a24be5cf1fa718645703687d4eaa4f40544188b49f",
+    "studio/docs/phase-gates/gate-systems-design.md": "2bf3080875e097ed153ff6ef303317a3be7993b5a1d85d12df5d9f6becd94549",
+    "studio/docs/phase-gates/gate-technical-setup.md": "10021966f9408b2e3c0e2639ee8bbfaf1568140541f4fc8c2fbf6235499d1ceb",
+    "studio/docs/phase-gates/gate-pre-production.md": "d256209ed7ae1b4aa08d085e31d75a605589759fc1d866f4f42b6e4af95721aa",
+    "studio/docs/phase-gates/gate-production.md": "ccf343a824617181fb40f923b713527e0ca7cc8ece651f9e7ee6ab68aa8dc2fb",
+    "studio/docs/phase-gates/gate-polish.md": "1e74d920a54faf6e4e681b7c1482731b9ff0e02210a48498b950a883edaa44fc",
+    "studio/docs/phase-gates/gate-release.md": "77d27d23d239530681af9ff975c94b3b34dfd5c895d89d5544f4238642ff1f9c",
+    "studio/docs/director-gates/cd-phase-gate.md": "a36b7f5e08c51b13118c617fea0a1948de67e6054b353f17116ec857af5276e9",
+    "studio/docs/director-gates/td-phase-gate.md": "779d05d502a2f89671cc7e9bb9c9731b57161b9d342c711c244dee9b36910f5c",
+    "studio/docs/director-gates/pr-phase-gate.md": "12765fb3c2c77c7793f443af70ac6be2d3f9f6ea2bfa2699b6e595b5e35c2537",
+    "studio/docs/director-gates/ad-phase-gate.md": "52366568d4d39eeb658ab938faf69aefe867d456453854a32f7973baeb314eaf",
+    "studio/templates/difficulty-curve.md": "fee8fb308a4828830c81f2e97a6002cea53a7564dc63aa9563fef682b3fd3818",
+    "studio/templates/player-journey.md": "8e682f3eb6e2f6811a25c4a2b0aadaa6536b80d8e53f382d011febbbabb14399"
+  },
+  "earlierAttempts": [
+    {
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-T1nj8Q",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 1,
+      "parentThreadId": "01a1cf7d-a9f5-7281-b9ce-b61b2972effa",
+      "traceSha256": "5576b7ff020298712e2ef1d09ba383780018d39597b77bca399b5acc6cdf99c8",
+      "fixtureSha256": "2c180ad36c59d10aa76d716d46b5c623609226dc3e72416d06fd5610d6965207",
+      "finalSha256": "5f10c1f2afb89bb5b6c308e66a98c5e901384e14ef0ae9b4c6e726075ad3a3cd",
+      "finding": "Native PASS stage transition was correct; wrapper rejected the legitimate transaction backup. a3a2c4a verifies exact backup project/version/paths and before/after hashes. Fresh hE0cMR rerun passed scope verification."
+    },
+    {
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-ftf6MB",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf85-0d49-7561-bf4f-a553ac4f1a73",
+      "traceSha256": "f5071c34156ea2791cdcf35c371898fd8ea4d0555aa6c553e53c1b903e4fe1f8",
+      "fixtureSha256": "ba2f1d8314923e017862a3671e1d6381015a597529b4e5ce4766f27a2f7f733a",
+      "finalSha256": "55897497d049a05795ba98f8c35564f62bbce238e86e5bc5b0b7dbbeb2f4d7b5",
+      "finding": "Original concerns-unknown prompt confirmed a required review had never happened, correctly producing FAIL. This did not exercise the intended mixed CONCERNS/unknown branch. Corrected prompt makes review occurrence unknown; fresh LlULo8 run preserves both required unknowns and the concern."
+    },
+    {
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gate-check-6wfJzd",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cf89-9d4b-7430-97ca-669231e2d19a",
+      "traceSha256": "76ffa8dbd77090eee82ed2b73aed1c10b85e165e6bf0f686fac627391b735d8d",
+      "fixtureSha256": "ae995e75ca97c1cc24bbbaa4b1d68e9df55fd091d29c7eee0066ef84f354a70a",
+      "finalSha256": "8f4706a261c654ef254a10c39aa2de971bee3bb4eb9a341a5ca316336891a258",
+      "finding": "Missing-role behavior was correct, but report repeated stale packaged guidance claiming only five roles. 96b420a updates the guide to nine partial roles and distinguishes package availability from actual host availability. Fresh HuvikB rerun uses the corrected guide."
+    }
+  ],
+  "reviewedObservations": [
+    "All reviewed parent Skill invocations read the installed entry and exactly the selected phase definition; target-confirmation and ordinary-code controls ran no gate checks.",
+    "Panels use actual native role types with inherited model, effort and sandbox. Independent reviews overlap within capacity; the four-role parent queues Art after a slot becomes available. No fixed model is requested.",
+    "Reviewers operated read-only within inherited workspace-write permissions. Preservation is observed scope compliance, not proof of attempted-write denial.",
+    "Normal PASS, not-applicable PASS and explicitly accepted CONCERNS updates use the installed config transaction. Independent backup diffs prove only the stage scalar and stage mirror changed, preserving all other YAML bytes.",
+    "Stage remains unchanged on missing artifacts, placeholder evidence, missing reviewers, unplayed fun, director rejection and required unknowns beneath an accepted concern.",
+    "All three advancement fixtures retain the CLI transaction backup; this is an expected authorized effect, not an unrelated game write.",
+    "The host snapshot counts regular directory entries and excludes Git. Some native self-reports count two additional npm bin symlinks; the authoritative preserved-file counts here do not follow those links.",
+    "Fixture owner reviews and play answers are synthetic test data. No actual game, engine, browser or human play acceptance is established by this record."
+  ],
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "valid; behaviorVerified remains false",
+    "regression": {
+      "passed": 184,
+      "failed": 0,
+      "skipped": 0
+    },
+    "packedInstall": "PASS after rebuilding the corrected integration guide"
+  },
+  "limitations": [
+    "S025 remains partial. These 13 scenarios do not close the complete source or Codex behavioral matrices.",
+    "Pre-Production, Polish and Release gates; remaining QA/test/smoke/authenticity/coverage, performance, GDD override and art-bible branches still need native workflow evidence.",
+    "The standard-panel fixture has deliberately thin repeated system rules and contradictory integration claims, correctly rejected by TD. It does not prove the fully adequate positive Technical Setup context case or its Pre-Production missing-architecture variant.",
+    "One-run review overrides, rigor-derived panel provenance, user-interactive/resume/collaborative paths, concurrent stage conflict and interrupted transaction handling through this Skill remain open.",
+    "Desktop, subdirectory discovery and intentional permission denial remain unverified here.",
+    "Local raw traces and fixture artifacts may be temporary; this record preserves their hashes and manually reviewed outcomes. Earlier attempt resource guides differ from the corrected final missing-role rerun."
+  ],
+  "fixtureCommit": "bae14471e0f932c5550bfb2ff064b89ce82ef7cc",
+  "resourceHashScope": "The 19 gate, director and template resource hashes are common to every attempt. The integration-guide hash is the corrected final missing-panel archive; earlier archives contain the old guide. Per-case guide hashes below identify this difference."
+}

@@ -15,7 +15,7 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
-The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Six project Skill entry points and nine roles (Game Designer, Lead Programmer, Gameplay Programmer, two QA roles, Creative Director, Art Director, Technical Director and Producer) exist, but their full behavioral migration rows remain open.
+The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Seven project Skill entry points and nine roles (Game Designer, Lead Programmer, Gameplay Programmer, two QA roles, Creative Director, Art Director, Technical Director and Producer) exist, but their full behavioral migration rows remain open.
 
 2026-11-12: configuration reads now cover named-system workflow overrides and
 legacy engine preferences (`8bf457f`). `config set` adds validated project/local
@@ -306,14 +306,15 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S022 Migrate `design-system` to `game-studio-design-system`. Evidence: pending.
 - [ ] S023 Migrate `dev-story` to `game-studio-dev-story`. Evidence: pending.
 - [ ] S024 Migrate `estimate` to `game-studio-estimate`. Evidence: pending.
-- [ ] S025 Migrate `gate-check` to `game-studio-gate-check`. Evidence: pending.
+- [ ] S025 Migrate `gate-check` to `game-studio-gate-check`. Evidence: partial — canonical Skill, six orchestration references, all six phase definitions and [13 reviewed native scenarios](../docs/evidence/gate-check-skill-2026-11-12.json); the complete native matrix remains open.
   - Deterministic prerequisites now exist: `check --kind artifacts`, `check --kind gdd`, `check --kind adr-deps`; see T22. This does not close the Skill row.
   - [x] G1 Port Systems Design, Technical Setup and Pre-Production gate references (three files); retain workflow/QA/per-system criteria and declared evidence gaps. `4df86fb`: shared resources in `studio/docs/phase-gates`, actual engine inspection and ADR JSON observations replace Claude-only instructions; packed bytes verified.
   - [x] G2 Port Production, Polish and Release gate references (three files); retain smoke authenticity, performance policy, review and release requirements. All six resources retain 115 checklist items and all three tier definitions; literal CLI examples validate and installed archive bytes match. These are criteria resources, not completed host/workflow acceptance.
-  - [ ] G3 Port workflow-tier, deterministic-check and assessment references (three files); use pinned CLI observations and actual native director results.
-  - [ ] G4 Port verdict, stage-update and next-step references (three files); preserve failed/unassessed stage invariants and use transactional config writes within actual authorization.
-  - [ ] G5 Add the Codex Skill entry point, behavioral contract and catalog mapping; validate packaged references and instructions.
+  - [x] G3 Port workflow-tier, deterministic-check and assessment references (three files); use pinned CLI observations and actual native director results. `1d69b28`: explicit workflow/QA reductions, effective system overrides, unknown evidence and native 0/1/2/4-role panel requirements.
+  - [x] G4 Port verdict, stage-update and next-step references (three files); preserve failed/unassessed stage invariants and use transactional config writes within actual authorization. `1d69b28`: required unknowns remain blocking beneath a concern headline; concrete prior stage authorization is reused; future/unavailable workflows are not represented as installed.
+  - [x] G5 Add the Codex Skill entry point, behavioral contract and catalog mapping; validate packaged references and instructions. `1d69b28` / `e49f0ea`: entry point, six references, six gate resources and two player-experience templates pass installed byte checks; catalog remains partial.
   - [ ] G6 Verify positive/negative triggers, tier/QA combinations, missing or placeholder evidence, real director execution, verdict precedence, authorized stage changes and rejected advancement in isolated native host scenarios. Keep unrun desktop and broader workflow cases open.
+    - Native CLI fixtures verify 0/1/2/4-reviewer panels, actual director findings, missing-role reporting, target confirmation, negative triggering, unknown evidence, accepted-risk boundaries and three authorized stage transactions. All existing regular files outside the two stage files in those three cases are preserved. The evidence retains an initial backup assertion error, a contradictory test input and the stale five-role integration guide; corrected fresh runs are recorded. This does not close the later-phase, full QA/override, interactive/recovery or desktop matrix.
 - [ ] S026 Retire alias `help`; route users to `game-studio-next-step`. Evidence: pending.
 - [ ] S027 Migrate `hotfix` to `game-studio-hotfix`. Evidence: pending.
 - [ ] S028 Migrate `launch-checklist` to `game-studio-launch-checklist`. Evidence: pending.

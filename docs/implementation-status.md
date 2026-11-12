@@ -17,7 +17,7 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   validation and packed-runtime positive/empty cases pass. The initial full
   GDD regression run hit sandbox localhost-listen restrictions; its authorized
   rerun passed before the ADR additions. See [GDD observations](gdd-structure.md)
-  and [ADR observations](adr-dependencies.md). The complete gate-check Skill
+  and [ADR observations](adr-dependencies.md). Complete gate-check behavioral
   and native workflow acceptance remain open.
 - The complete workflow catalog now ships with the pinned runtime: seven phase
   groups / 49 steps plus the five-step minimal path. `check --kind artifacts`
@@ -36,8 +36,27 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   exceptions, missing-playtest distinctions, vertical-slice failure rules and
   scope-sensitive security/localization evidence. Command examples validate and
   all six installed resource files match their canonical bytes. G1/G2 resource
-  migration is complete; the gate Skill entry point, six orchestration references,
-  native director coordination and stage-advancement scenarios remain open.
+  migration is complete. The gate Skill entry point and six orchestration
+  references now use these resources, preserve independent workflow/QA policy,
+  and require actual native reviewer results. Stage changes use the existing
+  configuration transaction and previously granted concrete authorization.
+  Difficulty-curve and player-journey templates are included without claiming
+  an installed authoring workflow. The native fixture now verifies 20 installed
+  Skill/reference/template files, including the integration guide, against
+  canonical bytes. G3–G5 implementation is complete.
+- Thirteen isolated native gate-check scenarios now have [reviewed evidence](evidence/gate-check-skill-2026-11-12.json).
+  The real 0/1/2/4-role panels preserve independent READY, CONCERNS and NOT READY
+  outcomes; missing roles remain unassessed. A missing concept, placeholder
+  evidence, unplayed build and required unknowns beneath accepted concerns do
+  not advance. Three eligible, specifically authorized transitions update only
+  the stage scalar and its mirror through the CLI transaction. Ordinary code
+  questions do not trigger a gate; unspecified targets require confirmation.
+  An initial harness backup false alarm, contradictory fixture input and stale
+  five-role integration guide are preserved with their corrections and fresh
+  reruns. Build/typecheck/content checks, 184 regression tests and rebuilt-archive
+  verification pass. Later-phase, full QA/override, interactive/recovery and
+  desktop cases remain open under G6/S025; synthetic owner feedback is not actual
+  human game acceptance.
 - Typed CLI argument contracts, JSON results, help/schema and explicit exit codes.
 - Nearest project discovery, configuration reads with provenance and rigor/local
   precedence, named system workflow overrides and legacy technical-preference
@@ -70,7 +89,7 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 - Canonical resource packaging and one globally installed onboarding Skill.
 - `lint:content` now parses canonical Skill YAML and role TOML, checks local
   references and packaging boundaries, and reconciles catalog v3 with 75 primary
-  workflow inputs, 49 roles and three retired aliases. The current six project
+  workflow inputs, 49 roles and three retired aliases. The current seven project
   Skills and nine roles remain explicitly partial; no behavior row is promoted
   by static checks. Complete-declaration mode correctly fails for open rows.
   Installed-archive verification uses the packaged validator and rejects a

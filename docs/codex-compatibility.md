@@ -2,6 +2,29 @@
 
 Status: CLI custom role selection and a startup/patch Hook fixture verified with controls; full host compatibility gate is open.
 
+## Native phase-gate panels — 2026-11-12
+
+Thirteen fresh packed projects on CLI 0.162.0/macOS ARM64 exercise the installed
+gate-check Skill. Actual native panels use one Producer, Technical Director plus
+Producer, or all four directors according to workflow; solo skips them explicitly.
+Seven independent child executions inherit the parent model, effort and sandbox.
+Reviews overlap within host capacity, and the four-role run queues its remaining
+reviewer. The parent preserves actual negative/concern findings instead of
+converting completed delegation into approval.
+
+The missing-role control removes all four director files before baseline hashing;
+the parent reports required outcomes unavailable without substituting generic
+agents. Reviewers were instructed to preserve files and did so; this establishes
+observed scope compliance, not attempted-write denial under a read-only sandbox.
+Three separately authorized stage updates use the installed transaction, with
+independent before/after checks proving the exact two-file effect and backup.
+All temporary trust profiles are removed; no Hooks are configured or trusted.
+
+See [the evidence and retained corrections](evidence/gate-check-skill-2026-11-12.json)
+and [the full open behavior matrix](../studio-tests/skills/gate/gate-check-codex.md).
+Desktop, subdirectory, deliberate permission denial, shared-checkpoint conflicts
+and remaining phase/QA/override/recovery cases are not established by these runs.
+
 ## Sequential native role hand-off — 2026-11-12
 
 CLI 0.162.0 on macOS ARM64 completed a four-child chain in a fresh packed project:
