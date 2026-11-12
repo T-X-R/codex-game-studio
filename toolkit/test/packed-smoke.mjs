@@ -146,6 +146,7 @@ try {
   command(globalCli, 'skills', 'setup', '--home', join(temp, 'codex-home'));
   command(globalCli, 'skills', 'remove', '--home', join(temp, 'codex-home'));
   command(globalCli, 'detach', '--project', project);
+  await assert.rejects(readFile(join(project, qaRole)), { code: 'ENOENT' });
   assert.ok(await readFile(join(project, 'project.yaml'), 'utf8'));
   assert.match(await readFile(join(project, 'docs/technical-preferences.md'), 'utf8'), /Web 7\.3\.1/);
   assert.match(await readFile(join(project, 'production/session-state/active.md'), 'utf8'), /Test controls/);
