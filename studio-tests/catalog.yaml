@@ -30,7 +30,8 @@ skills:
     priority: critical
     category: review
     target: .agents/skills/game-studio-design-review/SKILL.md
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/skills/review/design-review-codex.md
 
   - name: story-readiness
     spec: studio-tests/skills/readiness/story-readiness.md
