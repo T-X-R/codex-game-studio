@@ -23,9 +23,13 @@ async function executeCommand(command: string, cwd: string, timeoutMs: number) {
 }
 
 const operations = new Set(['test', 'smoke', 'build']);
-export async function resolveCommand(root: string, kind: string, platform: NodeJS.Platform = process.platform) {
+export async function resolveCommand(root: string, kind: string, platform: NodeJS.Platform = process.platform, override?: string) {
   if (!operations.has(kind)) throw new StudioError('INVALID_ARGUMENT', 'Test kind must be test, smoke or build');
   const os = platform === 'win32' ? 'windows' : platform === 'darwin' ? 'macos' : platform;
+  if (override !== undefined) {
+    if (!override.trim()) throw new StudioError('INVALID_ARGUMENT', 'An explicit command must not be empty');
+    return { command: override, source: 'invocation:--command', os, reason: null };
+  }
   const config = await readConfig(await safePath(root, 'project.yaml'));
   const commands = config.commands;
   if (commands !== undefined && commands !== null && (typeof commands !== 'object' || Array.isArray(commands))) {
@@ -65,11 +69,11 @@ export async function resolveCommand(root: string, kind: string, platform: NodeJ
 }
 
 export async function runConfiguredTest(project: string, kind: string, output: string,
-  options: { dryRun?: boolean; timeoutMs?: number } = {}) {
+  options: { dryRun?: boolean; timeoutMs?: number; command?: string } = {}) {
   const timeoutMs = options.timeoutMs ?? 120000;
   if (!Number.isSafeInteger(timeoutMs) || timeoutMs < 100 || timeoutMs > 1800000) throw new StudioError('INVALID_ARGUMENT', 'Timeout must be 100–1800000 milliseconds');
   if (await exists(await safePath(project, output))) throw new StudioError('FILE_CONFLICT', 'Test evidence requires a new output directory', 4);
-  const selected = await resolveCommand(project, kind);
+  const selected = await resolveCommand(project, kind, process.platform, options.command);
   if (options.dryRun) return { ...selected, kind, project, output, timeoutMs, status: 'planned', exitCode: 0, processExitCode: null };
   const engine = (await readSettings(project, ['engine.name'])).settings['engine.name']!.value;
   const start = Date.now();

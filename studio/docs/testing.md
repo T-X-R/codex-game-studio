@@ -16,6 +16,15 @@ The operation reads `commands.test`, `commands.smoke` or `commands.build` from
 entry does not silently fall back to an engine command. Personal command
 overrides are ignored because commands are shared project configuration.
 
+`--command 'COMMAND'` explicitly selects a shell command for one invocation,
+without changing shared or personal configuration. It uses the same timeout,
+process cleanup and evidence capture. The report records `source:
+invocation:--command` and the exact command; an empty override is rejected.
+Use this for an inspected runner's second test mode or fresh result destination,
+within the authorized test scope. Quote the whole argument for the calling shell
+and its executable/paths for the command's own OS shell. It is not a permission
+bypass and does not silently replace configured commands on ordinary runs.
+
 When a command is absent, the bundled engine table supplies a default if it has
 one. Web defaults require the corresponding `package.json` script. Godot defaults
 require `project.godot`, and its default test additionally requires the gdUnit4

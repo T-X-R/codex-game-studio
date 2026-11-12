@@ -105,6 +105,28 @@ test('unknown operations and unsafe evidence paths fail before invoking the comm
   await assert.rejects(runConfiguredTest(root, 'test', 'evidence', { timeoutMs: NaN }), { code: 'INVALID_ARGUMENT' });
 });
 
+test('one-run command overrides preserve shared config and record exactly what executed', async t => {
+  const root = await fixture(t, 'engine:\n  name: Web\ncommands:\n  test: should-not-run\n');
+  const before = await readFile(join(root, 'project.yaml'), 'utf8');
+  const cli = fileURLToPath(new URL('../dist/cli.js', import.meta.url));
+  const args = [cli, 'test', '--project', root, '--command', command, '--timeout', '900000', '--json'];
+  const dry = spawnSync(process.execPath, [...args, '--dry-run', '--output', 'evidence/dry'], { encoding: 'utf8' });
+  assert.equal(dry.status, 0, dry.stdout + dry.stderr);
+  assert.equal(JSON.parse(dry.stdout).data.source, 'invocation:--command');
+  assert.deepEqual((await readdir(root)).sort(), ['project.yaml', 'test folder']);
+  const run = spawnSync(process.execPath, [...args, '--output', 'evidence/override'], { encoding: 'utf8' });
+  assert.equal(run.status, 0, run.stdout + run.stderr);
+  const result = JSON.parse(run.stdout).data;
+  assert.equal(result.command, command);
+  assert.equal(result.source, 'invocation:--command');
+  assert.match(await readFile(join(root, 'evidence/override/stdout.log'), 'utf8'), /test output/);
+  assert.equal(await readFile(join(root, 'project.yaml'), 'utf8'), before);
+  for (const override of ['', '  ']) {
+    await assert.rejects(runConfiguredTest(root, 'test', 'evidence/invalid', { command: override }), { code: 'INVALID_ARGUMENT' });
+  }
+  await assert.rejects(runConfiguredTest(root, 'deploy', 'evidence/invalid', { command }), { code: 'INVALID_ARGUMENT' });
+});
+
 test('Web fallback runs the actual npm script and unavailable executables remain not assessed', async t => {
   const root = await fixture(t, 'engine:\n  name: Web\n');
   await writeFile(join(root, 'package.json'), JSON.stringify({ private: true, scripts: { test: command } }));

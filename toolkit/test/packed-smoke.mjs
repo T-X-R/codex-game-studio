@@ -76,6 +76,13 @@ try {
   command(launcher, 'config', 'set', 'commands.test', 'node test-fixture.cjs', '--project', project);
   assert.equal(command(launcher, 'test', '--output', 'production/evidence/packed-test', '--project', project).data.processExitCode, 0);
   assert.match(await readFile(join(project, 'production/evidence/packed-test/stdout.log'), 'utf8'), /packed test executed/);
+  const beforeOverride = await readFile(join(project, 'project.yaml'), 'utf8');
+  const override = command(launcher, 'test', '--kind', 'smoke', '--command', 'node test-fixture.cjs',
+    '--timeout', '1800000', '--output', 'production/evidence/packed-override', '--project', project);
+  assert.equal(override.data.source, 'invocation:--command');
+  assert.equal(override.data.processExitCode, 0);
+  assert.equal(override.data.timeoutMs, 1800000);
+  assert.equal(await readFile(join(project, 'project.yaml'), 'utf8'), beforeOverride);
   await writeFile(join(project, 'checkpoint-draft.md'), '**Current task:** Prototype movement\n**Next step:** Test controls\n');
   command(launcher, 'checkpoint', 'save', '--input', 'checkpoint-draft.md', '--expect-hash', 'missing', '--project', project);
   assert.equal(command(globalCli, 'checkpoint', 'show', '--project', project).data.fields['Next step'], 'Test controls');

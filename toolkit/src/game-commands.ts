@@ -70,12 +70,14 @@ export const gameCommands: Record<string, Command> = {
     } },
   test: { description: 'Run a configured test, smoke or build command with a timeout and preserved evidence', effect: 'process',
     options: { project, 'dry-run': dryRun, kind: { type: 'string', description: 'Configured operation: test (default), smoke or build' },
+      command: { type: 'string', description: 'Explicit shell command for this run only; preserves project configuration' },
       output: { type: 'string', description: 'New project-relative evidence directory' },
       timeout: { type: 'string', description: 'Maximum execution time in milliseconds (100–1800000, default 120000)' } },
     run: async input => {
       const data = await runConfiguredTest(await root(input), input.values.kind as string ?? 'test',
         input.values.output as string ?? `production/evidence/test-${Date.now()}`, {
           dryRun: !!input.values['dry-run'], timeoutMs: input.values.timeout === undefined ? undefined : Number(input.values.timeout),
+          command: input.values.command as string | undefined,
         });
       const result = success('test', data);
       if ('artifacts' in data && data.artifacts) result.artifacts = data.artifacts.files.map(file => ({ path: file.path, type: 'evidence', sha256: file.sha256 }));
