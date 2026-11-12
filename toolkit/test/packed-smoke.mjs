@@ -60,6 +60,18 @@ try {
   command(launcher, 'checkpoint', 'save', '--input', 'checkpoint-draft.md', '--expect-hash', 'missing', '--project', project);
   assert.equal(command(globalCli, 'checkpoint', 'show', '--project', project).data.fields['Next step'], 'Test controls');
   command(globalCli, 'prototype', 'scaffold', 'smoke', '--project', project);
+  const growth = command(globalCli, 'prototype', 'grow-check', 'smoke', '--project', project);
+  assert.equal(growth.data.eligible, true);
+  assert.equal(growth.data.verification.state, 'not_assessed');
+  await writeFile(join(project, 'package.json'), '{"name":"existing-game"}\n');
+  try {
+    command(launcher, 'prototype', 'grow-check', 'smoke', '--project', project);
+    assert.fail('An existing game must block prototype growth');
+  } catch (error) {
+    assert.equal(error.status, 4); assert.equal(JSON.parse(error.stdout).data.eligible, false);
+  }
+  assert.equal(await readFile(join(project, 'package.json'), 'utf8'), '{"name":"existing-game"}\n');
+  await rm(join(project, 'package.json'));
   assert.equal(command(globalCli, 'check', 'prototypes/smoke', '--project', project).status, 'ok');
   command(globalCli, 'package', 'prototypes/smoke', '--output', 'builds/smoke', '--project', project);
   assert.ok(await readFile(join(project, 'builds/smoke/index.html')));

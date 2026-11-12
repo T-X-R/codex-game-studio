@@ -13,6 +13,7 @@ import { planEngineSetup } from './engine-setup.js';
 import { planEngineScaffold } from './engine-scaffold.js';
 import { verifyEngine } from './engine-verify.js';
 import { applyInstall, describePlan } from './install.js';
+import { inspectGrowth } from './grow-check.js';
 
 const project: Option = { type: 'string', description: 'Game workspace directory' };
 const dryRun: Option = { type: 'boolean', description: 'Describe effects without creating files or starting a server' };
@@ -102,6 +103,16 @@ export const gameCommands: Record<string, Command> = {
       if (data.exitCode !== 0) {
         process.exitCode = data.exitCode; result.status = data.exitCode === 3 ? 'not_assessed' : 'failed';
         result.error = { code: data.exitCode === 124 ? 'TIMEOUT' : data.exitCode === 130 ? 'INTERRUPTED' : data.exitCode === 5 ? 'CHECK_FAILED' : 'ASSESSMENT_INCOMPLETE', message: 'Inspect the captured report and browser log.' };
+      }
+      return result;
+    } },
+  'prototype grow-check': { description: 'Inspect Web growth prerequisites without changing files, installing tools or playing the game', effect: 'read', minArgs: 1, maxArgs: 1,
+    options: { project }, run: async input => {
+      const data = await inspectGrowth(await root(input), input.args[0]!);
+      const result = { ...success('prototype grow-check', data), warnings: data.warnings };
+      if (data.exitCode) {
+        process.exitCode = data.exitCode; result.status = data.exitCode === 4 ? 'blocked' : 'not_assessed';
+        result.error = { code: data.exitCode === 4 ? 'GROWTH_BLOCKED' : 'ASSESSMENT_INCOMPLETE', message: 'Resolve the reported growth prerequisites before copying the prototype.' };
       }
       return result;
     } },
