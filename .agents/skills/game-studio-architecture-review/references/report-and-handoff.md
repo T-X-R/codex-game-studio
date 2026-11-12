@@ -13,6 +13,11 @@ master architecture. Standard tier covers its critical scope explicitly.
 ## Report
 
 Present the complete in-scope matrix and findings before requesting writes.
+Every Coverage Gap needs its TR-ID, source GDD/system and actual rule, Layer with
+its source, a concrete proposed ADR title and the actual installed authoring Skill
+invocation (or explicitly unavailable capability), plus domain and evidence-backed
+engine risk or **unknown**. A generic “write a persistence ADR” handoff does not
+replace these gap details; never invent a risk rating to fill them.
 Use this structure, retaining named NOT ASSESSED and out-of-scope distinctions:
 
 ```markdown

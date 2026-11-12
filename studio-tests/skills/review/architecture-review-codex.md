@@ -93,6 +93,22 @@ cannot prove that isolation. Retain initial failures and every subsequent versio
   pinned HIGH-risk contradiction and exact authorized row scope.
 - Negative ordinary code question: no architecture workflow, receipt, agent or write.
 
+## Retained native regression: freshness before assessment
+
+The initial `freshness-reuse` run (N8IDpT) read all domain content and ran the graph
+before checking a full/full all-UNCHANGED prior receipt, then performed another
+assessment. Preserve that failure and its raw request/inputs. Revalidation must
+show the receipt and metadata decision **before** domain scans or graph/registry
+audit; guided/autonomous eligible reuse returns the prior date/scope/verdict with
+no new audit. An explicit fresh request still takes the complete existing workflow.
+A later receipt check cannot retrospectively establish this routing behavior.
+
+The initial `foundation-conflict` run (uwawUJ) correctly found the Foundation gap
+and ownership conflict, but omitted a concrete ADR title/installed invocation and
+per-gap domain/risk-or-unknown. Preserve its workflow FAIL separately from the
+correct project FAIL. The same raw input must produce the complete existing gap
+contract; do not coach the test request with the expected missing fields.
+
 ## Full matrix still required
 
 The original five groups and coverage notes remain required, including independent

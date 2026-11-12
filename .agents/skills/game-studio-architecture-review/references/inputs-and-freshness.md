@@ -2,6 +2,13 @@
 
 ## Scope and prior evidence
 
+Freshness is a routing prerequisite, not an after-the-review verification step.
+Before domain content scans, registry assessment or `check --kind adr-deps`, read
+only applicable routing instructions/config, prior report metadata/findings and
+list input paths. Enumerating ADR/GDD/reference filenames does not require reading
+their bodies. Do not batch the receipt check with the domain audit it may skip.
+For rtm or an explicit fresh request, select the fresh branch and say why.
+
 Find the newest actual `docs/architecture/architecture-review-*.md` report; retain
 its path/date/verdict. Resolve the shared read-only receipt helper through the pinned
 runtime, then invoke it with the game root as the current working directory:
@@ -48,9 +55,12 @@ Apply in this order:
 3. **Insufficient mode/workflow:** explain the scope mismatch and review as requested;
    unchanged bytes do not make a shallow report cover deeper work.
 4. **All compared inputs UNCHANGED:** identify prior date, actual scope and verdict.
-   Guided/autonomous may stand on it unless the user requested a fresh review;
-   collaborative offers reuse or fresh review. Retain adverse findings and unknowns;
-   explicitly say no new audit or independent engine review ran.
+   Guided/autonomous **stand on it and end by default**, unless the user explicitly
+   requested a fresh review. Collaborative offers reuse or fresh review before
+   proceeding. Reuse preserves prior adverse findings and unknowns; explicitly
+   say no new domain audit, graph assessment or engine look ran. Do not relabel it
+   with today's review date or perform a fresh assessment just to confirm reuse.
+   An ordinary request to review is not by itself a request to ignore freshness.
 5. **Only GDDs/ADRs CHANGED or NEW:** name the changed systems and recommend a targeted
    single-gdd rerun; a new ADR warrants a full rerun. Keep full review available and
    honor an explicitly requested scope instead of silently shrinking it.

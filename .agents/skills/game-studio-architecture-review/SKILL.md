@@ -48,9 +48,13 @@ scope labeled; it does not silently change project settings.
 
 ## Assess, then record
 
-1. Read [inputs and freshness](references/inputs-and-freshness.md) before using a
-   prior report. Establish actual denominators and missing evidence; load complete
-   needed sections, not arbitrarily truncated windows.
+1. Read [inputs and freshness](references/inputs-and-freshness.md) **before any
+   GDD/ADR/engine content scan or domain helper assessment**. First read only
+   routing policy/config, prior-report metadata/findings and enumerate input paths
+   for its receipt check. If guided/autonomous reuse is eligible, stand on that
+   prior result and end; do not run Steps 2–4 merely to repeat it. Only a fresh-review
+   branch loads later domain references and content. Then establish actual
+   denominators/missing evidence and load complete needed sections.
 2. For coverage/full/single-gdd/rtm, read [requirements and traceability](references/requirements-and-traceability.md).
    Preserve stable IDs and separate Accepted coverage from Proposed, unknown and gaps.
 3. For full/consistency, read [conflicts and engine](references/conflicts-and-engine.md)
