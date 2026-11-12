@@ -14,6 +14,7 @@ import { planEngineScaffold } from './engine-scaffold.js';
 import { verifyEngine } from './engine-verify.js';
 import { applyInstall, describePlan } from './install.js';
 import { inspectGrowth } from './grow-check.js';
+import { planGrowthCopy } from './grow-copy.js';
 
 const project: Option = { type: 'string', description: 'Game workspace directory' };
 const dryRun: Option = { type: 'boolean', description: 'Describe effects without creating files or starting a server' };
@@ -105,6 +106,14 @@ export const gameCommands: Record<string, Command> = {
         result.error = { code: data.exitCode === 124 ? 'TIMEOUT' : data.exitCode === 130 ? 'INTERRUPTED' : data.exitCode === 5 ? 'CHECK_FAILED' : 'ASSESSMENT_INCOMPLETE', message: 'Inspect the captured report and browser log.' };
       }
       return result;
+    } },
+  'prototype grow': { description: 'Copy a standalone JavaScript prototype into pinned Web tooling; full growth still requires conversion and verification', effect: 'write', minArgs: 1, maxArgs: 1,
+    options: { project, 'dry-run': dryRun, stage: { type: 'string', description: 'Required migration stage: copy (other stages remain under migration)' } }, run: async input => {
+      if (input.values.stage !== 'copy') throw new StudioError('INVALID_ARGUMENT', 'Choose --stage copy explicitly; this command does not complete the full growth workflow');
+      const { plan, ...data } = await planGrowthCopy(await root(input), input.args[0]!);
+      if (!input.values['dry-run']) await applyInstall(plan);
+      return { ...success('prototype grow', { ...describePlan({ ...plan, changes: plan.changes.filter(change => change.before !== change.after) }),
+        ...data, outcome: input.values['dry-run'] ? 'planned' : 'copied' }), warnings: data.warnings };
     } },
   'prototype grow-check': { description: 'Inspect Web growth prerequisites without changing files, installing tools or playing the game', effect: 'read', minArgs: 1, maxArgs: 1,
     options: { project }, run: async input => {
