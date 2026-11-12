@@ -16,7 +16,16 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   Review receipt hashing now lives in one pinned shared resource, with the old
   design-review script forwarding to it; installed-package checks exercise both
   entry points, changed inputs and failure without the pinned runtime. Review
-  records also track specialist method resources actually used.
+  records also track specialist method resources actually used. The actual
+  [full design review and fresh-session reuse](evidence/shared-review-receipts-2026-11-12.json)
+  now have scoped evidence: four independent domain reviewers followed by Creative
+  Director, 26 actual input stamps, and a fresh read-only session reusing that
+  record without new reviewers or changes to 523 observed files. All five jobs
+  at `6611933eed71b1fd23d0e30ac16694d2fb7d3dac` passed in
+  [CI](https://github.com/T-X-R/codex-game-studio/actions/runs/43229049193).
+  Subsequent native runs exposed architecture input-selection and freshness-order
+  defects; their corrections and unchanged-input reruns are in progress. That CI
+  does not certify these later corrections or complete native behavior.
 - Three authoring/review workflows now have initial Codex implementations and
   source-derived acceptance matrices: design-system, design-review and
   architecture-decision. Cross-review corrected a review-receipt bug that could

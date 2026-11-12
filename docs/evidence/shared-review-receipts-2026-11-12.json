@@ -1,0 +1,231 @@
+{
+  "date": "2026-11-12",
+  "status": "partial",
+  "scope": "Shared receipt extraction, installed compatibility entry point, actual full design review and fresh-session reuse; not full design-review or desktop migration.",
+  "implementation": {
+    "sharedResource": "studio/scripts/review-receipts.mjs",
+    "sharedSha256": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+    "coreMatchesPreExtractionBytes": true,
+    "entrypoint": "The former Skill script resolves the shared implementation through the project-pinned launcher; no global fallback.",
+    "methodCoverage": "Referenced specialist methods join role TOMLs, policies, context and helper in receipts."
+  },
+  "localValidation": {
+    "focusedReceiptTests": 4,
+    "fullSuitePassed": 198,
+    "failed": 0,
+    "skipped": 0,
+    "installedArchive": "PASS; compare shared and legacy-entry hash output, unchanged/changed reads, and refusal without pinned runtime.",
+    "logs": {
+      "game-studio-shared-receipts-red.log": "3051c08dc96ce56b2a77acd97419c3195a93a48cd785ec15a64a96fd761eb428",
+      "game-studio-architecture-build-2.log": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28",
+      "game-studio-architecture-typecheck.log": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b",
+      "game-studio-architecture-lint-2.log": "c1cff7784d016e6007606d52fa69e62e71c6fb95126e399ae0b9d277c9f42b6b",
+      "game-studio-architecture-tests-2.log": "73b7b26314ca501485025f5c07065786ed0d530d6652cbc0226642f8b7d05855",
+      "game-studio-architecture-pack-2.log": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38",
+      "game-studio-reuse-wrong-target.log": "dafd7445db4b1971df5e266180d305869b724aaea6dfcade18c183534ff7ce74"
+    },
+    "initialFailures": "Core-path tests failed before the shared resource existed. Initial combined checks later found an unrelated legacy runtime reference in architecture creation and sandbox-denied loopback binding; the former was corrected, the latter rerun in authorized test environment. Earlier logs retained.",
+    "reuseRunnerWrongTarget": "PASS: supplying game-concept.md after a run that wrote only resolve-hit-review-log.md is rejected before creating a profile or launching Codex."
+  },
+  "ci": {
+    "head": "6611933eed71b1fd23d0e30ac16694d2fb7d3dac",
+    "url": "https://github.com/T-X-R/codex-game-studio/actions/runs/43229049193",
+    "status": "success",
+    "scope": "Shared implementation and three new migration artifacts, prior to subsequent native corrections or this evidence/runner commit."
+  },
+  "actualReview": {
+    "scenario": "full-review-records",
+    "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-systems-designer-HriuM2",
+    "threadId": "01a1cff8-60a4-7c61-80ce-24ce802ac611",
+    "nativeExitCode": 0,
+    "rawArtifactHashes": {
+      "fixture.json": "fd1721466dd858107c276cf6fde54d777c998f11a602dd734c7b277b3a002a77",
+      "report.json": "63b642d8f77e8945147250bae629f6934f226adefc833aa5b78d3d7d14cf365e",
+      "before.json": "afc3de6cf73a61ae8b630e971f05fda24c54317af1727c700e4287ce266d6767",
+      "after.json": "4ba0901d033018ce7a0b398c540c26bd2a58564a2a53d76f03d92337e345bef4",
+      "events.jsonl": "b0d43bdb2ccee063a706846fc46b6c2d3d73dc45c37d6d7b96b84916deea4cd7",
+      "final.txt": "4c109f5f53dd8c4b28a6256e68d424bee1c83f1d5c922b045c2b4f5b0cb5d6d0"
+    },
+    "parentTraceSha256": "8a005b51d30131b81d9e50e42be6474cd7d8d461744fca259d26aab5f4c5cb9e",
+    "actualFileBytesVerified": 523,
+    "preservedFiles": 521,
+    "changed": [
+      "design/gdd/systems-index.md"
+    ],
+    "added": [
+      "design/gdd/reviews/resolve-hit-review-log.md"
+    ],
+    "nativeChildren": [
+      {
+        "id": "01a1cff9-905c-7f72-ab7b-0321ae0f4deb",
+        "role": "game-studio-lead-programmer",
+        "sha256": "c7097418918ce8e09ad7d1b1c38ecdc6c6e362cf7db7da79fa8ef585a6bfdbb1"
+      },
+      {
+        "id": "01a1cff9-2f4e-7d82-8d86-9e2b306be60c",
+        "role": "game-studio-game-designer",
+        "sha256": "0f418e283ecc736cfdc165502a44233d740279937ce1ea4162530d75349dc00e"
+      },
+      {
+        "id": "01a1cff9-6abe-71f3-a503-396c3c961490",
+        "role": "game-studio-qa-lead",
+        "sha256": "2d9eae3cbc75a66e378b0d284f58dee400c7ed4046e6ca8acff7d7dff2799b26"
+      },
+      {
+        "id": "01a1cff9-4f37-7c33-9c5b-9fe51b344093",
+        "role": "game-studio-systems-designer",
+        "sha256": "cef19d44f4d64073eeb8a120a91f759c4bb2cca9442daf06b67d79a90481ace2"
+      },
+      {
+        "id": "01a1cffb-05d7-7113-a3f9-2b6697f60aaf",
+        "role": "game-studio-creative-director",
+        "sha256": "bd73ddc47164703dcf9a0b3bcd2490c14b286683fc832d9569aabe7a49ab3c39"
+      }
+    ],
+    "spawns": [
+      {
+        "time": "2026-11-12T13:36:16.709Z",
+        "role": "game-studio-game-designer"
+      },
+      {
+        "time": "2026-11-12T13:36:24.875Z",
+        "role": "game-studio-systems-designer"
+      },
+      {
+        "time": "2026-11-12T13:36:31.928Z",
+        "role": "game-studio-qa-lead"
+      },
+      {
+        "time": "2026-11-12T13:36:41.550Z",
+        "role": "game-studio-lead-programmer"
+      },
+      {
+        "time": "2026-11-12T13:38:17.156Z",
+        "role": "game-studio-creative-director"
+      }
+    ],
+    "contexts": [
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      }
+    ],
+    "semanticStatus": "PASS",
+    "reviewedRecordSha256": "06c5b10b8f3573f39a8f6f26e7bf9c23a2dfe4bcb321bc550f73bb65311dd47e",
+    "receiptCount": 26,
+    "receiptPaths": [
+      "design/gdd/resolve-hit.md",
+      "design/gdd/game-concept.md",
+      "design/gdd/systems-index.md",
+      "docs/owner-note.md",
+      "AGENTS.md",
+      "project.yaml",
+      "production/stage.txt",
+      ".codex/config.toml",
+      ".agents/skills/game-studio-design-review/SKILL.md",
+      ".agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+      ".agents/skills/game-studio-design-review/references/assessment-and-output.md",
+      ".agents/skills/game-studio-design-review/references/specialists.md",
+      ".agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+      ".agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+      ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/review-receipts.mjs",
+      ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md",
+      ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/configuration.md",
+      ".codex/agents/game-studio-game-designer.toml",
+      ".codex/agents/game-studio-systems-designer.toml",
+      ".codex/agents/game-studio-qa-lead.toml",
+      ".codex/agents/game-studio-lead-programmer.toml",
+      ".codex/agents/game-studio-creative-director.toml",
+      ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/roles/game-designer.md",
+      ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/roles/systems-designer.md",
+      ".game-studio/package.json",
+      ".game-studio/run.cjs"
+    ],
+    "observations": [
+      "Four real domain reviewers completed before the actual Creative Director synthesis; source trace identities and inherited model, effort, approval and sandbox verified.",
+      "Only the authorized target index Status changed; one real review log added. No GDD or policy edits.",
+      "Prior full/full APPROVED is scoped design readiness with explicit absent registry and unverified implementation/play evidence."
+    ]
+  },
+  "freshSession": {
+    "scenario": "actual-review-fresh-session",
+    "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-review-reuse-pRDtjO",
+    "threadId": "01a1cffe-ca30-7661-8b81-09e738b559e8",
+    "nativeExitCode": 0,
+    "rawArtifactHashes": {
+      "fixture.json": "839f8d459154561d29f9784d575185e28425b7e532ed5cf855fbeab3a1fd97e1",
+      "report.json": "1a0d4cdd05736be6b8dbe366fe6d6a973901a52317c0e2004fe9b5171a1cf2b8",
+      "before.json": "4ba0901d033018ce7a0b398c540c26bd2a58564a2a53d76f03d92337e345bef4",
+      "after.json": "4ba0901d033018ce7a0b398c540c26bd2a58564a2a53d76f03d92337e345bef4",
+      "events.jsonl": "994662a51e2d5b478418cdf755b6d66ba865b537e4e0ccef63296a6305dbcbb5",
+      "final.txt": "3f41b8e5be383db7aedc05c1f70b09f6936771516b96d785d080f687bb41c058"
+    },
+    "parentTraceSha256": "508f96a71a1ed79cc0c31c1b1969de39bdf98fc6ba6964ce3b1ad3159c41e3da",
+    "actualFileBytesVerified": 523,
+    "preservedFiles": 523,
+    "changed": [],
+    "added": [],
+    "nativeChildren": [],
+    "spawns": [],
+    "contexts": [
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      }
+    ],
+    "semanticStatus": "PASS",
+    "observations": [
+      "UNCHANGED: design/gdd/resolve-hit.md",
+      "UNCHANGED: .agents/skills/game-studio-design-review/SKILL.md",
+      "UNCHANGED: design/gdd/game-concept.md",
+      "UNCHANGED: design/gdd/systems-index.md",
+      "UNCHANGED: docs/owner-note.md",
+      "UNCHANGED: project.yaml",
+      "UNCHANGED: AGENTS.md",
+      "UNCHANGED: .codex/config.toml",
+      "UNCHANGED: production/stage.txt",
+      "UNCHANGED: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+      "UNCHANGED: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+      "UNCHANGED: .agents/skills/game-studio-design-review/references/specialists.md",
+      "UNCHANGED: .agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+      "UNCHANGED: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+      "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/review-receipts.mjs",
+      "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md",
+      "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/configuration.md",
+      "UNCHANGED: .codex/agents/game-studio-game-designer.toml",
+      "UNCHANGED: .codex/agents/game-studio-systems-designer.toml",
+      "UNCHANGED: .codex/agents/game-studio-qa-lead.toml",
+      "UNCHANGED: .codex/agents/game-studio-lead-programmer.toml",
+      "UNCHANGED: .codex/agents/game-studio-creative-director.toml",
+      "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/roles/game-designer.md",
+      "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/roles/systems-designer.md",
+      "UNCHANGED: .game-studio/package.json",
+      "UNCHANGED: .game-studio/run.cjs"
+    ],
+    "conclusions": [
+      "New independent native session on exactly the preceding after-snapshot; no reinstall, synthetic replacement receipt or configuration change.",
+      "Actual helper returned 26 unchanged inputs including shared implementation and methods. Final explicitly reused the dated full/full approval and said no specialists ran in this session.",
+      "All 523 harness-observed project regular files (excluding .git) unchanged; no native children or role impersonation; no claimed builds/tests or gameplay acceptance."
+    ]
+  },
+  "reproduction": "node toolkit/test/design-review-reuse-host.mjs <completed-native-run> <gdd-path>; requires a prior actual native run that wrote that target review log, and keeps exit 3 for manual semantic review.",
+  "limits": [
+    "Existing prior native runs used the old entry point implementation; they are not relabeled as tests of the new wrapper.",
+    "This evidence covers the selected unchanged full-review flow, not all freshness/configuration/error/desktop branches.",
+    "Filesystem hashes prove identity and effects; semantic conclusions depend on the separate complete artifact and actual tool-output reviews."
+  ]
+}
