@@ -53,6 +53,11 @@ try {
     const result = command(globalCli, 'resource', 'path', id);
     assert.equal(await readFile(result.data.path, 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
+  for (const stage of ['systems-design', 'technical-setup', 'pre-production']) {
+    const id = `studio/docs/phase-gates/gate-${stage}.md`;
+    const result = command(globalCli, 'resource', 'path', id);
+    assert.equal(await readFile(result.data.path, 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
+  }
   const designResource = 'studio/docs/roles/game-designer.md';
   const designPath = command(globalCli, 'resource', 'path', designResource).data.path;
   assert.equal(await readFile(designPath, 'utf8'), await readFile(join(packageRoot, '..', designResource), 'utf8'));
