@@ -34,12 +34,16 @@ gate/review/engine/performance summaries (`92ab7f3`), engine root validation
 (`942451a`), configured test/smoke/build execution with logs (`ed3e03b`) and engine
 inspection (`cbe931b`) pass build, typecheck, 74 local tests and packed-install
 verification. These do not close T18's live hook/compaction acceptance or T23's
-native editor execution requirements. Native CI for this batch is pending.
+native editor execution requirements. Native CI initially exposed Windows
+command quoting and ERRORLEVEL defects; fixes and the input-method/specialist
+summaries now pass all five jobs at `bbcb238` in run `43142741958`. Local build,
+typecheck, 79 tests and packed-install checks pass. Source additions remain
+unreleased; full host and workflow acceptance is still open.
 
 ## M0 Compatibility and contracts
 
 - [ ] T01 Establish Codex integration evidence
-  - 2026-11-12 evidence: a fresh read-only CLI role fixture completed but returned `ROLE_SELECTION_UNAVAILABLE`, with no child or hidden marker. The reproducible probe and sanitized record are linked from `docs/codex-compatibility.md`. Native role selection and desktop acceptance remain open.
+  - 2026-11-12 evidence: the earlier role probe did not prove project config loading; command-line trust overrides left the project layer disabled. A revised temporary-profile fixture verifies config loading before running. Its positive CLI session selected `agent_type: game-studio-probe`, spawned an independent child with that role and received the hidden marker; the role-absent control did not spawn or return the marker. Both profiles were removed. Sanitized parent/child evidence is in `docs/evidence/cli-role-selection-2026-11-12.json`. Desktop, subdirectory, actual write denial and hook acceptance remain open.
   - Module: `codex-integration`. Dependencies: none.
   - Verify custom-agent TOML, project Skill discovery, Hook trust, patch payload and real block behavior in desktop and CLI. Include launch from a subdirectory and desktop PATH differences.
   - Acceptance: exact client versions, positive/negative transcripts and filesystem observations recorded; unsupported behavior listed without a silent fallback.

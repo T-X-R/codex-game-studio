@@ -10,8 +10,8 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 - Nearest project discovery, configuration reads with provenance and rigor/local
   precedence, named system workflow overrides and legacy technical-preference
   import, plus legacy boolean test strictness. Explicit summaries cover gate
-  levels, review gates, engine values/roots and performance budgets. Input-method
-  and specialist summary parity remains open.
+  levels, review gates, engine values/roots, performance budgets, input methods
+  and specialist selections. Selections do not prove native role loading.
 - Configuration writes with local-key restrictions, value validation, comment
   and scalar-quote preservation, no-op detection and synchronized stage mirrors.
   Concurrent changes and destructive YAML shape edits are refused. Transaction
@@ -58,7 +58,7 @@ were not modified; verification used an isolated Node 24 distribution.
   remains unchanged; an intentional browser error returns failure.
 - Official Skill-format validation for onboarding and the three project Skills.
 
-Source additions after the published alpha: build/typecheck and 74 local tests
+Source additions after the published alpha: build/typecheck and 79 local tests
 pass with no skips. Packed-install tests exercise configuration summaries/writes,
 checkpoint save/reopen/detach preservation, engine inspection and actual test
 execution through the restored project launcher. These additions are not in the existing
@@ -73,9 +73,23 @@ remaining migration or the newer local source additions.
 The configuration additions and permission fix at
 `32d5195be05373cd0690742854503eafa6cb867e` also passed all five native/browser jobs
 in [development-branch CI](https://github.com/T-X-R/codex-game-studio/actions/runs/43137793165).
-No new installation archive has been published. A fresh CLI role probe completed
-but returned no hidden marker and reported no native role selector; its negative
-evidence is recorded in [Codex compatibility](codex-compatibility.md). C0 remains open.
+No new installation archive has been published. An earlier CLI role probe did
+not establish project configuration loading. A revised trusted positive/negative
+pair now proves native custom role selection, independent child instructions and
+hidden-marker return in CLI 0.162.0. The child retained the read-only sandbox.
+The actual parent/child traces were reviewed; see
+[Codex compatibility](codex-compatibility.md). C0 remains open for the remaining
+host, permission and hook acceptance.
+
+The checkpoint, engine inspection, test execution and configuration summary
+additions at `bbcb238505c457ac047938f2949e2bf8c9e98e58` passed all five jobs in
+[development CI](https://github.com/T-X-R/codex-game-studio/actions/runs/43142741958):
+native macOS/Windows/Linux Node 24, Linux Node 26 and actual Chrome replay.
+Earlier Windows runs exposed quoted-path and shell-exit-code defects. The fixed
+runner uses an isolated UTF-8 batch script and returns its final ERRORLEVEL;
+regressions cover Unicode/space paths, literal ampersands, successful commands,
+ordinary exit 1/7 failures, missing executables and timeout. These source changes
+are not yet part of a new released archive.
 
 The replay initially rejected a comma-separated input example. The source parser
 uses whitespace-separated tokens; the documented example and regression now use
@@ -86,7 +100,8 @@ uses whitespace-separated tokens; the documented example and regression now use
 The full acceptance contract remains in `tasks/todo.md`. In particular:
 
 - Codex desktop live discovery, role selection, hook trust and permission tests.
-- Complete CLI role selection proof and isolated repeatable hook host fixtures.
+- CLI subdirectory role selection, actual write-boundary tests and isolated
+  repeatable hook host fixtures.
 - All 75 upstream workflow adaptations, 49 roles, 14 scoped rules, individual
   hook behaviors and remaining helper parity. The retained `.claude` source is
   not shipped as an active compatibility layer.
@@ -98,8 +113,8 @@ The full acceptance contract remains in `tasks/todo.md`. In particular:
 
 The implementation order was adjusted to exercise deterministic installation and
 Web operations while host compatibility remains open. This does not waive C0–C5
-or make the final migration complete. The alpha does not install hooks or claim
-that role TOML is honored by either host.
+or make the final migration complete. The alpha does not install roles or hooks;
+the verified CLI role fixture does not establish desktop support.
 
 Detach retains game configuration, runtime archives/dependencies/lock and backups.
 It restores/removes only unchanged files that its manifest owns. Edited managed
