@@ -6,6 +6,18 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Systems mapping now has a Codex Skill, two focused references and the complete
+  fixed-column index template. [Eight native scenarios](evidence/map-systems-skill-2026-11-12.json)
+  cover new/resumed mapping, source absence, read-only next selection, optional
+  minimal use, sequential full reviews, a one-run solo override and a negative
+  trigger. Existing rows/GDDs and recovery narrative survive the resumed update;
+  actual director findings retain unresolved verification and unaccepted advice.
+  Three early runs exposed annotated checkpoint identity fields; two full-review
+  runs recovered from an ambiguous role-resource lookup. Both guidance defects
+  are corrected and fresh same-input runs verify the fixes. Four prior attempts
+  remain in the evidence. Build/typecheck, 184 regression tests and rebuilt
+  archive checks pass. This is selected CLI evidence, not complete S030 or desktop
+  acceptance; the remaining behavior matrix stays open.
 - Read-only gate prerequisites now expose `check --kind gdd` for section and
   placeholder observations and `check --kind adr-deps` for dependency edges,
   cycles, transitive blocking and tentative ordering. Missing dependency
@@ -89,7 +101,7 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 - Canonical resource packaging and one globally installed onboarding Skill.
 - `lint:content` now parses canonical Skill YAML and role TOML, checks local
   references and packaging boundaries, and reconciles catalog v3 with 75 primary
-  workflow inputs, 49 roles and three retired aliases. The current seven project
+  workflow inputs, 49 roles and three retired aliases. The mapping slice's eight project
   Skills and nine roles remain explicitly partial; no behavior row is promoted
   by static checks. Complete-declaration mode correctly fails for open rows.
   Installed-archive verification uses the packaged validator and rejects a

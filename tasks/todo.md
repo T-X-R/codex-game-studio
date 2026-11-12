@@ -319,10 +319,11 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S027 Migrate `hotfix` to `game-studio-hotfix`. Evidence: pending.
 - [ ] S028 Migrate `launch-checklist` to `game-studio-launch-checklist`. Evidence: pending.
 - [ ] S029 Migrate `localize` to `game-studio-localize`. Evidence: pending.
-- [ ] S030 Migrate `map-systems` to `game-studio-map-systems`. Evidence: pending.
+- [ ] S030 Migrate `map-systems` to `game-studio-map-systems`. Evidence: partial — canonical Skill, fixed template and [eight reviewed native cases](../docs/evidence/map-systems-skill-2026-11-12.json), with four prior attempts retained; full source/Codex and desktop matrices remain open.
   - [x] M1 Port the fixed-column systems-index template and verify its installed archive bytes. All sections and both table schemas are retained; only workflow/role names are namespaced. Build and packed install verification pass.
-  - [ ] M2 Implement the Codex entry point, phased director review and index/checkpoint/handoff references; preserve existing-index progress and guided authorization.
+  - [x] M2 Implement the Codex entry point, phased director review and index/checkpoint/handoff references; preserve existing-index progress and guided authorization. Native evidence exposed checkpoint identity annotations and ambiguous gate-resource wording; both are corrected with fresh same-input runs.
   - [ ] M3 Validate natural triggering, missing context, new/resumed indexes, lean/solo/full reviews, fixed table contracts, explicit next-system routing and authorized checkpoint effects in isolated native fixtures. Preserve untested interactive, adverse-review and desktop cases as open.
+    - Eight selected CLI cases pass manual artifact/trace review: new solo, resume, missing source, read-only next, voluntary minimal, full sequential director reviews, one-run solo override and negative trigger. Checkpoint saves retain one event/backup transaction and exact observed identity fields. Build/typecheck, 184 regression tests and corrected packed install pass. Missing roles, adverse outcomes, interactive modes, density/cycles, recovery conflicts and desktop remain open.
 - [ ] S031 Migrate `milestone-review` to `game-studio-milestone-review`. Evidence: pending.
 - [ ] S032 Migrate `next-step` to `game-studio-next-step`. Evidence: pending.
 - [ ] S033 Migrate `onboard` to `game-studio-onboard`. Evidence: pending.

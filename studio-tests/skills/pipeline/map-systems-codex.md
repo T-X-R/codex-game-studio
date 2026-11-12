@@ -66,3 +66,22 @@ are synthetic fixtures, not delivered game evidence.
 
 Static metadata, catalog and pack checks do not prove any behavioral row. Do not
 mark S030 verified from a subset of these scenarios or only a successful CLI exit.
+
+## Recorded CLI subset
+
+Run `node toolkit/test/map-systems-host.mjs <scenario>` after the maintainer build.
+Scenarios: `new-solo`, `resume`, `missing`, `next`, `minimal`, `full-review`,
+`solo-override`, `negative`. Each packs/installs a fresh temporary project; the
+wrapper verifies file scope, transaction bytes and installed resources, then
+returns 3 after native success pending semantic review. It does not certify its
+own verdict. Fixture prompts contain project inputs, not expected gate outcomes.
+
+[2026-11-12 evidence](../../../docs/evidence/map-systems-skill-2026-11-12.json)
+records eight reviewed cases and four earlier attempts. The corrected full run
+reads the exact gate resources with native Technical Director, Producer and
+Creative Director roles in order, with post-write creative review. Annotated
+checkpoint identities remain failing controls for the corrected recovery guide.
+The latest harness also reads checkpoint/config values through the installed CLI
+and rejects identity mismatches; earlier runs received the same independent check.
+The remaining cases above, including desktop and adverse verdict decisions, are
+unassessed and keep S030/M3 open.
