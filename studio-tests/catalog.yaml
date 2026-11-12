@@ -58,7 +58,8 @@ skills:
     priority: critical
     category: readiness
     target: .agents/skills/game-studio-story-done/SKILL.md
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/skills/readiness/story-done-codex.md
 
   - name: review-all-gdds
     spec: studio-tests/skills/review/review-all-gdds.md
@@ -1215,7 +1216,8 @@ agents:
     last_category_result: ""
     category: specialist
     target: .codex/agents/game-studio-ui-programmer.toml
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/roles/ui-programmer-codex.md
 
   - name: performance-analyst
     spec: studio-tests/agents/specialists/performance-analyst.md
