@@ -161,7 +161,8 @@ skills:
     priority: high
     category: authoring
     target: .agents/skills/game-studio-architecture-decision/SKILL.md
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/skills/authoring/architecture-decision-codex.md
 
   - name: map-systems
     spec: studio-tests/skills/pipeline/map-systems.md
