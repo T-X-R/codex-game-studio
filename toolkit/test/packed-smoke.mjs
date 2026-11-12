@@ -53,7 +53,7 @@ try {
     const result = command(globalCli, 'resource', 'path', id);
     assert.equal(await readFile(result.data.path, 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
-  for (const stage of ['systems-design', 'technical-setup', 'pre-production']) {
+  for (const stage of ['systems-design', 'technical-setup', 'pre-production', 'production', 'polish', 'release']) {
     const id = `studio/docs/phase-gates/gate-${stage}.md`;
     const result = command(globalCli, 'resource', 'path', id);
     assert.equal(await readFile(result.data.path, 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
