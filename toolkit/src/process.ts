@@ -4,7 +4,7 @@ import { StudioError } from './contract.js';
 export async function runProcess(executable: string, args: string[], options: { cwd?: string; timeoutMs?: number; windowsVerbatimArguments?: boolean } = {}) {
   const timeoutMs = options.timeoutMs ?? 60_000;
   if (!Number.isFinite(timeoutMs) || timeoutMs <= 0) throw new StudioError('INVALID_ARGUMENT', 'Process timeout must be positive');
-  return new Promise<{ exitCode: number; stdout: string; stderr: string }>((resolve, reject) => {
+  return new Promise<{ exitCode: number; signal: NodeJS.Signals | null; stdout: string; stderr: string }>((resolve, reject) => {
     const child = spawn(executable, args, { cwd: options.cwd, shell: false, windowsVerbatimArguments: options.windowsVerbatimArguments,
       detached: process.platform !== 'win32', stdio: ['ignore', 'pipe', 'pipe'] });
     let stdout = ''; let stderr = ''; let stopped: number | undefined;
@@ -22,6 +22,6 @@ export async function runProcess(executable: string, args: string[], options: { 
     child.stdout.on('data', chunk => { stdout += chunk.toString(); if (stdout.length + stderr.length > 4 * 1024 * 1024) stop(1); });
     child.stderr.on('data', chunk => { stderr += chunk.toString(); if (stdout.length + stderr.length > 4 * 1024 * 1024) stop(1); });
     child.once('error', error => { cleanup(); reject(new StudioError('DEPENDENCY_MISSING', `Cannot launch ${executable}: ${error.message}`, 3)); });
-    child.once('close', code => { cleanup(); resolve({ exitCode: stopped ?? code ?? 1, stdout, stderr }); });
+    child.once('close', (code, signal) => { cleanup(); resolve({ exitCode: stopped ?? code ?? 1, signal, stdout, stderr }); });
   });
 }

@@ -11,12 +11,31 @@ import { runConfiguredTest } from './run-tests.js';
 import { readSettings } from './config.js';
 import { planEngineSetup } from './engine-setup.js';
 import { planEngineScaffold } from './engine-scaffold.js';
+import { verifyEngine } from './engine-verify.js';
 import { applyInstall, describePlan } from './install.js';
 
 const project: Option = { type: 'string', description: 'Game workspace directory' };
 const dryRun: Option = { type: 'boolean', description: 'Describe effects without creating files or starting a server' };
 async function root(input: Input) { return resolveProject(input.values.project as string | undefined); }
 export const gameCommands: Record<string, Command> = {
+  'engine verify': { description: 'Verify a pinned Godot editor and run headless import with preserved logs', effect: 'process',
+    options: { project, 'dry-run': dryRun, executable: { type: 'string', description: 'Godot editor executable path or name (default godot)' },
+      output: { type: 'string', description: 'New project-relative evidence directory' },
+      timeout: { type: 'string', description: 'Maximum time per process in milliseconds (100–600000, default 120000)' } },
+    run: async input => {
+      const data = await verifyEngine(await root(input), input.values.output as string ?? `production/evidence/engine-${Date.now()}`, {
+        executable: input.values.executable as string | undefined, dryRun: !!input.values['dry-run'],
+        timeoutMs: input.values.timeout === undefined ? undefined : Number(input.values.timeout),
+      });
+      const result = { ...success('engine verify', data), warnings: data.warnings };
+      if ('artifacts' in data && data.artifacts) result.artifacts = data.artifacts.files.map(file => ({ path: file.path, type: 'evidence', sha256: file.sha256 }));
+      if (data.exitCode) {
+        process.exitCode = data.exitCode; result.status = data.exitCode === 3 ? 'not_assessed' : 'failed';
+        result.error = { code: data.exitCode === 124 ? 'TIMEOUT' : data.exitCode === 130 ? 'INTERRUPTED' : data.exitCode === 3 ? 'ASSESSMENT_INCOMPLETE' : 'CHECK_FAILED',
+          message: data.reason ?? 'Inspect the engine verification report.' };
+      }
+      return result;
+    } },
   'engine scaffold': { description: 'Create a missing Godot project from explicit settings or report editor-owned scaffolding requirements', effect: 'write',
     options: { project, 'dry-run': dryRun }, run: async input => {
       const { plan, engine, outcome, verification } = await planEngineScaffold(await root(input));

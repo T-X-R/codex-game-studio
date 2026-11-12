@@ -96,3 +96,33 @@ that an editor, import, build, test or game has run.
 Godot settings and command-line behavior are grounded in the official
 [ProjectSettings reference](https://docs.godotengine.org/en/stable/classes/class_projectsettings.html)
 and [command-line tutorial](https://docs.godotengine.org/en/stable/tutorials/editor/command_line_tutorial.html).
+
+## Installed Godot verification
+
+```sh
+game-studio engine verify --executable /path/to/Godot --dry-run --json
+game-studio engine verify --executable /path/to/Godot --output production/evidence/godot-import --json
+```
+
+The default executable name is `godot`. Use the actual executable inside the
+application bundle on macOS. The command checks `--version` against the configured
+Godot 4.x version and confirms that `--help` advertises the editor's `--import`
+operation before running `--headless --path <project> --import`. A C# project
+requires the .NET/mono edition. No editor is downloaded or installed by this
+command. Import can create Godot cache/import metadata and execute project editor
+code; this is a process operation, not a read-only inspection.
+
+The result distinguishes a missing executable/project, version mismatch or
+missing editor capability (`not_assessed`, exit 3) from a failed invocation
+(exit 5), timeout (124) or interruption (130). `--timeout` sets each subprocess's
+limit in milliseconds. A zero exit with `ERROR`, `SCRIPT ERROR` or parse-error
+diagnostics is still a failure. For the upstream-observed Godot 4.7 import crash
+(exit 139 or SIGSEGV), one retry is allowed and both attempts remain in the report;
+other failures are not automatically retried.
+
+The new evidence directory contains the report plus separate stdout/stderr logs
+for version, help and each import attempt. Existing evidence is never overwritten.
+`--dry-run` starts no process and writes nothing. Passing verifies editor import
+only; it does not establish test coverage, a build, main-scene execution or human
+play acceptance. Unity, Unreal and Web import adapters remain unimplemented and
+return `not_assessed`; their configured test/build commands remain separate.
