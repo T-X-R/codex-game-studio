@@ -96,8 +96,20 @@ review, captured payloads and before/after files are recorded in
 [`cli-hook-gate-2026-11-12.json`](evidence/cli-hook-gate-2026-11-12.json).
 The probe never grants trust itself. These fixture tests do not implement the
 packaged Hook adapter or upstream guard policies.
+Further reviewed CLI cases verify startup and complete multi-file patch denial
+from both root and subdirectory launches. An allowed two-file patch succeeds;
+the mixed two-file patch changes neither target. Native Hook trust lives in the
+temporary named profile, so the runner now retains that profile across a requested
+case sequence and removes it after the last case. See
+[`cli-hook-multifile-2026-11-12.json`](evidence/cli-hook-multifile-2026-11-12.json).
 The fixture and evidence commit `dbde457f97e6b7b1f75d9ce6e50cdd500889beed`
 passed all jobs in [native CI](https://github.com/T-X-R/codex-game-studio/actions/runs/43147237189).
+
+Engine configuration and its packed-runtime checks at
+`bd4bd1a120c85c3eccfe0d52588960fcae6cd1fa` passed all five jobs in
+[native CI](https://github.com/T-X-R/codex-game-studio/actions/runs/43149199444):
+macOS/Windows/Linux Node 24, Linux Node 26, and real Chrome replay. No new
+installation archive has been published.
 
 The checkpoint, engine inspection, test execution and configuration summary
 additions at `bbcb238505c457ac047938f2949e2bf8c9e98e58` passed all five jobs in
@@ -118,8 +130,8 @@ uses whitespace-separated tokens; the documented example and regression now use
 The full acceptance contract remains in `tasks/todo.md`. In particular:
 
 - Codex desktop live discovery, role selection, hook trust and permission tests.
-- CLI subdirectory role/hook discovery, actual sandbox write-boundary tests,
-  multi-file/shell hook cases and the remaining lifecycle/failure fixtures.
+- CLI subdirectory role discovery, actual sandbox write-boundary tests,
+  shell hook cases and the remaining lifecycle/failure fixtures.
 - All 75 upstream workflow adaptations, 49 roles, 14 scoped rules, individual
   hook behaviors and remaining helper parity. The retained `.claude` source is
   not shipped as an active compatibility layer.

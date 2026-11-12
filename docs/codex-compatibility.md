@@ -127,6 +127,23 @@ This does not prove desktop behavior, multi-file patches, shell interception,
 other lifecycle events, production validators or the packaged runtime adapter.
 It narrows the earlier exploratory uncertainty without closing T01/T16.
 
+A subsequent pair of fresh cases verifies multi-file patches from both the Git
+root and a subdirectory. In each session, startup context loaded, the two-file
+allowed patch completed, and the two-file mixed patch was denied before either
+file changed. Both actual `PreToolUse` payloads carried the entire patch in
+`tool_input.command`. The subdirectory case's three Hook events reported its
+subdirectory as `cwd`. There were no retries or alternate writes. See
+[`evidence/cli-hook-multifile-2026-11-12.json`](evidence/cli-hook-multifile-2026-11-12.json).
+
+These cases exposed a test-environment pitfall: native `/hooks` saves
+`hooks.state` entries and their `trusted_hash` values in the selected named user
+profile. Deleting that profile also removes its Hook trust. Two initial follow-up
+cases recreated only project trust and therefore ran no Hooks, from either
+launch directory. They are retained as trust-reset controls, not classified as
+trusted subdirectory failures. Under the owner's existing authorization, the same
+unchanged Hooks were reviewed again through native `/hooks`; the reviewed profile
+then remained identical across both successful cases and was removed afterward.
+
 To prepare a new fixture on macOS/Linux:
 
 ```bash
@@ -142,8 +159,23 @@ then close that interactive client and run:
 GAME_STUDIO_HOST_MODEL=<available-model> node toolkit/test/host-hook-probe.mjs <fixture-directory>
 ```
 
-Each fixture is single-use. The runner never grants hook trust and returns
-unassessed until the actual trace and files are reviewed. Its named user profile
-is removed when the run finishes; preparation intentionally keeps it available
-for the native review step. The live fixture script is not shipped in the toolkit
-archive. Its offline input/output contract tests also run in native Windows CI.
+Each case is single-use. The runner never grants hook trust and returns unassessed
+until the actual trace and files are reviewed. To run root and subdirectory
+multi-file cases after the initial case, use `--keep-profile` on that initial run
+and all intermediate cases, retaining the actual native review state:
+
+```bash
+GAME_STUDIO_HOST_MODEL=<available-model> node toolkit/test/host-hook-probe.mjs <fixture-directory> --keep-profile
+GAME_STUDIO_HOST_MODEL=<available-model> node toolkit/test/host-hook-probe.mjs <fixture-directory> --case root-multifile --keep-profile
+GAME_STUDIO_HOST_MODEL=<available-model> node toolkit/test/host-hook-probe.mjs <fixture-directory> --case subdirectory-multifile --subdirectory
+```
+
+The final invocation removes the named profile. Do not rebuild or copy trust
+entries to work around a deleted profile; use native review again under the
+appropriate authorization. The runner refuses a missing profile, preserves prior
+case files, and records each case's profile hash and incremental Hook events.
+If a sequence stops while `--keep-profile` is active, remove its named temporary
+profile when abandoning the fixture. The live fixture script is not shipped in
+the toolkit archive. Its offline input/output contract tests also run in native
+Windows CI. Desktop, shell, permission boundaries, remaining lifecycle behavior
+and production validators remain open.
