@@ -21,10 +21,12 @@ The initial alpha implements deterministic install and Web slices while C0 host 
 legacy engine preferences (`8bf457f`). `config set` adds validated project/local
 writes, comment/quote/line-ending preservation and stage synchronization
 (`c6a7365`); transaction backups are private on POSIX (`1356b97`). Build,
-typecheck and 46 tests pass locally; packed-install coverage includes writes
+typecheck and 47 tests pass locally; packed-install coverage includes writes
 through the pinned runtime. T04/T22 and S037 remain open until the remaining
 derived helpers and live workflow evidence are complete. Existing alpha CI
 passed all five jobs at `92242ed`; newer source changes still need native CI.
+The configuration reader also preserves legacy boolean `testing.strict` fallback
+after explicit per-type overrides; derived gate/engine helper parity is still open.
 
 ## M0 Compatibility and contracts
 

@@ -99,3 +99,17 @@ test('legacy placeholder preferences stay unset and invalid inherited property k
   assert.equal(settings['engine.language'].value, null);
   await assert.rejects(readSettings(root, ['constructor']), { code: 'INVALID_ARGUMENT' });
 });
+
+test('legacy strict boolean fills per-type settings after valid personal overrides', async t => {
+  const root = await fixture(t, { 'project.yaml': 'testing:\n  strict: true\n',
+    'project.local.yaml': 'testing:\n  strict:\n    config: false\n    logic: typo\n' });
+  const { settings, warnings } = await readSettings(root);
+  assert.deepEqual(settings['testing.strict.integration'], { value: true, source: 'project.yaml:testing.strict' });
+  assert.deepEqual(settings['testing.strict.config'], { value: false, source: 'project.local.yaml' });
+  assert.deepEqual(settings['testing.strict.logic'], { value: true, source: 'project.yaml:testing.strict' });
+  assert.ok(warnings.some(warning => warning.includes('testing.strict.logic')));
+  await writeFile(join(root, 'project.yaml'), 'testing:\n  strict: false\n');
+  assert.equal((await readSettings(root)).settings['testing.strict.ui'].value, false);
+  await writeFile(join(root, 'project.yaml'), 'testing:\n  strict: wrong\n');
+  assert.equal((await readSettings(root)).settings['testing.strict.ui'].value, null);
+});

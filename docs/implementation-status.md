@@ -9,7 +9,8 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 - Typed CLI argument contracts, JSON results, help/schema and explicit exit codes.
 - Nearest project discovery, configuration reads with provenance and rigor/local
   precedence, named system workflow overrides and legacy technical-preference
-  import. Derived gate/engine helper parity remains open.
+  import, plus legacy boolean test strictness. Derived gate/engine helper parity
+  remains open.
 - Configuration writes with local-key restrictions, value validation, comment
   and scalar-quote preservation, no-op detection and synchronized stage mirrors.
   Concurrent changes and destructive YAML shape edits are refused. Transaction
@@ -46,7 +47,7 @@ were not modified; verification used an isolated Node 24 distribution.
   remains unchanged; an intentional browser error returns failure.
 - Official Skill-format validation for onboarding and the three project Skills.
 
-Source additions after the published alpha: build/typecheck and 46 local tests
+Source additions after the published alpha: build/typecheck and 47 local tests
 pass with no skips. The packed-install test also exercises configuration writes
 through the restored project launcher. These additions are not in the existing
 `v0.1.0-alpha.0` download; a later archive is required to distribute them.

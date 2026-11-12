@@ -112,6 +112,7 @@ export async function readSettings(root: string, requested?: string[], options: 
     const candidates: [Json | undefined, string][] = [
       [key === 'modes.workflow' && systemKey ? project[systemKey] : undefined, `project.yaml:${systemKey}`],
       [localKeys.has(key) ? local[key] : undefined, 'project.local.yaml'], [project[key], 'project.yaml'],
+      [key.startsWith('testing.strict.') ? project['testing.strict'] : undefined, 'project.yaml:testing.strict'],
       [legacy[key], mirrors[key] ?? 'legacy'],
       [key.startsWith('specialists.') && Object.hasOwn(rawProject, 'specialists') ? undefined : preferences.values[key], preferences.source],
       [derived[key], `rigor:${rigor}`], [defaults[key], 'default'],

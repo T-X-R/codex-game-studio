@@ -23,6 +23,9 @@ Legacy engine preferences are read from `docs/technical-preferences.md`, falling
 back to the retained `.claude/docs/technical-preferences.md` only during migration.
 The installed archive never requires that legacy directory. An explicit
 `specialists` block, including null entries, suppresses legacy specialist fallback.
+The legacy scalar `testing.strict: true|false` fills per-type strictness after
+valid personal and project per-type values. Absent strictness remains unset;
+workflow-specific defaults are not invented by the configuration reader.
 
 `config set KEY VALUE` writes one setting. Enum values are validated; booleans
 use `true` or `false`, numeric settings use numbers, and list settings use JSON
