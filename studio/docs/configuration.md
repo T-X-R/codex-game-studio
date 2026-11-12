@@ -27,6 +27,19 @@ The legacy scalar `testing.strict: true|false` fills per-type strictness after
 valid personal and project per-type values. Absent strictness remains unset;
 workflow-specific defaults are not invented by the configuration reader.
 
+Four explicit summary queries preserve the upstream workflow calculations:
+
+| Query | Result |
+| --- | --- |
+| `config get gate_level` | Per-type blocking/advisory levels with provenance; the config story default is advisory, while an unset smoke-check policy is blocking. Explicit strictness overrides both. |
+| `config get review_gate` | Skill and phase gate run/skip decisions from the effective review mode: full runs both, lean runs phase gates, solo skips both. |
+| `config get engine_values` | Name, version and language, each with its own source; missing fields remain unset. |
+| `config get perf_budgets` | The four committed performance budgets with provenance; local budget overrides are ignored. |
+
+Summary results describe configured policy, not a completed review or test.
+An explicit workflow review option can still require a review. Stored strictness
+remains unset when absent; only `gate_level` applies the named workflow defaults.
+
 `config set KEY VALUE` writes one setting. Enum values are validated; booleans
 use `true` or `false`, numeric settings use numbers, and list settings use JSON
 arrays of strings. Other values are literal text, so engine version `4.7` remains

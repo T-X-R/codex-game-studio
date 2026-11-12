@@ -4,6 +4,7 @@ import { parseDocument } from 'yaml';
 import { StudioError } from './contract.js';
 import { exists } from './project.js';
 import { readLegacyPreferences } from './legacy-config.js';
+import { derivedDependencies, deriveSetting } from './config-derived.js';
 
 export type Json = null | string | number | boolean | Json[] | { [key: string]: Json };
 type ObjectValue = { [key: string]: Json };
@@ -107,12 +108,16 @@ export async function readSettings(root: string, requested?: string[], options: 
   const rigor = valid('modes.rigor', project['modes.rigor'], 'project.yaml') ? String(project['modes.rigor']) : 'minimal';
   const derived = Object.fromEntries(rigorKeys.map((key, i) => [key, rigorValues[rigor]![i]!])) as ObjectValue;
   const settings: Record<string, Setting> = {};
-  for (const key of requested ?? new Set([...Object.keys(enums), ...Object.keys(defaults), ...Object.keys(project), ...Object.keys(preferences.values), ...localKeys])) {
+  const wanted = new Set(requested ?? [...Object.keys(enums), ...Object.keys(defaults), ...Object.keys(project), ...Object.keys(preferences.values), ...localKeys]);
+  const keys = new Set(wanted);
+  for (const key of wanted) if (Object.hasOwn(derivedDependencies, key)) for (const dependency of derivedDependencies[key]!) keys.add(dependency);
+  for (const key of keys) {
+    if (Object.hasOwn(derivedDependencies, key)) continue;
     const systemKey = options.system ? `workflow_overrides.system_overrides.${options.system}` : undefined;
     const candidates: [Json | undefined, string][] = [
       [key === 'modes.workflow' && systemKey ? project[systemKey] : undefined, `project.yaml:${systemKey}`],
       [localKeys.has(key) ? local[key] : undefined, 'project.local.yaml'], [project[key], 'project.yaml'],
-      [key.startsWith('testing.strict.') ? project['testing.strict'] : undefined, 'project.yaml:testing.strict'],
+      [key.startsWith('testing.strict.') && localKeys.has(key) ? project['testing.strict'] : undefined, 'project.yaml:testing.strict'],
       [legacy[key], mirrors[key] ?? 'legacy'],
       [key.startsWith('specialists.') && Object.hasOwn(rawProject, 'specialists') ? undefined : preferences.values[key], preferences.source],
       [derived[key], `rigor:${rigor}`], [defaults[key], 'default'],
@@ -121,5 +126,7 @@ export async function readSettings(root: string, requested?: string[], options: 
     settings[key] = selected ? { value: selected[0]!, source: selected[1] } : { value: null, source: 'unset' };
     if (selected?.[1] === '.claude/docs/technical-preferences.md') warnings.push('Using legacy technical preferences; migrate the project-owned record to docs/technical-preferences.md');
   }
+  for (const key of wanted) if (Object.hasOwn(derivedDependencies, key)) settings[key] = deriveSetting(key, settings);
+  for (const key of Object.keys(settings)) if (!wanted.has(key)) delete settings[key];
   return { settings, warnings: [...new Set(warnings)] };
 }

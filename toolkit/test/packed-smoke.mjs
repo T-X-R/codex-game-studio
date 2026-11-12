@@ -33,6 +33,8 @@ try {
   assert.equal(await readFile(join(project, 'production/stage.txt'), 'utf8'), 'Concept\n');
   command(launcher, 'config', 'set', 'modes.automation', 'autonomous', '--local', '--project', project);
   assert.equal(command(globalCli, 'config', 'get', 'modes.automation', '--project', project).data.settings['modes.automation'].source, 'project.local.yaml');
+  assert.equal(command(launcher, 'config', 'get', 'engine_values', '--project', project).data.settings.engine_values.value.name.value, 'Web');
+  assert.equal(command(launcher, 'config', 'get', 'gate_level', '--project', project).data.settings.gate_level.value.config.smokeCheck, 'blocking');
   await writeFile(join(project, 'checkpoint-draft.md'), '**Current task:** Prototype movement\n**Next step:** Test controls\n');
   command(launcher, 'checkpoint', 'save', '--input', 'checkpoint-draft.md', '--expect-hash', 'missing', '--project', project);
   assert.equal(command(globalCli, 'checkpoint', 'show', '--project', project).data.fields['Next step'], 'Test controls');
