@@ -3,7 +3,9 @@
 Apply after the engine audit, with the actual pinned references and ADR decisions.
 This is a source-preserved in-conversation lens, not a delegated specialist review.
 API/version facts must come from VERSION.md, breaking/deprecated/current-practice
-references and relevant module documents. Mark uncovered facts unverified; practice
+references and only the module documents selected from actual ADR fields by
+[the engine-input rule](inputs-and-freshness.md). This lens does not expand that
+read set; no named module means read none. Mark uncovered facts unverified; practice
 prompts below are review questions, not evidence that every listed pattern is
 universally forbidden or that a suggested replacement fits this project.
 

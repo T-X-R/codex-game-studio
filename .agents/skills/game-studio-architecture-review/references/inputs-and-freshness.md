@@ -118,9 +118,12 @@ with no design. Use each document's real headings to bound whole sections; a fix
 - **engine:** begin with ADR engine sections, relevant Decision/performance text and
   references, not every GDD. No requirement extraction is implied by this focus.
 - **Engine inputs:** pinned engine VERSION.md, breaking-changes.md, deprecated-apis.md,
-  and only modules named by the relevant References Consulted/API fields. Read
-  current-best-practices.md when the lens uses it. No named module means no module
-  claims cross-checked, not a clean comprehensive API audit.
+  and only the union of module documents actually named in the in-scope ADRs'
+  `References Consulted` and `Post-Cutoff APIs Used` fields. If no ADR names a
+  module, read none and report that no module claims could be cross-checked.
+  Master/GDD intent and local lens questions do not expand this semantic read set.
+  Read current-best-practices.md when the lens uses it; global receipt hashing
+  still includes every module without loading its body for domain analysis.
 - **Standards:** effective project naming/performance values; `docs/technical-preferences.md`
   for missing values, forbidden patterns and allowed libraries. Legacy fallback
   reported by config is migration context, not a packaged `.claude` dependency.
