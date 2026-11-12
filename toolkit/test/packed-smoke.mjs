@@ -26,6 +26,10 @@ try {
   const project = join(temp, '我的 game');
   assert.equal(command(globalCli, 'init', project, '--engine', 'web').status, 'ok');
   assert.match(await readFile(join(project, '.agents/skills/game-studio-prototype/SKILL.md'), 'utf8'), /name: game-studio-prototype/);
+  for (const path of ['SKILL.md', 'references/choosing-settings.md']) {
+    assert.equal(await readFile(join(project, '.agents/skills/game-studio-project-settings', path), 'utf8'),
+      await readFile(join(packageRoot, '../.agents/skills/game-studio-project-settings', path), 'utf8'));
+  }
   assert.equal(await readFile(join(project, '.agents/skills/game-studio-prototype/references/grow.md'), 'utf8'),
     await readFile(join(packageRoot, '../.agents/skills/game-studio-prototype/references/grow.md'), 'utf8'));
   for (const path of ['hook.ts', 'tune.ts']) {
@@ -39,6 +43,16 @@ try {
   assert.equal(await readFile(join(project, 'production/stage.txt'), 'utf8'), 'Concept\n');
   command(launcher, 'config', 'set', 'modes.automation', 'autonomous', '--local', '--project', project);
   assert.equal(command(globalCli, 'config', 'get', 'modes.automation', '--project', project).data.settings['modes.automation'].source, 'project.local.yaml');
+  const automation = command(launcher, 'config', 'get', 'modes.automation', '--project', project);
+  assert.equal(automation.data.annotations['modes.automation'].locallyOverridable, true);
+  assert.equal(automation.data.annotations['modes.automation'].localValue, 'autonomous');
+  const reserved = command(launcher, 'config', 'set', 'accessibility.target', 'standard', '--project', project);
+  assert.ok(reserved.warnings.some(message => /reserved/.test(message)));
+  for (const keys of [[], ['accessibility.target']]) {
+    const view = command(launcher, 'config', 'get', ...keys, '--project', project);
+    assert.equal(view.data.annotations['accessibility.target'].reserved, true);
+    assert.ok(view.warnings.some(message => message.includes('accessibility.target') && /reserved/.test(message)));
+  }
   assert.equal(command(launcher, 'config', 'get', 'engine_values', '--project', project).data.settings.engine_values.value.name.value, 'Web');
   assert.equal(command(launcher, 'config', 'get', 'gate_level', '--project', project).data.settings.gate_level.value.config.smokeCheck, 'blocking');
   assert.equal(command(launcher, 'config', 'get', 'engine_row', '--project', project).data.settings.engine_row.value.commands.test, 'npm test');
