@@ -17,6 +17,24 @@ The original names, domain specs and historical result fields are preserved;
 blank historical fields do not count as passing evidence. Aliases retain the
 approved replacement and must not create duplicate active Skill entrypoints.
 
+Default source inspection also reconciles the existing tables in
+`tasks/migration-inventory.md` with all 18 retained Hook files, 54 script/resource
+files and 14 scoped rules. It rejects omitted/duplicate rows, missing or
+nonregular source files, undeclared additions and empty disposition columns.
+The tables remain the single inventory for those sources. Literal registrations
+in the retained `.claude/settings.json` are inspected as data: the 15 registered
+Hook files must match each table row's event/matcher; the three unregistered
+helpers remain unregistered. Missing, duplicated, unknown or dynamically
+constructed registrations are errors. No Hook is executed, installed or trusted.
+
+JSON reports this under `inventory`, including `sourceCoverageComplete`. That
+field means only that the source tables and retained files/registrations reconcile;
+it does not mean any of their Codex replacements are implemented or accepted.
+Table disposition text still needs semantic review. `--bundle-only` leaves both
+source catalog and inventory NOT ASSESSED because retained inputs are not packaged.
+`--complete` still checks workflow/role/alias declarations, not behavioral
+completion of the rule/Hook/helper queues or the full release.
+
 `--complete` additionally requires every row and alias to declare `verified`,
 with readable `codex_spec` and evidence files under `docs/evidence/`. It currently
 fails because the migration remains incomplete. `declaredComplete` describes
@@ -29,7 +47,7 @@ The [Codex behavior rubric](../studio-tests/quality-rubric.md) now separates
 instruction review from observed behavior and preserves the original 15 categories
 and 57 metric identities. The maintainer guide and spec templates use Codex
 mechanics and guided authorization. This is not the final T20 gate yet:
-rule/hook/helper inventory cross-checks, individual spec migration and remaining
+individual spec migration and remaining
 legacy consumer replacement are open. The old linter and upstream behavioral
 specs remain migration inputs. Shared rules/helpers and host behavior are
 separately gated by the plan.

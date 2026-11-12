@@ -103,6 +103,7 @@ test('maintainer command supports an explicit tree and returns distinct content 
   const result = JSON.parse(execFileSync(process.execPath, [script, '--root', root, '--bundle-only'], { cwd: tmpdir(), encoding: 'utf8' }));
   assert.equal(result.status, 'valid'); assert.equal(result.behaviorVerified, false);
   assert.equal(result.catalog.status, 'not_assessed');
+  assert.equal(result.inventory.status, 'not_assessed');
   await write('.codex/agents/game-studio-review.toml', 'invalid TOML');
   const bad = spawnSync(process.execPath, [script, '--root', root, '--bundle-only'], { encoding: 'utf8' });
   assert.equal(bad.status, 1); assert.ok(JSON.parse(bad.stdout).issues.some(x => x.code === 'INVALID_TOML'));
