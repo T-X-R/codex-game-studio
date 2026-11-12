@@ -287,6 +287,7 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S006 Migrate `asset-spec` to `game-studio-asset-spec`. Evidence: pending.
 - [ ] S007 Migrate `balance-check` to `game-studio-balance-check`. Evidence: pending.
 - [ ] S008 Migrate `brainstorm` to `game-studio-brainstorm`. Evidence: pending.
+  - Planned bounded slices: B1 shared brief/concept templates; B2 four director gate resources; B3 canonical entrypoint, lean/full references, catalog state and Codex behavior spec; B4 disposable installed-package native scenarios, artifact review and evidence. Keep S008 open until its complete trigger, tier, mode, gate, resume and host matrix is verified. Missing director roles are explicit unavailable dependencies, not solo reviews counted as director evidence.
 - [ ] S009 Migrate `bug-report` to `game-studio-bug-report`. Evidence: pending.
 - [ ] S010 Migrate `bug-triage` to `game-studio-bug-triage`. Evidence: pending.
 - [ ] S011 Retire alias `changelog`; route users to `game-studio-write-changelog`. Evidence: pending.
