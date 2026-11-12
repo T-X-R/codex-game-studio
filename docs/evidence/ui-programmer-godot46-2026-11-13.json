@@ -1,0 +1,258 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A040 original Godot 4.6 case, actual 4.6.1 execution; selected source-case core PASS, full fixture FAIL.",
+  "candidate": {
+    "path": "/private/tmp/game-studio-ui-godot46-evidence.8gs00ed4",
+    "reviewSha256": "6e92aa130ed395c09baf57ba8a76712f0834b0292c3fe5205cf5a6463725e746",
+    "manifestSha256": "96e66b431dd062b80b0f58c478ee3e887b5c98b32d128ee81a1eb420a8a8d345"
+  },
+  "independentRootVerification": {
+    "frozenManifestFiles": 100,
+    "actualWorkspaceRegularFiles": 640,
+    "nativeOriginalRegularFilesPreserved": 566,
+    "frozenPreObservationRegularFiles": 630,
+    "symlinksPreserved": 2,
+    "actualEngineBinaryVerified": true,
+    "traceHashesVerified": true,
+    "scope": "Root independently rehashed manifest, actual runtime files, frozen observer baseline, originals, links, live traces and actual engine binary. Agent independently reviewed full test source, public tool timeline and nine-state observations."
+  },
+  "review": {
+    "scenario": "godot46",
+    "sourceCase": 5,
+    "overall": "FAIL",
+    "sourceCase5Core": "PASS",
+    "reason": "Actual Godot 4.6.1 Control/ScrollContainer equivalent and version-first API inspection verified; original fixture gamepad accept integration fails and remains unresolved outside authorized config scope.",
+    "nativeRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-RCqr77",
+    "observationRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-observation-KOwF3a",
+    "workspace": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-RCqr77/UI game 测试",
+    "nativeExitCode": 0,
+    "nativeWrapperExitCode": 3,
+    "observerExitCode": 0,
+    "observerWrapperExitCode": 3,
+    "rawReportsRemain": "not_assessed",
+    "traces": {
+      "parent": {
+        "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-30-44-01a1d0cf-d5e3-7cd2-9058-405e62091821.jsonl",
+        "sha256": "8178934565d94872004bdca89b034c4deb654c3473dbdaea8e62bad410d87ab9",
+        "id": "01a1d0cf-d5e3-7cd2-9058-405e62091821",
+        "source": "exec",
+        "contexts": [
+          {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          }
+        ],
+        "complete": true
+      },
+      "child": {
+        "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-30-56-01a1d0d0-07ca-7a82-94de-4bed334ccc2b.jsonl",
+        "sha256": "b7c7e8afefb0dfd79f82344286865f74497a126685679eee521eeb6c5928c426",
+        "id": "01a1d0d0-07ca-7a82-94de-4bed334ccc2b",
+        "source": {
+          "subagent": {
+            "thread_spawn": {
+              "parent_thread_id": "01a1d0cf-d5e3-7cd2-9058-405e62091821",
+              "depth": 1,
+              "agent_path": "/root/inventory_ui",
+              "agent_nickname": "Boole",
+              "agent_role": "game-studio-ui-programmer"
+            }
+          }
+        },
+        "contexts": [
+          {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          }
+        ],
+        "complete": true
+      }
+    },
+    "preservedExistingFiles": 566,
+    "nativeAddedFiles": 64,
+    "observerAddedFiles": 10,
+    "existingFileChanges": [],
+    "outsideScope": [],
+    "roleSha256": "4b0d20be98016eaf0cb5888f5b3af9c77c34044e3357401ccc07086b71ab0290",
+    "packageIntegrity": "sha512-DM1mZo7lH9FBm64FEt+kuVrtfvnx5vOGD531pKMM1b8UEeKfPKM8O7ZKUEEh+LLoC/pTC4hVHLZsIdm7ZHkXWA==",
+    "timeline": {
+      "readUxAndVersion": "2026-11-12T17:31:08.158Z",
+      "actualEngineDoctool": "2026-11-12T17:32:06.917Z",
+      "readActualControlScrollContainerApi": "2026-11-12T17:32:12.971Z",
+      "firstImplementation": "2026-11-12T17:33:33.179Z"
+    },
+    "actualRendering": {
+      "version": "4.6.1.stable.official.14d19694e",
+      "display": "macOS OpenGL Compatibility Apple M4",
+      "screenshots": 9,
+      "captureErrors": 0,
+      "independentlyViewed": [
+        "initial.png",
+        "keyboard-right-and-accept.png",
+        "empty-slot-activation.png"
+      ],
+      "observedInput": [
+        "mouse hover/click, command and feedback",
+        "reactive quantity update",
+        "keyboard right/Enter",
+        "D-pad focus moves Slot0 to Slot1",
+        "gamepad A produces no extra request",
+        "empty clears Details",
+        "locked activation produces no command"
+      ]
+    },
+    "runtimeAssertions": {
+      "initial": {
+        "total": 29,
+        "passed": 26,
+        "failed": 3
+      },
+      "final": {
+        "total": 30,
+        "passed": 29,
+        "failed": 1
+      },
+      "remainingFailure": "supplied ui_accept mapping supports gamepad activation (integration requirement)",
+      "changesToTests": "Preserved initial failures. Removed cascading absolute request-count assumption after failed gamepad; disabled-button focus assumption replaced with activation contract. Separate temporary in-memory accept binding diagnostic does not repair original input.",
+      "narrowScroll": "Actual native test resized viewport to 180px after long synthetic translation; verified visible horizontal scrollbar, positive scroll offset following focus, root width180. Source reviewed independently; no independent narrow screenshot captured."
+    },
+    "limitations": [
+      "No physical device, human play acceptance or screen-reader speech validation.",
+      "Original broad project pin4.6 differs from actual4.6.1: toolkit exact engine verify not_assessed exit3 preserved.",
+      "Sandbox import errors and first sandbox rendering failure preserved; successful authorized windowed run does not retroactively pass them.",
+      "No project UI module reference available; role used actual installed version-matched API export before implementation.",
+      "No generic role substitute, no extra native session, no canonical/fixture/build changes.",
+      "Encrypted collaboration payloads remain opaque; metadata/tool execution and actual files provide evidence."
+    ]
+  },
+  "rootVisualAndResultReview": "Viewed actual independent initial rendering and read native final and all 30 final runtime assertion results. Full source/API timeline, three screenshots and all state observations were independently reviewed by design_review_migration.",
+  "baselineClarification": "Host baseline is 566 files; the child final says 568 because its own later baseline includes generated sidecars. Preservation here uses the host pre-native snapshot.",
+  "frozenArtifactHashes": {
+    "artifacts/design/ux/inventory-flow.md": "5549c7ff8fef96112c94b522aa8e86377fdc03c573087b7607745de077e1b06c",
+    "artifacts/docs/coding-standards.md": "167cbaf2de9c9291e2960e827454f9132f96cac603f09701ada216eb0001611c",
+    "artifacts/docs/engine-reference/godot/VERSION.md": "d4044bb976c5469fb49f8f3b14cab35be06c844c0931c5e4adea5a0e7a0fccc1",
+    "artifacts/i18n/en.po": "21be157aae706e3b38c739eb89d3af3ed87e7a894aba383c9f8f982bdfa9ba56",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/BaseButton.xml": "bd769ecdebb9a6134005970c61370c9860b61654d9c43cb4d2c3cb97a3e315d6",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/BoxContainer.xml": "dc3cbd1239bf260f89d96b2f1daaef675f98ae92f067d078f4bc519e483973e2",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/Button.xml": "c328b502fd2b53977ffa92f9a08e7ab31eb712141e6b18702ceaa7e4d175ed30",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/Control.xml": "fe3060678d0849ec85537e3bb58ad9fe9a8f26f72a1654b1f18a0ecc2885a51d",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/DisplayServer.xml": "06f10fee2c0ea51a980d4cceb89577194ac8109feae5bf1d59469f067b1e2ed4",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/HBoxContainer.xml": "a7c62ac40bc707c3df61b3beec0d97065cee38d1a2e93547c046a384c5f62392",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/InputEventAction.xml": "68e476a635ba542905ba92c05c8f392cd48e347585756822ecf8352a2870b798",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/InputMap.xml": "aebfae41681c3dd91ee15cc340d53aab10f3fa356704cdf549754e416b40e2a3",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/Label.xml": "02ec6da31cef76c17254582237cd18ea7c5080cbe2043b4591597e5210d4172c",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/Node.xml": "d2460aced50dacbe3fc627015c02432ce98f4550fdb50117e2752e3d50c66e1e",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/SceneTree.xml": "18aaa8eccb19b4b1aa6fb0edbe3a42217ac9f5c33dcf504baabac897e48e1c34",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/ScrollContainer.xml": "f8d814353e73eba54d2df7f8080056133e6619190cad81485769a8e69a8a01b9",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/StyleBoxFlat.xml": "d31b6f37ab5e9acac09c1cd5b232c031d438e31aa77958f1e392b31556f55a21",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/Theme.xml": "11ea94b6b162aaf715dd7bd13049bdbbab243d2626fa2e8972dd6dbd733c04e3",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/TranslationServer.xml": "d9156e4ac18e14426ea39862cddfc1ba8809d8d0df0066851ce20a99dcb4ac3b",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/VBoxContainer.xml": "01075753de642b8574d21ee023775288ab3ef1f10577ad0016c488077f44beb6",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/Viewport.xml": "f89afe7c8f40e4d2468cf4e4759a5b10a4e2e87d908c59e40eec2ca046263d17",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/engine-reference/doc/classes/Window.xml": "a73543d71f575953ef73bc6b5c57f5fd1cbe3435d89506cbeba03689c4c9e396",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/existing-files-before.json": "e540c62ec139e2162bcfc3fbc53f47573530e16606b497185c375438b5f67db6",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/final-runtime-engine.log": "8747a949ccedf254655249c42c20336251e7eb3384cc6c44792224ec26a22d00",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/final-runtime-results.json": "575c9be2c146ff29ceeff3817e4f0d82af1ed6106916dcdc0ff2052aa82d58e5",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/final-runtime/report.json": "7292b483f367edfc08e617d24987cc5b32e4ead25816518159f08e08746f20d7",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/final-runtime/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/final-runtime/stdout.log": "8747a949ccedf254655249c42c20336251e7eb3384cc6c44792224ec26a22d00",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/import-fallback-engine.log": "da641b945d84e926b9000dc88e63d76ac4dd75229c4b77f4c00b291e8b4548ab",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/import-fallback/report.json": "54f6917db03f62486f102c3c072cc4516d5cf42b1e614a3b7635e7ff1b7486e7",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/import-fallback/stderr.log": "e94032ba00fc9041d758b81b1e549ff9d7bba579a5f630b8b93677f5cae2460a",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/import-fallback/stdout.log": "422d93d0da42c3c3d0547d17db2024850683ae8994fce99d239abc1fc9f067f9",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/import/report.json": "4de9ba24ca4f3ad97df66a3ecae1610302075d5eea117591b0917c8c9aafa63a",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/import/version.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/import/version.stdout.log": "9765f54defe057e03dafad31134b7fef950f77b82a56915c22b414715a0a1373",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/reference.log": "442e48961f4fd0f1093a18fdcf3fb47679ffe7de8510658e19948ebd221da094",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/render-native-engine.log": "ab57f70df0efbab605bea95c2337bed6f21300d5f64203395a5372a05d9edf5f",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/render/report.json": "67c042888dab5b377a841373a239a1fa99780719de71d50a8801119ba8c5bb27",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/render/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/render/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/report.md": "37268d6d9b0c34627d98e6f4e96330f706385d39e5617f1e4787aa6cb751cccd",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/runtime-diagnostic-engine.log": "32698336bd8276426e9abfa97cbadbc26e653da97e37fd537e754daa4c20dea5",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/runtime-diagnostic-results.json": "5f08cc300c11e6c0fe6535e0cf5ecb22bbd9f047da46956342a31905aaa0bf93",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/runtime-diagnostic/report.json": "9a8b224a33196087b6727201d1561ee3f8b7eb04ca1d4188908ab04b9d473e1e",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/runtime-diagnostic/stderr.log": "247e54fb10aaceb4ec811ff55b59bdd06e4343c79b728daf0dba18020202923a",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/runtime-diagnostic/stdout.log": "071958994a3154a8adea4546d231436801b252090413f6e579af2b3bb4f318b5",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/runtime-engine.log": "1053ae151cc1ba2910521e496f6d338955e0d04a2049259e60ddc3fe838f3c69",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/runtime-results.json": "5f08cc300c11e6c0fe6535e0cf5ecb22bbd9f047da46956342a31905aaa0bf93",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/runtime/report.json": "b34a1c4c439fd9b0f0a0fa255a82c8ac10e53d022f1879dd535fc8305c9a87bd",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/runtime/stderr.log": "247e54fb10aaceb4ec811ff55b59bdd06e4343c79b728daf0dba18020202923a",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/runtime/stdout.log": "82eb41298ce27d5cec16a7f7f15181a96a34e87e9ba8210217fba693672bda8a",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/scope-audit.json": "40f0dd92da12e2625557d678998e5ff3d3d29dcfa1cc9b8dce12c284b75fe231",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/screenshots-native/empty-slot-activation.png": "f401beb917208c09f47b8bd34a73841dc336b8976a868155e60f069b9d62ae78",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/screenshots-native/first-slot-mouse-activation.png": "feadfdfb2d208d1af63e8eb25479cda5c9edaa4e2b5a794ccf7803a4bd199ece",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/screenshots-native/game-side-quantity-change.png": "f19e845df6601706017305cee46af152875f1ab7c4a140cd07a7fc0ed8daed18",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/screenshots-native/gamepad-accept.png": "c83e0551ec23b2b89e0aa410c6beb349f61b4b87bf2cd781b3389d60e2df1b10",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/screenshots-native/gamepad-right-focus-before-confirm.png": "c83e0551ec23b2b89e0aa410c6beb349f61b4b87bf2cd781b3389d60e2df1b10",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/screenshots-native/initial.png": "9fbb842f1b4f6baf5564cef01c0bc6d9787a3d6ca8b049e69fb5496d067959ff",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/screenshots-native/keyboard-right-and-accept.png": "c83e0551ec23b2b89e0aa410c6beb349f61b4b87bf2cd781b3389d60e2df1b10",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/screenshots-native/locked-slot-click.png": "f401beb917208c09f47b8bd34a73841dc336b8976a868155e60f069b9d62ae78",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/screenshots-native/observations.json": "3d3658a7aa0695e61deb9ef5a36b185e1f17a9a50487974f2a3148c28c6fc74c",
+    "artifacts/production/qa/evidence/inventory-ui-20261113-implementation/screenshots-native/pointer-over-first-slot.png": "ba4f4a6b9a62ba5a1ced27c27a8aee7efd76cc1b6fe7992bdb080cb02676e08f",
+    "artifacts/production/qa/evidence/observer-a29c705f-5af4-49fd-ae64-2192bea14ff8/empty-slot-activation.png": "f401beb917208c09f47b8bd34a73841dc336b8976a868155e60f069b9d62ae78",
+    "artifacts/production/qa/evidence/observer-a29c705f-5af4-49fd-ae64-2192bea14ff8/first-slot-mouse-activation.png": "feadfdfb2d208d1af63e8eb25479cda5c9edaa4e2b5a794ccf7803a4bd199ece",
+    "artifacts/production/qa/evidence/observer-a29c705f-5af4-49fd-ae64-2192bea14ff8/game-side-quantity-change.png": "f19e845df6601706017305cee46af152875f1ab7c4a140cd07a7fc0ed8daed18",
+    "artifacts/production/qa/evidence/observer-a29c705f-5af4-49fd-ae64-2192bea14ff8/gamepad-accept.png": "c83e0551ec23b2b89e0aa410c6beb349f61b4b87bf2cd781b3389d60e2df1b10",
+    "artifacts/production/qa/evidence/observer-a29c705f-5af4-49fd-ae64-2192bea14ff8/gamepad-right-focus-before-confirm.png": "c83e0551ec23b2b89e0aa410c6beb349f61b4b87bf2cd781b3389d60e2df1b10",
+    "artifacts/production/qa/evidence/observer-a29c705f-5af4-49fd-ae64-2192bea14ff8/initial.png": "9fbb842f1b4f6baf5564cef01c0bc6d9787a3d6ca8b049e69fb5496d067959ff",
+    "artifacts/production/qa/evidence/observer-a29c705f-5af4-49fd-ae64-2192bea14ff8/keyboard-right-and-accept.png": "c83e0551ec23b2b89e0aa410c6beb349f61b4b87bf2cd781b3389d60e2df1b10",
+    "artifacts/production/qa/evidence/observer-a29c705f-5af4-49fd-ae64-2192bea14ff8/locked-slot-click.png": "f401beb917208c09f47b8bd34a73841dc336b8976a868155e60f069b9d62ae78",
+    "artifacts/production/qa/evidence/observer-a29c705f-5af4-49fd-ae64-2192bea14ff8/observations.json": "a3dc453f8953a6b6a1fab6f825e9e9aa20548d30fd6d0e9aec17b9b0eff78295",
+    "artifacts/production/qa/evidence/observer-a29c705f-5af4-49fd-ae64-2192bea14ff8/pointer-over-first-slot.png": "ba4f4a6b9a62ba5a1ced27c27a8aee7efd76cc1b6fe7992bdb080cb02676e08f",
+    "artifacts/project.godot": "7b69192910397c811604f87398ef4a2fb3d5c2d5ad5be526ee5b99ebf2fbaf4b",
+    "artifacts/project.yaml": "e4eb208cae367bec962ad14ab17b61ed35207263583c190a72afdbd257eb8f2a",
+    "artifacts/src/inventory_model.gd": "1522e3fae8262a56b5bd1819311080bfc81bfa922b479216e49600fc8fd0f9e4",
+    "artifacts/src/inventory_model.gd.uid": "92b19f35ce9ae849ab4b3693695e639fc1d6e9c810bc90cf454d991d5915ed29",
+    "artifacts/src/ui/inventory_screen.gd": "2594562aeb4cbbf5d5c798fe52673e35f9f0200ba5bedcb682e06ac546649645",
+    "artifacts/src/ui/inventory_screen.gd.uid": "80b33e292051bc3595bcd4eaf5481452837cf9748ac44eb5475deb5433e3a624",
+    "artifacts/src/ui/inventory_screen.tscn": "b66572454a55e612764dd60960d62c3932c9fa4c7f9afc80caadc1ad5bc1f82f",
+    "artifacts/tests/ui_inventory_observer.gd.uid": "bf854825176b44fdd4f443a03a071dd18816cf22ca230ac5884ecc726bc1bf9f",
+    "artifacts/tests/ui_inventory_screen_test.gd": "aaaae7439ee10a933c104690885b27076d69ce9072a2169375a58b018a2e833d",
+    "child-public-actions.json": "f41dc14f01dfb6f63bdf33c5b1500ddd7b524724a84c0d68878c87fb141bf650",
+    "native/after.json": "a21696e833a1bfebd582a435c9c63c47ef3dedb222f59e75fa1f222d8e09a3a3",
+    "native/before.json": "f41130d8000a510c80b22a8afc8693c8388261dd25efaf51e2c2ecffff619b7b",
+    "native/engine-preflight.json": "e0157c9537004e53e38c8c035819f263734aa917fcd588ae4da38f78daf9381f",
+    "native/events.jsonl": "060daaf4f4db8e5d7c3b0363499afe679b6a148b68d041eef91e57d6f3df5a1d",
+    "native/final.txt": "4ce49551e4da082ef6b1d4f6ce80e136377dea4cca17cdfdc83528e14d9c73c4",
+    "native/fixture.json": "c49f0b356a91741a6a2c1ebfd5d85a69ef656658e6e2de7d15d8505ef9f00b94",
+    "native/inputs.json": "0d279274400fc4253e79e53e05b60be0b99d274e3afbd0243a1a8cb86ebdf46b",
+    "native/report.json": "1be19b39a4fbd25b339763dce301d6ca2df792fb808c969e55f9d0602a9fb9ce",
+    "native/stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+    "observer/after.json": "e7b3ed4362f668295fd844eac013390016338cc21cc28874942616bd993cde8e",
+    "observer/before.json": "a21696e833a1bfebd582a435c9c63c47ef3dedb222f59e75fa1f222d8e09a3a3",
+    "observer/execution.json": "ab46b147cf5f83932dfdb5e35c2afe0f3b3819e8c8a3f6767d791e8542011410",
+    "observer/report.json": "f4b8322dcacec294af0afaa1fbb9ed743f529b1072f53f47b228d60f491044bf",
+    "official-engine/archive-verification.json": "ddd4e8030fedd1951d7fba47e6430aebb0eac7d9da257b10a21030a594276aae",
+    "official-engine/binary-verification.json": "0bb36b031048f0cabc46370f87029db6ca92ec52de5c409afb06c061cf3ebde7",
+    "official-engine/download-events.jsonl": "0a5f311870c4f33b74efc5ad3402ce6990ee226e92d7e568bc416b58333f77df",
+    "parent-public-actions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "review.json": "6e92aa130ed395c09baf57ba8a76712f0834b0292c3fe5205cf5a6463725e746"
+  }
+}

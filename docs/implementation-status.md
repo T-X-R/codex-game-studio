@@ -43,6 +43,12 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   interruption choices and an overstated parent import summary remain failures.
   Environment errors are retained. These runs do not replace Godot 4.6, physical
   device, accessibility, performance or human play acceptance.
+  A separate [original Godot 4.6 case](evidence/ui-programmer-godot46-2026-11-13.json)
+  now uses the real official 4.6.1 engine and version-matched API inspection.
+  Its Control/ScrollContainer implementation passes the selected source-case core;
+  full fixture acceptance still fails default gamepad confirmation (29/30 checks).
+  Root verified 100 frozen artifacts, 640 actual files, 566 originals and the actual
+  engine binary. No physical-device, human or complete accessibility acceptance is inferred.
 - Story closure now has [five native runs](evidence/story-done-skill-2026-11-13.json)
   covering four selected scenarios: four scoped passes and one retained failure.
   The failed run guessed a system identity from a brief; the instruction now uses
