@@ -213,6 +213,7 @@ The table defines command families. Each leaf will have one argument schema, eff
 | `prototype scaffold`, `prototype import` | Create a prototype skeleton or copy an existing game | Project write |
 | `prototype grow`, `prototype tune` | Apply the selected growth scaffold or tuning support | Project write |
 | `engine setup`, `engine inspect` | Configure or inspect an engine and its paths | Project write / read |
+| `engine scaffold`, `engine verify` | Generate a supported missing engine project; explicitly run an installed engine check | Project write / process |
 | `preview` | Run a local foreground preview process | Process/local network |
 | `check` | Run selected deterministic validators | Read by default; evidence write when requested |
 | `test` | Run configured tests with bounded execution and preserved logs | Process/evidence write |

@@ -72,5 +72,27 @@ This command only records configuration. Its result explicitly marks execution
 `not_assessed`: it does not install or launch an editor, generate a game scaffold,
 run configured commands, validate role availability, or prove a build or test.
 Use `game-studio test --kind test|smoke|build` for a configured operation and inspect
-its report. Editor/scaffold workflows and full engine acceptance remain separate
-work in the migration plan.
+its report. Full engine acceptance remains separate work in the migration plan.
+
+## Project scaffolding
+
+`game-studio engine scaffold --dry-run --json` previews project creation from
+the existing `project.yaml`; omit `--dry-run` to apply it. This separate command
+keeps configuration updates from implicitly creating or launching an engine.
+
+For Godot 4.x, it creates `project.godot` only when absent, using the recorded
+version's major/minor, project name and explicit renderer. Compatibility maps to
+`GL Compatibility` / `gl_compatibility`, Forward+ to `Forward Plus` /
+`forward_plus`, and Mobile to `Mobile` / `mobile`. It leaves the main scene unset
+until a real scene exists. A concurrent configuration change or newly created
+project file blocks the transaction. An existing project file is left unchanged,
+including custom settings and line endings.
+
+Unity and Unreal projects must be generated with their editors; the command
+detects existing project markers or returns `not_assessed` with the required next
+action. Web growth remains a separate migration task. Scaffolding never claims
+that an editor, import, build, test or game has run.
+
+Godot settings and command-line behavior are grounded in the official
+[ProjectSettings reference](https://docs.godotengine.org/en/stable/classes/class_projectsettings.html)
+and [command-line tutorial](https://docs.godotengine.org/en/stable/tutorials/editor/command_line_tutorial.html).

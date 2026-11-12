@@ -10,12 +10,25 @@ import { capturePrototype } from './capture.js';
 import { runConfiguredTest } from './run-tests.js';
 import { readSettings } from './config.js';
 import { planEngineSetup } from './engine-setup.js';
+import { planEngineScaffold } from './engine-scaffold.js';
 import { applyInstall, describePlan } from './install.js';
 
 const project: Option = { type: 'string', description: 'Game workspace directory' };
 const dryRun: Option = { type: 'boolean', description: 'Describe effects without creating files or starting a server' };
 async function root(input: Input) { return resolveProject(input.values.project as string | undefined); }
 export const gameCommands: Record<string, Command> = {
+  'engine scaffold': { description: 'Create a missing Godot project from explicit settings or report editor-owned scaffolding requirements', effect: 'write',
+    options: { project, 'dry-run': dryRun }, run: async input => {
+      const { plan, engine, outcome, verification } = await planEngineScaffold(await root(input));
+      if (!input.values['dry-run']) await applyInstall(plan);
+      const result = success('engine scaffold', { ...describePlan(plan), engine, verification, dryRun: !!input.values['dry-run'],
+        outcome: { ...outcome, state: outcome.state === 'planned' && !input.values['dry-run'] ? 'created' : outcome.state } });
+      if (outcome.state === 'not_assessed') {
+        process.exitCode = 3; result.status = 'not_assessed';
+        result.error = { code: 'ASSESSMENT_INCOMPLETE', message: outcome.reason! };
+      }
+      return result;
+    } },
   'engine setup': { description: 'Apply explicit engine choices and synchronize the technical preference document', effect: 'write',
     options: { project, 'dry-run': dryRun, input: { type: 'string', description: 'Project-relative YAML or JSON containing the agreed engine configuration' } },
     run: async input => {
