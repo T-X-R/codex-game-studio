@@ -2,6 +2,7 @@ import { readdir, readFile, stat } from 'node:fs/promises';
 import { posix } from 'node:path';
 import { safePath } from './files.js';
 import { validateSkill, validateRole, runtimeIssues, type ContentIssue } from './content-check.js';
+import { commandIssues } from './content-commands.js';
 
 interface LocatedIssue extends ContentIssue { path: string }
 const roots = ['.agents/skills', 'studio/onboarding', '.codex/agents'];
@@ -32,6 +33,7 @@ export async function inspectContent(root: string) {
   }
 
   async function references(path: string, body: string) {
+    issues.push(...commandIssues(body).map(issue => ({ path, ...issue })));
     for (const match of body.matchAll(/\[[^\]\n]*\]\((?:<([^>\n]+)>|([^\s)]+))(?:\s+"[^"\n]*")?\)/g)) await reference(path, (match[1] ?? match[2])!);
     for (const match of body.matchAll(/^ {0,3}\[[^\]\n]+\]:\s*(?:<([^>\n]+)>|(\S+))/gm)) await reference(path, (match[1] ?? match[2])!);
     for (const match of body.matchAll(/\bresource\s+path\s+(studio\/[a-zA-Z0-9_./-]+)/g)) await reference(path, match[1]!, true);

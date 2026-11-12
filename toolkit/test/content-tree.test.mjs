@@ -61,6 +61,21 @@ test('legacy runtime syntax in nested guidance cannot hide behind a valid entryp
   assert.ok(result.issues.some(x => x.code === 'LEGACY_RUNTIME' && x.path.endsWith('/unused.md')));
 });
 
+test('stale command examples in entrypoints, roles and recursive references fail inspection', async t => {
+  const { root, write } = await fixture(t);
+  await write('.agents/skills/game-studio-test/SKILL.md', skill('game-studio-test') +
+    '[Details](references/details.md)\n`game-studio vanished`\n');
+  await write('.agents/skills/game-studio-test/references/details.md', '```sh\nnode .game-studio/run.cjs status --dry-run\n```\n');
+  await write('.codex/agents/game-studio-review.toml', 'name="game-studio-review"\ndescription="Review a game."\ndeveloper_instructions="Run `game-studio config set key`."\n');
+  const result = await inspectContent(root);
+  assert.equal(result.status, 'invalid');
+  assert.deepEqual(result.issues.filter(x => x.code === 'INVALID_COMMAND_EXAMPLE').map(x => x.path).sort(), [
+    '.agents/skills/game-studio-test/SKILL.md',
+    '.agents/skills/game-studio-test/references/details.md',
+    '.codex/agents/game-studio-review.toml',
+  ]);
+});
+
 test('resource symlinks are refused without following a link outside the content root', async t => {
   const { root, write } = await fixture(t);
   const external = await mkdtemp(join(tmpdir(), 'studio-content-outside-'));

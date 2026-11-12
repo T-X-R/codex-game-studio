@@ -25,7 +25,7 @@ Evidence still needs semantic review against the complete approved requirements.
 `--bundle-only` explicitly leaves catalog inspection NOT ASSESSED and cannot be
 combined with `--complete`; source inputs/catalog are not distributed at runtime.
 
-This is not the final T20 gate yet: command-example validation, the Codex behavior
+This is not the final T20 gate yet: the Codex behavior
 rubric, rule/hook/helper inventory cross-checks and retirement of legacy lint consumers remain pending. The old linter and
 upstream behavioral specs remain migration inputs until their replacement is
 finished. Shared rules/helpers and host behavior are separately gated by the plan.
@@ -40,6 +40,25 @@ renderer would and still need review.
 Literal `resource path studio/...` references resolve in the same bundle. Missing
 resources name the referring file. Nested Skill guidance is inspected even when
 it is not linked from the entrypoint. No command or referenced script is executed.
+
+Explicit command examples in inline code spans and fenced blocks are checked
+against the runtime's command registry: command leaves, option names/types,
+positional counts and `schema` targets. This includes recursively visited shared
+documents and nested Skill guidance. Examples start with `game-studio` or
+`node .game-studio/run.cjs`; a launcher name alone is a reference. Optional `$`
+prompts, backslash line continuations, quotes, comments, `--key=value` and simple
+`<placeholder>` values are supported. Invalid examples report their content path
+and line (relative to the parsed body for entrypoints/role instructions).
+
+This is a static argument check, not a shell or runtime simulation. It does not
+validate handler-specific required options, enum/configuration values, filesystem
+state, permissions or runtime availability. Placeholders, including `[KEY]`, are
+checked as supplied arguments; omitted optional variants still need review.
+Shell operators and active command substitution in explicit examples are rejected
+as unsupported, never executed. Prose, abbreviated commands, multiline inline
+spans, environment expansion, other launchers and examples embedded in scripts
+remain outside this syntax check and need review. Document runnable examples as
+separate explicit invocations so they receive this check.
 
 The canonical migration profile currently permits Skill `name`, `description`
 and optional `metadata`; roles contain `name`, `description` and
