@@ -423,7 +423,7 @@ skills:
     priority: low
     category: utility
     target: .agents/skills/game-studio-brainstorm/SKILL.md
-    migration_state: pending
+    migration_state: partial
 
   - name: project-stage-detect
     spec: studio-tests/skills/utility/project-stage-detect.md
