@@ -11,10 +11,13 @@ Read the configured engine's `docs/engine-reference/<engine>/VERSION.md`,
 `breaking-changes.md`, `deprecated-apis.md` and `current-best-practices.md` in full.
 Extract reference-declared cutoff/version gaps, HIGH/MEDIUM changes, deprecated
 APIs and current practices. Those records are evidence about the references, not
-permission to invent this model's training cutoff. Enumerate `modules/` and read
-only domains the actual systems use: Physics, Rendering, UI, Audio, Navigation,
-Animation, Networking, Core and Input. Include ambiguous domain matches; omit
-irrelevant ones. Missing/mismatched references stay named unknowns. Resolve missing
+permission to invent this model's training cutoff. Enumerate module filenames
+without reading their contents. After identifying the actual systems from the
+concept/index below, select their relevant domains: Physics, Rendering, UI, Audio,
+Navigation, Animation, Networking, Core and Input; include ambiguous matches.
+Only then read the selected modules. Do not bulk-read all modules to decide which
+are relevant: excluded domains remain unread. Missing/mismatched references stay
+named unknowns. Resolve missing
 API evidence before binding an API-specific choice; an explicitly authorized
 engine-independent draft can retain feasibility NOT ASSESSED. Do not call a
 configured engine with absent references an unconfigured engine.

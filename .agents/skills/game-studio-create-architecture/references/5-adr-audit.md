@@ -26,7 +26,11 @@ For each ADR:
 
 Map every requirement from the Technical Requirements Baseline to existing ADRs.
 For each requirement, check if any ADR's "GDD Requirements Addressed" section
-or decision text covers it:
+or decision text covers it. Judge the meaning of the decision, not identical
+keywords: every substantive obligation in a combined requirement needs explicit
+support or support necessarily implied by that decision. If only some obligations
+are supported, mark the row **Partial**, name the unsupported obligations and carry
+them into the gaps below. A citation alone does not establish coverage.
 
 | Req ID | Requirement | ADR Coverage | Status |
 |--------|-------------|--------------|--------|
