@@ -58,7 +58,7 @@ try {
     const result = command(globalCli, 'resource', 'path', id);
     assert.equal(await readFile(result.data.path, 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
-  for (const name of ['difficulty-curve', 'player-journey']) {
+  for (const name of ['difficulty-curve', 'player-journey', 'systems-index']) {
     const id = `studio/templates/${name}.md`;
     const result = command(globalCli, 'resource', 'path', id);
     assert.equal(await readFile(result.data.path, 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
