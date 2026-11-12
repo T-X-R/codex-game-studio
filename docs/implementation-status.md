@@ -6,6 +6,19 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Read-only gate prerequisites now expose `check --kind gdd` for section and
+  placeholder observations and `check --kind adr-deps` for dependency edges,
+  cycles, transitive blocking and tentative ordering. Missing dependency
+  declarations, nonexistent references and ambiguous IDs remain visible.
+  Empty scans return not assessed; successful collection is not a gate verdict.
+  Eight GDD fixtures match the upstream helper, and a separate ADR fixture
+  matches cycle members, blocked dependents and independent ordering. Nine new
+  CLI tests bring the local suite to 176 passes; build/typecheck/content
+  validation and packed-runtime positive/empty cases pass. The initial full
+  GDD regression run hit sandbox localhost-listen restrictions; its authorized
+  rerun passed before the ADR additions. See [GDD observations](gdd-structure.md)
+  and [ADR observations](adr-dependencies.md). The complete gate-check Skill,
+  artifact-catalog checks and native workflow acceptance remain open.
 - Typed CLI argument contracts, JSON results, help/schema and explicit exit codes.
 - Nearest project discovery, configuration reads with provenance and rigor/local
   precedence, named system workflow overrides and legacy technical-preference
