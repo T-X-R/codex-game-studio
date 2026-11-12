@@ -86,6 +86,18 @@ test('timeouts terminate the process and retain evidence instead of reporting su
   assert.equal(JSON.parse(await readFile(join(root, 'production/evidence/timeout/report.json'), 'utf8')).exitCode, 124);
 });
 
+test('smoke workflows accept explicit 15-minute suites and 30-minute builds without changing the default', async t => {
+  const root = await fixture(t, `commands:\n  test: ${JSON.stringify(command)}\n  build: ${JSON.stringify(command)}\n`);
+  for (const [kind, timeoutMs] of [['test', 900000], ['build', 1800000]]) {
+    const result = await runConfiguredTest(root, kind, `evidence/${kind}`, { timeoutMs });
+    assert.equal(result.exitCode, 0);
+    assert.equal(result.timeoutMs, timeoutMs);
+    assert.equal(JSON.parse(await readFile(join(root, `evidence/${kind}/report.json`), 'utf8')).timeoutMs, timeoutMs);
+  }
+  assert.equal((await runConfiguredTest(root, 'test', 'evidence/default', { dryRun: true })).timeoutMs, 120000);
+  await assert.rejects(runConfiguredTest(root, 'test', 'evidence/invalid', { timeoutMs: 1800001 }), { code: 'INVALID_ARGUMENT' });
+});
+
 test('unknown operations and unsafe evidence paths fail before invoking the command', async t => {
   const root = await fixture(t, `commands:\n  test: ${JSON.stringify(command)}\n`);
   await assert.rejects(runConfiguredTest(root, 'deploy', 'evidence'), { code: 'INVALID_ARGUMENT' });

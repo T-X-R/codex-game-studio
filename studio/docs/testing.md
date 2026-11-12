@@ -45,7 +45,10 @@ acceptance separate.
 Toolkit exit codes are 0 for successful execution, 3 for unavailable capability,
 5 for a failing command, 124 for timeout and 130 for cancellation. The original
 nonzero code is retained in `processExitCode`. Logs are saved for failures and
-timeouts too. Timeouts are bounded to 100–600000 ms, with a 120000 ms default.
+timeouts too. Timeouts are bounded to 100–1800000 ms, with a 120000 ms default.
+Smoke workflows can explicitly allow 900000 ms for suites and 1800000 ms for
+editor builds; the ordinary default is unchanged. A larger limit does not wait
+out the whole interval when a process finishes sooner.
 
 Use `config get engine_row` to inspect engine-specific roots, their filesystem
 state and default commands. This does not execute an editor. Invalid explicit

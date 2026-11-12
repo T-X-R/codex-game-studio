@@ -71,7 +71,7 @@ export const gameCommands: Record<string, Command> = {
   test: { description: 'Run a configured test, smoke or build command with a timeout and preserved evidence', effect: 'process',
     options: { project, 'dry-run': dryRun, kind: { type: 'string', description: 'Configured operation: test (default), smoke or build' },
       output: { type: 'string', description: 'New project-relative evidence directory' },
-      timeout: { type: 'string', description: 'Maximum execution time in milliseconds (100–600000, default 120000)' } },
+      timeout: { type: 'string', description: 'Maximum execution time in milliseconds (100–1800000, default 120000)' } },
     run: async input => {
       const data = await runConfiguredTest(await root(input), input.values.kind as string ?? 'test',
         input.values.output as string ?? `production/evidence/test-${Date.now()}`, {

@@ -67,7 +67,7 @@ export async function resolveCommand(root: string, kind: string, platform: NodeJ
 export async function runConfiguredTest(project: string, kind: string, output: string,
   options: { dryRun?: boolean; timeoutMs?: number } = {}) {
   const timeoutMs = options.timeoutMs ?? 120000;
-  if (!Number.isSafeInteger(timeoutMs) || timeoutMs < 100 || timeoutMs > 600000) throw new StudioError('INVALID_ARGUMENT', 'Timeout must be 100–600000 milliseconds');
+  if (!Number.isSafeInteger(timeoutMs) || timeoutMs < 100 || timeoutMs > 1800000) throw new StudioError('INVALID_ARGUMENT', 'Timeout must be 100–1800000 milliseconds');
   if (await exists(await safePath(project, output))) throw new StudioError('FILE_CONFLICT', 'Test evidence requires a new output directory', 4);
   const selected = await resolveCommand(project, kind);
   if (options.dryRun) return { ...selected, kind, project, output, timeoutMs, status: 'planned', exitCode: 0, processExitCode: null };
