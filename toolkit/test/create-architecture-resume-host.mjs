@@ -19,12 +19,18 @@ const context = row => Object.fromEntries(['model', 'effort', 'approval_policy',
 
 export async function snapshot(workspace) {
   const files = {}; const symlinks = {};
-  for (const entry of await readdir(workspace, { recursive: true, withFileTypes: true })) {
-    const path = join(entry.parentPath, entry.name);
-    const key = relative(workspace, path).replaceAll('\\', '/');
-    if (key === '.git' || key.startsWith('.git/')) continue;
-    if (entry.isSymbolicLink()) symlinks[key] = await readlink(path);
-    else if (entry.isFile()) files[key] = hash(await readFile(await safePath(workspace, key)));
+  const directories = [workspace];
+  while (directories.length) {
+    const directory = directories.pop();
+    // Recursive readdir can descend into directory links on supported Node versions.
+    for (const entry of await readdir(directory, { withFileTypes: true })) {
+      const path = join(directory, entry.name);
+      const key = relative(workspace, path).replaceAll('\\', '/');
+      if (key === '.git') continue;
+      if (entry.isSymbolicLink()) symlinks[key] = await readlink(path);
+      else if (entry.isDirectory()) directories.push(await safePath(workspace, key));
+      else if (entry.isFile()) files[key] = hash(await readFile(await safePath(workspace, key)));
+    }
   }
   return { files, symlinks };
 }
