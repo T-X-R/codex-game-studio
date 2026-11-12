@@ -37,7 +37,6 @@
   "limits": [
     "No new Skill or role native acceptance follows from static checks or package installation.",
     "All story-done behavioral matrix items and UI role engine cases remain open.",
-    "Current CI on the newly integrated source has not yet run.",
     "No npm publication or full-migration release is implied."
   ],
   "fileHashes": {
@@ -58,5 +57,18 @@
     "game-studio-close-ui-tests24.log": "aa7054abac17d960fea95de4d8e8c6d6b889deb1949acafd21464cf1809f611e",
     "game-studio-close-ui-tests26.log": "070f193c1d1588d5add363ff7192ba5f64e4df5be5f2832ecfdb91a1a04bdd9b",
     "game-studio-close-ui-pack.log": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+  },
+  "ci": {
+    "head": "2c7d8816ae00518bf898abb236d0c0642eeb1813",
+    "url": "https://github.com/T-X-R/codex-game-studio/actions/runs/43261542303",
+    "conclusion": "success",
+    "jobs": [
+      "ubuntu Node24",
+      "ubuntu Node26",
+      "Windows Node24",
+      "macOS Node24",
+      "browser and packed Web growth"
+    ],
+    "scope": "Integrated closure/UI content before the later readiness protocol instruction corrections."
   }
 }

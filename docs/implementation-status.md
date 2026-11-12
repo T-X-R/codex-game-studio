@@ -6,12 +6,23 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Readiness follow-up [retains two protocol failures](evidence/story-readiness-protocol-2026-11-13.json):
+  announcing scope too late and omitting the existing-story correction explanation.
+  Domain verdicts and file preservation passed their subchecks. Two further
+  cross-tier Proposed-ADR cases also pass scoped domain checks, without claiming
+  complete announcement timing. The source instructions now restore both explicit
+  requirements; build/content/package checks and two same-input native reruns
+  pass. Original failures remain recorded. Earlier scoped successes are not
+  full protocol acceptance.
 - Story completion and UI Programmer now have [reviewed Codex content](evidence/story-close-ui-integration-2026-11-13.json),
   with all eight story phases, three conditional references and the role's full
   UI responsibilities. Independent source review, build/typecheck/content checks,
   287 tests on each of Node 24 and 26, and installed archive checks pass locally.
   Their native behavioral matrices remain open. The catalog now has sixteen
-  partial Skills and eleven partial roles; none is fully verified.
+  partial Skills and eleven partial roles; none is fully verified. All five jobs
+  pass in [CI for 2c7d881](https://github.com/T-X-R/codex-game-studio/actions/runs/43261542303),
+  including Linux Node 24/26, macOS, Windows and actual browser/Web growth. This
+  head precedes the later readiness protocol instruction corrections.
 - The [read-only Markdown section helper](evidence/md-section-2026-11-13.json)
   ports list/status/extract with 44 checks and 228 real Bash comparisons, including
   documented source parser quirks. Actual installed-resource extraction and
