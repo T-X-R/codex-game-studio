@@ -36,8 +36,11 @@ resolves the command and output path without starting a process or writing files
 Each real invocation creates a new directory with `report.json`, `stdout.log`
 and `stderr.log`. Existing evidence directories are never overwritten. The report
 records the selected command/source, OS, duration and original process exit code.
-A zero exit proves successful command execution; review test reports for actual
-coverage, and keep human play acceptance separate.
+A zero exit alone does not prove test coverage. For a Godot project, engine error
+diagnostics in either log make the result fail even when the process exits zero;
+`engineErrorDetected` records that observation. Other engines retain their runner's
+exit semantics and require their own result/coverage review. Keep human play
+acceptance separate.
 
 Toolkit exit codes are 0 for successful execution, 3 for unavailable capability,
 5 for a failing command, 124 for timeout and 130 for cancellation. The original

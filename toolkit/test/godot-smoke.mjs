@@ -71,13 +71,19 @@ try {
   await writeFile(join(project, 'assets/broken.png'), 'This intentionally is not a PNG.');
   const broken = await command(launcher, [...verifyArgs, '--output', 'production/evidence/broken-import'], 5);
   assert.ok(broken.data.checks.some(check => check.phase.startsWith('import-') && check.errorDetected));
+  await command(launcher, ['config', 'set', 'commands.smoke', `${quote(executable)} --headless --path ${quote(project)} --import`, '--project', project]);
+  // A fresh corrupt file forces another import rather than relying on cached failures.
+  await writeFile(join(project, 'assets/another-broken.png'), 'Another intentionally invalid PNG.');
+  const configuredBroken = await command(launcher, ['test', '--kind', 'smoke', '--output', 'production/evidence/configured-broken-import', '--project', project], 5);
+  assert.equal(configuredBroken.data.processExitCode, 0);
+  assert.equal(configuredBroken.data.engineErrorDetected, true);
   const existing = await command(launcher, ['engine', 'scaffold', '--project', project]);
   assert.equal(existing.data.outcome.state, 'already_present');
   assert.equal(await readFile(join(project, 'project.godot'), 'utf8'), projectBefore);
   const summary = { status: 'passed_for_stated_scope', directory, project, node: process.version, platform: `${process.platform}/${process.arch}`,
     pinned, actualVersion: imported.data.actualVersion, executableSha256,
     checks: ['packed runtime restoration', 'configuration and mirror', 'scaffold preview and preservation', 'real editor import',
-      'real GDScript smoke', 'real nonzero test exit', 'version mismatch without import', 'corrupt asset import rejection'],
+      'real GDScript smoke', 'real nonzero test exit', 'version mismatch without import', 'corrupt asset import rejection', 'configured zero-exit error rejection'],
     importAttempts: imported.data.checks.filter(check => check.phase.startsWith('import-')),
     brokenImportAttempts: broken.data.checks.filter(check => check.phase.startsWith('import-')),
     excluded: ['export/build', 'C#/.NET', 'Forward+/Mobile GPU rendering', 'gameplay or human play acceptance', 'other operating systems'] };

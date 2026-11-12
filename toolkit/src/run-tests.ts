@@ -7,6 +7,7 @@ import { writeNewDirectory } from './prototype.js';
 import { mkdtemp, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { hasGodotErrors } from './engine-verify.js';
 
 async function executeCommand(command: string, cwd: string, timeoutMs: number) {
   if (process.platform !== 'win32') return runProcess('/bin/sh', ['-c', command], { cwd, timeoutMs });
@@ -70,21 +71,25 @@ export async function runConfiguredTest(project: string, kind: string, output: s
   if (await exists(await safePath(project, output))) throw new StudioError('FILE_CONFLICT', 'Test evidence requires a new output directory', 4);
   const selected = await resolveCommand(project, kind);
   if (options.dryRun) return { ...selected, kind, project, output, timeoutMs, status: 'planned', exitCode: 0, processExitCode: null };
+  const engine = (await readSettings(project, ['engine.name'])).settings['engine.name']!.value;
   const start = Date.now();
   let execution = { exitCode: 3, stdout: '', stderr: '' };
+  let launched = false;
   let reason = selected.reason;
   if (selected.command !== null) {
-    try { execution = await executeCommand(selected.command, project, timeoutMs); }
+    try { execution = await executeCommand(selected.command, project, timeoutMs); launched = true; }
     catch (error) {
       if (!(error instanceof StudioError) || error.code !== 'DEPENDENCY_MISSING') throw error;
       reason = error.message;
     }
   }
   const missing = selected.command === null || reason !== null || [126, 127, 9009].includes(execution.exitCode);
-  const exitCode = missing ? 3 : [124, 130].includes(execution.exitCode) ? execution.exitCode : execution.exitCode === 0 ? 0 : 5;
+  const engineErrorDetected = engine === 'Godot' && hasGodotErrors(`${execution.stdout}\n${execution.stderr}`);
+  const exitCode = missing ? 3 : [124, 130].includes(execution.exitCode) ? execution.exitCode : execution.exitCode === 0 && !engineErrorDetected ? 0 : 5;
   if (missing && !reason) reason = 'The configured command could not start a required executable; inspect stderr.log';
-  const report = { ...selected, reason, kind, project, output, timeoutMs, durationMs: Date.now() - start,
-    exitCode, processExitCode: selected.command === null || reason !== null && execution.exitCode === 3 ? null : execution.exitCode,
+  if (engineErrorDetected && !reason) reason = 'Godot reported engine errors; inspect stdout.log and stderr.log even if its process exited zero';
+  const report = { ...selected, reason, kind, project, output, timeoutMs, durationMs: Date.now() - start, engine, engineErrorDetected,
+    exitCode, processExitCode: launched ? execution.exitCode : null,
     status: exitCode === 0 ? 'ok' : exitCode === 3 ? 'not_assessed' : 'failed',
     judgment: 'Command execution evidence only; inspect test reports for test coverage. Human play acceptance is not assessed.' };
   const artifacts = await writeNewDirectory(project, output, {

@@ -16,6 +16,19 @@ async function fixture(t, config, script = 'console.log("test output");') {
 }
 const command = 'node "test folder/check.cjs"';
 
+test('Godot errors cannot pass on exit zero, while other engines keep their own output semantics', async t => {
+  for (const [engine, code] of [['Godot', 0], ['Web', 0], ['Godot', 3]]) {
+    const root = await fixture(t, `engine:\n  name: ${engine}\ncommands:\n  smoke: ${JSON.stringify(command)}\n`,
+      `console.error("\\u001b[31mSCRIPT ERROR:\\u001b[0m Parse Error: broken script"); process.exitCode=${code};`);
+    const result = await runConfiguredTest(root, 'smoke', 'evidence');
+    assert.equal(result.processExitCode, code);
+    assert.equal(result.exitCode, engine === 'Godot' ? 5 : 0);
+    assert.equal(result.engineErrorDetected, engine === 'Godot');
+    assert.equal(result.status, engine === 'Godot' ? 'failed' : 'ok');
+    if (engine === 'Godot') assert.match(result.reason, /engine errors/);
+  }
+});
+
 test('command selection honors OS keys then default and ignores personal command overrides', async t => {
   const root = await fixture(t, 'commands:\n  test:\n    windows: echo win\n    macos: echo mac\n    default: echo default\n');
   await writeFile(join(root, 'project.local.yaml'), 'commands:\n  test: echo personal\n');

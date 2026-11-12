@@ -15,7 +15,7 @@ function observedVersion(value: string) {
   const match = /^(4\.\d+(?:\.\d+)?)\.(stable|rc\d+|beta\d+|dev\d+)(?:\.[A-Za-z0-9_-]+)*$/.exec(line);
   return match ? { raw: line, pin: pin(`${match[1]}.${match[2]}`) } : null;
 }
-function engineErrors(output: string) {
+export function hasGodotErrors(output: string) {
   const plain = output.replace(/\x1b\[[0-?]*[ -/]*[@-~]/g, '');
   return /(?:^|\n)\s*(?:SCRIPT ERROR|ERROR|FATAL ERROR|Parse Error):/i.test(plain);
 }
@@ -55,7 +55,7 @@ export async function verifyEngine(root: string, output: string,
       reason = error.message; exitCode = 3;
       execution = { exitCode: null, signal: null, stdout: '', stderr: error.message };
     }
-    const errorDetected = engineErrors(`${execution.stdout}\n${execution.stderr}`);
+    const errorDetected = hasGodotErrors(`${execution.stdout}\n${execution.stderr}`);
     files[`${name}.stdout.log`] = Buffer.from(execution.stdout);
     files[`${name}.stderr.log`] = Buffer.from(execution.stderr);
     checks.push({ phase: name, args, processExitCode: execution.exitCode, signal: execution.signal, errorDetected });
