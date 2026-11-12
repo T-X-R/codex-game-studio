@@ -1,0 +1,774 @@
+{
+  "date": "2026-11-12",
+  "status": "partial",
+  "scope": "Selected native system-GDD authoring behavior; not complete S022, desktop support or source-matrix acceptance",
+  "environment": {
+    "codex": "0.162.0",
+    "node": "24.22.2",
+    "platform": "macOS ARM64"
+  },
+  "method": "Fresh packed install and native Codex session per isolated Unicode-path project; 17 installed Skill/template/helper files byte-verified against source. Actual full GDD/final outputs and tool calls independently reviewed; all regular files compared before/after; complete source sections/registry/index/recovery notes checked at byte level; every incremental checkpoint event and transaction backup chain verified. Native exit 0 and wrapper exit 3 are observations only; PASS entries were added after semantic review. No expected verdict or prefilled answer was supplied to native fixture prompts.",
+  "syntheticOwnerDecisions": true,
+  "cases": [
+    {
+      "scenario": "standard-guided",
+      "status": "PASS",
+      "scopeOfResult": "Fresh identical-input rerun: standard numeric Core GDD, correct Data/Rule Nature and retained ownership, selected extras, exact Designed index row/counts and 11 incremental checkpoints; authoring only.",
+      "resourceSet": "nature-correction",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-system-vYIlms",
+      "threadId": "01a1cfd2-6694-78d3-a199-9901b2231463",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T20-53-54-01a1cfd2-6694-78d3-a199-9901b2231463.jsonl",
+      "traceSha256": "dff3e0a5c8fa75401f31b901dc637bae7e4620307d368ce1ab139fa780a59139",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        }
+      ],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "temporaryTrustProfileRemoved": true,
+      "childThreads": [],
+      "delegationCalls": [],
+      "actualReferenceReads": [
+        "references/1-arguments-and-tier.md",
+        "references/2-context.md",
+        "references/3-persistence.md",
+        "references/registry.md",
+        "references/4-sections.md",
+        "references/5-validation.md"
+      ],
+      "preservedFiles": 480,
+      "changed": [
+        "design/gdd/systems-index.md"
+      ],
+      "newDocumentFiles": [
+        "production/session-state/active.md",
+        "design/gdd/round-state.md"
+      ],
+      "outsideScope": [],
+      "checkpointEvents": 11,
+      "transactionBackups": 11,
+      "checkpointChainVerified": true,
+      "artifactHashes": {
+        "before.json": "a3931f719cbfdbe0ff73ee6e1ef663002e8d7f94573ddf0766dc1db639bf9312",
+        "after.json": "95651411f33a3d20d513dcef5b7e7e6a17c0291a585c6f4cb2fc26b6bba7be52",
+        "events.jsonl": "41d58c27b8461557bd6304113c4003e395c0374f7b0e87cd7a8cada7ca82269e",
+        "report.json": "b5ae5632b3cc2fc91aba060e1cc23732d1b992b7a5272d1da38fa52e8564c3cf",
+        "final.txt": "3484e311d50f527a7a70a5debed06e793d35df1c7063544e7885109dc645422a",
+        "fixture.json": "5363d905326e5d711c4d9b9e5d9380c5b2e57446e1dd548109ddc716a5a55f49"
+      },
+      "independentAuditSha256": "97d362a2e64e9b46948cf0daeef62d200e8d5110c06d38cdbbe371bed2037bea",
+      "gddSha256": "4435d2f9c5961ae31154ff8a3b2c409df504f59b52f7c788a270258724382adf",
+      "gddHeadings": [
+        "Summary",
+        "Overview",
+        "Detailed Design",
+        "Formulas",
+        "Edge Cases",
+        "Dependencies",
+        "Visual/Audio Requirements",
+        "Game Feel",
+        "UI Requirements",
+        "Cross-References",
+        "Acceptance Criteria",
+        "Open Questions"
+      ],
+      "recoveryReview": "Every saved checkpoint and backup forms one before-to-final chain; completed sections advance in actual authoring order; final handoff stops before implementation/independent review.",
+      "indexExactTargetAndCountsOnly": true,
+      "samePromptAsFailedAttempt": true,
+      "checkerCorrection": "Independent checker initially assumed bare index path. Authorized Markdown link resolved correctly to target; checker corrected, no fixture or product rewrite."
+    },
+    {
+      "scenario": "minimal",
+      "status": "PASS",
+      "scopeOfResult": "Voluntary brief-only minimal GDD: five core sections plus Summary, inline numeric rules, no optional additions/index/registry and eight incremental checkpoints.",
+      "resourceSet": "initial",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-system-uuHrVP",
+      "threadId": "01a1cfc6-e433-7630-a406-e3e2036695af",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T20-41-20-01a1cfc6-e433-7630-a406-e3e2036695af.jsonl",
+      "traceSha256": "482ee883d1f828e3d921ccc95967a69d9f5baf6df9ffc3a390e2e0f2f274414a",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        }
+      ],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "temporaryTrustProfileRemoved": true,
+      "childThreads": [],
+      "delegationCalls": [],
+      "actualReferenceReads": [
+        "references/1-arguments-and-tier.md",
+        "references/2-context.md",
+        "references/3-persistence.md",
+        "references/4-sections.md",
+        "references/5-validation.md"
+      ],
+      "preservedFiles": 479,
+      "changed": [],
+      "newDocumentFiles": [
+        "production/session-state/active.md",
+        "design/gdd/round-state.md"
+      ],
+      "outsideScope": [],
+      "checkpointEvents": 8,
+      "transactionBackups": 8,
+      "checkpointChainVerified": true,
+      "artifactHashes": {
+        "before.json": "1adeecd824d6368bf4da0543d81f27274cd86091e7317eb391eb17024f16aa5f",
+        "after.json": "911ebe7816ba4d7fb4df26d35fec29cd156020ddffdff73238d751adcc5aa98d",
+        "events.jsonl": "a6e9b62e302861866395878681cd698487d9366b4dcb72a2c47dc2d8cf2a7169",
+        "report.json": "7bd256a8924bd8fd508c3dc661f079adb1ea21d1097eea960f743d341ffe93c2",
+        "final.txt": "7a41c1abe1442991b076ded72de1bce4443482c17bfa3f8527d039c284e15717",
+        "fixture.json": "99b0e3a99f449da3abb0bf3ffba4b9e7af0eeb4d0ada7bd53731e2a2cdd9a9a6"
+      },
+      "independentAuditSha256": "2e5057945ce5593fd46decd398ae31d3db858aaf987f5137ffd9e91b2f52a03f",
+      "gddSha256": "03820568388cf423bc4f5364b073a3f8fc85fd553a34452c899cc47df4723ab2",
+      "gddHeadings": [
+        "Summary",
+        "Overview",
+        "Detailed Design",
+        "Edge Cases",
+        "Dependencies",
+        "Acceptance Criteria"
+      ],
+      "recoveryReview": "Every saved checkpoint and backup forms one before-to-final chain; completed sections advance in actual authoring order; final handoff stops before implementation/independent review."
+    },
+    {
+      "scenario": "minimal-override",
+      "status": "PASS",
+      "scopeOfResult": "Minimal project uses brief-only context; effective standard system requires numeric Formulas. Inferred metadata labelled, optional extras deferred, no index/registry, nine checkpoints.",
+      "resourceSet": "nature-correction",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-system-UVCdzP",
+      "threadId": "01a1cfd8-3646-77b1-b18b-14d4211fae7b",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T21-00-15-01a1cfd8-3646-77b1-b18b-14d4211fae7b.jsonl",
+      "traceSha256": "952cb246b1081a2c68ee6092b01b1dfa97f8721ebee9e0f6c8836f9601e1977e",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        }
+      ],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "temporaryTrustProfileRemoved": true,
+      "childThreads": [],
+      "delegationCalls": [],
+      "actualReferenceReads": [
+        "references/1-arguments-and-tier.md",
+        "references/2-context.md",
+        "references/3-persistence.md",
+        "references/4-sections.md",
+        "references/5-validation.md",
+        "references/registry.md"
+      ],
+      "preservedFiles": 479,
+      "changed": [],
+      "newDocumentFiles": [
+        "production/session-state/active.md",
+        "design/gdd/round-state.md"
+      ],
+      "outsideScope": [],
+      "checkpointEvents": 9,
+      "transactionBackups": 9,
+      "checkpointChainVerified": true,
+      "artifactHashes": {
+        "before.json": "f599bf7f63517112de366a76e93b3f143cfce2f481ad3af6d899ea8569c9a4e1",
+        "after.json": "32268b985a916d1095784372f3f8a0922a5365783804ca7b63811f6d07416903",
+        "events.jsonl": "fe0be04ab3f7c57c6b9be59c27151ef45d59cb6808c01e61c9c6368196af0d1e",
+        "report.json": "e5c57b30bd9e4d96defc1f5c4c0268fd1661c14528d245c45dc1ff81ddc189f0",
+        "final.txt": "f96374a9bdad1e0f927dd0563f65e51cd37dca93da400c491b98433d738e484d",
+        "fixture.json": "348d520fce0b58f45f349d1641415a317974939cb140280714ad3292c1c44fd0"
+      },
+      "independentAuditSha256": "130fa4336398356c519ce9112acf83029315ddcf0e49068ebad5557599e81739",
+      "gddSha256": "8af67985b7b220bbf04bf18ad7ec445c3df605dc38185502859069745cab9bff",
+      "gddHeadings": [
+        "Summary",
+        "Overview",
+        "Detailed Design",
+        "Formulas",
+        "Edge Cases",
+        "Dependencies",
+        "Visual/Audio Requirements",
+        "Game Feel",
+        "UI Requirements",
+        "Cross-References",
+        "Acceptance Criteria",
+        "Open Questions"
+      ],
+      "recoveryReview": "Every saved checkpoint and backup forms one before-to-final chain; completed sections advance in actual authoring order; final handoff stops before implementation/independent review."
+    },
+    {
+      "scenario": "retrofit",
+      "status": "PASS",
+      "scopeOfResult": "Complete Overview, Detailed Design, Formulas and Owner Notes preserved byte-for-byte; required missing content and Summary filled, engine unknowns retained, recovery surrounding narrative preserved; six checkpoints.",
+      "resourceSet": "nature-correction",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-system-wkyz6p",
+      "threadId": "01a1cfd9-2521-7771-adbd-b073ac584aa6",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T21-01-16-01a1cfd9-2521-7771-adbd-b073ac584aa6.jsonl",
+      "traceSha256": "37863f353a65ab293ecbefc105a9545f548a5d907ad279bb09956b1b99638483",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        }
+      ],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "temporaryTrustProfileRemoved": true,
+      "childThreads": [],
+      "delegationCalls": [],
+      "actualReferenceReads": [
+        "references/1-arguments-and-tier.md",
+        "references/2-context.md",
+        "references/registry.md",
+        "references/3-persistence.md",
+        "references/4-sections.md",
+        "references/5-validation.md",
+        "references/lens-qa-lead.md"
+      ],
+      "preservedFiles": 480,
+      "changed": [
+        "production/session-state/active.md",
+        "design/gdd/round-state.md",
+        "design/gdd/systems-index.md"
+      ],
+      "newDocumentFiles": [],
+      "outsideScope": [],
+      "checkpointEvents": 6,
+      "transactionBackups": 6,
+      "checkpointChainVerified": true,
+      "artifactHashes": {
+        "before.json": "c0537bf3c3fc79470dad794893aa3a18658c96640f434fe1539bbb48a54445a3",
+        "after.json": "763d581596b5479ec1e65640d1455614d1689db441d86375858681e233e0ddfd",
+        "events.jsonl": "b3c94f0281e27f0543dc1645398a1307a0da8619ef0878dc3807e07b885de480",
+        "report.json": "681f1280aa455708f30c3e4009ccb554f449dfd9f6d96e773c072dcf27d7fa99",
+        "final.txt": "360682426e4bce595df9d618687335675072b2d2b45fbe2f7285897339878297",
+        "fixture.json": "81ae8b0788b07e9e87073c5155949ea2fcaee25764a98a8711179d70a7478a39"
+      },
+      "independentAuditSha256": "04818d256dc0a794df208e6eee779e0298769679a57b0a7c48b419ab3a87ef60",
+      "gddSha256": "85d916ec5e25f200aad71aa35282af1f4247b7d85e9cdc327d3603b172b719aa",
+      "gddHeadings": [
+        "Summary",
+        "Overview",
+        "Detailed Design",
+        "Formulas",
+        "Edge Cases",
+        "Dependencies",
+        "Cross-References",
+        "Acceptance Criteria",
+        "Owner Notes"
+      ],
+      "recoveryReview": "Every saved checkpoint and backup forms one before-to-final chain; completed sections advance in actual authoring order; final handoff stops before implementation/independent review.",
+      "completeSectionsAndRecoveryNarrativePreserved": true,
+      "indexExactTargetAndCountsOnly": true
+    },
+    {
+      "scenario": "registry-retrofit",
+      "status": "PASS",
+      "scopeOfResult": "Same retrofit preservation plus exact authorized addition of current GDD to round_length referenced_by; authoritative Content source/value=5 and every other registry byte preserved. Actual validator observes entities read with no diagnostics and absent other registries; six checkpoints.",
+      "resourceSet": "nature-correction",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-system-3j11yk",
+      "threadId": "01a1cfd2-4a85-78c0-a2b5-a4a4cefbd663",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T20-53-51-01a1cfd2-4a85-78c0-a2b5-a4a4cefbd663.jsonl",
+      "traceSha256": "ddd6021bfeae1d6cd69c5d517a06c27a899e3a7f468e459a69f51a70964ec546",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        }
+      ],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "temporaryTrustProfileRemoved": true,
+      "childThreads": [],
+      "delegationCalls": [],
+      "actualReferenceReads": [
+        "references/1-arguments-and-tier.md",
+        "references/2-context.md",
+        "references/3-persistence.md",
+        "references/registry.md",
+        "references/4-sections.md",
+        "references/5-validation.md",
+        "references/lens-qa-lead.md"
+      ],
+      "preservedFiles": 480,
+      "changed": [
+        "production/session-state/active.md",
+        "design/registry/entities.yaml",
+        "design/gdd/round-state.md",
+        "design/gdd/systems-index.md"
+      ],
+      "newDocumentFiles": [],
+      "outsideScope": [],
+      "checkpointEvents": 6,
+      "transactionBackups": 6,
+      "checkpointChainVerified": true,
+      "artifactHashes": {
+        "before.json": "d97029f38d77ccb7da2cb7c14706c947505d3483093b866b646d325b4b1739d1",
+        "after.json": "218bbea4d3c78702d382d4d38f09f188b19120c564f080a3c4ae6309b8678a5e",
+        "events.jsonl": "235299a9882c32809fd26f1bf355b39a59b1c0ee777acb5000c387e34f890fcd",
+        "report.json": "af95cdee38f292dd2d8b5c0c6fc5c529489dcda8699cbd309db564fd1ff9ac27",
+        "final.txt": "c0132f4313509f6909a0abed8925aae4fe8dacad3ef6e376506b67c3b3184bc3",
+        "fixture.json": "0a51207800e4fdde8e2546224b1af6bd4f527650435c178eb9c013126a7da8e6"
+      },
+      "independentAuditSha256": "2c3b043ec41e45cf19472d133ca8157e719aee1bc8804852a0fea1fadaae6b0f",
+      "gddSha256": "a8f7d15713c13c7084c92d3ce24404a44797eec57408f9aacd2cf8bf1d6195d8",
+      "gddHeadings": [
+        "Summary",
+        "Overview",
+        "Detailed Design",
+        "Formulas",
+        "Edge Cases",
+        "Dependencies",
+        "Cross-References",
+        "Acceptance Criteria",
+        "Owner Notes"
+      ],
+      "recoveryReview": "Every saved checkpoint and backup forms one before-to-final chain; completed sections advance in actual authoring order; final handoff stops before implementation/independent review.",
+      "completeSectionsAndRecoveryNarrativePreserved": true,
+      "indexExactTargetAndCountsOnly": true
+    },
+    {
+      "scenario": "registry-conflict",
+      "status": "PASS",
+      "scopeOfResult": "Read-only authoritative Content-owned round_length=5 versus unapproved seven-parcel proposal; required decision surfaced, comment example ignored, no mutations.",
+      "resourceSet": "initial",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-system-yeIT5p",
+      "threadId": "01a1cfc6-e875-76c2-b2e9-de0ea3811326",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T20-41-21-01a1cfc6-e875-76c2-b2e9-de0ea3811326.jsonl",
+      "traceSha256": "cba4727c8b5e7059e167d7046dca35405d7a5b32e83895a6a809483f9c351da8",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "read-only"
+          }
+        }
+      ],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "temporaryTrustProfileRemoved": true,
+      "childThreads": [],
+      "delegationCalls": [],
+      "actualReferenceReads": [
+        "references/1-arguments-and-tier.md",
+        "references/2-context.md",
+        "references/registry.md",
+        "references/3-persistence.md",
+        "references/4-sections.md"
+      ],
+      "preservedFiles": 482,
+      "changed": [],
+      "newDocumentFiles": [],
+      "outsideScope": [],
+      "checkpointEvents": 0,
+      "transactionBackups": 0,
+      "checkpointChainVerified": null,
+      "artifactHashes": {
+        "before.json": "35c36bd5c21a5b3a9bad947fe9954aa8285f5c146ec576ceff9240ea8ccba607",
+        "after.json": "35c36bd5c21a5b3a9bad947fe9954aa8285f5c146ec576ceff9240ea8ccba607",
+        "events.jsonl": "702c4bec08842d8172ad7efb291da695c52c0328c4560d4cf740789b13a00b25",
+        "report.json": "32c643e6762b9de21dd91b4cd354b551db183b15d901b99484cca4beeb207ef5",
+        "final.txt": "d939ed03790d68c1a255c119db21643b0a053ddd3003b689e10978f8ad1e3c77",
+        "fixture.json": "1216eb54265343b45209a2eeaabb522f7fbeae0e93e75db25c61af1d0e9a71e2"
+      },
+      "independentAuditSha256": "4d5508e54f7d74bf30b870b5fb319850ad16577c07e0257e135e82b7ff04ef04"
+    },
+    {
+      "scenario": "full-lenses",
+      "status": "PASS",
+      "scopeOfResult": "Full eight core sections plus Summary and selected extras; real author-applied creative/systems/specialist/QA lenses, saved-GDD CD-GDD-ALIGN author self-check honestly distinguished from independent approval; Designed, correct Nature, 15 checkpoints.",
+      "resourceSet": "nature-correction",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-system-4TtwtY",
+      "threadId": "01a1cfd2-6202-7fc2-8ba4-5ece8c59d659",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T20-53-53-01a1cfd2-6202-7fc2-8ba4-5ece8c59d659.jsonl",
+      "traceSha256": "a377fa85860e1585ca431ef2ea202947186b4fecdb772520ea0e14b75b19081e",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        }
+      ],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "temporaryTrustProfileRemoved": true,
+      "childThreads": [],
+      "delegationCalls": [],
+      "actualReferenceReads": [
+        "references/1-arguments-and-tier.md",
+        "references/2-context.md",
+        "references/registry.md",
+        "references/3-persistence.md",
+        "references/4-sections.md",
+        "references/5-validation.md",
+        "references/lens-systems-designer.md",
+        "references/lens-creative-director.md",
+        "references/lens-specialists.md",
+        "references/lens-qa-lead.md"
+      ],
+      "preservedFiles": 480,
+      "changed": [
+        "design/gdd/systems-index.md"
+      ],
+      "newDocumentFiles": [
+        "production/session-state/active.md",
+        "design/gdd/round-state.md"
+      ],
+      "outsideScope": [],
+      "checkpointEvents": 15,
+      "transactionBackups": 15,
+      "checkpointChainVerified": true,
+      "artifactHashes": {
+        "before.json": "42f31ad39c0cd3a2d579dadcf32da44cb9c96530a06bd2fbf9981c7f45f27539",
+        "after.json": "74f86cbca6ad3251f90c9e595ed614f042fe1df7663108d05019c48d1968779b",
+        "events.jsonl": "1f48a47cbf2a48d33b9186c2d8ca1646eace94e9eb7964cde3c5b0fba87021c1",
+        "report.json": "435c8de57f17b433d64a466d09f52f300dfd7a09b56b1812b052b602cd9a2e33",
+        "final.txt": "bf4a736748c8e3d7d07ede3a5c18ec09effc4b4aa23a804f992697739f141bf1",
+        "fixture.json": "359929f6915121b76e4789573988a5a11e1de1a55dbb3b92bdaff14a4db557e7"
+      },
+      "independentAuditSha256": "2503369c32cd0493a1f1b83e63f054b84dab2bd795b2161c1253226b207f6c7a",
+      "gddSha256": "da936cfee499e040142125e9f4b846926c3d08fa207ccc40a50ccbbb14737c06",
+      "gddHeadings": [
+        "Summary",
+        "Overview",
+        "Player Fantasy",
+        "Detailed Design",
+        "Formulas",
+        "Edge Cases",
+        "Dependencies",
+        "Tuning Knobs",
+        "Visual/Audio Requirements",
+        "Game Feel",
+        "UI Requirements",
+        "Cross-References",
+        "Acceptance Criteria",
+        "Open Questions"
+      ],
+      "recoveryReview": "Every saved checkpoint and backup forms one before-to-final chain; completed sections advance in actual authoring order; final handoff stops before implementation/independent review.",
+      "indexExactTargetAndCountsOnly": true
+    },
+    {
+      "scenario": "missing",
+      "status": "PASS",
+      "scopeOfResult": "Standard context missing: names concept and systems-index prerequisites, blocks GDD authoring and writes nothing.",
+      "resourceSet": "nature-correction",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-system-9bZLyT",
+      "threadId": "01a1cfda-4bc7-70f0-b449-b27571698b83",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T21-02-37-01a1cfda-4bc7-70f0-b449-b27571698b83.jsonl",
+      "traceSha256": "887f2f1c9e7ff4609b17947f4639ee3dc7c2399373906f975b68a36be279bbb4",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "read-only"
+          }
+        }
+      ],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "temporaryTrustProfileRemoved": true,
+      "childThreads": [],
+      "delegationCalls": [],
+      "actualReferenceReads": [
+        "references/1-arguments-and-tier.md",
+        "references/2-context.md"
+      ],
+      "preservedFiles": 478,
+      "changed": [],
+      "newDocumentFiles": [],
+      "outsideScope": [],
+      "checkpointEvents": 0,
+      "transactionBackups": 0,
+      "checkpointChainVerified": null,
+      "artifactHashes": {
+        "before.json": "75b6b06fb60ea7a5dd6a5e2a1f6e449932fcecdec7b7797746e9071dae647dcf",
+        "after.json": "75b6b06fb60ea7a5dd6a5e2a1f6e449932fcecdec7b7797746e9071dae647dcf",
+        "events.jsonl": "bd21230461ccc39d10483e714799c5e1c60611521a3ebdcc661f944bf0fb69e9",
+        "report.json": "81fd1ad3a72163f3e9028cfd9d636840ae2d2dc9dd5985965bd9af8111ba494a",
+        "final.txt": "e632f941abbacf9aeb933a196610ad2b77b1763197afa01aca1a5a385c16c355",
+        "fixture.json": "db95eb5fe7c3395ced9f2a66d200e8c9879eba674a90942654865e5abd3366ab"
+      },
+      "independentAuditSha256": "63631702842d06c92a1a41881a46fbca3bd1df8db2f87a4c03ef5f5a0e8e3f74"
+    },
+    {
+      "scenario": "declined-skeleton",
+      "status": "PASS",
+      "scopeOfResult": "Available context inspected; explicit decline stops skeleton, drafting and checkpoint creation; gives concrete resume authorization and leaves files unchanged.",
+      "resourceSet": "nature-correction",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-system-DeyA7H",
+      "threadId": "01a1cfdd-450e-7290-97c6-87e2afc75415",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T21-05-47-01a1cfdd-450e-7290-97c6-87e2afc75415.jsonl",
+      "traceSha256": "ccabf30c8139056a3d90bd55d335547f60c00643d31ab176e42a0d51a2ac6ecb",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "read-only"
+          }
+        }
+      ],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "temporaryTrustProfileRemoved": true,
+      "childThreads": [],
+      "delegationCalls": [],
+      "actualReferenceReads": [
+        "references/1-arguments-and-tier.md",
+        "references/2-context.md",
+        "references/3-persistence.md"
+      ],
+      "preservedFiles": 481,
+      "changed": [],
+      "newDocumentFiles": [],
+      "outsideScope": [],
+      "checkpointEvents": 0,
+      "transactionBackups": 0,
+      "checkpointChainVerified": null,
+      "artifactHashes": {
+        "before.json": "5a3f0f1397ac7bc479e1df1d23b5dcc71bb402962b428d1bb4ef7ae8eb1ab903",
+        "after.json": "5a3f0f1397ac7bc479e1df1d23b5dcc71bb402962b428d1bb4ef7ae8eb1ab903",
+        "events.jsonl": "fbe2e505bdefa52b3e0b04c3cc82ba34f075e2c0204499c4069966af1e601946",
+        "report.json": "3f880a78a57290b51b496b7333ba738d095721f4278ccd687b91f9ec06a687ae",
+        "final.txt": "45665776a912c303cad4a76c7f066c41748082bfe181a37aeccff22ffcd065c4",
+        "fixture.json": "7b386ded9d97dc11e8893e68ffc44c82073b66fe8dfcb9d7def9e0eb8aaff516"
+      },
+      "independentAuditSha256": "54955b306f0a5508f4b5173f46c147c1b5f9fa86c43e169e2d424e65131d5588"
+    },
+    {
+      "scenario": "negative",
+      "status": "PASS",
+      "scopeOfResult": "Reads only src/count.js, explains subtraction; no design-system Skill activation, document, checkpoint or other mutation.",
+      "resourceSet": "nature-correction",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-system-2NvtWU",
+      "threadId": "01a1cfde-10d1-7942-95e6-e68664a8be76",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T21-06-39-01a1cfde-10d1-7942-95e6-e68664a8be76.jsonl",
+      "traceSha256": "93bd9f28749de20ae825710b31bce5570c980c39a891e5796d557e247e3915e5",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "read-only"
+          }
+        }
+      ],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "temporaryTrustProfileRemoved": true,
+      "childThreads": [],
+      "delegationCalls": [],
+      "actualReferenceReads": [],
+      "preservedFiles": 479,
+      "changed": [],
+      "newDocumentFiles": [],
+      "outsideScope": [],
+      "checkpointEvents": 0,
+      "transactionBackups": 0,
+      "checkpointChainVerified": null,
+      "artifactHashes": {
+        "before.json": "bb32457411a65ce722b07a60efaf81a9b78d9c88314b9b4355b5b6772733e363",
+        "after.json": "bb32457411a65ce722b07a60efaf81a9b78d9c88314b9b4355b5b6772733e363",
+        "events.jsonl": "2f49aa4bc3299d411bfbc417ff9f8460dafafdb0906c3382b0f56c005cda2867",
+        "report.json": "53f333014948374d8cd314f3a8e10936484dd95c594acf0a1f6776ca26ea43b6",
+        "final.txt": "92e1b31de7eb82a9359936e110d8a61f302b253c35ee05023bb7e2a5c2a5015f",
+        "fixture.json": "3b1cd1d523059f17d1ff0925e755d99a0cad35a7e282ad2142af8a363dbf3318"
+      },
+      "independentAuditSha256": "c5d8df02fe1c015d8df43d36963c28365b218d34d72b1f243f972866bcc1fcbd"
+    }
+  ],
+  "initialAttempts": [
+    {
+      "scenario": "standard-guided",
+      "status": "FAIL",
+      "scopeOfResult": "FAIL retained: two Cross-References Nature rows claimed Ownership handoff for read-only data/retained responsibility. Core behavior, scope preservation and checkpoint chain passed; the same input later passed after narrow guidance correction.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-system-VKrp23",
+      "parentThreadId": "01a1cfc6-e5e1-7562-8b69-a56e6e1b511c",
+      "parentTrace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T20-41-21-01a1cfc6-e5e1-7562-8b69-a56e6e1b511c.jsonl",
+      "parentTraceSha256": "24ff4f1bb131831f3bf5bf943546fe6bb31e8012e506f646a9f9a28a3d7debe2",
+      "children": [],
+      "delegationCalls": [],
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        }
+      ],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "preservedFiles": 480,
+      "changed": [
+        "design/gdd/systems-index.md"
+      ],
+      "checkpointEvents": 11,
+      "checkpointChainVerified": true,
+      "outsideScope": [],
+      "artifactHashes": {
+        "fixture.json": "0596a8782e344658eec0627a65ee7c318a166dcafbf5a6be09c5a06619c43386",
+        "before.json": "a201ce6b3b2bdbbdda28c59da8058455fcbc57578047a901f84a3b154d051b10",
+        "after.json": "68e19b2bb4b59efe2b0c7f71f61e02368c6ba84510da981f420b93c6b6bb8f31",
+        "events.jsonl": "6938c32161e72c505392383f6c8694c4624004553423aec9e1e345ff3e111689",
+        "final.txt": "8e9416f580b1462dc3fa14d4520ea95776e502c3cf93b6d72933a4f3622997c1",
+        "report.json": "9caa0fbb2c2c5a99202a8ed4abf3be7f1d8bc36bb0caae89c6a4e7cd637e8b5d"
+      },
+      "gddSha256": "116d3654e1db3abd718e2ee2515dbfc23485b8e3c5d64575ca602781768a659f",
+      "failureKind": "Semantic cross-reference classification; observable file scope and checkpoint checks passed",
+      "resourceSet": "initial",
+      "addedArtifactCount": 24
+    }
+  ],
+  "corrections": [
+    {
+      "failure": "Cross-References Nature said Ownership handoff for read-only Content input and retained ownership constraints, contradicting the written design.",
+      "change": "Clarified the existing four Nature meanings in section guidance; self-check compares the label with actual data flow and ownership. No new enum, live fixture edit, gameplay change or independent approval.",
+      "files": [
+        ".agents/skills/game-studio-design-system/references/4-sections.md",
+        ".agents/skills/game-studio-design-system/references/5-validation.md"
+      ],
+      "freshRerun": {
+        "status": "PASS",
+        "scenario": "standard-guided",
+        "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-design-system-vYIlms",
+        "samePrompt": true,
+        "editedFixtureInput": false
+      }
+    }
+  ],
+  "validation": {
+    "skillMetadata": "PASS",
+    "localMarkdownReferences": "PASS",
+    "templateSourcePreservation": "PASS except declared Codex resource/name substitutions",
+    "fixtureJavaScriptSyntax": "PASS",
+    "sharedBuildOrCI": "Recorded separately by coordinator; not inferred from these native cases"
+  },
+  "limitations": [
+    "Complete S022 remains partial. The preserved source scenarios and additional native matrix in studio-tests/skills/authoring/design-system-codex.md remain the acceptance contract; ten selected cases do not replace them.",
+    "Not yet natively exercised: collaborative per-section approvals and revisions, autonomous choices, one-run mode override, full gate CONCERNS/REJECT/NOT ASSESSED and revision recovery, ambiguous/off-index target, required Visual/Audio/Game Feel and all nine category/union mappings.",
+    "Not yet natively exercised: numeric discovery late in authoring, density variations, long registry block references, new registry facts/declined update/malformed input, Accepted ADR conflicts, configured reference modules and independent engine-value provenance.",
+    "Not yet natively exercised: stale checkpoint versus actual file contents after fresh-session resume, compaction recovery, checkpoint conflict/interruption and negative UI-library/implementation/review triggers. Incremental chains here establish successful saves only.",
+    "No design-system desktop acceptance, actual engine/game execution, real collaborative human approval, player testing or subjective play acceptance in these synthetic native CLI sessions.",
+    "Minimal and registry-conflict passed on initial frozen resource set; they were not rerun because the narrow later correction affects Nature classification of authored cross-reference rows, absent from those scenarios.",
+    "Raw native traces and artifacts are retained at the local absolute paths and pinned with SHA-256, not bundled in this repository; missing temporary files later would require a fresh run rather than assuming pass.",
+    "Installed resources verified against source before each native run. Package integrity changed with coordinated fixes in other Skills as well; resource-specific hashes delimit the evidence."
+  ],
+  "resourceSets": {
+    "nature-correction": {
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "installedHashes": {
+        ".agents/skills/game-studio-design-system/SKILL.md": "5ebe0eb23a239c17e75cdc7e3201bcd0c59e12196fcac82cde9fe4c4c53b994c",
+        ".agents/skills/game-studio-design-system/references/1-arguments-and-tier.md": "fa32565b2d0e9b3acc61fd2b186c37a4825cbe9dfbddec63cf7236df7caf5a33",
+        ".agents/skills/game-studio-design-system/references/2-context.md": "13fb0a3c436f547eb326043e3c5b63417b690862be7fd53c0c0ad3eeacbe2d7e",
+        ".agents/skills/game-studio-design-system/references/3-persistence.md": "ea4b3b7dc1bcaba492e3e8cb11c9761a2589df7e4e4abcdaa5c9ff5cadcc56e9",
+        ".agents/skills/game-studio-design-system/references/4-sections.md": "325aef970998f4ca8b14d25f3bc87b3bafeac700e771251d2699130548ea2738",
+        ".agents/skills/game-studio-design-system/references/5-validation.md": "cbe988c9d1930c2b8c8bca4c4945a34364917c2d5925b5f9d7608090956bd3c5",
+        ".agents/skills/game-studio-design-system/references/lens-creative-director.md": "783ae4cb2a19bc79f9ced53cc8da5b19bc77a6a7fc08f83881e42bebcefbb9f7",
+        ".agents/skills/game-studio-design-system/references/lens-qa-lead.md": "7a6a6e93a1d203039ab7e51da686cdfe93610c7361e71be7ffd1995d2a085dbe",
+        ".agents/skills/game-studio-design-system/references/lens-specialists.md": "cf587fb90b022342099d0225dbc852bcbe59100e19412d4632ee80354f4e5dd5",
+        ".agents/skills/game-studio-design-system/references/lens-systems-designer.md": "0a779d324fa54981188dd4c144dcb97de53712f8363bddfebd7fed795d9a37f5",
+        ".agents/skills/game-studio-design-system/references/registry.md": "789c4c7bf994f8cf22a5882f48e7f763a0490da276dc5a1eeb9002912f4ef755",
+        "studio/templates/game-design-document.md": "a532766f52406e59ec9888dd0e56ec8dfacc020a71a102ac7275d53f0f360021",
+        "studio/templates/guidance/game-design-document-guide.md": "5139191f1ebd41ce0ed6400b7df606bd25783283150d89786a6fae78daf110c1",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/cd-gdd-align.md": "efe30c3bfbd720e4ffdf4fa4057a18c04c86aafbc824e5f7af02837f4227ce6b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      }
+    },
+    "initial": {
+      "packageIntegrity": "sha512-tO/HPntJCFtFpznZ40jtiescXY7RevsTfBt7CbHPOh4b1RgSBWZZDHIyn2sDFFzmroR0n1RImy86ivfEuNkZew==",
+      "installedHashes": {
+        ".agents/skills/game-studio-design-system/SKILL.md": "5ebe0eb23a239c17e75cdc7e3201bcd0c59e12196fcac82cde9fe4c4c53b994c",
+        ".agents/skills/game-studio-design-system/references/1-arguments-and-tier.md": "fa32565b2d0e9b3acc61fd2b186c37a4825cbe9dfbddec63cf7236df7caf5a33",
+        ".agents/skills/game-studio-design-system/references/2-context.md": "13fb0a3c436f547eb326043e3c5b63417b690862be7fd53c0c0ad3eeacbe2d7e",
+        ".agents/skills/game-studio-design-system/references/3-persistence.md": "ea4b3b7dc1bcaba492e3e8cb11c9761a2589df7e4e4abcdaa5c9ff5cadcc56e9",
+        ".agents/skills/game-studio-design-system/references/4-sections.md": "c9b0f1e1d2065f6c8b10b2126e2ae9374dd56b96fb6f2a4439b9d1b7df593f9e",
+        ".agents/skills/game-studio-design-system/references/5-validation.md": "0bcbc3df8a7674f916df4be9f03998c74966385c1ef4bd3de31f1844c40a0b81",
+        ".agents/skills/game-studio-design-system/references/lens-creative-director.md": "783ae4cb2a19bc79f9ced53cc8da5b19bc77a6a7fc08f83881e42bebcefbb9f7",
+        ".agents/skills/game-studio-design-system/references/lens-qa-lead.md": "7a6a6e93a1d203039ab7e51da686cdfe93610c7361e71be7ffd1995d2a085dbe",
+        ".agents/skills/game-studio-design-system/references/lens-specialists.md": "cf587fb90b022342099d0225dbc852bcbe59100e19412d4632ee80354f4e5dd5",
+        ".agents/skills/game-studio-design-system/references/lens-systems-designer.md": "0a779d324fa54981188dd4c144dcb97de53712f8363bddfebd7fed795d9a37f5",
+        ".agents/skills/game-studio-design-system/references/registry.md": "789c4c7bf994f8cf22a5882f48e7f763a0490da276dc5a1eeb9002912f4ef755",
+        "studio/templates/game-design-document.md": "a532766f52406e59ec9888dd0e56ec8dfacc020a71a102ac7275d53f0f360021",
+        "studio/templates/guidance/game-design-document-guide.md": "5139191f1ebd41ce0ed6400b7df606bd25783283150d89786a6fae78daf110c1",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/cd-gdd-align.md": "efe30c3bfbd720e4ffdf4fa4057a18c04c86aafbc824e5f7af02837f4227ce6b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      }
+    }
+  },
+  "selectedNativeSummary": {
+    "distinctScenarios": 10,
+    "assessedPass": 10,
+    "initialFailedAttemptsRetained": 1,
+    "totalNativeRuns": 11,
+    "currentlyRunning": 0,
+    "scope": "Only these selected synthetic CLI cases; does not close the complete source or added acceptance matrix."
+  },
+  "postTestFormatting": {
+    "path": ".agents/skills/game-studio-design-system/references/lens-specialists.md",
+    "change": "Removed one extra newline at EOF only; all non-newline bytes unchanged.",
+    "nativeTestedSha256": "cf587fb90b022342099d0225dbc852bcbe59100e19412d4632ee80354f4e5dd5",
+    "currentSourceSha256": "85dfdfe0188ae8e3b3b313addbcc046a6cdf713d459bd6d913a442bd36334563",
+    "nativeRerun": false,
+    "reason": "Whitespace-only cleanup after completed native runs; original tested resource hashes retained. Shared rebuild/pack is coordinator-owned."
+  }
+}

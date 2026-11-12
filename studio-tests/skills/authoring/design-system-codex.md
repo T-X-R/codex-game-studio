@@ -92,3 +92,15 @@ source preservation, read order, local lens use/no child agents and each checkpo
 transaction before recording a result. Supplied owner decisions and engine snippets
 are synthetic; they cannot establish delivered game quality, real engine execution
 or human play acceptance. Do not call unrun cases PASS.
+
+## Recorded selected acceptance
+
+[2026-11-12 evidence](../../../docs/evidence/design-system-skill-2026-11-12.json)
+records ten selected CLI scenarios after independent artifact and trace review:
+standard guided authoring, voluntary minimal, minimal with a standard system
+override, retrofit, authorized existing-registry reference, registry conflict,
+full local lenses, missing context, declined skeleton and a negative code question.
+The initial standard-guided run failed semantic cross-reference classification;
+its evidence remains alongside the identical-input fresh rerun after correction.
+All native processes ended before assessment. The source and additional matrices
+above remain authoritative; unexercised cases and desktop behavior stay pending.
