@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { mkdtemp, readFile, writeFile, rm, realpath } from 'node:fs/promises';
+import { mkdtemp, mkdir, readFile, writeFile, rm, realpath } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { tmpdir } from 'node:os';
@@ -74,6 +74,20 @@ try {
   }
   command(globalCli, 'restore', '--project', project, '--archive', archive, '--offline');
   const launcher = join(project, '.game-studio/run.cjs');
+  await mkdir(join(project, 'design/gdd'), { recursive: true });
+  const gddText = '## Overview\n[To be designed]\n## Detailed Design\nDamage is clamped.\n';
+  await writeFile(join(project, 'design/gdd/combat.md'), gddText);
+  const gdd = command(launcher, 'check', '--kind', 'gdd', '--project', project);
+  assert.equal(gdd.data.qualityAssessed, false);
+  assert.deepEqual(gdd.data.files[0].present, ['Overview', 'Detailed Rules']);
+  assert.deepEqual(gdd.data.files[0].placeholder, ['Overview']);
+  assert.equal(await readFile(join(project, 'design/gdd/combat.md'), 'utf8'), gddText);
+  await rm(join(project, 'design/gdd/combat.md'));
+  assert.throws(() => command(launcher, 'check', '--kind', 'gdd', '--project', project), error => {
+    assert.equal(error.status, 3);
+    assert.equal(JSON.parse(error.stdout).status, 'not_assessed');
+    return true;
+  });
   const installedContent = command(launcher, 'check', '--kind', 'content', '--project', project);
   assert.equal(installedContent.status, 'ok');
   assert.equal(installedContent.data.scope, 'project-content');
