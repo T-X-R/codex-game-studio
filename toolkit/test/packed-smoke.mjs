@@ -26,6 +26,12 @@ try {
   const project = join(temp, '我的 game');
   assert.equal(command(globalCli, 'init', project, '--engine', 'web').status, 'ok');
   assert.match(await readFile(join(project, '.agents/skills/game-studio-prototype/SKILL.md'), 'utf8'), /name: game-studio-prototype/);
+  assert.equal(await readFile(join(project, '.agents/skills/game-studio-prototype/references/grow.md'), 'utf8'),
+    await readFile(join(packageRoot, '../.agents/skills/game-studio-prototype/references/grow.md'), 'utf8'));
+  for (const path of ['hook.ts', 'tune.ts']) {
+    assert.equal(await readFile(join(globalRoot, 'resources/studio/templates/web-growth-support', path), 'utf8'),
+      await readFile(join(packageRoot, '../studio/templates/web-growth-support', path), 'utf8'));
+  }
   command(globalCli, 'restore', '--project', project, '--archive', archive, '--offline');
   const launcher = join(project, '.game-studio/run.cjs');
   assert.equal(command(launcher, 'status', '--project', project).data.settings['engine.name'].value, 'Web');

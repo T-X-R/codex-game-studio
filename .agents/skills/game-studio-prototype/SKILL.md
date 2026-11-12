@@ -1,15 +1,20 @@
 ---
 name: game-studio-prototype
-description: Build or iterate a small Web game prototype from an agreed concept, using deterministic local scaffolding, preview, replay evidence and export commands.
+description: Build, iterate or grow a Web game prototype from an agreed concept, with local tooling, typed game rules and replay evidence.
 ---
 
 # Build a Web prototype
 
 Use the game root and `node .game-studio/run.cjs`. Check `--help` and `doctor` for
-the installed capabilities. This alpha supports standalone HTML/JavaScript games.
+the installed capabilities. The toolkit supports standalone HTML/JavaScript games
+and an incremental path into a TypeScript Web project.
 Preserve an existing engine choice; don't convert an engine project to Web without
 that decision. Read `design/game-brief.md` and existing prototypes before creating
 anything. Obtain only missing goal, look and scope decisions; reuse authorization.
+
+When the user selects growth into the main Web project, or resumes that work,
+read [the growth workflow](references/grow.md). Reuse their existing decision;
+iteration alone does not imply moving the game or changing engines.
 
 For a new prototype, identify a falsifiable question: what player action should
 produce what experience, and what observation would count as success? Keep the
