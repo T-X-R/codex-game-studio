@@ -25,6 +25,10 @@ try {
   assert.equal(command(globalCli, 'version').status, 'ok');
   const project = join(temp, '我的 game');
   assert.equal(command(globalCli, 'init', project, '--engine', 'web').status, 'ok');
+  const qaRole = '.codex/agents/game-studio-qa-tester.toml';
+  assert.equal(await readFile(join(project, qaRole), 'utf8'),
+    await readFile(join(packageRoot, '..', qaRole), 'utf8'));
+  await assert.rejects(readFile(join(project, '.codex/config.toml')), { code: 'ENOENT' });
   assert.match(await readFile(join(project, '.agents/skills/game-studio-prototype/SKILL.md'), 'utf8'), /name: game-studio-prototype/);
   for (const path of ['SKILL.md', 'references/choosing-settings.md']) {
     assert.equal(await readFile(join(project, '.agents/skills/game-studio-project-settings', path), 'utf8'),
