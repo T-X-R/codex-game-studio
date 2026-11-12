@@ -48,3 +48,7 @@ framework roots and symbolic links are reported as invalid. Missing directories,
 unresolved Unreal module placeholders and ambiguous auto-detection are visible.
 An unset engine never implies a `tests/` root. For a code root of `.`, consumers
 must honor the returned `excluded_code_directories` list when scanning.
+
+`engine inspect --json` combines this directory inspection with engine
+name/version/language provenance. Its `execution.state` remains `not_assessed`:
+a declared engine version is not a measurement of an installed executable.

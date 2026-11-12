@@ -36,6 +36,9 @@ try {
   assert.equal(command(launcher, 'config', 'get', 'engine_values', '--project', project).data.settings.engine_values.value.name.value, 'Web');
   assert.equal(command(launcher, 'config', 'get', 'gate_level', '--project', project).data.settings.gate_level.value.config.smokeCheck, 'blocking');
   assert.equal(command(launcher, 'config', 'get', 'engine_row', '--project', project).data.settings.engine_row.value.commands.test, 'npm test');
+  const engineInspection = command(launcher, 'engine', 'inspect', '--project', project);
+  assert.equal(engineInspection.data.engine.name.value, 'Web');
+  assert.equal(engineInspection.data.execution.state, 'not_assessed');
   await writeFile(join(project, 'test-fixture.cjs'), 'console.log("packed test executed");\n');
   command(launcher, 'config', 'set', 'commands.test', 'node test-fixture.cjs', '--project', project);
   assert.equal(command(launcher, 'test', '--output', 'production/evidence/packed-test', '--project', project).data.processExitCode, 0);

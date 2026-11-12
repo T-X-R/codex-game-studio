@@ -8,11 +8,19 @@ import { startPreview } from './preview.js';
 import { checkPrototype } from './check.js';
 import { capturePrototype } from './capture.js';
 import { runConfiguredTest } from './run-tests.js';
+import { readSettings } from './config.js';
 
 const project: Option = { type: 'string', description: 'Game workspace directory' };
 const dryRun: Option = { type: 'boolean', description: 'Describe effects without creating files or starting a server' };
 async function root(input: Input) { return resolveProject(input.values.project as string | undefined); }
 export const gameCommands: Record<string, Command> = {
+  'engine inspect': { description: 'Read declared engine metadata and observed directories without launching an editor', effect: 'read',
+    options: { project }, run: async input => {
+      const workspace = await root(input);
+      const { settings, warnings } = await readSettings(workspace, ['engine_values', 'engine_row']);
+      return { ...success('engine inspect', { project: workspace, engine: settings.engine_values!.value, layout: settings.engine_row!.value,
+        execution: { state: 'not_assessed', reason: 'Directory inspection does not prove editor, license, build or test availability.' } }), warnings };
+    } },
   test: { description: 'Run a configured test, smoke or build command with a timeout and preserved evidence', effect: 'process',
     options: { project, 'dry-run': dryRun, kind: { type: 'string', description: 'Configured operation: test (default), smoke or build' },
       output: { type: 'string', description: 'New project-relative evidence directory' },
