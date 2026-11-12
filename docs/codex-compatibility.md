@@ -1,6 +1,6 @@
 # Codex compatibility evidence
 
-Status: CLI custom role selection verified with a negative control; full host compatibility gate is open.
+Status: CLI custom role selection and a startup/patch Hook fixture verified with controls; full host compatibility gate is open.
 
 Local candidate: Codex CLI 0.162.0 on macOS ARM64. The installed feature listing
 reported hooks and multi-agent support enabled. This is not a claimed minimum
@@ -96,3 +96,54 @@ not assessed, including when a marker needs trace review. A successful CLI exit
 alone never counts as role compatibility. The script deliberately leaves its
 result unassessed until the persisted parent/child traces are reviewed; the
 reviewed record above supplies that evidence for this pair. T01 remains open.
+
+## Verified CLI startup and patch Hook fixture — 2026-11-12
+
+A separate disposable Git project contains a short fixture script and exactly
+two project hooks: `SessionStart` and `PreToolUse` matching `^apply_patch$`.
+The script appends events only inside the fixture, returns a startup context
+marker, and denies patches naming `blocked.txt`. It is test code, not a production
+validator. It performs no network calls or subprocess execution.
+
+The untrusted control loaded project configuration but ran no fixture hook;
+both requested patches completed. In another fresh fixture, the native `/hooks`
+screen showed two installed hooks, zero active and two requiring review. The
+owner explicitly authorized trusting these two test hooks. Each source, command,
+matcher and five-second timeout was inspected before selecting Trust. The screen
+then showed both active, with no pending review. No trust-bypass flag was used.
+
+The subsequent persisted CLI session added the startup marker to developer
+context and emitted two real `PreToolUse` events. `tool_name` was `apply_patch`
+and the patch text was in `tool_input.command`, even though the model invoked
+the tool through JavaScript code mode. The allowed patch changed `allowed.txt`;
+the denied patch's tool promise rejected with the fixture's reason and left
+`blocked.txt` byte-for-byte unchanged. There was no retry or alternate write.
+Both scripts/configurations retained their original hashes and both temporary
+user profiles were removed.
+
+The reviewed record is
+[`evidence/cli-hook-gate-2026-11-12.json`](evidence/cli-hook-gate-2026-11-12.json).
+This does not prove desktop behavior, multi-file patches, shell interception,
+other lifecycle events, production validators or the packaged runtime adapter.
+It narrows the earlier exploratory uncertainty without closing T01/T16.
+
+To prepare a new fixture on macOS/Linux:
+
+```bash
+GAME_STUDIO_HOST_MODEL=<available-model> node toolkit/test/host-hook-probe.mjs
+```
+
+The command prints the fixture directory, script and native review command.
+For an untrusted control, run the fixture directly. For the trusted case, review
+the exact generated hooks through `/hooks` only after explicit authorization,
+then close that interactive client and run:
+
+```bash
+GAME_STUDIO_HOST_MODEL=<available-model> node toolkit/test/host-hook-probe.mjs <fixture-directory>
+```
+
+Each fixture is single-use. The runner never grants hook trust and returns
+unassessed until the actual trace and files are reviewed. Its named user profile
+is removed when the run finishes; preparation intentionally keeps it available
+for the native review step. The live fixture script is not shipped in the toolkit
+archive. Its offline input/output contract tests also run in native Windows CI.
