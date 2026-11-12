@@ -98,3 +98,16 @@ systemsDesignerScenarios['progression-manual'] = {
   ...systemsDesignerScenarios.progression,
   request: manualArithmetic(systemsDesignerScenarios.progression.request),
 };
+
+// Explicit engine/API domain for the five-role read-only chain; preserve the
+// original pure-math fixture and its insufficient-panel observation separately.
+systemsDesignerScenarios['full-review-web'] = {
+  ...systemsDesignerScenarios['full-review'],
+  inputs: {
+    ...systemsDesignerScenarios['full-review'].inputs,
+    'design/gdd/resolve-hit.md': resolvedHit.replace(
+      '## Detailed Design\n',
+      '## Detailed Design\nWeb runtime contract: H and D are ECMAScript Number values, checked using Number.isSafeInteger before calculating with Number arithmetic. Reject all other values without coercion; BigInt inputs are not accepted by this interface.\n',
+    ),
+  },
+};

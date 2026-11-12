@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-12",
+  "status": "scoped-pass",
+  "scope": "Independent root reconciliation of all 17 recorded Systems Designer runs: raw evidence hashes, actual current workspace bytes, before/after effects, actual child identities/trace hashes and inherited runtime policy. Semantic verdicts remain separately recorded by the reviewer; this audit does not independently prove every mathematical claim.",
+  "sourceEvidence": "docs/evidence/systems-designer-role-2026-11-12.json",
+  "sourceEvidenceSha256": "30d0c082f07e46ce45131c22a2f4e6067ea15f415b28942a3c8140361a77e0b4",
+  "runs": [
+    {
+      "scenario": "formula-range",
+      "runId": "game-studio-systems-designer-3HEpqO",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 520,
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "6c1a6ec565476229e5b0c838b153084b6f915e0836cedb9f4805aee4ae3daa5d"
+    },
+    {
+      "scenario": "adversarial-boundaries",
+      "runId": "game-studio-systems-designer-Gqakfe",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 520,
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "ef4b30cf405ff923cc6374f57817e59282bb2a4211193ca52336eb29c56b2a44"
+    },
+    {
+      "scenario": "full-review-records",
+      "runId": "game-studio-systems-designer-HriuM2",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 523,
+      "preservedFiles": 521,
+      "changed": [
+        "design/gdd/systems-index.md"
+      ],
+      "added": [
+        "design/gdd/reviews/resolve-hit-review-log.md"
+      ],
+      "actualChildren": 5,
+      "parentTraceSha256": "8a005b51d30131b81d9e50e42be6474cd7d8d461744fca259d26aab5f4c5cb9e"
+    },
+    {
+      "scenario": "complexity-conflict",
+      "runId": "game-studio-systems-designer-OXceCG",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 520,
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "eeafec4359f81f16f302863b1979d2890359dfb5b4438aa3c19ccd138f4634f3"
+    },
+    {
+      "scenario": "context-ttk",
+      "runId": "game-studio-systems-designer-k58Vhc",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 520,
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "ca4813df5104e8f7adbcef3bccafd0b2363d89ff4b15c8d80c85750fda5ade3f"
+    },
+    {
+      "scenario": "narrative-boundary",
+      "runId": "game-studio-systems-designer-BvQ9Pb",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 520,
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "255d354eabc56adfdf97a51f11b87bff566d3e1f79e138ce89c7f698a312dfe6"
+    },
+    {
+      "scenario": "progression",
+      "runId": "game-studio-systems-designer-T9a5mn",
+      "recordedSemanticStatus": "FAIL",
+      "actualFilesVerified": 520,
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "caa06a5e1309b24b6a6f637749bdd98f31839fda816b2156c65cbb3c9273c2b9"
+    },
+    {
+      "scenario": "progression-manual",
+      "runId": "game-studio-systems-designer-tA7FAU",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 520,
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "774d6fba547a8ed7e2c99cf2d9f2e3e5dd41fd5b48dd8fb3e01ac8b25e5f12a6"
+    },
+    {
+      "scenario": "full-review",
+      "runId": "game-studio-systems-designer-MNCt7l",
+      "recordedSemanticStatus": "FAIL",
+      "actualFilesVerified": 521,
+      "preservedFiles": 521,
+      "changed": [],
+      "added": [],
+      "actualChildren": 4,
+      "parentTraceSha256": "e7bb91b766fefe5c8204437b7d3a96c62053d503acdcf584efa41fc70f82a241"
+    },
+    {
+      "scenario": "economy",
+      "runId": "game-studio-systems-designer-LBevnw",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 520,
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "678e80e7de2335ea808b782caeb955b09f0a9cba3e5638d14af2409c4fc1b71b"
+    },
+    {
+      "scenario": "interactions",
+      "runId": "game-studio-systems-designer-4NMDkg",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 520,
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "8e0b7f870b839288a172d7409a986f877b118ecd78026e64f726c54f1e6f9439"
+    },
+    {
+      "scenario": "full-review-web",
+      "runId": "game-studio-systems-designer-P61LtQ",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 521,
+      "preservedFiles": 521,
+      "changed": [],
+      "added": [],
+      "actualChildren": 5,
+      "parentTraceSha256": "92644ae71aa3282882e8c63e3d732560102a6f90609bd1c40d4ae44fe95a0d06"
+    },
+    {
+      "scenario": "registry-consistency",
+      "runId": "game-studio-systems-designer-pnmVLy",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 523,
+      "preservedFiles": 523,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "4e35b147fab234e0de8d1319a40e6173387b53ab242209138c42e289622647f6"
+    },
+    {
+      "scenario": "cross-system",
+      "runId": "game-studio-systems-designer-ckiWz0",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 521,
+      "preservedFiles": 521,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "a774db7b6f85ab7af08d15a2b3ad385c0ce6645212179a8bdbf43bdb74f7e847"
+    },
+    {
+      "scenario": "authorized-doc",
+      "runId": "game-studio-systems-designer-UMLqbH",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 521,
+      "preservedFiles": 520,
+      "changed": [
+        "docs/math-notes.md"
+      ],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "2a42ba0b50ef4d74f585ffffaae76e2efbf1b7783f2d38a4461334b6fbc83598"
+    },
+    {
+      "scenario": "tuning-simulation",
+      "runId": "game-studio-systems-designer-zFB9Si",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 520,
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "61a3b65a36510b7cc80dfb8ec91b802d9265ffd5899643fb27c6c37de9e4ff63"
+    },
+    {
+      "scenario": "missing-domain",
+      "runId": "game-studio-systems-designer-P9C3PM",
+      "recordedSemanticStatus": "PASS",
+      "actualFilesVerified": 522,
+      "preservedFiles": 522,
+      "changed": [],
+      "added": [],
+      "actualChildren": 1,
+      "parentTraceSha256": "817a3e13a7be949aa2033e4a7932d45d866cae738f5263219c23e753aa9c850a"
+    }
+  ],
+  "retainedFailures": 2,
+  "doesNotClaimFullRoleAcceptance": true
+}

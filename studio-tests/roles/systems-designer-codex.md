@@ -202,3 +202,21 @@ boundary and all previously run original five source-case, progression and full
 record requests are preserved. Record initial/current fixture hashes and exact
 request equality for completed cases; do not present the clarified rerun as an
 identical-prompt regression or erase the first failed observation.
+
+The original read-only `full-review` run selected Game Designer, Systems Designer,
+QA Lead and Creative Director, omitting Lead Programmer. Preserve it as
+FAIL / fixture-domain-ambiguity for the expected five-role chain: it did not prove
+that coverage. Its mathematical assessment and no-write behavior are separately
+observable; the source routing does not automatically require a Web specialist
+merely because project settings say Web. The original GDD supplied safe-integer
+bounds without explicitly naming a platform API, and the reviewer gave no visible
+reason for omitting LP. Do not retroactively claim correct domain pruning or a
+proven universal routing defect.
+
+The separate `full-review-web` variant keeps the original read-only request and
+adds a concrete ECMAScript Number / Number.isSafeInteger, no-coercion/BigInt-input
+contract to Detailed Design. This directly exercises the existing engine-specific
+patterns/API route without expanding that route or changing any role. Run it with
+`node toolkit/test/systems-designer-host.mjs full-review-web`. Require the actual
+four relevant specialist roles followed by Creative Director, with the same
+numeric/coverage/read-only checks. Keep both input versions and original results.
