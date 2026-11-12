@@ -24,6 +24,28 @@
   "configuredFailure": { "status": "failed", "toolkitExitCode": 5, "processExitCode": 7 },
   "versionMismatch": { "configuredVersion": "4.0.0", "status": "not_assessed", "toolkitExitCode": 3, "processes": ["--version"], "importNotStarted": true },
   "corruptAssetImport": { "status": "failed", "toolkitExitCode": 5, "processExitCode": 0, "errorDetected": true, "fixture": "Invalid bytes in assets/broken.png" },
+  "configuredZeroExitRegression": {
+    "trigger": "Configured Godot smoke command runs editor import with a fresh corrupt PNG",
+    "beforeFix": {
+      "fixture": "game-studio-godot-live-YpaGLH",
+      "statusIncorrectlyReported": "ok",
+      "toolkitExitCode": 0,
+      "processExitCode": 0,
+      "stderrContainedEngineErrors": true,
+      "reportSha256": "5c324b20d7a8e57fc5d128624c8e376a541c871c70e220d6358dc5261ebdace3",
+      "cliResultsSha256": "3c81f4e835b8a8597e8ae111393e06a1e5244b0fe392fa45fb892b0b8d030c6f"
+    },
+    "afterFix": {
+      "fixture": "game-studio-godot-live-uSJ7vP",
+      "allEarlierAcceptanceChecksRepeatedSuccessfully": true,
+      "status": "failed",
+      "toolkitExitCode": 5,
+      "processExitCode": 0,
+      "engineErrorDetected": true,
+      "reportSha256": "19bda0c4a6628e10c0ebc8ece91dd6f75f9c8665f7959832c31fd03aebb698ad",
+      "cliResultsSha256": "f5d548f2de098d9dffcfddab9ae9a5b3583bccb09927056234b6451e03cb30d8"
+    }
+  },
   "reproduce": "Set GAME_STUDIO_GODOT and GAME_STUDIO_GODOT_VERSION, then run node toolkit/test/godot-smoke.mjs with supported Node after build",
   "result": "passed_for_stated_scope",
   "notAssessed": ["export/build", "C#/.NET", "Forward+/Mobile GPU rendering", "gameplay and human play acceptance", "other operating systems"]

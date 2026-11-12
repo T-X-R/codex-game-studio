@@ -67,7 +67,7 @@ were not modified; verification used an isolated Node 24 distribution.
   remains unchanged; an intentional browser error returns failure.
 - Official Skill-format validation for onboarding and the three project Skills.
 
-Source additions after the published alpha: build/typecheck and 106 local tests
+Source additions after the published alpha: build/typecheck and 107 local tests
 pass with no skips. Packed-install tests exercise configuration summaries/writes,
 checkpoint save/reopen/detach preservation, engine setup dry-run/apply/no-op and
 preference preservation after detach, engine inspection and actual test
@@ -123,6 +123,11 @@ version mismatch without import. A corrupt PNG produces Godot errors with exit 0
 [`godot-import-2026-11-12.json`](evidence/godot-import-2026-11-12.json) and the
 reproducible `toolkit/test/godot-smoke.mjs`. This is engine execution evidence,
 not an export/build, C# test, graphical gameplay run or human play acceptance.
+The same real corrupt-asset case exposed a zero-exit false positive in the generic
+configured `test` command. Fix `2780583` applies Godot diagnostic interpretation
+there too, preserves the actual process exit code, and leaves other engines'
+output semantics unchanged. Fresh real-engine red/green fixtures and unit tests
+cover the correction; the final fixture repeats the complete packed journey.
 
 The checkpoint, engine inspection, test execution and configuration summary
 additions at `bbcb238505c457ac047938f2949e2bf8c9e98e58` passed all five jobs in
