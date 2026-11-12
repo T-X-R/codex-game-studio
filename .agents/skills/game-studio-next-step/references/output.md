@@ -50,5 +50,6 @@ the limitation and make resolving it next rather than inventing progress.
   “what next?” request; it is independent of confusion, rigor and gate triggers.
   A few relevant entries suffice; do not suppress the whole nonempty footer for
   brevity. Omit only when no relevant uncataloged Skills exist. Keep it secondary
-  rather than competing primary recommendations; minimal's no-gate rule still
-  applies to which entries are relevant.
+  rather than competing primary recommendations. All minimal-route exclusions
+  also constrain this footer; it does not make unrequested sprint close-out or
+  other excluded workflows relevant. Select applicable nonexcluded entries.
