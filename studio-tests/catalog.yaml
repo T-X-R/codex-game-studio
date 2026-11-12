@@ -244,7 +244,8 @@ skills:
     priority: medium
     category: sprint
     target: .agents/skills/game-studio-sprint-status/SKILL.md
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/skills/sprint/sprint-status-codex.md
 
   - name: team-ui
     spec: studio-tests/skills/team/team-ui.md

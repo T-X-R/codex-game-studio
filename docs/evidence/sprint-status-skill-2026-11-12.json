@@ -1,0 +1,245 @@
+{
+  "date": "2026-11-12",
+  "status": "partial",
+  "scope": "Selected sprint-status CLI scenarios; neither full S057 nor desktop acceptance.",
+  "environment": {
+    "node": "24.22.2",
+    "codex": "0.162.0",
+    "platform": "macOS ARM64"
+  },
+  "source": {
+    ".claude/skills/sprint-status/SKILL.md": "ec4dc5f397dd52fbba01da9e3d24fab2e3382a85914a179b5a5f3b7e6a076b80",
+    "studio-tests/skills/sprint/sprint-status.md": "7e47f97434e5785b548adca9bdb07413b8434196042c980ee9826192565c031b",
+    ".claude/skills/sprint-plan/SKILL.md": "5f13a36181c02c5d10c55eca5ca8b89da794e3291fe1f726637200da7cf459c3"
+  },
+  "cases": [
+    {
+      "scenario": "source-01-mixed",
+      "runId": "game-studio-sprint-status-5rp3sd",
+      "status": "PASS",
+      "scopeOfResult": "Same-input source-01 rerun includes 7 of 20 days and preserves all core percentage, status, flag and single-recommendation observations.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d04d-e138-7503-a8d5-2dd8f94c6ecb",
+      "parentTraceSha256": "f273a6a0ddef6976d296cc7fec36fc3ca95afcfeba701dcd1b1b445e76ed88d5",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-rpFhYCMRiyUT8TGU1ueOiPhWQ2xo5UrqPq7Yfri+ZJEJ4aQrrZEe1xbgC9Avf+eK2CQR9xxM8Lcpf22zbdTSLA==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "48b5b666a74706fa56e1d2c0f95566ed544d4d2cafb78bca0d97bd67f175c2ce",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 541,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'",
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json'"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "rawHashes": {
+        "fixture.json": "13030fd1b6a0825052dc9e88924b55b517b7e613ec40c47918e106cb1a749635",
+        "report.json": "727a41fda37d066cf9b89af4cf4df6a62115a3c26bd099e174cd5742de56c518",
+        "before.json": "7c77757acd384025c84aaf1fb15f24ab16fe0dcd40ccc6470e3a02df6ad607a4",
+        "after.json": "7c77757acd384025c84aaf1fb15f24ab16fe0dcd40ccc6470e3a02df6ad607a4",
+        "events.jsonl": "9784bf537075e24792c02528ed3d015ce9478d020e79eeb8b244388979f7d72c",
+        "final.txt": "b7c064ff21c6396f7e0e2e9dea3fe9d2359e95cd95dfb60141f506fcae7fab40",
+        "prompt-input.json": "f839c4b8ffc6a8a3bd6c570c58bf0aa7a801209ede6f9a60041aa4aa398798b6"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
+      "scenario": "source-04-stale",
+      "runId": "game-studio-sprint-status-VUejkK",
+      "status": "FAIL",
+      "scopeOfResult": "Stale math and source-04 core risk escalation are correct: ages 6 and 3, 2/4 complete and 50 percent time, one timestamp search and no writes. Output contracts fail: pre-table burndown summary and stale IN PROGRESS story incorrectly placed in the narrower blocked/not-started Must-Haves at Risk section at 50 percent remaining.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d04d-e18f-7c42-8bfe-f129c3c1a737",
+      "parentTraceSha256": "04bd436978213f12a72b0cb3714dcb706544b79ade06abf715c2d46e9c2d607d",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-rpFhYCMRiyUT8TGU1ueOiPhWQ2xo5UrqPq7Yfri+ZJEJ4aQrrZEe1xbgC9Avf+eK2CQR9xxM8Lcpf22zbdTSLA==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "48b5b666a74706fa56e1d2c0f95566ed544d4d2cafb78bca0d97bd67f175c2ce",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 539,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'",
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json'"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "rawHashes": {
+        "fixture.json": "e751d519b6298fdd448e7ddcba2c2f9f0e761629696dc6d6d58c79bfa8c195e4",
+        "report.json": "7229cb64118dd9d737d1d0aa4d9f73bca13f200bb97b623f5de5463919865e43",
+        "before.json": "87a6fbd34e9f79f0340c00c86cab33d236393901c298294986be0ac527a9b188",
+        "after.json": "87a6fbd34e9f79f0340c00c86cab33d236393901c298294986be0ac527a9b188",
+        "events.jsonl": "1094799808c0da115240333d2d259caba71fdbb027d24cdd818c4f2bbc3286c7",
+        "final.txt": "dd670b506f10932b1e3cf406b27e896bc665100f4d984835bf851245635adce3",
+        "prompt-input.json": "88501cbf440ac00a25a6907f58a258bdf63c30f4b27927b08b261c5bd86d9fb5"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
+      "scenario": "source-01-mixed",
+      "runId": "game-studio-sprint-status-uV11Fc",
+      "status": "FAIL",
+      "scopeOfResult": "Core source-01 observations correct: six entries, 3/6 = 50%, 65% consumed, 15pp behind, At Risk and critical blocked Must Have at 35% remaining; one date search, no stale work, single honest replan recommendation. Source Phase 5 total sprint days were not explicitly displayed. This is a presentation-contract failure, not a reported arithmetic failure.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d047-46a7-7752-b9b3-540a59ecf5bd",
+      "parentTraceSha256": "195bb66a5ec99d88e3366620a07937d0572ff0c2214ca38cf18d7ba484e08fcf",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-m8AhiSxCAy+IX4nPNIKcuj8r3Ypx8yVMMSHzypyLrdNf8sEBuOPp0S4qLqjaNof+iUY9KuNZFUYho9yszsVnzQ==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "58147754a452dfa80d02c06eafae16637efe3e0b16201d80c6d96a15228d36e7",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 541,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'",
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json'"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "rawHashes": {
+        "fixture.json": "1b68c11be310d08792dd85334f0cdf54b56f3979591e3cc512d61649b379a99b",
+        "report.json": "e32501aeddcd1a71bfc1e0526514e31c5f81bf38461d5235bd89f9d809340b53",
+        "before.json": "e3813a68d4d07ad23f41fa6b6688e1c70e70d5e18a0ac9e1df415fb7b5a67afe",
+        "after.json": "e3813a68d4d07ad23f41fa6b6688e1c70e70d5e18a0ac9e1df415fb7b5a67afe",
+        "events.jsonl": "bb39195959ede1d8a0dd17144a17c8ae04d43c53afd254202fa1f2fd743ce23d",
+        "final.txt": "5d76f7d75f0bb4980b736b918bd94982a639b47dafe54685676e63b386a513b7",
+        "prompt-input.json": "6b9fe1e4db5dbf0cc0162e532dec8eb4a9cdc7ec7e3f88a46ccfa7d1f097773e"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
+      "scenario": "source-06-minimal",
+      "runId": "game-studio-sprint-status-k36YoZ",
+      "status": "PASS",
+      "scopeOfResult": "Default minimal source-06 route: one shared story observation, 1/4 complete, In Review story 003 precedes In Progress 002 and Ready 004, explicit missing story-done capability; 13-line read-only output, no burndown or gate.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d047-4098-7191-a3c5-78540ec52270",
+      "parentTraceSha256": "de48c5812bd4c7dc904d30414b8c661b6f9e90e8813afe801367c814a3804d91",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-m8AhiSxCAy+IX4nPNIKcuj8r3Ypx8yVMMSHzypyLrdNf8sEBuOPp0S4qLqjaNof+iUY9KuNZFUYho9yszsVnzQ==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "58147754a452dfa80d02c06eafae16637efe3e0b16201d80c6d96a15228d36e7",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 538,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json'",
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 1,
+      "rawHashes": {
+        "fixture.json": "51b42274beb01c828e1ed3bb888a8c73e005fc528247809311aa5a1d006054a4",
+        "report.json": "282b31ee6d27b7694327068e3ad92252118156bd8006ef7146c570553057d8ac",
+        "before.json": "d569d6dd37f1c86fc150e7faa42a88ee7b122890c13a67c159fe273eb255f998",
+        "after.json": "d569d6dd37f1c86fc150e7faa42a88ee7b122890c13a67c159fe273eb255f998",
+        "events.jsonl": "1d19fe272aecc44cf332377075a1eff469cf6c523c66bf2e30dd9d17643cb82d",
+        "final.txt": "364e7603ba546a9c185a2ade948cd67f4a4fce98956083d5099b590f645f1b27",
+        "prompt-input.json": "f78daaf2c19dc70ae9ad1134e5763e8baf735764af133b4d51a49556770167bd"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    }
+  ],
+  "definedScenarios": 25,
+  "remainingMatrix": "Unexecuted rows in toolkit/test/fixtures/sprint-status-cases.mjs remain open; source-01 rerun passed; source-04 output partition/order failure is retained for unchanged-input revalidation.",
+  "validation": {
+    "build": "PASS",
+    "contentLint": "PASS",
+    "relevantTests": 34,
+    "fullRegression": {
+      "pass": 210,
+      "fail": 0,
+      "skip": 0
+    },
+    "installedArchive": "PASS"
+  },
+  "limits": [
+    "Read-only behavior is observed preservation with workspace-write permissions, not OS-enforced write denial.",
+    "Natural prompts include an explicit recorded as-of date, no expected verdict or route. No real game execution or human play inferred.",
+    "Source Phase 5 total-day display was omitted in initial run; the formatting instruction was corrected and original inputs preserved for fresh-session rerun.",
+    "Desktop, missing-runtime and project-subdirectory behavior remain open."
+  ],
+  "sanitization": "No credentials, local home paths, encrypted prompts or hidden reasoning. Only public runtime policy and raw evidence hashes retained."
+}
