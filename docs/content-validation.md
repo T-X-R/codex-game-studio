@@ -2,16 +2,33 @@
 
 After `npm --prefix toolkit run build`, run
 `npm --prefix toolkit run lint:content`. To inspect an extracted canonical
-resource tree, append `-- --root <directory>`. Inspection is read-only; exit 0
+resource tree, append `-- --root <directory> --bundle-only`. Inspection is read-only; exit 0
 means the implemented static checks found no errors, 1 means content errors,
 and 2 means invalid invocation or an inspection failure. JSON includes each
 affected path and issue, observed counts and `behaviorVerified: false`.
 
 This replaces the test-local metadata assertions with a reusable validator for
-the current Codex content. It is not the final T20 catalog/release gate yet:
-inventory reconciliation, aliases, command-example validation and complete
-behavioral-catalog migration remain pending. The original catalog and linter
-remain historical migration inputs until that replacement is finished.
+the current Codex content. Default inspection also checks catalog version 3
+against all 78 retained Skill inputs (75 primary workflows and three aliases)
+and 49 retained role inputs. Every primary row has its intended Codex target and
+`migration_state`: `pending`, `partial` or `verified`. Existing partial targets
+cannot disappear unnoticed; new canonical entries cannot bypass the catalog.
+The original names, domain specs and historical result fields are preserved;
+blank historical fields do not count as passing evidence. Aliases retain the
+approved replacement and must not create duplicate active Skill entrypoints.
+
+`--complete` additionally requires every row and alias to declare `verified`,
+with readable `codex_spec` and evidence files under `docs/evidence/`. It currently
+fails because the migration remains incomplete. `declaredComplete` describes
+those declarations and file presence only, never the truth of behavioral claims.
+Evidence still needs semantic review against the complete approved requirements.
+`--bundle-only` explicitly leaves catalog inspection NOT ASSESSED and cannot be
+combined with `--complete`; source inputs/catalog are not distributed at runtime.
+
+This is not the final T20 gate yet: command-example validation, the Codex behavior
+rubric and retirement of legacy lint consumers remain pending. The old linter and
+upstream behavioral specs remain migration inputs until their replacement is
+finished. Shared rules/helpers and host behavior are separately gated by the plan.
 
 Checks include required nonempty Skill/onboarding/role trees, readable entrypoints,
 YAML/TOML parsing, duplicate keys/names, nonempty instructions, local reference

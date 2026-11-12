@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { mkdtemp, readFile, writeFile, rm, realpath } from 'node:fs/promises';
 import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { tmpdir } from 'node:os';
 import { npmPath } from '../dist/runtime.js';
 const packageRoot = fileURLToPath(new URL('..', import.meta.url));
@@ -22,6 +22,17 @@ try {
   execute(npm, ['install', '--prefix', prefix, archive, '--ignore-scripts', '--no-audit', '--no-fund', '--prefer-offline']);
   const globalRoot = join(prefix, 'node_modules/@t-x-r/game-studio');
   const globalCli = join(globalRoot, 'dist/cli.js');
+  const { inspectContent } = await import(pathToFileURL(join(globalRoot, 'dist/content-tree.js')).href);
+  const contentRoot = join(globalRoot, 'resources');
+  assert.equal((await inspectContent(contentRoot)).status, 'valid');
+  const reference = join(contentRoot, '.agents/skills/game-studio-project-settings/references/choosing-settings.md');
+  const referenceBytes = await readFile(reference);
+  await rm(reference);
+  try {
+    const broken = await inspectContent(contentRoot);
+    assert.equal(broken.status, 'invalid');
+    assert.ok(broken.issues.some(issue => issue.code === 'MISSING_RESOURCE' && issue.path.endsWith('game-studio-project-settings/SKILL.md')));
+  } finally { await writeFile(reference, referenceBytes); }
   assert.equal(command(globalCli, 'version').status, 'ok');
   const project = join(temp, '我的 game');
   assert.equal(command(globalCli, 'init', project, '--engine', 'web').status, 'ok');

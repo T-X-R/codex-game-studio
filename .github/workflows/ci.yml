@@ -31,6 +31,7 @@ jobs:
       - run: npm --prefix toolkit ci --ignore-scripts
       - run: npm --prefix toolkit run build
       - run: npm --prefix toolkit run typecheck
+      - run: npm --prefix toolkit run lint:content
       - run: npm --prefix toolkit test
       - run: npm --prefix toolkit run test:pack
       - run: npm --prefix toolkit audit --omit=dev --audit-level=high
