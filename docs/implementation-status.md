@@ -81,7 +81,7 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   tests despite exit zero, and reported NOT ASSESSED. All 323 pre-existing files,
   including earlier reports/evidence and installed runtime files, were unchanged.
   Desktop and remaining engine/behavior acceptance are still open.
-- One project-scoped QA tester role is now installed by development packages.
+- A project-scoped QA tester role is installed by development packages.
   Native CLI selected `game-studio-qa-tester`, loaded its full instructions and
   inherited the parent model, effort and sandbox. It rejected a zero-test PASS,
   separated a static score defect from runtime reproduction, wrote nine planned
@@ -105,6 +105,22 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   fails. See [Godot QA evidence](evidence/qa-godot-2026-11-12.json). Clean native
   engine execution, Unity/Unreal scaffolds, enforced write-denial testing, T19
   collaboration, final validation and desktop acceptance remain open.
+- Development packages also install `game-studio-qa-lead` with portable
+  QL-STORY-READY and QL-TEST-COVERAGE definitions. Native CLI scenarios exercise
+  per-story readiness, minimal QA evidence waivers, standard coverage, severity
+  triage, release pressure and scoped output. A readiness failure exposed an
+  input-versus-deliverable ambiguity; the corrected native rerun returns NOT
+  ASSESSED for otherwise measurable criteria lacking GDD context. Minimal QA
+  retains UI screenshots and Visual/Feel screenshots plus named lead acceptance,
+  without inventing an extra UI sign-off. A second observed failure concerns
+  test-harness ownership; the corrected native rerun explicitly assigns QA tester
+  implementation while preserving all 327 original files and adding only its
+  authorized report. See [five-run evidence](evidence/qa-lead-2026-11-12.json),
+  retaining both failures and the targeted corrections. The child received the
+  actual role instructions and inherited the parent's model, effort and sandbox;
+  the parent only delegated and aggregated. All temporary trust profiles were removed.
+  These synthetic assessments do not prove actual game execution or release
+  acceptance. A027, desktop, nested collaboration and the final validator remain open.
 
 ## Verification performed
 
@@ -223,8 +239,8 @@ The full acceptance contract remains in `tasks/todo.md`. In particular:
 The implementation order was adjusted to exercise deterministic installation and
 Web operations while host compatibility remains open. This does not waive C0–C5
 or make the final migration complete. The published alpha does not install roles
-or hooks. Development packages now install the QA role; the verified CLI audit
-does not establish desktop support. No production Hooks are installed.
+or hooks. Development packages now install two QA roles; the verified CLI audits
+do not establish desktop support. No production Hooks are installed.
 
 Detach retains game configuration, runtime archives/dependencies/lock and backups.
 It restores/removes only unchanged files that its manifest owns. Edited managed

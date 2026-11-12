@@ -2,7 +2,27 @@
 
 Status: CLI custom role selection and a startup/patch Hook fixture verified with controls; full host compatibility gate is open.
 
-## Packaged QA role — 2026-11-12
+## Packaged QA Lead — 2026-11-12
+
+The development package also supplies `game-studio-qa-lead` and two portable QL
+gate definitions. Codex CLI 0.162.0 selected the real custom role in fresh packed
+projects, with instructions isolated to the child and inherited model, effort and
+sandbox. A read-only readiness assessment and two report-writing policy/coverage
+scenarios preserved all existing files and stayed within their allowed outputs.
+
+The first readiness run misclassified missing GDD input as a story deficiency;
+the first coverage run misrouted test-harness ownership. Both have role corrections
+and fresh identical-input native reruns. The evidence includes the failures and
+does not claim that all cases ran against the final role hash. Configured minimal
+waivers, UI versus Visual sign-off, zero-test evidence, severity triage and release
+pressure were assessed with synthetic inputs; no actual game or human acceptance
+was established. Temporary project-trust profiles were removed, with no Hook trust.
+
+See [the behavior specification](../studio-tests/roles/qa-lead-codex.md) and
+[sanitized traces and semantic review](evidence/qa-lead-2026-11-12.json).
+Desktop, nested delegation, write-denial controls and remaining behavior remain open.
+
+## Packaged QA tester — 2026-11-12
 
 The actual development package now supplies `game-studio-qa-tester`. A fresh
 trusted CLI 0.162.0 fixture selected that custom role and the child's developer

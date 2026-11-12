@@ -1,0 +1,475 @@
+{
+  "recordedAt": "2026-11-12",
+  "scope": "Native QA Lead readiness, coverage, policy and triage on synthetic inputs; no actual game execution or release approval",
+  "fixture": "toolkit/test/qa-role-host.mjs",
+  "casesSource": "toolkit/test/fixtures/qa-lead-cases.mjs",
+  "behaviorSpec": "studio-tests/roles/qa-lead-codex.md",
+  "cases": {
+    "readinessBeforeCorrection": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-yOdwv9",
+      "runnerResult": {
+        "scenario": "lead-readiness",
+        "role": "game-studio-qa-lead",
+        "sandbox": "read-only",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/qa-lead-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ce89-c644-7cd0-8678-433f287a1f69",
+        "preservedFiles": 321,
+        "changed": [],
+        "added": [],
+        "outsideScope": [],
+        "roleSha256": "ddb0f5aabcce062379ad02906d775c254472a8278581682ae9b992655ea8caaa"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-qa-lead",
+      "traceReview": {
+        "01a1ce89-c644-7cd0-8678-433f287a1f69": {
+          "file": "rollout-2026-11-12T14-54-58-01a1ce89-c644-7cd0-8678-433f287a1f69.jsonl",
+          "sha256": "57871b1f73e4b593d28f98b327a6f325a389002a10e2fb53dbe05dad38f3d25d",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "read-only"
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1ce89-f8a8-7190-a551-715d9e84bfc2": {
+          "file": "rollout-2026-11-12T14-55-11-01a1ce89-f8a8-7190-a551-715d9e84bfc2.jsonl",
+          "sha256": "814732c71494aa152b6193c4849a512115087448d1795caf6c1150d657199538",
+          "role": "game-studio-qa-lead",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "read-only"
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "72ad4e7387ecec2989adcefb888085ad6f437f66cfb610c28fe308cf227a32d0",
+        "before.json": "7cda4177e39044a7d1b76d70abed478b67347980a0911009991d0c1d34170a65",
+        "final.txt": "abf71836d867ac61cd6830b577bc3a0dbbd77de8fbff343cbf45357934d4f3b8"
+      },
+      "semanticReview": {
+        "result": "failed",
+        "findings": "HAZARD ADEQUATE and FEEL INADEQUATE were correct, but otherwise measurable STAMINA received GAPS instead of NOT ASSESSED for unavailable GDD context.",
+        "fix": "a06b597 distinguishes unavailable review inputs from missing required deliverables.",
+        "filesUnchanged": 321,
+        "outputs": 0
+      }
+    },
+    "standardCoverage": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-T42RmK",
+      "runnerResult": {
+        "scenario": "lead-coverage",
+        "role": "game-studio-qa-lead",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/qa-lead-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ce8a-141c-7aa1-a03c-9b2f96a4df6d",
+        "preservedFiles": 327,
+        "changed": [],
+        "added": [
+          "production/qa/lead-review.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "ddb0f5aabcce062379ad02906d775c254472a8278581682ae9b992655ea8caaa"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-qa-lead",
+      "traceReview": {
+        "01a1ce8a-141c-7aa1-a03c-9b2f96a4df6d": {
+          "file": "rollout-2026-11-12T14-55-18-01a1ce8a-141c-7aa1-a03c-9b2f96a4df6d.jsonl",
+          "sha256": "bb7e441f63686c29d8f393a7cee0150c112e2cfa830260901d40de41e7460fd9",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1ce8a-4a5e-7d11-8e31-b35ccb7c6ffc": {
+          "file": "rollout-2026-11-12T14-55-31-01a1ce8a-4a5e-7d11-8e31-b35ccb7c6ffc.jsonl",
+          "sha256": "92ead3a912804911d4d8980e0db58f2359e560fffaae55e60d9b62fe7f65f6c4",
+          "role": "game-studio-qa-lead",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "5e740faf9bb7aaf2a0b0bba43ea38fefd0774c3160d1b47b039547d2809c50d1",
+        "before.json": "085e6d56a11ea6d711159664faf1aef79f5c3f37bdfebd94d47196263efff9a4",
+        "final.txt": "3a1bd4b954a53104ec4f6f9759a29c3f182308b9309c894d7c8a2a1dd51027d5",
+        "QA game \u6d4b\u8bd5/production/qa/lead-review.md": "8299ab2e7f4c8c349f0bb3beb5f35336dbed700a79f1f524c66e19386542d4ce"
+      },
+      "semanticReview": {
+        "result": "failed",
+        "passingObservations": [
+          "DAMAGE INADEQUATE, empty TAP execution NOT ASSESSED",
+          "MENU and HIT GAPS with separate UI and Visual sign-off requirements",
+          "BALANCE GAPS remains advisory through local testing.strict.config=false",
+          "Reported data loss ruled S1; reproduction and source-fix verification remain unknown",
+          "No release approval, game/test code edits, status changes or nested delegation",
+          "Deterministic alternative proposed; unresolved standards dispute routed through caller to technical director"
+        ],
+        "failure": "Harness implementation was handed to the responsible programmer with QA tester conditional, instead of the source role contract assigning test harness work to QA tester.",
+        "fix": "b832118 explicitly preserves QA tester ownership of test cases and harness implementation.",
+        "filesUnchanged": 327,
+        "outputs": 1
+      }
+    },
+    "minimalPolicy": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-nvqHFI",
+      "runnerResult": {
+        "scenario": "lead-minimal",
+        "role": "game-studio-qa-lead",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/qa-lead-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ce8a-04ef-7f63-a847-23026dc84ae8",
+        "preservedFiles": 321,
+        "changed": [],
+        "added": [
+          "production/qa/lead-plan.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "ddb0f5aabcce062379ad02906d775c254472a8278581682ae9b992655ea8caaa"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-qa-lead",
+      "traceReview": {
+        "01a1ce8a-04ef-7f63-a847-23026dc84ae8": {
+          "file": "rollout-2026-11-12T14-55-14-01a1ce8a-04ef-7f63-a847-23026dc84ae8.jsonl",
+          "sha256": "c580380cae3e50b9f37c7d180c5bc4150eb071dc63198e1e44d1d32113a97304",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1ce8a-3bc0-7ea0-8420-626f5ed6ed94": {
+          "file": "rollout-2026-11-12T14-55-28-01a1ce8a-3bc0-7ea0-8420-626f5ed6ed94.jsonl",
+          "sha256": "f270eea32548cda2e9aceef7a4588c713f10bd6709f01ae2f0c850cee80eb904",
+          "role": "game-studio-qa-lead",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "send_message",
+            "exec"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "0c0308a18baa45cbc3eef2d8b8390cd4749e910f2c5c2d552bad51e0a8edc139",
+        "before.json": "7ac5bdb0f0cf24986959a65f76362c58f391b6a5bd114e51264f4d228b4a8c40",
+        "final.txt": "639e7c052447e37e460d6d233130b4b875c110fb4238e9f9033d6670af309049",
+        "QA game \u6d4b\u8bd5/production/qa/lead-plan.md": "e05112bf96b5f5cd157d560aecf587180d2903b38781eda9aa2cc4c9e6ba2e6f"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "verdicts": {
+          "DAMAGE": "ADEQUATE under test-evidence waiver",
+          "MENU": "GAPS",
+          "HIT": "GAPS",
+          "BALANCE": "GAPS"
+        },
+        "details": [
+          "No Logic test blocker or false executed PASS under minimal QA",
+          "UI screenshot required without an imported Visual lead approval",
+          "Visual screenshot plus named lead sign-off required",
+          "Default Config advisory level and separate blocking smoke requirement retained",
+          "Criterion and edge-case mapping, prerequisites, owners and scoped regression/performance/compatibility proposals",
+          "No fabricated game, human acceptance, numerical budget, bug reproduction or release approval"
+        ],
+        "filesUnchanged": 321,
+        "outputs": 1
+      }
+    },
+    "readinessAfterCorrection": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-i3i7za",
+      "runnerResult": {
+        "scenario": "lead-readiness",
+        "role": "game-studio-qa-lead",
+        "sandbox": "read-only",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/qa-lead-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ce8c-8d76-7323-bde8-f16e2a787c4e",
+        "preservedFiles": 321,
+        "changed": [],
+        "added": [],
+        "outsideScope": [],
+        "roleSha256": "50abca942b7ff7ee278022dba4d57d0c44a82b34fbaf0c4c08ec8bbf38a57cf8"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-qa-lead",
+      "traceReview": {
+        "01a1ce8c-8d76-7323-bde8-f16e2a787c4e": {
+          "file": "rollout-2026-11-12T14-58-00-01a1ce8c-8d76-7323-bde8-f16e2a787c4e.jsonl",
+          "sha256": "dc074f4f45701988419879989ec87c197898ef51796e852deea2ac50eb1e0099",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "read-only"
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1ce8c-bb31-7081-843c-1872bc6594e9": {
+          "file": "rollout-2026-11-12T14-58-11-01a1ce8c-bb31-7081-843c-1872bc6594e9.jsonl",
+          "sha256": "e59087697495427e57818e351cb742189da412319ea7afedb4930058c0a876c8",
+          "role": "game-studio-qa-lead",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "read-only"
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "8737877ee65e6fa090a90dd07c5aab8f0bacdb57e0ce35679e197bada457b23f",
+        "before.json": "5e7748d7fa5dafc5b090f8b44104aa12a036053f69ae8a4e6ab0b38ce84bd1c0",
+        "final.txt": "fae53df8849d435372bfa7edde2a98e4d8c6906eaf6944886b69099268ee9c83"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "verdicts": {
+          "HAZARD": "ADEQUATE",
+          "FEEL": "INADEQUATE",
+          "STAMINA": "NOT ASSESSED"
+        },
+        "details": "Each hazard criterion has an automated verification approach. Subjective feel remains an author decision; no invented GDD or executed test claims. Parent aggregates actual role output.",
+        "filesUnchanged": 321,
+        "outputs": 0
+      }
+    },
+    "coverageAfterCorrection": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-rSQxj7",
+      "runnerResult": {
+        "scenario": "lead-coverage",
+        "role": "game-studio-qa-lead",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/qa-lead-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ce8e-accc-7af0-b646-d48d70fd4fe5",
+        "preservedFiles": 327,
+        "changed": [],
+        "added": [
+          "production/qa/lead-review.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-qa-lead",
+      "traceReview": {
+        "01a1ce8e-accc-7af0-b646-d48d70fd4fe5": {
+          "file": "rollout-2026-11-12T15-00-19-01a1ce8e-accc-7af0-b646-d48d70fd4fe5.jsonl",
+          "sha256": "fecb55e4d43bb3400afedba01bbe72e983eaf952eb15ec4f5cdc34e38f0e2e6a",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1ce8e-e025-7cc1-984d-23ca20fd1120": {
+          "file": "rollout-2026-11-12T15-00-32-01a1ce8e-e025-7cc1-984d-23ca20fd1120.jsonl",
+          "sha256": "4a5cba45885979647209b420174555289351b7cbc1edbde94fc2c3df548d8c38",
+          "role": "game-studio-qa-lead",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "0f5e66e9967ae8374738edcbb60b0f81d03fc1530046425bd25f07f5b66f35fa",
+        "before.json": "469d19a51d2ff8f7cdb51e94f2a548f324c194eb380e44ef481efbd8beaff93e",
+        "final.txt": "def33460bad54a756f1b2f6d9d062dd5bea1690c868254d1153a9d6f159fb6f9",
+        "QA game \u6d4b\u8bd5/production/qa/lead-review.md": "aeea13d8a2bda5d39f22f8a55d63d8ba2fc1d50fb2c5c79158f3034d7b903fee"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "verdicts": {
+          "DAMAGE": "INADEQUATE",
+          "MENU": "GAPS",
+          "HIT": "GAPS",
+          "BALANCE": "GAPS (advisory)"
+        },
+        "observations": [
+          "Zero executed tests distinguished from FAIL and unsupported PASS",
+          "Read actual default/local policy, retained Config advisory smoke setting",
+          "Separated UI screenshots from Visual/Feel named lead sign-off",
+          "Reported data loss triaged S1, not falsely reproduced or fixed",
+          "Refused release pressure and returned unresolved determinism dispute to technical director",
+          "Explicitly assigned test-harness implementation/execution to game-studio-qa-tester while retaining programmer ownership of production interfaces",
+          "No game code, test execution, policy/status edits, publishing or further delegation"
+        ],
+        "filesUnchanged": 327,
+        "outputs": [
+          "production/qa/lead-review.md"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "build": "passed",
+    "typecheck": "passed",
+    "unitTests": {
+      "passed": 131,
+      "failed": 0,
+      "skipped": 0
+    },
+    "packedInstall": "passed including exact role bytes, gate resources, absence of installed config.toml and detach",
+    "nativeRunnerExitExplanation": "Exit 3 requests semantic review; native Codex process exited 0. Passing semantic claims are separate from runner status."
+  },
+  "limitations": [
+    "Synthetic story and bug inputs; no real game tests, editor execution, human play or release acceptance.",
+    "Native CLI 0.162.0 on macOS ARM64 only; desktop, subdirectory discovery, intentional permission-denial and unavailable-role cases remain open.",
+    "No nested QA lead-to-tester workflow or concurrent/shared-checkpoint behavior proved.",
+    "No final migrated content validator acceptance; A027 and T19 remain open.",
+    "Minimal-policy and coverage controls used the recorded earlier role hash; readiness correction and test-owner correction have separate targeted reruns, not a claim that every matrix case ran on the final hash."
+  ],
+  "sourceHashes": {
+    ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+    "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+    "studio/docs/director-gates/ql-test-coverage.md": "0a22ae5726ab17cb973de9b58179cfa67a9ba200fcc42f9dc56407e2824ef6f7",
+    "toolkit/test/qa-role-host.mjs": "0b7a93f87dae32dfea092b049680156c88df63fb31acea718a6f48b55ee1f912",
+    "toolkit/test/fixtures/qa-lead-cases.mjs": "bbc91e93b75edbc03f41f3f16b6f0b51f0bfd906ab67b114f685c99bd2abb0fb"
+  },
+  "sameInputsForReadinessRerun": true,
+  "sameInputsForCoverageRerun": true,
+  "priorHeadCI": {
+    "sha": "dc8ded772bb400c74f7c40f5f60e8aa3347d0947",
+    "run": 43170424287,
+    "conclusion": "success"
+  }
+}
