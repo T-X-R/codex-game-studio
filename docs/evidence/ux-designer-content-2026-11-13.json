@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A047 Codex UX Designer content, source fidelity and actual installed role bytes; behavioral acceptance pending",
+  "sourceHashes": {
+    ".claude/agents/ux-designer.md": "90d079a8d336c9f477b6d4e9ebf7479da9573ceb5f2390854163357c2714530d",
+    "studio-tests/agents/specialists/ux-designer.md": "a989e66a057d07a235690d557bec5680ff926d87ef35d4e87c229c230eac303c",
+    ".codex/agents/game-studio-ux-designer.toml": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+    "studio-tests/roles/ux-designer-codex.md": "eac66b63e2cc849b62c7f020b8d4bf624f13cf757951d7fd7126bc3f50104f8a",
+    "toolkit/test/packed-smoke.mjs": "5816f2c42af5e9c11c997b6cea9974332448024767cc828a125ac6037b3ffe30"
+  },
+  "independentReview": {
+    "reviewer": "design_review_migration",
+    "result": "No blocking source-fidelity findings",
+    "roleSha256": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+    "specSha256": "eac66b63e2cc849b62c7f020b8d4bf624f13cf757951d7fd7126bc3f50104f8a",
+    "coverage": [
+      "Six source responsibilities and all seven accessibility checks",
+      "All five source scenarios and research-priority/flow-step-purpose requirements",
+      "Guided authorization replaces repeated file prompts without settling unresolved creative decisions",
+      "Actual role availability and missing analytics/accessibility/ux-design workflow boundaries",
+      "Only name, description and developer_instructions; no invented Codex enforcement"
+    ]
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "unitNode24": {
+      "pass": 293,
+      "fail": 0,
+      "skip": 0
+    },
+    "unitNode26": {
+      "pass": 293,
+      "fail": 0,
+      "skip": 0
+    },
+    "packedInstallExactRoleBytesAndDetach": "PASS",
+    "nativeTypedRoleBehavior": "PENDING",
+    "desktop": "PENDING",
+    "ciForThisSlice": "PENDING"
+  },
+  "catalog": {
+    "partialSkills": 16,
+    "partialRoles": 12,
+    "verified": 0
+  },
+  "logs": {
+    "build": {
+      "path": "/private/tmp/game-studio-ux-build.log",
+      "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+    },
+    "typecheck": {
+      "path": "/private/tmp/game-studio-ux-typecheck.log",
+      "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+    },
+    "lint": {
+      "path": "/private/tmp/game-studio-ux-lint.log",
+      "sha256": "1a7db0be0145bd5027e72f006e5424525c6c6c740194e87efd6db68d919cdc91"
+    },
+    "tests24": {
+      "path": "/private/tmp/game-studio-ux-tests24.log",
+      "sha256": "f47ef4c82126fa536e0ad3c2c8b9e79d06c988fcbf3e3fed5be8c2b4e585415f"
+    },
+    "tests26": {
+      "path": "/private/tmp/game-studio-ux-tests26.log",
+      "sha256": "6712ee22383cdf6e2b14fc1de3ca3943cb235c4d380e8e20ebf9c19fb6ecc61a"
+    },
+    "pack": {
+      "path": "/private/tmp/game-studio-ux-pack.log",
+      "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+    }
+  },
+  "limitations": [
+    "No native UX behavior or caller/specialist coordination has passed yet.",
+    "Writing a design or passing structural checks is not usability testing or accessibility conformance.",
+    "The unavailable ux-design accessibility workflow and specialist roles remain migration dependencies."
+  ]
+}

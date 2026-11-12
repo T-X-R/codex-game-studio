@@ -1206,7 +1206,8 @@ agents:
     last_category_result: ""
     category: specialist
     target: .codex/agents/game-studio-ux-designer.toml
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/roles/ux-designer-codex.md
 
   - name: ui-programmer
     spec: studio-tests/agents/specialists/ui-programmer.md

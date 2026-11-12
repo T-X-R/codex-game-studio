@@ -6,6 +6,22 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- UX Designer now has a [source-reviewed native role](evidence/ux-designer-content-2026-11-13.json)
+  preserving flow/interaction/IA/onboarding/feedback responsibilities, all seven
+  accessibility checks and research-based design choices. Guided authorization
+  replaces repeated file prompts without deciding unanswered creative questions.
+  Build/typecheck/content checks, 293 tests on each Node 24/26 and actual installed
+  role-byte checks pass. Native behavior is pending. The catalog now has sixteen
+  partial Skills and twelve partial roles, with no fully verified rows.
+- The [38-run readiness matrix](evidence/story-readiness-matrix-2026-11-13.json)
+  covers 35 selected labels: 32 scoped passes, four retained failures and two
+  NOT ASSESSED outcomes. Root independently rehashed 21,419 regular files plus
+  raw/session records. A same-input correction stops treating an ADR statement as
+  the story's missing Engine Notes; the original false READY remains recorded.
+  An empty-sprint single-story footer violation remains unresolved. Actual QA
+  delegation/reads/findings are observable, but opaque dispatch field completeness
+  and four remaining full variants are not established. Earlier domain successes
+  retain their separately recorded timing limitations; desktop remains open.
 - Story closure now has [five native runs](evidence/story-done-skill-2026-11-13.json)
   covering four selected scenarios: four scoped passes and one retained failure.
   The failed run guessed a system identity from a brief; the instruction now uses
