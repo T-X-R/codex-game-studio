@@ -34,6 +34,12 @@ Markdown file, for example:
 **Open questions:** Does the new timing feel too forgiving?
 ```
 
+Keep `Branch` and `Stage` values to the exact observed names, optionally wrapped
+in backticks. Put annotations such as an unborn branch, dirty files or an unchanged
+stage in `Evidence` or `Run result`, not in those values: branch comparison reads
+the complete field. If no branch can be observed, omit `Branch` and explain why
+in `Evidence` rather than recording a guessed branch name.
+
 The CLI records supplied observations; it does not certify the statements in
 the draft. On resume, inspect the referenced files and evidence, compare current
 Git state and rerun relevant checks. A checkpoint cannot prove a preview server
