@@ -44,20 +44,20 @@ for (const path of paths) {
   hashes[path] = createHash('sha256').update(installed).digest('hex');
 }
 for (const role of scenario.removeRoles ?? []) await rm(join(workspace, '.codex/agents', `game-studio-${role}.toml`), { force: true });
+const configMarker = `DESIGN_REVIEW_CONFIG_${randomUUID()}`;
+await writeFile(join(workspace, '.codex/config.toml'), `developer_instructions = "Fixture config ${configMarker}"\n`);
 if (scenario.receipt) {
-  const inputPaths = [...new Set(['AGENTS.md', ...Object.keys(scenario.inputs), ...paths.filter(path => path.startsWith(skillRoot))])];
+  const inputPaths = [...new Set(['AGENTS.md', ...Object.keys(scenario.inputs), ...paths.filter(path => path.startsWith(skillRoot)), ...(scenario.completeReceipt ? ['.codex/config.toml', '.game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md'] : [])])];
   const stamps = run(join(workspace, skillRoot, 'scripts/review-receipts.mjs'), ['hash', ...inputPaths], workspace);
   const logPath = join(workspace, 'design/gdd/reviews/resolve-hit-review-log.md');
   await mkdir(dirname(logPath), { recursive: true });
-  await writeFile(logPath, `# Review history\nKEEP-PRIOR-REVIEW\n\n## Review — 2026-11-10 — Verdict: ${scenario.receipt.verdict}\nReview mode: ${scenario.receipt.mode} · Workflow: ${scenario.receipt.workflow}\nScope signal: S\nSpecialists: none\nBlocking items: 0 | Recommended: 0\nSummary: The supplied hit rule was assessed with the stated inputs.\nPrior verdict resolved: First review\nFindings:\n- none\n${stamps}`);
+  await writeFile(logPath, `# Review history\nKEEP-PRIOR-REVIEW\n\n## Review — 2026-11-10 — Verdict: ${scenario.receipt.verdict}\nReview mode: ${scenario.receipt.mode} · Workflow: ${scenario.receipt.workflow}\nScope signal: ${scenario.receipt.scopeSignal ?? 'S'}\nSpecialists: none\nBlocking items: 0 | Recommended: 0\nSummary: The supplied hit rule was assessed with the stated inputs.\nPrior verdict resolved: First review\nFindings:\n- none\n${stamps}`);
   if (scenario.incompleteLatestReceipt) {
     const contextStamp = run(join(workspace, skillRoot, 'scripts/review-receipts.mjs'), ['hash', 'design/gdd/game-concept.md'], workspace);
     await writeFile(logPath, await readFile(logPath, 'utf8') + `\n## Review — 2026-11-11 — Verdict: APPROVED\nReview mode: full · Workflow: full\nSummary: The supplied hit rule was assessed with the stated inputs.\n${contextStamp}`);
   }
   for (const [path, content] of Object.entries(scenario.afterReceipt ?? {})) await writeFile(join(workspace, path), content);
 }
-const configMarker = `DESIGN_REVIEW_CONFIG_${randomUUID()}`;
-await writeFile(join(workspace, '.codex/config.toml'), `developer_instructions = "Fixture config ${configMarker}"\n`);
 async function snapshot() {
   const files = {};
   for (const entry of await readdir(workspace, { recursive: true, withFileTypes: true })) {
