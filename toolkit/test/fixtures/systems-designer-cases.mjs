@@ -84,3 +84,17 @@ systemsDesignerScenarios['full-review-records'] = {
   },
   request: 'Review design/gdd/resolve-hit.md before implementation using the configured review mode and installed toolkit. After presenting the assessment, I authorize updating only its existing systems-index Status cell to match the result and appending its review-log entry with reproducible evidence. Do not modify the GDD, other index cells, unrelated files, settings, stage or checkpoint. Work offline, do not install packages, implement a game, run builds/tests, commit or publish. Stop after the review and these tracking records.',
 };
+
+// Keep completed requests intact, including the ambiguous first progression run.
+// Clarify tool-execution scope only for unrun cases and a separate regression variant.
+const manualArithmetic = request => request.replace(
+  'Do not implement game code, execute arithmetic or simulations,',
+  'Hand-derived arithmetic and fully evaluated numerical examples in the response are allowed and required for the assigned model. Do not implement game code, run arithmetic programs or simulations,',
+);
+for (const name of ['economy', 'interactions', 'registry-consistency', 'cross-system', 'tuning-simulation', 'authorized-doc', 'missing-domain']) {
+  systemsDesignerScenarios[name].request = manualArithmetic(systemsDesignerScenarios[name].request);
+}
+systemsDesignerScenarios['progression-manual'] = {
+  ...systemsDesignerScenarios.progression,
+  request: manualArithmetic(systemsDesignerScenarios.progression.request),
+};

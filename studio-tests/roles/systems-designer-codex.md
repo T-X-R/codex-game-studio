@@ -60,7 +60,7 @@ coefficient must preserve the original proposal as the reviewed baseline.
 
 ## Extended behavior matrix
 
-1. **Progression** (`progression`): read per-transition definition and level cap.
+1. **Progression** (`progression`, clarified `progression-manual`): read per-transition definition and level cap.
    Old total 100*(1+...+9)=4500 XP, 3.75 hours; proposed total
    60*(1²+...+9²)=17100 XP, 14.25 hours at the supplied 1200/hour. Compare early,
    intermediate and last transitions, not just the initially cheaper level:
@@ -154,6 +154,7 @@ node toolkit/test/systems-designer-host.mjs formula-range
 node toolkit/test/systems-designer-host.mjs adversarial-boundaries
 node toolkit/test/systems-designer-host.mjs context-ttk
 node toolkit/test/systems-designer-host.mjs progression
+node toolkit/test/systems-designer-host.mjs progression-manual
 node toolkit/test/systems-designer-host.mjs economy
 node toolkit/test/systems-designer-host.mjs interactions
 node toolkit/test/systems-designer-host.mjs registry-consistency
@@ -183,3 +184,21 @@ and role sequence; exit 0, valid TOML, packed bytes and automatic scope checks d
 not prove semantic success. Preserve first failures, exact input/resource hashes,
 limitations and unrun matrix rows. Arithmetic values in this spec are evaluator
 expectations; never inject this spec into the reviewer prompt as desired answers.
+
+
+## Fixture clarification retained as evidence
+
+The first `progression` run interpreted "do not execute arithmetic" as forbidding
+hand evaluation, so it returned unevaluated substitutions instead of the required
+numeric results. Retain that run as FAIL / ambiguous fixture: it did not demonstrate
+the expected numerical behavior, but it does not establish a mathematical error
+in the role. The role and methods remain unchanged.
+
+`progression-manual` uses the identical GDD bytes and explicitly permits/requires
+hand-derived numerical results while prohibiting arithmetic programs/simulation.
+Only previously unrun economy, interaction, registry, integration, simulation,
+authoring and missing-domain requests receive the same clarification. The global
+boundary and all previously run original five source-case, progression and full
+record requests are preserved. Record initial/current fixture hashes and exact
+request equality for completed cases; do not present the clarified rerun as an
+identical-prompt regression or erase the first failed observation.
