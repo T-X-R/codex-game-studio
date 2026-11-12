@@ -1,6 +1,6 @@
 import { Document, isAlias, isMap, isScalar } from 'yaml';
 import { StudioError } from './contract.js';
-import { enums, localKeys, parseConfig, readConfig, type Json } from './config.js';
+import { enums, localKeys, reservedKeys, parseConfig, readConfig, type Json } from './config.js';
 import { canonicalRoot, readText, safePath } from './files.js';
 import type { InstallPlan } from './install.js';
 import { metadata } from './metadata.js';
@@ -14,8 +14,6 @@ platform.targets platform.primary_input platform.gamepad_support platform.touch_
 cadence.sprint_length cadence.milestone_length performance.target_framerate performance.frame_budget_ms
 performance.draw_call_limit performance.memory_ceiling_mb`.split(/\s+/));
 const prefixes = ['commands.', 'specialists.', 'naming.', 'framework.'];
-const reserved = new Set(['strict_gate_checks', 'accessibility.target', 'cadence.sprint_length',
-  'cadence.milestone_length', 'project.kind', 'features.token_budget_warn_at']);
 const numeric: Record<string, [number, number, boolean]> = {
   schema_version: [1, 1, true], 'qa.coverage_minimum': [0, 100, true],
   'features.token_budget_warn_at': [0, 1, false], 'features.read_guard_kb': [0, Infinity, false],
@@ -96,7 +94,7 @@ export async function planConfigSetMany(root: string, entries: [string, string][
         throw new StudioError('FILE_CONFLICT', `Refusing to replace a mapping, alias, anchor or scalar parent at ${parts.slice(0, i).join('.')}`, 4);
       }
     }
-    if (reserved.has(key)) warnings.push(`${key} is reserved upstream; storing it does not implement enforcement`);
+    if (reservedKeys.has(key)) warnings.push(`${key} is reserved upstream; storing it does not implement enforcement`);
     if (!local && localKeys.has(key)) {
       let override: Json | undefined = overrides;
       for (const part of parts) override = override && typeof override === 'object' && !Array.isArray(override) ? override[part] : undefined;

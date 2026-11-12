@@ -9,6 +9,14 @@ import { derivedDependencies, deriveSetting } from './config-derived.js';
 export type Json = null | string | number | boolean | Json[] | { [key: string]: Json };
 type ObjectValue = { [key: string]: Json };
 export interface Setting { value: Json; source: string }
+export interface SettingAnnotation {
+  locallyOverridable: boolean;
+  reserved: boolean;
+  projectValue: Json;
+  localValue: Json;
+}
+export const reservedKeys = new Set(['strict_gate_checks', 'accessibility.target', 'cadence.sprint_length',
+  'cadence.milestone_length', 'project.kind', 'features.token_budget_warn_at']);
 export const localKeys = new Set([
   'modes.review_mode', 'modes.automation', 'modes.automation_always_ask', 'team.size',
   'testing.strict.logic', 'testing.strict.integration', 'testing.strict.visual', 'testing.strict.ui',
@@ -78,7 +86,9 @@ function flatten(value: ObjectValue, prefix = '', result: ObjectValue = {}): Obj
   return result;
 }
 
-export async function readSettings(root: string, requested?: string[], options: { system?: string } = {}): Promise<{ settings: Record<string, Setting>; warnings: string[] }> {
+export async function readSettings(root: string, requested?: string[], options: { system?: string } = {}): Promise<{
+  settings: Record<string, Setting>; annotations: Record<string, SettingAnnotation>; warnings: string[];
+}> {
   for (const key of requested ?? []) {
     if (!/^[a-zA-Z0-9_-]+(?:\.[a-zA-Z0-9_-]+)*$/.test(key) || key.split('.').some(part => ['__proto__', 'prototype', 'constructor'].includes(part))) {
       throw new StudioError('INVALID_ARGUMENT', `Invalid configuration key: ${key}`);
@@ -108,7 +118,7 @@ export async function readSettings(root: string, requested?: string[], options: 
   const rigor = valid('modes.rigor', project['modes.rigor'], 'project.yaml') ? String(project['modes.rigor']) : 'minimal';
   const derived = Object.fromEntries(rigorKeys.map((key, i) => [key, rigorValues[rigor]![i]!])) as ObjectValue;
   const settings: Record<string, Setting> = {};
-  const wanted = new Set(requested ?? [...Object.keys(enums), ...Object.keys(defaults), ...Object.keys(project), ...Object.keys(preferences.values), ...localKeys]);
+  const wanted = new Set(requested ?? [...Object.keys(enums), ...Object.keys(defaults), ...Object.keys(project), ...Object.keys(local), ...Object.keys(preferences.values), ...localKeys]);
   const keys = new Set(wanted);
   for (const key of wanted) if (Object.hasOwn(derivedDependencies, key)) for (const dependency of derivedDependencies[key]!) keys.add(dependency);
   for (const key of keys) {
@@ -128,5 +138,13 @@ export async function readSettings(root: string, requested?: string[], options: 
   }
   for (const key of wanted) if (Object.hasOwn(derivedDependencies, key)) settings[key] = await deriveSetting(key, settings, root, { project: rawProject, preferences });
   for (const key of Object.keys(settings)) if (!wanted.has(key)) delete settings[key];
-  return { settings, warnings: [...new Set(warnings)] };
+  const annotations: Record<string, SettingAnnotation> = {};
+  for (const key of wanted) {
+    annotations[key] = { locallyOverridable: localKeys.has(key), reserved: reservedKeys.has(key),
+      projectValue: project[key] ?? null, localValue: local[key] ?? null };
+    if (reservedKeys.has(key) && settings[key]!.value !== null) {
+      warnings.push(`${key} is reserved upstream; storing it does not implement enforcement`);
+    }
+  }
+  return { settings, annotations, warnings: [...new Set(warnings)] };
 }

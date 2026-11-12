@@ -16,7 +16,14 @@ node .game-studio/run.cjs config set project.stage Production
 node .game-studio/run.cjs config set platform.targets '["PC","Web"]'
 ```
 
-`config get` returns effective values and their source. Allowed local settings
+`config get` returns effective values and their source. Its `annotations` map
+also names each key's local-override eligibility, upstream reserved status and
+raw stored project/local values (null when absent or explicitly null). This
+exposes shadowed and ignored values without confusing them with effective ones.
+Reserved effective values produce warnings on reads as well as writes. A false
+reserved flag is not proof that a corresponding workflow or host guard has run.
+View-all includes otherwise unknown local leaves so ignored intent remains visible.
+Allowed local settings
 override project settings; explicit settings precede legacy records, rigor
 expansion and defaults. A named system override applies only to workflow depth.
 Legacy engine preferences are read from `docs/technical-preferences.md`, falling

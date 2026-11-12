@@ -70,8 +70,8 @@ export const commands: Record<string, Command> = {
       system: { type: 'string', description: 'Resolve the workflow tier for a named system' } },
     run: async ({ args, values }) => {
       const root = await resolveProject(values.project as string | undefined);
-      const { settings, warnings } = await readSettings(root, args.length ? args : undefined, { system: values.system as string | undefined });
-      return { ...success('config get', { project: root, settings }), warnings };
+      const { settings, annotations, warnings } = await readSettings(root, args.length ? args : undefined, { system: values.system as string | undefined });
+      return { ...success('config get', { project: root, settings, annotations }), warnings };
     },
   },
   status: {

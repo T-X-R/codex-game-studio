@@ -147,3 +147,47 @@ test('CLI dry run exposes effects without creating state, then applies the setti
   assert.equal(result.status, 0, result.stdout + result.stderr);
   assert.equal((await readSettings(root, ['modes.automation'])).settings['modes.automation'].value, 'autonomous');
 });
+
+test('configuration inspection exposes reserved values, override eligibility and both stored layers without writes', async t => {
+  const files = {
+    'project.yaml': 'modes:\n  rigor: full\n  review_mode: lean\ndocs:\n  density: terse\naccessibility:\n  target: standard\n',
+    'project.local.yaml': 'modes:\n  review_mode: solo\nengine:\n  name: Unity\ncustom:\n  local_only: retained\n',
+  };
+  const root = await fixture(t, files);
+  const cli = fileURLToPath(new URL('../dist/cli.js', import.meta.url));
+  const result = spawnSync(process.execPath, [cli, 'config', 'get', '--project', root, '--json'], { encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+  const { data, warnings } = JSON.parse(result.stdout);
+  assert.deepEqual(data.settings['modes.review_mode'], { value: 'solo', source: 'project.local.yaml' });
+  assert.deepEqual(data.annotations['modes.review_mode'], {
+    locallyOverridable: true, reserved: false, projectValue: 'lean', localValue: 'solo',
+  });
+  assert.equal(data.annotations['engine.name'].locallyOverridable, false);
+  assert.equal(data.annotations['engine.name'].localValue, 'Unity');
+  assert.equal(data.settings['engine.name'].source, 'unset');
+  assert.equal(data.annotations['accessibility.target'].reserved, true);
+  assert.ok(warnings.some(message => message.includes('accessibility.target') && message.includes('reserved')));
+  assert.deepEqual(data.settings['qa.level'], { value: 'full', source: 'rigor:full' });
+  assert.deepEqual(data.settings['docs.density'], { value: 'terse', source: 'project.yaml' });
+  assert.equal(data.annotations['custom.local_only'].localValue, 'retained');
+  assert.equal(data.settings['custom.local_only'].source, 'unset');
+  for (const [path, content] of Object.entries(files)) assert.equal(await readFile(join(root, path), 'utf8'), content);
+  assert.deepEqual((await readdir(root)).sort(), Object.keys(files).sort());
+});
+
+test('single-setting inspection and writes share the reserved catalog, including local settings', async t => {
+  const root = await fixture(t);
+  for (const [key, value, local] of [['accessibility.target', 'standard', false], ['features.token_budget_warn_at', '0.7', true]]) {
+    const { plan, warnings } = await planConfigSet(root, key, value, local);
+    assert.ok(warnings.some(message => message.includes(key) && message.includes('reserved')));
+    await applyInstall(plan);
+    const read = await readSettings(root, [key]);
+    assert.deepEqual(Object.keys(read.annotations), [key]);
+    assert.equal(read.annotations[key].reserved, true);
+    assert.equal(read.annotations[key].locallyOverridable, local);
+    assert.ok(read.warnings.some(message => message.includes(key) && message.includes('reserved')));
+  }
+  const unset = await readSettings(root, ['cadence.milestone_length']);
+  assert.equal(unset.annotations['cadence.milestone_length'].reserved, true);
+  assert.equal(unset.settings['cadence.milestone_length'].source, 'unset');
+});
