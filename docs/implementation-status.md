@@ -58,6 +58,13 @@ on macOS/Windows/Linux Node 24 and Linux Node 26, plus actual Chrome replay on
 macOS. This verifies the implemented alpha operations at that commit, not the
 remaining migration or the newer local source additions.
 
+The configuration additions and permission fix at
+`32d5195be05373cd0690742854503eafa6cb867e` also passed all five native/browser jobs
+in [development-branch CI](https://github.com/T-X-R/codex-game-studio/actions/runs/43137793165).
+No new installation archive has been published. A fresh CLI role probe completed
+but returned no hidden marker and reported no native role selector; its negative
+evidence is recorded in [Codex compatibility](codex-compatibility.md). C0 remains open.
+
 The replay initially rejected a comma-separated input example. The source parser
 uses whitespace-separated tokens; the documented example and regression now use
 `Enter wait:1`. A saved screenshot alone was not treated as a passing replay.

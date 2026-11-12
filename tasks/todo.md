@@ -24,7 +24,8 @@ writes, comment/quote/line-ending preservation and stage synchronization
 typecheck and 47 tests pass locally; packed-install coverage includes writes
 through the pinned runtime. T04/T22 and S037 remain open until the remaining
 derived helpers and live workflow evidence are complete. Existing alpha CI
-passed all five jobs at `92242ed`; newer source changes still need native CI.
+passed all five jobs at `92242ed`. Configuration changes at `32d5195` also passed
+all five jobs in run `43137793165` on the development branch; no new archive is published.
 The configuration reader also preserves legacy boolean `testing.strict` fallback
 after explicit per-type overrides; derived gate/engine helper parity is still open.
 
