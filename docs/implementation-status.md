@@ -48,6 +48,11 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   invalid engine choices and dirty prototype code, including both rename paths.
   Broken Git inspection is not assessed. Eligibility does not claim a completed
   growth, build or gameplay comparison. See [the growth contract](prototype-growth.md).
+- Explicit Web growth copy stage preserves prototype and binary asset bytes,
+  generates pinned build tooling, refuses conflicts and separates development
+  tuning from production. A packed-runtime fixture builds both outputs and proves
+  same-seed input/scoring states and screenshots match in real Chrome. Copy does
+  not complete TypeScript/data conversion, game-rule tests or human play.
 - Three project Skills: start, prototype and next-step. These are alpha entry
   points covering implemented operations; they do not close the full upstream
   behavioral migration rows.
@@ -71,7 +76,7 @@ were not modified; verification used an isolated Node 24 distribution.
   remains unchanged; an intentional browser error returns failure.
 - Official Skill-format validation for onboarding and the three project Skills.
 
-Source additions after the published alpha: build/typecheck and 115 local tests
+Source additions after the published alpha: build/typecheck and 126 local tests
 pass with no skips. Packed-install tests exercise configuration summaries/writes,
 checkpoint save/reopen/detach preservation, engine setup dry-run/apply/no-op and
 preference preservation after detach, engine inspection and actual test

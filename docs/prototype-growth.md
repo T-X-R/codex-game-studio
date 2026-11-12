@@ -1,7 +1,7 @@
 # Web prototype growth
 
 The full growth workflow remains under migration. The current implementation
-provides a read-only prerequisite check:
+provides a read-only prerequisite check and an explicit JavaScript copy stage:
 
 ```sh
 game-studio prototype grow-check demo --project /path/to/game --json
@@ -42,6 +42,52 @@ The JSON `verification.state` remains `not_assessed` even for an eligible projec
 eligibility is not build, replay, test or human-play evidence. A report is a
 snapshot, not a reservation of paths or authorization for future writes.
 
+## Copy into a Web project
+
+```sh
+game-studio prototype grow demo --stage copy --dry-run --project /path/to/game
+game-studio prototype grow demo --stage copy --project /path/to/game
+```
+
+The explicit `--stage copy` is required. This stage supports one plain inline game
+script, optional preceding `config.js`, and optional following `tune.js`. Other
+script layouts require explicit conversion before any copy occurs; execution
+order must be preserved and checked. The HTML shell is retained, the main script
+moves to `src/main.js`, configuration is imported from `src/config.js`, and tuning
+loads only in development. Configuration code is copied without evaluating it.
+Extracting typed configuration data remains a subsequent conversion step.
+
+The copy includes binary `assets/` with provenance and the prototype feel log at
+`design/feel-log.md`. Other files needing migration are listed in `left` and in
+warnings. Original prototype files, briefs and evidence remain unchanged.
+New destinations must not already exist, even with identical content. Transactions
+check source and target before-images, retain recoverable backups, and roll back
+on failure; binary bytes survive both writes and recovery. Generated game files
+are user-owned and are not deleted when the toolkit is detached.
+
+The bundled toolchain preserves the upstream pins: Vite 8.3.4, TypeScript 7.0.2,
+Vitest 5.0.5, Playwright 1.64.1 and vite-plugin-singlefile 2.3.3. Its package and
+lockfile names are updated together. An explicitly different Web version blocks
+copy until the engine choice is resolved. Existing `.gitignore` lines are preserved
+and missing build-output entries are appended. The CLI does not install packages:
+after the source review, use `npm ci --ignore-scripts`, `npm run build`, and
+`npm run build:single` in the game directory. Review asset URL/import handling
+before claiming either build is distributable.
+
+`strict` stays enabled in the TypeScript configuration; the copy stage is still
+JavaScript with `allowJs`. It does not generate pretend game-rule tests. The test
+commands require the meaningful rule and browser tests created during conversion;
+an empty test suite fails. For Playwright, set `GAME_STUDIO_BROWSER` to an installed
+browser executable or explicitly install its Chromium browser.
+
+The repeatable `toolkit/test/growth-smoke.mjs` fixture packs and restores the real
+runtime, installs the locked game tools, builds both outputs and compares same-seed
+Chrome states/screenshots before and after copy. It also checks source/binary
+preservation, removal of development tuning from the build, and rejection of an
+empty unit-test suite. See [recorded evidence](evidence/web-growth-copy-2026-11-12.json).
+This small input/scoring fixture does not establish design quality, every possible
+asset-loading pattern or human play acceptance. CI preserves its reports and images.
+
 ## Remaining workflow
 
 The approved workflow preserves the source prototype, records a same-seed
@@ -51,5 +97,5 @@ built game's replay with the original. Engine configuration and a growth record
 are completed only with the corresponding evidence. Imported scripts/assets,
 tuning, alternative Web starters and human play remain part of that acceptance.
 
-`prototype grow-check` does not close T15, S040 or C2. It is available in the
-development source; the published `v0.1.0-alpha.0` archive predates this command.
+The check and copy commands do not close T15, S040 or C2. They are available in the
+development source; the published `v0.1.0-alpha.0` archive predates these commands.
