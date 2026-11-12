@@ -103,10 +103,10 @@ export async function applyInstall(plan: InstallPlan): Promise<void> {
     }
     if (await readText(journalPath) !== null) throw new StudioError('RECOVERY_REQUIRED', 'An interrupted installation journal must be recovered before applying changes', 4);
     await verify(plan.project, plan.changes);
-    await atomicWrite(journalPath, `${JSON.stringify(plan)}\n`);
+    await atomicWrite(journalPath, `${JSON.stringify(plan)}\n`, 0o600);
     journalWritten = true;
     const backup = await safePath(plan.project, `.game-studio/backups/${randomUUID()}.json`);
-    await atomicWrite(backup, `${JSON.stringify(plan)}\n`);
+    await atomicWrite(backup, `${JSON.stringify(plan)}\n`, 0o600);
     for (const change of plan.changes) {
       await verify(plan.project, [change]);
       await atomicWrite(await safePath(plan.project, change.path), change.after);

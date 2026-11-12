@@ -41,7 +41,7 @@ export async function readText(path: string): Promise<string | null> {
   }
 }
 
-export async function atomicWrite(path: string, content: string | null): Promise<void> {
+export async function atomicWrite(path: string, content: string | null, permissions?: number): Promise<void> {
   if (content === null) {
     try { await unlink(path); }
     catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
@@ -49,9 +49,11 @@ export async function atomicWrite(path: string, content: string | null): Promise
   }
   await mkdir(dirname(path), { recursive: true });
   const temporary = `${path}.${randomUUID()}.tmp`;
-  let mode = 0o644;
-  try { mode = (await lstat(path)).mode & 0o777; }
-  catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
+  let mode = permissions ?? 0o644;
+  if (permissions === undefined) {
+    try { mode = (await lstat(path)).mode & 0o777; }
+    catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
+  }
   const handle = await open(temporary, 'wx', mode);
   try {
     await handle.writeFile(content);
