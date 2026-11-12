@@ -3,7 +3,7 @@ import { lstat, readFile, mkdir, open, rename, unlink, realpath } from 'node:fs/
 import { dirname, isAbsolute, join, resolve } from 'node:path';
 import { StudioError } from './contract.js';
 
-export const hash = (content: string): string => createHash('sha256').update(content).digest('hex');
+export const hash = (content: string | Buffer): string => createHash('sha256').update(content).digest('hex');
 
 export async function canonicalRoot(input: string): Promise<string> {
   const absolute = resolve(input);
@@ -33,15 +33,15 @@ export async function safePath(root: string, relative: string): Promise<string> 
   return path;
 }
 
-export async function readText(path: string): Promise<string | null> {
-  try { return await readFile(path, 'utf8'); }
+export async function readText(path: string, encoding: 'utf8' | 'base64' = 'utf8'): Promise<string | null> {
+  try { return await readFile(path, encoding); }
   catch (error) {
     if ((error as NodeJS.ErrnoException).code === 'ENOENT') return null;
     throw error;
   }
 }
 
-export async function atomicWrite(path: string, content: string | null, permissions?: number): Promise<void> {
+export async function atomicWrite(path: string, content: string | Buffer | null, permissions?: number): Promise<void> {
   if (content === null) {
     try { await unlink(path); }
     catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }

@@ -6,8 +6,16 @@ import { atomicWrite, canonicalRoot, hash, readText, safePath } from './files.js
 const manifestPath = '.game-studio/install.json';
 interface OwnedFile { hash: string; original: string | null }
 interface Manifest { schemaVersion: 1; version: string; files: Record<string, OwnedFile> }
-export interface Change { path: string; before: string | null; after: string | null }
+export interface Change { path: string; before: string | null; after: string | null; encoding?: 'base64' }
 export interface InstallPlan { project: string; version: string; changes: Change[] }
+
+function bytes(change: Change, value: string | null) {
+  if (change.encoding !== undefined && change.encoding !== 'base64') throw new StudioError('INVALID_INSTALLATION', 'Unsupported transaction encoding', 4);
+  if (value === null || change.encoding === undefined) return value;
+  const decoded = Buffer.from(value, 'base64');
+  if (decoded.toString('base64') !== value) throw new StudioError('INVALID_INSTALLATION', 'Invalid base64 in transaction', 4);
+  return decoded;
+}
 
 async function loadManifest(root: string): Promise<{ manifest: Manifest; content: string | null }> {
   const content = await readText(await safePath(root, manifestPath));
@@ -67,7 +75,8 @@ export async function planDetach(rootInput: string): Promise<InstallPlan> {
 
 async function verify(root: string, changes: Change[]): Promise<void> {
   for (const change of changes) {
-    const content = await readText(await safePath(root, change.path));
+    bytes(change, change.before); bytes(change, change.after);
+    const content = await readText(await safePath(root, change.path), change.encoding);
     if (content !== change.before) throw new StudioError('FILE_CONFLICT', `File changed since planning: ${change.path}`, 4);
   }
 }
@@ -75,8 +84,8 @@ async function verify(root: string, changes: Change[]): Promise<void> {
 export function describePlan(plan: InstallPlan) {
   return { project: plan.project, version: plan.version, changes: plan.changes.map(change => ({
     path: change.path, action: change.after === null ? 'restore-or-remove' : change.before === null ? 'create' : 'update',
-    beforeHash: change.before === null ? null : hash(change.before),
-    afterHash: change.after === null ? null : hash(change.after),
+    beforeHash: change.before === null ? null : hash(bytes(change, change.before)!),
+    afterHash: change.after === null ? null : hash(bytes(change, change.after)!),
   })) };
 }
 
@@ -109,7 +118,8 @@ export async function applyInstall(plan: InstallPlan): Promise<void> {
     await atomicWrite(backup, `${JSON.stringify(plan)}\n`, 0o600);
     for (const change of plan.changes) {
       await verify(plan.project, [change]);
-      await atomicWrite(await safePath(plan.project, change.path), change.after);
+      if (change.before === change.after) continue;
+      await atomicWrite(await safePath(plan.project, change.path), bytes(change, change.after));
       applied.push(change);
     }
     await unlink(journalPath);
@@ -117,8 +127,8 @@ export async function applyInstall(plan: InstallPlan): Promise<void> {
     for (const change of applied.reverse()) {
       try {
         const path = await safePath(plan.project, change.path);
-        if (await readText(path) !== change.after) throw new Error('Concurrent change during rollback');
-        await atomicWrite(path, change.before);
+        if (await readText(path, change.encoding) !== change.after) throw new Error('Concurrent change during rollback');
+        await atomicWrite(path, bytes(change, change.before));
       } catch { keepLock = true; }
     }
     if (!keepLock && journalWritten) await unlink(journalPath).catch(() => {});
@@ -161,10 +171,11 @@ export async function recoverInstall(rootInput: string, dryRun = false): Promise
         throw new StudioError('INVALID_INSTALLATION', 'Invalid transaction change', 4);
       }
       paths.add(change.path);
-      const current = await readText(await safePath(project, change.path));
+      bytes(change, change.before); bytes(change, change.after);
+      const current = await readText(await safePath(project, change.path), change.encoding);
       if (current === change.before) continue;
       if (current !== change.after) throw new StudioError('FILE_CONFLICT', `Recovery would overwrite changes to ${change.path}`, 4);
-      changes.unshift({ path: change.path, before: current, after: change.before });
+      changes.unshift({ ...change, before: current, after: change.before });
     }
   }
   const recovery = { project, version, changes };
@@ -185,7 +196,7 @@ export async function recoverInstall(rootInput: string, dryRun = false): Promise
     await verify(project, changes);
     for (const change of changes) {
       await verify(project, [change]);
-      await atomicWrite(await safePath(project, change.path), change.after);
+      await atomicWrite(await safePath(project, change.path), bytes(change, change.after));
     }
     if (content !== null) await unlink(journalPath);
     if (lock !== null) await unlink(lockPath);
