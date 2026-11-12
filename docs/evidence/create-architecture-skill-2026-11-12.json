@@ -1,0 +1,2157 @@
+{
+  "date": "2026-11-12",
+  "status": "partial",
+  "scope": "Selected S015 native CLI scenarios; complete original/extended matrix and desktop acceptance remain pending.",
+  "method": "Fresh frozen packed install per isolated Unicode workspace; actual native Codex, installed-byte verification, original-file hashes, transactional checkpoint chains and independent semantic/role/chronology review. Native zero with wrapper3 is not PASS.",
+  "syntheticOwnerDecisions": true,
+  "syntheticEngineReferences": true,
+  "cases": [
+    {
+      "scenario": "standard-guided",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-e8mOFT",
+      "packageIntegrity": "sha512-I41cWcVugx+IJkJDoZ+UAA2L7aVUJI8GFOkY3UQl3lE6jcCQWfYdnpEWKdDiRD4BqKnuu9chmYcTmHX5FsWLpA==",
+      "sameRequestAsInitial": true,
+      "requestSha256": "bd9b2ea9d95245a683dbba20c8b3ce874b9d3e081d5d990f5b366cc6749e305d",
+      "threadId": "01a1d009-3142-77e2-9d64-9ad2db6f6f72",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T21-53-45-01a1d009-3142-77e2-9d64-9ad2db6f6f72.jsonl",
+      "traceSha256": "81a2d072f2eb0070be00b3831776b22c24196657ad346226ce25970b6d1fa79c",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "3e2f459b7f315254800ab2e2816fb2d13b1b4d7210539dd340ce4b7545456c41",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "e953c5a65a37b4f00ffba087e7ee0dbf0a558448d9374ad36377ccd9bd04c603",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8139f57e8ba424ad0ba1b8ab57c0d356c7d3a7252b16a61042c4234cdcb66019",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "21edb39c4ca50f14bc0d63f8585591756df014d9f9c145547483729347446b9e",
+        "before.json": "984f23cdfaacc525ba0e18f66ae4f3c64c5786ab89eec9a3290ec7ff39bea3bc",
+        "after.json": "c3bac534d7d2873eb7e7dacc206faadf5999afab1454faef6c7a39410d145cb6",
+        "events.jsonl": "45118ebe4593ad9d3310ac412ffb00983dddbd9e44098ea33bf34e268bcd3f1c",
+        "report.json": "899133e45710575fac4a0e9072de2052baf31fb36b3a5dab1554a3306a2c60e4",
+        "final.txt": "a52b61f5a5f568fe6ae887c89d1c47e961a93681d8ea57576374a47b18014a9c"
+      },
+      "architectureSha256": "05576f71803613e6b22aedfdbb453c7f1181219895e4dc3d7b3695e83a5483a8",
+      "changed": [],
+      "checkpointEvents": 5,
+      "checkpointChainVerified": true,
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 534,
+      "temporaryTrustProfileRemoved": true,
+      "children": [],
+      "scopeOfResult": "Selected standard guided / Solo draft behavior only; same-request fresh corrected-package rerun. Full original/extended/desktop matrix remains pending.",
+      "semanticAudit": {
+        "sourceGdds": 5,
+        "requirements": 20,
+        "provisional": 20,
+        "coverage": {
+          "Covered": 7,
+          "Partial": 12,
+          "Gap": 1
+        },
+        "compoundScopeRequirement": "TR-round-state-011 correctly Partial, with unsupported obligations carried into required follow-up; no citation-only full coverage.",
+        "actualModuleReadScope": "Enumerated filenames, read concept/index, then read Core/UI/Input only. Networking excluded and unread.",
+        "domainScope": "All three systems retained, Platform external; standard omitted full ownership/flow/API chapters explicitly; complete source baseline preserved.",
+        "noSpawn": true,
+        "reviewStatus": "Both skipped \u2014 Solo mode; no approval implied.",
+        "writes": "One content write at 13:59:39.487Z then two Document Status lines at 14:00:08.151Z; version 1 retained.",
+        "checkpoints": "Four actual saved transactions before master write, final fifth afterward; complete verified chain and matching backups.",
+        "preservation": "All 534 regular originals unchanged; stage/config/GDD/ADRs/registries untouched."
+      },
+      "limitations": [
+        "Whole small-file reads do not prove large-document heading-bounded scans.",
+        "Native final reports 101 original non-node_modules files; independent host covers all 534 regular originals including packaged files.",
+        "Synthetic references, no real browser/API/performance or human play acceptance."
+      ]
+    },
+    {
+      "scenario": "full-solo",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-8IboQB",
+      "packageIntegrity": "sha512-/Rw8TzNJP+/RfZ9tVwbzMHDifB5acSAOZ2uYAbYC1+HjkisYSskSQZLQA6F0tfk0cji3//qCBOFzLfeBHhu8+Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "3fb68a577ac9b2b343ce98602d81dbdfb2ae7f81fb8f0d463a71701a6b42276e",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "e7fa42a02f8a31dae5200329ce2e007858f61daa465c1e930c11b69ed7b1a85b",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "threadId": "01a1d040-b7d7-73c0-8563-711feac1503e",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-54-24-01a1d040-b7d7-73c0-8563-711feac1503e.jsonl",
+      "traceSha256": "59c08c057271d95fa927fcc704d778855b767a4c7026301e4d47b26f8a2f0254",
+      "nativeExitCode": 0,
+      "artifactHashes": {
+        "fixture.json": "8483a6c7bd4259df88a95b0d6b540db901bc64d5414426274d84cab3a51f7a80",
+        "before.json": "ed031c47ddca0ce1bb87172c260c52c58af097218dfd4239f4ec07d228b50629",
+        "after.json": "e5d6c831c6f513f5c1a83968b80b8f0123e622962af9607390b1f34a603d776c",
+        "events.jsonl": "4df1904c1f515f12efae217ceb365a704b3da9c3791b03dad7705cb29e51ff3f",
+        "report.json": "974446be54248c4495f76549fb1af7d1e141951f1dc15c3703f5e40d47d88f72",
+        "final.txt": "65b4ec763ebabd4a975e569cdf846dc534148105c27b9c2c650930cf0ba01fa8"
+      },
+      "changed": [],
+      "checkpointEvents": 13,
+      "checkpointChainVerified": true,
+      "architectureSha256": "eb7395a79227cae35cdb04166d1d20008ee87bf15ecb209c35a69c75f5c90358",
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 544,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Selected full workflow with Solo review: all five GDDs and 17 provisional requirements, full ownership/flow/API/ADR chapters, true Solo skips with no native children, one content write plus status-only update, protected originals preserved and 13 checkpoint transactions. This does not establish full interactive or independent reviewer acceptance.",
+      "children": [],
+      "limitations": [
+        "Selected fixture behavior only; full original/extended and desktop matrix pending.",
+        "Six flow scenarios are saved sequentially in one invocation after preparing the scenario list; they precede the final full draft. This proves actual transaction order, not interruption between live discussions.",
+        "Complete small GDD reads do not prove long heading-bounded scanning.",
+        "Initial native preservation allowlist omitted toolkit backup manifests; it inspected the actual records and corrected the allowlist. Independent host/manual preservation passed.",
+        "This package precedes the wording expansion to every temporary work file; observed owned scratch nevertheless met that boundary. No real TD/LP or interactive risk acceptance occurs in Solo mode."
+      ],
+      "manualAudit": {
+        "sourceInputsBytePreserved": true,
+        "requirements": 17,
+        "coverage": {
+          "Covered": 7,
+          "Partial": 9,
+          "GAP": 1
+        },
+        "oneCoveredRowReliesOnProposedADR": true,
+        "compoundExclusionsPartial": "TR-round-state-011 explicitly retains unsupported timers/score/networking/randomness/extra mechanics.",
+        "contentWriteAt": "2026-11-12T15:02:48.782Z",
+        "statusOnlyUpdateAt": "2026-11-12T15:03:09.987Z",
+        "preStatusSha256ReconstructedFromFinal": "e13262a302cc500c62e9d11e271d2dc36ebfc92e54f3aa585b5b25d91628d12e",
+        "scratch": "project .architecture-draft-nbC1Al created by mkdtemp; checkpoint files exclusive-create; final cleanup checks directory type and expected contents. Independently observed directory absent.",
+        "checkpointTimeline": [
+          {
+            "at": "2026-11-12T14:56:45.645Z",
+            "phase": "Create Parcel Counter master architecture; Phases 0\u20131 settled: source baseline and layers"
+          },
+          {
+            "at": "2026-11-12T14:57:08.044Z",
+            "phase": "Create Parcel Counter master architecture; Phase 2 settled: module ownership"
+          },
+          {
+            "at": "2026-11-12T14:57:29.498Z",
+            "phase": "Create Parcel Counter master architecture; Phase 3 settled: initialization"
+          },
+          {
+            "at": "2026-11-12T14:57:29.691Z",
+            "phase": "Create Parcel Counter master architecture; Phase 3 settled: command and frame"
+          },
+          {
+            "at": "2026-11-12T14:57:29.855Z",
+            "phase": "Create Parcel Counter master architecture; Phase 3 settled: rejection and unavailable"
+          },
+          {
+            "at": "2026-11-12T14:57:30.015Z",
+            "phase": "Create Parcel Counter master architecture; Phase 3 settled: completion and Reset"
+          },
+          {
+            "at": "2026-11-12T14:57:30.172Z",
+            "phase": "Create Parcel Counter master architecture; Phase 3 settled: communication/event path"
+          },
+          {
+            "at": "2026-11-12T14:57:30.329Z",
+            "phase": "Create Parcel Counter master architecture; Phase 3 settled: save/load non-applicability"
+          },
+          {
+            "at": "2026-11-12T14:57:46.101Z",
+            "phase": "Create Parcel Counter master architecture; Phase 4 settled: public contracts"
+          },
+          {
+            "at": "2026-11-12T14:58:41.374Z",
+            "phase": "Create Parcel Counter master architecture; Phase 5 settled: ADR audit and coverage"
+          },
+          {
+            "at": "2026-11-12T14:59:07.919Z",
+            "phase": "Create Parcel Counter master architecture; Phase 6 settled: prioritized ADR work"
+          },
+          {
+            "at": "2026-11-12T15:03:10.209Z",
+            "phase": "Create Parcel Counter master architecture; Phase 7: master content written; sign-off status pending"
+          },
+          {
+            "at": "2026-11-12T15:04:33.812Z",
+            "phase": "Create Parcel Counter master architecture; Phase 8 complete: documented draft, actual Solo skips, preserved files; stop"
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "full-native",
+      "status": "FAIL",
+      "scopeOfResult": "Fourth original-input full attempt FAIL: explicit layer/platform baseline obligation omitted and one displayed-ID/action coverage row overstated. Genuine native review chain, non-acceptance, original exclusion-provenance repair, source preservation and owned scratch each passed their bounded checks. Findings stay unresolved in the original artifact; later authorized same-session revision is separate evidence.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-4v2ZjE",
+      "packageIntegrity": "sha512-rpFhYCMRiyUT8TGU1ueOiPhWQ2xo5UrqPq7Yfri+ZJEJ4aQrrZEe1xbgC9Avf+eK2CQR9xxM8Lcpf22zbdTSLA==",
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "3fb68a577ac9b2b343ce98602d81dbdfb2ae7f81fb8f0d463a71701a6b42276e",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "154c3bd8922a01f3627446d44fd085152f5d511b3b7d9f6b8245b65adee01e41",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "identicalInputVerification": {
+        "comparedTo": "j4YbNN",
+        "requestSha256": "bed6ec7cbcbb512e97df8ed586f2450c7eac0134d61b75ebbc1b1e79b206c632",
+        "identicalRequest": true,
+        "identicalInputFiles": 18,
+        "inputManifestSha256": "db043e87153f894a75e8b4c02c3c9f9f5911a9b417f0f96f616f8a724725c5c7",
+        "note": "New isolated workspace/profile and installed package bytes differ intentionally; source inputs and request bytes including Node location suffix are identical."
+      },
+      "threadId": "01a1d04e-bd9f-7571-bf8f-fc41a62cacc4",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T23-09-43-01a1d04e-bd9f-7571-bf8f-fc41a62cacc4.jsonl",
+      "traceSha256": "cd46ac882ed574ee509d3926baf9c0f2e0794b3c3e0cd84d6fbb171e50eaf2d3",
+      "nativeExitCode": 0,
+      "artifactHashes": {
+        "fixture.json": "41fb1782f4abe455f12dd70060a75f9f0ce0e792878506a47c0e1ac868e128bd",
+        "before.json": "025c7666c67d17473e67e571613e69f0bb4e997efa3d4793aeb4fdc56385147f",
+        "after.json": "b71ebd2a53c8398c376937a30383c98616af5f4ad77edbea8ab9e5827f9118c3",
+        "events.jsonl": "cc2b7b466475eb62c34229a2c30c200e92a23546683350523c5a08b243c8d5d7",
+        "report.json": "3b6ebe05d7349c0f2a33a976f170a28734d1d50705b6f6845397f1416064e549",
+        "final.txt": "267be128d68c55ba3acadbc7331ee02b9d5b1f3df478e0c2105d46ec61109bd0"
+      },
+      "changed": [],
+      "checkpointEvents": 13,
+      "checkpointChainVerified": true,
+      "architectureSha256": "50aa29c92060fb3c0eb7c444341424fec72cf01abe6d31ba0e460ecf707f1330",
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 550,
+      "temporaryTrustProfileRemoved": true,
+      "children": [
+        {
+          "id": "01a1d054-57c4-7353-a597-b0d2f02faf8c",
+          "role": "game-studio-lead-programmer",
+          "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T23-15-50-01a1d054-57c4-7353-a597-b0d2f02faf8c.jsonl",
+          "traceSha256": "d172ecbf0ee805f7e79fcb6ee64db904dcfff30605ae3e0aa882d186469d4679",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "verdict": "CONCERNS",
+          "reviewedSha256": "b365330b9569f33f31531e1192f0e0ddc2ec67827d8df4e78d6162dc6d05cd77",
+          "finalReviewPath": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-4v2ZjE/lp-review.txt",
+          "finalReviewSha256": "d76f57a9a8cdce4cef4383b4afa5a3b641fca9bb26d964d7b8a6196e4cba4f82",
+          "actualCalls": "Read/config/resource/hash commands and internal review messages only; no writes, nested delegation, installs or runtime tests. Read own gate, actual GDDs and both existing ADRs.",
+          "completedAt": 1794496607,
+          "historicalTraceSnapshot": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-revision-IO3fZL/source-child-traces/01a1d054-57c4-7353-a597-b0d2f02faf8c.jsonl"
+        },
+        {
+          "id": "01a1d054-206b-7d81-818a-36a9ca0bebae",
+          "role": "game-studio-technical-director",
+          "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T23-15-36-01a1d054-206b-7d81-818a-36a9ca0bebae.jsonl",
+          "traceSha256": "86d52b33b491566ac3891be9c07843ebf8e3246b626421d34b35b3647527bc3a",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "verdict": "CONCERNS",
+          "reviewedSha256": "b365330b9569f33f31531e1192f0e0ddc2ec67827d8df4e78d6162dc6d05cd77",
+          "finalReviewPath": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-4v2ZjE/td-review.txt",
+          "finalReviewSha256": "027536e948768a2feb53e47a91e271e4e9c67a724ca4ac8615edea6e85d7623f",
+          "actualCalls": "Read/config/resource/hash commands and internal review messages only; no writes, nested delegation, installs or runtime tests. Read own gate, actual GDDs and both existing ADRs.",
+          "completedAt": 1794496638,
+          "historicalTraceSnapshot": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-revision-IO3fZL/source-child-traces/01a1d054-206b-7d81-818a-36a9ca0bebae.jsonl"
+        }
+      ],
+      "manualAudit": {
+        "originalExclusionRepair": "PASS: TR-round-state-009 Partial, actual TD independently agrees; no new-master choice used as prior ADR coverage.",
+        "authoringFindings": [
+          "Actual TD finds explicit layer/platform composite obligation missing from20-row baseline despite correct layer map.",
+          "Actual TD finds TR-presentation-002 overstates existing ADR action/parcelId/Reset as full Accept/Return and displayed-ID support; independently reports existing20-row totals8 Covered/11 Partial/1 GAP."
+        ],
+        "findingHandling": "PASS: Document Status records actual CONCERNS, disputes, exact reviewed hash; no acceptance, content correction or version increment. All bytes from Engine Knowledge Gap Summary onward unchanged.",
+        "nativeDispatch": [
+          {
+            "at": "2026-11-12T15:15:36.659Z",
+            "role": "game-studio-technical-director"
+          },
+          {
+            "at": "2026-11-12T15:15:50.835Z",
+            "role": "game-studio-lead-programmer"
+          }
+        ],
+        "firstWaitAt": "2026-11-12T15:17:15.885Z",
+        "rolesInheritedModelPermissions": true,
+        "contentWriteAt": "2026-11-12T15:15:22.307Z",
+        "statusOnlyUpdateAt": "2026-11-12T15:18:17.849Z",
+        "reviewedArchitectureSha256": "b365330b9569f33f31531e1192f0e0ddc2ec67827d8df4e78d6162dc6d05cd77",
+        "reviewedBodyBytePreserved": true,
+        "sourceInputsBytePreserved": true,
+        "parentGateDefinitionsUnread": true,
+        "scratch": "mkdtemp owned project .architecture-run-d0ww3pn5 contains all verification snapshots/drafts; checkpoint NamedTemporaryFile exclusive creation. Six owned temporary files and directory removed after exact contents/symlink checks; independently confirmed absent.",
+        "checkpointTimeline": [
+          {
+            "at": "2026-11-12T15:11:16.907Z",
+            "phase": "Parcel Counter master architecture; Phase 0 \u2014 context and source baseline complete"
+          },
+          {
+            "at": "2026-11-12T15:11:47.897Z",
+            "phase": "Parcel Counter master architecture; Phase 1 \u2014 layer map settled"
+          },
+          {
+            "at": "2026-11-12T15:11:48.137Z",
+            "phase": "Parcel Counter master architecture; Phase 2 \u2014 ownership settled"
+          },
+          {
+            "at": "2026-11-12T15:11:48.373Z",
+            "phase": "Parcel Counter master architecture; Phase 3a \u2014 frame flow settled"
+          },
+          {
+            "at": "2026-11-12T15:11:48.602Z",
+            "phase": "Parcel Counter master architecture; Phase 3b \u2014 command/result flow settled"
+          },
+          {
+            "at": "2026-11-12T15:11:48.835Z",
+            "phase": "Parcel Counter master architecture; Phase 3c \u2014 persistence N/A settled"
+          },
+          {
+            "at": "2026-11-12T15:11:49.069Z",
+            "phase": "Parcel Counter master architecture; Phase 3d \u2014 initialization settled"
+          },
+          {
+            "at": "2026-11-12T15:12:36.042Z",
+            "phase": "Parcel Counter master architecture; Phase 4 \u2014 API boundaries settled"
+          },
+          {
+            "at": "2026-11-12T15:12:36.294Z",
+            "phase": "Parcel Counter master architecture; Phase 5 \u2014 ADR audit settled"
+          },
+          {
+            "at": "2026-11-12T15:12:36.529Z",
+            "phase": "Parcel Counter master architecture; Phase 6 \u2014 ADR priorities settled"
+          },
+          {
+            "at": "2026-11-12T15:15:22.742Z",
+            "phase": "Parcel Counter master architecture; Phase 7 \u2014 content written, reviews pending"
+          },
+          {
+            "at": "2026-11-12T15:18:18.360Z",
+            "phase": "Parcel Counter master architecture; Phase 8 \u2014 reviewed draft handed back; document task stopped"
+          },
+          {
+            "at": "2026-11-12T15:18:49.797Z",
+            "phase": "Parcel Counter master architecture; Final verification complete \u2014 document task stopped"
+          }
+        ]
+      },
+      "limitations": [
+        "No whole authoring-quality PASS: TD findings remain in unchanged baseline/audit and are explicitly unresolved in final status.",
+        "Several phase saves occur sequentially within one invocation, all before complete master draft. Transaction chronology verified; interrupted discussion/resume not tested.",
+        "Host denominator550 regular files versus native552 following two symlinks; protected files unchanged under both.",
+        "Small full-file GDD reads do not establish long section-bounded scanning; complete original/extended/desktop matrix remains pending.",
+        "Delegation payloads in raw transcript are encrypted; role metadata, inherited context, independent tool reads and actual final outputs provide observable dispatch/assessment evidence.",
+        "Initial native scope verification omitted legitimate checkpoint backup manifests and corrected after actual transaction inspection.",
+        "Synthetic engine/browser/runtime/performance/human play remain unverified."
+      ],
+      "historicalArtifactAccess": {
+        "frozenAfterWorkspace": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-revision-IO3fZL/before-workspace",
+        "frozenTrace": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-revision-IO3fZL/source-session-prefix.jsonl",
+        "traceHashMeaning": "Recorded traceSha256 identifies the complete trace at the original run boundary, now a preserved prefix of the same session. The live trace and workspace legally continue in separate revision evidence; do not compare their current bytes against the original run hash.",
+        "originalReportAndEventsPreserved": true
+      }
+    },
+    {
+      "scenario": "roles-unavailable",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-UAPQ8L",
+      "packageIntegrity": "sha512-vn2HvDNAII6oCZqGEvASLgj7AUXRD0rCYWkeNiy6hiboaSYG9E8IpftWRxaR8YijZRhMty82qJkXX3kmrbUTdw==",
+      "threadId": "01a1d034-626c-7d71-a6b6-118695970e42",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-41-01-01a1d034-626c-7d71-a6b6-118695970e42.jsonl",
+      "traceSha256": "7903c6aa6a4bf7551ebe6116f8d8d81482fc86d5712659944de520b2d0be87f9",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "3fb68a577ac9b2b343ce98602d81dbdfb2ae7f81fb8f0d463a71701a6b42276e",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "e7fa42a02f8a31dae5200329ce2e007858f61daa465c1e930c11b69ed7b1a85b",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "cef202e8c454e61607a8be84eb4b3545969a6e88ac08588971959807e565ad16",
+        "before.json": "6f6b34a5688c7cb7d0ab6e8deb4ba40b4841e417103f3d1e021485eaff3bb93a",
+        "after.json": "de916094e7598b91544ae459057c8bdefca0f1d5e54b8711a7b3ee72929f9046",
+        "events.jsonl": "c330cfd64735849df1214069256754ea0fe423d9edc087f95261a7777ddb4357",
+        "report.json": "eff5bfd564b377fd0a39a6315678829249ce847a431a6f1c15c1e7e2eabf654f",
+        "final.txt": "b99dc1e098cce44b6e0c3eb319d695c9f7df92d5b727d41d964af4b01d1f1886"
+      },
+      "changed": [],
+      "checkpointEvents": 12,
+      "checkpointChainVerified": true,
+      "architectureSha256": "0dbc7c1cffdda9bd3f79be6ca2da810d7a2e3b3b752de201ca48159cdd31fc0a",
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 540,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Selected full-document roles-unavailable route: actual roles absent, no substitute or false verdict; all five GDDs represented, combined ADR exclusions remain Partial with existing-source provenance, one content write and status-only final update, 12 ordered transactional checkpoints, protected sources unchanged.",
+      "children": [],
+      "limitations": [
+        "Selected fixture behavior only; full original/extended and desktop matrix pending.",
+        "No real TD/LP dispatch occurs by design; latest independent-review provenance instruction remains untested here.",
+        "Small full-file GDD reads do not establish long-document section scanning.",
+        "Initial native preservation allowlist omitted legitimate toolkit checkpoint rollback backups; agent inspected transactions and corrected its verification. Independent host and manual preservation checks passed."
+      ],
+      "manualAudit": {
+        "allSourceInputsBytePreserved": true,
+        "noChildSessions": true,
+        "checkpointTimeline": [
+          {
+            "at": "2026-11-12T14:43:16.068Z",
+            "phase": "Master architecture \u2014 Phase 0 \u2014 context and baseline settled"
+          },
+          {
+            "at": "2026-11-12T14:43:23.326Z",
+            "phase": "Master architecture \u2014 Phase 1 \u2014 system layer map settled"
+          },
+          {
+            "at": "2026-11-12T14:43:53.406Z",
+            "phase": "Master architecture \u2014 Phase 2 \u2014 module ownership settled"
+          },
+          {
+            "at": "2026-11-12T14:44:02.425Z",
+            "phase": "Master architecture \u2014 Phase 3a \u2014 frame and command flow settled"
+          },
+          {
+            "at": "2026-11-12T14:44:12.000Z",
+            "phase": "Master architecture \u2014 Phase 3b \u2014 communication flow settled"
+          },
+          {
+            "at": "2026-11-12T14:44:17.937Z",
+            "phase": "Master architecture \u2014 Phase 3c \u2014 persistence flow applicability settled"
+          },
+          {
+            "at": "2026-11-12T14:44:24.549Z",
+            "phase": "Master architecture \u2014 Phase 3d \u2014 initialization flow settled"
+          },
+          {
+            "at": "2026-11-12T14:44:37.755Z",
+            "phase": "Master architecture \u2014 Phase 4 \u2014 API boundaries settled"
+          },
+          {
+            "at": "2026-11-12T14:45:13.659Z",
+            "phase": "Master architecture \u2014 Phase 5 \u2014 ADR audit settled"
+          },
+          {
+            "at": "2026-11-12T14:45:23.872Z",
+            "phase": "Master architecture \u2014 Phase 6 \u2014 ADR priorities settled"
+          },
+          {
+            "at": "2026-11-12T14:48:34.240Z",
+            "phase": "Master architecture \u2014 Phase 7 \u2014 architecture content written"
+          },
+          {
+            "at": "2026-11-12T14:50:17.338Z",
+            "phase": "Master architecture \u2014 Phase 8 \u2014 document task finished; readiness unresolved"
+          }
+        ],
+        "nativeRuntimeClaims": "No runtime/browser/play acceptance claimed.",
+        "requirements": 18,
+        "coverage": {
+          "Covered": 7,
+          "Partial": 10,
+          "GAP": 1
+        },
+        "reviewStatus": {
+          "TD-ARCHITECTURE": "NOT ASSESSED",
+          "LP-FEASIBILITY": "NOT ASSESSED"
+        },
+        "contentWriteAt": "2026-11-12T14:48:06.089Z",
+        "statusOnlyUpdateAt": "2026-11-12T14:49:07.643Z",
+        "ownedScratch": "/private/tmp/parcel-architecture-X3PVXy",
+        "ownedScratchRemoved": true,
+        "evidenceBoundary": "TR-round-state-008 distinguishes actual Accepted ADR support from unsupported score/network/randomness/etc. Master proposed support explicitly does not close prior ADR gaps.",
+        "gateDefinitionsUnreadByCoordinator": true
+      }
+    },
+    {
+      "scenario": "lean-override",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-Uzh7GB",
+      "packageIntegrity": "sha512-wy1CnRlp/AAW0szn27hPlB3jWSJB7D1KLMA+5ceEpcP2HxACJ88AZ82wHwytRvjYkcLhc6vaniq6j9mOQ66wWw==",
+      "threadId": "01a1d028-6388-7e80-abed-96206c6bb915",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-27-50-01a1d028-6388-7e80-abed-96206c6bb915.jsonl",
+      "traceSha256": "49d72e7c43689d36157ff8c3797d153c69f77f3cb5d66361098a3da23479808a",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "13263ddcc6020cf644d11bc62dfc809a27d6a471e59ef46ca4f2f2d0c44b261b",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "36ee41fe195133105d22dde17b51fae87701c29ccbed67a58c56ce3d90210f85",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "5cefb46731d8b401dffbad0dc8f0fd97bfd1744241d90f7256031f34b61ef61b",
+        "before.json": "830f0a382737c21cae4daf7345401ffd2fa6d836084fc254afaeb0fa13c4b91b",
+        "after.json": "461537999af6491f4ee730f83bfd8688192a7bfb9fcb99814569440b45e2d584",
+        "events.jsonl": "e697bdeb48745c384c55c3c25fbcb80cf0de73c68f965e0421803ef31df6f789",
+        "report.json": "666aeb47fcb2f9f51da44910b7fa995583e978288a14d07c333d047728d497e6",
+        "final.txt": "d721508a3d4ee34104a33a019f0c5cdb56abe65a4c7ed7713f2c1f45086849f3"
+      },
+      "changed": [],
+      "checkpointEvents": 12,
+      "checkpointChainVerified": true,
+      "architectureSha256": "01e3dec93260bc8484854184596f3d1d5d053248391bd8ea3e50022216c7c5e7",
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 536,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Selected run-only Lean override contract: stored full review_mode/settings byte-identical, actual no-spawn and both gates skipped Lean; full requested domain chapters retained, all5 GDDs/21provisional TRs and explicit ADR remainders inspected. One main write then status-only v1;12 real checkpoint transactions from phases before main write;536 originals unchanged. This result does not certify all ADR semantic classifications or latest provenance fix.",
+      "children": [],
+      "limitations": [
+        "Selected fixture behavior only; full original/extended and desktop matrix pending.",
+        "Coverage/source obligations were read, but this scope establishes run-only review behavior and full document preservation, not every ADR inference; latest evidence-provenance fix was not in this installed package.",
+        "Content has numbered matching sections, so calling its complete small-file read a legacy fallback solely because Detailed Rules/Design is absent does not prove correct zero-match fallback behavior.",
+        "Main architecture drafted inline. Checkpoint draft paths used a per-run nonce/serial and Add File then removal; exclusive-create filesystem semantics were not independently established. No actual collision or unexpected write observed."
+      ],
+      "reviewAudit": {
+        "children": 0,
+        "storedMode": "full unchanged",
+        "effectiveRunMode": "lean",
+        "actualStatuses": [
+          "skipped \u2014 Lean mode",
+          "skipped \u2014 Lean mode"
+        ]
+      },
+      "writeAudit": {
+        "mainContentWrite": "2026-11-12T14:37:40.271Z",
+        "statusOnlyUpdate": "2026-11-12T14:38:22.869Z",
+        "version": 1,
+        "checkpointEvents": 12,
+        "phaseSavesPrecedeCompleteDraft": true
+      }
+    },
+    {
+      "scenario": "registry-rerun",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-wTfrN8",
+      "packageIntegrity": "sha512-wy1CnRlp/AAW0szn27hPlB3jWSJB7D1KLMA+5ceEpcP2HxACJ88AZ82wHwytRvjYkcLhc6vaniq6j9mOQ66wWw==",
+      "threadId": "01a1d028-de26-78c0-a62b-9b78ba305cae",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-28-21-01a1d028-de26-78c0-a62b-9b78ba305cae.jsonl",
+      "traceSha256": "1698b20648aef5b902ae5172ddd718343051b517e2d7e34f19897708441827b1",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "13263ddcc6020cf644d11bc62dfc809a27d6a471e59ef46ca4f2f2d0c44b261b",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "36ee41fe195133105d22dde17b51fae87701c29ccbed67a58c56ce3d90210f85",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "e16fc947ef44dbfab7e412b8c10a100670ada9aa7bd03d5337fe9090582d2ca7",
+        "before.json": "f98bde8f67de0a0cdc4dd618131833e5c3148f887dc38dcefd93ee3737005429",
+        "after.json": "a474bf013c98dddd065dd72cf95a970fc18b18d86263bba1ecfe37816c75e1b6",
+        "events.jsonl": "cc723d13e0ad23fe1e04df6db675a3d7f0831899c201438ec346d2e14e0d08d9",
+        "report.json": "6b1c16a0affdf2c767304178dd972a5fc26cff6b79d3ac3cb92590fe7e5fda45",
+        "final.txt": "eaa407872d75d62388dcdfbf7c23baa7b2ef17cdff0cdf5825a8d65898605831"
+      },
+      "changed": [
+        "production/session-state/active.md",
+        "docs/architecture/architecture.md"
+      ],
+      "checkpointEvents": 10,
+      "checkpointChainVerified": true,
+      "architectureSha256": "22817c3e3d04290fb949df651075c286106771ad4228f6208cb38fc7465b97c2",
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 537,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Selected explicit rewrite and registry identity contract: v2->v3, all5 GDDs/15unique TRs (1registered/14provisional), active001/provisional004 retained, retired002/003 reserved and newRound IDs>=005; actual registry source byte-identical, outside recovery narrative intact. One main write then Solo statuses, no children;537 protected originals unchanged and only2authorized files changed.10 expected-hash checkpoints; exclusive owned project+audit temp directories checked and removed. Not a blanket ADR coverage semantic pass.",
+      "children": [],
+      "limitations": [
+        "Selected fixture behavior only; full original/extended and desktop matrix pending.",
+        "ADR semantic classification is not blanket-certified by the identity/preservation pass; newest evidence-provenance fix not in this package.",
+        "Four already-settled flows were checkpointed sequentially in one tool call; fresh-session interruption timing remains untested."
+      ],
+      "identityAudit": {
+        "rows": 15,
+        "registered": 1,
+        "provisional": 14,
+        "retainedActive": "TR-round-state-001",
+        "retainedProvisional": "TR-round-state-004",
+        "retiredReserved": [
+          "TR-round-state-002",
+          "TR-round-state-003"
+        ],
+        "newRoundMinimum": 5,
+        "registryByteIdentical": true,
+        "sourceInputsByteIdentical": true,
+        "outsideCheckpointNarrativeByteIdentical": true,
+        "version": 3
+      },
+      "temporaryArtifactAudit": {
+        "exclusiveDirectories": true,
+        "exclusiveFiles": true,
+        "projectDirectoryRemoved": "production/.architecture-rewrite-WcK39a",
+        "auditDirectoryRemoved": "/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/parcel-architecture-audit-oFGK4B",
+        "exactOwnedContentsCheckedBeforeRemoval": true,
+        "existenceCheckedIndependentlyAfterward": true
+      }
+    },
+    {
+      "scenario": "focus-data-flow",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-zoD0GV",
+      "packageIntegrity": "sha512-I41cWcVugx+IJkJDoZ+UAA2L7aVUJI8GFOkY3UQl3lE6jcCQWfYdnpEWKdDiRD4BqKnuu9chmYcTmHX5FsWLpA==",
+      "threadId": "01a1d011-b6c2-7c42-9dbb-400526c305b4",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-03-09-01a1d011-b6c2-7c42-9dbb-400526c305b4.jsonl",
+      "traceSha256": "0fe8399ccb73e73c9223392e0f5c2b5ba704cb0245b35f854b7b2a3a9131ac33",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "3e2f459b7f315254800ab2e2816fb2d13b1b4d7210539dd340ce4b7545456c41",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "e953c5a65a37b4f00ffba087e7ee0dbf0a558448d9374ad36377ccd9bd04c603",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8139f57e8ba424ad0ba1b8ab57c0d356c7d3a7252b16a61042c4234cdcb66019",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "e7e7eb4bfd81e3043211f8cab477f75ac197a660ba813fc62ded89eb801ea28b",
+        "before.json": "d38a962df24649647958e64a88c3e5fedfc0d58a84c9b32a2f36f326144fe588",
+        "after.json": "9a62e83c48ca9be1379ff32a9466a2d3a7048fbb54cdd8f41d410bf5ee8bf87a",
+        "events.jsonl": "b9653f40b4eeca6ac662ba0b5694d9beb2c162f69bd8a307796140ea7bee84be",
+        "report.json": "a766bd36e4be645ff81bbd36e462deca141470b0ab2303b35d619a8adf017924",
+        "final.txt": "d1b701e93c8fb34cf4f21af1db80c2d70178e8893ed7f7fa86c5201381eced61"
+      },
+      "architectureSha256": "9c21f86b14627dfc3f1fae548a4ee417f428f55f1d03b2568c2894d9f8b4b3ff",
+      "changed": [
+        "production/session-state/active.md",
+        "docs/architecture/architecture.md"
+      ],
+      "checkpointEvents": 6,
+      "checkpointChainVerified": true,
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 535,
+      "temporaryTrustProfileRemoved": true,
+      "children": [],
+      "scopeOfResult": "Selected Data Flow content/update preservation, stable provisional identity and transaction-chain behavior only. Batched already-settled flow saves do not establish per-scenario interruption/recovery timing.",
+      "semanticAudit": {
+        "sourceGdds": 5,
+        "workingBaselineRequirements": 13,
+        "storedBaseline": "Two original rows unchanged; current differences and complete working baseline kept only in checkpoint.",
+        "stableIds": "Active same-intent 001 and provisional004 retained; deprecated002 and superseded003 never reused; new Round State IDs005\u2013012 skip all occupied IDs. Registry unchanged.",
+        "actualModuleReadScope": "Selected/read Core/Input/UI after design discovery; Networking enumerated but unread.",
+        "domainScope": "Initialization, command/frame, event/result/snapshot and explicit no-save/load flows inspected; owner/source behavior retained; browser unknown.",
+        "noSpawn": true,
+        "reviewStatus": "Both skipped \u2014 Solo mode.",
+        "writes": "One exact-target-guarded Data Flow content write with v2\u2192v3/date, then two status lines, all at14:06:49.443Z; independent comparison of every unchosen section passed.",
+        "checkpoints": "Context then four distinct flow transactions, each observed-hash save before scratch/main draft; final sixth after write. Complete chain/backup hashes and unchanged outside-block narrative independently verified.",
+        "preservation": "535 original regular files unchanged; only authorized architecture/recovery changed. Source GDDs/registry/ADR/config/stage untouched."
+      },
+      "limitations": [
+        "Four flow milestones saved sequentially in one tool invocation using already-settled owner decisions, before the scratch section draft. This proves actual chain and pre-write state, not realistic interruption timing or fresh-session recovery.",
+        "Small-file whole reads do not prove large-document heading scans.",
+        "Solo focus does not exercise full native reviewer propagation of unchanged-baseline differences.",
+        "No browser/API/engine execution or human play acceptance."
+      ]
+    },
+    {
+      "scenario": "legacy-gdd",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-3reIGm",
+      "packageIntegrity": "sha512-/Rw8TzNJP+/RfZ9tVwbzMHDifB5acSAOZ2uYAbYC1+HjkisYSskSQZLQA6F0tfk0cji3//qCBOFzLfeBHhu8+Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "3fb68a577ac9b2b343ce98602d81dbdfb2ae7f81fb8f0d463a71701a6b42276e",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "e7fa42a02f8a31dae5200329ce2e007858f61daa465c1e930c11b69ed7b1a85b",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "threadId": "01a1d040-d164-7f11-a5bb-0fe4f29a3161",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-54-31-01a1d040-d164-7f11-a5bb-0fe4f29a3161.jsonl",
+      "traceSha256": "40f40852bef61d71c516dc02ef399cb8cf296175ed55f1d5572516714415954c",
+      "nativeExitCode": 0,
+      "artifactHashes": {
+        "fixture.json": "12f6a77319c36e027402599575c76226af78e7d26c3027bad84567234e306bfb",
+        "before.json": "1a10c6a2bd6f8fd43e504683ffff1ab273e3ff3325ff4643f06ee5e5feeab86c",
+        "after.json": "bd0290048dfdeabd6b0f252880cbd4011b6923c2eac9a952e5e64b99224b6b59",
+        "events.jsonl": "81907b100783530f1fd3a2424229e5a9ed5c70b502c0b9b0f64d567250674ec1",
+        "report.json": "b67e6a37cd8a5c78b325a88e5e56243240c072ab01fc2ea426981a9b650317cd",
+        "final.txt": "8ab0e06beaac614fd121999121700c6c2669432783620b55eb4dbe23cf995c79"
+      },
+      "changed": [],
+      "checkpointEvents": 12,
+      "checkpointChainVerified": true,
+      "architectureSha256": "e090a7d3e5766288d6a75e9d38d4d423361b32b8c79bcde33ea1958b05db5249",
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 545,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Selected legacy-GDD route: six complete sources including zero-match unstructured round-history, 21 provisional requirements with legacy obligations and truthful source status, full domain chapters, Solo skips, actual formal ADR gaps, one content write and 12 incremental checkpoints; no protected project inputs changed.",
+      "children": [],
+      "limitations": [
+        "Selected fixture behavior only; full original/extended and desktop matrix pending.",
+        "Host checks 545 regular files; native reports 547 including two symlink entries. Both independently verified unchanged.",
+        "Owned mkdtemp scratch directory remains with before.json, checkpoint helper, architecture draft and requirement table; no cleanup completion is claimed. Checkpoint drafts were exclusive-created and removed.",
+        "All GDDs are small and read end-to-end; this validates actual legacy full-read inclusion, not long section-bounded scanning.",
+        "Initial native preservation allowlist omitted toolkit checkpoint backups, then was corrected after checking actual transaction ownership/paths/hash chain.",
+        "This package predates wording expansion to all temporary work files; no real TD/LP review occurs in Solo mode."
+      ],
+      "manualAudit": {
+        "sourceInputsBytePreserved": true,
+        "gddCount": 6,
+        "requirements": 21,
+        "coverage": {
+          "Covered": 8,
+          "Partial": 11,
+          "GAP": 2
+        },
+        "legacyContribution": [
+          "TR-round-state-007 Reset removes decision history",
+          "TR-round-state-011 no serialized/cross-session history",
+          "TR-presentation-006 prior-round snapshots lack command authority"
+        ],
+        "historicalSourceStatus": "No approval metadata; not relabeled Approved.",
+        "legacyProjectionGap": "TR-presentation-006 GAP; existing read-only snapshots do not establish prior-round invalidation. Maintains selected ID-only protocol; no generation token invented.",
+        "contentWriteAt": "2026-11-12T15:06:18.152Z",
+        "writeCount": 1,
+        "statusIncludedInInitialWrite": "Solo named skips included; no later content mutation.",
+        "scratch": {
+          "directory": "/private/tmp/parcel-architecture-a4Ibc3",
+          "mkdtempOwned": true,
+          "checkpointDraftsExclusiveCreatedAndRemoved": true,
+          "retainedFiles": [
+            "architecture-draft.md",
+            "before.json",
+            "checkpoint.cjs",
+            "requirements.json",
+            "verification-d5a588a2-851f-4718-bf14-4ef6b5f2f743.json",
+            "verification-de664634-39f8-462d-be14-e07beb097b7a.json"
+          ]
+        },
+        "checkpointTimeline": [
+          {
+            "at": "2026-11-12T14:57:58.328Z",
+            "phase": "0 \u2014 Context and source baseline"
+          },
+          {
+            "at": "2026-11-12T14:58:12.617Z",
+            "phase": "1 \u2014 System layer map"
+          },
+          {
+            "at": "2026-11-12T14:58:33.531Z",
+            "phase": "2 \u2014 Module ownership"
+          },
+          {
+            "at": "2026-11-12T14:59:00.215Z",
+            "phase": "3a \u2014 Command and frame path"
+          },
+          {
+            "at": "2026-11-12T14:59:08.592Z",
+            "phase": "3b \u2014 Result and event path"
+          },
+          {
+            "at": "2026-11-12T14:59:18.259Z",
+            "phase": "3c \u2014 Save/load and Reset history"
+          },
+          {
+            "at": "2026-11-12T14:59:29.167Z",
+            "phase": "3d \u2014 Initialization and unavailable flow"
+          },
+          {
+            "at": "2026-11-12T14:59:54.445Z",
+            "phase": "4 \u2014 API boundaries"
+          },
+          {
+            "at": "2026-11-12T15:01:19.153Z",
+            "phase": "5 \u2014 ADR audit and requirement traceability"
+          },
+          {
+            "at": "2026-11-12T15:02:15.225Z",
+            "phase": "6 \u2014 Required ADR priorities"
+          },
+          {
+            "at": "2026-11-12T15:06:33.882Z",
+            "phase": "7 \u2014 Architecture written; Solo review status recorded"
+          },
+          {
+            "at": "2026-11-12T15:08:04.751Z",
+            "phase": "8 \u2014 Document-only handoff complete"
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "minimal",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-9QUjCK",
+      "packageIntegrity": "sha512-vn2HvDNAII6oCZqGEvASLgj7AUXRD0rCYWkeNiy6hiboaSYG9E8IpftWRxaR8YijZRhMty82qJkXX3kmrbUTdw==",
+      "threadId": "01a1d034-7094-72c1-bdb3-df3e5466cf21",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-41-00-01a1d034-7094-72c1-bdb3-df3e5466cf21.jsonl",
+      "traceSha256": "e25aefbf120dd4cb0a74984e32cfaf6d06858791191b74d74db6d2c4b91c1871",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "3fb68a577ac9b2b343ce98602d81dbdfb2ae7f81fb8f0d463a71701a6b42276e",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "e7fa42a02f8a31dae5200329ce2e007858f61daa465c1e930c11b69ed7b1a85b",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "54ba2a944bc85ef0a88510b2fa0276303cac4d93ec84418863b6bd4feecf6c14",
+        "before.json": "981db16f15fd3e5bc1c5f800a51c29da2d92ba78a7e5e9ebda93b3a1177bea3e",
+        "after.json": "db3da39e27c2948f468cbda19d648f3dcf81120ef2bdd2eaa826200c72ac8cf9",
+        "events.jsonl": "61389a93d24b36f89c35154690d07b5bf87a8b849d21f0f32ee117842a86ee85",
+        "report.json": "a39dd4a15f3f6c10df2a60282a0ff384b7500eab448723fffe815c984c871069",
+        "final.txt": "08c5596a2328b3440dfbf590a960411b819145e2204a6314ecebf85f0d2f096a"
+      },
+      "changed": [],
+      "checkpointEvents": 5,
+      "checkpointChainVerified": true,
+      "architectureSha256": "ed60982074d4d9faea5cfb55a5e07520a17bf26ec54d482a0e1dfd8144530531",
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 536,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Selected voluntary minimal route: no concept/index prerequisite, approved brief and preferences produce complete 20-row provisional baseline plus layers/critical decisions, no mandatory ADR expansion, absent ADRs remain formal gaps, Solo skips truthful, one inline content write and five transactional checkpoints; protected project sources unchanged. Temporary verification snapshot safety is not passed.",
+      "children": [],
+      "limitations": [
+        "Selected fixture behavior only; full original/extended and desktop matrix pending.",
+        "Fixed shared /private/tmp/parcel-architecture-before.json verification snapshot violates the intended parallel scratch isolation boundary; no observed collision. This selected minimal routing/domain PASS does not pass temporary artifact ownership.",
+        "UUID checkpoint filenames reduce collision likelihood but use overwrite-capable write_text, not proven exclusive creation.",
+        "Absent-ADR coverage boundary only; existing partial ADR claims and latest native TD instruction not exercised.",
+        "Native initial verification omitted legitimate checkpoint backup manifests and corrected after inspection; an oversized final checkpoint draft was shortened before saving."
+      ],
+      "manualAudit": {
+        "allSourceInputsBytePreserved": true,
+        "noChildSessions": true,
+        "checkpointTimeline": [
+          {
+            "at": "2026-11-12T14:42:32.394Z",
+            "phase": "Minimal architecture \u2014 Phase 0 context and source requirements settled."
+          },
+          {
+            "at": "2026-11-12T14:43:16.184Z",
+            "phase": "Minimal architecture \u2014 Phase 1 layer map settled from owner-approved brief."
+          },
+          {
+            "at": "2026-11-12T14:43:40.769Z",
+            "phase": "Minimal architecture \u2014 Phase 5 critical ADR audit settled."
+          },
+          {
+            "at": "2026-11-12T14:44:15.083Z",
+            "phase": "Minimal architecture \u2014 Phase 6 critical-decision priorities settled; Phase 7 content write next."
+          },
+          {
+            "at": "2026-11-12T14:47:00.577Z",
+            "phase": "Minimal architecture document task complete; v1 written once."
+          }
+        ],
+        "nativeRuntimeClaims": "No runtime/browser/play acceptance claimed.",
+        "requirements": 20,
+        "coverage": {
+          "Covered": 0,
+          "Partial": 0,
+          "GAP": 20
+        },
+        "gdds": 0,
+        "reviewStatus": {
+          "TD-ARCHITECTURE": "skipped \u2014 Solo mode",
+          "LP-FEASIBILITY": "skipped \u2014 Solo mode"
+        },
+        "contentWriteAt": "2026-11-12T14:45:23.412Z",
+        "source": "design/game-brief.md with technical preferences and observed project settings",
+        "preservationDenominator": "Host checks 536 regular files; native own snapshot counts 538 entries because Path.is_file follows installed symlinks. Both report zero changes.",
+        "temporarySnapshot": {
+          "path": "/private/tmp/parcel-architecture-before.json",
+          "writeAt": "2026-11-12T14:41:33.114Z",
+          "ownedExclusiveCreation": false,
+          "existsAfterRun": true,
+          "finding": "Fixed shared verification snapshot is overwrite-capable; parallel snapshot isolation is NOT ASSESSED/unsafe. No observed collision or protected source loss in this run. Main architecture was inline; UUID checkpoint drafts were project-local and removed, without exclusive-create proof."
+        }
+      }
+    },
+    {
+      "scenario": "missing-index",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-RgVUPB",
+      "packageIntegrity": "sha512-wS0zp8GGr/Ky8TG9FBiGOZnheO0ob5d1vjTTW6dvn2eCyalJeuocmYATs/CnePvJQvIFuE+L3WJ1vVhUv7N1Cw==",
+      "requestSha256": "9011f6b543282d6571b7765553605d95d498a982e18a59c204e14455d717ff1d",
+      "threadId": "01a1d01c-234d-7f30-8617-b44dbe7e00d9",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-14-27-01a1d01c-234d-7f30-8617-b44dbe7e00d9.jsonl",
+      "traceSha256": "12e64f7b66ec92051ac75d06f29e4ba6908779e8d6b3e0ee56b831230f90fcd7",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "13263ddcc6020cf644d11bc62dfc809a27d6a471e59ef46ca4f2f2d0c44b261b",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "36ee41fe195133105d22dde17b51fae87701c29ccbed67a58c56ce3d90210f85",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "5ea0893ed1b800aefa97a84c521bdbbdc19b38a1508965925493ec8ddd4ce6aa",
+        "before.json": "0ff56fde43aec9ed8b601bfeec7887203f0d1f60f5c8ce9a969d2f4a5813d2f1",
+        "after.json": "0ff56fde43aec9ed8b601bfeec7887203f0d1f60f5c8ce9a969d2f4a5813d2f1",
+        "events.jsonl": "5aad428c5283e0f32f492eff852fbe5abc5db5adbe0f864084174c5b4654cac2",
+        "report.json": "0ec2b605eb356d8902538f67d6da090300c40f08ba461ffedba041c3dd722fba",
+        "final.txt": "bb837e8e3a8a7da31543500913c5895865eb0b9f293e29d92ea2f375157ca3cf"
+      },
+      "changed": [],
+      "checkpointEvents": 0,
+      "checkpointChainVerified": null,
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 533,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Actual configured standard workflow and missing index identified; stopped before baseline/architecture/checkpoint creation, mapped the installed prerequisite, retained synthetic browser evidence limitation. All 533 original files identical, zero added files, no child dispatch or downstream invocation; actual read-only tools inspected.",
+      "children": [],
+      "zeroWrites": true,
+      "limitations": [
+        "Selected fixture behavior only; full original/extended and desktop matrix pending."
+      ]
+    },
+    {
+      "scenario": "placeholder-index",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-ZnNR4b",
+      "packageIntegrity": "sha512-wS0zp8GGr/Ky8TG9FBiGOZnheO0ob5d1vjTTW6dvn2eCyalJeuocmYATs/CnePvJQvIFuE+L3WJ1vVhUv7N1Cw==",
+      "threadId": "01a1d01f-28f6-7242-9519-c62ac8c5ca82",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-17-45-01a1d01f-28f6-7242-9519-c62ac8c5ca82.jsonl",
+      "traceSha256": "9ad85ecd6847e4666e2c772db89cbc2b6008d451749bf1db23b8292d4224475d",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "13263ddcc6020cf644d11bc62dfc809a27d6a471e59ef46ca4f2f2d0c44b261b",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "36ee41fe195133105d22dde17b51fae87701c29ccbed67a58c56ce3d90210f85",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "476375ac8397a515a6ee68b577cd7e521fe39a1856e2f226e1f2e8bad4f26ad0",
+        "before.json": "7ed7e54a1c61a876a183ad769af5cb9cad9f119cf75fe1ebce0e63877d596b26",
+        "after.json": "7ed7e54a1c61a876a183ad769af5cb9cad9f119cf75fe1ebce0e63877d596b26",
+        "events.jsonl": "cda638d53de07a13b230eece05b0c6e527e44bdebab177e71025afb18f8dd33e",
+        "report.json": "90d20bd9c0a7a432d0d89b907e4b09ce3df521fbd2ec270a358da31f83967aa3",
+        "final.txt": "079f238545783e1599e4456796801ffde4c2021bae0880caafd26f262e1543f3"
+      },
+      "changed": [],
+      "checkpointEvents": 0,
+      "checkpointChainVerified": null,
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 534,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Detected placeholder-only index as absent for standard despite minimal rigor; stopped without baseline or architecture, checked destination exists and did not invoke it. Distinguished qualityAssessed:false inventory from readiness. All534 originals byte-identical, zero new files/events, no spawn; actual reads inspected.",
+      "children": [],
+      "zeroWrites": true,
+      "limitations": [
+        "Selected fixture behavior only; full original/extended and desktop matrix pending."
+      ]
+    },
+    {
+      "scenario": "missing-engine",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-KBS8NC",
+      "packageIntegrity": "sha512-wy1CnRlp/AAW0szn27hPlB3jWSJB7D1KLMA+5ceEpcP2HxACJ88AZ82wHwytRvjYkcLhc6vaniq6j9mOQ66wWw==",
+      "threadId": "01a1d022-9b87-7a71-a934-f177764eb2ab",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-21-31-01a1d022-9b87-7a71-a934-f177764eb2ab.jsonl",
+      "traceSha256": "bc0ce2d2b52dd8dc266f989e8115e8fc6dadf5ece2d9e75c08f5c2dc00bad98a",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "13263ddcc6020cf644d11bc62dfc809a27d6a471e59ef46ca4f2f2d0c44b261b",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "36ee41fe195133105d22dde17b51fae87701c29ccbed67a58c56ce3d90210f85",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "8ddab82458539bd29829ea4da6e72650fa707eba707da6875df89460448d6b10",
+        "before.json": "a4dc59215583e9f92ed8509e68c1aa39aa7af40048c27b91cafdcacb20678b5c",
+        "after.json": "a4dc59215583e9f92ed8509e68c1aa39aa7af40048c27b91cafdcacb20678b5c",
+        "events.jsonl": "c32a3b0c4b87f56bc7d7da34329adfbc67461d3c3744d78ba616a8fbf46b925f",
+        "report.json": "9d447289d5ab41dfc84f9c32ba055fea05cc6af2c8453879c61d0497416b2ad1",
+        "final.txt": "fbb61afd7e71d48535c32980f736a97d5439ad34e0784a27553027173bd6aee0"
+      },
+      "changed": [],
+      "checkpointEvents": 0,
+      "checkpointChainVerified": null,
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 536,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Actual engine_values returned name/version/language unset; did not infer Web from existing reference paths, stopped and asked target prerequisite without changing settings. All536 originals unchanged, zero new artifacts/events, no baseline/child/downstream; read-only actual tools inspected.",
+      "children": [],
+      "zeroWrites": true,
+      "limitations": [
+        "Selected fixture behavior only; full original/extended and desktop matrix pending."
+      ]
+    },
+    {
+      "scenario": "focus-no-target",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-jndGQl",
+      "packageIntegrity": "sha512-wy1CnRlp/AAW0szn27hPlB3jWSJB7D1KLMA+5ceEpcP2HxACJ88AZ82wHwytRvjYkcLhc6vaniq6j9mOQ66wWw==",
+      "threadId": "01a1d024-33a0-7fa3-80f8-5490d311bc8c",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-23-15-01a1d024-33a0-7fa3-80f8-5490d311bc8c.jsonl",
+      "traceSha256": "69deb6d11db71f415adaecb76d9c53f8a7f21fd3325fcda848769797e7adb10b",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "13263ddcc6020cf644d11bc62dfc809a27d6a471e59ef46ca4f2f2d0c44b261b",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "36ee41fe195133105d22dde17b51fae87701c29ccbed67a58c56ce3d90210f85",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "b1f58e10b16ed3db79f8e4175f519fb0a1a2ce882a1d2cc72cc3a9ed7af5fb11",
+        "before.json": "8c1fca2a01824d6c4937d48fe9330516095d88751193da5b97f8245f3c062e84",
+        "after.json": "8c1fca2a01824d6c4937d48fe9330516095d88751193da5b97f8245f3c062e84",
+        "events.jsonl": "c4581ef3d683a57dc2c187afa566b89dc53faf4abf178b98c26da6a956cd4f2a",
+        "report.json": "366f62dd977cade549ebe3d6cbcd628c57d8f466c81c2acdb85782677817da2d",
+        "final.txt": "15c9827f25bb8076d91487b29c8040573607d6d4752d3c2f45e335a3b2a80c97"
+      },
+      "changed": [],
+      "checkpointEvents": 0,
+      "checkpointChainVerified": null,
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 536,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Focus layers without existing architecture stopped at actual missing target; offered full walkthrough or defer and waited rather than expanding scope. Preserved actual full workflow/settled layers, Accepted versus Proposed and unknown browser evidence. All536 originals unchanged, no artifacts/checkpoints or child dispatch; raw tools inspected.",
+      "children": [],
+      "zeroWrites": true,
+      "limitations": [
+        "Selected fixture behavior only; full original/extended and desktop matrix pending."
+      ]
+    },
+    {
+      "scenario": "declined-write",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-0kpcXP",
+      "packageIntegrity": "sha512-wy1CnRlp/AAW0szn27hPlB3jWSJB7D1KLMA+5ceEpcP2HxACJ88AZ82wHwytRvjYkcLhc6vaniq6j9mOQ66wWw==",
+      "threadId": "01a1d025-e8ac-7331-84c5-271537fafb69",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-25-07-01a1d025-e8ac-7331-84c5-271537fafb69.jsonl",
+      "traceSha256": "835b564b95c66daaef3d052fa2aa0d95dbc18ce7eea151b5364fd25c01e4f8f0",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "13263ddcc6020cf644d11bc62dfc809a27d6a471e59ef46ca4f2f2d0c44b261b",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "36ee41fe195133105d22dde17b51fae87701c29ccbed67a58c56ce3d90210f85",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "58e72aaf1d8cef5f9211c126487668173c0c5af3e6bc1098ccc6428caf02160b",
+        "before.json": "f1bd7321019c3f6626705228e8455455dd7907dfcb6d549a8098bb7df478b1f1",
+        "after.json": "f1bd7321019c3f6626705228e8455455dd7907dfcb6d549a8098bb7df478b1f1",
+        "events.jsonl": "086f87c1d1dc6a7773636b379e19d494c6eb6cce61309927f10156e2ef908a78",
+        "report.json": "fb39f3b0f171856d092dc888c580f5be076b6fa82ca1f55ecace098ccb986817",
+        "final.txt": "9f5c935c69d03497326d1e9092f2002c69e9c9258bf369efcdd2ac4f565ab1de"
+      },
+      "changed": [],
+      "checkpointEvents": 0,
+      "checkpointChainVerified": null,
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 536,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Explicit declined authoring respected: inspected configured prerequisites and relevant modules read-only, explained how to resume without authoring a baseline/architecture/checkpoint. All536 originals unchanged, zero additions, no children or downstream. Current refusal remains active; no invented consent or accepted concerns.",
+      "children": [],
+      "zeroWrites": true,
+      "limitations": [
+        "Selected fixture behavior only; full original/extended and desktop matrix pending."
+      ]
+    },
+    {
+      "scenario": "negative",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-0AVSp3",
+      "packageIntegrity": "sha512-wS0zp8GGr/Ky8TG9FBiGOZnheO0ob5d1vjTTW6dvn2eCyalJeuocmYATs/CnePvJQvIFuE+L3WJ1vVhUv7N1Cw==",
+      "threadId": "01a1d01e-0998-7dd2-8a0d-d79f662625c1",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-16-31-01a1d01e-0998-7dd2-8a0d-d79f662625c1.jsonl",
+      "traceSha256": "5ad0c0b90e140a7489e1a0199f70d28fb81b1c8bf34485132b9f83a8345ad04b",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "13263ddcc6020cf644d11bc62dfc809a27d6a471e59ef46ca4f2f2d0c44b261b",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "36ee41fe195133105d22dde17b51fae87701c29ccbed67a58c56ce3d90210f85",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "272415c166999bca82981a1bd9f817115a78da64f97a029b10417d99a60bc6cb",
+        "before.json": "61f103ae53f5a3cdd2dbc8ca17a936f11e79526ed52dc31facef7e0e33fa12f8",
+        "after.json": "61f103ae53f5a3cdd2dbc8ca17a936f11e79526ed52dc31facef7e0e33fa12f8",
+        "events.jsonl": "38585db509834c9bab0050d19f0d84fee0cd8404e603d30fe9bdd0f0eaca3904",
+        "report.json": "4c478ba549bc7a8c7db9c0c3805483477f9a06f10af22b6a9732a19b1ef7a594",
+        "final.txt": "4107f0998f477a61c6f3382d1b69fac26ac22837e81d26068dfeffcd94389fb8"
+      },
+      "changed": [],
+      "checkpointEvents": 0,
+      "checkpointChainVerified": null,
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 519,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Negative trigger: read only src/count.js and correctly explained count - 1 yields2 for3; did not read architecture Skill or route/plan/spawn. All519 original files unchanged with zero additions or checkpoint events.",
+      "children": [],
+      "zeroWrites": true,
+      "limitations": [
+        "Selected fixture behavior only; full original/extended and desktop matrix pending."
+      ]
+    }
+  ],
+  "initialAttempts": [
+    {
+      "scenario": "standard-guided",
+      "status": "FAIL",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-RAiArj",
+      "packageIntegrity": "sha512-Q+uKw3+twrxV6kKOretdMV7PypKSK4nddNwU5SBUM5DJFjxwnO8/J+M75+CFuYQIJe6rbaHBdu3kBtTDupeHYA==",
+      "scopeOfResult": "Explicitly read the unrelated Networking module despite no networking system. Actual architecture/source-preservation/checkpoint checks otherwise passed for this small fixture; no claim of long-document section-scan coverage.",
+      "threadId": "01a1cff8-299d-79b2-8003-5e07ea28425d",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T21-35-09-01a1cff8-299d-79b2-8003-5e07ea28425d.jsonl",
+      "traceSha256": "343bcd6cedcbc42a518fb27fe0188e957d1964a3545432e42cc63a036b7a3659",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "4419abaa38057707256ff91d01d4299b97459b3e03281c9eff74af3d027841bc",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "200c6d4d1318bd844ac7b6ebd2f2ec525b591851af24dcefc0741ba786675aa3",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "e953c5a65a37b4f00ffba087e7ee0dbf0a558448d9374ad36377ccd9bd04c603",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8139f57e8ba424ad0ba1b8ab57c0d356c7d3a7252b16a61042c4234cdcb66019",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "c6e7bc6f6cb65f319410d02c5a91c7e9c884233ba5906c84586373176d880ce7",
+        "before.json": "3738681ac6a3e59dc163e58aab3c8abb027772cedab6309b7c6ebb654646c9b0",
+        "after.json": "4a0a42105576c74ff69e4a10972446a9fa45ab17c5771aa0aece1916b81bf062",
+        "events.jsonl": "3d5b66a0335da091af2ef6961a281d22c3c9300d97004e6eae1577db15d50abe",
+        "report.json": "ec88aee9315ecde68ae1784c0df43fbdc14e0960f3bfffd88b44e948aa550aa9",
+        "final.txt": "ff6cf778c1f1461518c0ae1929333b269649d7299dfa8512002deb54aa7962b1"
+      },
+      "architectureSha256": "3cbdacde1d964ff65924386fa16c8fb4e4f744a6146f267873d3c8aaed50f2ac",
+      "preservedRegularFiles": 534,
+      "changed": [],
+      "checkpointEvents": 5,
+      "checkpointChainVerified": true,
+      "children": [],
+      "temporaryTrustProfileRemoved": true,
+      "failureEvidence": "Third parent exec directly cats docs/engine-reference/web/modules/networking.md with relevant modules; final architecture explicitly states Networking was inspected and unused.",
+      "limitations": [
+        "Small GDD/ADR files were read whole; this does not establish heading-bounded reads for large documents.",
+        "536 original file count in native final includes its broader snapshot; host regular-file denominator is 534."
+      ],
+      "checkpointMilestones": [
+        {
+          "recordedAt": "2026-11-12T13:38:19.689Z",
+          "checkpointHash": "71610ba5532d3691338f08942c8f29540f67c6a01b7b83040dd9270d25a8f640",
+          "previousHash": "missing",
+          "task": "**Current task:** Parcel Counter standard master architecture \u2014 context settled (Phase 0)"
+        },
+        {
+          "recordedAt": "2026-11-12T13:38:57.164Z",
+          "checkpointHash": "ee2870f07e6b580e498fa06129c8ab297ad2d7a65a6d3b6c81945af11e810ac1",
+          "previousHash": "71610ba5532d3691338f08942c8f29540f67c6a01b7b83040dd9270d25a8f640",
+          "task": "**Current task:** Parcel Counter standard master architecture \u2014 system layers settled (Phase 1)"
+        },
+        {
+          "recordedAt": "2026-11-12T13:40:03.142Z",
+          "checkpointHash": "aea1e34e4f00b68e2095a0ba04ae51eacfa77a76b2c796326ef3193981f141f5",
+          "previousHash": "ee2870f07e6b580e498fa06129c8ab297ad2d7a65a6d3b6c81945af11e810ac1",
+          "task": "**Current task:** Parcel Counter standard master architecture \u2014 ADR audit recorded (Phase 5)"
+        },
+        {
+          "recordedAt": "2026-11-12T13:40:55.724Z",
+          "checkpointHash": "6be9e1517374b45addcd44ab9a4919ae81663f085744f2e52860b865bef54f11",
+          "previousHash": "aea1e34e4f00b68e2095a0ba04ae51eacfa77a76b2c796326ef3193981f141f5",
+          "task": "**Current task:** Parcel Counter standard master architecture \u2014 ADR priorities settled for draft (Phase 6)"
+        },
+        {
+          "recordedAt": "2026-11-12T13:44:27.730Z",
+          "checkpointHash": "2cbe10f3dde7195768728dec9c61363f7c02e386f09011f0a853a278ba27c990",
+          "previousHash": "6be9e1517374b45addcd44ab9a4919ae81663f085744f2e52860b865bef54f11",
+          "task": "**Current task:** Parcel Counter standard master architecture v1 authored as DRAFT; document task complete."
+        }
+      ],
+      "writeAudit": {
+        "mainContentWrites": 1,
+        "mainWrite": "2026-11-12T13:42:09.980Z",
+        "laterUpdates": "Two Solo gate-status lines only; version remains 1.",
+        "statusWrite": "2026-11-12T13:43:10.631Z"
+      }
+    },
+    {
+      "scenario": "full-native",
+      "status": "FAIL",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-ei2DWt",
+      "packageIntegrity": "sha512-Q+uKw3+twrxV6kKOretdMV7PypKSK4nddNwU5SBUM5DJFjxwnO8/J+M75+CFuYQIJe6rbaHBdu3kBtTDupeHYA==",
+      "threadId": "01a1cff8-277f-7f71-bf16-4c76ad407f95",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T21-35-09-01a1cff8-277f-7f71-bf16-4c76ad407f95.jsonl",
+      "traceSha256": "f16cddd26df733fdd735f71c44a677e63eb1d3a426bf7e901d7dac54c87c186f",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "4419abaa38057707256ff91d01d4299b97459b3e03281c9eff74af3d027841bc",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "200c6d4d1318bd844ac7b6ebd2f2ec525b591851af24dcefc0741ba786675aa3",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "e953c5a65a37b4f00ffba087e7ee0dbf0a558448d9374ad36377ccd9bd04c603",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8139f57e8ba424ad0ba1b8ab57c0d356c7d3a7252b16a61042c4234cdcb66019",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "84d1855007c8cffc2ea68731d6772c8a205f0aea6843e99cbf4705b9f013c72b",
+        "before.json": "13bde05422f0215008a8617ab6b1839716115479120c686ca7080371682c899a",
+        "after.json": "1b748d1dc6b5e05c3168564a31ab0627dd02200f234fa4d8dce4583e34abcb72",
+        "events.jsonl": "d1b2b39e8444ba7cf425d6ae1b49c29ac37f1936d2d74844d669da0463af31e4",
+        "report.json": "ef17f0d03f5e7a2a14895b7f862231cf730c2950d9b1da834991a8928109ce13",
+        "final.txt": "ca35fa2b71b60b872d84e858336ad445744f065c336c9dff9ec4d9f79c12c9d7"
+      },
+      "architectureSha256": "7575e765e873f7dde5a9b00d056ebe5e782cf313d2d0e7c95b272a5a2b7b284b",
+      "changed": [],
+      "checkpointEvents": 11,
+      "checkpointChainVerified": true,
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 534,
+      "temporaryTrustProfileRemoved": true,
+      "checkpointMilestones": [
+        {
+          "recordedAt": "2026-11-12T13:37:29.663Z",
+          "checkpointHash": "a527a95b21c8f87542d8a534710e3e517d2d94025886358e493d147bef85c119",
+          "previousHash": "missing",
+          "task": "**Current task:** Create Parcel Counter master architecture; Phase 1 layer map settled from owner sources."
+        },
+        {
+          "recordedAt": "2026-11-12T13:38:32.067Z",
+          "checkpointHash": "ffeac7cb9620691f84a840a1d7b31fc1bf3313e8ac221edfa78c1ec789670fde",
+          "previousHash": "a527a95b21c8f87542d8a534710e3e517d2d94025886358e493d147bef85c119",
+          "task": "**Current task:** Create Parcel Counter master architecture; Phase 2 module ownership settled."
+        },
+        {
+          "recordedAt": "2026-11-12T13:38:32.265Z",
+          "checkpointHash": "46c47512820f749d41c96ee3bd2f7164ae53ed785d0cdafba933e995dbb6ffd5",
+          "previousHash": "ffeac7cb9620691f84a840a1d7b31fc1bf3313e8ac221edfa78c1ec789670fde",
+          "task": "**Current task:** Create Parcel Counter master architecture; Phase 3a frame/command path settled."
+        },
+        {
+          "recordedAt": "2026-11-12T13:38:32.450Z",
+          "checkpointHash": "ebab29816313256683c81315e2f6051d064afe253e64428f7786589168803e40",
+          "previousHash": "46c47512820f749d41c96ee3bd2f7164ae53ed785d0cdafba933e995dbb6ffd5",
+          "task": "**Current task:** Create Parcel Counter master architecture; Phase 3b result/event path settled."
+        },
+        {
+          "recordedAt": "2026-11-12T13:38:32.631Z",
+          "checkpointHash": "98975079a18a720d3ab34649ae7f62a79181e0905b8a829c6e92b0370cb52520",
+          "previousHash": "ebab29816313256683c81315e2f6051d064afe253e64428f7786589168803e40",
+          "task": "**Current task:** Create Parcel Counter master architecture; Phase 3c persistence path explicitly not applicable."
+        },
+        {
+          "recordedAt": "2026-11-12T13:38:32.812Z",
+          "checkpointHash": "8d0c8bde639e99c47a3b3f30af2eb263ffdf09ee2c972ac845eea344c5c3f242",
+          "previousHash": "98975079a18a720d3ab34649ae7f62a79181e0905b8a829c6e92b0370cb52520",
+          "task": "**Current task:** Create Parcel Counter master architecture; Phase 3d initialization/failure flow settled."
+        },
+        {
+          "recordedAt": "2026-11-12T13:38:32.993Z",
+          "checkpointHash": "dd892dca0c15cb43915527a632cb8d7f9ca506d15e80f0b871964458624cbd25",
+          "previousHash": "8d0c8bde639e99c47a3b3f30af2eb263ffdf09ee2c972ac845eea344c5c3f242",
+          "task": "**Current task:** Create Parcel Counter master architecture; Phase 4 API boundaries settled."
+        },
+        {
+          "recordedAt": "2026-11-12T13:39:32.677Z",
+          "checkpointHash": "13b99a170735e9dda590494ca864de4de2d66d5b5a178557c842c2aec6ee0a94",
+          "previousHash": "dd892dca0c15cb43915527a632cb8d7f9ca506d15e80f0b871964458624cbd25",
+          "task": "**Current task:** Phase 5 ADR audit settled"
+        },
+        {
+          "recordedAt": "2026-11-12T13:39:32.868Z",
+          "checkpointHash": "d3276d83220ac31b6cf74cfa9d69d0e210dab7b05e8d898b10cd1e7ac6fd367b",
+          "previousHash": "13b99a170735e9dda590494ca864de4de2d66d5b5a178557c842c2aec6ee0a94",
+          "task": "**Current task:** Phase 6 missing ADR priorities settled"
+        },
+        {
+          "recordedAt": "2026-11-12T13:42:55.831Z",
+          "checkpointHash": "986dc1c93770b56266d131bb8f8f9c1c2f0fb983c401d209224be41ca772593a",
+          "previousHash": "d3276d83220ac31b6cf74cfa9d69d0e210dab7b05e8d898b10cd1e7ac6fd367b",
+          "task": "**Current task:** Phase 7 master written; independent reviews next."
+        },
+        {
+          "recordedAt": "2026-11-12T13:45:52.197Z",
+          "checkpointHash": "3be9e322aa145630d46f0ac96985db3cf6637e01cce60cc324daadd47c72804b",
+          "previousHash": "986dc1c93770b56266d131bb8f8f9c1c2f0fb983c401d209224be41ca772593a",
+          "task": "**Current task:** Document task stopped after architecture write and both native post-write reviews."
+        }
+      ],
+      "children": [
+        {
+          "id": "01a1cfff-8fcd-71a3-933d-314ec5a0d0d8",
+          "role": "game-studio-technical-director",
+          "agentPath": "/root/td_architecture",
+          "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T21-43-14-01a1cfff-8fcd-71a3-933d-314ec5a0d0d8.jsonl",
+          "traceSha256": "dcd062457eede6d2c5e01f367b3de5ebfe68ddcc067d01372c4b42e6a95c3f54",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "verdict": "CONCERNS",
+          "actualToolCallsReadOnly": true,
+          "readOwnGate": true,
+          "finalMessageSha256": "7828b5dc2e1bd557fa6a3d009044d628858c2cf71334383096795bb79578410b",
+          "reviewedArchitectureSha256": "454f62183b231135ff2e11897f68d24c71e67d88a7cc5b8e3541ff66d90dc6e5",
+          "startedAt": 1794490994,
+          "completedAt": 1794491090
+        },
+        {
+          "id": "01a1cfff-d885-7272-bb46-dc515dd0e9f4",
+          "role": "game-studio-lead-programmer",
+          "agentPath": "/root/lp_feasibility",
+          "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T21-43-33-01a1cfff-d885-7272-bb46-dc515dd0e9f4.jsonl",
+          "traceSha256": "c2fa8641bbfa6950416b13a0f44ba65f4b10afccd28abf1028727e51a13ddf97",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "verdict": "CONCERNS",
+          "actualToolCallsReadOnly": true,
+          "readOwnGate": true,
+          "finalMessageSha256": "5dc5ef9801c3d7973e9febfab5e6f0ea17cd0b54da47b520f3b1e9402424ca45",
+          "reviewedArchitectureSha256": "454f62183b231135ff2e11897f68d24c71e67d88a7cc5b8e3541ff66d90dc6e5",
+          "startedAt": 1794491013,
+          "completedAt": 1794491071
+        }
+      ],
+      "scopeOfResult": "FAIL: parent read irrelevant Networking module; a combined scope requirement received full Accepted ADR coverage despite unsupported obligations. Actual native role dispatch, source preservation and transactional chain were verified separately.",
+      "failureEvidence": [
+        "Early parent read docs/engine-reference/web/modules/*.md, including irrelevant Networking.",
+        "TR-round-state-013 combines exclusions; ADR-0001 does not explicitly or necessarily support every obligation (for example no scoring), yet its coverage row is Accepted and Required New ADRs says none. Pure transitions/timing decisions can imply some constraints; absence of identical words alone was not treated as a gap. Both native reviews failed to correct this coverage overstatement."
+      ],
+      "roleAudit": {
+        "nativeRoles": true,
+        "bothDispatchedBeforeFirstWait": true,
+        "dispatchTimes": [
+          "2026-11-12T13:43:14.625Z",
+          "2026-11-12T13:43:33.236Z"
+        ],
+        "firstWait": "2026-11-12T13:44:49.662Z",
+        "inheritedModelEffortApprovalSandbox": true,
+        "parentReadGateDefinitions": false,
+        "concernsAccepted": false,
+        "documentRemainsDraft": true
+      },
+      "writeAudit": {
+        "mainContentWrites": 1,
+        "mainWrite": "2026-11-12T13:42:38.618Z",
+        "laterUpdates": "Document Status only; version remains 1. Parent guarded prior SHA and exact unchanged suffix. Independent comparison confirms technical content preserved.",
+        "statusWrite": "2026-11-12T13:45:51.927Z"
+      },
+      "limitations": [
+        "Small GDD/ADR whole-file reads do not establish large-document heading-bounded scanning.",
+        "Several already-settled phase/flow checkpoints were saved sequentially within one tool invocation; each is a separate verified transaction before the main artifact write.",
+        "Synthetic engine reference gaps remain unverified; reviewers assessed the document, not browser execution or runtime performance."
+      ]
+    },
+    {
+      "scenario": "full-native",
+      "status": "FAIL",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-TP7Wqs",
+      "packageIntegrity": "sha512-I41cWcVugx+IJkJDoZ+UAA2L7aVUJI8GFOkY3UQl3lE6jcCQWfYdnpEWKdDiRD4BqKnuu9chmYcTmHX5FsWLpA==",
+      "sameRequestAsInitial": true,
+      "requestSha256": "bed6ec7cbcbb512e97df8ed586f2450c7eac0134d61b75ebbc1b1e79b206c632",
+      "threadId": "01a1d009-3c07-7ff0-90db-28231aee9fb8",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T21-53-48-01a1d009-3c07-7ff0-90db-28231aee9fb8.jsonl",
+      "traceSha256": "c66b106a54da5fca6d2be13be54e534a36214d613d8decab15eb3961e6cbe932",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "3e2f459b7f315254800ab2e2816fb2d13b1b4d7210539dd340ce4b7545456c41",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "e953c5a65a37b4f00ffba087e7ee0dbf0a558448d9374ad36377ccd9bd04c603",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8139f57e8ba424ad0ba1b8ab57c0d356c7d3a7252b16a61042c4234cdcb66019",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "2fd044cd69e13d19b4088f270dcaf8bd9a3987277eb81b672ea17fa9d66893ef",
+        "before.json": "fe92a5e9e7c446afb55fc84f20afe91dd87c30ee5f704c7870fa3df6745462ca",
+        "after.json": "1a65fdbab041d9184e1c382244be4cb2dfbcd85cb8b638af669ac618c4ad5597",
+        "events.jsonl": "08536dbc5dac026c61b81e310f341fcd1c081345ddf4cf423b8d2d6dfa98de1e",
+        "report.json": "71b906684e7cd5cba49a632a238e22ce85cfdd0f703136877e5614470c0297e2",
+        "final.txt": "37cbc5ecaff7281f425b692401aa016e7c8c41743a1e1b932393157eb831b15c"
+      },
+      "architectureSha256": "d6baf97390f377a15b7b03be3be85b91874bed08653f4ebdfd2a3ee6fcce7ac0",
+      "changed": [],
+      "checkpointEvents": 12,
+      "checkpointChainVerified": true,
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 534,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Fresh same-input second attempt. Module-read and compound full-coverage failures corrected; independent manual audit found a partial-support row misclassified GAP and backfilled phase checkpoints after the full scratch draft.",
+      "failureEvidence": [
+        "TR-content-003 combines Content not reading Round State or Presentation. ADR-0001 says no game system depends on Presentation, necessarily supporting the latter. The row says GAP / no ADR while TR-round-state-011 uses the same evidence as Covered; correct classification would retain partial support and identify only remaining unsupported obligations.",
+        "Complete scratch architecture was written at 13:59:11.492Z, before the first checkpoint at 14:00:05.674Z. At 14:00:16\u201318 the model saved pre-composed phase/flow milestones in a loop. These are valid transactions before the main file write, but backfill phases rather than recording each section as it settles.",
+        "Used overwrite-capable fixed shared scratch paths /private/tmp/parcel-master-architecture.md and /private/tmp/parcel-checkpoint.mjs without exclusive allocation. No actual cross-run collision observed; this exposes a real parallel-writer ownership risk."
+      ],
+      "children": [
+        {
+          "id": "01a1d00f-ef58-7f03-8acb-b3157cd04cea",
+          "role": "game-studio-technical-director",
+          "agentPath": "/root/td_architecture",
+          "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-01-07-01a1d00f-ef58-7f03-8acb-b3157cd04cea.jsonl",
+          "traceSha256": "5fbe7aa8299688c29f25c81c6673f202510d2a8a67b8b1326a57b0002dcb462b",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "verdict": "REJECT",
+          "actualToolCallsReadOnly": true,
+          "readOwnGate": true,
+          "finalMessageSha256": "60fc117ad586b363e14c12d3be1e2b9215e757b1e5f13c46abd8bd7949476f3e",
+          "reviewedArchitectureSha256": "350612d7bda45cf967a71dc6b0670cc770ffe5f7759ebe399fee0131af3c17e3",
+          "startedAt": 1794492067,
+          "completedAt": 1794492122
+        },
+        {
+          "id": "01a1d010-2ff4-78f1-9463-c32c539dd8bd",
+          "role": "game-studio-lead-programmer",
+          "agentPath": "/root/lp_feasibility",
+          "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-01-24-01a1d010-2ff4-78f1-9463-c32c539dd8bd.jsonl",
+          "traceSha256": "22d28ae590f53c5b0f50642c64325c949e4d3f22848761d2b10cc91e054858df",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "verdict": "CONCERNS",
+          "actualToolCallsReadOnly": true,
+          "readOwnGate": true,
+          "finalMessageSha256": "9dc54fe5cee4d5e6aa4243c00ce1c39479e6099a7ede000ce1425a6799f255ae",
+          "reviewedArchitectureSha256": "350612d7bda45cf967a71dc6b0670cc770ffe5f7759ebe399fee0131af3c17e3",
+          "startedAt": 1794492084,
+          "completedAt": 1794492158
+        }
+      ],
+      "roleAudit": {
+        "nativeRoles": true,
+        "bothDispatchedBeforeFirstWait": true,
+        "dispatchTimes": [
+          "2026-11-12T14:01:07.657Z",
+          "2026-11-12T14:01:24.197Z"
+        ],
+        "firstWait": "2026-11-12T14:02:33.072Z",
+        "inheritedModelEffortApprovalSandbox": true,
+        "parentReadGateDefinitions": false,
+        "concernsAccepted": false,
+        "documentRemainsDraft": true,
+        "observedVerdicts": [
+          "TD-ARCHITECTURE: REJECT",
+          "LP-FEASIBILITY: CONCERNS"
+        ]
+      },
+      "writeAudit": {
+        "mainContentWrites": 1,
+        "mainWrite": "2026-11-12T14:00:48.526Z",
+        "statusWrite": "2026-11-12T14:03:17.994Z",
+        "laterUpdates": "Only Document Status; version remains 1. Independent reconstruction and technical suffix comparison performed."
+      },
+      "verifiedSubchecks": [
+        "All five source GDDs / 22 provisional IDs retained; full layers, ownership, four flows and API contracts inspected.",
+        "Selected Core/UI/Input after actual design discovery; no Networking contents read.",
+        "TR-round-state-013 now Partial and unsupported obligations carried to required follow-up.",
+        "534 original regular files unchanged, no registry/stage/ADR/source writes.",
+        "Actual before-coding rejection retained; no invented acceptance or readiness.",
+        "12 checkpoint transactions form one expected-hash chain with exact backups, but phase chronology fails separately."
+      ],
+      "limitations": [
+        "Small-file whole reads do not prove long-document heading scans.",
+        "Native final uses 101 non-node_modules originals; host independent denominator is 534.",
+        "Actual reviewers did not catch the GAP/Partial inconsistency; real-role identity is not sufficient for a semantic pass.",
+        "No real browser, engine, performance or human play acceptance."
+      ]
+    },
+    {
+      "scenario": "full-native",
+      "status": "FAIL",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-j4YbNN",
+      "packageIntegrity": "sha512-wS0zp8GGr/Ky8TG9FBiGOZnheO0ob5d1vjTTW6dvn2eCyalJeuocmYATs/CnePvJQvIFuE+L3WJ1vVhUv7N1Cw==",
+      "requestSha256": "bed6ec7cbcbb512e97df8ed586f2450c7eac0134d61b75ebbc1b1e79b206c632",
+      "sameRequestAsInitial": true,
+      "threadId": "01a1d01c-03e4-7131-8675-187d16bd0505",
+      "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-14-19-01a1d01c-03e4-7131-8675-187d16bd0505.jsonl",
+      "traceSha256": "90de85a37287cba25862eb8670f8eddd41e7cf90daf2dccde9767fc79b652006",
+      "nativeExitCode": 0,
+      "installedHashes": {
+        ".agents/skills/game-studio-create-architecture/SKILL.md": "d8127ed006fc1c75f54b3e298b5ae16d8b12926b1b7374d95821df8b439542ea",
+        ".agents/skills/game-studio-create-architecture/references/0-load-context.md": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+        ".agents/skills/game-studio-create-architecture/references/1-layers.md": "e86e12d9f40c2b10410d5d904a9e7d408dae586250d3b9a4e0a0dd8f25620bd0",
+        ".agents/skills/game-studio-create-architecture/references/2-module-ownership.md": "959309a0d9918bd93878fdacf62a3a2b034c148bd47dc1bd35d0ce17ef398076",
+        ".agents/skills/game-studio-create-architecture/references/3-data-flow.md": "1dc0818748877ec93a455b4d6c9bba3077841e838482d9a603b2bf4653fcec0c",
+        ".agents/skills/game-studio-create-architecture/references/4-api-boundaries.md": "587d1c62746c145d628687c26dc1101e3168cbc699921c9928e5ec1051549f0b",
+        ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md": "13263ddcc6020cf644d11bc62dfc809a27d6a471e59ef46ca4f2f2d0c44b261b",
+        ".agents/skills/game-studio-create-architecture/references/6-missing-adrs.md": "59ffffab8ee5ce6f7e1422acd8af4d21aa246439ae15c139288a490fc3dac502",
+        ".agents/skills/game-studio-create-architecture/references/7-write.md": "36ee41fe195133105d22dde17b51fae87701c29ccbed67a58c56ce3d90210f85",
+        ".agents/skills/game-studio-create-architecture/references/8-handoff.md": "4654e410c574347532f2a9b91e988c72920a2adaee1f794be9a0b945d0a1f820",
+        ".agents/skills/game-studio-create-architecture/references/persistence.md": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/docs/director-gates/td-architecture.md": "84b2b43e835b90f1bbccca27865e40dc1d94b81e26045f7d3fb120fda9f69be6",
+        "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d"
+      },
+      "artifactHashes": {
+        "fixture.json": "89906098d92e8e4f185e555d995d11e69a8a13e99cf4a32963ea01b60faf2184",
+        "before.json": "57678775d73d61338e2ed3e856e09f349da9394d2a55e292e8267e56d703a944",
+        "after.json": "09b052c40b5c7af109fcf47defedd124edda3decdaea36380faed5001a837aa3",
+        "events.jsonl": "c85a2d9ff08d89423b9deade6a379ad9ec4a4ad06422b3279591bb1428f46be2",
+        "report.json": "dd7e961c59a516d1a34322357be2baabd220a46ddd21a8884dd7ba77b84491f3",
+        "final.txt": "984f99fd2f26f4cfe628bf4ddb6a5b9043e2a34501f897a98ed10436bed36eed"
+      },
+      "architectureSha256": "8e7550e1e5284c7481ea05235b99aa78b2c05d8d18ef5a37f8b212ca418a6231",
+      "changed": [],
+      "checkpointEvents": 11,
+      "checkpointChainVerified": true,
+      "wrapperExitCode": 3,
+      "preservedRegularFiles": 534,
+      "temporaryTrustProfileRemoved": true,
+      "scopeOfResult": "Third same-input attempt: native orchestration, selected reads, source preservation, stage-by-stage pre-write checkpoints and exclusive scratch allocation verified. Semantic ADR coverage still overstates support for excluded mechanics; actual child reviews did not correct it.",
+      "failureEvidence": [
+        "TR-round-state-009 says no timers/score/networking/randomness/etc, but marks Covered with no unsupported remainder because the selected scope introduces no such mechanism. ADR-0001 forbids some mechanisms, but does not explicitly or necessarily forbid scoring. Absence of a selected mechanism is not decision support for a prohibition. Source GDD compliance cannot be counted as ADR evidence."
+      ],
+      "children": [
+        {
+          "id": "01a1d022-bfc1-7fe3-a8f6-ec60ee61aa28",
+          "role": "game-studio-technical-director",
+          "agentPath": "/root/td_architecture_review",
+          "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-21-40-01a1d022-bfc1-7fe3-a8f6-ec60ee61aa28.jsonl",
+          "traceSha256": "8f3d0cd34fc691e1b9d6597ad2c1911161ca51b7e4605fc4e735e722c125abf9",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "verdict": "CONCERNS",
+          "actualToolCallsReadOnly": true,
+          "readOwnGate": true,
+          "finalMessageSha256": "b28a50f709eb7ea7b4f01132b3ee4111c8be3220d91672aa6a4246e2957630a7",
+          "reviewedArchitectureSha256": "959191841259f5ec6d8adcd8e551a26df773e371770b753e4feb95df1991e595",
+          "startedAt": 1794493300,
+          "completedAt": 1794493374
+        },
+        {
+          "id": "01a1d022-f9db-7791-994b-a60409987031",
+          "role": "game-studio-lead-programmer",
+          "agentPath": "/root/lp_feasibility_review",
+          "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T22-21-55-01a1d022-f9db-7791-994b-a60409987031.jsonl",
+          "traceSha256": "f66d809936d9186f71a9270cead30a1be2eec70e6cd508484501323a913b1c61",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "verdict": "CONCERNS",
+          "actualToolCallsReadOnly": true,
+          "readOwnGate": true,
+          "finalMessageSha256": "53cd7eea6b273492b3c2c4b82bfd05b41cbbe17501ae18c50e5cff3b8443a419",
+          "reviewedArchitectureSha256": "959191841259f5ec6d8adcd8e551a26df773e371770b753e4feb95df1991e595",
+          "startedAt": 1794493315,
+          "completedAt": 1794493390
+        }
+      ],
+      "roleAudit": {
+        "nativeRoles": true,
+        "bothDispatchedBeforeEitherResultCollected": true,
+        "dispatchTimes": [
+          "2026-11-12T14:21:40.650Z",
+          "2026-11-12T14:21:55.528Z"
+        ],
+        "explicitWaitToolUsed": false,
+        "inheritedModelEffortApprovalSandbox": true,
+        "parentReadGateDefinitions": false,
+        "concernsAccepted": false,
+        "documentRemainsDraft": true,
+        "observedVerdicts": [
+          "TD-ARCHITECTURE: CONCERNS",
+          "LP-FEASIBILITY: CONCERNS"
+        ]
+      },
+      "writeAudit": {
+        "mainContentWrites": 1,
+        "laterUpdates": "Document Status only; independent reconstruction matches both reviewers actual input SHA, version1 retained.",
+        "reviewedArchitectureSha256": "959191841259f5ec6d8adcd8e551a26df773e371770b753e4feb95df1991e595"
+      },
+      "checkpointMilestones": [
+        {
+          "recordedAt": "2026-11-12T14:16:38.703Z",
+          "checkpointHash": "2e2693221d8f4ebabfac022750aa7a13609c9bcc3476eb59ebda6a0e36cb1e6f",
+          "previousHash": "missing",
+          "task": "**Current task:** Complete master architecture; Phase 1 settled; architecture not yet written"
+        },
+        {
+          "recordedAt": "2026-11-12T14:17:13.106Z",
+          "checkpointHash": "11f7a6d2e4d23f743b51051038376af57769f655aa7b17232fc2f654af7329a9",
+          "previousHash": "2e2693221d8f4ebabfac022750aa7a13609c9bcc3476eb59ebda6a0e36cb1e6f",
+          "task": "**Current task:** Complete master architecture; Phase 2 settled; architecture not yet written"
+        },
+        {
+          "recordedAt": "2026-11-12T14:17:13.344Z",
+          "checkpointHash": "d66652459d4904f8031dab151e70f9906afe88593e273e2894b826957e6a551b",
+          "previousHash": "11f7a6d2e4d23f743b51051038376af57769f655aa7b17232fc2f654af7329a9",
+          "task": "**Current task:** Complete master architecture; Phase 3 frame flow settled; architecture not yet written"
+        },
+        {
+          "recordedAt": "2026-11-12T14:17:13.573Z",
+          "checkpointHash": "ccd01781e36af2367dea17bf9084c730a5f18f36df873ccae13c3f9eb4c5bb28",
+          "previousHash": "d66652459d4904f8031dab151e70f9906afe88593e273e2894b826957e6a551b",
+          "task": "**Current task:** Complete master architecture; Phase 3 command flow settled; architecture not yet written"
+        },
+        {
+          "recordedAt": "2026-11-12T14:17:13.807Z",
+          "checkpointHash": "7e15d885a1c71f9d89647c9295589e1041fc58aadad9cfd8799bb3b853eeb4fe",
+          "previousHash": "ccd01781e36af2367dea17bf9084c730a5f18f36df873ccae13c3f9eb4c5bb28",
+          "task": "**Current task:** Complete master architecture; Phase 3 persistence scenario settled; architecture not yet written"
+        },
+        {
+          "recordedAt": "2026-11-12T14:17:14.040Z",
+          "checkpointHash": "92a1488ea06ee1cff28f12155497fd0d30957e90e77651c96c3f6164dece2098",
+          "previousHash": "7e15d885a1c71f9d89647c9295589e1041fc58aadad9cfd8799bb3b853eeb4fe",
+          "task": "**Current task:** Complete master architecture; Phase 3 initialization settled; architecture not yet written"
+        },
+        {
+          "recordedAt": "2026-11-12T14:17:48.779Z",
+          "checkpointHash": "25fd77bf093277713872c76b6d70bbb5e8fee1de544ef923ab3776beab81b45a",
+          "previousHash": "92a1488ea06ee1cff28f12155497fd0d30957e90e77651c96c3f6164dece2098",
+          "task": "**Current task:** Complete master architecture; Phase 4 settled; architecture not yet written"
+        },
+        {
+          "recordedAt": "2026-11-12T14:18:37.496Z",
+          "checkpointHash": "a9f9780ccc8e228063194a6f6c906b37c0e736fb2fa60a655ce92a42554d96e7",
+          "previousHash": "25fd77bf093277713872c76b6d70bbb5e8fee1de544ef923ab3776beab81b45a",
+          "task": "**Current task:** Complete master architecture; Phase 5 ADR audit settled; architecture not yet written"
+        },
+        {
+          "recordedAt": "2026-11-12T14:18:37.736Z",
+          "checkpointHash": "b38e233b7fd969dd4e466a9ee0e8dafde64ef2dc1e5624340ee84e20ada89693",
+          "previousHash": "a9f9780ccc8e228063194a6f6c906b37c0e736fb2fa60a655ce92a42554d96e7",
+          "task": "**Current task:** Complete master architecture; Phase 6 priorities settled; architecture not yet written"
+        },
+        {
+          "recordedAt": "2026-11-12T14:21:22.694Z",
+          "checkpointHash": "757c0d622d940a963556e435ccbe4ed4fd0b6620709015b32fbcb3af4b9e2ca9",
+          "previousHash": "b38e233b7fd969dd4e466a9ee0e8dafde64ef2dc1e5624340ee84e20ada89693",
+          "task": "**Current task:** Complete master architecture; Phase 7 content written; reviews not yet dispatched"
+        },
+        {
+          "recordedAt": "2026-11-12T14:24:20.436Z",
+          "checkpointHash": "4e4024014b89f275682e17069ccb443c0e26f942fd284e0d96f34da1e2575050",
+          "previousHash": "757c0d622d940a963556e435ccbe4ed4fd0b6620709015b32fbcb3af4b9e2ca9",
+          "task": "**Current task:** Master architecture document task finished; draft retained with unresolved reviews"
+        }
+      ],
+      "checkpointAudit": "First absolute-input save rejected UNSAFE_PATH, no false saved claim; corrected project-relative input with fresh hash succeeded. Nine real checkpoints accumulated before one complete master write; first combines settled context/layers, then ownership/four flows/API/audit/priorities; post-write and final review make11. No complete draft existed before the early phase saves. Four already-authorized flow saves still executed sequentially within one tool invocation.",
+      "temporaryArtifactAudit": {
+        "allocation": "Python tempfile.mkdtemp owns /private/tmp/parcel-architecture-d1ap0if8, helpers and notes only within it. Architecture draft applied inline. Checkpoint drafts use mkstemp in project production, project-relative save and finally unlink.",
+        "sharedFixedPathOverwrite": false,
+        "checkpointDraftCleanupVerified": true,
+        "ownedHelperDirectoryRetained": true,
+        "remainingOwnedFiles": [
+          "before.json",
+          "checkpoint.py",
+          "verify.py",
+          "notes.md"
+        ],
+        "allTemporaryArtifactsCleaned": false
+      },
+      "limitations": [
+        "Owned helper/notes directory retained; no claim all temporary artifacts were cleaned.",
+        "Small-file reads do not prove large-document heading-bounded scans.",
+        "Four pre-approved flow saves share one tool invocation; interruption and fresh-session recovery remain untested.",
+        "Native roles missed unsupported ADR coverage; real dispatch does not establish semantic quality.",
+        "Synthetic engine references, no actual browser/API/performance/play evidence."
+      ]
+    }
+  ],
+  "limitations": [
+    "Four failed historical attempts retained: original standard plus three full-native attempts. Current selected scenario status is recorded per case; PASS scope is limited to each reviewed contract and its actual resource hash.",
+    "Synthetic engine references are not official API verification, engine execution or measured game behavior.",
+    "Full original and added acceptance contract is studio-tests/skills/authoring/create-architecture-codex.md; the selected fixture set does not replace it."
+  ],
+  "fixtureSourceSha256": "0155a505c974d3de07a89ce201b93be1044581bca527d60ec414b0f73cd50fa3",
+  "postRunFixes": [
+    {
+      "path": ".agents/skills/game-studio-create-architecture/references/0-load-context.md",
+      "oldSha256": "4419abaa38057707256ff91d01d4299b97459b3e03281c9eff74af3d027841bc",
+      "newSha256": "0ef0233afe5df76bf5cbf0c62ee4c49389f58d9e99416957734c9e452be6c1ec",
+      "change": "Discover filenames, select relevant/ambiguous system domains, then read selected modules; never bulk-read excluded modules for selection.",
+      "nativeRetest": "Relevant-module discovery/selection/read order observed correctly in fresh standard, full and focus traces; other failures tracked separately."
+    },
+    {
+      "path": ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md",
+      "oldSha256": "200c6d4d1318bd844ac7b6ebd2f2ec525b591851af24dcefc0741ba786675aa3",
+      "newSha256": "3e2f459b7f315254800ab2e2816fb2d13b1b4d7210539dd340ce4b7545456c41",
+      "change": "Every substantive obligation requires explicit or necessarily implied decision support; partial rows name unsupported obligations as gaps. Semantic coverage, not word matching.",
+      "nativeRetest": "Compound full-coverage overstatement corrected in standard and full reruns; full exposed a separate GAP-versus-Partial semantic error, recorded in next fix."
+    },
+    {
+      "path": ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md",
+      "oldSha256": "3e2f459b7f315254800ab2e2816fb2d13b1b4d7210539dd340ce4b7545456c41",
+      "newSha256": "13263ddcc6020cf644d11bc62dfc809a27d6a471e59ef46ca4f2f2d0c44b261b",
+      "change": "Write supported/unsupported obligations first; none/some/all support maps to GAP/Partial/Covered without erasing shared/necessarily implied support.",
+      "nativeRetest": "Third full preserved the support/remainder table but still inferred prior ADR coverage from the new architecture omitting mechanisms; independent review confirmed the evidence-source error. Provenance fix follows."
+    },
+    {
+      "path": ".agents/skills/game-studio-create-architecture/references/persistence.md",
+      "oldSha256": "8139f57e8ba424ad0ba1b8ab57c0d356c7d3a7252b16a61042c4234cdcb66019",
+      "newSha256": "8c8f020d0c12c4bacef6ccbf4d72c532e1e20892ce0223b744b31df9b726cc6d",
+      "change": "Save truthful current section/scenario state before proceeding; never backfill earlier phases/next steps from complete draft.",
+      "nativeRetest": "Third full shows actual phase saves before the complete draft/write; prior backfill failure corrected. Four settled flows share one tool invocation; interruption coverage remains pending."
+    },
+    {
+      "path": ".agents/skills/game-studio-create-architecture/references/7-write.md",
+      "oldSha256": "e953c5a65a37b4f00ffba087e7ee0dbf0a558448d9374ad36377ccd9bd04c603",
+      "newSha256": "36ee41fe195133105d22dde17b51fae87701c29ccbed67a58c56ce3d90210f85",
+      "change": "Prefer inline draft; allocate temp drafts via owned mkdtemp directory or exclusive-create file, confirm ownership, never overwrite fixed shared tmp paths, cleanup only owned artifacts.",
+      "nativeRetest": "Third full uses mkdtemp-owned helper directory, inline architecture draft and exclusive checkpoint drafts with finally cleanup. Helper/notes directory retained; complete cleanup not established."
+    },
+    {
+      "path": ".agents/skills/game-studio-create-architecture/references/5-adr-audit.md",
+      "oldSha256": "13263ddcc6020cf644d11bc62dfc809a27d6a471e59ef46ca4f2f2d0c44b261b",
+      "newSha256": "3fb68a577ac9b2b343ce98602d81dbdfb2ae7f81fb8f0d463a71701a6b42276e",
+      "change": "Only actual existing ADR Decision/GDD-linkage supports coverage; GDD obligations or new master choices cannot establish prior ADR evidence. New architectural support stays proposed with formal gap; related obligations may share a record.",
+      "nativeRetest": "roles-unavailable UAPQ8L independently retains compound exclusions Partial with actual existing-ADR citations; minimal 9QUjCK retains 20 GAP with no ADR. These are selected evidence-boundary checks; fourth identical full-native and actual TD/LP evidence provenance still pending."
+    },
+    {
+      "path": ".agents/skills/game-studio-create-architecture/references/7-write.md",
+      "oldSha256": "36ee41fe195133105d22dde17b51fae87701c29ccbed67a58c56ce3d90210f85",
+      "newSha256": "e7fa42a02f8a31dae5200329ce2e007858f61daa465c1e930c11b69ed7b1a85b",
+      "change": "Native TD delegation explicitly requests independent existing-ADR evidence and unsupported-remainder audit, without trusting master labels or new choices. Shared role/gate files unchanged.",
+      "nativeRetest": "roles-unavailable UAPQ8L and minimal 9QUjCK correctly avoid invented TD/LP reviews; latest real TD coverage-source instruction not yet exercised. Fourth identical full-native pending."
+    },
+    {
+      "path": ".agents/skills/game-studio-create-architecture/references/7-write.md",
+      "oldSha256": "e7fa42a02f8a31dae5200329ce2e007858f61daa465c1e930c11b69ed7b1a85b",
+      "newSha256": "154c3bd8922a01f3627446d44fd085152f5d511b3b7d9f6b8245b65adee01e41",
+      "change": "Apply the existing owned temporary-file boundary to every work file, including verification snapshots, rather than only document drafts. mkdtemp or exclusive file creation precedes writing; cleanup limited to owned paths. Minimal 9QUjCK fixed shared verification snapshot remains a failed safety observation.",
+      "nativeRetest": "Pending; active full-solo 8IboQB and legacy-gdd 3reIGm were installed before this wording change. Fourth identical full input authorized only after current runs end and root rebuilds."
+    }
+  ],
+  "revisionAcceptance": {
+    "status": "PASS",
+    "sourceRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-create-architecture-4v2ZjE",
+    "sourceThreadId": "01a1d04e-bd9f-7571-bf8f-fc41a62cacc4",
+    "runner": "toolkit/test/create-architecture-resume-host.mjs",
+    "prompt": "Revise the flagged items first, preserve my settled scope/decisions, do not accept concerns or run downstream work.",
+    "checks": [
+      "Two protection tests passed after initial red: external-symlink/stale-manifest freezing, authorized file/link scope.",
+      "Actual source preflight passed with578 regular files exactly matching original after.json.",
+      "Wrong source run missing-index rejected before profile/model work."
+    ],
+    "originalFullStatus": "FAIL; never replaced by revision outcome",
+    "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-revision-IO3fZL",
+    "sourceTracePrefixSha256": "cd46ac882ed574ee509d3926baf9c0f2e0794b3c3e0cd84d6fbb171e50eaf2d3",
+    "sourceTracePrefixBytes": 989871,
+    "frozenWorkspace": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-revision-IO3fZL/before-workspace",
+    "frozenSourceTrace": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-revision-IO3fZL/source-session-prefix.jsonl",
+    "sourceEvidenceHashes": {
+      "fixture.json": "41fb1782f4abe455f12dd70060a75f9f0ce0e792878506a47c0e1ac868e128bd",
+      "report.json": "3b6ebe05d7349c0f2a33a976f170a28734d1d50705b6f6845397f1416064e549",
+      "events.jsonl": "cc2b7b466475eb62c34229a2c30c200e92a23546683350523c5a08b243c8d5d7",
+      "before.json": "025c7666c67d17473e67e571613e69f0bb4e997efa3d4793aeb4fdc56385147f",
+      "after.json": "b71ebd2a53c8398c376937a30383c98616af5f4ad77edbea8ab9e5827f9118c3",
+      "final.txt": "267be128d68c55ba3acadbc7331ee02b9d5b1f3df478e0c2105d46ec61109bd0"
+    },
+    "scopeOfResult": "Selected formal revision branch passed: same-session natural owner choice corrects the two confirmed document defects, preserves settled architecture and all provisional IDs, and records fresh independent CONCERNS without acceptance or downstream work. This does not replace the original full-native FAIL or establish implementation readiness.",
+    "nativeExit": 0,
+    "wrapperExit": 3,
+    "automaticReportStatus": "not_assessed; manual artifact, trace and checkpoint review recorded here separately",
+    "report": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-revision-IO3fZL/report.json",
+    "resumedTraceSnapshot": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-revision-IO3fZL/resumed-session.jsonl",
+    "resumedTraceSha256": "8dfac652e0a0a5f4064e23ffe9614943e5b53c05f008858df6aa75ae882daa50",
+    "sameSessionAppendOnly": true,
+    "originalEvidencePreserved": true,
+    "frozenWorkspaceVerified": true,
+    "regularFilesBefore": 578,
+    "preservedRegularFiles": 576,
+    "changed": [
+      "production/session-state/active.md",
+      "docs/architecture/architecture.md"
+    ],
+    "added": [
+      "production/session-logs/events/0f83b26fd2e713a80fccb46e8d77ee2a1cba0ca6f6544827b9e766046e8ecd23.json",
+      "production/session-logs/events/54ff9cfaa0d14861d30ab12a9696f78bd6fa82d21e80ee62b146f5f93bd3e763.json",
+      "production/session-logs/events/871dd8a6cf2c88c8880ae6e409297184bc1e824f7ffb48475f4036b3cbac4589.json",
+      "production/session-logs/events/c721538970bca698642340bd023a5d5ae76d3a9cbf44fd5763ddee1ca2cf3fb9.json",
+      "production/session-logs/events/f389473372b9bc0c4d97614d698a40f7edbbf964dd6c01b5a6fa80df41c80c6a.json",
+      ".game-studio/backups/2489c94d-fa05-44cf-a433-1dd514a19693.json",
+      ".game-studio/backups/59d48b4d-3726-432a-93f0-d69187e7c883.json",
+      ".game-studio/backups/6dc2256d-ba04-453a-880b-b78aa5ba4bae.json",
+      ".game-studio/backups/7a0cab49-031b-4f41-9692-e9e74757a467.json",
+      ".game-studio/backups/de34231b-1cff-4533-9532-896d772ae4bb.json"
+    ],
+    "checkpointChainVerified": true,
+    "checkpointTransactions": 5,
+    "checkpointOutsideManagedRegionPreserved": true,
+    "checkpointTiming": "Phase0 15:31:10, Phase4 15:31:33, Phases5\u20136 15:31:34 precede scoped v2 draft/write at15:32:57/15:33:19; post-write15:33:20 precedes dispatch; final verdict save15:35:42. Skipped unchanged Phases1\u20133 were explicitly preserved.",
+    "oneContentWriteThenStatusOnly": true,
+    "reviewedArchitectureSha256": "84d0a8f074dfae3aecb5edd968d6aa2eecb5d745315a007b24feef1cebe5e57b",
+    "finalArchitectureSha256": "3341c83e644e247437ca731bfcde82e711441b6e5092bea21b68cfb28ae6a201",
+    "preservedChapters": [
+      "Engine Knowledge Gap Summary",
+      "System Layer Map",
+      "Module Ownership",
+      "Data Flow",
+      "Architecture Principles"
+    ],
+    "changedChapters": [
+      "Document Status",
+      "Technical Requirements Baseline",
+      "API Boundaries",
+      "ADR Audit",
+      "Required ADRs",
+      "Open Questions"
+    ],
+    "stableProvisionalIds": 20,
+    "coverage": {
+      "Covered": 8,
+      "Partial": 11,
+      "GAP": 1
+    },
+    "corrections": [
+      "TR-round-state-011 now contains the explicit concept layer/external-Platform obligations already supported by Accepted ADR-0001; grouping and all IDs remain stable.",
+      "TR-presentation-002 is Partial with explicit unsupported Accept/Return and displayed-ID obligations retained for existing Proposed ADR-0002 follow-up. No new master choice is counted as historical ADR support."
+    ],
+    "unresolved": [
+      "Missing invariant ADR before affected implementation.",
+      "Browser APIs/targets/runtime evidence unresolved; ADR-0002 remains Proposed.",
+      "Authored parcel display fields/values/formats/mapping remain owner inputs."
+    ],
+    "children": [
+      {
+        "id": "01a1d064-a322-7ee3-80ee-4fee92f4c8f2",
+        "role": "game-studio-technical-director",
+        "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T23-33-38-01a1d064-a322-7ee3-80ee-4fee92f4c8f2.jsonl",
+        "snapshot": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-revision-IO3fZL/revision-child-traces/01a1d064-a322-7ee3-80ee-4fee92f4c8f2.jsonl",
+        "sha256": "3807e3453296aed7094858204691a4a364f268025a76358830e1e235872a99bf",
+        "started": "2026-11-12T15:33:38.751Z",
+        "completed": "2026-11-12T15:34:44.490Z",
+        "verdict": "CONCERNS",
+        "reviewedArchitectureSha256": "84d0a8f074dfae3aecb5edd968d6aa2eecb5d745315a007b24feef1cebe5e57b",
+        "actualCallsReviewed": "Only calls at/after child session_meta timestamp; inherited parent history is not attributed to the reviewer. Last task_complete is actual child result.",
+        "readOnly": true,
+        "context": {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        }
+      },
+      {
+        "id": "01a1d064-df61-7d72-b57a-7ee1d64d0a84",
+        "role": "game-studio-lead-programmer",
+        "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T23-33-54-01a1d064-df61-7d72-b57a-7ee1d64d0a84.jsonl",
+        "snapshot": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-revision-IO3fZL/revision-child-traces/01a1d064-df61-7d72-b57a-7ee1d64d0a84.jsonl",
+        "sha256": "eacc4eeeae750fa69beb839fd4a26fcededb5122c1a95c6e533f4515f0081bd7",
+        "started": "2026-11-12T15:33:54.178Z",
+        "completed": "2026-11-12T15:34:39.069Z",
+        "verdict": "CONCERNS",
+        "reviewedArchitectureSha256": "84d0a8f074dfae3aecb5edd968d6aa2eecb5d745315a007b24feef1cebe5e57b",
+        "actualCallsReviewed": "Only calls at/after child session_meta timestamp; inherited parent history is not attributed to the reviewer. Last task_complete is actual child result.",
+        "readOnly": true,
+        "context": {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        }
+      }
+    ],
+    "parallelDispatch": "TD 15:33:38.691Z and LP 15:33:54.130Z both dispatched with actual native agent_type before first wait15:34:20.208Z; no model/effort/approval/sandbox override.",
+    "temporaryArtifacts": "mkdtemp created owned .architecture-revision-_vx735tn before drafts/snapshots; exclusive NamedTemporaryFile checkpoint inputs. Actual cleanup limited to enumerated owned files; no .architecture-* scratch remains.",
+    "limits": [
+      "Native CLI macOS arm64, synthetic source/engine evidence and guided authorization only; desktop UI and actual engine/browser/play are not assessed.",
+      "Fresh TD/LP both remain CONCERNS; no implicit approval, risk acceptance, ADR acceptance or readiness established.",
+      "Original four full-generation attempts remain FAIL; this is the subsequent authorized revision path, not a replacement run."
+    ]
+  }
+}
