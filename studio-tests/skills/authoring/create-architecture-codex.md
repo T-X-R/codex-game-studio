@@ -1,7 +1,9 @@
 # Codex acceptance: create-architecture (S015)
 
-Status: implementation prepared; native behavior pending. This does not replace
-[the original specification](create-architecture.md) or narrow its source cases.
+Status: native acceptance in progress; selected attempts and retained failures are
+recorded in [the evidence](../../../docs/evidence/create-architecture-skill-2026-11-12.json).
+The complete original/extended matrix and desktop acceptance remain pending. This
+does not replace [the original specification](create-architecture.md) or narrow its source cases.
 Source: `.claude/skills/create-architecture/SKILL.md`, all nine phase references,
 shared gate/automation/workflow contracts and architecture-review requirement IDs.
 

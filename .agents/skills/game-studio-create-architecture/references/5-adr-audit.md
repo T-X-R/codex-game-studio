@@ -34,7 +34,12 @@ them into the gaps below. Write the actual supported and unsupported obligations
 before assigning the status: none supported is **GAP**, some supported is
 **Partial**, and all supported is **Covered**. Retain support from shared decisions
 and necessary implications; an unsupported remainder does not erase that support.
-A citation alone does not establish coverage.
+A citation alone does not establish coverage. Use only the actual existing ADR's
+Decision or GDD Requirements Addressed text as support. The GDD obligation and a
+new master-architecture choice are not evidence that an existing ADR records it.
+List a new master choice separately as proposed architectural support, retaining
+the formal ADR gap. Related uncovered obligations may share one appropriate
+decision record; do not require a separate ADR for each exclusion.
 
 | Req ID | Requirement | ADR Coverage | Status |
 |--------|-------------|--------------|--------|

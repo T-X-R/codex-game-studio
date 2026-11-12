@@ -85,7 +85,10 @@ both results. Never claim parallelism from two sequential completed calls.
 
 Give each reviewer read-only scope: no architecture/ADR/registry/checkpoint writes,
 installation, implementation or nested delegation. A proposed architecture cannot
-supply its own independently reconstructed baseline. For focus updates, explain
+supply its own independently reconstructed baseline. Ask the TD to independently
+check each coverage claim against the existing ADR's actual Decision/GDD-linkage
+evidence and name unsupported remainders: the master's labels or new choices do
+not establish prior ADR coverage. For focus updates, explain
 which stored chapters/baseline are unchanged and any new GDD discrepancy observed.
 
 Unavailable role/tool, failed invocation or unreadable required input is NOT
