@@ -994,7 +994,7 @@ agents:
     last_category_result: ""
     category: director
     target: .codex/agents/game-studio-creative-director.toml
-    migration_state: pending
+    migration_state: partial
 
   - name: technical-director
     spec: studio-tests/agents/directors/technical-director.md
@@ -1024,7 +1024,7 @@ agents:
     last_category_result: ""
     category: director
     target: .codex/agents/game-studio-art-director.toml
-    migration_state: pending
+    migration_state: partial
 
   # Tier 2 Leads
   - name: lead-programmer
