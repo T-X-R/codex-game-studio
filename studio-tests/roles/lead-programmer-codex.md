@@ -42,3 +42,18 @@ Packed install must preserve exact role/resources and detach only owned files.
 Native acceptance uses the actual named role, full instructions in the child only,
 permitted artifacts/unchanged-file hashes, and parent aggregation. Static checks
 do not close A018, T19 or unobserved matrix cases.
+
+## Native fixtures
+
+After building, run `node toolkit/test/qa-role-host.mjs programmer-review` or
+`programmer-feasibility` with Node 24–26 and Codex CLI on PATH. Review preparation
+executes three real Node combat assertions with an explicit TAP reporter, then
+retains the original command/output before the native role starts. The native
+task may read those results and write only `docs/programming/review.md`; it must
+not rerun tests or repair the faulty comparison candidate. Preparation is not
+native agent execution. Feasibility is response-only and uses synthetic estimates;
+the 8 ns figure is deliberately not a measured benchmark from this run.
+
+The shared runner removes its temporary trust profile and records byte-preservation
+and allowed outputs. Exit 3 requests separate semantic/trace review. Missing native
+selection or unavailable context is not a generic-agent success.

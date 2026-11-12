@@ -38,6 +38,25 @@ pinned runtime. Gate assessments do not execute tests or change story status.
 Neither role may invent missing execution, human observations or sign-off, or
 publish a release. Any nested delegation must stay within the caller's explicit
 authorization and the host's actual available roles.
+
+`game-studio-game-designer` authors and reviews mechanics against approved pillars,
+rules and the effective documentation tier. It reads the installed
+`studio/docs/roles/game-designer.md` resource, keeps unresolved creative decisions
+with their owners, and does not implement code or final narrative lore. For
+example: "Delegate the approved dodge design to game-studio-game-designer; write
+only design/gdd/dodge.md using our workflow tier and return unresolved rule conflicts."
+
+`game-studio-lead-programmer` reviews code, feasibility and module interfaces within
+the approved architecture. Its LP-CODE-REVIEW and LP-FEASIBILITY definitions are
+under `studio/docs/director-gates/`. Supply implementation, story, GDD and ADR paths
+for code review, or architecture, requirements and ADR statuses for feasibility.
+It separates static findings, supplied estimates and actual execution; feature
+implementation remains with the appropriate specialist. A review verdict does
+not merge code or approve a release.
+
+These are the four currently packaged roles. A reference to another professional
+owner is a hand-off recommendation, not proof that the owner is installed or was
+consulted. Request only roles the current host actually exposes.
 The installer does not edit `.codex/config.toml`, enable agents globally or trust
 Hooks. Follow the client's native project trust/discovery controls. If the role
 is unavailable, report that limitation rather than claiming a generic-agent or

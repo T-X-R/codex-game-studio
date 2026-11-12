@@ -44,3 +44,18 @@ per-section approvals and direct session-state appends are not retained.
 
 Keep A011 open until the relevant behavior matrix, native host coverage and final
 content validator pass. Packed byte checks and TOML parsing alone do not suffice.
+
+## Native fixtures
+
+After building, run `node toolkit/test/qa-role-host.mjs designer-full`,
+`designer-standard`, `designer-minimal` or `designer-review` with Node 24–26 and
+Codex CLI on PATH. Each uses a fresh installed archive, inherited permissions and
+a temporary project-trust profile (removed afterward; no Hook trust). Authoring
+permits exactly the named new document; review permits no files. These do not
+test updates to an existing brief or represent actual human play.
+
+The approved input intentionally contains a capacity/reset conflict at nondefault
+tuning values. Preserve the defaults and both stated requirements, expose the
+conflict for an owner decision, and continue the agreed design; silently changing
+the range or reset amount fails the scenario. Inspect original files, full child
+instructions and semantic output before treating runner exit 3 as reviewed.
