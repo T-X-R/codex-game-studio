@@ -22,7 +22,7 @@ async function execute(entry, args, cwd = directory, expected = 0) {
   assert.equal(result.exitCode, expected, result.stdout + result.stderr);
   return result;
 }
-async function command(entry, args) { return JSON.parse((await execute(entry, [...args, '--json'])).stdout); }
+async function command(entry, args, expected = 0) { return JSON.parse((await execute(entry, [...args, '--json'], directory, expected)).stdout); }
 try {
   const browser = await findBrowser();
   const npm = await npmPath();
@@ -63,6 +63,10 @@ try {
   await execute(npm, ['ci', '--ignore-scripts', '--no-audit', '--no-fund'], project);
   const build = await command(launcher, ['test', '--kind', 'build', '--output', 'production/evidence/build', '--project', project]);
   assert.equal(build.data.processExitCode, 0);
+  const folderCapture = await command(launcher, ['capture', 'dist', '--output', 'production/evidence/folder-file', ...input], 3);
+  assert.equal(folderCapture.status, 'not_assessed');
+  assert.equal(folderCapture.data.replayComplete, false);
+  assert.ok(folderCapture.data.notAssessed.length > 0);
   await execute(npm, ['run', 'build:single'], project);
   const built = await readFile(join(project, 'dist-single/index.html'), 'utf8');
   assert.ok(!built.includes('DEVELOPMENT_TUNING_SENTINEL'));
@@ -80,7 +84,7 @@ try {
     assetSha256: digest(png), builtSha256: digest(Buffer.from(built)),
     seed: 7, log: 'Enter Space wait:1 Space wait:1', states: rows(replay),
     checks: ['online packed CLI install', 'offline project runtime restore', 'reference repeatability', 'dry-run', 'source preservation', 'binary asset preservation',
-      'npm ci from lock', 'configured build discovery', 'single-file build', 'development tuning excluded', 'copy replay equality', 'empty tests do not pass'],
+      'npm ci from lock', 'configured build discovery', 'file module capture is not assessed', 'single-file build', 'development tuning excluded', 'copy replay equality', 'empty tests do not pass'],
     notAssessed: ['full TypeScript conversion', 'configuration data extraction', 'game-rule unit tests', 'all asset loading patterns', 'human play'] };
   await writeFile(join(directory, 'summary.json'), JSON.stringify(report, null, 2));
   console.log(JSON.stringify({ ...report, evidence: directory }));
