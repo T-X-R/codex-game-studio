@@ -308,8 +308,8 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S024 Migrate `estimate` to `game-studio-estimate`. Evidence: pending.
 - [ ] S025 Migrate `gate-check` to `game-studio-gate-check`. Evidence: pending.
   - Deterministic prerequisites now exist: `check --kind artifacts`, `check --kind gdd`, `check --kind adr-deps`; see T22. This does not close the Skill row.
-  - [ ] G1 Port Systems Design, Technical Setup and Pre-Production gate references (three files); retain workflow/QA/per-system criteria and declared evidence gaps.
-  - [ ] G2 Port Production, Polish and Release gate references (three files); retain smoke authenticity, performance policy, review and release requirements.
+  - [x] G1 Port Systems Design, Technical Setup and Pre-Production gate references (three files); retain workflow/QA/per-system criteria and declared evidence gaps. `4df86fb`: shared resources in `studio/docs/phase-gates`, actual engine inspection and ADR JSON observations replace Claude-only instructions; packed bytes verified.
+  - [x] G2 Port Production, Polish and Release gate references (three files); retain smoke authenticity, performance policy, review and release requirements. All six resources retain 115 checklist items and all three tier definitions; literal CLI examples validate and installed archive bytes match. These are criteria resources, not completed host/workflow acceptance.
   - [ ] G3 Port workflow-tier, deterministic-check and assessment references (three files); use pinned CLI observations and actual native director results.
   - [ ] G4 Port verdict, stage-update and next-step references (three files); preserve failed/unassessed stage invariants and use transactional config writes within actual authorization.
   - [ ] G5 Add the Codex Skill entry point, behavioral contract and catalog mapping; validate packaged references and instructions.

@@ -29,6 +29,15 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   the local suite now has 184 passing tests. See [artifact observations](artifact-check.md).
   The catalog names intended Skills without claiming they are all installed;
   phase verdicts, content adequacy and stage changes remain workflow work.
+- Six phase-gate criteria resources now live in `studio/docs/phase-gates`,
+  retaining 115 checklist items and all three workflow-tier definitions.
+  Engine inspection, ADR graph observations and configured tests use the pinned
+  CLI instead of Claude paths/tools. The copied criteria preserve minimal-path
+  exceptions, missing-playtest distinctions, vertical-slice failure rules and
+  scope-sensitive security/localization evidence. Command examples validate and
+  all six installed resource files match their canonical bytes. G1/G2 resource
+  migration is complete; the gate Skill entry point, six orchestration references,
+  native director coordination and stage-advancement scenarios remain open.
 - Typed CLI argument contracts, JSON results, help/schema and explicit exit codes.
 - Nearest project discovery, configuration reads with provenance and rigor/local
   precedence, named system workflow overrides and legacy technical-preference
