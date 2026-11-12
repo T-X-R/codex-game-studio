@@ -40,3 +40,22 @@ domain ownership and honest execution evidence; retire per-file approval loops.
 Native role identity, child-only full instructions, model/sandbox inheritance,
 permitted writes and parent aggregation are required. Keep A012/T19 open until
 the remaining applicable matrix and host/engine gates are verified.
+
+## Native fixtures and independent checks
+
+After building with Node 24–26, run `node toolkit/test/qa-role-host.mjs
+gameplay-implement`, `gameplay-minimal` or `gameplay-boundaries` with Codex CLI on
+PATH. The implementation cases authorize only a new pure module, tests, transition
+report and fresh test evidence; original config, tuning and unrelated code must
+remain unchanged. They require a retained failing run before implementation and
+a passing run afterward. The minimal case has no ADR and must not invent an ADR
+approval prerequisite. The boundary case permits no writes or test/build runs.
+
+The temporary project-trust profile is removed afterward; no Hook is configured.
+Runner exit 3 intentionally requires semantic/trace review. Once an implementation
+fixture is complete, run `node toolkit/test/verify-gameplay.mjs <fixture-directory>`.
+It independently checks seven behavior groups, real red/green logs and rejection
+of three altered-behavior controls. It writes evidence beside the fixture, not in
+the game, and refuses to overwrite previous evidence. Those negative controls
+validate the independent checker; they are not claims about the role-authored test
+suite's mutation coverage. Engine/browser/human acceptance remains separate.

@@ -54,7 +54,15 @@ It separates static findings, supplied estimates and actual execution; feature
 implementation remains with the appropriate specialist. A review verdict does
 not merge code or approve a release.
 
-These are the four currently packaged roles. A reference to another professional
+`game-studio-gameplay-programmer` implements approved mechanics and their logic
+tests using project interfaces and external tuning. Supply the story/brief or GDD,
+accepted ADR where applicable, allowed source/test/evidence paths and authorized
+test commands. It keeps gameplay separate from UI/AI/networking and returns missing
+rules or engine capabilities instead of guessing them. For example: "Delegate the
+approved combo contract to game-studio-gameplay-programmer; implement only these
+module/test paths, run the existing suite and retain its actual results."
+
+These are the five currently packaged roles. A reference to another professional
 owner is a hand-off recommendation, not proof that the owner is installed or was
 consulted. Request only roles the current host actually exposes.
 The installer does not edit `.codex/config.toml`, enable agents globally or trust
