@@ -61,8 +61,18 @@ function settingValue(key: string, raw: string): Json {
 }
 
 export async function planConfigSet(root: string, key: string, raw: string, local = false): Promise<{ plan: InstallPlan; warnings: string[] }> {
-  const value = settingValue(key, raw);
-  if (local && !localKeys.has(key)) throw new StudioError('INVALID_ARGUMENT', `${key} is not locally overridable`);
+  return planConfigSetMany(root, [[key, raw]], local);
+}
+
+export async function planConfigSetMany(root: string, entries: [string, string][], local = false): Promise<{ plan: InstallPlan; warnings: string[] }> {
+  const seen = new Set<string>();
+  const updates = entries.map(([key, raw]) => {
+    const value = settingValue(key, raw);
+    if (seen.has(key)) throw new StudioError('INVALID_ARGUMENT', `Duplicate configuration key: ${key}`);
+    seen.add(key);
+    if (local && !localKeys.has(key)) throw new StudioError('INVALID_ARGUMENT', `${key} is not locally overridable`);
+    return { key, value };
+  });
   const project = await canonicalRoot(root);
   const projectPath = await safePath(project, 'project.yaml');
   const projectContent = await readText(projectPath);
@@ -71,54 +81,58 @@ export async function planConfigSet(root: string, key: string, raw: string, loca
   const path = local ? 'project.local.yaml' : 'project.yaml';
   const before = local ? await readText(await safePath(project, path)) : projectContent;
   const bom = before?.startsWith('\uFEFF') ? '\uFEFF' : '';
-  const content = (before ?? '').slice(bom.length);
-  const document = parseConfig(content, path);
-  const parts = key.split('.');
-  for (let i = 1; i <= parts.length; i++) {
-    const node = document.getIn(parts.slice(0, i), true);
-    if (isAlias(node) || (node && typeof node === 'object' && 'anchor' in node && node.anchor) ||
-        (i < parts.length && node !== undefined && !isMap(node)) || (i === parts.length && isMap(node))) {
-      throw new StudioError('FILE_CONFLICT', `Refusing to replace a mapping, alias, anchor or scalar parent at ${parts.slice(0, i).join('.')}`, 4);
-    }
-  }
+  let content = (before ?? '').slice(bom.length);
+  const overrides = !local && updates.some(({ key }) => localKeys.has(key))
+    ? await readConfig(await safePath(project, 'project.local.yaml')) : {};
   const warnings: string[] = [];
-  if (reserved.has(key)) warnings.push(`${key} is reserved upstream; storing it does not implement enforcement`);
-  if (!local && localKeys.has(key)) {
-    const overrides = await readConfig(await safePath(project, 'project.local.yaml'));
-    let override: Json | undefined = overrides;
-    for (const part of parts) override = override && typeof override === 'object' && !Array.isArray(override) ? override[part] : undefined;
-    if (override !== undefined && override !== null && override !== '') warnings.push(`${key} is shadowed by project.local.yaml`);
-  }
   const plan: InstallPlan = { project, version: metadata.version, changes: [] };
-  const current = document.getIn(parts);
-  if (JSON.stringify(current) !== JSON.stringify(value)) {
-    const node = document.getIn(parts, true);
-    let after: string;
-    if (isScalar(node) && node.range && !Array.isArray(value) &&
-        !node.type?.startsWith('BLOCK_') && !(typeof value === 'string' && /[\r\n]/.test(value))) {
-      const scalarDocument = new Document(value);
-      if (typeof value === 'string' && isScalar(scalarDocument.contents)) scalarDocument.contents.type = node.type;
-      const encoded = scalarDocument.toString({ lineWidth: 0 }).trimEnd();
-      after = content.slice(0, node.range[0]) + encoded + content.slice(node.range[1]);
-    } else {
-      document.setIn(parts, value);
-      after = document.toString({ lineWidth: 0 });
+  for (const { key, value } of updates) {
+    const document = parseConfig(content, path);
+    const parts = key.split('.');
+    for (let i = 1; i <= parts.length; i++) {
+      const node = document.getIn(parts.slice(0, i), true);
+      if (isAlias(node) || (node && typeof node === 'object' && 'anchor' in node && node.anchor) ||
+          (i < parts.length && node !== undefined && !isMap(node)) || (i === parts.length && isMap(node))) {
+        throw new StudioError('FILE_CONFLICT', `Refusing to replace a mapping, alias, anchor or scalar parent at ${parts.slice(0, i).join('.')}`, 4);
+      }
     }
-    if (content.includes('\r\n')) after = after.replace(/\r?\n/g, '\r\n');
-    const check = parseConfig(after, path).getIn(parts);
-    if (JSON.stringify(check) !== JSON.stringify(value)) throw new StudioError('INVALID_CONFIG', `Cannot preserve the requested value for ${key}`);
-    plan.changes.push({ path, before, after: bom + after });
-  }
-  if (key === 'project.stage') {
-    if (value === null) throw new StudioError('INVALID_ARGUMENT', 'project.stage cannot be unset while synchronizing its mirror');
-    const mirrorPath = 'production/stage.txt';
-    const mirror = await readText(await safePath(project, mirrorPath));
-    const declared = base.getIn(['project', 'stage']);
-    if (mirror !== null && declared !== undefined && declared !== null && mirror.trim() !== declared) {
-      throw new StudioError('FILE_CONFLICT', 'project.yaml and production/stage.txt disagree; reconcile the recorded stage first', 4);
+    if (reserved.has(key)) warnings.push(`${key} is reserved upstream; storing it does not implement enforcement`);
+    if (!local && localKeys.has(key)) {
+      let override: Json | undefined = overrides;
+      for (const part of parts) override = override && typeof override === 'object' && !Array.isArray(override) ? override[part] : undefined;
+      if (override !== undefined && override !== null && override !== '') warnings.push(`${key} is shadowed by project.local.yaml`);
     }
-    const after = `${value}${mirror?.includes('\r\n') ? '\r\n' : '\n'}`;
-    if (mirror !== after) plan.changes.push({ path: mirrorPath, before: mirror, after });
+    const current = document.getIn(parts);
+    if (JSON.stringify(current) !== JSON.stringify(value)) {
+      const node = document.getIn(parts, true);
+      let after: string;
+      if (isScalar(node) && node.range && !Array.isArray(value) &&
+          !node.type?.startsWith('BLOCK_') && !(typeof value === 'string' && /[\r\n]/.test(value))) {
+        const scalarDocument = new Document(value);
+        if (typeof value === 'string' && isScalar(scalarDocument.contents)) scalarDocument.contents.type = node.type;
+        const encoded = scalarDocument.toString({ lineWidth: 0 }).trimEnd();
+        after = content.slice(0, node.range[0]) + encoded + content.slice(node.range[1]);
+      } else {
+        document.setIn(parts, value);
+        after = document.toString({ lineWidth: 0 });
+      }
+      if (content.includes('\r\n')) after = after.replace(/\r?\n/g, '\r\n');
+      const check = parseConfig(after, path).getIn(parts);
+      if (JSON.stringify(check) !== JSON.stringify(value)) throw new StudioError('INVALID_CONFIG', `Cannot preserve the requested value for ${key}`);
+      content = after;
+    }
+    if (key === 'project.stage') {
+      if (value === null) throw new StudioError('INVALID_ARGUMENT', 'project.stage cannot be unset while synchronizing its mirror');
+      const mirrorPath = 'production/stage.txt';
+      const mirror = await readText(await safePath(project, mirrorPath));
+      const declared = base.getIn(['project', 'stage']);
+      if (mirror !== null && declared !== undefined && declared !== null && mirror.trim() !== declared) {
+        throw new StudioError('FILE_CONFLICT', 'project.yaml and production/stage.txt disagree; reconcile the recorded stage first', 4);
+      }
+      const after = `${value}${mirror?.includes('\r\n') ? '\r\n' : '\n'}`;
+      if (mirror !== after) plan.changes.push({ path: mirrorPath, before: mirror, after });
+    }
   }
+  if (bom + content !== (before ?? '')) plan.changes.unshift({ path, before, after: bom + content });
   return { plan, warnings };
 }

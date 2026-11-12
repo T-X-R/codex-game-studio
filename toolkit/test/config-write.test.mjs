@@ -6,7 +6,7 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 
-const { planConfigSet } = await import('../dist/config-write.js');
+const { planConfigSet, planConfigSetMany } = await import('../dist/config-write.js');
 const { applyInstall } = await import('../dist/install.js');
 const { readSettings } = await import('../dist/config.js');
 async function fixture(t, files = { 'project.yaml': '{}\n' }) {
@@ -18,6 +18,43 @@ async function fixture(t, files = { 'project.yaml': '{}\n' }) {
   }
   return root;
 }
+
+test('grouped configuration writes form one atomic plan and preserve unrelated settings', async t => {
+  const before = '# retained\nengine:\n  name: Godot\n  version: "4.6" # pin\n  language: GDScript\nproject:\n  stage: Concept\n  name: Custom\n';
+  const root = await fixture(t, { 'project.yaml': before, 'production/stage.txt': 'Concept\n' });
+  const entries = [['engine.version', '4.7'], ['engine.language', 'C#'], ['project.stage', 'Technical Setup']];
+  const { plan } = await planConfigSetMany(root, entries);
+  assert.deepEqual(plan.changes.map(change => change.path), ['project.yaml', 'production/stage.txt']);
+  assert.equal(plan.changes[0].before, before);
+  assert.equal(await readFile(join(root, 'project.yaml'), 'utf8'), before);
+  await applyInstall(plan);
+  const after = await readFile(join(root, 'project.yaml'), 'utf8');
+  assert.match(after, /version: "4.7" # pin/);
+  assert.match(after, /# retained/);
+  assert.match(after, /name: Custom/);
+  assert.equal((await readSettings(root, ['engine.language'])).settings['engine.language'].value, 'C#');
+  assert.equal(await readFile(join(root, 'production/stage.txt'), 'utf8'), 'Technical Setup\n');
+  assert.equal((await planConfigSetMany(root, entries)).plan.changes.length, 0);
+});
+
+test('an invalid later edit or duplicate key rejects the entire grouped plan without writes', async t => {
+  const root = await fixture(t);
+  for (const entries of [[['engine.name', 'Web'], ['modes.rigor', 'wrong']],
+    [['engine.name', 'Web'], ['engine.name', 'Godot']]]) {
+    await assert.rejects(planConfigSetMany(root, entries), { code: 'INVALID_ARGUMENT' });
+  }
+  await assert.rejects(planConfigSetMany(root, [['modes.automation', 'guided'], ['engine.name', 'Web']], true), { code: 'INVALID_ARGUMENT' });
+  assert.equal(await readFile(join(root, 'project.yaml'), 'utf8'), '{}\n');
+  assert.deepEqual(await readdir(root), ['project.yaml']);
+});
+
+test('grouped edits keep the original before-image for concurrent writer rejection', async t => {
+  const root = await fixture(t);
+  const { plan } = await planConfigSetMany(root, [['engine.name', 'Web'], ['engine.version', 'recorded-version']]);
+  await writeFile(join(root, 'project.yaml'), '# concurrent user edit\n');
+  await assert.rejects(applyInstall(plan), { code: 'FILE_CONFLICT' });
+  assert.equal(await readFile(join(root, 'project.yaml'), 'utf8'), '# concurrent user edit\n');
+});
 
 test('setting edits preserve comments, quoting, BOM, CRLF, permissions and unchanged bytes', async t => {
   const before = '\uFEFF# my game\r\nmodes:\r\n  automation: "guided" # policy\r\nproject:\r\n  name: \'Knight #1\'\r\n';
