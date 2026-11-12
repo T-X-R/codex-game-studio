@@ -15,7 +15,7 @@ async function executeCommand(command: string, cwd: string, timeoutMs: number) {
     const script = join(directory, 'run.cmd');
     // A batch context retains ERRORLEVEL (including command-not-found 9009).
     // Direct cmd /c collapses some shell errors to 1. UTF-8 supports game paths.
-    await writeFile(script, `@chcp 65001 >nul\r\n@echo off\r\n${command}\r\nexit /b\r\n`, { flag: 'wx' });
+    await writeFile(script, `@chcp 65001 >nul\r\n@echo off\r\n${command}\r\nexit /b %errorlevel%\r\n`, { flag: 'wx' });
     return await runProcess(process.env.ComSpec ?? 'cmd.exe', ['/d', '/s', '/c', `""${script}""`],
       { cwd, timeoutMs, windowsVerbatimArguments: true });
   } finally { await rm(directory, { recursive: true, force: true }); }
