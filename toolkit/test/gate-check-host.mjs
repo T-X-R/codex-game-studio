@@ -86,12 +86,26 @@ try {
   await writeFile(join(directory, 'after.json'), JSON.stringify(after, null, 2));
   const changed = Object.keys(before).filter(path => before[path] !== after[path]);
   const added = Object.keys(after).filter(path => !(path in before));
-  const outsideScope = added.filter(path => !scenario.expectedFiles.includes(path));
+  const transactionBackups = [];
+  for (const path of added.filter(path => /^\.game-studio\/backups\/[a-f0-9-]+\.json$/.test(path))) {
+    const backup = JSON.parse(await readFile(join(workspace, path), 'utf8'));
+    assert.equal(backup.project, workspace);
+    assert.equal(backup.version, packed.version);
+    assert.ok(Array.isArray(backup.changes) && backup.changes.length > 0);
+    assert.deepEqual(backup.changes.map(change => change.path).sort(), [...changed].sort());
+    for (const change of backup.changes) {
+      assert.ok((scenario.allowedChanges ?? []).includes(change.path));
+      assert.equal(createHash('sha256').update(change.before).digest('hex'), before[change.path]);
+      assert.equal(createHash('sha256').update(change.after).digest('hex'), after[change.path]);
+    }
+    transactionBackups.push(path);
+  }
+  const outsideScope = added.filter(path => !scenario.expectedFiles.includes(path) && !transactionBackups.includes(path));
   const events = result.stdout.split('\n').filter(Boolean).map(line => JSON.parse(line));
   const report = { scenario: name, client: version.stdout.trim(), node: process.version, platform: process.platform, arch: process.arch,
     exitCode: result.exitCode, threadId: events.find(event => event.type === 'thread.started')?.thread_id,
     status: 'not_assessed', reason: 'Review native Skill selection, reference loading, role outcomes, verdict and stage records against gate-check-codex.md.',
-    preservedFiles: Object.keys(before).length - changed.length, changed, added, outsideScope, hashes };
+    preservedFiles: Object.keys(before).length - changed.length, changed, added, transactionBackups, outsideScope, hashes };
   await writeFile(join(directory, 'report.json'), JSON.stringify(report, null, 2));
   console.log(JSON.stringify({ directory, ...report }));
   assert.deepEqual(changed.filter(path => !(scenario.allowedChanges ?? []).includes(path)), []); assert.deepEqual(outsideScope, []);
