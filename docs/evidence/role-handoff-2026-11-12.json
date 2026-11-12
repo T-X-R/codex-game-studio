@@ -1,0 +1,630 @@
+{
+  "recordedAt": "2026-11-12",
+  "scope": "T19 native sequential design, implementation, independent QA and static review in a synthetic pure-logic game workspace",
+  "cases": {
+    "requiredCloseUnavailable": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-UthWna",
+      "runnerResult": {
+        "scenario": "role-handoff",
+        "role": "game-studio-game-designer",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/sequential-handoff-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1cec0-1c6b-7fb0-a743-89ea2e654fdc",
+        "preservedFiles": 332,
+        "changed": [],
+        "added": [
+          "design/game-brief.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5",
+        "roleHashes": {
+          "game-studio-game-designer": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5",
+          "game-studio-gameplay-programmer": "881740250e036ff948e7fd2a811c8cb4c7ca39b3a6422bc0bc54d6b7d095315f",
+          "game-studio-qa-tester": "96d33762c19d3780f2b5666f42589d854a14c3f9e4e84c24f772ca4a6488c3c0",
+          "game-studio-lead-programmer": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c"
+        }
+      },
+      "nativeStages": [
+        {
+          "selectedRole": "game-studio-game-designer",
+          "childId": "01a1cec0-5f9c-7921-bdf2-35d44446b9aa",
+          "spawnTimestamp": "2026-11-12T07:54:36.306Z",
+          "finalTimestamp": "2026-11-12T07:57:07.992Z"
+        }
+      ],
+      "traceReview": {
+        "01a1cec0-1c6b-7fb0-a743-89ea2e654fdc": {
+          "file": "rollout-2026-11-12T15-54-19-01a1cec0-1c6b-7fb0-a743-89ea2e654fdc.jsonl",
+          "sha256": "0fcd75c4059bb3d434fda5cb2ca0a28573163ffc9e9242ad4fac274f4ef2fa6a",
+          "role": null,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "fullRoleInstructionsPresent": {
+            "game-studio-game-designer": false,
+            "game-studio-gameplay-programmer": false,
+            "game-studio-qa-tester": false,
+            "game-studio-lead-programmer": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ],
+          "finalTimestamp": "2026-11-12T07:57:19.641Z"
+        },
+        "01a1cec0-5f9c-7921-bdf2-35d44446b9aa": {
+          "file": "rollout-2026-11-12T15-54-36-01a1cec0-5f9c-7921-bdf2-35d44446b9aa.jsonl",
+          "sha256": "02ce953cb11f9679ed24efb5fdc1433ced086c90f3f3835c51b872c25163ddcf",
+          "role": "game-studio-game-designer",
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "fullRoleInstructionsPresent": {
+            "game-studio-game-designer": true,
+            "game-studio-gameplay-programmer": false,
+            "game-studio-qa-tester": false,
+            "game-studio-lead-programmer": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec"
+          ],
+          "finalTimestamp": "2026-11-12T07:57:07.992Z"
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "71f4f663a05f970cb8c63223b30a8dd5e92642a8349706e3d917eb19f3965ea4",
+        "before.json": "f9cf1ad95da65b4c2ed35cc4a871ae38ac194bebe01b2c1c69cfc52f2f3a1740",
+        "fixture.json": "59eef719e7a71b95765a8fbd35377b7b7f372d52c0cb52437da2af83f9bf7839",
+        "QA game \u6d4b\u8bd5/design/game-brief.md": "5c497136b71ccc7cf86a6160951bc72e1f3faade589aedaaaf6c61408544043d",
+        "final.txt": "626a14721f6c779fd081f0590705360436ff4e8e7cec9295bf048cf1ad28039f"
+      },
+      "review": {
+        "result": "fixture failed; native coordinator accurately stopped",
+        "runnerExitCode": 1,
+        "reason": "The fixture required a close operation not exposed by this CLI. Only the designer ran; no downstream work was claimed."
+      }
+    },
+    "cancelledEvidencePathConflict": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-NliEPD",
+      "runnerResult": {
+        "scenario": "role-handoff",
+        "role": "game-studio-game-designer",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/sequential-handoff-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 130,
+        "threadId": "01a1cec3-90b6-72a2-98da-1b5af4337e00",
+        "preservedFiles": 332,
+        "changed": [],
+        "added": [],
+        "outsideScope": [],
+        "roleSha256": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5",
+        "roleHashes": {
+          "game-studio-game-designer": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5",
+          "game-studio-gameplay-programmer": "881740250e036ff948e7fd2a811c8cb4c7ca39b3a6422bc0bc54d6b7d095315f",
+          "game-studio-qa-tester": "96d33762c19d3780f2b5666f42589d854a14c3f9e4e84c24f772ca4a6488c3c0",
+          "game-studio-lead-programmer": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c"
+        }
+      },
+      "nativeStages": [
+        {
+          "selectedRole": "game-studio-game-designer",
+          "childId": "01a1cec3-cea7-7991-a451-ef5659bb99e7",
+          "spawnTimestamp": "2026-11-12T07:58:21.333Z",
+          "finalTimestamp": null
+        }
+      ],
+      "traceReview": {
+        "01a1cec3-cea7-7991-a451-ef5659bb99e7": {
+          "file": "rollout-2026-11-12T15-58-21-01a1cec3-cea7-7991-a451-ef5659bb99e7.jsonl",
+          "sha256": "3c52b882a77d1f88e89788d5200426f07d2118d70ada574930e43051470f1126",
+          "role": "game-studio-game-designer",
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "fullRoleInstructionsPresent": {
+            "game-studio-game-designer": true,
+            "game-studio-gameplay-programmer": false,
+            "game-studio-qa-tester": false,
+            "game-studio-lead-programmer": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ],
+          "finalTimestamp": null
+        },
+        "01a1cec3-90b6-72a2-98da-1b5af4337e00": {
+          "file": "rollout-2026-11-12T15-58-05-01a1cec3-90b6-72a2-98da-1b5af4337e00.jsonl",
+          "sha256": "66da37560ab5e08fe5092410b2baf47eeea5c5cffa15540c11ceddc002a252c0",
+          "role": null,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "fullRoleInstructionsPresent": {
+            "game-studio-game-designer": false,
+            "game-studio-gameplay-programmer": false,
+            "game-studio-qa-tester": false,
+            "game-studio-lead-programmer": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ],
+          "finalTimestamp": null
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "ea934d571abb8ceb8f31141a9603a6ed551decbb9fffbf047e503bbfc7b750a1",
+        "before.json": "e7c596a00b6d35512f39016b39a9d31f6e4111015beb6db76ac122b25c05b22e",
+        "fixture.json": "77967e275fffb8ddcd902b64ec630f6291d31efd2b2f0f75f21e56809a8889d6"
+      },
+      "review": {
+        "result": "cancelled by maintainer, not a host acceptance failure",
+        "runnerExitCode": 1,
+        "nativeExitCode": 130,
+        "reason": "Inspection found the fixture requested a green output directory already containing red evidence. The run was interrupted before implementation and corrected to separate fresh red/green directories."
+      }
+    },
+    "sequentialHandoff": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-nAyNaK",
+      "runnerResult": {
+        "scenario": "role-handoff",
+        "role": "game-studio-game-designer",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/sequential-handoff-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1cec5-5266-7d92-a238-70ad689bda87",
+        "preservedFiles": 332,
+        "changed": [],
+        "added": [
+          "tests/charge.qa.test.mjs",
+          "tests/charge.test.mjs",
+          "src/charge.mjs",
+          "production/qa/charge-review.md",
+          "production/qa/evidence/charge/independent/preflight.json",
+          "production/qa/evidence/charge/independent/verification.json",
+          "production/qa/evidence/charge/independent/suite/report.json",
+          "production/qa/evidence/charge/independent/suite/stderr.log",
+          "production/qa/evidence/charge/independent/suite/stdout.log",
+          "production/qa/evidence/charge/implementation/red/report.json",
+          "production/qa/evidence/charge/implementation/red/stderr.log",
+          "production/qa/evidence/charge/implementation/red/stdout.log",
+          "production/qa/evidence/charge/implementation/green/report.json",
+          "production/qa/evidence/charge/implementation/green/stderr.log",
+          "production/qa/evidence/charge/implementation/green/stdout.log",
+          "docs/programming/charge.md",
+          "design/game-brief.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5",
+        "roleHashes": {
+          "game-studio-game-designer": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5",
+          "game-studio-gameplay-programmer": "881740250e036ff948e7fd2a811c8cb4c7ca39b3a6422bc0bc54d6b7d095315f",
+          "game-studio-qa-tester": "96d33762c19d3780f2b5666f42589d854a14c3f9e4e84c24f772ca4a6488c3c0",
+          "game-studio-lead-programmer": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c"
+        }
+      },
+      "nativeStages": [
+        {
+          "selectedRole": "game-studio-game-designer",
+          "childId": "01a1cec5-888c-7e93-b24a-465fb4fa6107",
+          "spawnTimestamp": "2026-11-12T08:00:14.461Z",
+          "finalTimestamp": "2026-11-12T08:03:08.792Z"
+        },
+        {
+          "selectedRole": "game-studio-gameplay-programmer",
+          "childId": "01a1cec8-6ee5-70a2-914b-60b648747846",
+          "spawnTimestamp": "2026-11-12T08:03:24.424Z",
+          "finalTimestamp": "2026-11-12T08:07:18.517Z"
+        },
+        {
+          "selectedRole": "game-studio-qa-tester",
+          "childId": "01a1cecc-571c-7d61-8d16-6d6a7c3e14a8",
+          "spawnTimestamp": "2026-11-12T08:07:40.532Z",
+          "finalTimestamp": "2026-11-12T08:14:00.615Z"
+        },
+        {
+          "selectedRole": "game-studio-lead-programmer",
+          "childId": "01a1ced2-8ead-7631-9dec-7a9520b92a49",
+          "spawnTimestamp": "2026-11-12T08:14:27.940Z",
+          "finalTimestamp": "2026-11-12T08:17:04.806Z"
+        }
+      ],
+      "traceReview": {
+        "01a1cec5-5266-7d92-a238-70ad689bda87": {
+          "file": "rollout-2026-11-12T16-00-00-01a1cec5-5266-7d92-a238-70ad689bda87.jsonl",
+          "sha256": "fb9e2b5c704b050d28ac6ec57c06b1f62aca00ad15d581087f8ccbd108476974",
+          "role": null,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "fullRoleInstructionsPresent": {
+            "game-studio-game-designer": false,
+            "game-studio-gameplay-programmer": false,
+            "game-studio-qa-tester": false,
+            "game-studio-lead-programmer": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent"
+          ],
+          "finalTimestamp": "2026-11-12T08:17:26.177Z"
+        },
+        "01a1ced2-8ead-7631-9dec-7a9520b92a49": {
+          "file": "rollout-2026-11-12T16-14-28-01a1ced2-8ead-7631-9dec-7a9520b92a49.jsonl",
+          "sha256": "a24783bd6f466adbe98b75c4ae729717c12dc09807cbd1188436c6f8d2ffa80b",
+          "role": "game-studio-lead-programmer",
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "fullRoleInstructionsPresent": {
+            "game-studio-game-designer": false,
+            "game-studio-gameplay-programmer": false,
+            "game-studio-qa-tester": false,
+            "game-studio-lead-programmer": true
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message"
+          ],
+          "finalTimestamp": "2026-11-12T08:17:04.806Z"
+        },
+        "01a1cecc-571c-7d61-8d16-6d6a7c3e14a8": {
+          "file": "rollout-2026-11-12T16-07-40-01a1cecc-571c-7d61-8d16-6d6a7c3e14a8.jsonl",
+          "sha256": "5ab01b05bef9c1bc59cfc78cfcef2fe085616765264d43071ee98f7e9e65419f",
+          "role": "game-studio-qa-tester",
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "fullRoleInstructionsPresent": {
+            "game-studio-game-designer": false,
+            "game-studio-gameplay-programmer": false,
+            "game-studio-qa-tester": true,
+            "game-studio-lead-programmer": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec"
+          ],
+          "finalTimestamp": "2026-11-12T08:14:00.615Z"
+        },
+        "01a1cec5-888c-7e93-b24a-465fb4fa6107": {
+          "file": "rollout-2026-11-12T16-00-14-01a1cec5-888c-7e93-b24a-465fb4fa6107.jsonl",
+          "sha256": "d22d62b4e5816baf4d8e176595cbbe7895b9b32a7323f68741d47c169803bb01",
+          "role": "game-studio-game-designer",
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "fullRoleInstructionsPresent": {
+            "game-studio-game-designer": true,
+            "game-studio-gameplay-programmer": false,
+            "game-studio-qa-tester": false,
+            "game-studio-lead-programmer": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec"
+          ],
+          "finalTimestamp": "2026-11-12T08:03:08.792Z"
+        },
+        "01a1cec8-6ee5-70a2-914b-60b648747846": {
+          "file": "rollout-2026-11-12T16-03-24-01a1cec8-6ee5-70a2-914b-60b648747846.jsonl",
+          "sha256": "07b19b9143d3c265e92fd09d95998383aab725f0342cba96c95530db3e8351cb",
+          "role": "game-studio-gameplay-programmer",
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "fullRoleInstructionsPresent": {
+            "game-studio-game-designer": false,
+            "game-studio-gameplay-programmer": true,
+            "game-studio-qa-tester": false,
+            "game-studio-lead-programmer": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec",
+            "exec"
+          ],
+          "finalTimestamp": "2026-11-12T08:07:18.517Z"
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "6d65d0ad01001be50315aa104584eee9523f072634024437a96de50bbecdeabc",
+        "before.json": "fd3e1c07ff4efc4ad6a0b2b4e7306263f521dcb9c3a488a30c51ff2dc32a5303",
+        "fixture.json": "8b707e1258c08fe29f4a92d2f0e24a7a4066066c0555db187993f098c2f785ad",
+        "QA game \u6d4b\u8bd5/tests/charge.qa.test.mjs": "000cba526b8e3a0d1bee043622e133a1e727064bde6ab80af3970fcb2f948e59",
+        "QA game \u6d4b\u8bd5/tests/charge.test.mjs": "f9f2d445f52971f123a0c64683344cb158c337403ff0d996fb11037881c68a4c",
+        "QA game \u6d4b\u8bd5/src/charge.mjs": "fa7ea8734a846e5bd7fc75ffd5c04382118929fc8e78dc6d7f684800cfac258c",
+        "QA game \u6d4b\u8bd5/production/qa/charge-review.md": "8a8b682c8cf5b8acec5602175826eef713218e0192f86982c35e96635cbf6488",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/charge/independent/preflight.json": "80e2ab9f44dc0efcf8d727b59713785cd6adec9ed6a49e2befbff31da7c54a0f",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/charge/independent/verification.json": "03c182013f7546bc65d65d657018b86d154ee3402bd992b5d623498293cbb290",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/charge/independent/suite/report.json": "b0abf8625dbfaba6d2caaf65e85a65e04458f4169f6d11c711ee549d0d16feef",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/charge/independent/suite/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/charge/independent/suite/stdout.log": "7f62620fae0883a5680a991d4f260c1d93983c9a2dd26847e4e39e3f7410bff3",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/charge/implementation/red/report.json": "8d967b7d9ee9b6cb59fd7539aec24303fefc2cda0f4658ebf6bcec90ca4e3887",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/charge/implementation/red/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/charge/implementation/red/stdout.log": "59268988cd6418d12dfa0fc12f5ec519eded3333573b3b92e3c0df10147aad92",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/charge/implementation/green/report.json": "ff59312fa45f67741fd9bf3754cb10b11cb08b2099bc1dcbbd478fba41848797",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/charge/implementation/green/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/charge/implementation/green/stdout.log": "c29a452238a54977e56634b9c08587a8f6d6bb197e5cacaf46a4a4c8d81f01b4",
+        "QA game \u6d4b\u8bd5/docs/programming/charge.md": "14efb85ae767e9a5cb8d1a8b7bc110803c052f5be0bc8f795090cc5ff3453fce",
+        "QA game \u6d4b\u8bd5/design/game-brief.md": "f3150de68fe5d63c573049c4fb47ea17020e10ed6828fceadaa0d6ce3ad9da63",
+        "final.txt": "8bde6a7367752a41c630dc09ed7a37b5ff417afe37a1e9df6ba480adf8bb07a1",
+        "independent-handoff-checks.json": "12473f87b60d631978245a3532037b0c1c2f0016e600ff50d9616bb805fafd6e",
+        "independent-boundary-mutation/result.json": "72be23222139cbe13affb694eaa4ec732bddcae4f7feee8d08b6c522c1600bc4",
+        "independent-boundary-mutation/programmer.stdout.log": "5519670e15076c1c6b72d3e77cf0359df02e40b31fc8cac8c8155dfd4567a139",
+        "independent-boundary-mutation/programmer.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "independent-boundary-mutation/qa.stdout.log": "d073d6c9468efa6da2c2e7a0d7d2039d9fe66a29d41197f7aef5c68093c6de31",
+        "independent-boundary-mutation/qa.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "maintainerChecks": {
+        "sourceSha256": "fa7ea8734a846e5bd7fc75ffd5c04382118929fc8e78dc6d7f684800cfac258c",
+        "node": "v24.22.2",
+        "scope": "maintainer pure-logic checks, separate from native QA and static review",
+        "status": "passed",
+        "passedGroups": [
+          "exact affordability, rejection, zero delta, cap and events",
+          "pause, no queued recovery, resume and reset",
+          "detached state and side-effect-free queries",
+          "external tuning and zero regeneration",
+          "independent instances sharing configuration",
+          "equivalent partitioned elapsed time"
+        ],
+        "nativeRed": {
+          "status": "failed",
+          "exitCode": 5,
+          "processExitCode": 1
+        },
+        "nativeRuns": {
+          "implementation/green": {
+            "tests": 17,
+            "pass": 17,
+            "fail": 0,
+            "skipped": 0
+          },
+          "independent/suite": {
+            "tests": 24,
+            "pass": 24,
+            "fail": 0,
+            "skipped": 0
+          }
+        },
+        "independentReport": "production/qa/evidence/charge/independent/suite/report.json"
+      },
+      "review": {
+        "result": "sequential native behavior and corrected artifact postconditions passed independent review",
+        "runnerExitCode": 1,
+        "runnerFailure": "The loaded fixture expected independent/report.json although its prompt authorized evidence anywhere under independent/. QA correctly wrote preflight.json first and retained its run in the fresh independent/suite/ directory. The native process itself exited 0.",
+        "correction": "Removed the unrequested exact nesting assertion. The independent verifier requires exactly one retained suite report under the authorized prefix, successful raw counts and every explicitly required artifact. Those postconditions and six independent contract groups were rerun against this same completed native workspace, passing. No native rerun is claimed after this path-assertion correction.",
+        "nativePromptUnchangedByCorrection": true,
+        "designer": "Actual new brief preserves approved API, defaults, exact affordability, recovery units, pause/reset, external data, examples and measurable criteria. No unresolved choice or invented feature.",
+        "programmer": "Read actual brief, wrote 17 tests before module, retained red import failure, implemented injected pure state and transitions, then executed 17 passing tests. No gameplay assertion ran in the missing-module red phase.",
+        "qa": "A distinct native child read original artifacts and logs, authored 7 additional tests with an integer oracle, 4096 short operation traces and 12 configuration pairs, and ran the complete 24-test suite. Counts are runner tests; internal traces are not additional tests.",
+        "qaPreservation": "The QA child retained a 38-file preflight manifest and verified all 38 unchanged, including the preceding designer/programmer artifacts. This manifest differs from the maintainer whole-fixture snapshot of 332 original regular files.",
+        "leadProgrammer": "A fourth child read the installed LP-CODE-REVIEW gate, effective config, actual brief/source/notes/both suites/raw evidence and recomputed artifact hashes. APPROVE for the logic implementation; no writes, reruns or release approval. Its commands were inspected for read-only behavior.",
+        "coordinator": "Only native spawn/wait/send tools; four actual custom roles selected once in order. Each child final response predates the next spawn, and actual deliverables/decisions were relayed. No generic substitute or coordinator implementation.",
+        "inheritance": "Full role instructions are absent from parent and present in each selected child; model, effort and sandbox match parent. This metadata and compliant writes do not prove adversarial sandbox denial.",
+        "preservation": "All 332 original regular workspace files outside .git remain SHA-256 identical; 17 authorized files added; all three temporary project profiles removed; no Hook trust configured."
+      },
+      "mutationControl": {
+        "source": "maintainer mutation of a disposable source copy, not native child execution",
+        "mutation": "energy < cost becomes energy <= cost, wrongly rejecting exact affordability",
+        "originalHashes": {
+          "src/charge.mjs": "fa7ea8734a846e5bd7fc75ffd5c04382118929fc8e78dc6d7f684800cfac258c",
+          "tests/charge.test.mjs": "f9f2d445f52971f123a0c64683344cb158c337403ff0d996fb11037881c68a4c",
+          "assets/data/charge.json": "c97cfca045c1b128487d7e454de4b0fb22b8ebf62b4f9774562a34fbadeeddba",
+          "tests/charge.qa.test.mjs": "000cba526b8e3a0d1bee043622e133a1e727064bde6ab80af3970fcb2f948e59"
+        },
+        "mutatedSourceSha256": "998ea797d56c5cfd487357b3b9037d1ee4229ad0d55e54bcd3f996873dc4c63c",
+        "programmerSuite": {
+          "args": [
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node",
+            "--test",
+            "--test-reporter=tap",
+            "tests/charge.test.mjs"
+          ],
+          "exitCode": 1,
+          "counts": {
+            "tests": 17,
+            "pass": 9,
+            "fail": 8,
+            "skipped": 0
+          }
+        },
+        "originalFilesPreserved": true,
+        "qaSuite": {
+          "args": [
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node",
+            "--test",
+            "--test-reporter=tap",
+            "tests/charge.qa.test.mjs"
+          ],
+          "exitCode": 1,
+          "counts": {
+            "tests": 7,
+            "pass": 3,
+            "fail": 4,
+            "skipped": 0
+          }
+        }
+      }
+    }
+  },
+  "sourceHashes": {
+    "toolkit/test/qa-role-host.mjs": "d7f15a99adf59c87b0cb965c5866529144dba61e4f4aa590ac71deadd170c500",
+    "toolkit/test/fixtures/role-handoff-case.mjs": "3fea0e553a6268df2ecb93e054066ee7a61bb9776fa72ec53fe01f48b259b331",
+    "toolkit/test/verify-role-handoff.mjs": "1950e01c7ccab8a38f19c0698cfbc91d65a853b8a5561d083e4e7f9707e26509",
+    "studio-tests/roles/sequential-handoff-codex.md": "4d6190ea71d814914240bdc4c6cbf13b3af9b7238d0aabf1992f28a2faa1f6a5"
+  },
+  "sourceHashScope": "Current committed fixture, behavior specification and verifier. The final native prompt is byte-identical; its original outer runner used the stricter report-path assertion explained in review.",
+  "validation": {
+    "node": "v24.22.2",
+    "client": "codex-cli 0.162.0",
+    "build": "passed",
+    "typecheck": "passed",
+    "toolkitTests": {
+      "tests": 131,
+      "passed": 131,
+      "failed": 0,
+      "skipped": 0
+    },
+    "packedInstall": "passed",
+    "maintainerBehaviorGroups": 6,
+    "nativeProgrammerTests": 17,
+    "nativeCompleteTests": 24,
+    "mutatedProgrammerFailures": 8,
+    "mutatedQaFailures": 4
+  },
+  "limitations": [
+    "Synthetic pure-logic feature only; no actual engine/browser integration, measured performance or human play acceptance.",
+    "Sequential root-launched macOS CLI only; no desktop, subdirectory or parallel scheduling acceptance.",
+    "No existing-source repair, shared-checkpoint race, unknown custom-role failure or intentional host write-denial case.",
+    "Independent native role contexts use the inherited model, not different models.",
+    "Continuous numerical domains are sampled; generated traces cover only the declared four-operation alphabet/configuration.",
+    "No production Hook or global configuration change. Temporary trust profiles were removed.",
+    "This slice does not close T19, the four individual role rows, the full catalog migration or release gates."
+  ]
+}

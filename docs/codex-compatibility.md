@@ -2,6 +2,40 @@
 
 Status: CLI custom role selection and a startup/patch Hook fixture verified with controls; full host compatibility gate is open.
 
+## Sequential native role hand-off — 2026-11-12
+
+CLI 0.162.0 on macOS ARM64 completed a four-child chain in a fresh packed project:
+Game Designer wrote the approved charge brief; Gameplay Programmer implemented
+it and ran 17 tests; a separate QA Tester authored seven additional tests and ran
+the complete 24-test suite; a separate Lead Programmer read the actual artifacts
+and original logs under LP-CODE-REVIEW, returning APPROVE for the logic module.
+The coordinator only delegated, waited and relayed actual results. Each child
+completed before the next spawn, received its installed role instructions and
+inherited the parent model, effort and sandbox. No close operation was exposed;
+terminal completion allowed the next spawn with one running child at a time.
+
+All 332 original regular files remained unchanged and 17 authorized files were
+added. Independent maintainer checks passed six behavior groups. Changing the
+affordability guard only in a source copy caused eight programmer tests and four
+QA tests to fail. The 4,096 generated QA traces are internal cases within seven
+runner tests. The initial tests-first red run was a missing-module import failure,
+not an executed gameplay assertion failure.
+
+The evidence retains fixture mistakes: an initial mandatory-close requirement
+stopped the chain; a second run was cancelled after detecting conflicting red/green
+output paths. In the completed chain, the outer runner still expected a report at
+an unrequested exact nesting level and exited 1, despite native exit 0. QA's actual
+`independent/suite/` output obeyed its assignment. Corrected postconditions and
+the independent verifier passed against those same retained artifacts; no fresh
+native rerun after that path-assertion correction is claimed. All temporary trust
+profiles were removed. See [the evidence](evidence/role-handoff-2026-11-12.json)
+and [behavior spec](../studio-tests/roles/sequential-handoff-codex.md).
+
+This establishes the tested sequential dependency and independent review behavior.
+T19's parallel tasks, shared-checkpoint conflicts, unavailable roles, intentional
+write denial, desktop/subdirectory behavior and full role matrices remain open.
+No engine/browser gameplay, human acceptance or release approval is established.
+
 ## Packaged Gameplay Programmer — 2026-11-12
 
 Codex CLI 0.162.0 on macOS ARM64 selected the actual
@@ -24,7 +58,7 @@ Each child receives full role instructions and inherits parent model, effort and
 sandbox; parents only delegate and aggregate. Temporary trust profiles are removed
 and no Hooks are configured. See [evidence](evidence/gameplay-programmer-2026-11-12.json)
 and [behavior spec](../studio-tests/roles/gameplay-programmer-codex.md). Actual engine
-integration, browser gameplay, native cross-role review, desktop/subdirectory,
+integration, browser gameplay, broader cross-role behavior, desktop/subdirectory,
 intentional write denial and final validator acceptance remain open.
 
 ## Packaged design and programming roles — 2026-11-12

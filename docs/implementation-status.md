@@ -141,7 +141,7 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   maintainer evidence, not native agent execution. A preparation-only TAP/spec
   reporter mismatch was fixed before the successful native review. See
   [programmer evidence](evidence/lead-programmer-2026-11-12.json). No benchmark,
-  engine API acceptance, real feature hand-off or full T19 completion is claimed.
+  engine API acceptance or full T19 completion is claimed by those isolated cases.
 - Gameplay Programmer now has a canonical role that implements approved mechanics
   and tests within the confirmed scope. Native standard and minimal Web fixtures
   produce pure combo modules, externally injected tuning, documented transitions
@@ -156,7 +156,21 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   Accepted ADR governance, appropriate domain hand-offs, unverified API status and
   unresolved coefficients. See [gameplay evidence](evidence/gameplay-programmer-2026-11-12.json).
   Pure logic tests do not establish engine/browser integration, human acceptance,
-  an existing-source fix or native role-to-role collaboration; A012/T19 remain open.
+  an existing-source fix or the full role matrix; A012/T19 remain open.
+- A fresh packed project now exercises an actual native sequential chain from
+  Game Designer to Gameplay Programmer to independent QA Tester to Lead Programmer.
+  The programmer runs 17 tests; QA adds seven independent tests and runs all 24;
+  the separate lead reads actual artifacts/logs and returns APPROVE for pure logic.
+  Six maintainer behavior groups pass, while an isolated affordability mutation
+  fails eight programmer tests and four QA tests. The coordinator only delegates
+  and aggregates; child instructions, inherited settings and completion order are
+  verified from native traces. All 332 original files survive and 17 authorized
+  outputs are added. The evidence preserves the unavailable-close fixture failure,
+  cancelled output-path conflict and completed run's overly strict report-path
+  assertion; corrected postconditions pass on the same retained native artifacts.
+  See [handoff evidence](evidence/role-handoff-2026-11-12.json). T19 remains open for
+  parallel/conflict/blocked-role and broader host cases; no actual game, engine,
+  browser or human acceptance is inferred.
 
 ## Verification performed
 
