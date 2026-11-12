@@ -65,6 +65,29 @@ module/test paths, run the existing suite and retain its actual results."
 These are the five currently packaged roles. A reference to another professional
 owner is a hand-off recommendation, not proof that the owner is installed or was
 consulted. Request only roles the current host actually exposes.
+
+For an authorized sequential feature task, the coordinator can hand the approved
+rules to the designer, the resulting brief to the gameplay programmer, and the
+actual implementation and evidence to a separate QA tester and lead programmer.
+Give each assignment its inputs, allowed write paths, expected output and checks.
+Wait for each prerequisite to finish before dispatching dependent work; pass the
+actual artifact paths, results and unresolved decisions, not a predicted summary.
+Keep independent review in a separate child from the implementation author.
+Use a native close operation if exposed and needed for the host's concurrency
+limit; do not invent that operation. Report an actual refused spawn as a host
+limit rather than silently replacing the requested role.
+
+If a role is unavailable or a required design decision is unresolved, name the
+blocked dependency and return the decision to its owner. Continue only work that
+does not depend on it. A coordinator may not silently replace independent custom
+roles with its own implementation and claim equivalent verification. Assign
+disjoint write paths; independent reviewers preserve the artifacts they review.
+Shared checkpoints remain coordinator-owned and use the toolkit's expected-hash
+save contract. Conflicts require reading the current record and reconciling it,
+not overwriting another writer's progress. This guidance does not establish host
+enforcement or prove parallel/checkpoint behavior; consult recorded compatibility
+evidence for the specific client and scenario.
+
 The installer does not edit `.codex/config.toml`, enable agents globally or trust
 Hooks. Follow the client's native project trust/discovery controls. If the role
 is unavailable, report that limitation rather than claiming a generic-agent or

@@ -1,0 +1,38 @@
+const roles = ['game-studio-game-designer', 'game-studio-gameplay-programmer', 'game-studio-qa-tester', 'game-studio-lead-programmer'];
+const quote = value => `'${value.replaceAll("'", "'\\''")}'`;
+const command = `${quote(process.execPath)} --test --test-reporter=tap tests/*.test.mjs`;
+const contract = `# Approved charge mechanic
+Pillar: deliberate resource use. The player spends charge for an action and waits for recovery; this fixture covers only the pure logic, not its presentation or human feel.
+Implement src/charge.mjs exporting createCharge(config, emit). Load assets/data/charge.json externally and inject its values; no loader, globals, clock, engine, renderer or dependency is needed. All architecture/API choices below are approved. Minimal workflow: no ADR is required.
+Defaults: capacity 10, cost 4, regenPerSecond 2. Valid configuration: finite capacity 1..100, cost >0 and <=capacity, regenPerSecond 0..20. Inputs obey the domains; handling invalid inputs is outside scope. Configuration stays constant for an instance.
+Initial energy equals capacity; initially unpaused. state() returns exactly {energy, paused}, a detached snapshot with no side effects. All instances are independent.
+tick(dtMs) accepts finite non-negative milliseconds <=10000. When unpaused, energy = min(capacity, energy + regenPerSecond * dtMs / 1000). While paused, tick changes nothing. It returns the resulting energy and emits nothing. There is no delayed recovery or queued time.
+use() returns true only when unpaused and energy >= cost, INCLUDING equality; subtract exactly cost and emit exactly one plain object {type:'used', remaining:energy}. Otherwise return false without changing energy or emitting an event. No queued action.
+setPaused(boolean) changes only paused, emits nothing and returns undefined. reset() restores capacity AND unpaused, emits nothing and returns undefined.
+Public methods must be documented. Describe transitions and external tuning in the brief/implementation note. Test zero delta, exact affordability, cap, rejected input, pause/resume/reset, independent instances, alternate configuration and equivalent partitioned elapsed time (numeric comparison tolerance 1e-9).
+Approved default example: use twice -> energy 2; another use rejects; tick(1000) ->4; use succeeds ->0. After reset, tick at capacity remains10. Alternate example: capacity6/cost3/regen0 permits two uses and never recovers by ticking.
+No combat, UI, network, permanent progression, visual sign-off or release decision is in scope. Tests prove logic only. Human play and engine/browser integration remain unassessed.
+`;
+
+export const handoffScenarios = {
+  'role-handoff': {
+    role: roles[0], roles, roleIntroduction: 'You are the Game Designer for an indie game project.',
+    behaviorSpec: 'studio-tests/roles/sequential-handoff-codex.md',
+    sandbox: 'workspace-write', timeoutMs: 1200000,
+    inputs: {
+      'project.yaml': `schema_version: 1\nengine:\n  name: Web\n  language: JavaScript\n  code_root: src\n  test_root: tests\nmodes:\n  automation: guided\n  rigor: minimal\ncommands:\n  test: ${JSON.stringify(command)}\n`,
+      'docs/approved-charge.md': contract,
+      'assets/data/charge.json': '{"capacity":10,"cost":4,"regenPerSecond":2}\n',
+      'src/unrelated.mjs': 'export const untouched = "existing feature";\n',
+    },
+    expectedFiles: ['design/game-brief.md', 'src/charge.mjs', 'tests/charge.test.mjs', 'tests/charge.qa.test.mjs', 'docs/programming/charge.md', 'production/qa/charge-review.md', 'production/qa/evidence/charge/implementation/green/report.json'],
+    allowedNewFile: path => ['design/game-brief.md', 'src/charge.mjs', 'tests/charge.test.mjs', 'tests/charge.qa.test.mjs', 'docs/programming/charge.md', 'production/qa/charge-review.md'].includes(path) || path.startsWith('production/qa/evidence/charge/'),
+    coordinatorPrompt: `Coordinate the approved charge mechanic using native custom-role delegation. This task explicitly authorizes the following four sequential role tasks, with one running child at a time. Spawn each specified agent_type exactly once, wait for its terminal completion, then relay its actual deliverables and unresolved decisions to the next child. Close a completed child only if a native close operation is exposed; absence of that optional operation is not a prerequisite failure. If the host refuses the next spawn because its slot is still occupied, report that actual failure. Do not copy role instructions into a generic agent. If a role is unavailable, report ROLE_SELECTION_UNAVAILABLE. If a prerequisite is blocked or fails, stop dependent implementation and report the blocker; do not fabricate a hand-off or fix it yourself.
+You as coordinator may only spawn/wait/send/close and summarize: no file inspection, shell execution or writes. Children inherit the real session sandbox and model; do not override them. Each child must preserve all existing files and other roles' outputs, may not launch further agents, install dependencies, change configuration, commit, publish, or edit shared checkpoints. Goal, API, design and listed writes are already approved; no further per-file permission is needed. Return real ambiguities to you. Node executable for authorized commands is ${process.execPath}; use the installed .game-studio/run.cjs and inspect its help for commands.
+1. Delegate to game-studio-game-designer: read docs/approved-charge.md, external data and effective settings; write ONLY new design/game-brief.md. Preserve all approved mechanics/API/numbers and give formulas, transitions, worked examples and measurable criteria. Separate human feel from tested logic. Return the path and any unresolved decisions to the coordinator.
+2. Only after that brief exists and has no blocking design decisions, delegate to game-studio-gameplay-programmer: read the designer's actual brief and docs/approved-charge.md; implement ONLY new src/charge.mjs, tests/charge.test.mjs, docs/programming/charge.md and evidence under production/qa/evidence/charge/implementation/. Use tests first and retain red evidence in implementation/red, then the actual green toolkit test report in the separate fresh implementation/green directory. Preserve external tuning and all existing files. Return actual paths, commands, test counts, limitations and any unresolved decisions.
+3. After implementation, delegate to game-studio-qa-tester as a NEW independent child: inspect actual design, code, authored tests and original evidence. Write ONLY new tests/charge.qa.test.mjs, production/qa/charge-review.md and evidence under production/qa/evidence/charge/independent/. Independently derive assertions from approved rules; do not merely rerun or copy programmer assertions. Execute the complete test suite with the installed toolkit and retain its original report/stdout/stderr. Name source hashes, actual execution counts, gaps and any reproducible defect; do not fix source or approve a release.
+4. Delegate to game-studio-lead-programmer as a NEW independent child: perform a read-only LP-CODE-REVIEW of the actual brief, source, implementation notes, both suites and raw evidence using the installed gate. The approved API is in docs/approved-charge.md and minimal workflow has no ADR requirement. Return an evidence-backed verdict, concrete findings and outstanding layers. No writes or further test execution.
+Finally aggregate all four actual results, distinguishing programmer tests, independent QA assertions, static review and unassessed engine/browser/human acceptance. Report a failed stage honestly; do not force a passing verdict.`,
+  },
+};

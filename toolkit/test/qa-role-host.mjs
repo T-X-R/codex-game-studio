@@ -14,9 +14,10 @@ import { leadScenarios } from './fixtures/qa-lead-cases.mjs';
 import { designerScenarios } from './fixtures/game-designer-cases.mjs';
 import { programmerScenarios } from './fixtures/lead-programmer-cases.mjs';
 import { gameplayScenarios } from './fixtures/gameplay-programmer-cases.mjs';
+import { handoffScenarios } from './fixtures/role-handoff-case.mjs';
 
 const scenarioName = process.argv[2] ?? 'audit';
-const cases = { ...scenarios, ...leadScenarios, ...designerScenarios, ...programmerScenarios, ...gameplayScenarios };
+const cases = { ...scenarios, ...leadScenarios, ...designerScenarios, ...programmerScenarios, ...gameplayScenarios, ...handoffScenarios };
 if (process.argv.length > 3 || (scenarioName !== 'godot' && !Object.hasOwn(cases, scenarioName))) throw new Error(`Choose ${[...Object.keys(cases), 'godot'].join(', ')}`);
 const scenario = scenarioName === 'godot' ? await godotScenario() : cases[scenarioName];
 const roleName = scenario.role ?? 'game-studio-qa-tester';
@@ -45,6 +46,13 @@ await scenario.prepare?.(workspace, directory);
 const rolePath = `.codex/agents/${roleName}.toml`;
 const role = await readFile(join(workspace, rolePath), 'utf8');
 assert.equal(role, await readFile(join(packageRoot, '..', rolePath), 'utf8'));
+const roleHashes = {};
+for (const name of scenario.roles ?? [roleName]) {
+  const path = `.codex/agents/${name}.toml`;
+  const installed = await readFile(join(workspace, path));
+  assert.deepEqual(installed, await readFile(join(packageRoot, '..', path)));
+  roleHashes[name] = createHash('sha256').update(installed).digest('hex');
+}
 const configMarker = `QA_CONFIG_${randomUUID()}`;
 await writeFile(join(workspace, '.codex/config.toml'), `developer_instructions = "Fixture config ${configMarker}"\n[agents]\nenabled = true\nmax_concurrent_threads_per_session = 1\n`);
 async function snapshot() {
@@ -65,7 +73,7 @@ const profilePath = join(process.env.CODEX_HOME ?? join(homedir(), '.codex'), `$
 await writeFile(profilePath, `[projects.${JSON.stringify(workspace)}]\ntrust_level = "trusted"\n`, { flag: 'wx', mode: 0o600 });
 try {
   const request = scenario.request;
-  const prompt = `Use native custom-role selection to delegate exactly one task to ${roleName}: ${request} The child may use the installed runtime within the assigned scope; its Node executable is ${process.execPath}. Wait for completion and summarize its actual findings, artifacts and remaining decisions. You as parent must not inspect workspace files, run shell commands or write the report yourself. Do not simulate this role with a generic agent; if unavailable, report ROLE_SELECTION_UNAVAILABLE.`;
+  const prompt = scenario.coordinatorPrompt ?? `Use native custom-role selection to delegate exactly one task to ${roleName}: ${request} The child may use the installed runtime within the assigned scope; its Node executable is ${process.execPath}. Wait for completion and summarize its actual findings, artifacts and remaining decisions. You as parent must not inspect workspace files, run shell commands or write the report yourself. Do not simulate this role with a generic agent; if unavailable, report ROLE_SELECTION_UNAVAILABLE.`;
   const common = ['--profile', profileName, '--disable', 'plugins', '--disable', 'apps', '--disable', 'memories',
     '-c', 'skills.include_instructions=false', '--cd', workspace];
   const preflight = await runProcess('codex', [...common, 'debug', 'prompt-input', prompt], { cwd: workspace, timeoutMs: 30000 });
@@ -74,7 +82,7 @@ try {
   assert.ok(preflight.stdout.includes(configMarker));
   assert.ok(!preflight.stdout.includes(scenario.roleIntroduction ?? 'You are the QA Tester for an indie game project.'));
   const args = ['exec', ...common, '--strict-config', '--sandbox', scenario.sandbox, '--json', '-o', join(directory, 'final.txt'), prompt];
-  await writeFile(join(directory, 'fixture.json'), JSON.stringify({ scenario: scenarioName, role: roleName, workspace, args, roleSha256: before[rolePath] }, null, 2));
+  await writeFile(join(directory, 'fixture.json'), JSON.stringify({ scenario: scenarioName, role: roleName, workspace, args, roleSha256: before[rolePath], roleHashes }, null, 2));
   console.log(JSON.stringify({ directory, status: 'running', timeoutMs }));
   const version = await runProcess('codex', ['--version']);
   const result = await runProcess('codex', args, { cwd: workspace, timeoutMs });
@@ -87,7 +95,7 @@ try {
   const events = result.stdout.split('\n').filter(Boolean).map(line => JSON.parse(line));
   const report = { scenario: scenarioName, role: roleName, sandbox: scenario.sandbox, status: 'not_assessed', reason: `Review native parent/child trace and semantic output against ${scenario.behaviorSpec ?? 'studio-tests/roles/qa-tester-codex.md'}.`,
     client: version.stdout.trim(), exitCode: result.exitCode, threadId: events.find(event => event.type === 'thread.started')?.thread_id,
-    preservedFiles: Object.keys(before).length, changed, added, outsideScope, roleSha256: before[rolePath] };
+    preservedFiles: Object.keys(before).length, changed, added, outsideScope, roleSha256: before[rolePath], roleHashes };
   await writeFile(join(directory, 'report.json'), JSON.stringify(report, null, 2));
   console.log(JSON.stringify({ directory, ...report }));
   assert.deepEqual(changed, []); assert.deepEqual(outsideScope, []);
