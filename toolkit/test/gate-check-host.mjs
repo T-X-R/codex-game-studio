@@ -38,7 +38,7 @@ for (const [path, content] of Object.entries(scenario.inputs)) {
 }
 const hashes = {};
 const skillRoot = '.agents/skills/game-studio-gate-check';
-const paths = [`${skillRoot}/SKILL.md`,
+const paths = [`${skillRoot}/SKILL.md`, 'studio/docs/integration.md',
   ...['tiers', 'checks', 'assessment', 'verdict', 'stage', 'next-steps'].map(name => `${skillRoot}/references/${name}.md`),
   ...['systems-design', 'technical-setup', 'pre-production', 'production', 'polish', 'release'].map(stage => `studio/docs/phase-gates/gate-${stage}.md`),
   ...['cd', 'td', 'pr', 'ad'].map(role => `studio/docs/director-gates/${role}-phase-gate.md`),

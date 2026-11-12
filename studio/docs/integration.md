@@ -62,9 +62,20 @@ rules or engine capabilities instead of guessing them. For example: "Delegate th
 approved combo contract to game-studio-gameplay-programmer; implement only these
 module/test paths, run the existing suite and retain its actual results."
 
-These are the five currently packaged roles. A reference to another professional
-owner is a hand-off recommendation, not proof that the owner is installed or was
-consulted. Request only roles the current host actually exposes.
+The development package also includes `game-studio-creative-director`,
+`game-studio-art-director`, `game-studio-technical-director` and
+`game-studio-producer`. Their gate definitions live under
+`studio/docs/director-gates/`. Supply the specific gate, effective workflow,
+actual evidence paths and applicable phase requirements. Distinguish missing
+required inputs from artifacts not expected until a later phase. Each reviewer
+returns its own verdict and unresolved findings; a review does not itself change
+scope, accept risks, advance the stage or publish a release.
+
+These nine packaged roles remain partial migrations. Package availability does
+not establish that a particular project installed them or its host exposes them;
+inspect the project's role files and actual native delegation types. A reference
+to another professional owner is a hand-off recommendation, not proof that the
+owner is installed or was consulted. Request only roles the current host exposes.
 
 For an authorized sequential feature task, the coordinator can hand the approved
 rules to the designer, the resulting brief to the gameplay programmer, and the
