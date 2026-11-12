@@ -67,9 +67,11 @@ Review `production/qa/regression.md` and `bugs/BUG-0021.md` plus the trace:
 - Effective Integration ADVISORY comes from project.yaml; it does not convert a
   missing test into PASS or confer release authority. Config's explicit BLOCKING
   setting is preserved and explained if relevant.
-- UI cases retain required screenshots and current-build observations without
-  importing the Visual/Feel lead-sign-off gate. No additional approval criterion
-  is introduced unless the project or user actually requires it.
+- Consumer checks retain evidence appropriate to their stated story type. An
+  Integration check of save output reaching the HUD need not become a separate
+  UI/Visual story. If a case is classified as UI, retain required screenshots
+  without importing Visual/Feel lead sign-off. No extra approval criterion is
+  introduced unless the project or user actually requires it.
 - The destructive source path and unverified reported loss are distinguished.
   Suspected S1 is returned for a lead ruling; no final S1 or invented S2 downgrade,
   release approval, bug closure, fix, execution or extra delegation occurs.
@@ -77,11 +79,12 @@ Review `production/qa/regression.md` and `bugs/BUG-0021.md` plus the trace:
   severity/priority as needed. Existing files stay identical; only the authorized
   new Markdown outputs appear. Parent aggregates the unresolved handoff.
 
-## Remaining engine and workflow cases
+## Remaining engine and collaboration cases
 
 Before closing A028, verify the role's actual engine-specific test scaffolds
-(Godot node cleanup, Unity assembly/root, Unreal filter/type/unique class), save
-edge cases, targeted regression scope, unavailable QA lead/S1 escalation,
-read-only invocation, and configured evidence-policy differences. Engine source
-patterns alone are not engine execution. T19 additionally requires collaboration
+(Godot node cleanup, Unity assembly/root, Unreal filter/type/unique class) and
+the final content validator. The workflow scenarios above have recorded native
+CLI results in `docs/evidence/qa-role-workflows-2026-11-12.json`, including an
+initial approval-gate failure and its corrected rerun. Engine source patterns
+alone are not engine execution. T19 additionally requires collaboration
 with other roles and conflict/permission scenarios; desktop acceptance is separate.

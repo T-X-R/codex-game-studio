@@ -88,8 +88,15 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   test cases and a structured bug report, and returned unresolved acceptance
   decisions. All 322 existing files remained unchanged; only the two authorized
   reports were added. See [QA role evidence](evidence/qa-role-2026-11-12.json).
-  This is scoped audit acceptance, not completion of A028's engine and workflow
-  cases, enforced write-denial testing, T19 collaboration or desktop acceptance.
+  Further native scenarios verify read-only output, targeted save regression,
+  save edge cases, configured advisory policy and unavailable-lead/S1 escalation.
+  The first regression invented a UI approval requirement; a small role correction
+  and fresh identical-input rerun removed that extra gate while retaining evidence
+  and severity boundaries. The corrected run produced 11 unexecuted cases and a
+  pending-severity bug report, preserving all 321 existing files. See
+  [workflow evidence](evidence/qa-role-workflows-2026-11-12.json), including the
+  initial failure. Engine scaffolds, enforced write-denial testing, T19
+  collaboration, the final validator and desktop acceptance remain open.
 
 ## Verification performed
 

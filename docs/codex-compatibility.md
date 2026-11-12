@@ -24,6 +24,19 @@ run exited 0. See [the reviewed evidence](evidence/qa-role-2026-11-12.json) and
 [behavior spec](../studio-tests/roles/qa-tester-codex.md). Desktop, remaining QA
 behavior cases and the full multi-role collaboration gate are still open.
 
+The subsequent `readonly` scenario inherited a read-only sandbox, returned its
+audit in the response and changed/added no files (322 existing files checked).
+The `regression` scenario exercised synthetic save-loss evidence, targeted
+regression, configured advisory/blocking policy and an unavailable QA lead.
+Its initial result incorrectly added a UI sign-off requirement. The corrected
+role's fresh run used identical game inputs, produced 11 unexecuted Integration
+cases without importing other story-type approval gates, left suspected S1 and
+priority pending, and granted no release approval. All 321 prior files survived
+unchanged; only the two requested Markdown reports were added. The actual child
+instructions, model/effort, sandbox and parent aggregation were reviewed for all
+three runs. Temporary profiles were removed. See [the complete workflow record](evidence/qa-role-workflows-2026-11-12.json).
+This is role behavior evidence, not executed game regression or human acceptance.
+
 Local candidate: Codex CLI 0.162.0 on macOS ARM64. The installed feature listing
 reported hooks and multi-agent support enabled. This is not a claimed minimum
 version or a proof of desktop equivalence.
