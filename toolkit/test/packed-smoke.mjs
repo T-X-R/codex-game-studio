@@ -58,6 +58,15 @@ try {
     const result = command(globalCli, 'resource', 'path', id);
     assert.equal(await readFile(result.data.path, 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
+  for (const name of ['difficulty-curve', 'player-journey']) {
+    const id = `studio/templates/${name}.md`;
+    const result = command(globalCli, 'resource', 'path', id);
+    assert.equal(await readFile(result.data.path, 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
+  }
+  for (const path of ['SKILL.md', ...['tiers', 'checks', 'assessment', 'verdict', 'stage', 'next-steps'].map(name => `references/${name}.md`)]) {
+    const id = `.agents/skills/game-studio-gate-check/${path}`;
+    assert.equal(await readFile(join(project, id), 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
+  }
   const designResource = 'studio/docs/roles/game-designer.md';
   const designPath = command(globalCli, 'resource', 'path', designResource).data.path;
   assert.equal(await readFile(designPath, 'utf8'), await readFile(join(packageRoot, '..', designResource), 'utf8'));
