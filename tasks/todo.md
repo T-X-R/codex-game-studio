@@ -213,6 +213,7 @@ unreleased; full host and workflow acceptance is still open.
   - Likely files: specified by each S/A row contract below. Scope: S/M per row, not one bulk task.
 
 - [ ] T22 Migrate shared helpers and scoped rules
+  - 2026-11-12 artifact follow-up: `3b6b61a` preserves the complete catalog as a packaged Codex resource; `c6e3c7e` adds `check --kind artifacts [--phase <id> | --path <id>]`. Ten legacy/new project fixtures match 540 step observations across 49 phase steps and five minimal-path steps. A real unreadable-file control reports UNKNOWN and exit three without dropping phase rows. Catalog parity, seven CLI/helper tests, build/typecheck/content validation, 184 full-suite tests and installed-runtime inspection pass. See [artifact contract](../docs/artifact-check.md). Workflow consumers and remaining helper/rule migrations remain open.
   - 2026-11-12 deterministic gate prerequisites: `d7da380` ports GDD section/placeholder observations as `check --kind gdd`; eight legacy/new fixtures match. `26ac61f` ports ADR dependency extraction, cycle membership, transitive blocking and dependency-first ordering as `check --kind adr-deps`; a real upstream comparison matches the cycle/blocked/independent fixture. Both use project-relative safe paths, preserve input files, distinguish empty input as not assessed and leave verdicts to workflows. Nine new CLI tests bring the suite to 176 passes; build/typecheck/content validation and packed-runtime positive/empty checks pass. The first full GDD run encountered the sandbox's localhost-listen denial; the authorized rerun passed all 171 tests before the ADR additions. See [GDD contract](../docs/gdd-structure.md) and [ADR contract](../docs/adr-dependencies.md). Artifact-catalog checking, workflow consumers, remaining helpers and scoped rules remain open.
   - Modules: `project-state`, `game-operations`, `codex-integration`. Dependencies: T20.
   - Work queue: each of 54 shared-script/resource rows and 14 scoped-rule rows in the inventory; complete reused items after their T11–T18 implementation is verified.
@@ -306,6 +307,13 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S023 Migrate `dev-story` to `game-studio-dev-story`. Evidence: pending.
 - [ ] S024 Migrate `estimate` to `game-studio-estimate`. Evidence: pending.
 - [ ] S025 Migrate `gate-check` to `game-studio-gate-check`. Evidence: pending.
+  - Deterministic prerequisites now exist: `check --kind artifacts`, `check --kind gdd`, `check --kind adr-deps`; see T22. This does not close the Skill row.
+  - [ ] G1 Port Systems Design, Technical Setup and Pre-Production gate references (three files); retain workflow/QA/per-system criteria and declared evidence gaps.
+  - [ ] G2 Port Production, Polish and Release gate references (three files); retain smoke authenticity, performance policy, review and release requirements.
+  - [ ] G3 Port workflow-tier, deterministic-check and assessment references (three files); use pinned CLI observations and actual native director results.
+  - [ ] G4 Port verdict, stage-update and next-step references (three files); preserve failed/unassessed stage invariants and use transactional config writes within actual authorization.
+  - [ ] G5 Add the Codex Skill entry point, behavioral contract and catalog mapping; validate packaged references and instructions.
+  - [ ] G6 Verify positive/negative triggers, tier/QA combinations, missing or placeholder evidence, real director execution, verdict precedence, authorized stage changes and rejected advancement in isolated native host scenarios. Keep unrun desktop and broader workflow cases open.
 - [ ] S026 Retire alias `help`; route users to `game-studio-next-step`. Evidence: pending.
 - [ ] S027 Migrate `hotfix` to `game-studio-hotfix`. Evidence: pending.
 - [ ] S028 Migrate `launch-checklist` to `game-studio-launch-checklist`. Evidence: pending.

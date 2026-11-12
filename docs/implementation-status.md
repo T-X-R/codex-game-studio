@@ -17,8 +17,18 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   validation and packed-runtime positive/empty cases pass. The initial full
   GDD regression run hit sandbox localhost-listen restrictions; its authorized
   rerun passed before the ADR additions. See [GDD observations](gdd-structure.md)
-  and [ADR observations](adr-dependencies.md). The complete gate-check Skill,
-  artifact-catalog checks and native workflow acceptance remain open.
+  and [ADR observations](adr-dependencies.md). The complete gate-check Skill
+  and native workflow acceptance remain open.
+- The complete workflow catalog now ships with the pinned runtime: seven phase
+  groups / 49 steps plus the five-step minimal path. `check --kind artifacts`
+  reports existence, pattern matches, minimum counts, alternatives and steps
+  that cannot be judged from disk. Ten project fixtures match 540 upstream
+  step observations, including required/repeatable flags and check kinds.
+  An unreadable-report control returns UNKNOWN / not assessed while retaining
+  all nine phase rows. Catalog integrity, CLI and installed-runtime checks pass;
+  the local suite now has 184 passing tests. See [artifact observations](artifact-check.md).
+  The catalog names intended Skills without claiming they are all installed;
+  phase verdicts, content adequacy and stage changes remain workflow work.
 - Typed CLI argument contracts, JSON results, help/schema and explicit exit codes.
 - Nearest project discovery, configuration reads with provenance and rigor/local
   precedence, named system workflow overrides and legacy technical-preference

@@ -188,7 +188,7 @@ Only registrations in `.claude/settings.json` count as active source bindings. T
 | [adr-dep-graph.sh](../.claude/scripts/adr-dep-graph.sh) | `design-records` | Retain capability as a CLI-backed operation or bundled internal helper; preserve registry and review provenance. |
 | [adr-status.sh](../.claude/scripts/adr-status.sh) | `design-records` | Retain capability as a CLI-backed operation or bundled internal helper; preserve registry and review provenance. |
 | [agent-check.sh](../.claude/scripts/agent-check.sh) | `validation` | Reuse validation intent; rewrite Claude metadata/payload assumptions and expose through check or private validators. |
-| [artifact-check.sh](../.claude/scripts/artifact-check.sh) | `validation` | Reuse validation intent; rewrite Claude metadata/payload assumptions and expose through check or private validators. |
+| [artifact-check.sh](../.claude/scripts/artifact-check.sh) | `validation` | Implemented as `check --kind artifacts` with the packaged workflow catalog; see [contract](../docs/artifact-check.md). Legacy/new observations and packed execution pass; workflow consumers remain open. |
 | [asset-scan.sh](../.claude/scripts/asset-scan.sh) | `validation` | Reuse validation intent; rewrite Claude metadata/payload assumptions and expose through check or private validators. |
 | [bug-stats.sh](../.claude/scripts/bug-stats.sh) | `project-state` | Port filesystem/configuration operations to CLI core; preserve precedence and observed state. |
 | [code-markers.sh](../.claude/scripts/code-markers.sh) | `validation` | Reuse validation intent; rewrite Claude metadata/payload assumptions and expose through check or private validators. |
