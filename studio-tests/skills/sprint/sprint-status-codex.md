@@ -3,7 +3,9 @@
 Source: `.claude/skills/sprint-status/SKILL.md`, all six phases and the seven
 retained cases in `studio-tests/skills/sprint/sprint-status.md`; YAML schema from
 `.claude/skills/sprint-plan/SKILL.md` Phase 3. The source files remain unchanged.
-Status: partial implementation; native acceptance pending.
+Status: partial implementation. All 26 defined CLI scenarios have selected
+passes in [33 retained runs](../../../docs/evidence/sprint-status-skill-2026-11-12.json);
+seven failures remain recorded. Broader source and desktop acceptance stay open.
 
 ## Migration contract
 
@@ -38,7 +40,9 @@ Status: partial implementation; native acceptance pending.
 
 The source intro says under 30 lines but Phase 5 aims under 50 and forbids table
 truncation: all entries take precedence over the approximate sprint line target.
-Minimal's separate under-15-line output remains. The stale escalation prose says
+Required report sections and tables also take precedence over that soft target;
+shorten cell text instead of merging sections or replacing Attention Needed
+with prose. Minimal's separate under-15-line output remains. The stale escalation prose says
 “4+” while the actual rule and cases say “more than 4”; the strict >4 rule governs.
 Multiple flag examples contain separate recommendations, but the final protocol
 allows at most one: retain all facts and select one action. Source authority cannot

@@ -113,7 +113,9 @@ Selected plan: [actual path]
 [Stale IN PROGRESS stories and timestamp concerns; omit section if none]
 
 ### Burndown: [On Track / At Risk / Behind / unknown]
-[Reason, including each stale story's own age when it escalates the verdict]
+[Reason, including each stale story's own age when it escalates the verdict.
+When On Track, note any eligible Should Have work the team could optionally pull;
+this opportunity is not a second assigned recommendation.]
 
 ### Must-Haves at Risk
 [Must Haves BLOCKED or NOT STARTED with <40% time remaining; otherwise None]

@@ -50,5 +50,7 @@ installed workflow. Never execute the recommendation here.
 
 Keep the snapshot brief: normally under 30 lines, aiming below 50 when tables
 need more space; include every sprint entry even when that exceeds the target.
-Minimal build-order output stays below 15 lines. These are observations, not a
+For sprint snapshots, required sections and tables take priority over the soft
+line target: shorten cell text rather than merging sections or replacing the
+Attention Needed table with prose. Minimal build-order output stays below 15 lines. These are observations, not a
 sprint review, release approval or an instruction to change project scope.
