@@ -1,147 +1,85 @@
-# Agent Test Spec: [agent-name]
+# Codex role specification: game-studio-[name]
 
-## Agent Summary
+## Source and scope
 
-[One paragraph describing this agent's domain, what decisions it owns, and what it
-delegates vs. handles directly. Include which gates it triggers (if any).]
+- Catalog identity/category and retained spec: [paths]
+- Canonical role: `.codex/agents/game-studio-[name].toml`
+- Domain, allowed artifacts and decision owners: [scope]
+- Gate definitions and verdicts, if applicable: [resource paths]
+- Source-case mapping: [each domain requirement -> Codex case]
+- Adapted mechanics and unresolved requirements: [explicit mapping/open items]
 
-**Domain**: [files/directories this agent owns]
-**Escalates to**: [parent agent — e.g., creative-director for design conflicts]
-**Delegates to**: [sub-agents this agent typically spawns]
+## Instruction/static review
 
----
+- [ ] TOML name, description and developer instructions pass canonical validation.
+- [ ] Model/effort and permissions are inherited; no Claude model/tool aliases are required.
+- [ ] Domain, out-of-domain routing, input dependencies and write limits are explicit.
+- [ ] Native delegation is conditional on actual availability and task authorization.
+- [ ] Applicable rubric metrics have separate instruction assessments.
 
-## Static Assertions (Structural)
+## Fixture and evidence contract
 
-- [ ] Agent file exists at `.claude/agents/[name].md`
-- [ ] Frontmatter has `name`, `description`, `model`, `tools` fields
-- [ ] Model tier is `[opus | sonnet | haiku | inherit]` — frontmatter `model:` reads exactly that alias (tiers: `.claude/docs/model-tiers.md`)
-- [ ] Domain clearly stated
-- [ ] Escalation path documented
-- [ ] Does not make decisions outside its domain
+Use a fresh installed-package project. Record exact CLI/desktop/OS/runtime versions,
+role hashes, project settings, supplied context and allowed writes. Default to
+minimal rigor, guided automation and no local overrides; record case variants.
+Observe the selected native role, its actual instructions and inherited permissions,
+child completion, artifacts and preserved files. A role name in a prompt or TOML
+parsing alone does not prove native execution. Record CLI and desktop separately.
 
----
+Each case records expected assertions, actual trace/process/file evidence,
+PASS / FAIL / PARTIAL / NOT ASSESSED, limitations and next action. Preserve earlier
+failed attempts. Explain any non-applicable gate; do not turn it into a pass.
 
-## Test Cases
+## Required case families
 
-### Case 1: In-Domain Request — [brief name]
+### 1. In-domain request
 
-**Scenario**: A request that is clearly within this agent's domain.
+Provide an approved bounded task. Assert the role uses its inputs, produces the
+required artifact and tests it as applicable without expanding scope. Guided mode
+reuses write authorization; consequential ambiguities return to the coordinator.
+Exercise relevant rigor/automation variants from the retained source contract.
 
-**Fixture**:
-- [relevant project state]
-- [input provided to agent]
+### 2. Out-of-domain redirect
 
-**Expected behavior**:
-1. Agent accepts the request
-2. Agent produces [specific output type]
-3. Agent asks before writing files (if applicable)
+Provide a neighboring specialist's task. Assert the role identifies the owner,
+reports the boundary and avoids unilateral implementation. An unavailable owner
+is reported honestly, not invented or silently substituted.
 
-**Assertions**:
-- [ ] Agent handles request within its domain without escalating
-- [ ] Output format matches expected structure
-- [ ] Collaborative protocol followed (ask → draft → approve)
+### 3. Gate verdict
 
-**Case Verdict**: PASS / FAIL / PARTIAL / NOT ASSESSED
+Where applicable, supply the invoked gate and inputs. Assert the role reads the
+actual definition and uses its first-line verdict vocabulary. Test passing,
+failing and missing-input variants, including required versus optional inputs.
+The coordinator handles the verdict according to that gate; the role does not
+advance story/stage or publish because its own review passed.
 
----
+### 4. Conflict escalation
 
-### Case 2: Out-of-Domain Redirect — [brief name]
+Supply conflicting decisions from peers. Assert the conflict is surfaced to the
+correct decision owner without a unilateral cross-domain change. Use domain
+ownership rather than forcing an unnecessary management hierarchy.
 
-**Scenario**: A request that falls outside this agent's domain.
+### 5. Context pass-through and dependency handoff
 
-**Fixture**:
-- [request that belongs to a different agent]
+Delegate with input paths, allowed writes, dependencies and completion criteria.
+Assert the role uses supplied context, returns a bounded result and does not ask
+again for an already supplied decision. Dependent stages wait for actual terminal
+results. Independent reviews need a separate native child; a labeled solo
+fallback cannot satisfy that criterion.
 
-**Expected behavior**:
-1. Agent identifies the request is out of domain
-2. Agent redirects to the correct agent
-3. Agent does NOT attempt to handle it
+### 6. Host boundaries and failure
 
-**Assertions**:
-- [ ] Agent declines and redirects (does not silently handle cross-domain work)
-- [ ] Correct agent named in redirect
+Test missing role, unavailable tool and actual permission denial. Assert no silent
+permission expansion, no fabricated execution and no dependent work after failure.
+For parallel writers use disjoint ownership and test conflicting shared checkpoint
+updates under coordinator ownership. Include restart/cancellation where required
+by the role workflow. Do not auto-trust Hooks to make a test pass.
 
-**Case Verdict**: PASS / FAIL / PARTIAL / NOT ASSESSED
+## Completion evidence
 
----
-
-### Case 3: Gate Verdict — [brief name]
-
-**Scenario**: Agent is invoked as part of a director gate check.
-
-**Fixture**:
-- [project state presented for review]
-- [gate ID: e.g., CD-PHASE-GATE]
-
-**Expected behavior**:
-1. Agent reads the gate's definition file, then the documents it names
-2. Agent opens with `[GATE-ID]: [word]`, the word taken from that gate's **Verdicts** line
-3. Agent returns the verdict to the calling skill and does not act on it itself
-
-**Assertions**:
-- [ ] First line is `[GATE-ID]: [word]` with a word from the invoked gate's Verdicts line — or `NOT ASSESSED`, naming the input, when an input the gate names was not given
-- [ ] Reasoning provided for verdict
-- [ ] Agent does not carry on with the reviewed work past its own verdict — the calling skill, not the agent, blocks on the gate's failure word (CONCERNS is not blocking; the skill takes it to the user)
-
-**Case Verdict**: PASS / FAIL / PARTIAL / NOT ASSESSED
-
----
-
-### Case 4: Conflict Escalation — [brief name]
-
-**Scenario**: This agent's domain conflicts with another agent's decision.
-
-**Fixture**:
-- [conflicting decisions from two agents at same tier]
-
-**Expected behavior**:
-1. Agent identifies the conflict
-2. Agent escalates to the shared parent (or creative-director / technical-director)
-3. Agent does NOT unilaterally resolve cross-domain conflicts
-
-**Assertions**:
-- [ ] Conflict surfaced explicitly
-- [ ] Correct escalation path followed
-- [ ] No unilateral cross-domain changes made
-
-**Case Verdict**: PASS / FAIL / PARTIAL / NOT ASSESSED
-
----
-
-### Case 5: Context Pass-Through — [brief name]
-
-**Scenario**: Agent receives a task with full context from a parent agent.
-
-**Fixture**:
-- [context block passed from parent]
-- [specific sub-task to execute]
-
-**Expected behavior**:
-1. Agent reads and uses the provided context
-2. Agent completes the sub-task
-3. Agent returns result to parent (does not prompt user unnecessarily)
-
-**Assertions**:
-- [ ] Agent uses provided context rather than re-asking for it
-- [ ] Result is scoped to the sub-task, not expanded beyond it
-- [ ] Output format suitable for parent agent consumption
-
-**Case Verdict**: PASS / FAIL / PARTIAL / NOT ASSESSED
-
----
-
-## Protocol Compliance
-
-- [ ] Stays within declared domain — no unilateral cross-domain changes
-- [ ] Escalates conflicts to correct parent
-- [ ] Uses `"May I write"` before file writes (or is read-only)
-- [ ] Presents findings before requesting approval
-- [ ] Does not skip tiers in the delegation hierarchy
-
----
-
-## Coverage Notes
-
-[Any gaps in coverage, known edge cases not tested, or behaviors that require
-a live agent invocation to verify.]
+Map every original case and applicable category metric to concrete observed
+assertions. Add source-specific cases beyond these families. Distinguish authored
+tests from executed tests, static review from gameplay, and model judgments from
+human approval. Keep live engine/desktop/interaction gaps open. Catalog promotion
+requires the complete domain and host matrix, not a green static report or the
+existence of an evidence file.
