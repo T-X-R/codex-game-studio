@@ -30,7 +30,9 @@ Fill several fields per exchange. Keep the result to one page apart from the
 user's verbatim text, with the template's English field names:
 
 - In your words: the hint, descriptions, selections and later changes exactly as
-  written. Your generated concept text is not a user quote. If they only picked
+  written. Capture statements about the game; tooling paths and task execution
+  permissions are not game-design input. Keep execution-only restrictions out of
+  the game's Out of scope. Your generated concept text is not a user quote. If they only picked
   an option, preserve their hint and selection, not an invented endorsement.
 - Working title and excited one-line pitch; genre, controls and look/audio.
 - Prototype question, distinguishing hooks, 2–4 step core loop, goal/fail state.

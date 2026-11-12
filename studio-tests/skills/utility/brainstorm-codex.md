@@ -41,6 +41,7 @@ is NOT ASSESSED. Source fixture feedback is synthetic test input, not human play
 3. Minimal selected concept with explicit brief authorization: save a one-page
    brief preserving exact supplied wording, no-combat/no-timer exclusions,
    requested fields and feature scope; no repeated question about agreed writes.
+   Game quotes and scope must exclude tooling paths and execution-only permissions.
 4. Resume: existing brief with In your words and Keep. Append new user language,
    preserve existing feedback and unrelated content, show affected fields, never
    silently erase exclusions or expand scope. Include >7-feature pushback.
@@ -71,3 +72,12 @@ satisfy any native interaction, director gate or human acceptance assertion.
 Evaluate actual artifacts and traces against the matrix and original eight cases;
 keep missing director roles and desktop coverage open. No artifact is evidence of
 an engine build, playable prototype, market research or publication approval.
+
+The opt-in CLI fixture is `node toolkit/test/brainstorm-host.mjs <case>` after a
+maintainer build. Cases are `pick`, `brief`, `negative`, `standard-solo` and
+`full-missing`. It uses the existing Codex login, a fresh packed installation and
+a temporary trusted-project profile removed on exit; it does not trust Hooks or
+pin a model. Run it only within authorized live-host testing scope. Exit 3 means
+execution finished but semantic review is still required; it is not a test pass.
+Review the emitted directory's trace, artifact, hashes and report. The fixture
+does not exercise interactive choices, resume, other automation modes or desktop.
