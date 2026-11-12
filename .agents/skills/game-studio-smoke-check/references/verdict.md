@@ -57,6 +57,12 @@ Record, without filling unknowns with invented values:
   checks; requested per-platform results and failure descriptions.
 - Overall verdict, its reason, blocking/advisory decision and concrete next step.
 
+For a requested platform, include a per-platform table with platform, checks
+performed, passed, failed, not assessed and platform verdict. Count the named
+observations, not the unit-test total; keep N/A separate. Include only requested
+platforms and retain each failure description. The table must distinguish an
+unavailable platform from one that actually passed.
+
 Keep prior reports/evidence intact. If the user authorized running and reporting,
 write the new report without another per-file approval. If the request is
 read-only, do not run commands that create evidence or create a report file;

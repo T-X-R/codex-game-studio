@@ -1,5 +1,8 @@
 # Skill Test Spec: /smoke-check
 
+Preserved upstream behavior. See [smoke-check-codex.md](smoke-check-codex.md)
+for Codex adaptations and the current behavior/evidence contract.
+
 ## Skill Summary
 
 `/smoke-check` is the gate between implementation and QA hand-off. Phase 1 runs
