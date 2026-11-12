@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { mkdtemp, mkdir, readFile, writeFile, rm, realpath } from 'node:fs/promises';
-import { join } from 'node:path';
+import { mkdtemp, mkdir, readFile, readdir, writeFile, rm, realpath } from 'node:fs/promises';
+import { join, relative } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { tmpdir } from 'node:os';
 import { npmPath } from '../dist/runtime.js';
@@ -58,7 +58,7 @@ try {
     const result = command(globalCli, 'resource', 'path', id);
     assert.equal(await readFile(result.data.path, 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
-  for (const name of ['difficulty-curve', 'player-journey', 'systems-index']) {
+  for (const name of ['difficulty-curve', 'player-journey', 'systems-index', 'game-design-document', 'architecture-decision-record', 'guidance/game-design-document-guide']) {
     const id = `studio/templates/${name}.md`;
     const result = command(globalCli, 'resource', 'path', id);
     assert.equal(await readFile(result.data.path, 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
@@ -71,6 +71,31 @@ try {
     const id = `.agents/skills/game-studio-map-systems/${path}`;
     assert.equal(await readFile(join(project, id), 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
+  for (const skill of ['design-system', 'design-review', 'architecture-decision']) {
+    const path = `.agents/skills/game-studio-${skill}`;
+    const source = join(packageRoot, '..', path);
+    const expected = [];
+    for (const entry of await readdir(source, { recursive: true, withFileTypes: true })) {
+      if (!entry.isFile()) continue;
+      const local = relative(source, join(entry.parentPath, entry.name));
+      expected.push(local);
+      assert.deepEqual(await readFile(join(project, path, local)), await readFile(join(source, local)));
+    }
+    const installed = (await readdir(join(project, path), { recursive: true, withFileTypes: true }))
+      .filter(entry => entry.isFile()).map(entry => relative(join(project, path), join(entry.parentPath, entry.name)));
+    assert.deepEqual(installed.sort(), expected.sort());
+  }
+  const registryHelper = command(globalCli, 'resource', 'path', 'studio/scripts/registry.mjs').data.path;
+  assert.deepEqual(await readFile(registryHelper), await readFile(join(packageRoot, '../studio/scripts/registry.mjs')));
+  const registryProject = join(temp, 'registry 项目');
+  await mkdir(join(registryProject, 'docs/architecture'), { recursive: true });
+  await writeFile(join(registryProject, 'docs/architecture/tr-registry.yaml'), 'requirements:\n- id: TR-demo-007\n  status: deprecated\n');
+  const nextId = JSON.parse(execute(registryHelper, ['--project', registryProject, 'next-id', 'tr', 'demo']));
+  assert.equal(nextId.qualityAssessed, false);
+  assert.equal(nextId.next.id, 'TR-demo-008');
+  const observations = JSON.parse(execute(registryHelper, ['--project', registryProject, 'validate']));
+  assert.deepEqual(observations.diagnostics, []);
+  assert.deepEqual(observations.registries.map(row => row.state), ['missing', 'read', 'missing']);
   const designResource = 'studio/docs/roles/game-designer.md';
   const designPath = command(globalCli, 'resource', 'path', designResource).data.path;
   assert.equal(await readFile(designPath, 'utf8'), await readFile(join(packageRoot, '..', designResource), 'utf8'));
