@@ -17,7 +17,7 @@ skills:
     priority: critical
     category: gate
     target: .agents/skills/game-studio-gate-check/SKILL.md
-    migration_state: pending
+    migration_state: partial
 
   - name: design-review
     spec: studio-tests/skills/review/design-review.md
