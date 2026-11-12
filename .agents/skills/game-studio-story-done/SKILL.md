@@ -73,7 +73,10 @@ specifically requested.
 
 Resolve the story's workflow with `config get modes.workflow --system <id> --json`.
 The system is the GDD filename stem; only when no GDD path exists may the TR-ID's
-system supply it. Ambiguous identity is unresolved, not a convenient tier choice.
+system supply it. With neither a GDD path nor a TR-ID, use the project workflow
+(`config get modes.workflow --json`) without --system; do not derive a system
+from the story title, filename or brief feature. Conflicting GDD/TR identities
+remain unresolved, not a convenient tier choice.
 Read the full bounded CHECKPOINT region when needed: `checkpoint show`'s preview
 can truncate and its fields omit Own calls and Same-seed run. Those claims apply
 only to this story and verified branch/context; do not substitute another task's

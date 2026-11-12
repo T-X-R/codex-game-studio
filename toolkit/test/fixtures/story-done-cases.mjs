@@ -181,7 +181,7 @@ const allowedChanges = [targetStory, sprintPath, briefPath, epicPath, checkpoint
 export const storyDoneScenarios = {
   'minimal-ui-close': {
     sourceCases: ['6', '8 lean/solo no-sprint resource boundary'], sandbox: 'workspace-write', capture: true, close: true,
-    inputs: inputs(), allowedChanges,
+    inputs: inputs(), allowedChanges, passingCriteria: [0, 1],
     request: `The static shop panel in ${targetStory} is implemented. Use the story-done workflow to verify it from the actual files and retained screen image. If its criteria are satisfied, close it and synchronize its existing story, feature, epic and sprint-tracking records, and save the session checkpoint. This is my authorization for those record changes; no extra file-by-file confirmation is needed. ${boundary}`,
   },
   'readonly-unknown': {
@@ -196,7 +196,7 @@ export const storyDoneScenarios = {
   },
   'explicit-adverse-close': {
     sourceCases: ['3 explicit adverse close', '7 unknown explicit override', '6 companion records'], sandbox: 'workspace-write', capture: true, close: true,
-    inputs: inputs(5,true), allowedChanges,
+    inputs: inputs(5,true), allowedChanges, passingCriteria: [1],
     request: `Use story-done for ${targetStory}. I know the screen currently implements five item slots instead of the agreed six, and I have not defined or evaluated its "robust" criterion. I explicitly accept both of those outstanding risks and want this exact story closed anyway, without revising the design or claiming those criteria were met. Record that decision and synchronize the existing story, feature, epic and sprint-tracking records, and save the session checkpoint. Keep the five-slot implementation as it is for now. ${boundary}`,
   },
 };

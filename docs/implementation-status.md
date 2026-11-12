@@ -6,6 +6,17 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Story closure now has [five native runs](evidence/story-done-skill-2026-11-13.json)
+  covering four selected scenarios: four scoped passes and one retained failure.
+  The failed run guessed a system identity from a brief; the instruction now uses
+  project workflow when no GDD/TR identity exists, and a same-input retry passes.
+  An independent checker defect also rejected proven acceptance-criterion
+  checkmarks; six regression/negative controls preserve criterion text, history
+  and failed/unknown markers. Explicit risk closure retains BLOCKED and unknown
+  findings despite administrative Complete status. Root rehashed all actual files,
+  raw traces and retained closure artifacts. Build/typecheck/content/package
+  checks and 293 tests on each of Node 24 and 26 pass locally; remaining native
+  variants, desktop acceptance and CI for this repair slice remain open.
 - Readiness follow-up [retains two protocol failures](evidence/story-readiness-protocol-2026-11-13.json):
   announcing scope too late and omitting the existing-story correction explanation.
   Domain verdicts and file preservation passed their subchecks. Two further

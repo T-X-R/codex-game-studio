@@ -1,0 +1,819 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "S059 selected CLI story closure scenarios; not whole-Skill verification",
+  "counts": {
+    "nativeRuns": 5,
+    "selectedPASS": 4,
+    "retainedFAIL": 1,
+    "distinctScenarios": 4
+  },
+  "candidateSources": [
+    {
+      "path": "/private/tmp/story-done-native-candidate.json",
+      "sha256": "8dc58a775015818fc3b8e971e90cdf21b3a724b2147bfcfbba5bb8630804b297"
+    },
+    {
+      "path": "/private/tmp/story-done-close-retry-candidate.json",
+      "sha256": "9a5f4485a975578280ace0172c9f4323f7b99aa387857f8c3025d53d9439af6b"
+    }
+  ],
+  "cases": [
+    {
+      "scenario": "minimal-ui-close",
+      "runId": "game-studio-story-done-xsKS6w",
+      "status": "FAIL",
+      "scopeOfResult": "Verified closure path and protection pass, but system identity was guessed without required GDD/TR source. Original wrapper1 preserved separately from this product behavior failure.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 1,
+      "structuralErrors": [
+        {
+          "description": "story status, date and original history",
+          "message": "Original story text/history changed"
+        }
+      ],
+      "threadId": "01a1d0a9-d38f-7943-b682-0dd251382754",
+      "traceFile": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-49-13-01a1d0a9-d38f-7943-b682-0dd251382754.jsonl",
+      "traceSha256": "f5b309f18dc92ddc5d163e30cf546cafab2e72b1847a6e85eb8d36efd5d6aa40",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "archiveSha256": "6d939f8840746b51aae7a2e529d956a4915406dced3441e8ed19f79d984c788e",
+      "resourceHashes": {
+        ".agents/skills/game-studio-story-done/SKILL.md": "96cc8ea29844c2c1cb4acbd1052148b683bfe80b504618560ee2e03404ae39c7",
+        ".agents/skills/game-studio-story-done/references/review-gates.md": "d10f0b1179bd55190a80b81184700140b7097da839fa845409542bbe3251a08c",
+        ".agents/skills/game-studio-story-done/references/sprint-next.md": "f9b98a991c2bf51ea68fe63e3fd2b80426b68c935c845071af701c9bd496393f",
+        ".agents/skills/game-studio-story-done/references/tech-debt-row.md": "b650b9f564e8f399ae2aa948782dcaa8772e39dd08219eac1355ae4b934b9738",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/scripts/md-section.mjs": "7a7df646f7212ddeca1dfbce867aa3482613ae881fc5309916e9a06096cf4adb",
+        "studio/scripts/review-receipts.mjs": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/ql-test-coverage.md": "0a22ae5726ab17cb973de9b58179cfa67a9ba200fcc42f9dc56407e2824ef6f7",
+        "studio/docs/director-gates/lp-code-review.md": "9c2bd09c5d6b86743c3fd089fedb1fed8c864d0614166ec29fc24e6113d73788",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/engines/engines.tsv": "a32474e3c67dbd23a24ffb3edc73afb353b0e4d28a2cc3b7e95a0f62704ce834",
+        "studio/scripts/one-shot-driver.js": "3effaad08fbed1be6aa44ccd607ce7395b79283c5063f45bfef33aaec4ac36b7",
+        "toolkit/dist/md-section.js": "ad3ea3fb3af5ada8e3ad2a48840a9ec9315bb3dcfc0415a39450a1c668cd5c8a",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16",
+        "toolkit/dist/checkpoint.js": "128e03b87e1659693b1d0dc0a990ad4f369a7f0a05da436712b4f0eab094b60f",
+        "toolkit/dist/install.js": "9f8fd89e81be13d6eee1a0c4a0019f3d6fd66db0db82a359de66334d9823e083",
+        "toolkit/dist/capture.js": "1174e4c36371951bc68fe3a0f3b77deea12bca56ec8b8914afd75df5f7f123cf"
+      },
+      "request": "The static shop panel in production/epics/mvp/story-002-shop-panel.md is implemented. Use the story-done workflow to verify it from the actual files and retained screen image. If its criteria are satisfied, close it and synchronize its existing story, feature, epic and sprint-tracking records, and save the session checkpoint. This is my authorization for those record changes; no extra file-by-file confirmation is needed. Work offline. Do not change game code, tests, design rules, project settings, evidence files or unrelated records. Do not install dependencies, launch a game, run tests, capture new evidence, commit, publish, log technical debt or start another workflow. The retained image came from an automated browser capture, not a human play session. Node is available at /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node.",
+      "requestSha256": "fe42829f2d1b0b780304ac2e34a046940248057684a20588b2fcb8d1ae826da6",
+      "fixtureInputsSha256": "db96f700ebaf7a19d70e920b2670151b475c66519722f0ea4b03c844c5540b62",
+      "actualFileBytesIndependentlyVerified": true,
+      "beforeFiles": 575,
+      "afterFiles": 577,
+      "changed": [
+        "production/sprint-status.yaml",
+        "production/session-state/active.md",
+        "production/epics/mvp/EPIC.md",
+        "production/epics/mvp/story-002-shop-panel.md",
+        "design/game-brief.md"
+      ],
+      "added": [
+        "production/session-logs/events/69c8de24ef90c260b08f8f61ff30c040185bc3edab186ab5cd05dc5e2fa574d9.json",
+        ".game-studio/backups/0e6164e5-e58f-488f-99a3-1f080a6d9c8d.json"
+      ],
+      "nativeChildren": [],
+      "gitHeadAndUnrelatedStagedPreserved": true,
+      "temporaryTrustProfileRemoved": true,
+      "fullReport": "Both criteria passed from the actual files and retained automated screenshot. Synchronized the story, feature 2, epic row and sprint entry; saved the checkpoint. Code, tests, evidence and unrelated records remain unchanged. No human play acceptance is claimed.\n\nVerdict: COMPLETE — `production/epics/mvp/story-002-shop-panel.md`  \nStory: closed — Status: Complete  \nReview: self; QL/LP skipped under solo mode; no independent review  \nNext step: `production/epics/mvp/story-003-submit.md` (“Submit”) — recommended only, not started.",
+      "rawHashes": {
+        "fixture.json": "7991aa8ff58a0fd25f5eb3961072c47f133ba218215d16d9459524f70827a776",
+        "report.json": "0409f0ee0d3aacab799c1128d451dd4c502a8688b6345a0d14eb12bb90887dd4",
+        "events.jsonl": "d79ada29afd5d8815e5fa8ea146d593c101b7436b3ce7c0d432f32e1ee7d61ba",
+        "before.json": "962b95f392de5660eb52d52caf6fe80c1d79f925f5416bd4e140fbaacec45e5f",
+        "after.json": "2c64ed9bc4b225173218a531688275fad0d4b108dc6ec760127b5eecd4c41126",
+        "final.txt": "b3918b79b1fbd04aa3fc8327dd30cfda6b83231fbd6363233ee91f56f2311430",
+        "inputs.json": "340f70f9516b2b81da95b829c6cc992e9c6c311fff3d396f41bff97aa3d06469",
+        "setup.json": "a19d3fdcfcd585995b9042a0037fb4297ed1e4d5d086b8ff46714f9ff100dd11",
+        "git-before.json": "7e22cb2c4eded90a1a4ff28b418832c5909578c02cc58a70a647f79a118b4814",
+        "git-after.json": "14aa0e45fcad6e44fc51d9f1b099ac9eec27680b30e7c4c65599f82de921f30b",
+        "setup-capture.json": "76315f651ae34c71730b010cd49c25d17497165f39f733ec886d216edac0e54a",
+        "setup-capture.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "imageSha256": "ae12eed1d46dcba220bf5f41c9d8dadbcf84033e3ae74dc8c61ff348f260ae24",
+      "nativeOpenedImage": true,
+      "maintainerOpenedImage": true,
+      "manualChecks": {
+        "image": "Actual retained1280x720 PNG opened by native and maintainer; visible card/price observations agree.",
+        "policy": "Minimal workflow and QA; solo skips both specialist gates; no unearned independent review.",
+        "authority": "No implementation, test run, game launch, recapture, commit, publication, settings or design change by native.",
+        "scope": "Exact story and recorded evidence read; actual code diff/brief compared for own calls; unrelated HEAD/staged and actual file bytes checked.",
+        "closure": "Exact five authorized records changed; all source/evidence/unrelated records preserved. Complete pre-write report and write set before mutation. Actual post-close story-status once selects Submit.",
+        "checkpoint": "Independent reread of actual event/backup bodies verifies single hash-linked checkpoint transaction; dry-run/save/owned draft cleanup observed.",
+        "unresolvedAdjudication": [
+          "Host reports original-story preservation failure solely because2proven-pass criterion checkboxes were ticked; original text and prior completion history unchanged.",
+          "Native queried modes.workflow --system shop without GDD/TR-derived identity; actual returned value remained project minimal. Source-identity compliance requires separate assessment."
+        ]
+      },
+      "failureKind": "unsupported-system-identity",
+      "adjudication": {
+        "checker": "Original wrapper1 is an overstrict preservation check: changing only checkboxes for2actually proven PASS criteria, with all AC words/history unchanged, is within closure authorization. Do not rewrite original report or permit unknown/failing checkboxes.",
+        "product": "Query --system shop has no GDD filename/TR-ID source in this fixture. It is a true source-identity deviation even though effective workflow happened to remain project minimal."
+      },
+      "commandTraceAudit": "Full public call sequence reviewed by delegated maintainer; raw native session and event hashes retained. Root separately checked outputs, file preservation, git state and recorded closure artifacts."
+    },
+    {
+      "scenario": "readonly-failure-priority",
+      "runId": "game-studio-story-done-waBA3B",
+      "status": "PASS",
+      "scopeOfResult": "Selected known-failure-over-unknown read-only source branch, not full workflow verification.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "structuralErrors": [],
+      "threadId": "01a1d0a9-d42d-7291-9de2-a75ad148ca45",
+      "traceFile": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-49-13-01a1d0a9-d42d-7291-9de2-a75ad148ca45.jsonl",
+      "traceSha256": "9f435211e508723dd77e9268f3eed8737909e4b0599b4e46b61cc54ab955e57a",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "read-only"
+        }
+      },
+      "archiveSha256": "6d939f8840746b51aae7a2e529d956a4915406dced3441e8ed19f79d984c788e",
+      "resourceHashes": {
+        ".agents/skills/game-studio-story-done/SKILL.md": "96cc8ea29844c2c1cb4acbd1052148b683bfe80b504618560ee2e03404ae39c7",
+        ".agents/skills/game-studio-story-done/references/review-gates.md": "d10f0b1179bd55190a80b81184700140b7097da839fa845409542bbe3251a08c",
+        ".agents/skills/game-studio-story-done/references/sprint-next.md": "f9b98a991c2bf51ea68fe63e3fd2b80426b68c935c845071af701c9bd496393f",
+        ".agents/skills/game-studio-story-done/references/tech-debt-row.md": "b650b9f564e8f399ae2aa948782dcaa8772e39dd08219eac1355ae4b934b9738",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/scripts/md-section.mjs": "7a7df646f7212ddeca1dfbce867aa3482613ae881fc5309916e9a06096cf4adb",
+        "studio/scripts/review-receipts.mjs": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/ql-test-coverage.md": "0a22ae5726ab17cb973de9b58179cfa67a9ba200fcc42f9dc56407e2824ef6f7",
+        "studio/docs/director-gates/lp-code-review.md": "9c2bd09c5d6b86743c3fd089fedb1fed8c864d0614166ec29fc24e6113d73788",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/engines/engines.tsv": "a32474e3c67dbd23a24ffb3edc73afb353b0e4d28a2cc3b7e95a0f62704ce834",
+        "studio/scripts/one-shot-driver.js": "3effaad08fbed1be6aa44ccd607ce7395b79283c5063f45bfef33aaec4ac36b7",
+        "toolkit/dist/md-section.js": "ad3ea3fb3af5ada8e3ad2a48840a9ec9315bb3dcfc0415a39450a1c668cd5c8a",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16",
+        "toolkit/dist/checkpoint.js": "128e03b87e1659693b1d0dc0a990ad4f369a7f0a05da436712b4f0eab094b60f",
+        "toolkit/dist/install.js": "9f8fd89e81be13d6eee1a0c4a0019f3d6fd66db0db82a359de66334d9823e083",
+        "toolkit/dist/capture.js": "1174e4c36371951bc68fe3a0f3b77deea12bca56ec8b8914afd75df5f7f123cf"
+      },
+      "request": "Review whether production/epics/mvp/story-002-shop-panel.md is complete using story-done. The source and screenshot reflect the current implementation. I have not defined what its last criterion means. This is strictly read-only, including session records; report the actual findings. Work offline. Do not change game code, tests, design rules, project settings, evidence files or unrelated records. Do not install dependencies, launch a game, run tests, capture new evidence, commit, publish, log technical debt or start another workflow. The retained image came from an automated browser capture, not a human play session. Node is available at /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node.",
+      "requestSha256": "c8a660b812b95232d0a632ab43356d2333e15325d30847df1f105ea3a05dccf4",
+      "fixtureInputsSha256": "17c42526d234cdfe83a316f21b50fce9441158ce54fd0d0d864e82695f04cb1e",
+      "actualFileBytesIndependentlyVerified": true,
+      "beforeFiles": 575,
+      "afterFiles": 575,
+      "changed": [],
+      "added": [],
+      "nativeChildren": [],
+      "gitHeadAndUnrelatedStagedPreserved": true,
+      "temporaryTrustProfileRemoved": true,
+      "fullReport": "**Story Done: Static shop panel — BLOCKED.**  \nType: UI · Review date: 2026-11-13 · Acceptance criteria: **1/3 passing**, 1 failing, 1 not assessed.\n\n| Criterion | Covered by | Coverage | Evaluation |\n|---|---|---|---|\n| AC-1: The shop panel shows all six item slots inside the frame. | Opened retained screenshot; `ITEM_ROWS`; rendering loop | COVERED | **FAILS:** only five cards appear. Item 6 is absent from `ITEM_ROWS`. |\n| AC-2: Each visible item slot shows its authored price in coins. | Screenshot; `COPY.price`; authored prices | COVERED | **PASS:** visible items 1–5 show prices 1–5 coins correctly. |\n| AC-3: The shop implementation is robust. | No defined observable outcome | NOT ASSESSED | **Unknown:** “robust” needs specific conditions and expected results before it can be evaluated. This is not a deferred playtest criterion. |\n\nThe blocking defect is in [data.js:3](</private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-done-waBA3B/Supply Shop 测试/src/shop/data.js:3>): it defines five items, while the authored prices contain six. The renderer iterates those five entries. The [retained screenshot](</private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-done-waBA3B/Supply Shop 测试/production/qa/evidence/story-002-shop-panel/screenshot.png>) independently shows three cards in the first row and two in the second.\n\n**Evidence and run result:** The required screenshot exists for the one touched UI screen and was inspected. The receipt reports **UNCHANGED** for both source files; this establishes matching recorded source hashes, not acceptance. The retained report records a successful automated browser capture. It provides no human play acceptance or performance benchmark. No human play session or visual sign-off is required for this static UI story. Logic/integration tests and Config/Data smoke evidence are waived under the effective minimal QA policy.\n\n**Deviations and own calls:** The missing sixth card contradicts AC-1 and the approved brief’s six-card presentation; it is **BLOCKING**. No additional choices beyond the design were found when comparing both implementation files with the approved presentation. Layout values and visible wording are prescribed by the brief, strings use centralized `COPY`, and rendering does not mutate the data. No control manifest was found. General GDD/ADR checks are not prerequisites at the minimal workflow tier.\n\n**Scope:** The only uncommitted code/test change is the declared `src/shop/index.html`. Existing documentation, session and evidence changes were left untouched.\n\n**Review and records:** Effective workflow/QA are minimal; review mode is solo, from `project.yaml`. QA-lead and lead-programmer gates are both skipped. Reviewed by: self, no independent review. Work remained offline and read-only; no tests or game were run. Write set: none. No closure, companion-record synchronization, debt logging or checkpoint save was performed.\n\n```text\nVerdict: BLOCKED — production/epics/mvp/story-002-shop-panel.md\nStory: left open — Status: In Progress\nReview: self, no independent review; QA-lead and lead-programmer gates skipped (solo)\nNext step: Restore the sixth card in later implementation work and define AC-3’s observable outcome before reassessment.\n```",
+      "rawHashes": {
+        "fixture.json": "4de0d9b777f34802233c16fd4c03506d3226c11ad68895a183bd3b7c8c9918f1",
+        "report.json": "59347b65e4409c67176cfd907a9f197ad854dbc5e1eb593c4829a0490415f95c",
+        "events.jsonl": "8c39a13002c79bedf985d0bd2d302b6fbfcf1216035508dd5f503cc3d89b3d43",
+        "before.json": "3e031f846e026a8dade2837930781ac34d5455adcf4afde36d3da0ada60df276",
+        "after.json": "3e031f846e026a8dade2837930781ac34d5455adcf4afde36d3da0ada60df276",
+        "final.txt": "b20eb16074091ba5084b03fe631971e5da948da463f9a3093bc9bf1ee94d38e1",
+        "inputs.json": "333c4ebad41fed46cf5e93134980db4a868d1d022f8edeada9a5f229e977c389",
+        "setup.json": "24aa590b341101b52791d046d95bd2df2fe8e8b2093ab5a57aa551f186d63578",
+        "git-before.json": "456d93d490698fe15df719261d99b5f490bb58b33ac313b9a0d8b6a300d3d5ae",
+        "git-after.json": "456d93d490698fe15df719261d99b5f490bb58b33ac313b9a0d8b6a300d3d5ae",
+        "setup-capture.json": "dce6d79f70205a5f3903ce43b475dc837e66f4a966ec22d7a6c2abd7f57bca7c",
+        "setup-capture.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "imageSha256": "e7f0261060fa2c57f1f14f64469d9604b5b227962aacc080dc7190ee0c31b572",
+      "nativeOpenedImage": true,
+      "maintainerOpenedImage": true,
+      "manualChecks": {
+        "image": "Actual retained1280x720 PNG opened by native and maintainer; visible card/price observations agree.",
+        "policy": "Minimal workflow and QA; solo skips both specialist gates; no unearned independent review.",
+        "authority": "No implementation, test run, game launch, recapture, commit, publication, settings or design change by native.",
+        "scope": "Exact story and recorded evidence read; actual code diff/brief compared for own calls; unrelated HEAD/staged and actual file bytes checked.",
+        "verdict": "1 of3passes; six-card criterion FAILS from5actualcards, prices pass, vague robust unknown; BLOCKED has priority; unknown retained.",
+        "records": "Story stays In Progress. No files, checkpoint, debt or downstream task written/launched.",
+        "conditionalReferences": "No full review-gates, sprint-next or tech-debt reference loaded."
+      },
+      "commandTraceAudit": "Full public call sequence reviewed by delegated maintainer; raw native session and event hashes retained. Root separately checked outputs, file preservation, git state and recorded closure artifacts."
+    },
+    {
+      "scenario": "readonly-unknown",
+      "runId": "game-studio-story-done-LTWIbC",
+      "status": "PASS",
+      "scopeOfResult": "Selected unknown-criterion read-only source branch, not full workflow verification.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "structuralErrors": [],
+      "threadId": "01a1d0ac-d55a-7263-be5e-67b28f41e20a",
+      "traceFile": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-52-30-01a1d0ac-d55a-7263-be5e-67b28f41e20a.jsonl",
+      "traceSha256": "4c621f4cc3750476b8e8fac7ef1a0571c5cf21b818224c5a310451042acac737",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "read-only"
+        }
+      },
+      "archiveSha256": "6d939f8840746b51aae7a2e529d956a4915406dced3441e8ed19f79d984c788e",
+      "resourceHashes": {
+        ".agents/skills/game-studio-story-done/SKILL.md": "96cc8ea29844c2c1cb4acbd1052148b683bfe80b504618560ee2e03404ae39c7",
+        ".agents/skills/game-studio-story-done/references/review-gates.md": "d10f0b1179bd55190a80b81184700140b7097da839fa845409542bbe3251a08c",
+        ".agents/skills/game-studio-story-done/references/sprint-next.md": "f9b98a991c2bf51ea68fe63e3fd2b80426b68c935c845071af701c9bd496393f",
+        ".agents/skills/game-studio-story-done/references/tech-debt-row.md": "b650b9f564e8f399ae2aa948782dcaa8772e39dd08219eac1355ae4b934b9738",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/scripts/md-section.mjs": "7a7df646f7212ddeca1dfbce867aa3482613ae881fc5309916e9a06096cf4adb",
+        "studio/scripts/review-receipts.mjs": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/ql-test-coverage.md": "0a22ae5726ab17cb973de9b58179cfa67a9ba200fcc42f9dc56407e2824ef6f7",
+        "studio/docs/director-gates/lp-code-review.md": "9c2bd09c5d6b86743c3fd089fedb1fed8c864d0614166ec29fc24e6113d73788",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/engines/engines.tsv": "a32474e3c67dbd23a24ffb3edc73afb353b0e4d28a2cc3b7e95a0f62704ce834",
+        "studio/scripts/one-shot-driver.js": "3effaad08fbed1be6aa44ccd607ce7395b79283c5063f45bfef33aaec4ac36b7",
+        "toolkit/dist/md-section.js": "ad3ea3fb3af5ada8e3ad2a48840a9ec9315bb3dcfc0415a39450a1c668cd5c8a",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16",
+        "toolkit/dist/checkpoint.js": "128e03b87e1659693b1d0dc0a990ad4f369a7f0a05da436712b4f0eab094b60f",
+        "toolkit/dist/install.js": "9f8fd89e81be13d6eee1a0c4a0019f3d6fd66db0db82a359de66334d9823e083",
+        "toolkit/dist/capture.js": "1174e4c36371951bc68fe3a0f3b77deea12bca56ec8b8914afd75df5f7f123cf"
+      },
+      "request": "Review whether production/epics/mvp/story-002-shop-panel.md is complete using story-done. I have not defined what its last criterion means. This review is strictly read-only, including session records; give me the assessment and what remains to settle. Work offline. Do not change game code, tests, design rules, project settings, evidence files or unrelated records. Do not install dependencies, launch a game, run tests, capture new evidence, commit, publish, log technical debt or start another workflow. The retained image came from an automated browser capture, not a human play session. Node is available at /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node.",
+      "requestSha256": "f22e4f8d63ca791f8a25f83183075c16dd2f0fb81dc7cc2522fedddc6b3f87d4",
+      "fixtureInputsSha256": "255a35ae78cda37f2afcae17e8f680f7542c1916286d8b961f1f302a7551a16b",
+      "actualFileBytesIndependentlyVerified": true,
+      "beforeFiles": 575,
+      "afterFiles": 575,
+      "changed": [],
+      "added": [],
+      "nativeChildren": [],
+      "gitHeadAndUnrelatedStagedPreserved": true,
+      "temporaryTrustProfileRemoved": true,
+      "fullReport": "Story Done: **Static shop panel** · Type: UI · Review date: 2026-11-13\n\n**2 of 3 criteria pass. Completion remains NOT ASSESSED because “robust” is undefined.**\n\n| Acceptance criterion | Covered by | Coverage | Evaluation |\n|---|---|---|---|\n| The shop panel shows all six item slots inside the frame. | Inspected `production/qa/evidence/story-002-shop-panel/screenshot.png` | COVERED | **PASS** — all six cards fit within the captured 1280×720 view. |\n| Each visible item slot shows its authored price in coins. | Same image; `src/shop/data.js`; `data/authored-prices.json` | COVERED | **PASS** — items 1–6 visibly show prices 1–6 coins, matching authored data. |\n| The shop implementation is robust. | No defined observable outcome | NOT ASSESSED | **Unknown** — cannot determine what would satisfy it. |\n\nThe last criterion is **not deferred for playtesting** and is not classified as UNTESTED: its meaning must first be settled.\n\n**Evidence and policy:** Project settings resolve to minimal workflow, minimal QA and solo review, without configuration warnings. The required screenshot covers the one touched UI screen. Logic/integration execution and Config/Data smoke evidence are waived at minimal QA; visual sign-off is not required for this UI story. The receipt check reports both implementation files **UNCHANGED**. That supports source freshness, without proving robustness.\n\n**Run result:** The retained report records a successful automated browser capture with no uncaught exceptions. I opened its screenshot. This provides evidence of the static presentation; it establishes no human play acceptance, motion, timing, performance benchmark or behavior at other viewport sizes. No grown-game artifacts were found, so a same-seed comparison is not applicable.\n\n**Deviations and own calls:** None found beyond the approved brief after comparing both listed implementation files with its presentation rules. Layout values match the brief, player-facing strings use centralized `COPY`, and the renderer reads the authored rows without mutating them. General GDD/ADR checks are not prerequisites at minimal workflow; no control manifest was found.\n\n**Scope:** The only uncommitted code/test change is the declared `src/shop/index.html`. Existing staged owner notes, session changes and retained evidence were left untouched.\n\n**Review:** QA-lead and lead-programmer gates were both skipped under solo policy. Reviewed by: self; no independent review.\n\nWhat remains is your definition of observable pass conditions for “robust,” followed by assessment against those conditions. For example, you could specify supported viewport sizes and required rendering outcomes; those are suggestions, not adopted requirements. Missing human play acceptance alone does not prevent completion of the two static criteria.\n\nNo files or session records were written. The checkpoint intent would be to record this assessment and the unresolved criterion; it was not saved.\n\n```text\nVerdict: NOT ASSESSED — production/epics/mvp/story-002-shop-panel.md\nStory: left open — Status: In Progress\nReview: self; QA-lead and lead-programmer gates skipped under solo policy\nNext step: Define observable pass conditions for the final criterion, then assess them.\n```",
+      "rawHashes": {
+        "fixture.json": "21d15d39091c3b0f706c8419544c6f69d198f6357a1ff57ce4229e3fb098fc4e",
+        "report.json": "ae771285e4737cc252d7a3a1198b2e8ca8dcb4a2b80d59a2c6b2c12875f31148",
+        "events.jsonl": "97e9966f4db5fd9e93ce10411d5fe387340344f5996a30e47b9b579504efc399",
+        "before.json": "03c8aaf7789963c47ba13217faad3346d33717fc6eab8cafb40dd83d4bf96a02",
+        "after.json": "03c8aaf7789963c47ba13217faad3346d33717fc6eab8cafb40dd83d4bf96a02",
+        "final.txt": "4fd4bad0e954932c45fc89859a7c8660b528e07b6fc242e57a94cd42629c7e49",
+        "inputs.json": "1228d8ee8d98773a6425587232c77b838f7c9f665d7938adfb1a77c9c845f164",
+        "setup.json": "05524d71dc6772eccda075402ceb9261672ce586caf0ce14523ea1146acf8b93",
+        "git-before.json": "525c0b4e81ff50542668a81eecdb4f07011f5955327b7a05e23fc6921e5828f5",
+        "git-after.json": "525c0b4e81ff50542668a81eecdb4f07011f5955327b7a05e23fc6921e5828f5",
+        "setup-capture.json": "c679cff964d9ab021782024e6e79d953e79bac1b1903a8fca99b15582c29fd3f",
+        "setup-capture.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "imageSha256": "ae12eed1d46dcba220bf5f41c9d8dadbcf84033e3ae74dc8c61ff348f260ae24",
+      "nativeOpenedImage": true,
+      "maintainerOpenedImage": true,
+      "manualChecks": {
+        "image": "Actual retained1280x720 PNG opened by native and maintainer; visible card/price observations agree.",
+        "policy": "Minimal workflow and QA; solo skips both specialist gates; no unearned independent review.",
+        "authority": "No implementation, test run, game launch, recapture, commit, publication, settings or design change by native.",
+        "scope": "Exact story and recorded evidence read; actual code diff/brief compared for own calls; unrelated HEAD/staged and actual file bytes checked.",
+        "verdict": "2 of3pass from6visiblecards/actualprices; vague robust remains NOT ASSESSED, neither DEFERRED nor UNTESTED.",
+        "records": "No closure or checkpoint; proposes observable definition as an undecided option, not new requirement.",
+        "conditionalReferences": "No full review-gates, sprint-next or tech-debt reference loaded."
+      },
+      "commandTraceAudit": "Full public call sequence reviewed by delegated maintainer; raw native session and event hashes retained. Root separately checked outputs, file preservation, git state and recorded closure artifacts."
+    },
+    {
+      "scenario": "minimal-ui-close",
+      "runId": "game-studio-story-done-CXBc9k",
+      "status": "PASS",
+      "scopeOfResult": "Manual acceptance of this exact selected native closure branch; broader S059 matrix remains partial.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "structuralErrors": [],
+      "threadId": "01a1d0b5-7e52-7273-abb0-fc43886400cb",
+      "traceFile": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-01-57-01a1d0b5-7e52-7273-abb0-fc43886400cb.jsonl",
+      "traceSha256": "2e71cca92ff92fe744edd58b5d647863f34f5a0795365daf269c1c03f9400d42",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "archiveSha256": "7dd79749bdf95bd876364e8e1327d1c38e6c74c231220f45a57540c4f142fbcc",
+      "resourceHashes": {
+        ".agents/skills/game-studio-story-done/SKILL.md": "0af421c915d1241d878e4520db7194ef43fed461827a85fcf8a8d31b608ee169",
+        ".agents/skills/game-studio-story-done/references/review-gates.md": "d10f0b1179bd55190a80b81184700140b7097da839fa845409542bbe3251a08c",
+        ".agents/skills/game-studio-story-done/references/sprint-next.md": "f9b98a991c2bf51ea68fe63e3fd2b80426b68c935c845071af701c9bd496393f",
+        ".agents/skills/game-studio-story-done/references/tech-debt-row.md": "b650b9f564e8f399ae2aa948782dcaa8772e39dd08219eac1355ae4b934b9738",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/scripts/md-section.mjs": "7a7df646f7212ddeca1dfbce867aa3482613ae881fc5309916e9a06096cf4adb",
+        "studio/scripts/review-receipts.mjs": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/ql-test-coverage.md": "0a22ae5726ab17cb973de9b58179cfa67a9ba200fcc42f9dc56407e2824ef6f7",
+        "studio/docs/director-gates/lp-code-review.md": "9c2bd09c5d6b86743c3fd089fedb1fed8c864d0614166ec29fc24e6113d73788",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/engines/engines.tsv": "a32474e3c67dbd23a24ffb3edc73afb353b0e4d28a2cc3b7e95a0f62704ce834",
+        "studio/scripts/one-shot-driver.js": "3effaad08fbed1be6aa44ccd607ce7395b79283c5063f45bfef33aaec4ac36b7",
+        "toolkit/dist/md-section.js": "ad3ea3fb3af5ada8e3ad2a48840a9ec9315bb3dcfc0415a39450a1c668cd5c8a",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16",
+        "toolkit/dist/checkpoint.js": "128e03b87e1659693b1d0dc0a990ad4f369a7f0a05da436712b4f0eab094b60f",
+        "toolkit/dist/install.js": "9f8fd89e81be13d6eee1a0c4a0019f3d6fd66db0db82a359de66334d9823e083",
+        "toolkit/dist/capture.js": "1174e4c36371951bc68fe3a0f3b77deea12bca56ec8b8914afd75df5f7f123cf"
+      },
+      "request": "The static shop panel in production/epics/mvp/story-002-shop-panel.md is implemented. Use the story-done workflow to verify it from the actual files and retained screen image. If its criteria are satisfied, close it and synchronize its existing story, feature, epic and sprint-tracking records, and save the session checkpoint. This is my authorization for those record changes; no extra file-by-file confirmation is needed. Work offline. Do not change game code, tests, design rules, project settings, evidence files or unrelated records. Do not install dependencies, launch a game, run tests, capture new evidence, commit, publish, log technical debt or start another workflow. The retained image came from an automated browser capture, not a human play session. Node is available at /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node.",
+      "requestSha256": "fe42829f2d1b0b780304ac2e34a046940248057684a20588b2fcb8d1ae826da6",
+      "fixtureInputsSha256": "db96f700ebaf7a19d70e920b2670151b475c66519722f0ea4b03c844c5540b62",
+      "actualFileBytesIndependentlyVerified": true,
+      "beforeFiles": 575,
+      "afterFiles": 577,
+      "changed": [
+        "production/sprint-status.yaml",
+        "production/session-state/active.md",
+        "production/epics/mvp/EPIC.md",
+        "production/epics/mvp/story-002-shop-panel.md",
+        "design/game-brief.md"
+      ],
+      "added": [
+        "production/session-logs/events/0423941914de961935abaa7e473521163d5c3f8ed42269f389129d11f1bd7ef3.json",
+        ".game-studio/backups/248f9cbd-7ef7-4dd1-b996-a4874c4eba30.json"
+      ],
+      "nativeChildren": [],
+      "gitHeadAndUnrelatedStagedPreserved": true,
+      "temporaryTrustProfileRemoved": true,
+      "fullReport": "Verified **2/2 criteria** from the actual source files and opened retained image. Closed the story, synchronized feature 2, epic and sprint tracking, and saved the checkpoint. Code, tests, design rules, settings, evidence and unrelated files are unchanged. No tests or game launch occurred; the image is recorded as automated capture, with no human play acceptance claimed.\n\nVerdict: **COMPLETE** — `production/epics/mvp/story-002-shop-panel.md`  \nStory: closed — Status: Complete  \nReview: self; no independent review; QL and LP skipped under solo mode  \nNext step: when requested, implement `production/epics/mvp/story-003-submit.md`; no workflow started.",
+      "rawHashes": {
+        "fixture.json": "d8d2b0d089f00532c76794f7a381b8412b2111d6e9824b2bf3874846d56a98af",
+        "report.json": "3a35eb7dfa5afb2f13b225d9371efb4509b559538e3ec7796e4393b91b90aa34",
+        "events.jsonl": "44e5485a05abd0eb8777210f6bf6a02bbc12600751a6d630af7603876019e2cc",
+        "before.json": "03e4e52783a5c0baf84208c7f2de4aa633c8069511a671803a4c00df98ecfcaf",
+        "after.json": "7b51dbcbdc97232b5d1a695b1ee3abe9494b9426396dd446b42f3edea4f4dde0",
+        "final.txt": "e5fd4f4320ba7b42ebb9d7d515205c318edfd0d12350513bc2f604c7a3214f49",
+        "inputs.json": "340f70f9516b2b81da95b829c6cc992e9c6c311fff3d396f41bff97aa3d06469",
+        "setup.json": "d31ad36fdbec9996845ab51a6b869fd2d1edf0af8b5101e008834ff89ac4b75c",
+        "git-before.json": "32cfbe82034cbfce98e678642b3a552359c0642e473a3c39b691063600422314",
+        "git-after.json": "422b02923702cb6bddbcbdc6f827a27d82a1659cd0445559ffed341eb604d5f2",
+        "setup-capture.json": "fe5b3e72cd79e5a54728c2aeb63b76560864a16ca1e1c770f07fb6730c6613fb",
+        "setup-capture.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "checkpoint-readback.json": "abfdec020cff3bf5b64907072d34fa219cc345399b6c739e9d7d95f60a187616"
+      },
+      "imageSha256": "ae12eed1d46dcba220bf5f41c9d8dadbcf84033e3ae74dc8c61ff348f260ae24",
+      "nativeOpenedImage": true,
+      "maintainerOpenedImage": true,
+      "preWriteReport": {
+        "timestamp": "2026-11-12T17:03:02.642Z",
+        "text": "Story Done: **Static shop panel**  \nStory: `production/epics/mvp/story-002-shop-panel.md` · Type: UI · Date: 2026-11-13  \nAcceptance Criteria: **2/2 passing**\n\n| Criterion | Covered by | Coverage | Evaluation |\n| --- | --- | --- | --- |\n| All six item slots are inside the frame | Opened retained `production/qa/evidence/story-002-shop-panel/screenshot.png`; card rendering in `src/shop/index.html` | COVERED | PASS — six complete cards in two rows of three |\n| Each slot shows its authored price in coins | Same image; `COPY` and `ITEM_ROWS` in `src/shop/data.js`; price substitution in `index.html` | COVERED | PASS — items 1–6 display prices 1–6 coins |\n\nTest Evidence: The required UI screenshot covers the one touched screen. Its receipt reports both source files **UNCHANGED**. Minimal QA waives logic/integration tests and config smoke evidence; UI stories require no visual sign-off document. No tests were run.\n\nRun result: I inspected the retained automated browser image. It establishes the static display criteria; no human play acceptance, motion or performance result is claimed. Same-seed comparison is inapplicable: this is not an established grown-game conversion.\n\nDeviations: **NONE**. The implementation matches the brief’s approved layout, wording and authored data. Strings use centralized `COPY`; display code does not mutate `ITEM_ROWS`. No control manifest was found. Minimal workflow requires no GDD/ADR assessment.\n\nScope: The sole uncommitted code change, `src/shop/index.html`, is declared by this story. Existing owner-note, checkpoint and evidence changes are separate from that code comparison and will be preserved.\n\nOwn calls: **none beyond the design**, based on both implementation files, the approved shop presentation and the checkpoint.\n\nReview: QL and LP gates are both skipped under the configured solo mode.  \nReviewed by: **self; no independent review**.  \nVerdict: **COMPLETE**.\n\nI’ll now make the authorized changes:\n\n- Story: mark Complete, add Last Updated, check both verified criteria and append dated completion notes while retaining history.\n- Feature: check only feature 2 in `design/game-brief.md`; no other unfinished story owns it.\n- Epic: set only this story’s table status to Complete.\n- Sprint tracking: set its exact file entry to done, add completed date and update the top-level date.\n- Checkpoint: save the synchronized result and next action, preserving surrounding recovery notes, with the toolkit’s checkpoint event/backup records and a temporary draft removed after saving."
+      },
+      "firstWriteTimestamp": "2026-11-12T17:03:36.906Z",
+      "independentCheckpointAudit": {
+        "verified": true,
+        "eventBodies": [
+          {
+            "schemaVersion": 1,
+            "type": "checkpoint.saved",
+            "eventId": "0423941914de961935abaa7e473521163d5c3f8ed42269f389129d11f1bd7ef3",
+            "operationHash": "0423941914de961935abaa7e473521163d5c3f8ed42269f389129d11f1bd7ef3",
+            "previousHash": "a9fa1208e4f3ffcd15c222fc4cd7196c2fb8916c1b1201ee76267e89edea2239",
+            "checkpointHash": "14c8a9b196a06eaf6f7574e06b10e83808ec22dc410a6b783143cf9d0982f0b9",
+            "recordedAt": "2026-11-12T17:04:11.447Z"
+          }
+        ],
+        "backups": [
+          {
+            "path": ".game-studio/backups/248f9cbd-7ef7-4dd1-b996-a4874c4eba30.json",
+            "sha256": "1e780954469972be23858aabd21cade2f239503bb0ade156145a3e99cc9b9b83",
+            "checkpointBeforeSha256": "a9fa1208e4f3ffcd15c222fc4cd7196c2fb8916c1b1201ee76267e89edea2239",
+            "checkpointAfterSha256": "14c8a9b196a06eaf6f7574e06b10e83808ec22dc410a6b783143cf9d0982f0b9",
+            "eventPath": "production/session-logs/events/0423941914de961935abaa7e473521163d5c3f8ed42269f389129d11f1bd7ef3.json"
+          }
+        ]
+      },
+      "manualChecks": {
+        "projectWorkflow": "PASS: explicit project-level modes.workflow query; no --system parameter or guessed title identity.",
+        "imageAndEvidence": "PASS: actual native and maintainer opened1280x720PNG; source/checkpoint/receipt inspected; static capture is not human play or test evidence.",
+        "writeAuthority": "PASS: complete report and exact write set precede scoped mutation; existing goal/risk authorization reused, no extra file approval.",
+        "companionIdentity": "PASS: five authorized records only; exact story file row, brief feature2 and EPIC target; same-basename other epic and unrelated source/history preserved.",
+        "checkpoint": "PASS: real dry-run/save/owned-draft deletion, single event+backup chain independently read and hashed, surrounding recovery history preserved.",
+        "gitAndScope": "PASS: actual file rehash, HEAD and unrelated cached binary diff preserved; no code/test/evidence/config changes or commit.",
+        "routing": "PASS: one actual post-close story-status call; recommends Submit only, no readiness/sprint closeout/downstream invocation.",
+        "review": "PASS: minimal/solo records both gate skips and self/no-independent-review; conditional full/sprint/debt references not loaded.",
+        "verdict": "PASS:2/2 visible criteria pass, no design-owned own calls invented, Complete verdict/closed status consistent."
+      },
+      "sameInputComparison": {
+        "sourceRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-done-xsKS6w",
+        "sameRawInputs": true,
+        "sameRequest": true,
+        "request": "The static shop panel in production/epics/mvp/story-002-shop-panel.md is implemented. Use the story-done workflow to verify it from the actual files and retained screen image. If its criteria are satisfied, close it and synchronize its existing story, feature, epic and sprint-tracking records, and save the session checkpoint. This is my authorization for those record changes; no extra file-by-file confirmation is needed. Work offline. Do not change game code, tests, design rules, project settings, evidence files or unrelated records. Do not install dependencies, launch a game, run tests, capture new evidence, commit, publish, log technical debt or start another workflow. The retained image came from an automated browser capture, not a human play session. Node is available at /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node.",
+        "requestSha256": "fe42829f2d1b0b780304ac2e34a046940248057684a20588b2fcb8d1ae826da6",
+        "rawInputs": {
+          "project.yaml": "project:\n  name: Supply Shop\n  stage: Production\nmodes:\n  rigor: minimal\n  workflow: minimal\n  review_mode: solo\n  automation: guided\nqa:\n  level: minimal\nengine:\n  name: Web\n  language: JavaScript\n  version: ES2022\n  code_root: src\n  test_root: tests\nteam:\n  size: individual\n",
+          "production/stage.txt": "Production\n",
+          "design/game-brief.md": "# Supply Shop\n## Pitch\nAn untimed supply-list game. This story implements only its static shop panel.\n## Features\n- [x] 1. Authored item prices.\n- [ ] 2. Show the shop panel and every item's price.\n- [ ] 3. Submit a shopping list (separate work).\n## Approved shop presentation\nDisplay the heading Supply shop and six cards in two rows of three. Each card\nshows Item N and Price: N coins for N from 1 through 6. These six authored prices\nare static content, not tuning parameters. A price is visible text, not a button.\nThe screen has no input, animation, network, save, changing data, audio or hidden\nUI state. This task does not implement submission, purchasing or gameplay logic.\nThe existing shared game shell will own those later. No performance measurement\nor human play acceptance is claimed by this document.\nUse the existing DOM renderer, centralized localizable COPY strings and ITEM_ROWS\nfrom data.js; display code must not mutate the data. Format N with string\nsubstitution. Author-approved layout: border-box sizing; body margin 0, min-height\n100vh, padding 36px, background #101827, text #eef2ff, font 24px system-ui; panel\nwidth min(100%,1000px), auto margin; h1 font-size 32px and margin 0 0 24px; grid\nthree equal columns with gap 20px; cards 150px high, padding 22px, 2px solid #8492b0\nborder, 14px radius and background #203047; price margin-top 20px. Head title and\nlanguage are Supply shop and en. No decorative choice beyond these values is\nassigned to the implementer. Card count six is the intended agreed scope.\n## Build order\nFinish the authored prices, then the static shop screen, then submission.\n## Keep\nKEEP-BRIEF-HISTORY: retain this owner note and all unrelated feature states.\n",
+          "production/epics/mvp/story-002-shop-panel.md": "# Story 002: Static shop panel\n> **Status**: In Progress\n> **Type**: UI\n> **Requirement**: Brief MVP feature 2\n> **Estimate**: S\n> **Dependencies**: None\n\n## Acceptance Criteria\n- [ ] The shop panel shows all six item slots inside the frame.\n- [ ] Each visible item slot shows its authored price in coins.\n\n## Test Evidence\nA retained screenshot of the one touched screen is expected at production/qa/evidence/story-002-shop-panel/screenshot.png.\nNo human play session, motion check or visual sign-off is claimed.\n\n## Files\n- src/shop/index.html\n- src/shop/data.js\n\n## Out of Scope\nPurchasing, submission, gameplay state, input handling, animations and audio.\n\n## Performance\nNo performance impact expected beyond one static render of six small DOM cards;\nthere is no per-frame loop or physics work. This is an expectation, not a benchmark.\n\n## Completion Notes\nHistorical draft attempt only, not a completed assessment.\nKEEP-STORY-HISTORY: owner annotations must remain exactly as written.\n",
+          "production/epics/mvp/story-001-prices.md": "# Story 001: Prices\nStatus: Complete\nType: Config/Data\nRequirement: Brief MVP feature 1\n## Files\n- data/authored-prices.json\n",
+          "production/epics/mvp/story-003-submit.md": "# Story 003: Submit\nStatus: Ready\nType: Integration\nRequirement: Brief MVP feature 3\nEstimate: M\nDependencies: None\n## Acceptance Criteria\n- [ ] Submit emits the agreed shopping-list command.\n",
+          "production/epics/other/story-002-shop-panel.md": "# Story 002: Unrelated shop panel\nStatus: Blocked\nType: UI\nRequirement: Brief MVP feature 3\nDependencies: None\n## Acceptance Criteria\n- [ ] A separately designed submission confirmation exists.\n## Blocked on\nAwaiting the submission UX specification.\n## Notes\nKEEP-OTHER-STORY: same basename, different epic and owner.\n",
+          "production/epics/mvp/EPIC.md": "# MVP Epic\n## Stories\n| Story | File | Status | Note |\n| --- | --- | --- | --- |\n| Prices | production/epics/mvp/story-001-prices.md | Complete | KEEP-PRICES-CELL |\n| Shop | production/epics/mvp/story-002-shop-panel.md | In Progress | KEEP-SHOP-CELL |\n| Submit | production/epics/mvp/story-003-submit.md | Ready | KEEP-SUBMIT-CELL |\n## History\nKEEP-EPIC-HISTORY\n",
+          "production/sprint-status.yaml": "# KEEP-SPRINT-COMMENT\nsprint: local-tracking\nupdated: '2026-11-01'\nstories:\n  - id: shop-mvp\n    file: production/epics/mvp/story-002-shop-panel.md\n    status: in_progress\n    owner_note: KEEP-TARGET-SPRINT-METADATA\n  - id: shop-other\n    file: production/epics/other/story-002-shop-panel.md\n    status: blocked\n    owner_note: KEEP-OTHER-SPRINT-ENTRY\n  - id: submit\n    file: production/epics/mvp/story-003-submit.md\n    status: ready\n    owner_note: KEEP-SUBMIT-SPRINT-ENTRY\n",
+          "production/session-state/active.md": "# Active Session State\nKEEP-SESSION-PREFIX: owner recovery notes outside the checkpoint.\n<!-- STATUS -->\nDo not change this status narrative.\n<!-- /STATUS -->\n<!-- CHECKPOINT -->\n**Updated:** 2026-11-01\n**Branch:** `fixture`\n**Stage:** Production\n**Current task:** Implement production/epics/mvp/story-002-shop-panel.md\n**Next step:** Review this story's completion.\n**Blocked on:** none recorded\n**Files in progress:** src/shop/index.html, src/shop/data.js\n**Run result:** {{CAPTURE_RESULT}}\n**Own calls:** Compare the implementation with the brief; no human acceptance is supplied here.\n**Constraints:** Preserve the static-only scope and authored data ownership.\n<!-- /CHECKPOINT -->\n## Notes\nKEEP-SESSION-SUFFIX: this historical text is not a workflow result.\n",
+          "src/shop/index.html": "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><title>Supply shop</title>\n<style>*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:36px;background:#101827;color:#eef2ff;font:24px system-ui}.panel{width:min(100%,1000px);margin:auto}h1{font-size:32px;margin:0 0 24px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{height:150px;padding:22px;border:2px solid #8492b0;border-radius:14px;background:#203047}.price{margin-top:20px}</style></head>\n<body><main class=\"panel\"><h1 id=\"title\"></h1><div class=\"grid\" id=\"items\"></div></main>\n<script src=\"data.js\"></script>\n<script>\ndocument.getElementById('title').textContent = COPY.title;\nfor (const item of ITEM_ROWS) {\n  const card = document.createElement('section'); card.className = 'card';\n  const name = document.createElement('div'); name.textContent = COPY.item.replace('{n}', String(item.id));\n  const price = document.createElement('div'); price.className = 'price'; price.textContent = COPY.price.replace('{n}', String(item.price));\n  card.append(name, price); document.getElementById('items').append(card);\n}\n</script></body></html>\n",
+          "src/shop/data.js": "// Author-specified static content; no runtime tuning or mutable game state.\nconst COPY = Object.freeze({ title: 'Supply shop', item: 'Item {n}', price: 'Price: {n} coins' });\nconst ITEM_ROWS = Object.freeze([{\"id\":1,\"price\":1},{\"id\":2,\"price\":2},{\"id\":3,\"price\":3},{\"id\":4,\"price\":4},{\"id\":5,\"price\":5},{\"id\":6,\"price\":6}].map(Object.freeze));\n",
+          "data/authored-prices.json": "[1,2,3,4,5,6]\n",
+          "docs/owner-note.md": "KEEP-UNRELATED-STAGED: unrelated planning work.\n",
+          "tests/README.md": "# Tests\nNo tests or human play results are provided by this fixture.\n"
+        },
+        "inputHashes": {
+          "project.yaml": "93ed44f979f3786de2a13a7eae36eee7cc86f058cf82f722369e8b7725ef9cb9",
+          "production/stage.txt": "2f28dc9096f2f5375b3cfdfbbd21e25f96eb2e3ee7501a93be0473d2dc32b578",
+          "design/game-brief.md": "73e1478621bfe6c64a0d61accfbcdd5f951b7c1be4599b7b16a8e7a609e4b4c5",
+          "production/epics/mvp/story-002-shop-panel.md": "9c750bef6df1e4a63b3239510d079c681c07efbc2f1f705ca0ec47557bce4d6b",
+          "production/epics/mvp/story-001-prices.md": "9fffd35b78c3635338e05285b8ea260b22b47030ed2812b1768d07fde8fad611",
+          "production/epics/mvp/story-003-submit.md": "d507b9c4ca742fc8b54242cce0c605516294837ce57aca8a85d0bb3f89e4e8ee",
+          "production/epics/other/story-002-shop-panel.md": "5f4bf0922160f2a567092e7d816692dc7cb0baa56dfa76428b41f24287f3b4e3",
+          "production/epics/mvp/EPIC.md": "6a80f6aeca4cb800499aab056a898387b5848c9fe77dfbfeef6684d5e9d16889",
+          "production/sprint-status.yaml": "e785cdab94be393de3b491e9558db45566ea9bfb705555ae11d8594b6cc32255",
+          "production/session-state/active.md": "c9538b76591dcc98ef00753800ed8f03828643ba7182cf2bc4acec2580777aaf",
+          "src/shop/index.html": "5ee0fd29cb3461ec49ea75f57f66fb2b055d73e654fecfdbfd4b449b7f2918a3",
+          "src/shop/data.js": "6dcf32c3027c63bb528623d32d9275684b5a50ae52fca9e63eaa7431081f1a82",
+          "data/authored-prices.json": "84ab1f16eb5c659133ef4e58146def651a38705056ea90627f7788c62d541689",
+          "docs/owner-note.md": "b966e45247ea9024eda773047b6f9ddd92b5aa2858fdafcc9ed5218d5f540eb8",
+          "tests/README.md": "d4ed7449ee470f453f50bc511019a79cdb784bbfa69dee0f242c1dd1a5278518"
+        },
+        "adverseOriginalInputs": {
+          "project.yaml": "project:\n  name: Supply Shop\n  stage: Production\nmodes:\n  rigor: minimal\n  workflow: minimal\n  review_mode: solo\n  automation: guided\nqa:\n  level: minimal\nengine:\n  name: Web\n  language: JavaScript\n  version: ES2022\n  code_root: src\n  test_root: tests\nteam:\n  size: individual\n",
+          "production/stage.txt": "Production\n",
+          "design/game-brief.md": "# Supply Shop\n## Pitch\nAn untimed supply-list game. This story implements only its static shop panel.\n## Features\n- [x] 1. Authored item prices.\n- [ ] 2. Show the shop panel and every item's price.\n- [ ] 3. Submit a shopping list (separate work).\n## Approved shop presentation\nDisplay the heading Supply shop and six cards in two rows of three. Each card\nshows Item N and Price: N coins for N from 1 through 6. These six authored prices\nare static content, not tuning parameters. A price is visible text, not a button.\nThe screen has no input, animation, network, save, changing data, audio or hidden\nUI state. This task does not implement submission, purchasing or gameplay logic.\nThe existing shared game shell will own those later. No performance measurement\nor human play acceptance is claimed by this document.\nUse the existing DOM renderer, centralized localizable COPY strings and ITEM_ROWS\nfrom data.js; display code must not mutate the data. Format N with string\nsubstitution. Author-approved layout: border-box sizing; body margin 0, min-height\n100vh, padding 36px, background #101827, text #eef2ff, font 24px system-ui; panel\nwidth min(100%,1000px), auto margin; h1 font-size 32px and margin 0 0 24px; grid\nthree equal columns with gap 20px; cards 150px high, padding 22px, 2px solid #8492b0\nborder, 14px radius and background #203047; price margin-top 20px. Head title and\nlanguage are Supply shop and en. No decorative choice beyond these values is\nassigned to the implementer. Card count six is the intended agreed scope.\n## Build order\nFinish the authored prices, then the static shop screen, then submission.\n## Keep\nKEEP-BRIEF-HISTORY: retain this owner note and all unrelated feature states.\n",
+          "production/epics/mvp/story-002-shop-panel.md": "# Story 002: Static shop panel\n> **Status**: In Progress\n> **Type**: UI\n> **Requirement**: Brief MVP feature 2\n> **Estimate**: S\n> **Dependencies**: None\n\n## Acceptance Criteria\n- [ ] The shop panel shows all six item slots inside the frame.\n- [ ] Each visible item slot shows its authored price in coins.\n- [ ] The shop implementation is robust.\n\n## Test Evidence\nA retained screenshot of the one touched screen is expected at production/qa/evidence/story-002-shop-panel/screenshot.png.\nNo human play session, motion check or visual sign-off is claimed.\n\n## Files\n- src/shop/index.html\n- src/shop/data.js\n\n## Out of Scope\nPurchasing, submission, gameplay state, input handling, animations and audio.\n\n## Performance\nNo performance impact expected beyond one static render of six small DOM cards;\nthere is no per-frame loop or physics work. This is an expectation, not a benchmark.\n\n## Completion Notes\nHistorical draft attempt only, not a completed assessment.\nKEEP-STORY-HISTORY: owner annotations must remain exactly as written.\n",
+          "production/epics/mvp/story-001-prices.md": "# Story 001: Prices\nStatus: Complete\nType: Config/Data\nRequirement: Brief MVP feature 1\n## Files\n- data/authored-prices.json\n",
+          "production/epics/mvp/story-003-submit.md": "# Story 003: Submit\nStatus: Ready\nType: Integration\nRequirement: Brief MVP feature 3\nEstimate: M\nDependencies: None\n## Acceptance Criteria\n- [ ] Submit emits the agreed shopping-list command.\n",
+          "production/epics/other/story-002-shop-panel.md": "# Story 002: Unrelated shop panel\nStatus: Blocked\nType: UI\nRequirement: Brief MVP feature 3\nDependencies: None\n## Acceptance Criteria\n- [ ] A separately designed submission confirmation exists.\n## Blocked on\nAwaiting the submission UX specification.\n## Notes\nKEEP-OTHER-STORY: same basename, different epic and owner.\n",
+          "production/epics/mvp/EPIC.md": "# MVP Epic\n## Stories\n| Story | File | Status | Note |\n| --- | --- | --- | --- |\n| Prices | production/epics/mvp/story-001-prices.md | Complete | KEEP-PRICES-CELL |\n| Shop | production/epics/mvp/story-002-shop-panel.md | In Progress | KEEP-SHOP-CELL |\n| Submit | production/epics/mvp/story-003-submit.md | Ready | KEEP-SUBMIT-CELL |\n## History\nKEEP-EPIC-HISTORY\n",
+          "production/sprint-status.yaml": "# KEEP-SPRINT-COMMENT\nsprint: local-tracking\nupdated: '2026-11-01'\nstories:\n  - id: shop-mvp\n    file: production/epics/mvp/story-002-shop-panel.md\n    status: in_progress\n    owner_note: KEEP-TARGET-SPRINT-METADATA\n  - id: shop-other\n    file: production/epics/other/story-002-shop-panel.md\n    status: blocked\n    owner_note: KEEP-OTHER-SPRINT-ENTRY\n  - id: submit\n    file: production/epics/mvp/story-003-submit.md\n    status: ready\n    owner_note: KEEP-SUBMIT-SPRINT-ENTRY\n",
+          "production/session-state/active.md": "# Active Session State\nKEEP-SESSION-PREFIX: owner recovery notes outside the checkpoint.\n<!-- STATUS -->\nDo not change this status narrative.\n<!-- /STATUS -->\n<!-- CHECKPOINT -->\n**Updated:** 2026-11-01\n**Branch:** `fixture`\n**Stage:** Production\n**Current task:** Implement production/epics/mvp/story-002-shop-panel.md\n**Next step:** Review this story's completion.\n**Blocked on:** none recorded\n**Files in progress:** src/shop/index.html, src/shop/data.js\n**Run result:** {{CAPTURE_RESULT}}\n**Own calls:** Compare the implementation with the brief; no human acceptance is supplied here.\n**Constraints:** Preserve the static-only scope and authored data ownership.\n<!-- /CHECKPOINT -->\n## Notes\nKEEP-SESSION-SUFFIX: this historical text is not a workflow result.\n",
+          "src/shop/index.html": "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><title>Supply shop</title>\n<style>*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:36px;background:#101827;color:#eef2ff;font:24px system-ui}.panel{width:min(100%,1000px);margin:auto}h1{font-size:32px;margin:0 0 24px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{height:150px;padding:22px;border:2px solid #8492b0;border-radius:14px;background:#203047}.price{margin-top:20px}</style></head>\n<body><main class=\"panel\"><h1 id=\"title\"></h1><div class=\"grid\" id=\"items\"></div></main>\n<script src=\"data.js\"></script>\n<script>\ndocument.getElementById('title').textContent = COPY.title;\nfor (const item of ITEM_ROWS) {\n  const card = document.createElement('section'); card.className = 'card';\n  const name = document.createElement('div'); name.textContent = COPY.item.replace('{n}', String(item.id));\n  const price = document.createElement('div'); price.className = 'price'; price.textContent = COPY.price.replace('{n}', String(item.price));\n  card.append(name, price); document.getElementById('items').append(card);\n}\n</script></body></html>\n",
+          "src/shop/data.js": "// Author-specified static content; no runtime tuning or mutable game state.\nconst COPY = Object.freeze({ title: 'Supply shop', item: 'Item {n}', price: 'Price: {n} coins' });\nconst ITEM_ROWS = Object.freeze([{\"id\":1,\"price\":1},{\"id\":2,\"price\":2},{\"id\":3,\"price\":3},{\"id\":4,\"price\":4},{\"id\":5,\"price\":5}].map(Object.freeze));\n",
+          "data/authored-prices.json": "[1,2,3,4,5,6]\n",
+          "docs/owner-note.md": "KEEP-UNRELATED-STAGED: unrelated planning work.\n",
+          "tests/README.md": "# Tests\nNo tests or human play results are provided by this fixture.\n"
+        },
+        "adverseOriginalRequest": "Use story-done for production/epics/mvp/story-002-shop-panel.md. I know the screen currently implements five item slots instead of the agreed six, and I have not defined or evaluated its \"robust\" criterion. I explicitly accept both of those outstanding risks and want this exact story closed anyway, without revising the design or claiming those criteria were met. Record that decision and synchronize the existing story, feature, epic and sprint-tracking records, and save the session checkpoint. Keep the five-slot implementation as it is for now. Work offline. Do not change game code, tests, design rules, project settings, evidence files or unrelated records. Do not install dependencies, launch a game, run tests, capture new evidence, commit, publish, log technical debt or start another workflow. The retained image came from an automated browser capture, not a human play session. Node is available at /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node.",
+        "oldCandidatePreserved": true,
+        "freshRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-done-CXBc9k",
+        "freshNativeRequestExactlyMatches": true,
+        "freshActualBeforeInputHashesMatchOriginal": {
+          "project.yaml": "93ed44f979f3786de2a13a7eae36eee7cc86f058cf82f722369e8b7725ef9cb9",
+          "production/stage.txt": "2f28dc9096f2f5375b3cfdfbbd21e25f96eb2e3ee7501a93be0473d2dc32b578",
+          "design/game-brief.md": "73e1478621bfe6c64a0d61accfbcdd5f951b7c1be4599b7b16a8e7a609e4b4c5",
+          "production/epics/mvp/story-002-shop-panel.md": "9c750bef6df1e4a63b3239510d079c681c07efbc2f1f705ca0ec47557bce4d6b",
+          "production/epics/mvp/story-001-prices.md": "9fffd35b78c3635338e05285b8ea260b22b47030ed2812b1768d07fde8fad611",
+          "production/epics/mvp/story-003-submit.md": "d507b9c4ca742fc8b54242cce0c605516294837ce57aca8a85d0bb3f89e4e8ee",
+          "production/epics/other/story-002-shop-panel.md": "5f4bf0922160f2a567092e7d816692dc7cb0baa56dfa76428b41f24287f3b4e3",
+          "production/epics/mvp/EPIC.md": "6a80f6aeca4cb800499aab056a898387b5848c9fe77dfbfeef6684d5e9d16889",
+          "production/sprint-status.yaml": "e785cdab94be393de3b491e9558db45566ea9bfb705555ae11d8594b6cc32255",
+          "production/session-state/active.md": "a9fa1208e4f3ffcd15c222fc4cd7196c2fb8916c1b1201ee76267e89edea2239",
+          "src/shop/index.html": "5ee0fd29cb3461ec49ea75f57f66fb2b055d73e654fecfdbfd4b449b7f2918a3",
+          "src/shop/data.js": "6dcf32c3027c63bb528623d32d9275684b5a50ae52fca9e63eaa7431081f1a82",
+          "data/authored-prices.json": "84ab1f16eb5c659133ef4e58146def651a38705056ea90627f7788c62d541689",
+          "docs/owner-note.md": "bdb796dce3e4fa3053d692ce0d66b58cc1fcb231ce857e535361050b2917cd75",
+          "tests/README.md": "d4ed7449ee470f453f50bc511019a79cdb784bbfa69dee0f242c1dd1a5278518"
+        },
+        "freshSetupCheckpointEqualsOriginal": true,
+        "adverseRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-done-Zt24kP",
+        "adverseOriginalInputsAndRequestExactlyMatch": true,
+        "oldSourceSkillHash": "96cc8ea29844c2c1cb4acbd1052148b683bfe80b504618560ee2e03404ae39c7",
+        "freshSourceSkillHash": "0af421c915d1241d878e4520db7194ef43fed461827a85fcf8a8d31b608ee169"
+      },
+      "previousFailure": {
+        "runId": "game-studio-story-done-xsKS6w",
+        "status": "FAIL",
+        "cause": "unsupported --system shop identity",
+        "wrapperExitCode": 1,
+        "separateHarnessIssue": "Original preservation checker rejected legitimate proven-PASS AC checkboxes; old report remains unchanged."
+      },
+      "commandTraceAudit": "Full public call sequence reviewed by delegated maintainer; raw native session and event hashes retained. Root separately checked outputs, file preservation, git state and recorded closure artifacts."
+    },
+    {
+      "scenario": "explicit-adverse-close",
+      "runId": "game-studio-story-done-Zt24kP",
+      "status": "PASS",
+      "scopeOfResult": "Manual acceptance of this exact selected native closure branch; broader S059 matrix remains partial.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "structuralErrors": [],
+      "threadId": "01a1d0b5-7e52-7610-8c01-0a166bb58923",
+      "traceFile": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-01-57-01a1d0b5-7e52-7610-8c01-0a166bb58923.jsonl",
+      "traceSha256": "0580cb1e699876ca04fedfd1f3a6f032981382f6a8f41ee28c42db2ee2ceb505",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "archiveSha256": "7dd79749bdf95bd876364e8e1327d1c38e6c74c231220f45a57540c4f142fbcc",
+      "resourceHashes": {
+        ".agents/skills/game-studio-story-done/SKILL.md": "0af421c915d1241d878e4520db7194ef43fed461827a85fcf8a8d31b608ee169",
+        ".agents/skills/game-studio-story-done/references/review-gates.md": "d10f0b1179bd55190a80b81184700140b7097da839fa845409542bbe3251a08c",
+        ".agents/skills/game-studio-story-done/references/sprint-next.md": "f9b98a991c2bf51ea68fe63e3fd2b80426b68c935c845071af701c9bd496393f",
+        ".agents/skills/game-studio-story-done/references/tech-debt-row.md": "b650b9f564e8f399ae2aa948782dcaa8772e39dd08219eac1355ae4b934b9738",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/scripts/md-section.mjs": "7a7df646f7212ddeca1dfbce867aa3482613ae881fc5309916e9a06096cf4adb",
+        "studio/scripts/review-receipts.mjs": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/ql-test-coverage.md": "0a22ae5726ab17cb973de9b58179cfa67a9ba200fcc42f9dc56407e2824ef6f7",
+        "studio/docs/director-gates/lp-code-review.md": "9c2bd09c5d6b86743c3fd089fedb1fed8c864d0614166ec29fc24e6113d73788",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/engines/engines.tsv": "a32474e3c67dbd23a24ffb3edc73afb353b0e4d28a2cc3b7e95a0f62704ce834",
+        "studio/scripts/one-shot-driver.js": "3effaad08fbed1be6aa44ccd607ce7395b79283c5063f45bfef33aaec4ac36b7",
+        "toolkit/dist/md-section.js": "ad3ea3fb3af5ada8e3ad2a48840a9ec9315bb3dcfc0415a39450a1c668cd5c8a",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16",
+        "toolkit/dist/checkpoint.js": "128e03b87e1659693b1d0dc0a990ad4f369a7f0a05da436712b4f0eab094b60f",
+        "toolkit/dist/install.js": "9f8fd89e81be13d6eee1a0c4a0019f3d6fd66db0db82a359de66334d9823e083",
+        "toolkit/dist/capture.js": "1174e4c36371951bc68fe3a0f3b77deea12bca56ec8b8914afd75df5f7f123cf"
+      },
+      "request": "Use story-done for production/epics/mvp/story-002-shop-panel.md. I know the screen currently implements five item slots instead of the agreed six, and I have not defined or evaluated its \"robust\" criterion. I explicitly accept both of those outstanding risks and want this exact story closed anyway, without revising the design or claiming those criteria were met. Record that decision and synchronize the existing story, feature, epic and sprint-tracking records, and save the session checkpoint. Keep the five-slot implementation as it is for now. Work offline. Do not change game code, tests, design rules, project settings, evidence files or unrelated records. Do not install dependencies, launch a game, run tests, capture new evidence, commit, publish, log technical debt or start another workflow. The retained image came from an automated browser capture, not a human play session. Node is available at /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node.",
+      "requestSha256": "8cb88d893b4af504fe10aca44e33e63d5cea401500a55164f609822d09fbb356",
+      "fixtureInputsSha256": "17c42526d234cdfe83a316f21b50fce9441158ce54fd0d0d864e82695f04cb1e",
+      "actualFileBytesIndependentlyVerified": true,
+      "beforeFiles": 575,
+      "afterFiles": 577,
+      "changed": [
+        "production/sprint-status.yaml",
+        "production/session-state/active.md",
+        "production/epics/mvp/EPIC.md",
+        "production/epics/mvp/story-002-shop-panel.md",
+        "design/game-brief.md"
+      ],
+      "added": [
+        "production/session-logs/events/af970ce397789e58909ef28c17730de23a1cc6ac7a24c6ff71cd6a38a32896c1.json",
+        ".game-studio/backups/42128117-d65b-471e-b206-c5059575cfc2.json"
+      ],
+      "nativeChildren": [],
+      "gitHeadAndUnrelatedStagedPreserved": true,
+      "temporaryTrustProfileRemoved": true,
+      "fullReport": "Closed under your explicit risk acceptance and synchronized the story, feature, epic and sprint records. Checkpoint saved; existing history preserved.\n\nRecorded **1/3 criteria passing**: six slots **FAILS**; “robust” remains **NOT ASSESSED**. Both remain unchecked. The image is attributed to automated browser capture, with no human play acceptance claimed.\n\nVerified code, tests, design rules, settings, evidence and unrelated records stayed unchanged. No tests, commits, debt logging or downstream workflow ran.\n\nVerdict: BLOCKED — production/epics/mvp/story-002-shop-panel.md  \nStory: closed — Status: Complete by explicit risk acceptance  \nReview: self; no independent review; QA-lead and lead-programmer gates skipped in solo mode  \nNext step: When authorized, implement production/epics/mvp/story-003-submit.md to emit the shopping-list command; not started.",
+      "rawHashes": {
+        "fixture.json": "7c2074c67e93e604e71b3cb11caf4eeadc7601b2dac457db932927affb858efe",
+        "report.json": "e8872c31d003ae4a1727e5e9b34f12819c54833d7a09f8f512657c9900b96939",
+        "events.jsonl": "94bfe839670aaf659d4e367f231ff8be1a7160579351c61de295796bfce0aee2",
+        "before.json": "ad5a9ef1760c09ff5f3858da6db771ba8e997860dadb6a12b9c54d16a35f0090",
+        "after.json": "cd9eceebc1c1c39f6a6bf8fa466a2ab1ab12c8cb632cffdfa48daf4ccd699c86",
+        "final.txt": "df032e99436deb8c884ef7de7f48104e3d19a31c837959853c2489222faebc73",
+        "inputs.json": "333c4ebad41fed46cf5e93134980db4a868d1d022f8edeada9a5f229e977c389",
+        "setup.json": "4b9a441f3ca453ad7e1025df3cc6677c3d72c42a9997a9d1878cc793416822e8",
+        "git-before.json": "c280815a58e71152be8cbf35e83faa5de7b9b22f7d94327e0ba9f77cff063f4f",
+        "git-after.json": "8befe407c4a7fe48a0c006cf02e01cbbb0d52ca7376f2122a32d9855d751b759",
+        "setup-capture.json": "1cabe8fb9f147972975df73fdee0be7d0aecd4ab322e33aaa8d62a0ce2730a71",
+        "setup-capture.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "checkpoint-readback.json": "cc06c473846ef6892f21f24594020682d07e9ab1a8584cd3a785cb24bbe25b0f"
+      },
+      "imageSha256": "e7f0261060fa2c57f1f14f64469d9604b5b227962aacc080dc7190ee0c31b572",
+      "nativeOpenedImage": true,
+      "maintainerOpenedImage": true,
+      "preWriteReport": {
+        "timestamp": "2026-11-12T17:03:00.270Z",
+        "text": "Story Done: Static shop panel  \nStory: `production/epics/mvp/story-002-shop-panel.md` · Type: UI · Date: 2026-11-13  \nAcceptance Criteria: **1/3 passing**\n\n| Criterion | Covered by | Coverage | Evaluation |\n| --- | --- | --- | --- |\n| All six item slots appear inside the frame | Inspected retained `screenshot.png`; `src/shop/data.js` | COVERED | FAILS: only five slots |\n| Each visible slot shows its authored coin price | Same image; `src/shop/data.js`; `data/authored-prices.json` | COVERED | PASS: visible prices 1–5 match |\n| The implementation is “robust” | Your statement; no defined observable outcome | NOT ASSESSED | Unknown; would need measurable conditions and evaluation |\n\nTest Evidence: The required UI screenshot is present and inspected at `production/qa/evidence/story-002-shop-panel/screenshot.png`. Its receipt reports both source files UNCHANGED. Logic/integration requirements are waived under minimal QA; this UI story requires no visual sign-off. No tests were run.\n\nRun result: Retained automated browser capture, supported by the existing report and log. No human play session or acceptance is claimed. No grown-game artifacts were found, so same-seed comparison does not apply.\n\nDeviations: **BLOCKING** six-slot criterion failure; “robust” remains **NOT ASSESSED**. The agreed six-slot presentation remains unchanged. Minimal workflow skips formal GDD/ADR conformance checks; the brief was inspected for implementation choices, authored data and localized strings. No control manifest was found.\n\nScope: The changed game file, `src/shop/index.html`, is declared by this story. Existing owner-note, checkpoint and evidence changes are separate retained work. No undeclared game/test changes were found.\n\nOwn calls: Your explicit decision keeps five slots for now at `src/shop/data.js`, as an accepted deviation. No other choices beyond the brief were found in the two listed source files.\n\nReview: Solo mode; QA-lead and lead-programmer gates both skipped.  \nReviewed by: self; no independent review.  \nVerdict: **BLOCKED**, with the robustness unknown retained separately.\n\nYour explicit acceptance authorizes closure despite these findings. I’ll update only the story’s status/date and completion history, feature 2’s tracking checkbox, the exact epic row, the exact sprint entry and tracking date, and the session checkpoint with its required save records. The failed and unknown criteria will remain unchecked. Feature 2 has no other unfinished owning story. No debt will be logged."
+      },
+      "firstWriteTimestamp": "2026-11-12T17:03:31.452Z",
+      "independentCheckpointAudit": {
+        "verified": true,
+        "eventBodies": [
+          {
+            "schemaVersion": 1,
+            "type": "checkpoint.saved",
+            "eventId": "af970ce397789e58909ef28c17730de23a1cc6ac7a24c6ff71cd6a38a32896c1",
+            "operationHash": "af970ce397789e58909ef28c17730de23a1cc6ac7a24c6ff71cd6a38a32896c1",
+            "previousHash": "a9fa1208e4f3ffcd15c222fc4cd7196c2fb8916c1b1201ee76267e89edea2239",
+            "checkpointHash": "5416545438a7df866b9fdbc43ad59cab5a8cb7eebbad7df14f76a8d3a4cc8b0b",
+            "recordedAt": "2026-11-12T17:04:10.923Z"
+          }
+        ],
+        "backups": [
+          {
+            "path": ".game-studio/backups/42128117-d65b-471e-b206-c5059575cfc2.json",
+            "sha256": "9ba38805d74759abea10d56465598cf70f49a52e68f8d9074ecc3cf925bcee2c",
+            "checkpointBeforeSha256": "a9fa1208e4f3ffcd15c222fc4cd7196c2fb8916c1b1201ee76267e89edea2239",
+            "checkpointAfterSha256": "5416545438a7df866b9fdbc43ad59cab5a8cb7eebbad7df14f76a8d3a4cc8b0b",
+            "eventPath": "production/session-logs/events/af970ce397789e58909ef28c17730de23a1cc6ac7a24c6ff71cd6a38a32896c1.json"
+          }
+        ]
+      },
+      "manualChecks": {
+        "projectWorkflow": "PASS: explicit project-level modes.workflow query; no --system parameter or guessed title identity.",
+        "imageAndEvidence": "PASS: actual native and maintainer opened1280x720PNG; source/checkpoint/receipt inspected; static capture is not human play or test evidence.",
+        "writeAuthority": "PASS: complete report and exact write set precede scoped mutation; existing goal/risk authorization reused, no extra file approval.",
+        "companionIdentity": "PASS: five authorized records only; exact story file row, brief feature2 and EPIC target; same-basename other epic and unrelated source/history preserved.",
+        "checkpoint": "PASS: real dry-run/save/owned-draft deletion, single event+backup chain independently read and hashed, surrounding recovery history preserved.",
+        "gitAndScope": "PASS: actual file rehash, HEAD and unrelated cached binary diff preserved; no code/test/evidence/config changes or commit.",
+        "routing": "PASS: one actual post-close story-status call; recommends Submit only, no readiness/sprint closeout/downstream invocation.",
+        "review": "PASS: minimal/solo records both gate skips and self/no-independent-review; conditional full/sprint/debt references not loaded.",
+        "verdict": "PASS:1/3pass; six-slot criterion FAILS, robust NOT ASSESSED; BLOCKED remains in pre-write report, final, notes and checkpoint despite closed Complete status.",
+        "riskOverride": "PASS: actual request expressly accepts both named risks; notes retain owner quote,5slot deviation and undefined robustness; failed/unknown boxes unchecked, design remains6slots, no debt logging."
+      },
+      "originalInputAndRequestPreserved": true,
+      "commandTraceAudit": "Full public call sequence reviewed by delegated maintainer; raw native session and event hashes retained. Root separately checked outputs, file preservation, git state and recorded closure artifacts."
+    }
+  ],
+  "rootIndependentVerification": [
+    {
+      "runId": "game-studio-story-done-xsKS6w",
+      "actualFilesRehashed": 577,
+      "rawAndNativeTraceHashesMatch": true,
+      "finalAndClosureArtifactsMatch": true,
+      "currentGitHeadAndStagedDiffPreserved": true,
+      "checkpointEventAndBackupHashesChecked": false
+    },
+    {
+      "runId": "game-studio-story-done-waBA3B",
+      "actualFilesRehashed": 575,
+      "rawAndNativeTraceHashesMatch": true,
+      "finalAndClosureArtifactsMatch": true,
+      "currentGitHeadAndStagedDiffPreserved": true,
+      "checkpointEventAndBackupHashesChecked": false
+    },
+    {
+      "runId": "game-studio-story-done-LTWIbC",
+      "actualFilesRehashed": 575,
+      "rawAndNativeTraceHashesMatch": true,
+      "finalAndClosureArtifactsMatch": true,
+      "currentGitHeadAndStagedDiffPreserved": true,
+      "checkpointEventAndBackupHashesChecked": false
+    },
+    {
+      "runId": "game-studio-story-done-CXBc9k",
+      "actualFilesRehashed": 577,
+      "rawAndNativeTraceHashesMatch": true,
+      "finalAndClosureArtifactsMatch": true,
+      "currentGitHeadAndStagedDiffPreserved": true,
+      "checkpointEventAndBackupHashesChecked": true
+    },
+    {
+      "runId": "game-studio-story-done-Zt24kP",
+      "actualFilesRehashed": 577,
+      "rawAndNativeTraceHashesMatch": true,
+      "finalAndClosureArtifactsMatch": true,
+      "currentGitHeadAndStagedDiffPreserved": true,
+      "checkpointEventAndBackupHashesChecked": true
+    }
+  ],
+  "repair": {
+    "product": "Use project workflow when neither GDD nor TR identity exists; do not infer --system from title or brief feature. Original unsupported-system run remains FAIL.",
+    "checker": "Allow only independently proven PASS criterion markers while preserving original criterion text, order, other checkboxes and history. Original wrapper failure is retained and separately adjudicated.",
+    "regression": "Six regression and negative-control tests include the actual original xsKS6w before/after story and reject failed/unknown criterion markings."
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "packedInstallAndRestore": "PASS",
+    "node24": {
+      "passed": 293,
+      "failed": 0,
+      "skipped": 0
+    },
+    "node26": {
+      "passed": 293,
+      "failed": 0,
+      "skipped": 0
+    },
+    "ci": "Not yet run on this uncommitted repair slice; earlier green CI must not be attributed to this change."
+  },
+  "sourceHashes": {
+    ".agents/skills/game-studio-story-done/SKILL.md": "0af421c915d1241d878e4520db7194ef43fed461827a85fcf8a8d31b608ee169",
+    "toolkit/test/story-done-host.mjs": "ac8f98747da81562d34cabddab2649a8fcb68ee405f91bbd362f93a3c074335f",
+    "toolkit/test/fixtures/story-done-cases.mjs": "af4fb69efcebe795c809ca661804160ebecaf5a17dc2bf4ced1d3d12967346f2",
+    "toolkit/test/story-done-history.test.mjs": "1be991c8fb3af3b7e54f623b2c0def807ceb6401cbc7ebdbf91cf8ebf222c937"
+  },
+  "logs": {
+    "build": {
+      "path": "/private/tmp/game-studio-story-policy-build.log",
+      "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+    },
+    "typecheck": {
+      "path": "/private/tmp/game-studio-story-policy-typecheck.log",
+      "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+    },
+    "lint": {
+      "path": "/private/tmp/game-studio-story-policy-lint.log",
+      "sha256": "b95046b2809e1f0c6970a758de470d299e0d1c8cdf5e22775dd998a733386ec8"
+    },
+    "pack": {
+      "path": "/private/tmp/game-studio-story-policy-pack.log",
+      "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+    },
+    "tests24": {
+      "path": "/private/tmp/game-studio-story-policy-tests24.log",
+      "sha256": "8e30f6fdf1e0904930dbc1466f110778613c9534228e8ff614f394b9dd028120"
+    },
+    "tests26": {
+      "path": "/private/tmp/game-studio-story-policy-tests26.log",
+      "sha256": "6ae482f4e66bbbb12c831a9796b4a2d0daf65b44ccdb0aaf0bef5e86644f750d"
+    }
+  },
+  "limitations": [
+    "Remaining S059 native matrix and desktop acceptance are pending.",
+    "Recorded automated screenshot inspection is not human play acceptance.",
+    "Fixture-scoped history assertion is not a general Markdown mutation parser.",
+    "A selected scenario PASS does not upgrade the Skill catalog to verified."
+  ]
+}

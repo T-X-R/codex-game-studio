@@ -13,6 +13,34 @@ import { safePath } from '../dist/files.js';
 import { storyDoneScenarios, targetStory, checkpointPath, imagePath, captureFolder, closeAssertions } from './fixtures/story-done-cases.mjs';
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 
+// This checks the canonical flat AC section in these maintainer fixtures only.
+// Passing indexes are an independent test oracle, never inferred from Status or
+// the agent's report; semantic evidence review is still required for every PASS.
+export function assertStoryHistory(before, after, passingCriteria = []) {
+  assert.match(after, /^> \*\*Status\*\*: Complete$/m);
+  assert.match(after, /^(?:> )?\*{0,2}Last Updated\*{0,2}:\*{0,2} \d{4}-\d{2}-\d{2}$/m);
+  const headings = [...before.matchAll(/^## Acceptance Criteria\r?$/gm)];
+  assert.equal(headings.length, 1, 'Fixture must have one Acceptance Criteria section');
+  assert.equal([...after.matchAll(/^## Acceptance Criteria\r?$/gm)].length, 1, 'Acceptance Criteria section duplicated or removed');
+  const start = headings[0].index + headings[0][0].length;
+  const tail = before.slice(start), end = tail.search(/^#{1,2}(?:[ \t]|$)/m);
+  const section = end < 0 ? tail : tail.slice(0, end);
+  const criteria = [...section.matchAll(/^- \[([ x])\] [^\r\n]+\r?$/gm)];
+  assert.ok(criteria.length, 'No fixture criteria');
+  assert.equal(section.replace(/^- \[[ x]\] [^\r\n]+\r?$/gm, '').trim(), '', 'Unsupported fixture AC layout; do not guess checkbox ownership');
+  assert.ok(Array.isArray(passingCriteria));
+  assert.equal(new Set(passingCriteria).size, passingCriteria.length, 'Duplicate passing criterion index');
+  for (const index of passingCriteria) assert.ok(Number.isInteger(index) && index >= 0 && index < criteria.length, 'Invalid passing criterion index');
+  const normalized = after.replace('> **Status**: Complete', '> **Status**: In Progress')
+    .replace(/^(?:> )?\*{0,2}Last Updated\*{0,2}:\*{0,2}[^\n]*\n/m, '');
+  const restored = normalized.slice(0, before.length).split('');
+  for (const index of passingCriteria) {
+    const position = start + criteria[index].index + 3;
+    if (before[position] === ' ' && restored[position] === 'x') restored[position] = ' ';
+  }
+  assert.equal(restored.join(''), before, 'Original story text/history changed beyond permitted verified AC markers');
+}
+
 async function snapshot(workspace) {
   const files = {}, symlinks = {}, directories = [workspace];
   while (directories.length) {
@@ -170,12 +198,7 @@ async function main() {
         const content = await readFile(join(workspace, path), 'utf8'); check(`exact companion change ${path}`, () => assert.equal(content, expected));
       }
       const closedStory = await readFile(join(workspace, targetStory), 'utf8');
-      check('story status, date and original history', () => {
-        assert.match(closedStory, /^> \*\*Status\*\*: Complete$/m);
-        assert.match(closedStory, /^(?:> )?\*{0,2}Last Updated\*{0,2}:\*{0,2} \d{4}-\d{2}-\d{2}$/m);
-        const oldPrefix = closedStory.replace('> **Status**: Complete', '> **Status**: In Progress').replace(/^(?:> )?\*{0,2}Last Updated\*{0,2}:\*{0,2}[^\n]*\n/m, '');
-        assert.ok(oldPrefix.startsWith(scenario.inputs[targetStory]), 'Original story text/history changed');
-      });
+      check('story status, date and original history', () => assertStoryHistory(scenario.inputs[targetStory], closedStory, scenario.passingCriteria));
       const actualSprint = parseYaml(await readFile(join(workspace, closeAssertions.sprintPath), 'utf8'));
       check('exact sprint identity and unrelated fields', () => {
         const expected = parseYaml(scenario.inputs[closeAssertions.sprintPath]);
