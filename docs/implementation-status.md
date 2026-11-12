@@ -53,7 +53,7 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   tuning from production. A packed-runtime fixture builds both outputs and proves
   same-seed input/scoring states and screenshots match in real Chrome. Copy does
   not complete TypeScript/data conversion, game-rule tests or human play.
-- Four project Skills: start, prototype, next-step and project-settings. These are alpha entry
+- Five project Skills: start, prototype, next-step, project-settings and smoke-check. These are alpha entry
   points covering implemented operations; they do not close the full upstream
   behavioral migration rows.
 - The prototype Skill now includes selected/resumed Web growth guidance and
@@ -70,6 +70,17 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   and queried the runtime. No files changed in that read. See
   [the evidence](evidence/project-settings-skill-2026-11-12.json). Native writes,
   desktop execution and the remaining S037 scenarios are still open.
+- Smoke-check now has installed runner, coverage/manual and verdict references.
+  The command wrapper accepts explicit 15-minute suites/30-minute builds and
+  one-run command adjustments with preserved configuration and evidence. Seven
+  isolated scenarios plus a platform-report regression distinguish failed
+  assertions, empty/zero-test runs, missing manual observations, minimal waivers,
+  quick scope and reported platform failures. Fixture human feedback is simulated,
+  not actual play acceptance. See [the evidence](evidence/smoke-skill-2026-11-12.json).
+  A native CLI natural-language rerun selected the Skill, recorded actual zero
+  tests despite exit zero, and reported NOT ASSESSED. All 323 pre-existing files,
+  including earlier reports/evidence and installed runtime files, were unchanged.
+  Desktop and remaining engine/behavior acceptance are still open.
 
 ## Verification performed
 

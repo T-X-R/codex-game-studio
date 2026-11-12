@@ -1,0 +1,452 @@
+{
+  "date": "2026-11-12",
+  "scope": "Partial S054 smoke-check migration with preserved original acceptance gates",
+  "runtime": "Node.js 24.22.2 / macOS ARM64 / Codex CLI 0.162.0",
+  "commits": {
+    "explicitTimeouts": "4729076",
+    "oneRunCommands": "2a8869e",
+    "initialSkill": "ba25a1e",
+    "behaviorFixturesAndPlatformReport": "c03d63b"
+  },
+  "initialEvaluation": {
+    "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-cgZWxY",
+    "commandsRecorded": 158,
+    "cases": {
+      "a": {
+        "request": "Use the installed game-studio-smoke-check Skill to assess this game and write the smoke report. Preserve source, tests and configuration; no fixes, commits or publication. This is an unattended fixture assessment: do not ask further questions; report observations that are unavailable. Run sprint mode. No human play observations have been supplied.",
+        "reviewedVerdict": "NOT ASSESSED: real tests pass; manual observations absent",
+        "originalFilesUnchanged": 317,
+        "smokeReport": "production/qa/smoke-2026-11-12.md",
+        "smokeReportSha256": "c61458929e5c426536a70113658094025ec1c24a1c686c0003d4eb6e8326a28b",
+        "added": [
+          "production/qa/smoke-2026-11-12.md",
+          "production/qa/evidence/smoke-20261112T052656Z/test/report.json",
+          "production/qa/evidence/smoke-20261112T052656Z/test/stderr.log",
+          "production/qa/evidence/smoke-20261112T052656Z/test/stdout.log"
+        ],
+        "executions": [
+          {
+            "path": "production/qa/evidence/smoke-20261112T052656Z/test/report.json",
+            "kind": "test",
+            "command": "node --test --test-isolation=none tests/score.test.cjs",
+            "source": "project.yaml:commands.test",
+            "processExitCode": 0,
+            "exitCode": 0
+          }
+        ],
+        "reportArtifact": {
+          "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-cgZWxY/case-a game 测试/production/qa/smoke-2026-11-12.md",
+          "sha256": "c61458929e5c426536a70113658094025ec1c24a1c686c0003d4eb6e8326a28b"
+        }
+      },
+      "b": {
+        "request": "Use the installed game-studio-smoke-check Skill to assess this game and write the smoke report. Preserve source, tests and configuration; no fixes, commits or publication. This is an unattended fixture assessment: do not ask further questions; report observations that are unavailable. Run sprint mode. No human play observations have been supplied.",
+        "reviewedVerdict": "FAIL: two real assertion failures; failure outranks missing manual evidence",
+        "originalFilesUnchanged": 317,
+        "smokeReport": "production/qa/smoke-2026-11-12.md",
+        "smokeReportSha256": "3a99bd5f02bf7a4ad8f26c4802e532f70ae5bf9e990d60ac9624f8e2041acf0c",
+        "added": [
+          "production/qa/smoke-2026-11-12.md",
+          "production/qa/evidence/smoke-20261112T052656Z/test/report.json",
+          "production/qa/evidence/smoke-20261112T052656Z/test/stderr.log",
+          "production/qa/evidence/smoke-20261112T052656Z/test/stdout.log"
+        ],
+        "executions": [
+          {
+            "path": "production/qa/evidence/smoke-20261112T052656Z/test/report.json",
+            "kind": "test",
+            "command": "node --test --test-isolation=none tests/score.test.cjs",
+            "source": "project.yaml:commands.test",
+            "processExitCode": 1,
+            "exitCode": 5
+          }
+        ],
+        "reportArtifact": {
+          "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-cgZWxY/case-b game 测试/production/qa/smoke-2026-11-12.md",
+          "sha256": "3a99bd5f02bf7a4ad8f26c4802e532f70ae5bf9e990d60ac9624f8e2041acf0c"
+        }
+      },
+      "c": {
+        "request": "Use the installed game-studio-smoke-check Skill to assess this game and write the smoke report. Preserve source, tests and configuration; no fixes, commits or publication. This is an unattended fixture assessment: do not ask further questions; report observations that are unavailable. Run sprint mode. No human play observations have been supplied.",
+        "reviewedVerdict": "NOT ASSESSED: comment-only test file rejected before suite execution",
+        "originalFilesUnchanged": 317,
+        "smokeReport": "production/qa/smoke-2026-11-12.md",
+        "smokeReportSha256": "6af91dd435bdfa34fbf98bf653a8d1a5f5cc5c72b00dfa7280a16501853034d2",
+        "added": [
+          "production/qa/smoke-2026-11-12.md"
+        ],
+        "executions": [],
+        "reportArtifact": {
+          "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-cgZWxY/case-c game 测试/production/qa/smoke-2026-11-12.md",
+          "sha256": "6af91dd435bdfa34fbf98bf653a8d1a5f5cc5c72b00dfa7280a16501853034d2"
+        }
+      },
+      "d": {
+        "request": "Use the installed game-studio-smoke-check Skill to assess this game and write the smoke report. Preserve source, tests and configuration; no fixes, commits or publication. This is an unattended fixture assessment: do not ask further questions; report observations that are unavailable. Run sprint mode. The user has not launched this build.",
+        "reviewedVerdict": "NOT ASSESSED: minimal test waiver and successful boot command do not prove a launch",
+        "originalFilesUnchanged": 317,
+        "smokeReport": "production/qa/smoke-2026-11-12.md",
+        "smokeReportSha256": "61e8a18fd34542ff6f2679f900b379bfdfb7afa2f2170c0dc1504d4dece46e6e",
+        "added": [
+          "production/qa/smoke-2026-11-12.md",
+          "production/qa/evidence/smoke-20261112T052656Z/smoke/report.json",
+          "production/qa/evidence/smoke-20261112T052656Z/smoke/stderr.log",
+          "production/qa/evidence/smoke-20261112T052656Z/smoke/stdout.log"
+        ],
+        "executions": [
+          {
+            "path": "production/qa/evidence/smoke-20261112T052656Z/smoke/report.json",
+            "kind": "smoke",
+            "command": "node boot.cjs",
+            "source": "project.yaml:commands.smoke",
+            "processExitCode": 0,
+            "exitCode": 0
+          }
+        ],
+        "reportArtifact": {
+          "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-cgZWxY/case-d game 测试/production/qa/smoke-2026-11-12.md",
+          "sha256": "61e8a18fd34542ff6f2679f900b379bfdfb7afa2f2170c0dc1504d4dece46e6e"
+        }
+      },
+      "e": {
+        "request": "Use the installed game-studio-smoke-check Skill to assess this game and write the smoke report. Preserve source, tests and configuration; no fixes, commits or publication. This is an unattended fixture assessment: do not ask further questions; report observations that are unavailable. Run quick mode. Supplied fixture user feedback (a role-play input, not real human acceptance): I launched this current build this session, reached the menu, started a session, tested score increments and navigation; all passed with no crash or hang.",
+        "reviewedVerdict": "PASS (quick, simulated feedback only); coverage and performance excluded",
+        "originalFilesUnchanged": 317,
+        "smokeReport": "production/qa/smoke-2026-11-12.md",
+        "smokeReportSha256": "d866a62940cdea87d63c0fdc08b2f9d2dc6c9ae594586f38843df324a18b1f20",
+        "added": [
+          "production/qa/smoke-2026-11-12.md",
+          "production/qa/evidence/smoke-20261112T052656Z/test/report.json",
+          "production/qa/evidence/smoke-20261112T052656Z/test/stderr.log",
+          "production/qa/evidence/smoke-20261112T052656Z/test/stdout.log"
+        ],
+        "executions": [
+          {
+            "path": "production/qa/evidence/smoke-20261112T052656Z/test/report.json",
+            "kind": "test",
+            "command": "node --test --test-isolation=none tests/score.test.cjs",
+            "source": "project.yaml:commands.test",
+            "processExitCode": 0,
+            "exitCode": 0
+          }
+        ],
+        "reportArtifact": {
+          "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-cgZWxY/case-e game 测试/production/qa/smoke-2026-11-12.md",
+          "sha256": "d866a62940cdea87d63c0fdc08b2f9d2dc6c9ae594586f38843df324a18b1f20"
+        }
+      },
+      "f": {
+        "request": "Use the installed game-studio-smoke-check Skill to assess this game and write the smoke report. Preserve source, tests and configuration; no fixes, commits or publication. This is an unattended fixture assessment: do not ask further questions; report observations that are unavailable. Run sprint --platform console. Supplied fixture user feedback (a role-play input, not real human acceptance): I launched this current build this session, reached the menu, started a session, tested score increments and navigation; all passed with no crash or hang. Save/load is not implemented. Performance was checked with no hitches. On the target console the pause-menu text clips outside the TV safe area; gamepad, prompts and cold start passed.",
+        "reviewedVerdict": "FAIL (simulated console feedback only): pause-menu text outside safe area",
+        "originalFilesUnchanged": 317,
+        "smokeReport": "production/qa/smoke-2026-11-12.md",
+        "smokeReportSha256": "c88cc5c8f193d192968e7d2adf99d75efa37b70d1ddcce8c59e588b628246831",
+        "added": [
+          "production/qa/smoke-2026-11-12.md",
+          "production/qa/evidence/smoke-20261112T052656Z/test/report.json",
+          "production/qa/evidence/smoke-20261112T052656Z/test/stderr.log",
+          "production/qa/evidence/smoke-20261112T052656Z/test/stdout.log"
+        ],
+        "executions": [
+          {
+            "path": "production/qa/evidence/smoke-20261112T052656Z/test/report.json",
+            "kind": "test",
+            "command": "node --test --test-isolation=none tests/score.test.cjs",
+            "source": "project.yaml:commands.test",
+            "processExitCode": 0,
+            "exitCode": 0
+          }
+        ],
+        "reportArtifact": {
+          "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-cgZWxY/case-f game 测试/production/qa/smoke-2026-11-12.md",
+          "sha256": "c88cc5c8f193d192968e7d2adf99d75efa37b70d1ddcce8c59e588b628246831"
+        }
+      }
+    },
+    "artifacts": [
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-cgZWxY/cases.json",
+        "sha256": "a36a05e4d136f120056c8546cd1a7f5070d4563bb8053aca84c783a416c2a435"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-cgZWxY/before.json",
+        "sha256": "9ccde7469899b49e318bdfbb05afe7a4eb30e26082157669e16cdaa68b065e95"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-cgZWxY/verified-results.json",
+        "sha256": "5a2687928807b5c9bcc99c11f93564000934e219aab528916f01b46847ff7091"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-cgZWxY/evidence/evaluation.json",
+        "sha256": "ca3dc8c464826d878c866b28b37479b0b019eedba0ac24d61424fab1f48f2794"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-cgZWxY/evidence/evaluation.md",
+        "sha256": "8dc6be8186faab91262702254c8a7eb219f724921ade186432d99d6c78c452f1"
+      }
+    ]
+  },
+  "additionalZeroRun": {
+    "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-YCQgJg",
+    "commandsRecorded": 25,
+    "cases": {
+      "g": {
+        "request": "Use the installed game-studio-smoke-check Skill to assess this game and write the smoke report. Preserve source, tests and configuration; no fixes, commits or publication. This is an unattended fixture assessment: do not ask further questions; report observations that are unavailable. Run sprint mode. No human play observations have been supplied.",
+        "reviewedVerdict": "NOT ASSESSED: actual filtered run executed zero tests despite process and CLI exits zero",
+        "originalFilesUnchanged": 317,
+        "smokeReport": "production/qa/smoke-2026-11-12.md",
+        "smokeReportSha256": "af8def548ef84a57ccffded7ded0a7b6e331c45250a238583486da6d31ce5ce7",
+        "added": [
+          "production/qa/smoke-2026-11-12.md",
+          "production/qa/evidence/smoke-20261112T052911Z/test/report.json",
+          "production/qa/evidence/smoke-20261112T052911Z/test/stderr.log",
+          "production/qa/evidence/smoke-20261112T052911Z/test/stdout.log"
+        ],
+        "executions": [
+          {
+            "path": "production/qa/evidence/smoke-20261112T052911Z/test/report.json",
+            "kind": "test",
+            "command": "node --test --test-isolation=none --test-name-pattern unmatched tests/score.test.cjs",
+            "source": "project.yaml:commands.test",
+            "processExitCode": 0,
+            "exitCode": 0
+          }
+        ],
+        "reportArtifact": {
+          "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-YCQgJg/case-g game 测试/production/qa/smoke-2026-11-12.md",
+          "sha256": "af8def548ef84a57ccffded7ded0a7b6e331c45250a238583486da6d31ce5ce7"
+        }
+      }
+    },
+    "artifacts": [
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-YCQgJg/cases.json",
+        "sha256": "87dd163eee1acdb344028b42a5308283f35f98ccdd534375a3e53d83c0ba6088"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-YCQgJg/before.json",
+        "sha256": "fa3bdf8325c70debd9989047f0b2ce51635fe69b7c04ac2025ccecf72eb1f757"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-YCQgJg/verified-results.json",
+        "sha256": "d348c739f42ac1bea2b6e4f0f54e65b00440f86ce4468a95e2b40909e7f99d3d"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-YCQgJg/evidence/evaluation.json",
+        "sha256": "1b83ad88e6caee8725181a0e405af536ffc2fc454915ea2f3c60a80c6a4c4c40"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-YCQgJg/evidence/evaluation.md",
+        "sha256": "491824fe6f289ad11cdd6d5d1bdc5265110ae9bdab243011fdc4e918f106f824"
+      }
+    ]
+  },
+  "platformReportRegression": {
+    "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-16eNN1",
+    "commandsRecorded": 25,
+    "cases": {
+      "f": {
+        "request": "Use the installed game-studio-smoke-check Skill to assess this game and write the smoke report. Preserve source, tests and configuration; no fixes, commits or publication. This is an unattended fixture assessment: do not ask further questions; report observations that are unavailable. Run sprint --platform console. Supplied fixture user feedback (a role-play input, not real human acceptance): I launched this current build this session, reached the menu, started a session, tested score increments and navigation; all passed with no crash or hang. Save/load is not implemented. Performance was checked with no hitches. On the target console the pause-menu text clips outside the TV safe area; gamepad, prompts and cold start passed.",
+        "reviewedVerdict": "FAIL (simulated console feedback only): pause-menu text outside safe area",
+        "originalFilesUnchanged": 317,
+        "smokeReport": "production/qa/smoke-2026-11-12.md",
+        "smokeReportSha256": "1982f4af9b701d2eb9a713560214bd45bde3a9dd1a2015f972b640b5b2cf2922",
+        "added": [
+          "production/qa/smoke-2026-11-12.md",
+          "production/qa/evidence/smoke-20261112T053058Z/test/report.json",
+          "production/qa/evidence/smoke-20261112T053058Z/test/stderr.log",
+          "production/qa/evidence/smoke-20261112T053058Z/test/stdout.log"
+        ],
+        "executions": [
+          {
+            "path": "production/qa/evidence/smoke-20261112T053058Z/test/report.json",
+            "kind": "test",
+            "command": "node --test --test-isolation=none tests/score.test.cjs",
+            "source": "project.yaml:commands.test",
+            "processExitCode": 0,
+            "exitCode": 0
+          }
+        ],
+        "reportArtifact": {
+          "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-16eNN1/case-f game 测试/production/qa/smoke-2026-11-12.md",
+          "sha256": "1982f4af9b701d2eb9a713560214bd45bde3a9dd1a2015f972b640b5b2cf2922"
+        }
+      }
+    },
+    "artifacts": [
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-16eNN1/cases.json",
+        "sha256": "be32430868c050c3b2fcf73566ca1dd4c7d19045b2f380071a484931bc7629b7"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-16eNN1/before.json",
+        "sha256": "8201ea4b37abbaaea909d942fe215429d6c6ce349efdb1beb586777d79f521f0"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-16eNN1/verified-results.json",
+        "sha256": "5238ffcf07bcc37425bfeea16a0b8bd7c4c8d253d01a103b8ed99642171c83ea"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-16eNN1/evidence/evaluation.json",
+        "sha256": "3dc7667035fbc4e713dc0490ea9a8770102a56e56da0880c7948f713b86000ca"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-16eNN1/evidence/evaluation.md",
+        "sha256": "33c5c58cfabba3ffad47f381176b905f49ab8c57884d228cac38dd47b9d3ef57"
+      }
+    ]
+  },
+  "evaluationNotes": [
+    "Supplied-Skill agent evaluated actual installed archives, not native host discovery.",
+    "Manual and console feedback are explicitly simulated inputs; no real human acceptance or hardware check is claimed.",
+    "Initial platform report explained results in prose but omitted the requested table; reference clarified and a same-agent fresh-fixture regression produced the table.",
+    "Source/result verifiers and main-agent report review are separate from the evaluating agent."
+  ],
+  "verifierNegativeControl": {
+    "exitCode": 1,
+    "reason": "changed original file src/score.cjs",
+    "artifact": {
+      "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/smoke-verifier-negative-cz39rgj0/verification.log",
+      "sha256": "355a33bf605d88277f8ad7a31ce06fb38edd4dd717b03c393a9078d34bd5d83a"
+    }
+  },
+  "nativeCLI": {
+    "prompt": "Run a sprint smoke check for this game and write a new report, preserving previous reports and evidence. Preserve game source, tests and configuration; no fixes, commits, publication or delegation. No human play observations are provided. This is unattended: do not ask additional questions; report unavailable observations. Environment: use /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node for toolkit operations; the login shell default Node is unsupported. Set that Node directory in PATH for configured subprocesses too.",
+    "sandbox": "workspace-write",
+    "project": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-YCQgJg/case-g game 测试",
+    "exitCode": 0,
+    "actualSkillRead": true,
+    "reviewedVerdict": "NOT ASSESSED: zero executed tests and absent manual observations",
+    "originalFilesUnchanged": 323,
+    "added": [
+      "production/qa/smoke-2026-11-12-2.md",
+      "production/qa/evidence/smoke-20261112T053216Z/preservation-before.json",
+      "production/qa/evidence/smoke-20261112T053216Z/preservation-check.json",
+      "production/qa/evidence/smoke-20261112T053216Z/tests/stderr.log",
+      "production/qa/evidence/smoke-20261112T053216Z/tests/report.json",
+      "production/qa/evidence/smoke-20261112T053216Z/tests/stdout.log"
+    ],
+    "command": "node --test --test-isolation=none --test-name-pattern unmatched tests/score.test.cjs",
+    "processExitCode": 0,
+    "toolkitExitCode": 0,
+    "zeroTestsOutput": "ℹ tests 0\nℹ suites 0\nℹ pass 0\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 7.266042\n",
+    "report": "production/qa/smoke-2026-11-12-2.md",
+    "commands": [
+      {
+        "command": "/bin/zsh -lc 'cat .agents/skills/game-studio-smoke-check/SKILL.md'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc \"pwd; rg --files -g 'AGENTS.md' -g 'package.json' -g '*smoke*' -g '*sprint*' -g '*settings*' -g '*report*' -g '\"'!node_modules'\"' -g '\"'!.git'\"'\"",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'cat .agents/skills/game-studio-smoke-check/references/runners.md .agents/skills/game-studio-smoke-check/references/checks.md .agents/skills/game-studio-smoke-check/references/verdict.md'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc \"git status --short; rg --files --hidden -g '\"'!node_modules'\"' -g '\"'!.git'\"' -g '\"'!.game-studio/runtime/**'\"' -g '\"'!.agents/**'\"' -g '\"'!.codex/**'\"'; cat production/qa/smoke-2026-11-12.md\"",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs --help'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'PATH=/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin:$PATH /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get gate_level --json'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'PATH=/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin:$PATH /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get --json'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'PATH=/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin:$PATH /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs engine inspect --json'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'cat project.yaml src/score.cjs tests/score.test.cjs production/qa/qa-plan-current.md production/epics/score/story-001.md .game-studio/package.json .game-studio/install.json; ls -la; rg --files --hidden production tests .github .gitlab 2>/dev/null'",
+        "exitCode": 2
+      },
+      {
+        "command": "/bin/zsh -lc 'PATH=/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin:$PATH /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs test --help'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'PATH=/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin:$PATH /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs resource path studio/docs/testing.md --json'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'PATH=/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin:$PATH /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs resource path studio/docs/integration.md --json'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'cat .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/testing.md .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc \"/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node <<'NODE'\nconst fs = require('node:fs');\nconst path = require('node:path');\nconst crypto = require('node:crypto');\nconst files = {};\nfunction scan(dir) {\n  for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {\n    if (entry.name === 'node_modules' || entry.name === '.git') continue;\n    const name = path.join(dir, entry.name);\n    if (entry.isDirectory()) scan(name);\n    else if (entry.isFile()) files[name] = crypto.createHash('sha256').update(fs.readFileSync(name)).digest('hex');\n  }\n}\nscan('.');\nconst id = new Date().toISOString().replace(/[-:]/g, '').replace(/\\\\.\\\\d+Z\"'$/, '\"'Z');\nlet root = \"'`production/qa/evidence/smoke-${id}`;\nlet suffix = 2;\nwhile (fs.existsSync(root)) root = `production/qa/evidence/smoke-${id}-${suffix++}`;\nfs.mkdirSync(root, {recursive: true});\nfs.writeFileSync(`${root}/preservation-before.json`, JSON.stringify({createdAt:new Date().toISOString(),excluded:['\"'node_modules','.git'],files}, null, 2)+'\\\\n', {flag:'wx'});\nconsole.log(JSON.stringify({root, node:process.version, execPath:process.execPath, files:Object.keys(files).length}));\nNODE\"",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'PATH=/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin:$PATH /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs test --kind test --timeout 900000 --output production/qa/evidence/smoke-20261112T053216Z/tests --json'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc \"cat production/qa/evidence/smoke-20261112T053216Z/tests/report.json production/qa/evidence/smoke-20261112T053216Z/tests/stdout.log production/qa/evidence/smoke-20261112T053216Z/tests/stderr.log; rg --files --hidden -g '\"'!node_modules'\"' -g '\"'!.git'\"' -g '\"'!.agents/**'\"' -g '\"'!.game-studio/**'\"' -g '\"'!production/qa/evidence/**'\"'\"",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc \"/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node <<'NODE'\nconst fs = require('node:fs');\nconst path = require('node:path');\nconst crypto = require('node:crypto');\nconst root = 'production/qa/evidence/smoke-20261112T053216Z';\nconst baseline = JSON.parse(fs.readFileSync(root + '/preservation-before.json', 'utf8'));\nconst changed = [], missing = [], added = [];\nfor (const [name, hash] of Object.entries(baseline.files)) {\n  if (\"'!fs.existsSync(name)) missing.push(name);\n  else if (crypto.createHash('\"'sha256').update(fs.readFileSync(name)).digest('hex') \"'!== hash) changed.push(name);\n}\nfunction scan(dir) {\n  for (const entry of fs.readdirSync(dir, {withFileTypes:true})) {\n    if (entry.name === '\"'node_modules' || entry.name === '.git') continue;\n    const name = path.join(dir, entry.name);\n    if (entry.isDirectory()) scan(name);\n    else if (entry.isFile() && \"'!(name in baseline.files)) added.push(name);\n  }\n}\nscan('\"'.');\nconst unexpectedAdditions = added.filter(name => \"'!name.startsWith(root + '\"'/') && name \"'!== '\"'production/qa/smoke-2026-11-12-2.md');\nconst result = {checkedAt:new Date().toISOString(), checkedFiles:Object.keys(baseline.files).length, exclusions:baseline.excluded, changed, missing, added, unexpectedAdditions, passed:\"'!changed.length && !missing.length && !unexpectedAdditions.length};\nfs.writeFileSync(root + '\"'/preservation-check.json', JSON.stringify(result,null,2)+'\\\\n',{flag:'wx'});\nconst report = fs.readFileSync('production/qa/smoke-2026-11-12-2.md','utf8');\nfor (const match of report.matchAll(/\\\\]\\\\(([\"'^)]+)'\"\\\\)/g)) {\n  const target = path.resolve('production/qa',match[1]);\n  if (\"'!fs.existsSync(target)) throw new Error('\"'Missing report link: ' + target);\n}\nconsole.log(JSON.stringify(result,null,2));\nif (\"'!result.passed) process.exitCode=1;\nNODE'",
+        "exitCode": 0
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "/private/tmp/game-studio-smoke-native-before.json",
+        "sha256": "62331e93f17aabc8a5a422e8b29ebc22189c575a87473517434f92b207e4e7ea"
+      },
+      {
+        "path": "/private/tmp/game-studio-smoke-native-verified.json",
+        "sha256": "90f6328ae332e2290d3cc8a867e48220482b1c3427170429bd9ceeb61ad55bf9"
+      },
+      {
+        "path": "/private/tmp/game-studio-smoke-native-events.jsonl",
+        "sha256": "4b52493245c560f3c2d5ec661cbb4b14e7d8bf88df088708c2ab755ffc3cf712"
+      },
+      {
+        "path": "/private/tmp/game-studio-smoke-native-final.txt",
+        "sha256": "7c0d374923493109f482d32ee02381cf1c2e4a0cdadf2771e1246f4e9b87dd0b"
+      },
+      {
+        "path": "/private/tmp/game-studio-smoke-native-stderr.txt",
+        "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-smoke-skill-YCQgJg/case-g game 测试/production/qa/smoke-2026-11-12-2.md",
+        "sha256": "bbc2975029f67956744337d6f9085bbc179155b25377ae0ad1e2593851689a19"
+      }
+    ],
+    "notes": [
+      "Natural-language task did not name the Skill file or provide the intended verdict.",
+      "All 323 pre-existing files, including installed dependencies and earlier reports/evidence, retained their hashes.",
+      "Native fixture used the initial installed Skill; subsequent change only clarifies the platform table, and this invocation requested no platforms."
+    ]
+  },
+  "localChecks": {
+    "build": "passed",
+    "typecheck": "passed",
+    "tests": 130,
+    "failed": 0,
+    "skipped": 0,
+    "pack": "passed",
+    "skillMetadata": "passed"
+  },
+  "remaining": [
+    "Native desktop discovery and behavior",
+    "Remaining smoke matrix: advisory failures, missing/unknown coverage, incomplete/timed-out suites, unavailable platforms, read-only runs and IDE/CI confirmation",
+    "Live gdUnit4 warnings/refusals and real Unity EditMode/PlayMode/Unreal interpretation",
+    "Real current-build human play and platform hardware acceptance",
+    "Full original migration inventory and new public release archive"
+  ]
+}

@@ -138,6 +138,7 @@ unreleased; full host and workflow acceptance is still open.
   - Likely files: `toolkit/src/check.ts`, `toolkit/src/package.ts`, `toolkit/test/check.test.ts`, `toolkit/test/package.test.ts`. Scope: M.
 
 - [ ] T14 Migrate the core user journey
+  - 2026-11-12 S054 smoke slice: installed smoke Skill and three references preserve engine result interpretation, coverage, manual/platform observations and QA policy. CLI supports explicit 900000/1800000 ms budgets and one-run command adjustments without config edits. Seven isolated Node-runner/feedback scenarios and one same-agent platform-table regression passed file/result verification; simulated feedback is not human play acceptance. Build/typecheck, 130 tests and packed install pass. Evidence: `docs/evidence/smoke-skill-2026-11-12.json`. Full engine/host and remaining behavior matrix stay open.
   - 2026-11-12 S037 settings slice: installed Skill and advisory reference, CLI read annotations for reserved/overridden values, and preserved source-derived behavior mapping. Five isolated behavior cases and two post-clarification regressions passed independent file/result checks. A natural-language CLI 0.162.0 read discovered and used the installed Skill from the game root; a non-Git nested launch did not discover it. See `docs/evidence/project-settings-skill-2026-11-12.json`. Local build/typecheck, 128 tests and packed install pass. Native writes, desktop, cancellation and unavailable/conflicting Skill scenarios remain open.
   - 2026-11-12 S040 growth supplement: the installed prototype Skill now routes selected/resumed growth to a focused reference; packed attachment includes the reference and shared TypeScript resources. Independent behavior evaluation plus a separate result verifier completed a scoring/pause fixture without changing its prototype or brief constraints. See `studio-tests/skills/utility/prototype-growth.md` and `docs/evidence/web-growth-skill-2026-11-12.json`. Native CLI/desktop journeys and the other prototype scenarios remain open.
   - Module: `codex-integration`. Dependencies: T13.
@@ -323,7 +324,7 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S051 Migrate `setup-engine` to `game-studio-setup-engine`. Evidence: pending.
 - [ ] S052 Migrate `skill-improve` to `game-studio-skill-improve`. Evidence: pending.
 - [ ] S053 Migrate `skill-test` to `game-studio-skill-test`. Evidence: pending.
-- [ ] S054 Migrate `smoke-check` to `game-studio-smoke-check`. Evidence: pending.
+- [ ] S054 Migrate `smoke-check` to `game-studio-smoke-check`. Evidence: partial; installed Skill, seven supplied-Skill scenarios, platform-table regression and native CLI zero-test rerun with prior-evidence preservation in `docs/evidence/smoke-skill-2026-11-12.json`. Remaining matrix: `studio-tests/skills/utility/smoke-check-codex.md`.
 - [ ] S055 Migrate `soak-test` to `game-studio-soak-test`. Evidence: pending.
 - [ ] S056 Migrate `sprint-plan` to `game-studio-sprint-plan`. Evidence: pending.
 - [ ] S057 Migrate `sprint-status` to `game-studio-sprint-status`. Evidence: pending.

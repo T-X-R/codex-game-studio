@@ -206,3 +206,25 @@ approved shared writes, personal overrides, refusals and reserved settings.
 Two regressions verified a clarified before-write read and unset-value wording.
 Those write cases are not native CLI/desktop mutation evidence. The remaining
 settings behavior and full host gates stay open.
+
+## Native smoke-check rerun — 2026-11-12
+
+A natural-language sprint smoke request in CLI 0.162.0 selected and read the
+installed smoke-check Skill, ran the actual configured Node test command and
+wrote a new report in a disposable game root. The command's name filter matched
+zero tests: process and toolkit exits were both zero, but the Skill inspected
+the output and reported **NOT ASSESSED**, with absent manual observations named
+separately. It did not run an unfiltered replacement suite or change the config.
+
+The workspace already contained a report and run evidence from a supplied-Skill
+evaluation. The native rerun used a suffixed report name and fresh evidence;
+independent SHA-256 verification found all 323 prior files unchanged, including
+source, tests, configuration, prior evidence and installed dependencies. The
+trace records the Skill read, configured command and result inspection. See
+[the evidence record](evidence/smoke-skill-2026-11-12.json).
+
+This proves that specific root-launched CLI journey and its write/preservation
+behavior. It does not prove desktop execution, native engine suites, other smoke
+verdict paths or actual human play. Supplied console/quick feedback in the
+separate behavior fixtures is simulation only and does not establish hardware
+or human acceptance. No new Hook trust or custom agent configuration was needed.
