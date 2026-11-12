@@ -81,6 +81,15 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   tests despite exit zero, and reported NOT ASSESSED. All 323 pre-existing files,
   including earlier reports/evidence and installed runtime files, were unchanged.
   Desktop and remaining engine/behavior acceptance are still open.
+- One project-scoped QA tester role is now installed by development packages.
+  Native CLI selected `game-studio-qa-tester`, loaded its full instructions and
+  inherited the parent model, effort and sandbox. It rejected a zero-test PASS,
+  separated a static score defect from runtime reproduction, wrote nine planned
+  test cases and a structured bug report, and returned unresolved acceptance
+  decisions. All 322 existing files remained unchanged; only the two authorized
+  reports were added. See [QA role evidence](evidence/qa-role-2026-11-12.json).
+  This is scoped audit acceptance, not completion of A028's engine and workflow
+  cases, enforced write-denial testing, T19 collaboration or desktop acceptance.
 
 ## Verification performed
 
@@ -104,7 +113,7 @@ were not modified; verification used an isolated Node 24 distribution.
   even when the driver emits a final `done` row. Real Chrome red/green regression
   and the packed growth journey cover the correction discovered in Skill evaluation.
 
-Source additions after the published alpha: build/typecheck and 126 local tests
+Source additions after the published alpha: build/typecheck and 130 local tests
 pass with no skips. Packed-install tests exercise configuration summaries/writes,
 checkpoint save/reopen/detach preservation, engine setup dry-run/apply/no-op and
 preference preservation after detach, engine inspection and actual test
@@ -198,8 +207,9 @@ The full acceptance contract remains in `tasks/todo.md`. In particular:
 
 The implementation order was adjusted to exercise deterministic installation and
 Web operations while host compatibility remains open. This does not waive C0–C5
-or make the final migration complete. The alpha does not install roles or hooks;
-the verified CLI role fixture does not establish desktop support.
+or make the final migration complete. The published alpha does not install roles
+or hooks. Development packages now install the QA role; the verified CLI audit
+does not establish desktop support. No production Hooks are installed.
 
 Detach retains game configuration, runtime archives/dependencies/lock and backups.
 It restores/removes only unchanged files that its manifest owns. Edited managed

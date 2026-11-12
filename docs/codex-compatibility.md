@@ -2,6 +2,28 @@
 
 Status: CLI custom role selection and a startup/patch Hook fixture verified with controls; full host compatibility gate is open.
 
+## Packaged QA role — 2026-11-12
+
+The actual development package now supplies `game-studio-qa-tester`. A fresh
+trusted CLI 0.162.0 fixture selected that custom role and the child's developer
+context contained its complete installed instructions. The parent did no file
+inspection or report writing; it waited and aggregated the child's findings.
+Model, effort and workspace-write sandbox matched the parent's settings.
+
+The child audited a deliberately unsupported zero-test PASS, identified a +1/+2
+source/requirement mismatch without claiming runtime reproduction, wrote nine
+unexecuted test cases and BUG-0008, and escalated subjective acceptance criteria.
+Independent hashes verified all 322 existing files unchanged and exactly two
+new Markdown reports in the allowed QA directory. This proves observed scope
+compliance, not an attempted-write sandbox denial. The temporary trust profile
+was removed; no Hooks were configured or trusted.
+
+Run `node toolkit/test/qa-role-host.mjs` with supported Node after building.
+Its exit 3 deliberately requires semantic/trace review; the underlying native
+run exited 0. See [the reviewed evidence](evidence/qa-role-2026-11-12.json) and
+[behavior spec](../studio-tests/roles/qa-tester-codex.md). Desktop, remaining QA
+behavior cases and the full multi-role collaboration gate are still open.
+
 Local candidate: Codex CLI 0.162.0 on macOS ARM64. The installed feature listing
 reported hooks and multi-agent support enabled. This is not a claimed minimum
 version or a proof of desktop equivalence.

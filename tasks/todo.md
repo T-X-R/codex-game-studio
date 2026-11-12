@@ -15,7 +15,7 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
-The initial alpha implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Three project Skill entry points exist, but their full S-row behavioral migration remains open. All role rows remain open.
+The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Five project Skill entry points and one QA role exist, but their full behavioral migration rows remain open.
 
 2026-11-12: configuration reads now cover named-system workflow overrides and
 legacy engine preferences (`8bf457f`). `config set` adds validated project/local
@@ -387,7 +387,7 @@ Each A-row is an individual task owned by `codex-integration`.
 - [ ] A025 Migrate `producer` to `game-studio-producer`. Evidence: pending.
 - [ ] A026 Migrate `prototyper` to `game-studio-prototyper`. Evidence: pending.
 - [ ] A027 Migrate `qa-lead` to `game-studio-qa-lead`. Evidence: pending.
-- [ ] A028 Migrate `qa-tester` to `game-studio-qa-tester`. Evidence: pending.
+- [ ] A028 Migrate `qa-tester` to `game-studio-qa-tester`. Partial: canonical TOML and packed install/detach pass; native CLI selected the real role, inherited model/permissions, rejected zero-test PASS, reported the static score defect and returned nine unexecuted test cases plus pending decisions. All 322 pre-existing files were unchanged; only two authorized Markdown reports were added. See [behavior spec](../studio-tests/roles/qa-tester-codex.md) and [evidence](../docs/evidence/qa-role-2026-11-12.json). Engine scaffolds, save/regression/S1/read-only/policy cases and final validator remain open.
 - [ ] A029 Migrate `release-manager` to `game-studio-release-manager`. Evidence: pending.
 - [ ] A030 Migrate `security-engineer` to `game-studio-security-engineer`. Evidence: pending.
 - [ ] A031 Migrate `sound-designer` to `game-studio-sound-designer`. Evidence: pending.
