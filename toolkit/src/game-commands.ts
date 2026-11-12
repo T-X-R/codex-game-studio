@@ -19,6 +19,7 @@ import { inspectGrowth } from './grow-check.js';
 import { planGrowthCopy } from './grow-copy.js';
 import { inspectGdd } from './gdd-structure.js';
 import { inspectAdrDependencies } from './adr-deps.js';
+import { inspectArtifacts } from './artifact-check.js';
 
 const project: Option = { type: 'string', description: 'Game workspace directory' };
 const dryRun: Option = { type: 'boolean', description: 'Describe effects without creating files or starting a server' };
@@ -142,12 +143,24 @@ export const gameCommands: Record<string, Command> = {
     options: { project, 'dry-run': dryRun, output: { type: 'string', description: 'New project-relative output directory (defaults to builds/<name>-<timestamp>)' } },
     run: async input => success('package', await packagePrototype(await root(input), input.args[0]!,
       input.values.output as string ?? `builds/${basename(input.args[0]!)}-${Date.now()}`, !!input.values['dry-run'])) },
-  check: { description: 'Inspect scripts, toolkit content, GDD structure or ADR dependencies without executing them', effect: 'read', maxArgs: 1,
-    options: { project, kind: { type: 'string', description: 'prototype (default; requires a path), content (no path), gdd (optional file), or adr-deps (optional directory)' } }, run: async input => {
+  check: { description: 'Inspect scripts, toolkit content, GDDs, ADR dependencies or workflow artifacts without executing them', effect: 'read', maxArgs: 1,
+    options: { project, kind: { type: 'string', description: 'prototype (default; requires a path), content (no path), gdd (optional file), adr-deps (optional directory), or artifacts (no positional path)' },
+      phase: { type: 'string', description: 'For artifacts only: restrict to one phase ID' },
+      path: { type: 'string', description: 'For artifacts only: select a tier path ID instead of the phase ladder (exclusive with --phase)' } }, run: async input => {
       const kind = input.values.kind ?? 'prototype';
-      if (!['prototype', 'content', 'gdd', 'adr-deps'].includes(String(kind)) ||
-          (kind === 'content' && input.args.length !== 0) || (kind === 'prototype' && input.args.length !== 1)) {
-        throw new StudioError('INVALID_ARGUMENT', 'Use check <path> [--kind prototype], check --kind content, check [file] --kind gdd, or check [directory] --kind adr-deps');
+      if (!['prototype', 'content', 'gdd', 'adr-deps', 'artifacts'].includes(String(kind)) ||
+          (['content', 'artifacts'].includes(String(kind)) && input.args.length !== 0) || (kind === 'prototype' && input.args.length !== 1) ||
+          (kind !== 'artifacts' && (input.values.phase !== undefined || input.values.path !== undefined))) {
+        throw new StudioError('INVALID_ARGUMENT', 'Use check <path> [--kind prototype], check --kind content, check [file] --kind gdd, check [directory] --kind adr-deps, or check --kind artifacts [--phase <id> | --path <id>]');
+      }
+      if (kind === 'artifacts') {
+        const data = await inspectArtifacts(await root(input), { phase: input.values.phase as string | undefined, path: input.values.path as string | undefined });
+        const result = success('check', data);
+        if (data.counts.unknown) {
+          process.exitCode = 3; result.status = 'not_assessed';
+          result.error = { code: 'ASSESSMENT_INCOMPLETE', message: 'Some artifact observations could not be collected; inspect UNKNOWN rows.' };
+        }
+        return result;
       }
       if (kind === 'gdd' || kind === 'adr-deps') {
         const data = kind === 'gdd' ? await inspectGdd(await root(input), input.args[0]) :

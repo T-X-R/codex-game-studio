@@ -74,6 +74,16 @@ try {
   }
   command(globalCli, 'restore', '--project', project, '--archive', archive, '--offline');
   const launcher = join(project, '.game-studio/run.cjs');
+  const artifacts = command(launcher, 'check', '--kind', 'artifacts', '--project', project).data;
+  assert.equal(artifacts.counts.groups, 7);
+  assert.equal(artifacts.counts.steps, 49);
+  assert.equal(artifacts.qualityAssessed, false);
+  assert.ok(artifacts.catalog.startsWith(join(project, '.game-studio/node_modules')));
+  const minimal = command(launcher, 'check', '--kind', 'artifacts', '--path', 'minimal', '--project', project).data;
+  assert.equal(minimal.counts.steps, 5);
+  assert.equal(minimal.groups[0].steps.find(step => step.id === 'engine-setup').status, 'PRESENT');
+  assert.equal(minimal.groups[0].steps.find(step => step.id === 'game-brief').status, 'ABSENT');
+  assert.equal(minimal.groups[0].steps.find(step => step.id === 'story-done').status, 'NO_CHECK');
   await mkdir(join(project, 'docs/architecture'), { recursive: true });
   for (const [id, target] of [['01', '02'], ['02', '01'], ['03', '01']]) {
     await writeFile(join(project, `docs/architecture/adr-${id}.md`), `## ADR Dependencies\n| **Depends On** | ADR-${target} |\n`);
