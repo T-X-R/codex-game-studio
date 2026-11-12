@@ -110,6 +110,21 @@ selection/instructions, test source, runner logs and original report files:
 This proves only the identified GDScript/GdUnit/editor/OS combination. It does not
 prove Unity/Unreal, C#/.NET, rendering/export or human play acceptance.
 
+Run `node toolkit/test/verify-godot-qa.mjs <completed-fixture-directory>` once to
+retain independent formula/orphan/restoration controls. GdUnit's fail-fast XML
+discovery count can exceed its executed count; retain both. The corrected CLI
+can be tested from a fresh actual package with `node
+toolkit/test/gdunit-command-smoke.mjs <completed-fixture-directory>` using the
+same editor/addon environment variables. This copies the generated tests into a
+new game and verifies successful execution plus a deliberately broken script.
+
+Recorded evidence: `docs/evidence/qa-godot-2026-11-12.json`. The native role
+generated and ran 12 passing assertions with zero orphans, preserved 836 existing
+files and correctly retained a failing overall execution audit for editor-data,
+user-directory and certificate diagnostics. Independent maintainer controls and
+the corrected packed CLI passed their stated scopes. Clean native environment
+acceptance remains open; these are distinct observations.
+
 Before closing A028, verify the role's actual engine-specific test scaffolds
 (Godot node cleanup, Unity assembly/root, Unreal filter/type/unique class) and
 the final content validator. The workflow scenarios above have recorded native

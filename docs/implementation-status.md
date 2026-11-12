@@ -95,8 +95,16 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   and severity boundaries. The corrected run produced 11 unexecuted cases and a
   pending-severity bug report, preserving all 321 existing files. See
   [workflow evidence](evidence/qa-role-workflows-2026-11-12.json), including the
-  initial failure. Engine scaffolds, enforced write-denial testing, T19
-  collaboration, the final validator and desktop acceptance remain open.
+  initial failure. A native Godot/GdUnit run now generates 12 executable damage
+  tests, all passing with zero orphans. Independent formula and cleanup mutations
+  trigger assertion failure and orphan detection, then restore to green. The role
+  correctly reports a failing overall execution audit for retained native editor,
+  user-directory and certificate errors. A separate CLI correction recognizes only
+  the exact expected port-zero debugger diagnostics in explicit GdUnit test
+  commands; fresh packed maintainer execution passes and a real parse error still
+  fails. See [Godot QA evidence](evidence/qa-godot-2026-11-12.json). Clean native
+  engine execution, Unity/Unreal scaffolds, enforced write-denial testing, T19
+  collaboration, final validation and desktop acceptance remain open.
 
 ## Verification performed
 
@@ -120,7 +128,7 @@ were not modified; verification used an isolated Node 24 distribution.
   even when the driver emits a final `done` row. Real Chrome red/green regression
   and the packed growth journey cover the correction discovered in Skill evaluation.
 
-Source additions after the published alpha: build/typecheck and 130 local tests
+Source additions after the published alpha: build/typecheck and 131 local tests
 pass with no skips. Packed-install tests exercise configuration summaries/writes,
 checkpoint save/reopen/detach preservation, engine setup dry-run/apply/no-op and
 preference preservation after detach, engine inspection and actual test
