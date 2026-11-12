@@ -1196,7 +1196,8 @@ agents:
     last_category_result: ""
     category: specialist
     target: .codex/agents/game-studio-accessibility-specialist.toml
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/roles/accessibility-specialist-codex.md
 
   - name: ux-designer
     spec: studio-tests/agents/specialists/ux-designer.md

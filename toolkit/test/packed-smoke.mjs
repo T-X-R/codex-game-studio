@@ -43,7 +43,7 @@ try {
   assert.equal(command(globalCli, 'version').status, 'ok');
   const project = join(temp, '我的 game');
   assert.equal(command(globalCli, 'init', project, '--engine', 'web').status, 'ok');
-  const roles = ['qa-tester', 'qa-lead', 'game-designer', 'lead-programmer', 'gameplay-programmer', 'systems-designer', 'ui-programmer', 'ux-designer'].map(role => `.codex/agents/game-studio-${role}.toml`);
+  const roles = ['qa-tester', 'qa-lead', 'game-designer', 'lead-programmer', 'gameplay-programmer', 'systems-designer', 'ui-programmer', 'ux-designer', 'accessibility-specialist'].map(role => `.codex/agents/game-studio-${role}.toml`);
   for (const role of roles) {
     assert.equal(await readFile(join(project, role), 'utf8'),
       await readFile(join(packageRoot, '..', role), 'utf8'));
