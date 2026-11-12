@@ -1,0 +1,113 @@
+{
+  "source": ".claude/scripts/story-status.sh",
+  "sourceSha256": "af606e2a4e35185321313faacfc466d6b93935df32c87e7cfceeda475b7a2130",
+  "node": "v24.22.2",
+  "platform": "darwin",
+  "locale": "C",
+  "results": [
+    {
+      "name": "empty",
+      "status": "PASS",
+      "files": 0,
+      "outputSha256": "47a330e270142e3f68bfbe5794ddbf261cc7586a11002909af69e1bfe98544c7",
+      "counts": {
+        "complete": 0,
+        "total": 0
+      }
+    },
+    {
+      "name": "complete",
+      "status": "PASS",
+      "files": 2,
+      "outputSha256": "474b9db8525bd6eb0e30400b52915d04ce579efe62082b223cb3ca8494eeca5d",
+      "counts": {
+        "complete": 2,
+        "total": 2
+      }
+    },
+    {
+      "name": "priority",
+      "status": "PASS",
+      "files": 8,
+      "outputSha256": "93d11b0046aad170aa4a0b3e2ee8d120561c12c7f7f95f1de1e54b18e39b5207",
+      "counts": {
+        "complete": 1,
+        "total": 8
+      }
+    },
+    {
+      "name": "headers",
+      "status": "PASS",
+      "files": 5,
+      "outputSha256": "4b8a6a566b42da70f161ad58c5ac8b5de841bb6bf655947c1a8bd4feaa147923",
+      "counts": {
+        "complete": 0,
+        "total": 5
+      }
+    },
+    {
+      "name": "boundaries",
+      "status": "PASS",
+      "files": 17,
+      "outputSha256": "4e0c61018e7ab931c4aedaa283d813a9540287b79dfdd81e5e7c85c3c9c90c04",
+      "counts": {
+        "complete": 5,
+        "total": 17
+      }
+    },
+    {
+      "name": "discovery",
+      "status": "PASS",
+      "files": 5,
+      "outputSha256": "4a7a5436e4de44bed194ddd77cad69e8fbee89f399df3a09583a069ab782226c",
+      "counts": {
+        "complete": 0,
+        "total": 1
+      }
+    }
+  ],
+  "date": "2026-11-12",
+  "status": "scoped-pass",
+  "scope": "Story-status observations only; not native next-step behavior or complete workflow acceptance.",
+  "runId": "game-studio-story-parity-G668Bx",
+  "initialFailure": {
+    "status": "FAIL",
+    "cause": "Unicode lowercasing maps Kelvin sign to ASCII k and dotted I to i, changing the retained C-locale word boundary.",
+    "fix": "Fold ASCII A-Z only; preserve the raw status text.",
+    "originalParityFailureLogSha256": "f2fb9f858d65b9af614c0ed8429c51f5a5fa0f8e7eadd7f25705782ed3abccce",
+    "regression": "status word boundaries use the retained C-locale ASCII case folding"
+  },
+  "validation": {
+    "focusedTests": 5,
+    "suite": {
+      "pass": 203,
+      "fail": 0,
+      "skip": 0
+    },
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "installedArchive": "PASS",
+    "initialSandboxSuite": "Localhost preview listen denied with EPERM; authorized rerun passed."
+  },
+  "files": {
+    "toolkit/src/story-status.ts": "0fbb2c3bcb2b2c35667834f47fb2aa1d0e83b8e3e4f6d8b439bcf109485d25f6",
+    "toolkit/test/story-status.test.mjs": "4e7cdb2c2bfd47cade8550302dc77a110e6806da019982332973cbceb294cd46",
+    "toolkit/test/story-status-parity.mjs": "0ead79f365cbf2dc40781e721641247102b381d5e2fc7fd20ae43beeaf0ccee0",
+    "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+    "docs/story-status.md": "dc4fb4f06d1813ed34becc387bab9e8cc932c607cea74673d21ea9efc0e8d957"
+  },
+  "logs": {
+    "game-studio-story-status-unicode-build.log": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28",
+    "game-studio-story-status-unicode-typecheck.log": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b",
+    "game-studio-story-status-unicode-lint.log": "92f04ae544ae4b798637c2fe98dd1c875feaae293cb222bfd021c3207f840c6b",
+    "game-studio-story-status-unicode-tests.log": "4ae5f5827c7e8cdca6bc6963f91bfc7f0cc4994237405b5c6e973164a6467bd0",
+    "game-studio-story-status-unicode-tests-unsandboxed.log": "48d5b6fc23c6815ea597fc602f8f22ee51e4d0b19e2905e6cd052beccab5bd20",
+    "game-studio-story-status-unicode-pack.log": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38",
+    "game-studio-story-status-parity-green.log": "ef6a03ff7484e2a35ef51cad6956e16c558da31943a06668546554848a7a90a9"
+  },
+  "limits": [
+    "Bash parity executed on macOS with LC_ALL=C; no claim of Bash availability on Windows or parity for every locale.",
+    "No native workflow, human play or quality verdict is inferred from these observations."
+  ]
+}

@@ -57,6 +57,16 @@ test('discovery matches the retained one-epic-level glob and distinguishes no st
   assert.equal(formatStoryStatus(result), 'COMPLETE     1 of 1\n');
 });
 
+test('status word boundaries use the retained C-locale ASCII case folding', async t => {
+  const { root, write } = await fixture(t);
+  await write('production/epics/a/story-1.md', 'Status: DONEK\n');
+  await write('production/epics/a/story-2.md', 'Status: Doneİ\n');
+  await write('production/epics/a/story-3.md', 'Status: READYK\n');
+  const result = await readStoryStatus(root);
+  assert.deepEqual(result.counts, { complete: 2, total: 3 });
+  assert.deepEqual(result.stories.map(({ status, group }) => ({ status, group })), [{ status: 'READYK', group: 'TODO' }]);
+});
+
 test('unsafe or non-directory story containers fail explicitly instead of reporting no work', async t => {
   const { root, write } = await fixture(t);
   await write('outside/story-1.md', 'Status: Ready\n');

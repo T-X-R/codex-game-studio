@@ -13,7 +13,8 @@ const byteOrder = (a: string, b: string) => Buffer.compare(Buffer.from(a), Buffe
 
 function group(status: string | null): StoryGroup {
   if (status === null) return 'NO_STATUS';
-  const value = status.toLowerCase();
+  // The retained parser uses ASCII words in LC_ALL=C; Unicode folding changes boundaries.
+  const value = status.replace(/[A-Z]/g, letter => letter.toLowerCase());
   if (/^(complete|done)([^a-z]|$)/.test(value)) return 'COMPLETE';
   if (/^in review([^a-z]|$)/.test(value)) return 'IN_REVIEW';
   if (/^in progress([^a-z]|$)/.test(value)) return 'IN_PROGRESS';

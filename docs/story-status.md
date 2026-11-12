@@ -18,7 +18,9 @@ not permission to implement, close a story, advance a stage or claim tests passe
 The retained source's glob is exactly `production/epics/*/story-*.md`, excluding
 hidden epic directories and deeper subdirectories. Status labels are case-sensitive
 `Status:` with the source's supported Markdown decoration; values are classified
-case-insensitively by leading words. `Done.` counts, while `Not Done` and
+case-insensitively by leading ASCII words, matching the retained parser with
+`LC_ALL=C`. Unicode characters remain word boundaries even when Unicode case
+folding would map them to ASCII letters. `Done.` counts, while `Not Done` and
 `Completed` do not. The first Status line wins, including an empty value. This
 preserves the source parser rather than interpreting arbitrary Markdown headings.
 
