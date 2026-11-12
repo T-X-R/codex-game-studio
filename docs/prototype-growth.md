@@ -1,7 +1,8 @@
 # Web prototype growth
 
-The full growth workflow remains under migration. The current implementation
-provides a read-only prerequisite check and an explicit JavaScript copy stage:
+The CLI provides a read-only prerequisite check and an explicit JavaScript copy
+stage. The installed prototype Skill now guides the subsequent semantic conversion;
+broader game, host and release acceptance remains open.
 
 ```sh
 game-studio prototype grow-check demo --project /path/to/game --json
@@ -92,14 +93,33 @@ The fixture was also run with a fresh empty npm cache. Offline restoration alone
 requires cached dependency metadata; an initial CI failure exposed that test setup
 assumption, and the fixture now performs the actual first installation explicitly.
 
-## Remaining workflow
+## Skill-guided conversion and remaining acceptance
 
-The approved workflow preserves the source prototype, records a same-seed
+The installed `game-studio-prototype` Skill routes a selected or resumed growth
+request to its `references/grow.md`. The workflow preserves the source prototype, records a same-seed
 reference, copies it into a pinned Web build scaffold, converts its code to
 TypeScript without changing behavior, tests actual game rules, and compares the
 built game's replay with the original. Engine configuration and a growth record
 are completed only with the corresponding evidence. Imported scripts/assets,
 tuning, alternative Web starters and human play remain part of that acceptance.
+
+An independent evaluation resumed the actual packed copy, produced strict typed
+modules and JSON configuration, and completed 5 unit tests, 3 Chrome integration
+tests and 1 smoke test. A real rule mutation failed its score assertion; restoring
+it passed. A separate verifier injected a type error to prove the build checks
+game code, then reran build/tests/smoke and confirmed unchanged prototype hashes,
+brief constraints, same-seed states and screenshot bytes. See
+[the evidence](evidence/web-growth-skill-2026-11-12.json) and
+[behavioral acceptance](../studio-tests/skills/utility/prototype-growth.md).
+This verifies one small scoring/pause fixture through an explicitly supplied Skill;
+it does not prove native discovery in either Codex host or the full S040 inventory.
+
+The evaluation exposed and corrected a capture verdict bug: a driver `done` row
+with missing hooks is no longer considered a completed replay. `capture` opens
+its temporary copy from disk; Chrome may block a folder build's external ES
+modules under `file://`. That path now returns exit 3 / `not_assessed` with its
+diagnostics. Use `dist-single` for this capture path and test `dist/` over HTTP.
+The original failed evidence was retained; a blank screenshot is not a passing run.
 
 The check and copy commands do not close T15, S040 or C2. They are available in the
 development source; the published `v0.1.0-alpha.0` archive predates these commands.

@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-12",
+  "evaluation": "Independent agent using the installed Skill in an isolated resumed-copy game; not native host discovery.",
+  "skillCommit": "984f024",
+  "fixturePreparer": "toolkit/test/prepare-growth-skill.mjs",
+  "independentVerifier": "toolkit/test/verify-grown-fixture.mjs",
+  "result": {
+    "status": "passed",
+    "node": "v24.22.2",
+    "browser": "HeadlessChrome/157.0.0.0",
+    "screenshotSha256": "2ad2676d3b9b04826335d9d4d2dcae5aa949081ca5fd1a2cc2bbf2a6534b048d",
+    "sourceMainSha256": "ed25568f235497b7fc5b6ec5f49de11f23bd0461cbbce4a1b0267ba3d6b021dc",
+    "checks": [
+      "prototype byte preservation",
+      "brief constraints preserved",
+      "strict compilation rejects injected type error",
+      "build",
+      "game unit and browser tests",
+      "smoke",
+      "unchanged same-seed states and screenshot",
+      "expected score four"
+    ],
+    "notAssessed": [
+      "human play",
+      "native Codex host discovery",
+      "other games and richer import layouts"
+    ]
+  },
+  "gameTests": {
+    "unit": 5,
+    "browserIntegration": 3,
+    "smoke": 1,
+    "skipped": 0
+  },
+  "ruleMutation": {
+    "mutation": "award one point instead of two in the rule called by main.ts",
+    "redExitCode": 1,
+    "greenExitCode": 0
+  },
+  "configuration": {
+    "seed": 1,
+    "volume": {
+      "value": 0.5,
+      "min": 0,
+      "max": 1,
+      "step": 0.05
+    }
+  },
+  "artifactsSha256": {
+    "growth-record": "43ccc8a379d0d31bbf54f0d3ee1c5d4543f6e1849cafbe5988f0859e29abb4ba",
+    "rule-red-log": "71f4ba239dfb880f05483c41bfe6ef0cd8a6a3defaf918057dbbeeb029f0fcde",
+    "rule-green-log": "74bf9a151be2f6671b9e666364f5f963fdd7c772c624da32cef1714d50168b14",
+    "agent-comparison": "7ebfd9e073bc9a76785178e95896bc85acf2b7b4d47e863a5436527650b75001",
+    "independent-commands": "9bc06eb29864a72f06bcf810130f8d27f0847400d0e45b1a7208841aec401bf2",
+    "original-hashes": "105c5ae4f4f893f8afb71f07466499c9d5f7a23823e4efbc1e28b7c3c26dfe7c",
+    "game-rule": "ff07485d8e1ebd7b648994d28cf0610565f724b336ec9177f407cadb8aa36227",
+    "unit-tests": "4d106c2f2ce35acd80a92a3f7ce4f4c48f5ff50e9d53328148c6d9587df8a29c",
+    "browser-tests": "62889b02f050e211860e62c2ae9ac4d20e3402e479402510e6f139c8bfa9dcfe"
+  },
+  "captureRegression": {
+    "observedOriginalExitCode": 0,
+    "observedOriginalReplayComplete": true,
+    "observedRows": [
+      "not_assessed",
+      "done: no hooks"
+    ],
+    "fixCommit": "f389fd5",
+    "packedRegressionCommit": "a047f73",
+    "fixedExitCode": 3,
+    "fixedReplayComplete": false,
+    "realBrowserRedLogSha256": "4fa9846d4eb225fb669e234e27885d4b88c22fcadd974b8710fa4494f86ffd44",
+    "realBrowserGreenLogSha256": "ae0a643d7cbb5157176079655d6bb21d035964f9b9ef10802506b72ec6921f85"
+  },
+  "remaining": [
+    "native CLI and desktop journeys",
+    "other games, richer imports and alternative renderers",
+    "development tuning panel resource behavior beyond the existing sentinel",
+    "human play and release acceptance"
+  ]
+}

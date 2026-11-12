@@ -56,6 +56,12 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 - Three project Skills: start, prototype and next-step. These are alpha entry
   points covering implemented operations; they do not close the full upstream
   behavioral migration rows.
+- The prototype Skill now includes selected/resumed Web growth guidance and
+  shared TypeScript hook/tuning resources. An independent scoring/pause fixture
+  completed typed modules, JSON/live configuration, 5 rule tests, 3 real Chrome
+  tests and 1 smoke check. Independent type-error injection, source preservation
+  and replay/screenshot equality passed. See [the evidence](evidence/web-growth-skill-2026-11-12.json).
+  This is not native host-discovery, broad game or human-play acceptance.
 
 ## Verification performed
 
@@ -75,6 +81,9 @@ were not modified; verification used an isolated Node 24 distribution.
   same seed/input produce equal states and identical screenshots; source content
   remains unchanged; an intentional browser error returns failure.
 - Official Skill-format validation for onboarding and the three project Skills.
+- Missing replay hooks and blocked file-protocol modules now return not assessed,
+  even when the driver emits a final `done` row. Real Chrome red/green regression
+  and the packed growth journey cover the correction discovered in Skill evaluation.
 
 Source additions after the published alpha: build/typecheck and 126 local tests
 pass with no skips. Packed-install tests exercise configuration summaries/writes,
