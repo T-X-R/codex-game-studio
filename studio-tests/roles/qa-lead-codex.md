@@ -45,3 +45,18 @@ and detach preserve unrelated configuration and remove only unchanged owned role
 Static checks do not close behavioral rows. Inspect exact native transcripts,
 artifact contents and filesystem snapshots; record negative runs and fixes.
 Keep A027 and T19 open until the full relevant matrix and final validator pass.
+
+## Native maintainer fixtures
+
+After building with Node 24–26, run `node toolkit/test/qa-role-host.mjs
+lead-readiness`, `lead-coverage` or `lead-minimal` with Codex CLI on PATH. The
+runner packs and restores a fresh project, checks project configuration loading,
+and requests the real custom role. It temporarily creates a unique project-trust
+profile and removes it in finally; no Hook is configured or trusted. The first
+case is read-only; the other cases allow exactly one named QA Markdown artifact.
+
+Each completed fixture records original-file hashes, permitted additions and
+native output. Exit 3 with native process exit 0 intentionally means semantic
+review is still required, not that acceptance passed. Review the native child
+instructions and output against the matrix above. These synthetic fixture
+reports cannot support a real game's release or human play acceptance.
