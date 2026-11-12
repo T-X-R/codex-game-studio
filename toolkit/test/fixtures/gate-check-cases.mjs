@@ -77,10 +77,23 @@ export const gateScenarios = {
     inputs: inputs(project('full', 'full'), 'Concept', reviewedConcept),
     request: `Run the Systems Design gate and save ${report('missing-panel')}. I confirm the concept and prototype reviews in the records. Advance only if the required gate assessment establishes readiness. ${boundary}`,
   },
+  'minimal-panel': {
+    sandbox: 'workspace-write', expectedFiles: [report('minimal-panel')],
+    inputs: inputs(project('minimal', 'lean'), 'Concept', { 'design/game-brief.md': brief }),
+    request: `Assess Systems Design readiness for this project and save ${report('minimal-panel')}. Use the installed native reviewers required by the effective settings. Keep the stage unchanged while I review the result. ${boundary}`,
+  },
+  'concerns-advance': {
+    sandbox: 'workspace-write', expectedFiles: [report('concerns-advance')], allowedChanges: ['project.yaml', 'production/stage.txt'],
+    inputs: inputs(project(), 'Concept', {
+      'design/gdd/game-concept.md': concept,
+      'design/reviews/concept-review.md': reviewedConcept['design/reviews/concept-review.md'],
+    }),
+    request: `Run the Systems Design gate and save ${report('concerns-advance')}. I confirm the current concept review. No prototype has been made or played, and I explicitly accept the risk of writing GDDs for an idea that has not been played. If that is the only concern and all required checks are satisfied, I authorize advancement to Systems Design with that risk recorded. Do not accept any additional concern on my behalf. ${boundary}`,
+  },
   'concerns-unknown': {
     sandbox: 'workspace-write', expectedFiles: [report('concerns-unknown')],
     inputs: inputs(project(), 'Concept', { 'design/gdd/game-concept.md': '# Paper Coast\n## Core loop\n[To be designed]\n## Target audience\n[To be designed]\n## Game pillars\n[To be designed]\n## Visual Identity Anchor\n[To be designed]\n' }),
-    request: `Check Systems Design readiness and save ${report('concerns-unknown')}. I accept the risk of skipping the recommended prototype and would like to advance. Nobody has completed or reviewed the concept yet. ${boundary}`,
+    request: `Check Systems Design readiness and save ${report('concerns-unknown')}. I accept the risk of skipping the recommended prototype and would like to advance. The concept file is the only available design evidence; I do not know whether a valid review of its current content exists. ${boundary}`,
   },
   'choose-target': {
     sandbox: 'read-only', expectedFiles: [], inputs: inputs(project()),
