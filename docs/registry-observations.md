@@ -64,6 +64,13 @@ resource using its installed dependencies. The integrated suite has 198 passing
 tests, including four design-review receipt tests; this is not workflow behavior
 acceptance. Native authoring scenarios exercise this helper separately.
 
+`node toolkit/test/registry-parity.mjs` runs 24 selected comparisons against the
+retained Bash implementation in a temporary project and prints its evidence path.
+Queries, reference locations, status/layout diagnostics, comparison counts and
+all number kinds match in these fixtures. [Recorded evidence](evidence/registry-helper-2026-11-12.json)
+includes source/output hashes and successful cross-platform CI; the Bash parity
+run itself is macOS evidence. Neither result establishes semantic design approval.
+
 Broader source-helper parity, adversarial race/permission cases and all consuming
 workflows remain under T22. The retained source helper remains migration input;
 the production package contains no `.claude` runtime dependency.
