@@ -1,19 +1,32 @@
 import { basename } from 'node:path';
-import { success } from './contract.js';
+import { success, StudioError } from './contract.js';
 import type { Command, Input, Option } from './commands.js';
 import { resolveProject } from './project.js';
-import { safePath } from './files.js';
+import { readText, safePath } from './files.js';
 import { scaffoldPrototype, importPrototype, packagePrototype } from './prototype.js';
 import { startPreview } from './preview.js';
 import { checkPrototype } from './check.js';
 import { capturePrototype } from './capture.js';
 import { runConfiguredTest } from './run-tests.js';
 import { readSettings } from './config.js';
+import { planEngineSetup } from './engine-setup.js';
+import { applyInstall, describePlan } from './install.js';
 
 const project: Option = { type: 'string', description: 'Game workspace directory' };
 const dryRun: Option = { type: 'boolean', description: 'Describe effects without creating files or starting a server' };
 async function root(input: Input) { return resolveProject(input.values.project as string | undefined); }
 export const gameCommands: Record<string, Command> = {
+  'engine setup': { description: 'Apply explicit engine choices and synchronize the technical preference document', effect: 'write',
+    options: { project, 'dry-run': dryRun, input: { type: 'string', description: 'Project-relative YAML or JSON containing the agreed engine configuration' } },
+    run: async input => {
+      const workspace = await root(input);
+      if (!input.values.input) throw new StudioError('INVALID_ARGUMENT', '--input is required');
+      const content = await readText(await safePath(workspace, input.values.input as string));
+      if (content === null) throw new StudioError('INVALID_ARGUMENT', 'Engine setup input file does not exist');
+      const { plan, warnings, layout, execution } = await planEngineSetup(workspace, content);
+      if (!input.values['dry-run']) await applyInstall(plan);
+      return { ...success('engine setup', { ...describePlan(plan), layout, execution, dryRun: !!input.values['dry-run'] }), warnings };
+    } },
   'engine inspect': { description: 'Read declared engine metadata and observed directories without launching an editor', effect: 'read',
     options: { project }, run: async input => {
       const workspace = await root(input);

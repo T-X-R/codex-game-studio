@@ -9,7 +9,7 @@ const frameworkDirectories = ['.claude', '.codex', '.agents', '.game-studio', '.
   'production', 'design', 'docs', 'studio-tests', 'prototypes'];
 export const excludedCodeDirectories = [...frameworkDirectories, 'tests', 'tools', 'node_modules', 'dist'];
 
-async function inspectRoot(root: string, value: Json, source: string, kind: 'code' | 'test' | 'asset', explicit: boolean): Promise<Json> {
+async function inspectRoot(root: string, value: Json, source: string, kind: 'code' | 'test' | 'asset', explicit: boolean, allowMissing = false): Promise<Json> {
   if (value === null) return { value: null, source: 'unset', state: 'unset' };
   const invalid = (reason: string): Json => ({ value, source, state: 'invalid', reason });
   if (typeof value !== 'string') return invalid('Expected a project-relative directory');
@@ -29,7 +29,7 @@ async function inspectRoot(root: string, value: Json, source: string, kind: 'cod
       if (!entries.includes(part)) {
         const actual = entries.find(entry => entry.toLowerCase() === part.toLowerCase());
         if (actual) return invalid(`Directory is spelled ${actual}, not ${part}`);
-        return { value: path, source, state: explicit ? 'invalid' : 'missing', reason: `Directory does not exist: ${path}` };
+        return { value: path, source, state: explicit && !allowMissing ? 'invalid' : 'missing', reason: `Directory does not exist: ${path}` };
       }
       directory = join(directory, part);
       if (!(await stat(directory)).isDirectory()) return invalid(`Not a directory: ${part}`);
@@ -41,7 +41,7 @@ async function inspectRoot(root: string, value: Json, source: string, kind: 'cod
   }
 }
 
-export async function resolveEngineRow(root: string, settings: Record<string, Setting>): Promise<Json> {
+export async function resolveEngineRow(root: string, settings: Record<string, Setting>, options: { allowMissing?: boolean } = {}): Promise<Json> {
   const table = await readFile(await resourcePath('studio/engines/engines.tsv'), 'utf8');
   const [header, ...rows] = table.trimEnd().split(/\r?\n/).map(line => line.split('\t'));
   if (header?.join(',') !== 'engine,code_root,test_root,asset_root,run,build,test,smoke' || rows.some(row => row.length !== 8)) {
@@ -63,8 +63,8 @@ export async function resolveEngineRow(root: string, settings: Record<string, Se
   return {
     engine: { value: engine.value, source: engine.source },
     code_root: ambiguous ? { value: null, source: 'detected', state: 'not_assessed', reason: 'Multiple engine code roots exist; configure engine.name or engine.code_root' }
-      : await inspectRoot(root, codeValue, codeSource, 'code', code.value !== null),
-    test_root: await inspectRoot(root, tests.value ?? defaults.test_root ?? null, tests.value !== null ? tests.source : engine.source, 'test', tests.value !== null),
+      : await inspectRoot(root, codeValue, codeSource, 'code', code.value !== null, options.allowMissing),
+    test_root: await inspectRoot(root, tests.value ?? defaults.test_root ?? null, tests.value !== null ? tests.source : engine.source, 'test', tests.value !== null, options.allowMissing),
     asset_root: await inspectRoot(root, defaults.asset_root ?? null, 'engine table', 'asset', false),
     commands: Object.fromEntries(['run', 'build', 'test', 'smoke'].map(key => [key, defaults[key] ?? null])),
     excluded_code_directories: excludedCodeDirectories,
