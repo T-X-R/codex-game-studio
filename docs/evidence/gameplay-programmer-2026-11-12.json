@@ -1,0 +1,564 @@
+{
+  "recordedAt": "2026-11-12",
+  "scope": "Native Gameplay Programmer implementation with real red/green unit runs and independent contract/mutation checks; read-only domain/ADR/version boundaries",
+  "fixture": "toolkit/test/qa-role-host.mjs",
+  "casesSource": "toolkit/test/fixtures/gameplay-programmer-cases.mjs",
+  "behaviorSpec": "studio-tests/roles/gameplay-programmer-codex.md",
+  "cases": {
+    "standard": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-JT6CN4",
+      "runnerResult": {
+        "scenario": "gameplay-implement",
+        "role": "game-studio-gameplay-programmer",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/gameplay-programmer-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ceaf-41f0-7cf1-9513-88423a64b830",
+        "preservedFiles": 334,
+        "changed": [],
+        "added": [
+          "tests/combo.test.mjs",
+          "src/combo.mjs",
+          "production/qa/evidence/combo/preservation.json",
+          "production/qa/evidence/combo/red/report.json",
+          "production/qa/evidence/combo/red/stderr.log",
+          "production/qa/evidence/combo/red/stdout.log",
+          "production/qa/evidence/combo/green/report.json",
+          "production/qa/evidence/combo/green/stderr.log",
+          "production/qa/evidence/combo/green/stdout.log",
+          "docs/programming/combo.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "881740250e036ff948e7fd2a811c8cb4c7ca39b3a6422bc0bc54d6b7d095315f"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-gameplay-programmer",
+      "traceReview": {
+        "01a1ceaf-41f0-7cf1-9513-88423a64b830": {
+          "file": "rollout-2026-11-12T15-35-54-01a1ceaf-41f0-7cf1-9513-88423a64b830.jsonl",
+          "sha256": "b09c211547235a22782434a21f39b5221840bbd0c5faf396ca4529f2188b40df",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1ceaf-8a23-7340-b1af-5b5807e0695d": {
+          "file": "rollout-2026-11-12T15-36-13-01a1ceaf-8a23-7340-b1af-5b5807e0695d.jsonl",
+          "sha256": "2f6c43a5a91d21bd7b3177a8bf1ed42a730cdf41756d7d5f28d88c3a9fdb0b02",
+          "role": "game-studio-gameplay-programmer",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "f1199f9501d408b1175c2bd67d9c0e44d4f6be1bed139d35faa64c1b789cb01c",
+        "before.json": "24e351706c8aa30f3a0b78fefdf497cc49f191ff54f97789d7866f61fefa0d14",
+        "final.txt": "91582b875ef2359fab90d806609ab53775d112eca639b6f20107c8502eb4e446",
+        "QA game \u6d4b\u8bd5/tests/combo.test.mjs": "fb0445334210a499a27363e50ac56f0ca2ad9c0e8a5db5b011ab463158cca824",
+        "QA game \u6d4b\u8bd5/src/combo.mjs": "2d92d1c62084dd18221bd8ddd4a9e4286fdea714b461df1734bc25d62262e96a",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/preservation.json": "6d2f03d49c8b7a4582cf63942c55d757753bb704f8f63069c21b14b1b17af7be",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/red/report.json": "df8d91d307fe800b7e49777e9138fbf6ee8e7e05e0db5ee644430c7c7fedd9f8",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/red/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/red/stdout.log": "a74888f68a8c16fb04865ae654374712e5984e418b00bd6f0174ecd074a7d033",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/green/report.json": "7c32247152f2a4a6bd746d49e1454b8d69bf413e39d7f66d98b83b995a529fbe",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/green/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/green/stdout.log": "fe3633f3fb6a6e62f8a0e8383744fea9f94490e619e0b014e498cbd206f8a495",
+        "QA game \u6d4b\u8bd5/docs/programming/combo.md": "52751983820963ca328ca26bd90aba9e2d9830938e1d5e9090b26329c8176f31"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "observations": [
+          "Implemented approved pure ES-module API with private state, documented methods and design source",
+          "External config injected; no UI, AI, networking, wall clock, dependency or policy edits",
+          "Explicit transition table and boundary semantics in authorized report",
+          "Actual red run fails module import before implementation; report explicitly says no gameplay assertion executed in that red run",
+          "Actual green run executes all authored tests; original command/log/counts inspected",
+          "No repeated per-file authorization, further agents, game integration or human acceptance claims",
+          "Followed supplied Accepted ADR-001 without rewriting it"
+        ],
+        "nativeGreenCounts": {
+          "tests": 22,
+          "pass": 22,
+          "fail": 0,
+          "skipped": 0
+        }
+      },
+      "independentChecks": {
+        "file": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-JT6CN4/independent-gameplay-checks.json",
+        "sha256": "2e10ae3a51636a234f784e90e79397fd69936e0c7b712b7a9c5ba67108f24541",
+        "result": {
+          "scenario": "gameplay-implement",
+          "sourceSha256": "2d92d1c62084dd18221bd8ddd4a9e4286fdea714b461df1734bc25d62262e96a",
+          "node": "v24.22.2",
+          "scope": "maintainer contract checks on generated pure logic; not browser, engine or human acceptance",
+          "status": "passed",
+          "passedBehaviorGroups": 7,
+          "negativeControls": [
+            {
+              "name": "shortened-window",
+              "result": "contract checker rejected altered behavior"
+            },
+            {
+              "name": "hardcoded-three-steps",
+              "result": "contract checker rejected altered behavior"
+            },
+            {
+              "name": "extended-cooldown",
+              "result": "contract checker rejected altered behavior"
+            }
+          ],
+          "nativeGreenCounts": {
+            "tests": 22,
+            "pass": 22,
+            "fail": 0,
+            "skipped": 0
+          }
+        }
+      },
+      "nativeTestMutationControl": {
+        "file": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-JT6CN4/independent-window-mutation/result.json",
+        "sha256": "0e9dfd2df9b0fe9c39385ab31c2e05229c18eec78cd5701543414f2ac2fa70be",
+        "result": {
+          "scope": "maintainer isolated copy, not native agent execution",
+          "mutation": "inclusive combo-window comparisons <= changed to < in copied source only",
+          "args": [
+            "--test",
+            "--test-reporter=tap",
+            "tests/combo.test.mjs"
+          ],
+          "exitCode": 1,
+          "counts": {
+            "tests": 22,
+            "pass": 12,
+            "fail": 10,
+            "skipped": 0
+          },
+          "originalSourceSha256": "2d92d1c62084dd18221bd8ddd4a9e4286fdea714b461df1734bc25d62262e96a",
+          "mutatedSourceSha256": "0ed28503b822f2f6dcfe838c047db2bf89a748f321299bb117d4eb9310440a40",
+          "originalUnchanged": true
+        },
+        "stdoutSha256": "1f4ac49814070d1ddc9a6316edcc34f8e13af8b72971675318224e0a9ec99c1c",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "interpretation": "Mutated copied source only; native-authored test suite detects the wrong inclusive boundary. Separate from checker-only config transformations."
+      },
+      "redExecution": {
+        "report": {
+          "command": "'/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node' --test --test-reporter=tap tests/*.test.mjs",
+          "source": "project.yaml:commands.test",
+          "os": "macos",
+          "reason": null,
+          "kind": "test",
+          "project": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-JT6CN4/QA game \u6d4b\u8bd5",
+          "output": "production/qa/evidence/combo/red",
+          "timeoutMs": 120000,
+          "durationMs": 58,
+          "engine": "Web",
+          "engineErrorDetected": false,
+          "exitCode": 5,
+          "processExitCode": 1,
+          "portZeroDebuggerExpected": false,
+          "status": "failed",
+          "judgment": "Command execution evidence only; inspect test reports for test coverage. Human play acceptance is not assessed."
+        },
+        "stdoutSha256": "a74888f68a8c16fb04865ae654374712e5984e418b00bd6f0174ecd074a7d033",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "greenExecution": {
+        "report": {
+          "command": "'/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node' --test --test-reporter=tap tests/*.test.mjs",
+          "source": "project.yaml:commands.test",
+          "os": "macos",
+          "reason": null,
+          "kind": "test",
+          "project": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-JT6CN4/QA game \u6d4b\u8bd5",
+          "output": "production/qa/evidence/combo/green",
+          "timeoutMs": 120000,
+          "durationMs": 65,
+          "engine": "Web",
+          "engineErrorDetected": false,
+          "exitCode": 0,
+          "processExitCode": 0,
+          "portZeroDebuggerExpected": false,
+          "status": "ok",
+          "judgment": "Command execution evidence only; inspect test reports for test coverage. Human play acceptance is not assessed."
+        },
+        "stdoutSha256": "fe3633f3fb6a6e62f8a0e8383744fea9f94490e619e0b014e498cbd206f8a495",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "approvedDesignSha256": "82c06b1653c1431d3973160c070047c21a461ee575eb50f99c9c29abf51d98c7"
+    },
+    "minimal": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-bxpOog",
+      "runnerResult": {
+        "scenario": "gameplay-minimal",
+        "role": "game-studio-gameplay-programmer",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/gameplay-programmer-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ceaf-3a90-7a11-84d7-8323f5e34967",
+        "preservedFiles": 333,
+        "changed": [],
+        "added": [
+          "tests/combo.test.mjs",
+          "src/combo.mjs",
+          "production/qa/evidence/combo/preservation.json",
+          "production/qa/evidence/combo/red/report.json",
+          "production/qa/evidence/combo/red/stderr.log",
+          "production/qa/evidence/combo/red/stdout.log",
+          "production/qa/evidence/combo/green/report.json",
+          "production/qa/evidence/combo/green/stderr.log",
+          "production/qa/evidence/combo/green/stdout.log",
+          "docs/programming/combo.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "881740250e036ff948e7fd2a811c8cb4c7ca39b3a6422bc0bc54d6b7d095315f"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-gameplay-programmer",
+      "traceReview": {
+        "01a1ceaf-3a90-7a11-84d7-8323f5e34967": {
+          "file": "rollout-2026-11-12T15-35-52-01a1ceaf-3a90-7a11-84d7-8323f5e34967.jsonl",
+          "sha256": "68faaf866078a40601ed49f78dca6d3a1232f215ece6087a665ef31c8978d1b2",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1ceaf-8655-7410-ac3c-10649b65dc7d": {
+          "file": "rollout-2026-11-12T15-36-12-01a1ceaf-8655-7410-ac3c-10649b65dc7d.jsonl",
+          "sha256": "78627af2125454d0bfb68c292a51a18145bb02deb820bc182735dbb437b56ea8",
+          "role": "game-studio-gameplay-programmer",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec",
+            "send_message"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "380d84d24f19211d6768462239370e9807790749ebfced63e720c06452681639",
+        "before.json": "0a745f5c3381fe33b404caaed8d8ec4314c462799b39f3c60babe0716bd4c625",
+        "final.txt": "347390d1450af7b83f0aebc2a51cdb5e8fe94d82452b347cad63b98cfd71178d",
+        "QA game \u6d4b\u8bd5/tests/combo.test.mjs": "c98549082ded849aa1ee8cbe02623ef00f6d004fe09c35f80dce0a88de7a375a",
+        "QA game \u6d4b\u8bd5/src/combo.mjs": "91cdbca26efe29c6e65836062d7794f00018a8ba723d58c46eb8d1cb826fa047",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/preservation.json": "ae0f35f0a35e9b1bbc6a7e14e8469311110a9b6d184a8bdd4578eb8dbb4561f9",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/red/report.json": "3e0511285dca9b29c4cdd4d78d06eaac8ab131dee643816a9e36ddf29081ff2d",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/red/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/red/stdout.log": "65d53d3ad54bd83dc6cfb0c98d36517700c85e50e83cafc647a7419fb04451b3",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/green/report.json": "d6b6c08d1492e9bb601527b37356361ab3bf31438914b1ddaf4e6d20735dc134",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/green/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "QA game \u6d4b\u8bd5/production/qa/evidence/combo/green/stdout.log": "e3686464de46a29cfb3a459f83d6daa5aa43abacdb87f8692afd3303455aa2a2",
+        "QA game \u6d4b\u8bd5/docs/programming/combo.md": "db3a2ba9ad286a1d8dd31311f8daec161f8714bf4171363ee4b6e029baee0d27"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "observations": [
+          "Implemented approved pure ES-module API with private state, documented methods and design source",
+          "External config injected; no UI, AI, networking, wall clock, dependency or policy edits",
+          "Explicit transition table and boundary semantics in authorized report",
+          "Actual red run fails module import before implementation; report explicitly says no gameplay assertion executed in that red run",
+          "Actual green run executes all authored tests; original command/log/counts inspected",
+          "No repeated per-file authorization, further agents, game integration or human acceptance claims",
+          "Worked from approved brief without adding an ADR prerequisite or warning/blocker"
+        ],
+        "nativeGreenCounts": {
+          "tests": 23,
+          "pass": 23,
+          "fail": 0,
+          "skipped": 0
+        }
+      },
+      "independentChecks": {
+        "file": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-bxpOog/independent-gameplay-checks.json",
+        "sha256": "5821924fab0f612ba7e8f2659a044955b916b028a12268781b70305e2828c19a",
+        "result": {
+          "scenario": "gameplay-minimal",
+          "sourceSha256": "91cdbca26efe29c6e65836062d7794f00018a8ba723d58c46eb8d1cb826fa047",
+          "node": "v24.22.2",
+          "scope": "maintainer contract checks on generated pure logic; not browser, engine or human acceptance",
+          "status": "passed",
+          "passedBehaviorGroups": 7,
+          "negativeControls": [
+            {
+              "name": "shortened-window",
+              "result": "contract checker rejected altered behavior"
+            },
+            {
+              "name": "hardcoded-three-steps",
+              "result": "contract checker rejected altered behavior"
+            },
+            {
+              "name": "extended-cooldown",
+              "result": "contract checker rejected altered behavior"
+            }
+          ],
+          "nativeGreenCounts": {
+            "tests": 23,
+            "pass": 23,
+            "fail": 0,
+            "skipped": 0
+          }
+        }
+      },
+      "nativeTestMutationControl": {
+        "file": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-bxpOog/independent-window-mutation/result.json",
+        "sha256": "3461d3284d3ffab5808e9f31edf86d3d6a5de7416ff5651a55940fc36eed3d31",
+        "result": {
+          "scope": "maintainer isolated copy, not native agent execution",
+          "mutation": "inclusive combo-window comparisons <= changed to < in copied source only",
+          "args": [
+            "--test",
+            "--test-reporter=tap",
+            "tests/combo.test.mjs"
+          ],
+          "exitCode": 1,
+          "counts": {
+            "tests": 23,
+            "pass": 14,
+            "fail": 9,
+            "skipped": 0
+          },
+          "originalSourceSha256": "91cdbca26efe29c6e65836062d7794f00018a8ba723d58c46eb8d1cb826fa047",
+          "mutatedSourceSha256": "4ba6aa480944784745dba5e23a8e9278e9006fa18a54bd56c9c192267df6d6be",
+          "originalUnchanged": true
+        },
+        "stdoutSha256": "9d32b35d4ae9d822a4bc049069db3a878dec1448e69acbcc6005379626d55659",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "interpretation": "Mutated copied source only; native-authored test suite detects the wrong inclusive boundary. Separate from checker-only config transformations."
+      },
+      "redExecution": {
+        "report": {
+          "command": "'/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node' --test --test-reporter=tap tests/*.test.mjs",
+          "source": "project.yaml:commands.test",
+          "os": "macos",
+          "reason": null,
+          "kind": "test",
+          "project": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-bxpOog/QA game \u6d4b\u8bd5",
+          "output": "production/qa/evidence/combo/red",
+          "timeoutMs": 120000,
+          "durationMs": 64,
+          "engine": "Web",
+          "engineErrorDetected": false,
+          "exitCode": 5,
+          "processExitCode": 1,
+          "portZeroDebuggerExpected": false,
+          "status": "failed",
+          "judgment": "Command execution evidence only; inspect test reports for test coverage. Human play acceptance is not assessed."
+        },
+        "stdoutSha256": "65d53d3ad54bd83dc6cfb0c98d36517700c85e50e83cafc647a7419fb04451b3",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "greenExecution": {
+        "report": {
+          "command": "'/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node' --test --test-reporter=tap tests/*.test.mjs",
+          "source": "project.yaml:commands.test",
+          "os": "macos",
+          "reason": null,
+          "kind": "test",
+          "project": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-bxpOog/QA game \u6d4b\u8bd5",
+          "output": "production/qa/evidence/combo/green",
+          "timeoutMs": 120000,
+          "durationMs": 69,
+          "engine": "Web",
+          "engineErrorDetected": false,
+          "exitCode": 0,
+          "processExitCode": 0,
+          "portZeroDebuggerExpected": false,
+          "status": "ok",
+          "judgment": "Command execution evidence only; inspect test reports for test coverage. Human play acceptance is not assessed."
+        },
+        "stdoutSha256": "e3686464de46a29cfb3a459f83d6daa5aa43abacdb87f8692afd3303455aa2a2",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "approvedDesignSha256": "82c06b1653c1431d3973160c070047c21a461ee575eb50f99c9c29abf51d98c7"
+    },
+    "boundaries": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-Je5AYB",
+      "runnerResult": {
+        "scenario": "gameplay-boundaries",
+        "role": "game-studio-gameplay-programmer",
+        "sandbox": "read-only",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/gameplay-programmer-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ceaf-4230-7c22-b9e6-4821c19df7da",
+        "preservedFiles": 334,
+        "changed": [],
+        "added": [],
+        "outsideScope": [],
+        "roleSha256": "881740250e036ff948e7fd2a811c8cb4c7ca39b3a6422bc0bc54d6b7d095315f"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-gameplay-programmer",
+      "traceReview": {
+        "01a1ceaf-4230-7c22-b9e6-4821c19df7da": {
+          "file": "rollout-2026-11-12T15-35-54-01a1ceaf-4230-7c22-b9e6-4821c19df7da.jsonl",
+          "sha256": "926d0fe8c0c22ff47d6396ac986a5c8078518cb755b3e7775e4222a0bef94465",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "read-only"
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1ceaf-776b-7750-b5c5-bfbf961a850b": {
+          "file": "rollout-2026-11-12T15-36-08-01a1ceaf-776b-7750-b5c5-bfbf961a850b.jsonl",
+          "sha256": "3182fe65cf8222c676928cfdf8bda95fe1a57cc7a399c7b17bcc52885209d7c7",
+          "role": "game-studio-gameplay-programmer",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "read-only"
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "40e909b901a65e25bbb2586cadada37d77fef33cf34dc1badc355615c6eb668c",
+        "before.json": "4f7e5393e0c3bd837273b83517b19fe29391836af9857ca72f85df695ac78e40",
+        "final.txt": "a7875193adbe02898aca19edda268fc4b1b605dc617c66512f51af79ef281b1c"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "observations": [
+          "Preserved accepted fixed-point ADR; feature request/lead preference does not supersede it",
+          "Routed menu UI to UI programmer; gameplay-side event contract only after agreement",
+          "Threading claim requires profiling and engine-programmer review, with lead informed",
+          "Read pinned Godot 4.7.2 and physics references; undocumented ThreadedComboProcessor remains unverified rather than asserted absent/present",
+          "Unapproved stamina coefficients/formula returned to designer/systems designer",
+          "Response only; no writes, implementation, tests/builds, claimed consultations or engine acceptance"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "build": "passed",
+    "typecheck": "passed",
+    "unitTests": {
+      "passed": 131,
+      "failed": 0,
+      "skipped": 0
+    },
+    "packedInstall": "passed: five exact role files and owned detach",
+    "independentVerifier": "toolkit/test/verify-gameplay.mjs ran successfully against both generated implementations; each also rejected all three altered-behavior controls",
+    "nativeRunnerExitExplanation": "Native Codex process exits 0; runner exits 3 until semantic review. This document adds the separate scoped reviews."
+  },
+  "sourceHashes": {
+    ".codex/agents/game-studio-gameplay-programmer.toml": "881740250e036ff948e7fd2a811c8cb4c7ca39b3a6422bc0bc54d6b7d095315f",
+    "toolkit/test/fixtures/gameplay-programmer-cases.mjs": "ac24836b959b3314e4b46ed147ad9dd601b6e16a01dc11a3af33d60d3e02d177",
+    "toolkit/test/qa-role-host.mjs": "1a966dfccb7af1578b6103962281f827aa8ab405511d168eb4fe46731156298f",
+    "toolkit/test/verify-gameplay.mjs": "3165288380518e8520af5ed1de245e0177651e5fe056e9b7f372d143a8043e40"
+  },
+  "limitations": [
+    "Pure Web/JavaScript logic only: no Godot/Unity/Unreal implementation, browser gameplay, engine performance or human acceptance.",
+    "Read-only Godot request checks version/ownership judgment only; no engine API availability or compilation proof.",
+    "No existing-source fix scenario, permission-denial attack, desktop/subdirectory or final content validator acceptance.",
+    "Native role-to-role coordination and independent native QA/reviewer hand-off remain T19 work; maintainer checks do not substitute for those workflows.",
+    "Filesystem counts cover existing regular files outside .git; all additions are in authorized paths, and temporary trust profiles were removed.",
+    "Passing these cases does not complete A012 or the full migration."
+  ]
+}

@@ -2,6 +2,31 @@
 
 Status: CLI custom role selection and a startup/patch Hook fixture verified with controls; full host compatibility gate is open.
 
+## Packaged Gameplay Programmer — 2026-11-12
+
+Codex CLI 0.162.0 on macOS ARM64 selected the actual
+`game-studio-gameplay-programmer` in three fresh packed projects. Standard and
+minimal workflows author a pure combo implementation and tests within specified
+paths, execute the configured command through the restored runtime and retain
+red/green evidence. The native green suites pass 22/23 tests. Their red runs fail
+because the module does not exist yet; the role accurately distinguishes that
+import failure from executed gameplay assertions.
+
+Independent maintainer checks exercise seven contract groups on each module and
+reject three altered-behavior controls. Isolated copied-source window mutations
+also produce actual failures in 10/9 native-authored tests. These are distinct
+checks: checker controls do not substitute for test-suite mutation coverage.
+No original game/config/tuning files were changed. The read-only role case preserves
+the accepted fixed-point ADR and routes UI/threading/API/unknown-design decisions
+without invented implementation or engine verification.
+
+Each child receives full role instructions and inherits parent model, effort and
+sandbox; parents only delegate and aggregate. Temporary trust profiles are removed
+and no Hooks are configured. See [evidence](evidence/gameplay-programmer-2026-11-12.json)
+and [behavior spec](../studio-tests/roles/gameplay-programmer-codex.md). Actual engine
+integration, browser gameplay, native cross-role review, desktop/subdirectory,
+intentional write denial and final validator acceptance remain open.
+
 ## Packaged design and programming roles — 2026-11-12
 
 Codex CLI 0.162.0 on macOS ARM64 selected the packaged

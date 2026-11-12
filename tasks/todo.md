@@ -15,7 +15,7 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
-The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Five project Skill entry points and four roles (Game Designer, Lead Programmer and two QA roles) exist, but their full behavioral migration rows remain open.
+The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Five project Skill entry points and five roles (Game Designer, Lead Programmer, Gameplay Programmer and two QA roles) exist, but their full behavioral migration rows remain open.
 
 2026-11-12: configuration reads now cover named-system workflow overrides and
 legacy engine preferences (`8bf457f`). `config set` adds validated project/local
@@ -372,7 +372,7 @@ Each A-row is an individual task owned by `codex-integration`.
 - [ ] A009 Migrate `economy-designer` to `game-studio-economy-designer`. Evidence: pending.
 - [ ] A010 Migrate `engine-programmer` to `game-studio-engine-programmer`. Evidence: pending.
 - [ ] A011 Migrate `game-designer` to `game-studio-game-designer`. Partial: canonical role/methods resource and packed install/detach pass. Four native CLI cases exercise full/standard/minimal authoring and read-only specialist review. The role preserves approved rules, writes only the requested tier's document, flags the capacity/reset conflict without silently changing it, returns pillar tensions and formula/lore ownership, and claims no play acceptance. All 325 existing regular files in each initial fixture and 329 in the later minimal fixture remain unchanged; no checkpoint side writes. See [behavior spec](../studio-tests/roles/game-designer-codex.md) and [evidence](../docs/evidence/game-designer-2026-11-12.json). Existing-brief edits, open initial choices, economy/progression depth, real specialist collaboration, desktop and final validator remain open.
-- [ ] A012 Migrate `gameplay-programmer` to `game-studio-gameplay-programmer`. Evidence: pending.
+- [ ] A012 Migrate `gameplay-programmer` to `game-studio-gameplay-programmer`. Partial: canonical role and packed install/detach pass. Native standard/minimal fixtures implement the approved pure combo module with external tuning, events, transition tables and real retained red/green runs; 22/23 authored tests pass respectively. Each implementation passes seven independent contract groups and three checker controls. In isolated copies, changing inclusive window comparisons to exclusive makes the original authored suites fail 10/9 tests, preserving original source. The read-only boundary case respects the Accepted ADR, UI/threading ownership, unverified engine API and missing design coefficients. See [behavior spec](../studio-tests/roles/gameplay-programmer-codex.md) and [evidence](../docs/evidence/gameplay-programmer-2026-11-12.json). Existing-source fixes, native cross-role review, real engine/browser integration, desktop and final validator remain open.
 - [ ] A013 Migrate `godot-csharp-specialist` to `game-studio-godot-csharp-specialist`. Evidence: pending.
 - [ ] A014 Migrate `godot-gdextension-specialist` to `game-studio-godot-gdextension-specialist`. Evidence: pending.
 - [ ] A015 Migrate `godot-gdscript-specialist` to `game-studio-godot-gdscript-specialist`. Evidence: pending.

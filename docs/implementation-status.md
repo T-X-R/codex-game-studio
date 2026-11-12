@@ -142,6 +142,21 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   reporter mismatch was fixed before the successful native review. See
   [programmer evidence](evidence/lead-programmer-2026-11-12.json). No benchmark,
   engine API acceptance, real feature hand-off or full T19 completion is claimed.
+- Gameplay Programmer now has a canonical role that implements approved mechanics
+  and tests within the confirmed scope. Native standard and minimal Web fixtures
+  produce pure combo modules, externally injected tuning, documented transitions
+  and retained red/green logs. The red failures are missing-module imports before
+  implementation, not failed gameplay assertions; green runs execute 22 and 23
+  passing tests. Both modules pass seven independent contract groups, including
+  timing boundaries, resets, variants, instances and query-frequency independence.
+  The independent checker rejects three altered-behavior controls. Separately,
+  changing `<=` to `<` in isolated source copies causes the role-authored suites
+  to fail 10 and 9 cases, proving meaningful boundary coverage. Original modules
+  and all prior fixture files remain unchanged. A read-only native case retains
+  Accepted ADR governance, appropriate domain hand-offs, unverified API status and
+  unresolved coefficients. See [gameplay evidence](evidence/gameplay-programmer-2026-11-12.json).
+  Pure logic tests do not establish engine/browser integration, human acceptance,
+  an existing-source fix or native role-to-role collaboration; A012/T19 remain open.
 
 ## Verification performed
 
@@ -260,7 +275,7 @@ The full acceptance contract remains in `tasks/todo.md`. In particular:
 The implementation order was adjusted to exercise deterministic installation and
 Web operations while host compatibility remains open. This does not waive C0–C5
 or make the final migration complete. The published alpha does not install roles
-or hooks. Development packages now install four roles; their verified CLI scenarios
+or hooks. Development packages now install five roles; their verified CLI scenarios
 do not establish desktop support. No production Hooks are installed.
 
 Detach retains game configuration, runtime archives/dependencies/lock and backups.
