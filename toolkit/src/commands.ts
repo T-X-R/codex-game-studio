@@ -4,6 +4,8 @@ import { resolveProject } from './project.js';
 import { readSettings } from './config.js';
 import { setupCommands } from './setup-commands.js';
 import { gameCommands } from './game-commands.js';
+import { planConfigSet } from './config-write.js';
+import { applyInstall, describePlan } from './install.js';
 
 export interface Option { type: 'string' | 'boolean'; description: string }
 export interface Input { args: string[]; values: Record<string, string | boolean | undefined> }
@@ -22,6 +24,18 @@ export const commonOptions: Record<string, Option> = {
 export const commands: Record<string, Command> = {
   ...setupCommands,
   ...gameCommands,
+  'config set': {
+    description: 'Write one project setting and synchronize the stage mirror when applicable', effect: 'write', minArgs: 2, maxArgs: 2,
+    options: { project: { type: 'string', description: 'Game workspace directory' },
+      local: { type: 'boolean', description: 'Write an allowed personal override to project.local.yaml' },
+      'dry-run': { type: 'boolean', description: 'Describe changes without writing files' } },
+    run: async ({ args, values }) => {
+      const root = await resolveProject(values.project as string | undefined);
+      const { plan, warnings } = await planConfigSet(root, args[0]!, args[1]!, !!values.local);
+      if (!values['dry-run']) await applyInstall(plan);
+      return { ...success('config set', { ...describePlan(plan), dryRun: !!values['dry-run'] }), warnings };
+    },
+  },
   'config get': {
     description: 'Read effective project settings with provenance', effect: 'read', maxArgs: 1,
     options: { project: { type: 'string', description: 'Game workspace directory' },

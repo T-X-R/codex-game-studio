@@ -14,7 +14,7 @@ export const localKeys = new Set([
   'testing.strict.config', 'performance.enforce', 'features.session_state', 'features.token_budget_warn_at',
   'features.read_guard', 'features.read_guard_kb', 'updates.check',
 ]);
-const enums: Record<string, string[]> = {
+export const enums: Record<string, string[]> = {
   'modes.review_mode': ['full', 'lean', 'solo'], 'modes.rigor': ['minimal', 'standard', 'full'],
   'modes.workflow': ['minimal', 'standard', 'full'], 'modes.automation': ['collaborative', 'guided', 'autonomous'],
   'modes.story_granularity': ['coarse', 'balanced', 'fine'], 'docs.density': ['terse', 'balanced', 'thorough'],
@@ -52,13 +52,17 @@ function validateJson(value: unknown, depth = 0): asserts value is Json {
 
 export async function readConfig(path: string): Promise<ObjectValue> {
   if (!(await exists(path))) return {};
+  return parseConfig(await readFile(path, 'utf8'), path).toJS({ maxAliasCount: 50 }) ?? {};
+}
+
+export function parseConfig(content: string, path: string) {
   try {
-    const document = parseDocument(await readFile(path, 'utf8'), { uniqueKeys: true });
+    const document = parseDocument(content, { uniqueKeys: true });
     if (document.errors.length) throw document.errors[0];
     const value: unknown = document.toJS({ maxAliasCount: 50 }) ?? {};
     validateJson(value);
     if (typeof value !== 'object' || value === null || Array.isArray(value)) throw new Error('Expected a mapping at the document root');
-    return value;
+    return document;
   } catch (error) {
     throw new StudioError('INVALID_CONFIG', `${path}: ${error instanceof Error ? error.message : 'invalid YAML'}`);
   }

@@ -29,6 +29,10 @@ try {
   command(globalCli, 'restore', '--project', project, '--archive', archive, '--offline');
   const launcher = join(project, '.game-studio/run.cjs');
   assert.equal(command(launcher, 'status', '--project', project).data.settings['engine.name'].value, 'Web');
+  command(globalCli, 'config', 'set', 'project.stage', 'Concept', '--project', project);
+  assert.equal(await readFile(join(project, 'production/stage.txt'), 'utf8'), 'Concept\n');
+  command(launcher, 'config', 'set', 'modes.automation', 'autonomous', '--local', '--project', project);
+  assert.equal(command(globalCli, 'config', 'get', 'modes.automation', '--project', project).data.settings['modes.automation'].source, 'project.local.yaml');
   command(globalCli, 'prototype', 'scaffold', 'smoke', '--project', project);
   assert.equal(command(globalCli, 'check', 'prototypes/smoke', '--project', project).status, 'ok');
   command(globalCli, 'package', 'prototypes/smoke', '--output', 'builds/smoke', '--project', project);
