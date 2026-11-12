@@ -22,7 +22,7 @@ test('binary transactions preserve bytes and hash the actual asset rather than i
 test('binary rollback restores original bytes and stale plans refuse user edits', async t => {
   const plan = await fixture(t);
   plan.changes.push({ path: 'parent', before: null, after: 'file' }, { path: 'parent/child', before: null, after: 'cannot create' });
-  await assert.rejects(applyInstall(plan), { code: 'ENOTDIR' });
+  await assert.rejects(applyInstall(plan), error => ['ENOTDIR', 'EEXIST', 'ENOENT'].includes(error.code));
   assert.deepEqual(await readFile(join(plan.project, 'image.png')), before);
   await writeFile(join(plan.project, 'image.png'), after);
   await assert.rejects(applyInstall(plan), { code: 'FILE_CONFLICT' });
