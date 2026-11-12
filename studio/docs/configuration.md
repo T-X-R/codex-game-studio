@@ -36,6 +36,19 @@ Explicit summary queries preserve the upstream workflow calculations:
 | `config get engine_values` | Name, version and language, each with its own source; missing fields remain unset. |
 | `config get perf_budgets` | The four committed performance budgets with provenance; local budget overrides are ignored. |
 | `config get engine_row` | Engine-specific roots and their observed filesystem state, default commands and excluded framework directories. Missing or ambiguous roots are explicit. |
+| `config get input_methods` | Deduplicated input methods from committed target platforms, Full/Partial support and primary input; aliases such as Controller and Touchscreen normalize to gamepad and touch. |
+| `config get specialists` | Engine-derived primary specialist and configured code/shader/UI/additional role identities, each with provenance. These are selections, not proof of installed or invoked agents. |
+
+An absent platform block can use the legacy Input Methods and Primary Input
+lines. An explicit platform block, including an empty or null block, suppresses
+that fallback. Missing input information returns `methods: null`; an explicit
+platform with no supported inputs returns an empty list. Local platform and
+specialist overrides are ignored. Specialist identities preserve the configured
+workflow names; Codex role binding and actual delegation are separate checks.
+Godot, Unity and Unreal select their engine specialist; Web selects
+`lead-programmer`. Without a recognized engine, the primary selection comes
+from configuration or legacy preferences. Explicit null specialist fields stay
+unset and do not resurrect a legacy specialist.
 
 Summary results describe configured policy, not a completed review or test.
 An explicit workflow review option can still require a review. Stored strictness

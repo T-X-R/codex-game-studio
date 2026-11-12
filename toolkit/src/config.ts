@@ -126,7 +126,7 @@ export async function readSettings(root: string, requested?: string[], options: 
     settings[key] = selected ? { value: selected[0]!, source: selected[1] } : { value: null, source: 'unset' };
     if (selected?.[1] === '.claude/docs/technical-preferences.md') warnings.push('Using legacy technical preferences; migrate the project-owned record to docs/technical-preferences.md');
   }
-  for (const key of wanted) if (Object.hasOwn(derivedDependencies, key)) settings[key] = await deriveSetting(key, settings, root);
+  for (const key of wanted) if (Object.hasOwn(derivedDependencies, key)) settings[key] = await deriveSetting(key, settings, root, { project: rawProject, preferences });
   for (const key of Object.keys(settings)) if (!wanted.has(key)) delete settings[key];
   return { settings, warnings: [...new Set(warnings)] };
 }

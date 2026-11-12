@@ -28,7 +28,7 @@ export async function readLegacyPreferences(root: string) {
     }
     const additional = labels.get('Additional Specialists');
     if (additional && additional.toLowerCase() !== 'none') values['specialists.additional'] = additional.split(',').map(value => value.trim());
-    return { values, source };
+    return { values, source, input: { methods: labels.get('Input Methods') ?? null, primary: labels.get('Primary Input') ?? null } };
   }
-  return { values: {} as Record<string, Json>, source: 'unset' };
+  return { values: {} as Record<string, Json>, source: 'unset', input: { methods: null, primary: null } };
 }

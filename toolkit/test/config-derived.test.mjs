@@ -65,3 +65,62 @@ test('performance summaries retain unset budgets and reject locally shadowing co
   assert.deepEqual(settings.perf_budgets.value.memory_ceiling_mb, { value: null, source: 'unset' });
   assert.ok(warnings.some(w => /not locally overridable/.test(w)));
 });
+
+test('input methods combine platform support and primary aliases exactly once', async t => {
+  const root = await fixture(t, 'platform:\n  targets: [PC, Web]\n  gamepad_support: Partial\n  touch_support: FULL\n  primary_input: Controller\n',
+    'platform:\n  primary_input: Voice\n');
+  let result = (await readSettings(root, ['input_methods'])).settings.input_methods;
+  assert.deepEqual(result.value, { methods: ['keyboard/mouse', 'gamepad', 'touch'], primary: 'Controller' });
+  assert.equal(result.source, 'project.yaml:platform');
+  for (const [input, expected] of [['Keyboard & Mouse', 'keyboard/mouse'], ['Joypad', 'gamepad'], ['Touchscreen', 'touch'], ['Motion', 'motion']]) {
+    await writeFile(join(root, 'project.yaml'), `platform:\n  targets: []\n  primary_input: ${input}\n`);
+    result = (await readSettings(root, ['input_methods'])).settings.input_methods;
+    assert.deepEqual(result.value.methods, [expected]);
+  }
+});
+
+test('legacy input methods only apply when the platform block is absent', async t => {
+  const root = await fixture(t);
+  let result = (await readSettings(root, ['input_methods'])).settings.input_methods;
+  assert.deepEqual(result, { value: { methods: null, primary: null }, source: 'unset' });
+  await mkdir(join(root, 'docs'));
+  await writeFile(join(root, 'docs/technical-preferences.md'), '- **Input Methods**: Keyboard + Mouse, Gamepad, Controller\n- **Primary Input**: Gamepad\n');
+  result = (await readSettings(root, ['input_methods'])).settings.input_methods;
+  assert.deepEqual(result, { value: { methods: ['keyboard/mouse', 'gamepad'], primary: 'Gamepad' }, source: 'docs/technical-preferences.md' });
+  for (const block of ['{}', 'null', '{targets: [], gamepad_support: None}']) {
+    await writeFile(join(root, 'project.yaml'), `platform: ${block}\n`);
+    assert.deepEqual((await readSettings(root, ['input_methods'])).settings.input_methods,
+      { value: { methods: [], primary: null }, source: 'project.yaml:platform' });
+  }
+});
+
+test('specialist summaries use engine primary and preserve explicit null and shared selections', async t => {
+  const root = await fixture(t, 'engine:\n  name: Godot\nspecialists:\n  code: godot-csharp-specialist\n  shader: null\n  additional: [technical-artist]\n',
+    'specialists:\n  code: ignored-specialist\n');
+  await mkdir(join(root, 'docs'));
+  await writeFile(join(root, 'docs/technical-preferences.md'), '- **Primary**: lead-programmer\n- **Shader Specialist**: godot-shader-specialist\n');
+  const result = (await readSettings(root, ['specialists'])).settings.specialists.value;
+  assert.deepEqual(result.primary, { value: 'godot-specialist', source: 'derived:engine.name' });
+  assert.deepEqual(result.code, { value: 'godot-csharp-specialist', source: 'project.yaml' });
+  assert.equal(result.shader.value, null);
+  assert.deepEqual(result.additional.value, ['technical-artist']);
+  for (const [engine, primary] of [['Web', 'lead-programmer'], ['Unity', 'unity-specialist'], ['Unreal', 'unreal-specialist']]) {
+    await writeFile(join(root, 'project.yaml'), `engine:\n  name: ${engine}\n`);
+    assert.equal((await readSettings(root, ['specialists'])).settings.specialists.value.primary.value, primary);
+  }
+  await writeFile(join(root, 'project.yaml'), '{}');
+  const fallback = (await readSettings(root, ['specialists'])).settings.specialists.value;
+  assert.deepEqual(fallback.primary, { value: 'lead-programmer', source: 'docs/technical-preferences.md' });
+  assert.equal(fallback.shader.value, 'godot-shader-specialist');
+});
+
+test('malformed input support and specialist lists cannot masquerade as usable summaries', async t => {
+  const root = await fixture(t);
+  for (const [config, key] of [['platform: {targets: PC}', 'input_methods'],
+    ['platform: {primary_input: [Keyboard]}', 'input_methods'],
+    ['specialists: {additional: [null, {name: bad}]}', 'specialists'],
+    ['specialists: {code: 12}', 'specialists']]) {
+    await writeFile(join(root, 'project.yaml'), config);
+    await assert.rejects(readSettings(root, [key]), { code: 'INVALID_CONFIG' });
+  }
+});
