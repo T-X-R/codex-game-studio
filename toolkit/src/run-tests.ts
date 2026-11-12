@@ -59,8 +59,9 @@ export async function runConfiguredTest(project: string, kind: string, output: s
   let reason = selected.reason;
   if (selected.command !== null) {
     const executable = process.platform === 'win32' ? process.env.ComSpec ?? 'cmd.exe' : '/bin/sh';
-    const args = process.platform === 'win32' ? ['/d', '/s', '/c', selected.command] : ['-c', selected.command];
-    try { execution = await runProcess(executable, args, { cwd: project, timeoutMs }); }
+    // Match Node's cmd.exe shell serialization; C-runtime escaping breaks quoted paths.
+    const args = process.platform === 'win32' ? ['/d', '/s', '/c', `"${selected.command}"`] : ['-c', selected.command];
+    try { execution = await runProcess(executable, args, { cwd: project, timeoutMs, windowsVerbatimArguments: process.platform === 'win32' }); }
     catch (error) {
       if (!(error instanceof StudioError) || error.code !== 'DEPENDENCY_MISSING') throw error;
       reason = error.message;

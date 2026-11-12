@@ -89,7 +89,7 @@ test('Web fallback runs the actual npm script and unavailable executables remain
   assert.match(await readFile(join(root, 'production/evidence/npm/stdout.log'), 'utf8'), /test output/);
   await writeFile(join(root, 'project.yaml'), 'commands:\n  test: game-studio-executable-that-does-not-exist\n');
   const missing = await runConfiguredTest(root, 'test', 'production/evidence/missing-exe');
-  assert.equal(missing.exitCode, 3);
+  assert.equal(missing.exitCode, 3, JSON.stringify(missing) + '\n' + await readFile(join(root, 'production/evidence/missing-exe/stderr.log'), 'utf8'));
   assert.notEqual(missing.processExitCode, 0);
 });
 

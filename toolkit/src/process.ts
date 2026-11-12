@@ -1,11 +1,12 @@
 import { spawn, execFile } from 'node:child_process';
 import { StudioError } from './contract.js';
 
-export async function runProcess(executable: string, args: string[], options: { cwd?: string; timeoutMs?: number } = {}) {
+export async function runProcess(executable: string, args: string[], options: { cwd?: string; timeoutMs?: number; windowsVerbatimArguments?: boolean } = {}) {
   const timeoutMs = options.timeoutMs ?? 60_000;
   if (!Number.isFinite(timeoutMs) || timeoutMs <= 0) throw new StudioError('INVALID_ARGUMENT', 'Process timeout must be positive');
   return new Promise<{ exitCode: number; stdout: string; stderr: string }>((resolve, reject) => {
-    const child = spawn(executable, args, { cwd: options.cwd, shell: false, detached: process.platform !== 'win32', stdio: ['ignore', 'pipe', 'pipe'] });
+    const child = spawn(executable, args, { cwd: options.cwd, shell: false, windowsVerbatimArguments: options.windowsVerbatimArguments,
+      detached: process.platform !== 'win32', stdio: ['ignore', 'pipe', 'pipe'] });
     let stdout = ''; let stderr = ''; let stopped: number | undefined;
     function stop(code: number) {
       if (stopped !== undefined) return;
