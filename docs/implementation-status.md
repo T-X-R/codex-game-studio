@@ -10,14 +10,20 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   source-derived acceptance matrices: design-system, design-review and
   architecture-decision. Cross-review corrected a review-receipt bug that could
   combine new review metadata with older file hashes; four deterministic tests
-  cover the correction. Native scenarios are underway and have exposed scope
-  estimation, ADR Layer formatting and cross-reference ownership-label defects.
-  Corrections are undergoing fresh same-input runs; these rows remain partial. The catalog
+  cover the correction. [Integrated native evidence](evidence/authoring-integration-2026-11-12.json)
+  now records 37 scoped PASS results across 41 runs, preserving four initial
+  failures and fresh same-input corrections for scope estimation, ADR Layer
+  formatting and cross-reference ownership labels. Design review also proves
+  actual review-to-reuse behavior in a fresh native session. Root integration
+  checks independently reconcile raw hashes, actual file bytes, effects and
+  native-role inheritance; these rows remain partial. The catalog
   now contains eleven partial Skills, nine partial roles and no verified rows.
   Shared [registry observations](registry-observations.md) provide real parsed
   reads, validation, comparison and ID numbering. Build/content checks, 198 local
-  tests and installed-archive verification pass; native workflow acceptance is
-  recorded separately and remains incomplete.
+  tests and final installed-archive verification pass. All five jobs for
+  `5900327abffcb4ee50c52a47f178f8c6c78d25a9` passed in
+  [integration CI](https://github.com/T-X-R/codex-game-studio/actions/runs/43222750127).
+  Full source/native-host matrices remain incomplete.
 - Systems mapping now has a Codex Skill, two focused references and the complete
   fixed-column index template. [Eight native scenarios](evidence/map-systems-skill-2026-11-12.json)
   cover new/resumed mapping, source absence, read-only next selection, optional

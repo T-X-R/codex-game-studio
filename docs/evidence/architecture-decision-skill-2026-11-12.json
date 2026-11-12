@@ -1,0 +1,822 @@
+{
+  "date": "2026-11-12",
+  "status": "partial",
+  "scope": "Selected native architecture-decision behavior; S002 and complete host/source acceptance remain open",
+  "environment": {
+    "codex": "0.162.0",
+    "node": "24.22.2",
+    "platform": "macOS ARM64"
+  },
+  "method": "Fresh packed install per scenario in independent Unicode game roots; exact installed resource bytes, native Skill discovery, parent/custom-role traces, regular-file snapshots, field-level content assertions and manual semantic review. Native exit zero and wrapper exit three are not automatic behavior passes.",
+  "syntheticOwnerEvidence": true,
+  "cases": [
+    {
+      "scenario": "accept-confirmed",
+      "status": "PASS",
+      "scope": "Selected explicitly confirmed native ADR acceptance with exact Status-only changes, not complete S002",
+      "reviewedAt": "2026-11-12T12:45:40.790036+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfc6-fb28-79b2-8016-f7368744abc3",
+      "parentTraceSha256": "11f9cbdc6222616e488298f5a14fd7877ec5b4a667d31cb3195a9f510519d77d",
+      "fixtureSha256": "907460472db6858bb78f590c34ae7d50385c0039dd5e8a46a3ca6b3942cbe3d3",
+      "eventsSha256": "dc514a9ff37bbe7576a1d213825fe93ac9b6660cd791b8d625283c67e5cfdeb0",
+      "finalSha256": "b31c42b9a38761d59e607d7d8e6378c6f01363c85ce45327c221d4cd4a8c606e",
+      "beforeSha256": "63aff45cc448ead3bf85821141b2c29c2d3189d4ec27fce066c5aed6b5e4c810",
+      "afterSha256": "bc539544b7fb605257f8e26eae25f8f1159968b8fb83e5c83a2b62a065ee5a73",
+      "packageIntegrity": "sha512-tO/HPntJCFtFpznZ40jtiescXY7RevsTfBt7CbHPOh4b1RgSBWZZDHIyn2sDFFzmroR0n1RImy86ivfEuNkZew==",
+      "preservedFiles": 485,
+      "changed": [
+        "production/epics/round/story-001.md",
+        "production/epics/round/story-005.md",
+        "production/epics/round/story-006.md",
+        "docs/architecture/adr-0005-round-interface.md"
+      ],
+      "added": [],
+      "children": [
+        {
+          "threadId": "01a1cfc7-f239-7b30-a475-d6afa1793739",
+          "role": "game-studio-technical-director",
+          "traceSha256": "da46c2129008bc63769b1324823b5851c8d53f2718945b973a76f6f43d9c3a29",
+          "inheritedModelAndPermissions": true,
+          "result": "Accepted ADR-0005 after fresh exact-path/status/hash/dependency checks; only the ADR Status bytes changed."
+        }
+      ],
+      "observations": [
+        "Parent selected and read the installed acceptance Skill, inspected current ADRs/stories and reused the concrete confirmation covering the three eligible story paths.",
+        "Actual native game-studio-technical-director changed only ADR-0005 Proposed to Accepted at 2026-11-12T12:43:05.781Z; existing Date 2026-11-01 and every other byte remained intact.",
+        "After the TD returned, parent reread dependencies and stories, checked expected hashes, then changed only the three confirmed story Status values at 2026-11-12T12:43:37.364Z.",
+        "Three header forms are supported; successor-only story 002, unrelated 003, co-blocked 004 and the outside-epics legacy note remain byte-identical.",
+        "Both native code and independent host exact-content assertions verify the four allowed Status edits; no files added or removed, and all other 485 files unchanged."
+      ],
+      "recoveredReadErrors": [
+        "TD initially attempted docs/architecture/adr-0001-runtime.md, received a missing-path result, then used the listed actual adr-0001-round-owner.md and reverified it before mutation. No approval or write occurred from the failed lookup."
+      ],
+      "limitations": [
+        "Concrete owner approval and ADR/story state are synthetic fixtures.",
+        "No missing-Date insertion, concurrent-change rejection, partial-write recovery, desktop acceptance or broader source matrix is proven.",
+        "Mutation code remains agent-authored within the Skill contract; this run does not establish atomic multi-file acceptance."
+      ],
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-PWisbV",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "8ac3990cda521769a6f52998b535f5c10e56942c5f03931dd7c6a07918cc430d",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "b91f3b0c2726efd410c782cf12f5deae4603974e938b3297e6ccfadde6bd4ce5",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "216384518b9fbe320987556420e3536adf1b7d4c010d4eba810dc51c83242375",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": [
+        {
+          "path": "production/epics/round/story-001.md",
+          "beforeSha256": "af92a803704466422ef25e5f2b043b411af4d27d7b4984c718e9b6f06eb73f10",
+          "afterSha256": "5052c6d6ed6f7c98d9ca53d07ccc05e3e60845d831065bbe60585e3f805db19e"
+        },
+        {
+          "path": "production/epics/round/story-005.md",
+          "beforeSha256": "539974dfe36fd4ba0840fb870a27bd5485929eab332a5e41b9fbee3629bcd557",
+          "afterSha256": "e1accd74113f6fd9374d8873705e17371cb5c171029a1ea03d7cda55288d1049"
+        },
+        {
+          "path": "production/epics/round/story-006.md",
+          "beforeSha256": "c1982fa759753797fd0a04589815c2cdf30085ab205fea2f7221e59701098b39",
+          "afterSha256": "1781861676561408f05105378e7d74d4f179e85ccedaf6284b122e8c8e4e44fa"
+        },
+        {
+          "path": "docs/architecture/adr-0005-round-interface.md",
+          "beforeSha256": "411f81b178648abe23dcca85fc087a63332753e3710d92657a6c28b0ce932d79",
+          "afterSha256": "ca73f0f0796d5305b2c2767792718bdf3312ab7b55ef49d863766e0f4475c794"
+        }
+      ]
+    },
+    {
+      "scenario": "accept-blocked",
+      "status": "PASS",
+      "scope": "Selected native read-only refusal when the requested ADR depends on a Proposed ADR, not complete S002 acceptance",
+      "reviewedAt": "2026-11-12T12:44:06.903441+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfc7-09b0-7333-b31a-5d052c99448c",
+      "parentTraceSha256": "0c01ba1bee8c1aa86de7d6d3bcb1461be5494522dfb1f7840af515a2eef77795",
+      "fixtureSha256": "8108f51e3c55066d2b6627d13fae8ea9f0afcba8e7f27ce83f851e76043d4b8d",
+      "eventsSha256": "dc8b88980553561811c1715a444374bcf1e87dbbb05106b6ba0eb668f670da26",
+      "finalSha256": "1dd8b8c6bd788210c114182833a3916fd7d841d7c7cb374c2cb417b16f9e9e7f",
+      "beforeSha256": "b7814f6f709763cafcd24f6ca4a03708d738f944eff8f3db2c634b8d925f1f4f",
+      "afterSha256": "b7814f6f709763cafcd24f6ca4a03708d738f944eff8f3db2c634b8d925f1f4f",
+      "packageIntegrity": "sha512-tO/HPntJCFtFpznZ40jtiescXY7RevsTfBt7CbHPOh4b1RgSBWZZDHIyn2sDFFzmroR0n1RImy86ivfEuNkZew==",
+      "preservedFiles": 489,
+      "changed": [],
+      "added": [],
+      "children": [],
+      "observations": [
+        "The native parent selected and read the installed architecture-decision Skill and acceptance reference.",
+        "Effective configuration was read; actual ADRs and stories plus read-only adr-deps observations were inspected.",
+        "ADR-0001 Proposed blocks acceptance of ADR-0005 despite a structurally clean observed graph.",
+        "Future eligibility is limited to stories 001, 005 and 006; co-blocked 004, successor-only 002 and unrelated 003 remain distinct.",
+        "No approval was inferred, no native mutation was requested, no status/date/file change occurred, and all 489 original regular files were unchanged."
+      ],
+      "limitations": [
+        "Fixture owner and ADR/story state are synthetic.",
+        "Read-only host mode plus observed preservation is not proof of an adversarial sandbox write-denial test.",
+        "No acceptance mutation, engine review, desktop flow or full source matrix is proven by this case."
+      ],
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-DLo2uo",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "8ac3990cda521769a6f52998b535f5c10e56942c5f03931dd7c6a07918cc430d",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "b91f3b0c2726efd410c782cf12f5deae4603974e938b3297e6ccfadde6bd4ce5",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "216384518b9fbe320987556420e3536adf1b7d4c010d4eba810dc51c83242375",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": []
+    },
+    {
+      "scenario": "author-full",
+      "status": "PASS",
+      "scope": "Fresh same-input Web authoring regression and selected full sequential native review; not complete S002",
+      "reviewedAt": "2026-11-12T13:01:49.215040+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfd2-abd1-75e0-8035-ea11d63e001a",
+      "parentTraceSha256": "4bd7cf7eeab9910a6e3f56585d8429897a000829d9bf7476134c8019eae764c3",
+      "fixtureSha256": "d4021b549adb88d04dea90da5086ffbbafc8396beb51fc4ec3bb11c44f6f6974",
+      "eventsSha256": "66eb5f79c3cbb8e0ec928fdfda7a462681eb574a0954ddb9d03a81e5e6fddf5d",
+      "finalSha256": "7967188488f0b5c270f4e725b8b426aa6911a1e8d35869507bb4f03e3e5161bf",
+      "beforeSha256": "50170f44d5f0a1f01d06270a3c8980fcbaa7b40e8a9678e34ba0a19d22bb6d85",
+      "afterSha256": "8db39f2148e71c622ff97f741a14a0752002e860d4d504a87bbe0d48865ba366",
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "preservedFiles": 487,
+      "changed": [],
+      "added": [
+        "docs/architecture/adr-0003-immutable-round-snapshots.md"
+      ],
+      "children": [
+        {
+          "threadId": "01a1cfd4-d033-7452-b73e-8bffb918e619",
+          "role": "game-studio-lead-programmer",
+          "traceSha256": "5be9ad4edc36fc2c1919f3427880376fbc5cb1530f0b2c2a300c25b0b8183978",
+          "inheritedModelAndPermissions": true,
+          "finalTime": "2026-11-12T12:57:10.393Z"
+        },
+        {
+          "threadId": "01a1cfd5-c204-7f42-ab56-71538b271227",
+          "role": "game-studio-technical-director",
+          "traceSha256": "c4a710590bdf4e3325fff8cbbd895a9fab241e352d4d5afdacbc388fb6810548",
+          "inheritedModelAndPermissions": true,
+          "finalTime": "2026-11-12T12:58:01.678Z"
+        }
+      ],
+      "sameRawRequestAs": "rVdJdF",
+      "observations": [
+        "Native Skill discovery, config reads, engine references and live registry preceded relevant prior ADR/GDD reasoning.",
+        "All canonical template headings/fields are present; exact Layer Core is separate from layer-map provenance, and the new ADR remains Proposed.",
+        "The primary Web engine role game-studio-lead-programmer finished at 12:57:10.393Z before native TD spawn at 12:57:34.959Z. TD read the exact TD-ADR gate and returned APPROVE at 12:58:01.678Z before the final ADR write.",
+        "Both reviews inspect supplied evidence and preserve unverified runtime/performance/API limits; no review is treated as acceptance.",
+        "One actual linked GDD was compared without renames; registry, source ADRs, GDD, settings and stage remain unchanged. Only ADR-0003 was added.",
+        "Final handoff separates written prerequisites from acceptance and requires independent coverage review in a fresh chat."
+      ],
+      "temporaryDraft": {
+        "creation": "tempfile.mkdtemp at 2026-11-12T12:56:18.923Z",
+        "path": "/private/tmp/immutable-round-snapshots-7j8a9m9k",
+        "files": [
+          "draft.md",
+          "before.json"
+        ],
+        "cleanup": "Both owned files unlinked and their unique directory removed at 2026-11-12T12:58:42.683Z after reviewers finished. Independent check confirms the directory is absent.",
+        "isolation": "Unique owned directory, no fixed shared filename or unrelated deletion."
+      },
+      "limitations": [
+        "Source risk/version evidence is synthetic and offline; actual browser/API/runtime and Godot/Unity/Unreal specialists remain unassessed.",
+        "Parent preservation count follows two dependency symlinks; authoritative host count here covers 487 regular files, excluding .git.",
+        "Adverse review/interactive/registry writes/other modes and desktop remain separate matrix items."
+      ],
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-Lord6b",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "2d1b834b05ca2906f16d4dd82650cbde25d98db6ad0491bae4eceb1c4bc353d5",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "fac3e2d3019d59c193ccd4f3be2306c11b5f5341d02a424b4dfde3e119fd9d3d",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": [
+        {
+          "path": "docs/architecture/adr-0003-immutable-round-snapshots.md",
+          "beforeSha256": null,
+          "afterSha256": "557222a6a671e7973bd23d5667629a932675823e0d6eb34a52f61188617dd154"
+        }
+      ]
+    },
+    {
+      "scenario": "retrofit-proposed",
+      "status": "PASS",
+      "scope": "Selected native scenario only; full S002 matrix remains open",
+      "reviewedAt": "2026-11-12T13:07:33.886005+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfd8-eb91-7062-8b0a-6c397a5aa17b",
+      "parentTraceSha256": "afbff71a00bf096a794b6e5b8d77c50d855704f1cfd201bb86dad2435860ac92",
+      "fixtureSha256": "e7fb29f6fd2158b6deffc824c283948b390c5c2583bd3c342e02b0bc7673ec16",
+      "eventsSha256": "e3ae15c0cc745172878afc97a46de64dadeb3dff512b91f86b522c5bb3c56713",
+      "finalSha256": "df7771d878db31c3ec396b7b42688704013d4e7be8f26eb78b46a41f6caad453",
+      "beforeSha256": "966b4e2a778b49bb8ae75f301f1bd10841e2b1c3f74c31ceb8f0cb5dc6331b48",
+      "afterSha256": "9b5da5f15244b7ccb775e10ca27973ef4c8d6f04a5a08f3887b9306c78f7037c",
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "preservedFiles": 477,
+      "changed": [
+        "docs/architecture/adr-0004-display-contract.md"
+      ],
+      "added": [],
+      "children": [
+        {
+          "threadId": "01a1cfd9-c80c-73f1-8914-31027d1d6485",
+          "role": "game-studio-lead-programmer",
+          "traceSha256": "11789176f2fdd0bb6413cbfa403d26caa096f000f9b71aa155e1cae735892f56",
+          "inheritedModelAndPermissions": true,
+          "finalTime": "2026-11-12T13:02:20.768Z"
+        }
+      ],
+      "observations": [
+        "Installed Skill and effective settings were read; actual native Web lead-programmer reviewed before the final target mutation. TD-ADR was explicitly skipped in Solo mode.",
+        "Runtime/API/performance verification and independent fresh-chat architecture coverage were not represented as passed.",
+        "All unrelated regular files remained byte-identical; no acceptance, registry/GDD/story/stage/settings mutation or checkpoint occurred.",
+        "Original 477 regular files except the target were preserved. Target retains every original byte as its prefix; only missing Status Proposed, three examined None dependency fields, ordering note and Date 2026-11-12 were appended.",
+        "Existing UNKNOWN compatibility and required actual browser verification were preserved; no new decision or acceptance was inferred. Native reviewer returned scoped no-blocking-concern, with API/browser evidence NOT ASSESSED."
+      ],
+      "temporaryDraft": {
+        "creation": "No temporary draft file; additions passed to native reviewer in the role request."
+      },
+      "limitations": [
+        "Synthetic offline Web evidence does not establish live browser/API performance or other engine specialist coverage.",
+        "Regular-file host snapshots exclude symlink traversal; they are the authoritative preservation count."
+      ],
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-abmkyR",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "2d1b834b05ca2906f16d4dd82650cbde25d98db6ad0491bae4eceb1c4bc353d5",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "fac3e2d3019d59c193ccd4f3be2306c11b5f5341d02a424b4dfde3e119fd9d3d",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": [
+        {
+          "path": "docs/architecture/adr-0004-display-contract.md",
+          "beforeSha256": "9179e29248ec3966ce816cd5154a4c331202e31abc5ff60e7557c389f0bd3ccb",
+          "afterSha256": "3b7f59aa7dfd7611b6c45e99baa4e9a38694900faa621d0710c48aa3128074e8"
+        }
+      ]
+    },
+    {
+      "scenario": "author-solo",
+      "status": "PASS",
+      "scope": "Selected native scenario only; full S002 matrix remains open",
+      "reviewedAt": "2026-11-12T13:07:33.887159+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfd8-ebc3-7901-a684-53458f65b0cb",
+      "parentTraceSha256": "f8d53d8920fb81e99c0df18e22d40c39fccfe29d015f8c1f631e200b61d43264",
+      "fixtureSha256": "658db661338256351b4dec02163121e107c28d2c3999b7eea65e3093726e9475",
+      "eventsSha256": "feea800997da8ff88358b65887580ccdcab72f55de20b14885f11b3a40efc2cb",
+      "finalSha256": "645ecfaeb623e0ba7920910405c31da57441cdd38af838884b7a384410fcd488",
+      "beforeSha256": "a0391262c0c372c2583374dfe4b9e2be8cb224bb6a13ecd940a430d8e356be89",
+      "afterSha256": "4d75155868d4bc41a6e17a8af87abac4768360416fe657d951157f8d485d3b55",
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "preservedFiles": 487,
+      "changed": [],
+      "added": [
+        "docs/architecture/adr-0003-immutable-round-snapshots.md"
+      ],
+      "children": [
+        {
+          "threadId": "01a1cfdb-085c-7840-8cd6-f9ab16ab4f3d",
+          "role": "game-studio-lead-programmer",
+          "traceSha256": "94ceffc59d7be2cc68062ede2df8b5e74798488809b51f129480a099bc47dcd2",
+          "inheritedModelAndPermissions": true,
+          "finalTime": "2026-11-12T13:03:59.830Z"
+        }
+      ],
+      "observations": [
+        "Installed Skill and effective settings were read; actual native Web lead-programmer reviewed before the final target mutation. TD-ADR was explicitly skipped in Solo mode.",
+        "Runtime/API/performance verification and independent fresh-chat architecture coverage were not represented as passed.",
+        "All unrelated regular files remained byte-identical; no acceptance, registry/GDD/story/stage/settings mutation or checkpoint occurred.",
+        "All template sections and machine field identities retained; exact Layer Core, Proposed status, ADR-0001 sole upstream dependency, two alternatives, scoped ownership and exact scalar snapshot contract are present.",
+        "Actual GDD and active registry were read; one-GDD naming comparison was clean. Risk, migration/rollback, future verification and written-versus-Accepted handoff preserve domain semantics."
+      ],
+      "temporaryDraft": {
+        "creation": "mktemp -d",
+        "path": "/private/tmp/immutable-round-snapshots.SgLSHU",
+        "files": [
+          "draft.md",
+          "baseline.json"
+        ],
+        "cleanup": "Actual trace unlinks both owned files then removes unique directory after review and final write; independent filesystem check confirms directory absent."
+      },
+      "limitations": [
+        "Synthetic offline Web evidence does not establish live browser/API performance or other engine specialist coverage.",
+        "Regular-file host snapshots exclude symlink traversal; they are the authoritative preservation count."
+      ],
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-9RND73",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "2d1b834b05ca2906f16d4dd82650cbde25d98db6ad0491bae4eceb1c4bc353d5",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "fac3e2d3019d59c193ccd4f3be2306c11b5f5341d02a424b4dfde3e119fd9d3d",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": [
+        {
+          "path": "docs/architecture/adr-0003-immutable-round-snapshots.md",
+          "beforeSha256": null,
+          "afterSha256": "b946ce460ea78feefede918110f0683ebf0cb70e7b1f9876ff452c280c6a5e3e"
+        }
+      ]
+    },
+    {
+      "scenario": "solo-override",
+      "status": "PASS",
+      "scope": "Selected native scenario only; full S002 matrix remains open",
+      "reviewedAt": "2026-11-12T13:07:33.887817+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfd8-ed11-7b23-ab14-5953854ee2cb",
+      "parentTraceSha256": "7f6feb0dec19ad8a4348ebd80645b89b7960d03a5b1522fdca1e5d7f678f5814",
+      "fixtureSha256": "d76ddaba37276b5a8380d5f14ca4989e57e7c3673e9810ae596b6a73ee697bad",
+      "eventsSha256": "d57de33db9ae65d70a0a00459f54023d403766afbfdeb7c25ac1f585d9eb6d3b",
+      "finalSha256": "d221245fc031d1cb4acee78c7807c3745b491b9f746a96de5f57429702dc7a58",
+      "beforeSha256": "c71717c3d9569c6cd440c359cff6e5859840af42efb9a3e5641db8aff085c0b9",
+      "afterSha256": "771defbdd56799d9f3a29bfdf66247b01ffddd4705f3a6d055c2f5db312d311f",
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "preservedFiles": 487,
+      "changed": [],
+      "added": [
+        "docs/architecture/adr-0003-immutable-round-snapshots.md"
+      ],
+      "children": [
+        {
+          "threadId": "01a1cfdb-405c-70a0-bf11-7b955210283c",
+          "role": "game-studio-lead-programmer",
+          "traceSha256": "1a4a469bf6542167331ea2736d94e15c9fe9d919355a5915df2012779b4db8b3",
+          "inheritedModelAndPermissions": true,
+          "finalTime": "2026-11-12T13:04:22.437Z"
+        }
+      ],
+      "observations": [
+        "Installed Skill and effective settings were read; actual native Web lead-programmer reviewed before the final target mutation. TD-ADR was explicitly skipped in Solo mode.",
+        "Runtime/API/performance verification and independent fresh-chat architecture coverage were not represented as passed.",
+        "All unrelated regular files remained byte-identical; no acceptance, registry/GDD/story/stage/settings mutation or checkpoint occurred.",
+        "All template sections and machine field identities retained; exact Layer Core, Proposed status, ADR-0001 sole upstream dependency, two alternatives, scoped ownership and exact scalar snapshot contract are present.",
+        "Actual GDD and active registry were read; one-GDD naming comparison was clean. Risk, migration/rollback, future verification and written-versus-Accepted handoff preserve domain semantics.",
+        "One-run Solo override was honored despite stored Full mode; baseline hashes prove project configuration remained unchanged."
+      ],
+      "temporaryDraft": {
+        "creation": "fs.mkdtempSync",
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/immutable-round-snapshots-EUy1rE",
+        "files": [
+          "draft.md",
+          "baseline.json"
+        ],
+        "cleanup": "Actual trace unlinks both owned files then removes unique directory after review and final write; independent filesystem check confirms directory absent."
+      },
+      "limitations": [
+        "Synthetic offline Web evidence does not establish live browser/API performance or other engine specialist coverage.",
+        "Regular-file host snapshots exclude symlink traversal; they are the authoritative preservation count."
+      ],
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-lZZSM9",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "2d1b834b05ca2906f16d4dd82650cbde25d98db6ad0491bae4eceb1c4bc353d5",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "fac3e2d3019d59c193ccd4f3be2306c11b5f5341d02a424b4dfde3e119fd9d3d",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": [
+        {
+          "path": "docs/architecture/adr-0003-immutable-round-snapshots.md",
+          "beforeSha256": null,
+          "afterSha256": "d64fe6c9a5c57ac7efd3c59850e0f486ad579abb3f27511740001f1c144bbff6"
+        }
+      ]
+    },
+    {
+      "scenario": "missing-title",
+      "status": "PASS",
+      "scope": "Selected native read-only scenario; no sandbox write-denial was inferred",
+      "reviewedAt": "2026-11-12T13:09:03.560066+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfde-28a6-7670-8d7a-758618d1e7dc",
+      "parentTraceSha256": "b6a853ebf7bcfddda8b9c772f2fa663660f7a2932b919e7826b4bfc5a9b74156",
+      "fixtureSha256": "8aae672bb756ce04b81e176919751e16b905e62fa65d64fdca48b1341767f804",
+      "eventsSha256": "f9341e52ca78d43485bc7e88b3294317cb204cbdde21c4d9911f95ed94c1fec6",
+      "finalSha256": "f1ea352b75705c524196e1c3e0325b74acb73dce7219f3b39488b68314ea880c",
+      "beforeSha256": "8c4373a21f90733fba73f6aadae2784f617d7ac69baa463aa57d159fdc08df3c",
+      "afterSha256": "8c4373a21f90733fba73f6aadae2784f617d7ac69baa463aa57d159fdc08df3c",
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "preservedFiles": 477,
+      "changed": [],
+      "added": [],
+      "children": [],
+      "observations": [
+        "Read installed Skill and effective config; asked for technical decision before engine research, draft or reviewer calls. No invented title or inferred decision.",
+        "Actual calls contain no mutation attempt, temporary draft, approval/sandbox escalation, Hook trust or checkpoint; all project regular files unchanged."
+      ],
+      "limitations": [
+        "This read-only fixture demonstrates the observed refusal/preview/routing path, not enforcement against an attempted unauthorized write or complete source matrix."
+      ],
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-NpoZbq",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "2d1b834b05ca2906f16d4dd82650cbde25d98db6ad0491bae4eceb1c4bc353d5",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "fac3e2d3019d59c193ccd4f3be2306c11b5f5341d02a424b4dfde3e119fd9d3d",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": []
+    },
+    {
+      "scenario": "accept-preview",
+      "status": "PASS",
+      "scope": "Selected native read-only scenario; no sandbox write-denial was inferred",
+      "reviewedAt": "2026-11-12T13:09:03.560913+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfde-2321-7531-b1f9-25e5cece0880",
+      "parentTraceSha256": "d62640d8cdd1b737205e9da341be47d8bbd1c586fce5c8552a5b8a89bada1aba",
+      "fixtureSha256": "995a8122ceadd3974522f98b260f26704dfc1e89c975992f599f8c4ce08533f1",
+      "eventsSha256": "88270c2c3a4aab0c976fe387df4e430f063f20f2c2ff3ab91d69f60380788afc",
+      "finalSha256": "8447d52cf641ad9109d4fbfa1bccaf706b7240f9bd1e533432a910c32cbe8605",
+      "beforeSha256": "86e6dc5bc54e300e1e9b40d80e8d4397332df8b6cbc44f806313a341cf633274",
+      "afterSha256": "86e6dc5bc54e300e1e9b40d80e8d4397332df8b6cbc44f806313a341cf633274",
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "preservedFiles": 489,
+      "changed": [],
+      "added": [],
+      "children": [],
+      "observations": [
+        "Actual target, upstream ADR and all candidate stories read; dependency helper inspected, target remains Proposed and upstream Accepted.",
+        "Disclosed exactly three eligible story changes (001/005/006), preserved existing Date, excluded successor-only 002, unrelated 003, co-blocked 004 and legacy outside-epics 099.",
+        "Requested concrete confirmation even in autonomous mode; did not invoke mutation TD or treat initial review request as acceptance authority.",
+        "Actual calls contain no mutation attempt, temporary draft, approval/sandbox escalation, Hook trust or checkpoint; all project regular files unchanged."
+      ],
+      "limitations": [
+        "This read-only fixture demonstrates the observed refusal/preview/routing path, not enforcement against an attempted unauthorized write or complete source matrix."
+      ],
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-mUwFzv",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "2d1b834b05ca2906f16d4dd82650cbde25d98db6ad0491bae4eceb1c4bc353d5",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "fac3e2d3019d59c193ccd4f3be2306c11b5f5341d02a424b4dfde3e119fd9d3d",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": []
+    },
+    {
+      "scenario": "registry-conflict",
+      "status": "PASS",
+      "scope": "Selected native read-only scenario; no sandbox write-denial was inferred",
+      "reviewedAt": "2026-11-12T13:09:03.561167+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfde-28a6-7ad3-9b9e-d896d68725ff",
+      "parentTraceSha256": "a51181c9c43d8c1df0d5036e06afdf255807f05a75ac2763b7593c5707f585be",
+      "fixtureSha256": "35a3a69969e81984a72f9df3f59b853377c757d73d2cba76234064f06f0503da",
+      "eventsSha256": "c0cf3744b1719c874c64e3384628acd8eda27bea5f7a0735664fdecb4d69cc80",
+      "finalSha256": "1a2e6bda4373cf5df39d2e3ed4d6f96a1987844cbc49e5d0de646fe3b13a994e",
+      "beforeSha256": "ea6582207d960f27583810dae59d38f0a144fccebc87555af2c2681e30dd66b1",
+      "afterSha256": "ea6582207d960f27583810dae59d38f0a144fccebc87555af2c2681e30dd66b1",
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "preservedFiles": 487,
+      "changed": [],
+      "added": [],
+      "children": [],
+      "observations": [
+        "Read engine evidence, then current ownership registry before relevant prior ADR/GDD content. Actual registry helper list architecture was invoked.",
+        "Identified conflict with Accepted ADR-0001 and registered ownership; surfaced align/supersede/exception as unresolved choices. No draft or reviewer invoked before resolving consequential decision.",
+        "Actual calls contain no mutation attempt, temporary draft, approval/sandbox escalation, Hook trust or checkpoint; all project regular files unchanged."
+      ],
+      "limitations": [
+        "This read-only fixture demonstrates the observed refusal/preview/routing path, not enforcement against an attempted unauthorized write or complete source matrix."
+      ],
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-IVEPqG",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "2d1b834b05ca2906f16d4dd82650cbde25d98db6ad0491bae4eceb1c4bc353d5",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "fac3e2d3019d59c193ccd4f3be2306c11b5f5341d02a424b4dfde3e119fd9d3d",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": []
+    },
+    {
+      "scenario": "negative",
+      "status": "PASS",
+      "scope": "Selected native read-only scenario; no sandbox write-denial was inferred",
+      "reviewedAt": "2026-11-12T13:09:03.561674+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfdf-a485-75f0-bdf6-39bfc8a75f32",
+      "parentTraceSha256": "ea0b242264b0a3d55c670a9b8dc90da1bb330faedc60ccee29b0e95dfd7b622f",
+      "fixtureSha256": "ac9d26258e94016b036e5846555cc31b9df9da282204c88c772fb9922871da65",
+      "eventsSha256": "b75d2c68ffed9db327cb81ff6b56f3afef0b839077e90329d547c7ce608f3e6f",
+      "finalSha256": "7da1dc9d69221c61e03aa51e83af8536a0907e7b61a8074daccf380774635676",
+      "beforeSha256": "a9acfb19c68763bb1016ee3c1f34756f46c2a34cae6018fd4591e0e1e0e8a8f3",
+      "afterSha256": "a9acfb19c68763bb1016ee3c1f34756f46c2a34cae6018fd4591e0e1e0e8a8f3",
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "preservedFiles": 478,
+      "changed": [],
+      "added": [],
+      "children": [],
+      "observations": [
+        "Read only the actual score module and explained subtraction; no architecture Skill invocation, decision prompt, review agent or ADR workflow.",
+        "Actual calls contain no mutation attempt, temporary draft, approval/sandbox escalation, Hook trust or checkpoint; all project regular files unchanged."
+      ],
+      "limitations": [
+        "This read-only fixture demonstrates the observed refusal/preview/routing path, not enforcement against an attempted unauthorized write or complete source matrix."
+      ],
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-EDw4Sf",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "2d1b834b05ca2906f16d4dd82650cbde25d98db6ad0491bae4eceb1c4bc353d5",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "fac3e2d3019d59c193ccd4f3be2306c11b5f5341d02a424b4dfde3e119fd9d3d",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": []
+    },
+    {
+      "scenario": "accept-unknown",
+      "status": "PASS",
+      "scope": "Selected native read-only scenario; no sandbox write-denial was inferred",
+      "reviewedAt": "2026-11-12T13:09:20.670500+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfdf-62a3-7f70-b406-ce7de45f2562",
+      "parentTraceSha256": "9b016a95ad5b17a63604830ffcff2b380412b4ff900729ba85958f4d37e1489d",
+      "fixtureSha256": "b2c55c286d46dc0cfe1ea36924212a9ad4c93ba240eee7903eed263793ad6d7a",
+      "eventsSha256": "454a696ee88f35e98dd8c134423555ed2a45fe55af381d85d0edf3c8c6fd29ca",
+      "finalSha256": "f4b801ec3948e51ebaadaabb8d71b153215665a139475cd6a8892d39fe042ff0",
+      "beforeSha256": "fc7bdcf3ef46287bf2725adf2403fddb2c59429c00714f3775d35cc35d2d42c3",
+      "afterSha256": "fc7bdcf3ef46287bf2725adf2403fddb2c59429c00714f3775d35cc35d2d42c3",
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "preservedFiles": 489,
+      "changed": [],
+      "added": [],
+      "children": [],
+      "observations": [
+        "Actual ADR-0005 dependency declaration is UNKNOWN; no vacuous acceptance from an empty extracted edge list. Target remains Proposed; no automatic dependency repair or mutation role.",
+        "Actual calls contain no mutation attempt, temporary draft, approval/sandbox escalation, Hook trust or checkpoint; all project regular files unchanged."
+      ],
+      "limitations": [
+        "This read-only fixture demonstrates the observed refusal/preview/routing path, not enforcement against an attempted unauthorized write or complete source matrix."
+      ],
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-amEgaN",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "2d1b834b05ca2906f16d4dd82650cbde25d98db6ad0491bae4eceb1c4bc353d5",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "fac3e2d3019d59c193ccd4f3be2306c11b5f5341d02a424b4dfde3e119fd9d3d",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": []
+    },
+    {
+      "scenario": "accept-duplicate",
+      "status": "PASS",
+      "scope": "Selected native read-only scenario; no sandbox write-denial was inferred",
+      "reviewedAt": "2026-11-12T13:09:20.670730+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfdf-70c9-7e01-805d-7dca64fee3bb",
+      "parentTraceSha256": "5c2cabc74bbbc0db28c7a871ddd1599826914adc644c6ca31e66df9ae2abf91c",
+      "fixtureSha256": "bdaf199753ddbf754f68da5dfafc10483edd51949987e05edb8d712084ab5ac0",
+      "eventsSha256": "fc47b09e37de8d0fa66389bcd39d897f13ad111b543f372ec368cc3fac32b7d9",
+      "finalSha256": "4315bfe0c40628fbf35b6bd0e7831b3760fffb252863ccab5e5a51caea66597c",
+      "beforeSha256": "355168c4badd51a018d42a899dca964c7767721aea1e7d171189ea9991c9b1d2",
+      "afterSha256": "355168c4badd51a018d42a899dca964c7767721aea1e7d171189ea9991c9b1d2",
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "preservedFiles": 490,
+      "changed": [],
+      "added": [],
+      "children": [],
+      "observations": [
+        "Actual two ADR-0005 paths found; did not guess the target or accept either. Reported ambiguous duplicate ID and requested resolution before any mutation or role.",
+        "Actual calls contain no mutation attempt, temporary draft, approval/sandbox escalation, Hook trust or checkpoint; all project regular files unchanged."
+      ],
+      "limitations": [
+        "This read-only fixture demonstrates the observed refusal/preview/routing path, not enforcement against an attempted unauthorized write or complete source matrix."
+      ],
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-75dCuG",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "2d1b834b05ca2906f16d4dd82650cbde25d98db6ad0491bae4eceb1c4bc353d5",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "fac3e2d3019d59c193ccd4f3be2306c11b5f5341d02a424b4dfde3e119fd9d3d",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": []
+    }
+  ],
+  "earlierAttempts": [
+    {
+      "scenario": "author-full",
+      "status": "FAIL",
+      "scope": "Selected authoring scenario fails the exact Layer vocabulary; role sequencing, Proposed status and preservation passed",
+      "reviewedAt": "2026-11-12T12:48:03.528245+00:00",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1cfc7-0700-7c40-b946-eb2230eba89b",
+      "parentTraceSha256": "2c6454fa0b032636ba3406891fc9debc6242a673485540c064ee69890dada316",
+      "fixtureSha256": "361a1514049740db9a7177a24cb49051840594d734ca34649b29d2ffd5d2bea1",
+      "eventsSha256": "b9918f0e454c5e614c3066c267ba6f277927e228921f99f176bc05410bf86236",
+      "finalSha256": "58cc4e723760f7c7f23c16efcf99ab6714c04abb213f7049822970379a9f759c",
+      "beforeSha256": "01f9677c208cbcedbfba2fa98032504760cd9c12301cbb517b667dbfe89fe194",
+      "afterSha256": "0ed9a0b3792821698f269d74d880c4117abcf880cec8c143160ed1fb4ccb1a5c",
+      "packageIntegrity": "sha512-tO/HPntJCFtFpznZ40jtiescXY7RevsTfBt7CbHPOh4b1RgSBWZZDHIyn2sDFFzmroR0n1RImy86ivfEuNkZew==",
+      "preservedFiles": 487,
+      "changed": [],
+      "added": [
+        "docs/architecture/adr-0003-immutable-round-snapshots.md"
+      ],
+      "children": [
+        {
+          "threadId": "01a1cfc9-0d40-7b11-8a14-0e9bad34d560",
+          "role": "game-studio-lead-programmer",
+          "traceSha256": "5cec1a83084f13e16ea1276b614183ea5fa9716241cd76b0d678f5e8c587a580",
+          "inheritedModelAndPermissions": true,
+          "finalTime": "2026-11-12T12:44:18.739Z"
+        },
+        {
+          "threadId": "01a1cfc9-d673-70c1-bd30-24ac2b2d50e2",
+          "role": "game-studio-technical-director",
+          "traceSha256": "6b0e8beda70dd4cd7475dc21285dc967b0b49dd50bee40a13f0b24c34980c41d",
+          "inheritedModelAndPermissions": true,
+          "finalTime": "2026-11-12T12:44:58.490Z"
+        }
+      ],
+      "finding": {
+        "field": "Engine Compatibility.Layer",
+        "actual": "Core — Round State's layer in [architecture.md](architecture.md)",
+        "requiredVocabulary": [
+          "Foundation",
+          "Core",
+          "Feature",
+          "Presentation"
+        ],
+        "impact": "The whole cell is a named layer consumed by downstream criticality rules. The retained upstream adr-status helper returns its complete value without stripping commentary.",
+        "correctionPending": "State exact Layer-cell vocabulary and move provenance to prose; add a structural assertion and rerun unchanged raw user input in a fresh installed project."
+      },
+      "passedObservations": [
+        "Actual primary Web engine role game-studio-lead-programmer finished before TD-ADR was spawned.",
+        "Native TD read the actual gate and returned APPROVE; engine/TD contexts inherit parent settings.",
+        "Engine references and registry were read before relevant prior ADR reasoning.",
+        "All original template heading/field structure was retained, ADR-0003 stayed Proposed, actual linked GDD comparison was clean and source/registry/stories/settings/stage were unchanged.",
+        "Performance and browser execution remain explicitly unverified, and closing correctly requires separate acceptance and fresh-chat architecture coverage review."
+      ],
+      "limitations": [
+        "No full behavior pass is claimed from native exit zero or both reviewers approving.",
+        "Owner decisions and engine reference documents are synthetic fixture input; no actual engine/API/runtime validation is established."
+      ],
+      "temporaryDraftFinding": {
+        "status": "CONCERNS",
+        "path": "/private/tmp/immutable-round-snapshots-review.md",
+        "stillExistsAfterRun": false,
+        "sha256": null,
+        "observed": "Native parent used apply_patch Add File on a fixed shared temporary filename for both reviewers, with no prior exclusive creation or ownership check. It later used Delete File on that same path. Parallel same-title runs could overwrite or delete another run's draft; no actual collision is claimed in this isolated run.",
+        "action": "Preserve the trace; maintainer does not remove any shared path. New instructions require direct content or unique/exclusive owned temporary files and cleanup after dependent reviews. Fresh run needed.",
+        "cleanupObservedAt": "2026-11-12T12:45:28.808Z"
+      },
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-architecture-decision-rVdJdF",
+      "installedResourceHashes": {
+        ".agents/skills/game-studio-architecture-decision/SKILL.md": "28c85bf637d98d33ce863259d9e7026efa8887520c81df5548b90dc6ac1942c1",
+        ".agents/skills/game-studio-architecture-decision/references/authoring.md": "8ac3990cda521769a6f52998b535f5c10e56942c5f03931dd7c6a07918cc430d",
+        ".agents/skills/game-studio-architecture-decision/references/validation-and-writing.md": "b91f3b0c2726efd410c782cf12f5deae4603974e938b3297e6ccfadde6bd4ce5",
+        ".agents/skills/game-studio-architecture-decision/references/acceptance.md": "91151b5b6add473530a07de88669caca7b9bc1f7bbbf7faf943548b4c4a37542",
+        ".agents/skills/game-studio-architecture-decision/references/retrofit.md": "643c79484117e45646c4085761cc137adf453d13367451d4b1808535f10f8a22",
+        ".agents/skills/game-studio-architecture-decision/references/registry-and-handoff.md": "7f69db0730d7d9f602349f8de5a6647ff97251f7cf7b4229d70af86be27179ec",
+        ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        "studio/templates/architecture-decision-record.md": "216384518b9fbe320987556420e3536adf1b7d4c010d4eba810dc51c83242375",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+        "studio/docs/director-gates/td-adr.md": "bf13ac4b6a5185c46d270020b69bcf76611cbc9870797d50265a9cfcab526e31",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+      },
+      "fileEffects": [
+        {
+          "path": "docs/architecture/adr-0003-immutable-round-snapshots.md",
+          "beforeSha256": null,
+          "afterSha256": "02b032bbbae6e1a705dab492234b982b19ba59e508b209bc917a52a678b6979a"
+        }
+      ]
+    }
+  ],
+  "sourceCoverageLimits": [
+    "Original Godot HIGH-risk engine case remains untested; Web uses the source-mandated native lead-programmer primary and does not replace Godot/Unity/Unreal specialists.",
+    "Adverse native engine/TD verdict paths, unresolved interactive choices and missing-role/no-engine variants remain open.",
+    "Registry mutation approval, append/supersession parity, conflict resolution writes and GDD rename synchronization remain open.",
+    "Retrofit Accepted routing, Date-only/missing-Date acceptance, Deprecated/Superseded, empty/missing dependency sections and complete dependency-cycle matrix remain open.",
+    "All team/density/workflow combinations, concurrent changes, partial failure, checkpoint recovery, desktop and subdirectory-host discovery remain open.",
+    "Fresh whole-architecture coverage review is a separate workflow; these author checks and gate reviews do not establish it."
+  ],
+  "verificationScope": [
+    "Skill metadata and local references validated; ADR template heading/field identities retained.",
+    "The retained first author-full output fails exact Layer vocabulary; host assertion controls reject it, annotations and missing Layer, and accept the four canonical values.",
+    "Temporary review paths are audited from actual traces in addition to project snapshots; no unobserved collision, cleanup or sandbox enforcement is claimed.",
+    "Global build/typecheck/regression/package and CI results are recorded by the root integration task separately."
+  ]
+}
