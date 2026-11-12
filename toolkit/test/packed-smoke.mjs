@@ -48,6 +48,10 @@ try {
     assert.equal(await readFile(join(project, role), 'utf8'),
       await readFile(join(packageRoot, '..', role), 'utf8'));
   }
+  for (const file of ['SKILL.md', 'references/facts-and-policy.md', 'references/checklist.md', 'references/qa-lead-gate.md']) {
+    const path = `.agents/skills/game-studio-story-readiness/${file}`;
+    assert.deepEqual(await readFile(join(project, path)), await readFile(join(packageRoot, '..', path)));
+  }
   for (const gate of ['ql-story-ready', 'ql-test-coverage', 'lp-code-review', 'lp-feasibility']) {
     const id = `studio/docs/director-gates/${gate}.md`;
     const result = command(globalCli, 'resource', 'path', id);
@@ -96,6 +100,14 @@ try {
   const observations = JSON.parse(execute(registryHelper, ['--project', registryProject, 'validate']));
   assert.deepEqual(observations.diagnostics, []);
   assert.deepEqual(observations.registries.map(row => row.state), ['missing', 'read', 'missing']);
+  const legacyTr = 'requirements:\n- id: TR-demo-007\n  status: superseded-by: TR-demo-008\n';
+  await writeFile(join(registryProject, 'docs/architecture/tr-registry.yaml'), legacyTr);
+  const legacyObservation = JSON.parse(execute(registryHelper, ['--project', registryProject, 'list', 'tr']));
+  assert.equal(legacyObservation.qualityAssessed, false);
+  assert.equal(legacyObservation.registries[0].state, 'read');
+  assert.equal(legacyObservation.entries[0].fields.status, 'superseded-by: TR-demo-008');
+  assert.ok(legacyObservation.diagnostics.some(row => row.code === 'UNQUOTED'));
+  assert.equal(await readFile(join(registryProject, 'docs/architecture/tr-registry.yaml'), 'utf8'), legacyTr);
   const designResource = 'studio/docs/roles/game-designer.md';
   const designPath = command(globalCli, 'resource', 'path', designResource).data.path;
   assert.equal(await readFile(designPath, 'utf8'), await readFile(join(packageRoot, '..', designResource), 'utf8'));

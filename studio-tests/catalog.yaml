@@ -44,7 +44,8 @@ skills:
     priority: critical
     category: readiness
     target: .agents/skills/game-studio-story-readiness/SKILL.md
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/skills/readiness/story-readiness-codex.md
 
   - name: story-done
     spec: studio-tests/skills/readiness/story-done.md
