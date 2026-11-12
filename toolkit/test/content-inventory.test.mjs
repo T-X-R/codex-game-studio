@@ -5,44 +5,48 @@ import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { inspectInventory } from '../dist/content-inventory.js';
 
-async function fixture(t) {
+async function fixture(t, ending = '\n') {
   const root = await mkdtemp(join(tmpdir(), 'studio-inventory-'));
   t.after(() => rm(root, { recursive: true, force: true }));
   const write = async (path, text = '# Source fixture\n') => {
     await mkdir(dirname(join(root, path)), { recursive: true }); await writeFile(join(root, path), text);
   };
-  let inventory = await readFile(new URL('../../tasks/migration-inventory.md', import.meta.url), 'utf8');
+  let inventory = (await readFile(new URL('../../tasks/migration-inventory.md', import.meta.url), 'utf8')).replace(/\r?\n/g, ending);
   const settings = JSON.parse(await readFile(new URL('../../.claude/settings.json', import.meta.url), 'utf8'));
   for (const match of inventory.matchAll(/\]\(\.\.\/(\.claude\/(?:hooks|scripts|rules)\/[^)]+)\)/g)) await write(match[1]);
   const save = async () => { await write('tasks/migration-inventory.md', inventory); await write('.claude/settings.json', JSON.stringify(settings)); };
-  await save(); return { root, settings, write, save, edit: f => { inventory = f(inventory); } };
+  await save(); return { root, settings, write, save, edit: f => {
+    const changed = f(inventory); assert.ok(changed !== inventory, 'Negative fixture must actually mutate the inventory'); inventory = changed;
+  } };
 }
 
-test('inventory reconciles all 86 sources and 15 actual registrations without claiming behavior', async t => {
-  const { root } = await fixture(t);
-  const result = await inspectInventory(root);
-  assert.equal(result.status, 'valid'); assert.deepEqual(result.issues, []);
-  assert.deepEqual(result.counts, { hooks: 18, scripts: 54, rules: 14 });
-  assert.equal(result.registeredHooks, 15); assert.equal(result.sourceCoverageComplete, true);
-  assert.equal(result.behaviorVerified, false);
-});
+for (const [label, ending] of [['LF', '\n'], ['CRLF', '\r\n']]) {
+  test(`inventory reconciles all 86 sources and 15 actual registrations without claiming behavior (${label})`, async t => {
+    const { root } = await fixture(t, ending);
+    const result = await inspectInventory(root);
+    assert.equal(result.status, 'valid'); assert.deepEqual(result.issues, []);
+    assert.deepEqual(result.counts, { hooks: 18, scripts: 54, rules: 14 });
+    assert.equal(result.registeredHooks, 15); assert.equal(result.sourceCoverageComplete, true);
+    assert.equal(result.behaviorVerified, false);
+  });
 
-test('missing and duplicate rows fail even when the total number of rows is unchanged', async t => {
-  const { root, edit, save } = await fixture(t);
-  edit(text => text.replace(/\| \[ai-code.md\].*\n/, text.match(/\| \[data-files.md\].*\n/)[0]));
-  await save(); const result = await inspectInventory(root);
-  for (const code of ['DUPLICATE_SOURCE', 'UNACCOUNTED_SOURCE']) assert.ok(result.issues.some(x => x.code === code), code);
-  assert.equal(result.sourceCoverageComplete, false);
-});
+  test(`missing and duplicate rows fail even when the total number of rows is unchanged (${label})`, async t => {
+    const { root, edit, save } = await fixture(t, ending);
+    edit(text => text.replace(/\| \[ai-code.md\][^\r\n]*\r?\n/, text.match(/\| \[data-files.md\][^\r\n]*\r?\n/)[0]));
+    await save(); const result = await inspectInventory(root);
+    for (const code of ['DUPLICATE_SOURCE', 'UNACCOUNTED_SOURCE']) assert.ok(result.issues.some(x => x.code === code), code);
+    assert.equal(result.sourceCoverageComplete, false);
+  });
 
-test('missing files, undeclared additions and empty dispositions cannot pass', async t => {
-  const { root, edit, save, write } = await fixture(t);
-  await rm(join(root, '.claude/scripts/adr-status.sh'));
-  await write('.claude/scripts/unlisted.sh');
-  edit(text => text.replace(/(\| \[ai-code.md\][^\n]*\|)[^|\n]+\|\n/, '$1 |\n'));
-  await save(); const result = await inspectInventory(root);
-  for (const code of ['MISSING_SOURCE', 'UNACCOUNTED_SOURCE', 'INVALID_INVENTORY_ROW']) assert.ok(result.issues.some(x => x.code === code), code);
-});
+  test(`missing files, undeclared additions and empty dispositions cannot pass (${label})`, async t => {
+    const { root, edit, save, write } = await fixture(t, ending);
+    await rm(join(root, '.claude/scripts/adr-status.sh'));
+    await write('.claude/scripts/unlisted.sh');
+    edit(text => text.replace(/(\| \[ai-code.md\][^\r\n]*\|)[^|\r\n]+\|\r?\n/, `$1 |${ending}`));
+    await save(); const result = await inspectInventory(root);
+    for (const code of ['MISSING_SOURCE', 'UNACCOUNTED_SOURCE', 'INVALID_INVENTORY_ROW']) assert.ok(result.issues.some(x => x.code === code), code);
+  });
+}
 
 test('hook registration changes, unknown commands and newly registered helpers are visible', async t => {
   const { root, settings, save } = await fixture(t);

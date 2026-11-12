@@ -56,7 +56,10 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   Source inventory reconciliation additionally covers all 86 rule/Hook/helper
   inputs and 15 retained Hook registrations. Negative controls and 159 local
   tests pass, along with packed installation; no Codex runtime behavior is
-  inferred. See [source inventory evidence](evidence/source-inventory-2026-11-12.json).
+  inferred. Windows CI exposed two LF-only negative-fixture mutations; explicit
+  CRLF reproduction and corrected fixtures bring local tests to 162 passes. The
+  validator is unchanged. See [source inventory evidence](evidence/source-inventory-2026-11-12.json),
+  including the failed CI attempt.
 - Project attachment, exact runtime pins, local launchers, portable development
   archives, explicit npm restore with lifecycle scripts disabled and single-hop
   dispatch from a different global CLI version.
