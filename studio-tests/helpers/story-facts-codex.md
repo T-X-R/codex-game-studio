@@ -82,3 +82,65 @@ ordered help/invalid usage, unsafe paths, and source immutability.
 An isolated compiled-module test is not installed-package or native Skill proof.
 Root owns full build/typecheck, package-resource routing, cross-platform CI and
 native consumer validation. Those remain open until independently completed.
+
+## Separate slice: ADR status observations
+
+Source: `.claude/scripts/adr-status.sh`. The independent files are
+`toolkit/src/adr-status.ts`, `studio/scripts/adr-status.mjs` and
+`toolkit/test/adr-status.test.mjs`. This observer does not replace `adr-deps`,
+assess a decision's quality, accept an ADR or clear a story's blockers.
+
+Resolve the resource from the pinned runtime, then invoke:
+
+```
+node <resolved-adr-status.mjs> --project ROOT [ID|PATH ...] [--text]
+```
+
+JSON is the new default; `--text` retains the source TSV column/count order.
+`--project` replaces source `--root`/implicit checkout-root selection. Help follows
+source argument order. No selectors means the one-level, case-sensitive
+`docs/architecture/adr-*.md` set, sorted by filename bytes. ID selectors accept
+ADR-0003, adr-0003 or 0003, compare numerically and choose the first matching file.
+An existing project-relative file wins before numeric lookup. Explicit selectors
+of the same physical file collapse once (including hardlinks); default all-files
+discovery retains every matching path, as the source does.
+
+`readAdrStatus(root,{selectors?,template?:{path,content}})` returns
+`qualityAssessed:false`, scope, adrs, counts, templateSections, templatePath,
+missingSelectors and exitCode. Rows retain ID/path, Status, Layer, Date,
+Last Verified, version, Depends On, supersededBy, missing sections and unfilled
+line count. JSON null and empty lists represent absent values; TSV uses the source
+`-`, `none`, `UNFILLED` and comma-separated lists.
+
+The thin resource reads its actual neighboring bundled
+`studio/templates/architecture-decision-record.md`; no `.claude` path is required
+at runtime. Missing template means zero known template sections, not completeness.
+Status is the first non-guidance text under its normalized heading: Accepted,
+Proposed, Deprecated, Superseded, UNFILLED, OTHER, or absent. A present empty Status
+section is OTHER, distinct from no Status section. Last Verified's first date
+wins over Date, otherwise version is unversioned. Preserve source numbered heading,
+code fence, HTML comment, first Layer/Depends On row and exact template-line rules.
+A Superseded row exposes only its first named successor. Self references are
+omitted from dependencies as in the source; this does not prove dependency quality.
+The source's `none` means no extracted target IDs in a non-placeholder row; a
+consumer must still inspect semantically unknown declarations before treating it
+as an explicit absence of dependencies.
+
+Exit 0 means all requested files were observed (including zero files); 1 means
+root/read failure; 2 usage; 3 missing selections, while retaining existing rows;
+4 managed-path rejection. SafePath intentionally rejects outside-root, absolute,
+drive and linked paths supported by the old shell reader. A leading `./` is
+normalized. Empty ADR files remain real rows with absent Status and missing
+sections, matching the retained source. No write or quality verdict is performed.
+
+Local validation covers actual source TSV/exit differentials for statuses,
+numbered/commented/fenced sections, empty files, dates, template placeholders,
+numeric first-match, hardlink selectors and all-file discovery; plus portable
+JSON, boundary and thin-resource subprocess assertions. Source differential
+subtests are explicitly skipped on Windows. Local tests are not package routing,
+cross-platform CI or native story-readiness evidence; root acceptance is separate.
+
+ADR slice status: 11 checks, including five real retained-Bash comparisons,
+passed. Root build/typecheck/content validation, 242 integrated tests on each of
+Node 24.22.2 and 26.13.1, and actual pinned archive/template routing passed on
+macOS ARM64. Cross-platform CI and native consumer acceptance remain separate.

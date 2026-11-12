@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-12",
+  "status": "scoped-pass",
+  "scope": "ADR status, fields and template observations only; no approval, readiness, native consumer or desktop acceptance.",
+  "source": ".claude/scripts/adr-status.sh",
+  "sourceSha256": "92c2c02283aa4c8a76ba7c2c0cf36dabacc1d3ba2c618878322fde21d4bc13ff",
+  "environment": {
+    "platform": "macOS ARM64",
+    "node": [
+      "24.22.2",
+      "26.13.1"
+    ]
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "helperTestsIncludingSubtests": 11,
+    "realBashDifferentials": 5,
+    "fullSuitePerNode": {
+      "pass": 242,
+      "fail": 0,
+      "skip": 0
+    },
+    "installedArchive": "PASS",
+    "independentSourceReview": "No blocking finding; parser, selectors, pinned paths and quality boundary checked against retained Bash."
+  },
+  "installedArchiveChecks": [
+    "Pinned script path and source bytes match",
+    "Actual neighboring bundled template bytes and section count",
+    "Template placeholders are observed without approval",
+    "Superseded target ID extracted",
+    "Partial missing selector retains valid row with exit3 and qualityAssessed false"
+  ],
+  "limits": [
+    "Windows Bash differentials are explicitly skipped; portable assertions still apply.",
+    "No quality verdict follows from an observed status or helper exit0.",
+    "Missing template yields zero known sections, not completeness.",
+    "Cross-platform CI and native consuming Skills not established by these local tests."
+  ],
+  "fileHashes": {
+    "toolkit/src/adr-status.ts": "94170a9e05cd705fe989abc991d2eb07b006bdd97b2b3e22fbdcdca82c9de290",
+    "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+    "toolkit/test/adr-status.test.mjs": "a4b34837061348e2af8110727357b19cfbeea3e79af7fe378e647587ad372434",
+    "studio-tests/helpers/story-facts-codex.md": "d48e5e07f27decb6e41d0b06e46a042b5d4cb5385bf91c8a1cabe22a9e8a0b56",
+    "toolkit/test/packed-smoke.mjs": "8a75a518fc6e9462f152679d69e867fde6371b21052fb1cfd9821e10101861e9"
+  },
+  "logs": {
+    "game-studio-adr-build.log": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28",
+    "game-studio-adr-typecheck.log": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b",
+    "game-studio-adr-lint.log": "235c6f0228878e5f1f2b4f281d97cef27bd43e7cc6ae91a152a2a2c092644e6d",
+    "game-studio-adr-node24-tests.log": "fa17a47e214632c679c02c7945b7d781e83ed0612e9c80f65eed02001fa7deb6",
+    "game-studio-adr-node26-tests.log": "cb913fcc4372f23fe8f38e079c925aedb11f46571651eac1c0a341c0e7af6a16",
+    "game-studio-adr-pack.log": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+  }
+}
