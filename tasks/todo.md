@@ -213,6 +213,7 @@ unreleased; full host and workflow acceptance is still open.
   - Likely files: specified by each S/A row contract below. Scope: S/M per row, not one bulk task.
 
 - [ ] T22 Migrate shared helpers and scoped rules
+  - 2026-11-12 registry slice: a portable, read-only bundled helper supports list/get/refs/slice/validate/compare and all eight next-ID kinds using parsed YAML, explicit missing/layout states and exact source/reference locations. Ten reader/command tests and installed-package execution pass; the integrated suite has 198 passes, including receipt tests. `validate`/`compare` findings remain observations, never domain approval. See [contract and limits](../docs/registry-observations.md). Broader source parity and consuming-workflow acceptance remain open.
   - 2026-11-12 artifact follow-up: `3b6b61a` preserves the complete catalog as a packaged Codex resource; `c6e3c7e` adds `check --kind artifacts [--phase <id> | --path <id>]`. Ten legacy/new project fixtures match 540 step observations across 49 phase steps and five minimal-path steps. A real unreadable-file control reports UNKNOWN and exit three without dropping phase rows. Catalog parity, seven CLI/helper tests, build/typecheck/content validation, 184 full-suite tests and installed-runtime inspection pass. See [artifact contract](../docs/artifact-check.md). Workflow consumers and remaining helper/rule migrations remain open.
   - 2026-11-12 deterministic gate prerequisites: `d7da380` ports GDD section/placeholder observations as `check --kind gdd`; eight legacy/new fixtures match. `26ac61f` ports ADR dependency extraction, cycle membership, transitive blocking and dependency-first ordering as `check --kind adr-deps`; a real upstream comparison matches the cycle/blocked/independent fixture. Both use project-relative safe paths, preserve input files, distinguish empty input as not assessed and leave verdicts to workflows. Nine new CLI tests bring the suite to 176 passes; build/typecheck/content validation and packed-runtime positive/empty checks pass. The first full GDD run encountered the sandbox's localhost-listen denial; the authorized rerun passed all 171 tests before the ADR additions. See [GDD contract](../docs/gdd-structure.md) and [ADR contract](../docs/adr-dependencies.md). Artifact-catalog checking, workflow consumers, remaining helpers and scoped rules remain open.
   - Modules: `project-state`, `game-operations`, `codex-integration`. Dependencies: T20.
@@ -282,7 +283,7 @@ Each S-row is an individual task owned by `codex-integration`.
 - Record the tested client, scenario, artifact and result before checking a row. The inventory contains each row's exact source/spec paths.
 
 - [ ] S001 Migrate `adopt` to `game-studio-adopt`. Evidence: pending.
-- [ ] S002 Migrate `architecture-decision` to `game-studio-architecture-decision`. Evidence: pending.
+- [ ] S002 Migrate `architecture-decision` to `game-studio-architecture-decision`. Partial: author/retrofit/accept Skill, references, complete ADR template and isolated fixtures implemented; cross-reviewed against source. Full native/engine/desktop acceptance remains pending in [the Codex matrix](../studio-tests/skills/authoring/architecture-decision-codex.md).
 - [ ] S003 Migrate `architecture-review` to `game-studio-architecture-review`. Evidence: pending.
 - [ ] S004 Migrate `art-bible` to `game-studio-art-bible`. Evidence: pending.
 - [ ] S005 Migrate `asset-audit` to `game-studio-asset-audit`. Evidence: pending.
@@ -302,8 +303,8 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S018 Migrate `create-stories` to `game-studio-create-stories`. Evidence: pending.
 - [ ] S019 Migrate `cut` to `game-studio-cut`. Evidence: pending.
 - [ ] S020 Migrate `day-one-patch` to `game-studio-day-one-patch`. Evidence: pending.
-- [ ] S021 Migrate `design-review` to `game-studio-design-review`. Evidence: pending.
-- [ ] S022 Migrate `design-system` to `game-studio-design-system`. Evidence: pending.
+- [ ] S021 Migrate `design-review` to `game-studio-design-review`. Partial: Skill, references, byte-sensitive receipt helper and isolated fixtures implemented. Cross-review found and corrected mixing latest review metadata with historical hashes; four helper tests pass. Native tests also exposed weakened scope-estimate criteria; the correction passed one identical-input freshness regression, while the broader matrix remains underway. See [the Codex matrix](../studio-tests/skills/review/design-review-codex.md); no complete behavior acceptance claimed.
+- [ ] S022 Migrate `design-system` to `game-studio-design-system`. Partial: full sectional workflow, local lenses, GDD template/guide and isolated fixtures implemented and source-cross-reviewed. Exact Designed status and separate independent-review ownership retained. Full source/native/desktop acceptance remains open in [the Codex matrix](../studio-tests/skills/authoring/design-system-codex.md).
 - [ ] S023 Migrate `dev-story` to `game-studio-dev-story`. Evidence: pending.
 - [ ] S024 Migrate `estimate` to `game-studio-estimate`. Evidence: pending.
 - [ ] S025 Migrate `gate-check` to `game-studio-gate-check`. Evidence: partial — canonical Skill, six orchestration references, all six phase definitions and [13 reviewed native scenarios](../docs/evidence/gate-check-skill-2026-11-12.json); the complete native matrix remains open.

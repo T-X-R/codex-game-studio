@@ -6,6 +6,18 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Three authoring/review workflows now have initial Codex implementations and
+  source-derived acceptance matrices: design-system, design-review and
+  architecture-decision. Cross-review corrected a review-receipt bug that could
+  combine new review metadata with older file hashes; four deterministic tests
+  cover the correction. Native scenarios are underway and have exposed scope
+  estimation, ADR Layer formatting and cross-reference ownership-label defects.
+  Corrections are undergoing fresh same-input runs; these rows remain partial. The catalog
+  now contains eleven partial Skills, nine partial roles and no verified rows.
+  Shared [registry observations](registry-observations.md) provide real parsed
+  reads, validation, comparison and ID numbering. Build/content checks, 198 local
+  tests and installed-archive verification pass; native workflow acceptance is
+  recorded separately and remains incomplete.
 - Systems mapping now has a Codex Skill, two focused references and the complete
   fixed-column index template. [Eight native scenarios](evidence/map-systems-skill-2026-11-12.json)
   cover new/resumed mapping, source absence, read-only next selection, optional
@@ -18,6 +30,10 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   remain in the evidence. Build/typecheck, 184 regression tests and rebuilt
   archive checks pass. This is selected CLI evidence, not complete S030 or desktop
   acceptance; the remaining behavior matrix stays open.
+  Commit `b57cfb2e13c9e87813a98310e5765af3d64c4762` also passed all five jobs in
+  [CI](https://github.com/T-X-R/codex-game-studio/actions/runs/43218257050), including
+  Windows/macOS/Linux and real Chrome replay. That run predates the three parallel
+  authoring/review additions and does not validate them.
 - Read-only gate prerequisites now expose `check --kind gdd` for section and
   placeholder observations and `check --kind adr-deps` for dependency edges,
   cycles, transitive blocking and tentative ordering. Missing dependency
