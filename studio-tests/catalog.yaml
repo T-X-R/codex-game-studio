@@ -202,7 +202,8 @@ skills:
     priority: high
     category: authoring
     target: .agents/skills/game-studio-design-system/SKILL.md
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/skills/authoring/design-system-codex.md
 
   - name: consistency-check
     spec: studio-tests/skills/analysis/consistency-check.md
