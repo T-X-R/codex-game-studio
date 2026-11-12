@@ -83,7 +83,8 @@ skills:
     priority: critical
     category: review
     target: .agents/skills/game-studio-architecture-review/SKILL.md
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/skills/review/architecture-review-codex.md
 
   # High — pipeline-critical skills
   - name: create-epics
@@ -517,7 +518,8 @@ skills:
     priority: low
     category: authoring
     target: .agents/skills/game-studio-create-architecture/SKILL.md
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/skills/authoring/create-architecture-codex.md
 
   - name: code-review
     spec: studio-tests/skills/analysis/code-review.md
@@ -1088,7 +1090,8 @@ agents:
     last_category_result: ""
     category: lead
     target: .codex/agents/game-studio-systems-designer.toml
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/roles/systems-designer-codex.md
 
   - name: level-designer
     spec: studio-tests/agents/leads/level-designer.md

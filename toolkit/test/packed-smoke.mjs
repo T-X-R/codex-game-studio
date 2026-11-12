@@ -43,7 +43,7 @@ try {
   assert.equal(command(globalCli, 'version').status, 'ok');
   const project = join(temp, '我的 game');
   assert.equal(command(globalCli, 'init', project, '--engine', 'web').status, 'ok');
-  const roles = ['qa-tester', 'qa-lead', 'game-designer', 'lead-programmer', 'gameplay-programmer'].map(role => `.codex/agents/game-studio-${role}.toml`);
+  const roles = ['qa-tester', 'qa-lead', 'game-designer', 'lead-programmer', 'gameplay-programmer', 'systems-designer'].map(role => `.codex/agents/game-studio-${role}.toml`);
   for (const role of roles) {
     assert.equal(await readFile(join(project, role), 'utf8'),
       await readFile(join(packageRoot, '..', role), 'utf8'));
@@ -71,7 +71,7 @@ try {
     const id = `.agents/skills/game-studio-map-systems/${path}`;
     assert.equal(await readFile(join(project, id), 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
-  for (const skill of ['design-system', 'design-review', 'architecture-decision']) {
+  for (const skill of ['design-system', 'design-review', 'architecture-decision', 'create-architecture', 'architecture-review']) {
     const path = `.agents/skills/game-studio-${skill}`;
     const source = join(packageRoot, '..', path);
     const expected = [];
@@ -117,6 +117,22 @@ try {
   }
   command(globalCli, 'restore', '--project', project, '--archive', archive, '--offline');
   const launcher = join(project, '.game-studio/run.cjs');
+  const receipts = JSON.parse(execute(launcher, ['resource', 'path', 'studio/scripts/review-receipts.mjs', '--json'], project)).data.path;
+  assert.ok(receipts.startsWith(join(project, '.game-studio/node_modules')));
+  assert.deepEqual(await readFile(receipts), await readFile(join(packageRoot, '../studio/scripts/review-receipts.mjs')));
+  const receiptWrapper = join(project, '.agents/skills/game-studio-design-review/scripts/review-receipts.mjs');
+  const receiptInput = 'receipt input 数据.md';
+  await writeFile(join(project, receiptInput), 'reviewed content\n');
+  const stamps = execute(receipts, ['hash', receiptInput], project);
+  assert.equal(execute(receiptWrapper, ['hash', receiptInput], project), stamps);
+  await writeFile(join(project, 'receipt-log.md'), `## Review\n${stamps}`);
+  assert.match(execute(receiptWrapper, ['check', 'receipt-log.md', receiptInput], project), /UNCHANGED:/);
+  await writeFile(join(project, receiptInput), 'changed content\n');
+  assert.match(execute(receiptWrapper, ['check', 'receipt-log.md', receiptInput], project), /CHANGED:/);
+  assert.throws(() => execute(receiptWrapper, ['hash', receiptInput], temp), error =>
+    error.status === 2 && /pinned project runtime/.test(error.stderr.toString()));
+  await rm(join(project, receiptInput));
+  await rm(join(project, 'receipt-log.md'));
   const artifacts = command(launcher, 'check', '--kind', 'artifacts', '--project', project).data;
   assert.equal(artifacts.counts.groups, 7);
   assert.equal(artifacts.counts.steps, 49);
