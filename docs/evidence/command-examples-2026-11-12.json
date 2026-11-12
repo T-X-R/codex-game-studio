@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-12",
+  "scope": "T20 explicit command-example static validation",
+  "implementationCommit": "efb06edb53ab5bfab948e06be6df00bd58323d21",
+  "environment": {
+    "node": "24.22.2",
+    "os": "macOS ARM64"
+  },
+  "checks": {
+    "build": "passed",
+    "typecheck": "passed",
+    "lint:content": "passed",
+    "unitAndIntegration": {
+      "passed": 153,
+      "failed": 0,
+      "skipped": 0
+    },
+    "packedInstall": {
+      "result": "passed",
+      "control": "Append an unknown command to an installed Skill reference; observe INVALID_COMMAND_EXAMPLE; restore exact bytes and observe valid content before continuing installation checks."
+    }
+  },
+  "negativeCoverage": [
+    "unknown command and schema target",
+    "unsupported or mistyped option",
+    "missing string option value",
+    "extra or missing positional argument",
+    "unsupported shell operators and command substitution",
+    "unclosed quote",
+    "stale examples in entrypoint, nested reference and role instructions"
+  ],
+  "limitations": [
+    "Static argument validation only; no handler execution or filesystem/permission assessment.",
+    "Only explicit inline/fenced supported launcher syntax is inspected; prose and abbreviated examples need review.",
+    "Handler-specific values and required options are not part of registry metadata.",
+    "No native Codex or gameplay acceptance is inferred."
+  ],
+  "behaviorVerified": false,
+  "sha256": {
+    "toolkit/src/content-commands.ts": "59907f9e164570a1e4787b9b19d7049c5dfa30d57ae1d0c3c283fd7ae1474d0e",
+    "toolkit/src/content-tree.ts": "92c1726db182ffd8d3f3ede2aff05ceaf427fe7c00dfdce985f3e8e716dd90d6",
+    "toolkit/test/content-commands.test.mjs": "48826e23f30d6a582adb7bb4e9821ea17c0d74c11a9a70f174c84f5dc714c0a7",
+    "toolkit/test/content-tree.test.mjs": "0d232ac0626e6ff73768b50eaa7d7f2080e25cf5e33d1e7dc2438b1b850c27b3",
+    "toolkit/test/packed-smoke.mjs": "4f7ffe2ded2b268cfb611fac4e05a7850774ab7da65db937a2149625676d3a5c"
+  }
+}

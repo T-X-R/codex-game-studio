@@ -33,6 +33,13 @@ try {
     assert.equal(broken.status, 'invalid');
     assert.ok(broken.issues.some(issue => issue.code === 'MISSING_RESOURCE' && issue.path.endsWith('game-studio-project-settings/SKILL.md')));
   } finally { await writeFile(reference, referenceBytes); }
+  await writeFile(reference, Buffer.concat([referenceBytes, Buffer.from('\nRun `game-studio removed-command --json`.\n')]));
+  try {
+    const stale = await inspectContent(contentRoot);
+    assert.equal(stale.status, 'invalid');
+    assert.ok(stale.issues.some(issue => issue.code === 'INVALID_COMMAND_EXAMPLE' && issue.path.endsWith('/choosing-settings.md')));
+  } finally { await writeFile(reference, referenceBytes); }
+  assert.equal((await inspectContent(contentRoot)).status, 'valid');
   assert.equal(command(globalCli, 'version').status, 'ok');
   const project = join(temp, '我的 game');
   assert.equal(command(globalCli, 'init', project, '--engine', 'web').status, 'ok');

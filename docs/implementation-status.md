@@ -45,7 +45,9 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   deliberately removed reference before restoring it. Metadata, resource,
   catalog and negative-path tests bring the local suite to 149 passes. See
   [validation evidence](evidence/content-validation-2026-11-12.json) and
-  [the contract](content-validation.md). T20 still needs command-example checks,
+  [the contract](content-validation.md). A subsequent [command-example slice](evidence/command-examples-2026-11-12.json)
+  checks explicit invocations against runtime command metadata, including an
+  installed-archive stale-command control; 153 local tests pass. T20 still needs
   the Codex behavior rubric, rule/hook/helper inventory cross-checks and legacy
   consumer replacement; host/journey acceptance remains independently open.
 - Project attachment, exact runtime pins, local launchers, portable development
