@@ -11,8 +11,14 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   accessibility checks and research-based design choices. Guided authorization
   replaces repeated file prompts without deciding unanswered creative questions.
   Build/typecheck/content checks, 293 tests on each Node 24/26 and actual installed
-  role-byte checks pass. Native behavior is pending. The catalog now has sixteen
-  partial Skills and twelve partial roles, with no fully verified rows.
+  role-byte checks pass. [Six native runs](evidence/ux-designer-native-2026-11-13.json)
+  preserve two selected passes and four contract failures: early dependent drafting
+  before a real choice, and missing end-of-analysis choice blocks. Flow preservation,
+  research use and the timing requirement pass their narrower subchecks; two timing
+  options are not a failure merely because the source lists more examples. Root
+  reviewed all six actual child finals and rehashed 3,383 regular files. A minimal
+  ordering correction is under review, with same-input reruns pending. The catalog
+  has sixteen partial Skills and twelve partial roles, with no fully verified rows.
 - The [final selected readiness matrix](evidence/story-readiness-final-matrix-2026-11-13.json)
   records 44 runs across all 39 defined labels: 33 selected passes, six NOT ASSESSED
   outcomes and five retained historical failures. After the initial 38-run root
