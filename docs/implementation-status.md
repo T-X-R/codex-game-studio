@@ -17,8 +17,11 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   research use and the timing requirement pass their narrower subchecks; two timing
   options are not a failure merely because the source lists more examples. Root
   reviewed all six actual child finals and rehashed 3,383 regular files. A minimal
-  ordering correction is under review, with same-input reruns pending. The catalog
-  has sixteen partial Skills and twelve partial roles, with no fully verified rows.
+  ordering correction now has [four same-input retries](evidence/ux-designer-reruns-2026-11-13.json).
+  Compression and research pass; discovery stops dependent drafting correctly, but
+  discovery and timing still fail final-choice ordering. Root independently checked
+  another 2,255 regular files and actual archive-member differences. The six latest
+  scenario results are four selected passes and two failures; A047 remains partial.
 - The [final selected readiness matrix](evidence/story-readiness-final-matrix-2026-11-13.json)
   records 44 runs across all 39 defined labels: 33 selected passes, six NOT ASSESSED
   outcomes and five retained historical failures. After the initial 38-run root
