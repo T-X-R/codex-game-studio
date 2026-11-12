@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-11-12",
+  "scope": "Packed runtime configuration, Godot project scaffolding, editor import and configured GDScript execution",
+  "platform": "macOS ARM64",
+  "node": "24.22.2",
+  "pinnedVersion": "4.7.2",
+  "actualVersion": "4.7.2.stable.official.ed1daf0bf",
+  "executableSource": "Previously installed local editor, rechecked in this run; no system installation changed",
+  "executableSha256": "c7cccbf8fb143e34e02fd6521e09be2c2b974f0d5db080b19071c9c570718ccf",
+  "fixture": "game-studio-godot-live-L9vor2",
+  "configurationAndScaffold": {
+    "runtimeRestoredFromActualArchive": true,
+    "commandsUsedRestoredLauncher": true,
+    "engineAndPreferenceMirrorWritten": true,
+    "projectPathContainsSpacesAndUnicode": true,
+    "projectTitleContainsQuotesAndBackslash": true,
+    "dryRunDidNotWriteProjectFile": true,
+    "renderer": "Compatibility",
+    "mainSceneLeftUnset": true,
+    "projectFilePreservedAfterImportAndRepeatScaffold": true
+  },
+  "import": { "status": "ok", "attempts": 1, "processExitCode": 0, "errorDetected": false },
+  "configuredSmoke": { "status": "ok", "processExitCode": 0, "marker": "STUDIO_GODOT_SMOKE_OK" },
+  "configuredFailure": { "status": "failed", "toolkitExitCode": 5, "processExitCode": 7 },
+  "versionMismatch": { "configuredVersion": "4.0.0", "status": "not_assessed", "toolkitExitCode": 3, "processes": ["--version"], "importNotStarted": true },
+  "corruptAssetImport": { "status": "failed", "toolkitExitCode": 5, "processExitCode": 0, "errorDetected": true, "fixture": "Invalid bytes in assets/broken.png" },
+  "reproduce": "Set GAME_STUDIO_GODOT and GAME_STUDIO_GODOT_VERSION, then run node toolkit/test/godot-smoke.mjs with supported Node after build",
+  "result": "passed_for_stated_scope",
+  "notAssessed": ["export/build", "C#/.NET", "Forward+/Mobile GPU rendering", "gameplay and human play acceptance", "other operating systems"]
+}

@@ -207,6 +207,7 @@ unreleased; full host and workflow acceptance is still open.
   - Likely files per helper slice: source/resource, consumer, contract fixture, test, source mapping. Per rule slice: rule, applicability index, behavior fixture. Scope: S/M.
 
 - [ ] T23 Validate engine-specific operations
+  - 2026-11-12 Godot slice: `engine scaffold` preserves existing files and derives only an absent Godot 4.x project from explicit choices; `engine verify` checks installed version/capability and interprets import logs. Build/typecheck, 106 local tests and packed-install checks pass. A real macOS ARM64 Godot 4.7.2 fixture verifies packed setup/scaffold/import, GDScript smoke, nonzero failure, version mismatch and zero-exit corrupt-asset rejection. See `docs/evidence/godot-import-2026-11-12.json`. Export/build, C#, other OS/editor execution and full S051 behavior remain open.
   - Implemented shared slice: engine-specific root inspection and configured OS-aware command execution with failure/unavailable/timeout evidence. Tests exercise actual Node/npm processes; they do not certify Godot, Unity or Unreal editor/license/build execution. Engine setup remains open.
   - Module: `game-operations`. Dependencies: T15, T22 relevant helpers.
   - Work queue: separate Web, Godot, Unity and Unreal slices; further split build and test adapters if more than five files are needed.

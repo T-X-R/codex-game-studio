@@ -63,6 +63,27 @@ try {
   assert.equal(command(globalCli, 'check', 'prototypes/smoke', '--project', project).status, 'ok');
   command(globalCli, 'package', 'prototypes/smoke', '--output', 'builds/smoke', '--project', project);
   assert.ok(await readFile(join(project, 'builds/smoke/index.html')));
+  const godotProject = join(temp, 'Godot scaffold');
+  command(globalCli, 'init', godotProject, '--engine', 'godot');
+  command(globalCli, 'restore', '--project', godotProject, '--archive', archive, '--offline');
+  const godotLauncher = join(godotProject, '.game-studio/run.cjs');
+  await writeFile(join(godotProject, 'engine.json'), JSON.stringify({ engine: {
+    name: 'Godot', version: '4.6.1', language: 'GDScript', rendering: 'Compatibility', code_root: 'src', test_root: 'tests',
+  } }));
+  command(godotLauncher, 'engine', 'setup', '--input', 'engine.json', '--project', godotProject);
+  assert.equal(command(godotLauncher, 'engine', 'scaffold', '--dry-run', '--project', godotProject).data.outcome.state, 'planned');
+  await assert.rejects(readFile(join(godotProject, 'project.godot')), { code: 'ENOENT' });
+  assert.equal(command(godotLauncher, 'engine', 'scaffold', '--project', godotProject).data.outcome.state, 'created');
+  assert.equal(command(godotLauncher, 'engine', 'scaffold', '--project', godotProject).data.outcome.state, 'already_present');
+  assert.equal(command(godotLauncher, 'engine', 'verify', '--dry-run', '--project', godotProject).data.status, 'planned');
+  try {
+    command(godotLauncher, 'engine', 'verify', '--executable', join(temp, 'missing-editor'), '--project', godotProject);
+    assert.fail('A missing editor must not pass verification');
+  } catch (error) {
+    assert.equal(error.status, 3); assert.equal(JSON.parse(error.stdout).status, 'not_assessed');
+  }
+  command(globalCli, 'detach', '--project', godotProject);
+  assert.match(await readFile(join(godotProject, 'project.godot'), 'utf8'), /config_version=5/);
   const lock = await readFile(join(project, '.game-studio/package-lock.json'), 'utf8');
   assert.equal(JSON.parse(lock).packages['node_modules/@t-x-r/game-studio'].resolved, 'file:runtime.tgz');
   await rm(archive);

@@ -28,6 +28,10 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   mirror. It preserves custom notes and unspecified values, guards both documents
   against concurrent edits, and reports uncreated directories without claiming
   runtime readiness. See [the configuration contract](engine-configuration.md).
+- Godot scaffolding creates only a missing project file from explicit settings.
+  Editor verification checks the pinned version and import capability, preserves
+  per-process logs, and rejects engine errors even with a zero exit. Unity/Unreal
+  project creation remains editor-owned; Web growth remains open.
 - Configured test/smoke/build execution selects OS-specific project commands,
   uses explicit engine defaults only when applicable, preserves stdout/stderr and
   original exit codes, and distinguishes failure, timeout and unavailable capability.
@@ -63,7 +67,7 @@ were not modified; verification used an isolated Node 24 distribution.
   remains unchanged; an intentional browser error returns failure.
 - Official Skill-format validation for onboarding and the three project Skills.
 
-Source additions after the published alpha: build/typecheck and 93 local tests
+Source additions after the published alpha: build/typecheck and 106 local tests
 pass with no skips. Packed-install tests exercise configuration summaries/writes,
 checkpoint save/reopen/detach preservation, engine setup dry-run/apply/no-op and
 preference preservation after detach, engine inspection and actual test
@@ -110,6 +114,15 @@ Engine configuration and its packed-runtime checks at
 [native CI](https://github.com/T-X-R/codex-game-studio/actions/runs/43149199444):
 macOS/Windows/Linux Node 24, Linux Node 26, and real Chrome replay. No new
 installation archive has been published.
+
+A real Godot `4.7.2.stable.official.ed1daf0bf` fixture on macOS ARM64 verifies the
+packed launcher through engine configuration, scaffold preview/create/preservation,
+headless import, successful GDScript smoke execution, an actual test exit 7, and
+version mismatch without import. A corrupt PNG produces Godot errors with exit 0;
+`engine verify` correctly returns failure. See
+[`godot-import-2026-11-12.json`](evidence/godot-import-2026-11-12.json) and the
+reproducible `toolkit/test/godot-smoke.mjs`. This is engine execution evidence,
+not an export/build, C# test, graphical gameplay run or human play acceptance.
 
 The checkpoint, engine inspection, test execution and configuration summary
 additions at `bbcb238505c457ac047938f2949e2bf8c9e98e58` passed all five jobs in
