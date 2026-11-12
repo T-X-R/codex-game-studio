@@ -21,6 +21,17 @@ try {
   const failed = await capturePrototype(root, 'prototypes/replay', 'evidence/failure', options);
   assert.equal(failed.exitCode, 5);
   assert.ok(failed.uncaught.length || failed.rows.some(row => ['error', 'crash'].includes(row[0])));
+  await writeFile(htmlPath, '<html><body><canvas id="game"></canvas><script>document.title = "No game hook";</script></body></html>');
+  const missingHook = await capturePrototype(root, 'prototypes/replay', 'evidence/missing-hook', options);
+  assert.equal(missingHook.exitCode, 3, JSON.stringify(missingHook));
+  assert.equal(missingHook.replayComplete, false);
+  assert.ok(missingHook.rows.some(row => row[0] === 'not_assessed'));
+  await writeFile(htmlPath, '<html><body><canvas id="game"></canvas><script type="module" src="entry.js"></script></body></html>');
+  await writeFile(join(root, 'prototypes/replay/entry.js'), 'window.game = { scene: "play", state: {}, step() {}, press() {}, hold() {} };');
+  const blockedModule = await capturePrototype(root, 'prototypes/replay', 'evidence/file-module', options);
+  assert.equal(blockedModule.exitCode, 3, JSON.stringify(blockedModule));
+  assert.equal(blockedModule.replayComplete, false);
+  assert.ok(blockedModule.notAssessed.some(reason => reason.includes('window.game.step')));
   console.log(JSON.stringify({ browser: first.rows.find(row => row[0] === 'ua')?.[1],
-    checks: ['fixed-seed state equality', 'identical screenshots', 'source preservation', 'real browser error detection'] }));
+    checks: ['fixed-seed state equality', 'identical screenshots', 'source preservation', 'real browser error detection', 'missing game hook is not assessed', 'file module loading failure is not assessed'] }));
 } finally { await rm(root, { recursive: true, force: true }); }

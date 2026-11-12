@@ -62,11 +62,12 @@ export async function capturePrototype(project: string, folder: string, output: 
       '--enable-unsafe-swiftshader', '--window-size=1280,720', '--virtual-time-budget=500', `--screenshot=${screenshot}`, page.href], { timeoutMs });
     const observations = parseConsole(execution.stderr);
     const png = await exists(screenshot) ? await readFile(screenshot) : null;
-    const complete = observations.rows.some(row => row[0] === 'done' && row[3] !== 'real time');
+    const notAssessed = observations.rows.filter(row => row[0] === 'not_assessed').map(row => row.slice(1).join(' | '));
+    const complete = notAssessed.length === 0 && observations.rows.some(row => row[0] === 'done' && ['stop', 'log finished'].includes(row[3]!));
     const failed = observations.uncaught.length > 0 || observations.rows.some(row => ['crash', 'error', 'nonfinite', 'badinput', 'botfail'].includes(row[0]!));
     const exitCode = [124, 130].includes(execution.exitCode) ? execution.exitCode : failed ? 5 : !png || !complete || execution.exitCode !== 0 ? 3 : 0;
     const report = { exitCode, browser, seed, log: options.log ?? 'wait:1', hookless: !!options.hookless, source: folder,
-      browserExitCode: execution.exitCode, replayComplete: complete, ...observations, judgment: 'Recorded replay evidence; design quality and human play acceptance are not assessed.' };
+      browserExitCode: execution.exitCode, replayComplete: complete, notAssessed, ...observations, judgment: 'Recorded replay evidence; design quality and human play acceptance are not assessed.' };
     const evidence: Record<string, Buffer> = { 'report.json': Buffer.from(`${JSON.stringify(report, null, 2)}\n`), 'browser.log': Buffer.from(execution.stderr) };
     if (png) evidence['screenshot.png'] = png;
     const artifacts = await writeNewDirectory(project, output, evidence, false);
