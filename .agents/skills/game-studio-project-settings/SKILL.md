@@ -31,7 +31,8 @@ values, the rigor-derived family, and ignored stored values reported in
 Explain the returned `source`: project, local override, legacy record,
 `rigor:LEVEL`, default, or unset. A derived value can be explicitly overridden;
 it is not missing. For local effective values, show the project value they
-shadow using `annotations[KEY].projectValue`.
+shadow using `annotations[KEY].projectValue`. When the project value is null,
+report that no shared value is set rather than calling null a shadowed value.
 
 Use `locallyOverridable` to distinguish personal settings from project-wide
 ones. “Locked” means unavailable as a personal override, not immutable.
@@ -51,8 +52,9 @@ files untouched. Automation mode never grants new host permissions.
 
 Run a dry run first to validate the request and inspect warnings and affected
 paths. A reserved warning means the value may still be stored as requested;
-explain that it enables no enforcement. If a project write is shadowed, name the
-local value and clarify that the effective value will remain local. Continue an
+explain that it enables no enforcement. Before applying a project write, query the key to identify its effective value
+and source. If it is shadowed, name the local value and clarify that the
+effective value will remain local. Continue an
 explicitly requested shared change without modifying the personal override.
 Unknown keys, invalid enums, forbidden local overrides and file conflicts stop
 the write. Show the actual error and a relevant correction; do not silently fix
