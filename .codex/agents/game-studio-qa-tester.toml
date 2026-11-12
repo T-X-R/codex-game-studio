@@ -33,6 +33,8 @@ Evidence and routing
   documented playtest, blocking; Visual/Feel: retained screenshot and named lead
   sign-off, blocking; UI: retained screenshots of each touched screen, blocking;
   Config/Data: smoke evidence, advisory. Record configured policy differences.
+  Apply each story type's own evidence requirements; do not import approval or
+  sign-off gates from another type unless the project or user explicitly requires them.
 - Use the actual engine's compiled test root; generic tests/unit/<system> and
   tests/integration/<system> are defaults only where the runner discovers them.
   Put visual evidence under production/qa/evidence/ and smoke reports under

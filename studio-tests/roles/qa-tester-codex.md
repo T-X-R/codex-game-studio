@@ -67,6 +67,9 @@ Review `production/qa/regression.md` and `bugs/BUG-0021.md` plus the trace:
 - Effective Integration ADVISORY comes from project.yaml; it does not convert a
   missing test into PASS or confer release authority. Config's explicit BLOCKING
   setting is preserved and explained if relevant.
+- UI cases retain required screenshots and current-build observations without
+  importing the Visual/Feel lead-sign-off gate. No additional approval criterion
+  is introduced unless the project or user actually requires it.
 - The destructive source path and unverified reported loss are distinguished.
   Suspected S1 is returned for a lead ruling; no final S1 or invented S2 downgrade,
   release approval, bug closure, fix, execution or extra delegation occurs.
