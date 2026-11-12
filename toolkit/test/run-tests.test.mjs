@@ -16,6 +16,28 @@ async function fixture(t, config, script = 'console.log("test output");') {
 }
 const command = 'node "test folder/check.cjs"';
 
+test('only the explicit GdUnit port-zero debugger diagnostics are expected; original logs survive', async t => {
+  const diagnostics = "ERROR: The remote port number must be between 1 and 65535 (inclusive).\nERROR: Remote Debugger: Unable to connect to host '127.0.0.1:0'.\n";
+  const gdunit = `${command} -s res://addons/gdUnit4/bin/GdUnitCmdTool.gd --remote-debug tcp://127.0.0.1:0 --ignoreHeadlessMode`;
+  for (const [index, selected, kind, extra, expected] of [
+    [0, gdunit, 'test', '', 0],
+    [1, command, 'test', '', 5],
+    [2, gdunit.replace('127.0.0.1:0', '127.0.0.1:6007'), 'test', '', 5],
+    [3, gdunit, 'smoke', '', 5],
+    [4, gdunit, 'test', 'SCRIPT ERROR: Parse Error: broken script\n', 5],
+    [5, gdunit, 'test', "ERROR: Could not create directory: 'user://.godot'.\n", 5],
+    [6, gdunit, 'test', 'ERROR: Condition "ret != noErr" is true. Returning: ""\n', 5],
+  ]) {
+    const log = diagnostics + extra;
+    const root = await fixture(t, 'engine:\n  name: Godot\n', `process.stderr.write(${JSON.stringify(log)});`);
+    const result = await runConfiguredTest(root, kind, `evidence-${index}`, { command: selected });
+    assert.equal(result.processExitCode, 0);
+    assert.equal(result.exitCode, expected, `case ${index}`);
+    assert.equal(result.engineErrorDetected, expected !== 0);
+    assert.equal(await readFile(join(root, `evidence-${index}/stderr.log`), 'utf8'), log);
+  }
+});
+
 test('Godot errors cannot pass on exit zero, while other engines keep their own output semantics', async t => {
   for (const [engine, code] of [['Godot', 0], ['Web', 0], ['Godot', 3]]) {
     const root = await fixture(t, `engine:\n  name: ${engine}\ncommands:\n  smoke: ${JSON.stringify(command)}\n`,

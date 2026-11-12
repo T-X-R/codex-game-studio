@@ -88,12 +88,17 @@ export async function runConfiguredTest(project: string, kind: string, output: s
     }
   }
   const missing = selected.command === null || reason !== null || [126, 127, 9009].includes(execution.exitCode);
-  const engineErrorDetected = engine === 'Godot' && hasGodotErrors(`${execution.stdout}\n${execution.stderr}`);
+  // GdUnit uses port zero to avoid an interactive debugger on script errors.
+  // Keep all diagnostics in the logs; only these explicit test flags permit the known pair.
+  const portZeroDebuggerExpected = engine === 'Godot' && kind === 'test'
+    && /(?:^|\s)["']?res:\/\/addons\/gdUnit4\/bin\/GdUnitCmdTool\.gd["']?(?=\s|$)/.test(selected.command ?? '')
+    && /(?:^|\s)--remote-debug\s+(["']?)tcp:\/\/127\.0\.0\.1:0\1(?=\s|$)/.test(selected.command ?? '');
+  const engineErrorDetected = engine === 'Godot' && hasGodotErrors(`${execution.stdout}\n${execution.stderr}`, portZeroDebuggerExpected);
   const exitCode = missing ? 3 : [124, 130].includes(execution.exitCode) ? execution.exitCode : execution.exitCode === 0 && !engineErrorDetected ? 0 : 5;
   if (missing && !reason) reason = 'The configured command could not start a required executable; inspect stderr.log';
   if (engineErrorDetected && !reason) reason = 'Godot reported engine errors; inspect stdout.log and stderr.log even if its process exited zero';
   const report = { ...selected, reason, kind, project, output, timeoutMs, durationMs: Date.now() - start, engine, engineErrorDetected,
-    exitCode, processExitCode: launched ? execution.exitCode : null,
+    exitCode, processExitCode: launched ? execution.exitCode : null, portZeroDebuggerExpected,
     status: exitCode === 0 ? 'ok' : exitCode === 3 ? 'not_assessed' : 'failed',
     judgment: 'Command execution evidence only; inspect test reports for test coverage. Human play acceptance is not assessed.' };
   const artifacts = await writeNewDirectory(project, output, {

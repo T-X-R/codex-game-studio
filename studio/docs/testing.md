@@ -51,6 +51,16 @@ diagnostics in either log make the result fail even when the process exits zero;
 exit semantics and require their own result/coverage review. Keep human play
 acceptance separate.
 
+For a Godot `test` command explicitly invoking
+`res://addons/gdUnit4/bin/GdUnitCmdTool.gd` with
+`--remote-debug tcp://127.0.0.1:0`, the two known port-zero connection diagnostics
+are expected: the invalid-port message and the debugger connection failure for
+`127.0.0.1:0`. `portZeroDebuggerExpected` records that command context. These exact
+lines remain in the original logs but do not alone set `engineErrorDetected`.
+Script/parse errors, directory/certificate errors and every other engine error
+still fail; other commands and editor verification retain strict interpretation.
+Nonzero runner exits and missing/zero tests still need their own interpretation.
+
 Toolkit exit codes are 0 for successful execution, 3 for unavailable capability,
 5 for a failing command, 124 for timeout and 130 for cancellation. The original
 nonzero code is retained in `processExitCode`. Logs are saved for failures and

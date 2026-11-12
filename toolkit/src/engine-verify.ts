@@ -15,9 +15,16 @@ function observedVersion(value: string) {
   const match = /^(4\.\d+(?:\.\d+)?)\.(stable|rc\d+|beta\d+|dev\d+)(?:\.[A-Za-z0-9_-]+)*$/.exec(line);
   return match ? { raw: line, pin: pin(`${match[1]}.${match[2]}`) } : null;
 }
-export function hasGodotErrors(output: string) {
+export function hasGodotErrors(output: string, portZeroDebuggerExpected = false) {
   const plain = output.replace(/\x1b\[[0-?]*[ -/]*[@-~]/g, '');
-  return /(?:^|\n)\s*(?:SCRIPT ERROR|ERROR|FATAL ERROR|Parse Error):/i.test(plain);
+  return plain.split('\n').some(line => {
+    const trimmed = line.trim();
+    if (portZeroDebuggerExpected && [
+      'ERROR: The remote port number must be between 1 and 65535 (inclusive).',
+      "ERROR: Remote Debugger: Unable to connect to host '127.0.0.1:0'.",
+    ].includes(trimmed)) return false;
+    return /^(?:SCRIPT ERROR|ERROR|FATAL ERROR|Parse Error):/i.test(trimmed);
+  });
 }
 
 export async function verifyEngine(root: string, output: string,
