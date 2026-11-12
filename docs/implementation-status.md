@@ -1,4 +1,4 @@
-# Implementation status — 2026-11-11
+# Implementation status — 2026-11-12
 
 This is an initial executable alpha, not completion of the full migration plan.
 The owner authorized implementation and chose GitHub owner `T-X-R`, repository
@@ -8,7 +8,12 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 - Typed CLI argument contracts, JSON results, help/schema and explicit exit codes.
 - Nearest project discovery, configuration reads with provenance and rigor/local
-  precedence. Legacy technical-preference and per-system parity still need work.
+  precedence, named system workflow overrides and legacy technical-preference
+  import. Derived gate/engine helper parity remains open.
+- Configuration writes with local-key restrictions, value validation, comment
+  and scalar-quote preservation, no-op detection and synchronized stage mirrors.
+  Concurrent changes and destructive YAML shape edits are refused. Transaction
+  journals and backups are created with owner-only POSIX permissions.
 - Canonical resource packaging and one globally installed onboarding Skill.
 - Project attachment, exact runtime pins, local launchers, portable development
   archives, explicit npm restore with lifecycle scripts disabled and single-hop
@@ -41,6 +46,17 @@ were not modified; verification used an isolated Node 24 distribution.
   remains unchanged; an intentional browser error returns failure.
 - Official Skill-format validation for onboarding and the three project Skills.
 
+Source additions after the published alpha: build/typecheck and 46 local tests
+pass with no skips. The packed-install test also exercises configuration writes
+through the restored project launcher. These additions are not in the existing
+`v0.1.0-alpha.0` download; a later archive is required to distribute them.
+
+The published alpha commit `92242edc44f99c9c4b7dc0c24ac7bee12c62e7eb`
+passed [native CI](https://github.com/T-X-R/codex-game-studio/actions/runs/43022709665)
+on macOS/Windows/Linux Node 24 and Linux Node 26, plus actual Chrome replay on
+macOS. This verifies the implemented alpha operations at that commit, not the
+remaining migration or the newer local source additions.
+
 The replay initially rejected a comma-separated input example. The source parser
 uses whitespace-separated tokens; the documented example and regression now use
 `Enter wait:1`. A saved screenshot alone was not treated as a passing replay.
@@ -54,9 +70,9 @@ The full acceptance contract remains in `tasks/todo.md`. In particular:
 - All 75 upstream workflow adaptations, 49 roles, 14 scoped rules, individual
   hook behaviors and remaining helper parity. The retained `.claude` source is
   not shipped as an active compatibility layer.
-- Broader validators, project setting writes, engine setup/build/test adapters,
+- Broader validators, remaining configuration helper parity, engine setup/build/test adapters,
   prototype growth/tuning, checkpoint automation and version upgrade.
-- Native Windows/Linux and Node 26 evidence, full natural-language journeys,
+- Native platform evidence for the remaining operations, full natural-language journeys,
   human play acceptance, and stable-release review.
 
 The implementation order was adjusted to exercise deterministic installation and

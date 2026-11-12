@@ -17,6 +17,15 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 The initial alpha implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Three project Skill entry points exist, but their full S-row behavioral migration remains open. All role rows remain open.
 
+2026-11-12: configuration reads now cover named-system workflow overrides and
+legacy engine preferences (`8bf457f`). `config set` adds validated project/local
+writes, comment/quote/line-ending preservation and stage synchronization
+(`c6a7365`); transaction backups are private on POSIX (`1356b97`). Build,
+typecheck and 46 tests pass locally; packed-install coverage includes writes
+through the pinned runtime. T04/T22 and S037 remain open until the remaining
+derived helpers and live workflow evidence are complete. Existing alpha CI
+passed all five jobs at `92242ed`; newer source changes still need native CI.
+
 ## M0 Compatibility and contracts
 
 - [ ] T01 Establish Codex integration evidence
