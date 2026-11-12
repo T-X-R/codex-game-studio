@@ -6,6 +6,34 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Latest local integration passes build/typecheck/content checks, actual archive
+  installation and 242 tests on each of Node 24.22.2 and 26.13.1. The previous
+  [Linux Node 26 CI failure](https://github.com/T-X-R/codex-game-studio/actions/runs/43249513547)
+  was reproduced locally: recursive directory enumeration followed a directory
+  link, and the revision snapshot correctly refused to read through it. The
+  [fix and retained failure](evidence/revision-snapshot-node26-2026-11-12.json)
+  use explicit directory traversal without following links. A new cross-platform
+  run is still required; this is not a claim that the failed CI passed.
+- Shared [ADR observations](evidence/adr-status-2026-11-12.json) preserve status,
+  date, dependencies and template gaps without accepting decisions. Eleven checks
+  include five retained-Bash comparisons; actual pinned script/template routing
+  and partial-missing exit behavior pass installed-package checks. Native
+  story-readiness consumption remains a separate slice.
+- Next-step now records [43 real native sessions](evidence/next-step-skill-2026-11-12.json):
+  39 scoped passes and four retained initial failures. All 40 defined scenario
+  labels have a selected pass; two byte-identical source labels explicitly share
+  one session. [Independent reconciliation](evidence/navigation-revision-integration-2026-11-12.json)
+  checks every actual regular file and raw evidence hash, with cross-review of
+  high-risk routes. Broader source variants, desktop and downstream execution
+  remain open; S032 stays partial.
+- Architecture creation's [same-session revision](evidence/create-architecture-skill-2026-11-12.json)
+  corrects two confirmed document defects, preserves 576 of 578 original regular
+  files and records five checkpoint transactions. The four original full-generation
+  failures remain unchanged. Actual independent Technical Director and Lead
+  Programmer reviews still return CONCERNS, without acceptance or downstream work.
+  [Historical/current reconciliation](evidence/navigation-revision-integration-2026-11-12.json)
+  verifies the frozen original bytes and append-only session continuity. This
+  proves the selected revision path, not architecture approval or full S015 acceptance.
 - Shared [story facts](../studio-tests/helpers/story-facts-codex.md) now expose
   story headers, requirement/ADR links, AC counts and lint observations without
   assigning readiness. [Nineteen checks](evidence/story-facts-2026-11-12.json)
@@ -13,8 +41,8 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   files remain visible; invalid sprint YAML fails instead of looking like an
   empty sprint. Build/typecheck/content, the 231-test integrated suite and archive
   checks pass on macOS. Windows Bash comparisons are explicitly unsupported;
-  portable tests remain applicable. ADR observations and readiness consumers are
-  separate unfinished slices.
+  portable tests remain applicable. ADR observations have since been exercised
+  separately above; readiness consumers remain unfinished.
 - Architecture review has [39 recorded native runs](evidence/architecture-review-skill-2026-11-12.json),
   retaining eight historical failures and latest scoped passes for 31 scenarios.
   [Independent reconciliation](evidence/architecture-review-integration-2026-11-12.json)
