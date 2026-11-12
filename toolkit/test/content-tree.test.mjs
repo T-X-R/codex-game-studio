@@ -85,10 +85,12 @@ test('angle-bracket links and reference definitions resolve encoded names and re
 test('maintainer command supports an explicit tree and returns distinct content and usage exits', async t => {
   const { root, write } = await fixture(t);
   const script = fileURLToPath(new URL('../scripts/lint-content.mjs', import.meta.url));
-  const result = JSON.parse(execFileSync(process.execPath, [script, '--root', root], { cwd: tmpdir(), encoding: 'utf8' }));
+  const result = JSON.parse(execFileSync(process.execPath, [script, '--root', root, '--bundle-only'], { cwd: tmpdir(), encoding: 'utf8' }));
   assert.equal(result.status, 'valid'); assert.equal(result.behaviorVerified, false);
+  assert.equal(result.catalog.status, 'not_assessed');
   await write('.codex/agents/game-studio-review.toml', 'invalid TOML');
-  const bad = spawnSync(process.execPath, [script, '--root', root], { encoding: 'utf8' });
+  const bad = spawnSync(process.execPath, [script, '--root', root, '--bundle-only'], { encoding: 'utf8' });
   assert.equal(bad.status, 1); assert.ok(JSON.parse(bad.stdout).issues.some(x => x.code === 'INVALID_TOML'));
   assert.equal(spawnSync(process.execPath, [script, '--unknown'], { encoding: 'utf8' }).status, 2);
+  assert.equal(spawnSync(process.execPath, [script, '--complete', '--bundle-only'], { encoding: 'utf8' }).status, 2);
 });
