@@ -8,10 +8,11 @@ apply [persistence](persistence.md). A new/full document is written once to
 sections plus version/date metadata. Do not create a skeleton at Phase 0. Revisions
 likewise redraft first and write their approved changes once.
 
-Prefer an inline draft. If temporary draft files are needed, create an exclusively
-owned directory with `mkdtemp` or a file with exclusive creation, and confirm this
-run owns it. Never overwrite a fixed shared temporary path. Clean up only this
-run's owned temporary artifacts.
+Prefer an inline draft. For any temporary work files, including drafts and
+verification snapshots, create an exclusively owned directory with `mkdtemp` or
+use exclusive file creation before writing, and confirm this run owns the path.
+Never overwrite a fixed shared temporary path. Clean up only this run's owned
+temporary artifacts.
 
 Use this structure for full scope. Standard retains status, knowledge gaps,
 complete baseline, layer map, critical ADR audit/list, applicable principles and
