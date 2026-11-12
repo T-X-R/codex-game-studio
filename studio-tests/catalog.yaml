@@ -1004,7 +1004,7 @@ agents:
     last_category_result: ""
     category: director
     target: .codex/agents/game-studio-technical-director.toml
-    migration_state: pending
+    migration_state: partial
 
   - name: producer
     spec: studio-tests/agents/directors/producer.md
@@ -1014,7 +1014,7 @@ agents:
     last_category_result: ""
     category: director
     target: .codex/agents/game-studio-producer.toml
-    migration_state: pending
+    migration_state: partial
 
   - name: art-director
     spec: studio-tests/agents/directors/art-director.md
