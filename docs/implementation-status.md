@@ -13,15 +13,27 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   Build/typecheck/content checks, 293 tests on each Node 24/26 and actual installed
   role-byte checks pass. Native behavior is pending. The catalog now has sixteen
   partial Skills and twelve partial roles, with no fully verified rows.
-- The [38-run readiness matrix](evidence/story-readiness-matrix-2026-11-13.json)
-  covers 35 selected labels: 32 scoped passes, four retained failures and two
-  NOT ASSESSED outcomes. Root independently rehashed 21,419 regular files plus
-  raw/session records. A same-input correction stops treating an ADR statement as
-  the story's missing Engine Notes; the original false READY remains recorded.
-  An empty-sprint single-story footer violation remains unresolved. Actual QA
-  delegation/reads/findings are observable, but opaque dispatch field completeness
-  and four remaining full variants are not established. Earlier domain successes
-  retain their separately recorded timing limitations; desktop remains open.
+- The [final selected readiness matrix](evidence/story-readiness-final-matrix-2026-11-13.json)
+  records 44 runs across all 39 defined labels: 33 selected passes, six NOT ASSESSED
+  outcomes and five retained historical failures. After the initial 38-run root
+  reconciliation, all six added runs' actual files/raw records were independently
+  rehashed. Same-input retries correct the empty-sprint footer and announce scope
+  before collecting full story facts. The repair separates discovery from collection
+  and removes the one-story line from the common footer. Actual QA roles, inherited
+  settings and findings are visible; exact opaque dispatch fields remain unknown,
+  and the latest multi-story run does not prove its internal verdict formed before
+  dispatch. Earlier scoped successes retain their timing limits; desktop and broader
+  interaction remain open. Build/typecheck/content/package and 293 tests per Node
+  24/26 pass for this repair.
+- UI Programmer has [real inventory and bounce execution](evidence/ui-programmer-interactions-2026-11-13.json)
+  under Godot 4.7.2, including same-parent/child continuation, screenshots and
+  independent input/state observations. Root reconciled frozen/current files and
+  trace prefixes. Default gamepad confirmation still fails because the existing
+  action lacks a binding; the role preserved configuration and returned ownership.
+  Bounce values/skip/motion have scoped runtime evidence, but unapproved focus/
+  interruption choices and an overstated parent import summary remain failures.
+  Environment errors are retained. These runs do not replace Godot 4.6, physical
+  device, accessibility, performance or human play acceptance.
 - Story closure now has [five native runs](evidence/story-done-skill-2026-11-13.json)
   covering four selected scenarios: four scoped passes and one retained failure.
   The failed run guessed a system identity from a brief; the instruction now uses
