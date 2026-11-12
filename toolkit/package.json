@@ -24,6 +24,7 @@
   "scripts": {
     "build": "tsc && node build.mjs",
     "typecheck": "tsc --noEmit",
+    "lint:content": "node scripts/lint-content.mjs",
     "test": "node --test test/*.test.mjs",
     "test:pack": "node test/packed-smoke.mjs",
     "test:browser": "node test/browser-smoke.mjs"
