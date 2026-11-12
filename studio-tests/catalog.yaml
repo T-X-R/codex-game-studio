@@ -174,7 +174,7 @@ skills:
     priority: high
     category: pipeline
     target: .agents/skills/game-studio-map-systems/SKILL.md
-    migration_state: pending
+    migration_state: partial
 
   - name: vertical-slice
     spec: studio-tests/skills/pipeline/vertical-slice.md

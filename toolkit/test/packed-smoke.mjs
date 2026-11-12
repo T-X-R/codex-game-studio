@@ -67,6 +67,10 @@ try {
     const id = `.agents/skills/game-studio-gate-check/${path}`;
     assert.equal(await readFile(join(project, id), 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
+  for (const path of ['SKILL.md', 'references/reviews.md', 'references/index-and-handoff.md']) {
+    const id = `.agents/skills/game-studio-map-systems/${path}`;
+    assert.equal(await readFile(join(project, id), 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
+  }
   const designResource = 'studio/docs/roles/game-designer.md';
   const designPath = command(globalCli, 'resource', 'path', designResource).data.path;
   assert.equal(await readFile(designPath, 'utf8'), await readFile(join(packageRoot, '..', designResource), 'utf8'));
