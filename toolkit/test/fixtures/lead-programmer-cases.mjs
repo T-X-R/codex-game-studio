@@ -66,7 +66,7 @@ test('overkill emits only remaining health', () => {
 `,
     },
     async prepare(workspace) {
-      const args = ['--test', 'tests/combat.test.cjs'];
+      const args = ['--test', '--test-reporter=tap', 'tests/combat.test.cjs'];
       const result = await runProcess(process.execPath, args, { cwd: workspace, timeoutMs: 30000 });
       assert.equal(result.exitCode, 0); assert.match(result.stdout, /# tests 3/);
       const evidence = join(workspace, 'production/qa/evidence'); await mkdir(evidence, { recursive: true });
