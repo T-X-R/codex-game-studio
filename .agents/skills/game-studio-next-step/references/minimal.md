@@ -96,9 +96,10 @@ files for blockers. Next is clear the first unresolved row: resolve its blocker
 or agree a recognized Status such as Ready. Do not edit or treat Draft as Ready.
 
 Only positive total with every story Complete/Done means the recorded build
-order is done. Offer play, the next feature (prototype for grown games; otherwise
-the intended create-stories route), or optional increased rigor when one brief
-no longer fits. Retain one primary action. Zero files is not all-complete.
+order is done. Present all three ways on as alternatives: play the build; add the
+next feature (prototype for grown games, otherwise the intended create-stories
+route); or consider increased rigor if the game no longer fits one brief. Retain
+one primary action rather than assigning all three. Zero files is not all-complete.
 
 ## Size and process suggestions
 
