@@ -2,7 +2,10 @@
 
 Before checkpointing, resolve/read `studio/docs/recovery.md` via the pinned
 launcher. After each settled section (and each settled data-flow scenario), record
-its actual decisions and their source in a transactional checkpoint. Read
+its actual decisions and their source in a transactional checkpoint before
+proceeding to the next section or scenario. Save the truthful current state as it
+settles; do not backfill earlier phases or next steps from an already complete
+draft. Read
 `checkpoint show --json`, preserve existing narrative and applicable constraints,
 write a unique project-relative draft and save with the observed expected hash.
 Use `missing` only when the record is absent. Remove only that draft after success;

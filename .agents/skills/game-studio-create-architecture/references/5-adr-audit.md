@@ -30,7 +30,11 @@ or decision text covers it. Judge the meaning of the decision, not identical
 keywords: every substantive obligation in a combined requirement needs explicit
 support or support necessarily implied by that decision. If only some obligations
 are supported, mark the row **Partial**, name the unsupported obligations and carry
-them into the gaps below. A citation alone does not establish coverage.
+them into the gaps below. Write the actual supported and unsupported obligations
+before assigning the status: none supported is **GAP**, some supported is
+**Partial**, and all supported is **Covered**. Retain support from shared decisions
+and necessary implications; an unsupported remainder does not erase that support.
+A citation alone does not establish coverage.
 
 | Req ID | Requirement | ADR Coverage | Status |
 |--------|-------------|--------------|--------|
