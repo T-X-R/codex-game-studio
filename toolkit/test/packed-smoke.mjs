@@ -74,6 +74,24 @@ try {
   }
   command(globalCli, 'restore', '--project', project, '--archive', archive, '--offline');
   const launcher = join(project, '.game-studio/run.cjs');
+  const installedContent = command(launcher, 'check', '--kind', 'content', '--project', project);
+  assert.equal(installedContent.status, 'ok');
+  assert.equal(installedContent.data.scope, 'project-content');
+  assert.equal(installedContent.data.behaviorVerified, false);
+  assert.ok(installedContent.data.resourceRoot.startsWith(join(project, '.game-studio', 'node_modules')));
+  const installedSkill = join(project, '.agents/skills/game-studio-start/SKILL.md');
+  const installedSkillBytes = await readFile(installedSkill);
+  await writeFile(installedSkill, Buffer.concat([installedSkillBytes, Buffer.from('\n`game-studio removed-command`\n')]));
+  try {
+    assert.throws(() => command(launcher, 'check', '--kind', 'content', '--project', project), error => {
+      assert.equal(error.status, 5);
+      const failed = JSON.parse(error.stdout);
+      assert.equal(failed.status, 'failed');
+      assert.ok(failed.data.issues.some(issue => issue.code === 'INVALID_COMMAND_EXAMPLE' && issue.root === project));
+      return true;
+    });
+  } finally { await writeFile(installedSkill, installedSkillBytes); }
+  assert.equal(command(launcher, 'check', '--kind', 'content', '--project', project).status, 'ok');
   assert.equal(command(launcher, 'status', '--project', project).data.settings['engine.name'].value, 'Web');
   command(globalCli, 'config', 'set', 'project.stage', 'Concept', '--project', project);
   assert.equal(await readFile(join(project, 'production/stage.txt'), 'utf8'), 'Concept\n');

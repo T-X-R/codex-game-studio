@@ -1,5 +1,33 @@
 # Canonical content validation
 
+In an attached game with its runtime restored, run:
+
+```sh
+node .game-studio/run.cjs check --kind content --json
+```
+
+This read-only check inspects the game's actual `game-studio` / `game-studio-*`
+Skill and role entrypoints, including edited instructions and nested references.
+It also reports entrypoints expected by the running package but missing from the
+game. Other namespace entries are listed under `unassessedFiles`; they are not
+subjected to this toolkit's canonical metadata profile. Global onboarding is
+outside this project check. No command, Hook or referenced script is executed.
+
+Literal `resource path studio/...` references resolve in the running package's
+resource bundle. Ordinary Markdown links resolve relative to their referring
+file in its actual filesystem root, including links inside bundled documents;
+missing project files never silently fall back to same-named package files.
+`checkedSources` and each issue's `root` identify those locations. `checkedFiles`
+retains the deduplicated relative paths for existing consumers.
+
+The common CLI result has scope `project-content`, status `ok`/exit 0 for valid
+static content or `failed`/exit 5 with `CHECK_FAILED` for observed defects.
+Invalid arguments use exit 2. Runtime availability and project discovery keep
+their existing diagnostic exits. `behaviorVerified` remains false. This does not
+audit the maintainer source catalog, all packaged assets, global Skills, native
+discovery, gameplay or human acceptance. Existing prototype syntax checks remain
+`check <path>` (or explicitly `check <path> --kind prototype`).
+
 After `npm --prefix toolkit run build`, run
 `npm --prefix toolkit run lint:content`. To inspect an extracted canonical
 resource tree, append `-- --root <directory> --bundle-only`. Inspection is read-only; exit 0

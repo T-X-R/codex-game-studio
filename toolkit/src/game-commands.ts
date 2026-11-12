@@ -6,6 +6,8 @@ import { readText, safePath } from './files.js';
 import { scaffoldPrototype, importPrototype, packagePrototype } from './prototype.js';
 import { startPreview } from './preview.js';
 import { checkPrototype } from './check.js';
+import { inspectContent } from './content-tree.js';
+import { resourceRoot } from './resources.js';
 import { capturePrototype } from './capture.js';
 import { runConfiguredTest } from './run-tests.js';
 import { readSettings } from './config.js';
@@ -138,8 +140,22 @@ export const gameCommands: Record<string, Command> = {
     options: { project, 'dry-run': dryRun, output: { type: 'string', description: 'New project-relative output directory (defaults to builds/<name>-<timestamp>)' } },
     run: async input => success('package', await packagePrototype(await root(input), input.args[0]!,
       input.values.output as string ?? `builds/${basename(input.args[0]!)}-${Date.now()}`, !!input.values['dry-run'])) },
-  check: { description: 'Parse classic scripts referenced by index.html; does not run a browser', effect: 'read', minArgs: 1, maxArgs: 1,
-    options: { project }, run: async input => {
+  check: { description: 'Check prototype scripts or installed toolkit content without executing them', effect: 'read', maxArgs: 1,
+    options: { project, kind: { type: 'string', description: 'prototype (default; requires a path) or content (no path)' } }, run: async input => {
+      const kind = input.values.kind ?? 'prototype';
+      if (!['prototype', 'content'].includes(String(kind)) || input.args.length !== (kind === 'content' ? 0 : 1)) {
+        throw new StudioError('INVALID_ARGUMENT', 'Use check <path> [--kind prototype] or check --kind content');
+      }
+      if (kind === 'content') {
+        const project = await root(input);
+        const data = { project, resourceRoot, scope: 'project-content',
+          ...await inspectContent(project, { projectResources: resourceRoot }) };
+        const result = success('check', data);
+        if (data.status === 'invalid') {
+          process.exitCode = 5; result.status = 'failed'; result.error = { code: 'CHECK_FAILED', message: 'Installed toolkit content checks failed' };
+        }
+        return result;
+      }
       const data = await checkPrototype(await safePath(await root(input), input.args[0]!));
       const result = success('check', data);
       if (data.checks.some(check => check.status === 'failed')) {
