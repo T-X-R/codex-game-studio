@@ -15,7 +15,7 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
-The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Five project Skill entry points and five roles (Game Designer, Lead Programmer, Gameplay Programmer and two QA roles) exist, but their full behavioral migration rows remain open.
+The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Six project Skill entry points and five roles (Game Designer, Lead Programmer, Gameplay Programmer and two QA roles) exist, but their full behavioral migration rows remain open.
 
 2026-11-12: configuration reads now cover named-system workflow overrides and
 legacy engine preferences (`8bf457f`). `config set` adds validated project/local
@@ -286,7 +286,7 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S005 Migrate `asset-audit` to `game-studio-asset-audit`. Evidence: pending.
 - [ ] S006 Migrate `asset-spec` to `game-studio-asset-spec`. Evidence: pending.
 - [ ] S007 Migrate `balance-check` to `game-studio-balance-check`. Evidence: pending.
-- [ ] S008 Migrate `brainstorm` to `game-studio-brainstorm`. Evidence: pending.
+- [ ] S008 Migrate `brainstorm` to `game-studio-brainstorm`. Evidence: partial — [native CLI scenarios and preserved failure](../docs/evidence/brainstorm-skill-2026-11-12.json); interactive choices, resume, other modes, real director reviews and desktop remain open.
   - Planned bounded slices: B1 shared brief/concept templates; B2 four director gate resources; B3 canonical entrypoint, lean/full references, catalog state and Codex behavior spec; B4 disposable installed-package native scenarios, artifact review and evidence. Keep S008 open until its complete trigger, tier, mode, gate, resume and host matrix is verified. Missing director roles are explicit unavailable dependencies, not solo reviews counted as director evidence.
 - [ ] S009 Migrate `bug-report` to `game-studio-bug-report`. Evidence: pending.
 - [ ] S010 Migrate `bug-triage` to `game-studio-bug-triage`. Evidence: pending.

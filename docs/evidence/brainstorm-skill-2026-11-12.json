@@ -1,0 +1,227 @@
+{
+  "date": "2026-11-12",
+  "implementationCommit": "8bf1472a63ba011b893823b2a8433b5f90d799b0",
+  "status": "partial",
+  "scope": "S008 Brainstorm entrypoint and selected CLI acceptance scenarios, not full migration acceptance",
+  "environment": {
+    "codex": "0.162.0",
+    "node": "24.22.2",
+    "platform": "macOS ARM64",
+    "model": "Inherited native host selection; no fixture model override",
+    "globalConfiguration": "Unchanged; unique temporary project-trust profiles removed; no Hook trust changes"
+  },
+  "validation": {
+    "build": "passed",
+    "typecheck": "passed",
+    "quick_validate": "passed",
+    "lint:content": "passed",
+    "tests": {
+      "passed": 167,
+      "failed": 0,
+      "skipped": 0
+    },
+    "packedInstall": "passed",
+    "nativeSemanticReview": {
+      "passed": 5,
+      "failedHistoricalAttempts": 1
+    }
+  },
+  "installedResourceByteChecks": {
+    ".agents/skills/game-studio-brainstorm/SKILL.md": "63b16d5c7224d714d88cc07f5e9482a356c2d1593b70823e3d370d7bb82dab8d",
+    ".agents/skills/game-studio-brainstorm/references/lean-brief.md": "7254f13a38f72e3364d18b92109697ff4b1c36b7eed5d7faeb9080e48eb1bab4",
+    ".agents/skills/game-studio-brainstorm/references/full-concept.md": "62a20ce55ea7d99df750b755941487042806752a028111e20ab4444a46194862",
+    "studio/templates/game-brief.md": "7c53bfb89939dcab743b5b3359b329309b1b58734c7c20a02af3a7a70f5b6aa0",
+    "studio/templates/game-concept.md": "26bd81e87e5d59a36fb1ef4468fb15a5d49183ba67facbe26f01d35c595069e5",
+    "studio/docs/director-gates/cd-pillars.md": "b6c1fffdd6734093f5a8be57d79b71bb384117fd88aec0e4dca637148f1427be",
+    "studio/docs/director-gates/ad-concept-visual.md": "736fa3c4c08d51048a6c1acf708760ad5c33979ecb799955940138bf35e47941",
+    "studio/docs/director-gates/td-feasibility.md": "ec29b88e6646bcfc9d456ad20f7630c93ea04907baa70122fa4cea46da9bde5e",
+    "studio/docs/director-gates/pr-scope.md": "94ad64f8bf7fbc410e99c40f10943505b078441ee323ce8e9137429dc63b0abb"
+  },
+  "cases": [
+    {
+      "case": "pick",
+      "reviewStatus": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-jHU7Hk",
+      "threadId": "01a1cf2d-a2b0-7531-a432-6f841d99c774",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "wrapperMeaning": "Execution completed; manual semantic review required. Original report remains not_assessed.",
+      "preservedFiles": 365,
+      "changed": [],
+      "added": [],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "packageIntegrity": "sha512-xoNhTdZZpv4Oxqz6bqqMy7FR4zXcuhS7DM4CFx7JhNQkU+pScEwkSCM0cFDCl7mEBJjaj2Fj4bQEAAx2vMqwgg==",
+      "leanReferenceSha256": "c24a23e87fab553855c93822ebad21244203b9ebab52529b6781474789a2fb34",
+      "observations": [
+        "Natural ideation request selected and read the installed Brainstorm Skill, queried effective settings and read only the lean branch.",
+        "Three bounded concept directions ended in an unresolved user choice; no full-flow template, gate execution, build or file change."
+      ],
+      "artifacts": [],
+      "traceSha256": "12552c1e85bee3c3e94e8312eb988a7096c700ba5d956d1cf40754a9091a33f7"
+    },
+    {
+      "case": "negative",
+      "reviewStatus": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-xLp9AZ",
+      "threadId": "01a1cf2d-f930-7b20-ab99-8e47620ec9b2",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "wrapperMeaning": "Execution completed; manual semantic review required. Original report remains not_assessed.",
+      "preservedFiles": 366,
+      "changed": [],
+      "added": [],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "packageIntegrity": "sha512-xoNhTdZZpv4Oxqz6bqqMy7FR4zXcuhS7DM4CFx7JhNQkU+pScEwkSCM0cFDCl7mEBJjaj2Fj4bQEAAx2vMqwgg==",
+      "leanReferenceSha256": "c24a23e87fab553855c93822ebad21244203b9ebab52529b6781474789a2fb34",
+      "observations": [
+        "Read only src/score.js, identified subtraction as the cause of 10 minus 5, and did not read Brainstorm or propose a new concept."
+      ],
+      "artifacts": [],
+      "traceSha256": "448d47efadfa29da630a494ce4d0800b6684e058bd3cd9ef0327c72b3f7c0080"
+    },
+    {
+      "case": "brief",
+      "reviewStatus": "FAIL",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-20yVDX",
+      "threadId": "01a1cf2d-ff5d-7762-b1b0-a5ecce5c95e1",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "wrapperMeaning": "Execution completed; manual semantic review required. Original report remains not_assessed.",
+      "preservedFiles": 365,
+      "changed": [],
+      "added": [
+        "design/game-brief.md"
+      ],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "packageIntegrity": "sha512-xoNhTdZZpv4Oxqz6bqqMy7FR4zXcuhS7DM4CFx7JhNQkU+pScEwkSCM0cFDCl7mEBJjaj2Fj4bQEAAx2vMqwgg==",
+      "leanReferenceSha256": "c24a23e87fab553855c93822ebad21244203b9ebab52529b6781474789a2fb34",
+      "observations": [
+        "Saved the authorized brief and preserved game decisions, four unchecked features, unknowns and empty Keep.",
+        "Incorrectly copied Node path and execution permissions into In your words, and execution restrictions into game Out of scope. Source lean-flow wording was corrected; this attempt remains failed."
+      ],
+      "artifacts": [
+        {
+          "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-20yVDX/Lantern game \u6d4b\u8bd5/design/game-brief.md",
+          "sha256": "0fe8430054dd1ca2f2f4d77dec7c7c724e2ead5939b88d6a941317d7a8ed14da",
+          "lines": 81
+        }
+      ],
+      "traceSha256": "fc84369e0dcbac19bb02d9061c92d6b133af062c70753d785a2910f09933bce3"
+    },
+    {
+      "case": "brief",
+      "reviewStatus": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-dohneC",
+      "threadId": "01a1cf30-49a4-7883-a288-e9f262e37f6f",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "wrapperMeaning": "Execution completed; manual semantic review required. Original report remains not_assessed.",
+      "preservedFiles": 365,
+      "changed": [],
+      "added": [
+        "design/game-brief.md"
+      ],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "packageIntegrity": "sha512-FRY1yCQaaA/QP46B/YVjdjOOJt/7G2vaMv6q9V6MHgrdq85H9STKF+sxjbUM6LVAs6UJcyRmsoaRqW9LnXa5/A==",
+      "leanReferenceSha256": "7254f13a38f72e3364d18b92109697ff4b1c36b7eed5d7faeb9080e48eb1bab4",
+      "observations": [
+        "Fresh same-request replay after the lean-reference fix saved only the brief; all 365 existing files were unchanged.",
+        "Game wording is verbatim through No one has played it yet; no Node path or execution permissions in game quotes/scope.",
+        "Exactly four unchecked features, empty Keep, no combat/countdown/failure, three-iteration kill condition, labeled guesses and unassessed play satisfaction. No repeated save question."
+      ],
+      "artifacts": [
+        {
+          "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-dohneC/Lantern game \u6d4b\u8bd5/design/game-brief.md",
+          "sha256": "0ddc4ad4f615b9023d2c5d7ae501cf637c1412771189c80d069a446902ff5561",
+          "lines": 77
+        }
+      ],
+      "traceSha256": "27ccf330c42493cbcecd03eaec6161cb414ed304282dd15995671038cc884fad"
+    },
+    {
+      "case": "standard-solo",
+      "reviewStatus": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-3JPeT4",
+      "threadId": "01a1cf2e-a849-7a41-a62c-a1a5d65a8890",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "wrapperMeaning": "Execution completed; manual semantic review required. Original report remains not_assessed.",
+      "preservedFiles": 365,
+      "changed": [],
+      "added": [
+        "design/gdd/game-concept.md"
+      ],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "packageIntegrity": "sha512-xoNhTdZZpv4Oxqz6bqqMy7FR4zXcuhS7DM4CFx7JhNQkU+pScEwkSCM0cFDCl7mEBJjaj2Fj4bQEAAx2vMqwgg==",
+      "leanReferenceSha256": "c24a23e87fab553855c93822ebad21244203b9ebab52529b6781474789a2fb34",
+      "observations": [
+        "Selected Brainstorm and full-concept reference for standard workflow; reused supplied concept, pillars and engine choice.",
+        "Saved only the full concept with MDA, SDT, loops, pillars/tests, anti-pillars, Paper Coast visual anchor, audience, technical risks, MVP and scope tiers.",
+        "Four named Solo skips and no director execution; personal references remain personal and market claims not researched. Full-vision estimate and scope table both use six weeks, solo.",
+        "Proposed mechanics and content allocation are labeled, not represented as confirmed or tested."
+      ],
+      "artifacts": [
+        {
+          "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-3JPeT4/Lantern game \u6d4b\u8bd5/design/gdd/game-concept.md",
+          "sha256": "1c720192046c9b51029a839974b42b156170f7de7b5b17eb8084bce2cf24ea6d",
+          "lines": 369
+        }
+      ],
+      "traceSha256": "59dbda3f0122a0324cbe302bb6757a754f5b76ad1eb914ea38cc8dcd071882f1"
+    },
+    {
+      "case": "full-missing",
+      "reviewStatus": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-uFWWan",
+      "threadId": "01a1cf2e-efe2-7d32-a97a-f06204d8566c",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "wrapperMeaning": "Execution completed; manual semantic review required. Original report remains not_assessed.",
+      "preservedFiles": 365,
+      "changed": [],
+      "added": [
+        "design/gdd/game-concept.md"
+      ],
+      "outsideScope": [],
+      "profileRemoved": true,
+      "packageIntegrity": "sha512-xoNhTdZZpv4Oxqz6bqqMy7FR4zXcuhS7DM4CFx7JhNQkU+pScEwkSCM0cFDCl7mEBJjaj2Fj4bQEAAx2vMqwgg==",
+      "leanReferenceSha256": "c24a23e87fab553855c93822ebad21244203b9ebab52529b6781474789a2fb34",
+      "observations": [
+        "Selected full workflow/review mode and inspected actual available native/project roles and four gate resources.",
+        "Four required director roles were unavailable; no substitute reviewer or independent verdict was fabricated. The authorized full draft records each gate NOT ASSESSED and resumption context.",
+        "Locked pillars, Paper Coast, Web preference, two-week MVP and six-week full vision are preserved; only the requested concept was added.",
+        "This passes missing-capability handling only. It does not establish actual director invocation or verdict sequencing."
+      ],
+      "artifacts": [
+        {
+          "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-uFWWan/Lantern game \u6d4b\u8bd5/design/gdd/game-concept.md",
+          "sha256": "81603505ec7d724fabf8d03388cf8a9685e2d5f3ba6a4125e44959f6702823b5",
+          "lines": 443
+        }
+      ],
+      "traceSha256": "efc561128eef6fa830e41d7e43e0c1c51f7d18136e2ed05a2768c2d9a02332fa"
+    }
+  ],
+  "limitations": [
+    "S008 remains partial and no catalog row is verified.",
+    "No desktop Brainstorm execution, root-versus-subdirectory comparison, interactive fresh/combine/dismiss flow or interruption/resume acceptance.",
+    "No non-Web/engine-unset, greater-than-seven-feature negotiation, collaborative/autonomous, lean/one-run override or missing-runtime scenario has run here.",
+    "No actual creative/art/technical director or producer role execution; those roles are not yet installed.",
+    "Concept scenarios supplied already-confirmed choices; they do not prove discovery interviews, three full concept cards, new pillar/visual selection or live gate phase ordering.",
+    "Synthetic requests are acceptance fixtures, not real human play, market research, game implementation or release approval.",
+    "Full-flow and pick/negative fixtures used the pre-fix lean reference; only the brief flow changed, and only brief was rerun. Full-flow bytes remained identical.",
+    "Raw local reports, traces and artifacts are temporary-machine evidence; this JSON records reviewed observations and hashes, not a public transcript archive."
+  ],
+  "sha256": {
+    ".agents/skills/game-studio-brainstorm/SKILL.md": "63b16d5c7224d714d88cc07f5e9482a356c2d1593b70823e3d370d7bb82dab8d",
+    ".agents/skills/game-studio-brainstorm/references/lean-brief.md": "7254f13a38f72e3364d18b92109697ff4b1c36b7eed5d7faeb9080e48eb1bab4",
+    ".agents/skills/game-studio-brainstorm/references/full-concept.md": "62a20ce55ea7d99df750b755941487042806752a028111e20ab4444a46194862",
+    "toolkit/test/brainstorm-host.mjs": "f28fedd72f1e5af3b381c52bf2a026a2a3cb0aadbe35143cb6e6cfac2e967860",
+    "toolkit/test/fixtures/brainstorm-cases.mjs": "9c22108d4c29aba175b98f74b4b74523874b0d4896a97b92d1b2c5d988367795"
+  }
+}

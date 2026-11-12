@@ -38,7 +38,7 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 - Canonical resource packaging and one globally installed onboarding Skill.
 - `lint:content` now parses canonical Skill YAML and role TOML, checks local
   references and packaging boundaries, and reconciles catalog v3 with 75 primary
-  workflow inputs, 49 roles and three retired aliases. The current five project
+  workflow inputs, 49 roles and three retired aliases. The current six project
   Skills and five roles remain explicitly partial; no behavior row is promoted
   by static checks. Complete-declaration mode correctly fails for open rows.
   Installed-archive verification uses the packaged validator and rejects a
@@ -83,9 +83,20 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   tuning from production. A packed-runtime fixture builds both outputs and proves
   same-seed input/scoring states and screenshots match in real Chrome. Copy does
   not complete TypeScript/data conversion, game-rule tests or human play.
-- Five project Skills: start, prototype, next-step, project-settings and smoke-check. These are alpha entry
+- Six project Skills: start, prototype, next-step, project-settings, smoke-check and brainstorm. These are alpha entry
   points covering implemented operations; they do not close the full upstream
   behavioral migration rows.
+- Brainstorm now selects a lean brief or full concept flow, packages both original
+  templates and four director gate resources, and preserves user creative choices
+  with guided write authorization. Native CLI fixtures exercise natural discovery,
+  negative routing, an authorized brief and a standard/solo concept. Full review
+  mode also saved an authorized draft with all four missing director reviews
+  explicitly NOT ASSESSED; no substitute reviewer was invented. The first
+  brief incorrectly copied tooling/permission text into game design; a focused
+  correction and fresh same-request replay removed that contamination while
+  preserving exact game input. See [the evidence](evidence/brainstorm-skill-2026-11-12.json).
+  These observations do not close S008: interactive selections, resume, mode
+  variations, real director execution and desktop acceptance remain open.
 - The prototype Skill now includes selected/resumed Web growth guidance and
   shared TypeScript hook/tuning resources. An independent scoring/pause fixture
   completed typed modules, JSON/live configuration, 5 rule tests, 3 real Chrome
