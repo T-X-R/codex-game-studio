@@ -53,9 +53,9 @@ test('legacy architecture status is observed and warned without rewriting input 
 test('registry refuses unsafe input paths and symlinks instead of treating them as absent', async t => {
   const { root, write } = await fixture(t);
   await assert.rejects(readRegistry(root, 'entities', '../outside.yaml'));
-  await write('other.yaml', 'entities: []\n');
-  await mkdir(join(root, 'design/registry'), { recursive: true });
-  await symlink(join(root, 'other.yaml'), join(root, 'design/registry/entities.yaml'));
+  await write('other/entities.yaml', 'entities: []\n');
+  await mkdir(join(root, 'design'), { recursive: true });
+  await symlink(join(root, 'other'), join(root, 'design/registry'), process.platform === 'win32' ? 'junction' : 'dir');
   await assert.rejects(readRegistry(root, 'entities'));
 });
 
