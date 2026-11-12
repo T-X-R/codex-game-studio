@@ -35,6 +35,11 @@ try {
   assert.equal(command(globalCli, 'config', 'get', 'modes.automation', '--project', project).data.settings['modes.automation'].source, 'project.local.yaml');
   assert.equal(command(launcher, 'config', 'get', 'engine_values', '--project', project).data.settings.engine_values.value.name.value, 'Web');
   assert.equal(command(launcher, 'config', 'get', 'gate_level', '--project', project).data.settings.gate_level.value.config.smokeCheck, 'blocking');
+  assert.equal(command(launcher, 'config', 'get', 'engine_row', '--project', project).data.settings.engine_row.value.commands.test, 'npm test');
+  await writeFile(join(project, 'test-fixture.cjs'), 'console.log("packed test executed");\n');
+  command(launcher, 'config', 'set', 'commands.test', 'node test-fixture.cjs', '--project', project);
+  assert.equal(command(launcher, 'test', '--output', 'production/evidence/packed-test', '--project', project).data.processExitCode, 0);
+  assert.match(await readFile(join(project, 'production/evidence/packed-test/stdout.log'), 'utf8'), /packed test executed/);
   await writeFile(join(project, 'checkpoint-draft.md'), '**Current task:** Prototype movement\n**Next step:** Test controls\n');
   command(launcher, 'checkpoint', 'save', '--input', 'checkpoint-draft.md', '--expect-hash', 'missing', '--project', project);
   assert.equal(command(globalCli, 'checkpoint', 'show', '--project', project).data.fields['Next step'], 'Test controls');

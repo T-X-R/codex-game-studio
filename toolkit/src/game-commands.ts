@@ -7,11 +7,30 @@ import { scaffoldPrototype, importPrototype, packagePrototype } from './prototyp
 import { startPreview } from './preview.js';
 import { checkPrototype } from './check.js';
 import { capturePrototype } from './capture.js';
+import { runConfiguredTest } from './run-tests.js';
 
 const project: Option = { type: 'string', description: 'Game workspace directory' };
 const dryRun: Option = { type: 'boolean', description: 'Describe effects without creating files or starting a server' };
 async function root(input: Input) { return resolveProject(input.values.project as string | undefined); }
 export const gameCommands: Record<string, Command> = {
+  test: { description: 'Run a configured test, smoke or build command with a timeout and preserved evidence', effect: 'process',
+    options: { project, 'dry-run': dryRun, kind: { type: 'string', description: 'Configured operation: test (default), smoke or build' },
+      output: { type: 'string', description: 'New project-relative evidence directory' },
+      timeout: { type: 'string', description: 'Maximum execution time in milliseconds (100–600000, default 120000)' } },
+    run: async input => {
+      const data = await runConfiguredTest(await root(input), input.values.kind as string ?? 'test',
+        input.values.output as string ?? `production/evidence/test-${Date.now()}`, {
+          dryRun: !!input.values['dry-run'], timeoutMs: input.values.timeout === undefined ? undefined : Number(input.values.timeout),
+        });
+      const result = success('test', data);
+      if ('artifacts' in data && data.artifacts) result.artifacts = data.artifacts.files.map(file => ({ path: file.path, type: 'evidence', sha256: file.sha256 }));
+      if (data.exitCode !== 0) {
+        process.exitCode = data.exitCode; result.status = data.exitCode === 3 ? 'not_assessed' : 'failed';
+        result.error = { code: data.exitCode === 124 ? 'TIMEOUT' : data.exitCode === 130 ? 'INTERRUPTED' : data.exitCode === 3 ? 'ASSESSMENT_INCOMPLETE' : 'CHECK_FAILED',
+          message: data.reason ?? 'Configured command did not complete successfully; inspect the report and logs.' };
+      }
+      return result;
+    } },
   capture: { description: 'Record a seeded Web replay, browser log and screenshot from a temporary game copy', effect: 'process', minArgs: 1, maxArgs: 1,
     options: { project, 'dry-run': dryRun, output: { type: 'string', description: 'New project-relative evidence directory' },
       browser: { type: 'string', description: 'Installed Chromium-family executable path' },

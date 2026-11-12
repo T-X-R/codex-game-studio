@@ -1,0 +1,50 @@
+# Configured test execution
+
+Current source builds implement the `test` command. This is an unreleased addition
+and is not available in the existing `v0.1.0-alpha.0` archive.
+
+```bash
+node .game-studio/run.cjs test --dry-run --json
+node .game-studio/run.cjs test --output production/evidence/tests-001 --json
+node .game-studio/run.cjs test --kind smoke --timeout 60000 --json
+node .game-studio/run.cjs test --kind build --json
+```
+
+The operation reads `commands.test`, `commands.smoke` or `commands.build` from
+`project.yaml`. A string is executed as configured. An OS-aware map selects
+`windows`, `macos` or `linux`, then `default`. An explicit map without a matching
+entry does not silently fall back to an engine command. Personal command
+overrides are ignored because commands are shared project configuration.
+
+When a command is absent, the bundled engine table supplies a default if it has
+one. Web defaults require the corresponding `package.json` script. Godot defaults
+require `project.godot`, and its default test additionally requires the gdUnit4
+entry script. Unity and Unreal have no generic test command: configure the
+actual editor, project and runner invocation. The toolkit does not download
+editors, install test frameworks or manufacture a passing result when capability
+is missing. Editor execution, licensing and test discovery still need real engine
+evidence before that path can be advertised as verified.
+
+Commands run from the game root using the operating system's shell: `/bin/sh`
+on macOS/Linux and `cmd.exe` on Windows. Use the OS-aware map for shell-specific
+syntax. The command and its scripts retain their normal behavior. A dry run
+resolves the command and output path without starting a process or writing files.
+
+Each real invocation creates a new directory with `report.json`, `stdout.log`
+and `stderr.log`. Existing evidence directories are never overwritten. The report
+records the selected command/source, OS, duration and original process exit code.
+A zero exit proves successful command execution; review test reports for actual
+coverage, and keep human play acceptance separate.
+
+Toolkit exit codes are 0 for successful execution, 3 for unavailable capability,
+5 for a failing command, 124 for timeout and 130 for cancellation. The original
+nonzero code is retained in `processExitCode`. Logs are saved for failures and
+timeouts too. Timeouts are bounded to 100–600000 ms, with a 120000 ms default.
+
+Use `config get engine_row` to inspect engine-specific roots, their filesystem
+state and default commands. This does not execute an editor. Invalid explicit
+roots never fall back to another directory. Case mismatches, traversal,
+framework roots and symbolic links are reported as invalid. Missing directories,
+unresolved Unreal module placeholders and ambiguous auto-detection are visible.
+An unset engine never implies a `tests/` root. For a code root of `.`, consumers
+must honor the returned `excluded_code_directories` list when scanning.
