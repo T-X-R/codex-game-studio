@@ -1,4 +1,5 @@
 import type { Json, Setting } from './config.js';
+import { resolveEngineRow } from './engine.js';
 
 const testTypes = ['logic', 'integration', 'visual', 'ui', 'config'];
 export const derivedDependencies: Record<string, string[]> = {
@@ -7,9 +8,11 @@ export const derivedDependencies: Record<string, string[]> = {
   engine_values: ['engine.name', 'engine.version', 'engine.language'],
   perf_budgets: ['performance.target_framerate', 'performance.frame_budget_ms',
     'performance.draw_call_limit', 'performance.memory_ceiling_mb'],
+  engine_row: ['engine.name', 'engine.code_root', 'engine.test_root'],
 };
 
-export function deriveSetting(key: string, settings: Record<string, Setting>): Setting {
+export async function deriveSetting(key: string, settings: Record<string, Setting>, root: string): Promise<Setting> {
+  if (key === 'engine_row') return { value: await resolveEngineRow(root, settings), source: 'derived:engine table' };
   if (key === 'gate_level') {
     const value: Record<string, Json> = {};
     for (const type of testTypes) {
