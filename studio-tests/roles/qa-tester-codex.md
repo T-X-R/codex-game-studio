@@ -81,6 +81,35 @@ Review `production/qa/regression.md` and `bugs/BUG-0021.md` plus the trace:
 
 ## Remaining engine and collaboration cases
 
+### Godot/GdUnit4 live fixture
+
+With Godot 4.7.2 and a local GdUnit4 6.2.2 addon, set `GAME_STUDIO_GODOT` to
+the editor executable and `GAME_STUDIO_GDUNIT4` to its `addons/gdUnit4` directory,
+then run `node toolkit/test/qa-role-host.mjs godot`. The maintainer fixture copies
+the addon into an isolated packed-runtime game and imports it before delegation;
+it does not download or install dependencies implicitly or modify an existing game.
+
+The actual custom role must create `tests/combat_damage_test.gd` for the supplied
+Node-based damage formula and run the configured suite. Inspect native role
+selection/instructions, test source, runner logs and original report files:
+
+- GdUnitTestSuite and scenario/expected naming; Node subjects are cleaned up.
+- Normal, zero, armor-floor, negative modifier, supported maximum and exact-armor
+  GDD boundaries have assertions derived from the requirement, with appropriate
+  float tolerance. No behavior outside the specified domain is invented.
+- Completed nonzero tests, failures, skipped cases and orphan counts are reported;
+  distinguish generic command status from GdUnit's actual result. Never erase
+  logs or relabel script/parse errors as harmless connection diagnostics.
+- No source, settings, existing addon/toolkit files or existing evidence change.
+  The fixture excludes engine-owned `.godot/` cache from immutable-file hashes;
+  new test `.uid` and fresh evidence are allowed, not authored game changes.
+- Independently rerun the generated suite, mutate the isolated formula to prove
+  the assertions fail, restore it and verify green. Check node-cleanup evidence;
+  the planned test or a zero-test exit alone is insufficient.
+
+This proves only the identified GDScript/GdUnit/editor/OS combination. It does not
+prove Unity/Unreal, C#/.NET, rendering/export or human play acceptance.
+
 Before closing A028, verify the role's actual engine-specific test scaffolds
 (Godot node cleanup, Unity assembly/root, Unreal filter/type/unique class) and
 the final content validator. The workflow scenarios above have recorded native

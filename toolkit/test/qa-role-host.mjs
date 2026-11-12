@@ -9,10 +9,12 @@ import { fileURLToPath } from 'node:url';
 import { npmPath } from '../dist/runtime.js';
 import { runProcess } from '../dist/process.js';
 import { scenarios } from './fixtures/qa-role-cases.mjs';
+import { godotScenario } from './fixtures/qa-godot-case.mjs';
 
 const scenarioName = process.argv[2] ?? 'audit';
-if (process.argv.length > 3 || !Object.hasOwn(scenarios, scenarioName)) throw new Error('Choose audit, readonly or regression');
-const scenario = scenarios[scenarioName];
+if (process.argv.length > 3 || (scenarioName !== 'godot' && !Object.hasOwn(scenarios, scenarioName))) throw new Error('Choose audit, readonly, regression or godot');
+const scenario = scenarioName === 'godot' ? await godotScenario() : scenarios[scenarioName];
+const timeoutMs = scenario.timeoutMs ?? 480000;
 
 const directory = await realpath(await mkdtemp(join(tmpdir(), 'game-studio-qa-role-')));
 const packageRoot = fileURLToPath(new URL('..', import.meta.url));
@@ -26,13 +28,14 @@ const archive = join(directory, packed.filename);
 run(npm, ['install', '--prefix', join(directory, 'cli'), archive, '--ignore-scripts', '--no-audit', '--no-fund', '--prefer-offline']);
 const cli = join(directory, 'cli/node_modules/@t-x-r/game-studio/dist/cli.js');
 const workspace = join(directory, 'QA game 测试');
-run(cli, ['init', workspace, '--engine', 'web', '--json']);
+run(cli, ['init', workspace, '--engine', scenario.engine ?? 'web', '--json']);
 run(cli, ['restore', '--project', workspace, '--archive', archive, '--offline', '--json']);
 assert.equal((await runProcess('git', ['init', '--quiet', workspace])).exitCode, 0);
 for (const [path, content] of Object.entries(scenario.inputs)) {
   await mkdir(dirname(join(workspace, path)), { recursive: true });
   await writeFile(join(workspace, path), content);
 }
+await scenario.prepare?.(workspace, directory);
 const rolePath = '.codex/agents/game-studio-qa-tester.toml';
 const role = await readFile(join(workspace, rolePath), 'utf8');
 assert.equal(role, await readFile(join(packageRoot, '..', rolePath), 'utf8'));
@@ -44,7 +47,7 @@ async function snapshot() {
     if (!entry.isFile()) continue;
     const path = join(entry.parentPath, entry.name);
     const relative = path.slice(workspace.length + 1).replaceAll('\\', '/');
-    if (relative.startsWith('.git/')) continue;
+    if (relative.startsWith('.git/') || scenario.ignoredFile?.(relative)) continue;
     files[relative] = createHash('sha256').update(await readFile(path)).digest('hex');
   }
   return files;
@@ -56,7 +59,7 @@ const profilePath = join(process.env.CODEX_HOME ?? join(homedir(), '.codex'), `$
 await writeFile(profilePath, `[projects.${JSON.stringify(workspace)}]\ntrust_level = "trusted"\n`, { flag: 'wx', mode: 0o600 });
 try {
   const request = scenario.request;
-  const prompt = `Use native custom-role selection to delegate exactly one task to game-studio-qa-tester: ${request} The child may use the installed runtime for read-only configuration queries; its Node executable is ${process.execPath}. Wait for completion and summarize its actual findings, artifacts and remaining decisions. You as parent must not inspect workspace files, run shell commands or write the report yourself. Do not simulate this role with a generic agent; if unavailable, report ROLE_SELECTION_UNAVAILABLE.`;
+  const prompt = `Use native custom-role selection to delegate exactly one task to game-studio-qa-tester: ${request} The child may use the installed runtime within the assigned scope; its Node executable is ${process.execPath}. Wait for completion and summarize its actual findings, artifacts and remaining decisions. You as parent must not inspect workspace files, run shell commands or write the report yourself. Do not simulate this role with a generic agent; if unavailable, report ROLE_SELECTION_UNAVAILABLE.`;
   const common = ['--profile', profileName, '--disable', 'plugins', '--disable', 'apps', '--disable', 'memories',
     '-c', 'skills.include_instructions=false', '--cd', workspace];
   const preflight = await runProcess('codex', [...common, 'debug', 'prompt-input', prompt], { cwd: workspace, timeoutMs: 30000 });
@@ -66,15 +69,15 @@ try {
   assert.ok(!preflight.stdout.includes('You are the QA Tester for an indie game project.'));
   const args = ['exec', ...common, '--strict-config', '--sandbox', scenario.sandbox, '--json', '-o', join(directory, 'final.txt'), prompt];
   await writeFile(join(directory, 'fixture.json'), JSON.stringify({ scenario: scenarioName, workspace, args, roleSha256: before[rolePath] }, null, 2));
-  console.log(JSON.stringify({ directory, status: 'running', timeoutMs: 480000 }));
+  console.log(JSON.stringify({ directory, status: 'running', timeoutMs }));
   const version = await runProcess('codex', ['--version']);
-  const result = await runProcess('codex', args, { cwd: workspace, timeoutMs: 480000 });
+  const result = await runProcess('codex', args, { cwd: workspace, timeoutMs });
   await writeFile(join(directory, 'events.jsonl'), result.stdout, { mode: 0o600 });
   await writeFile(join(directory, 'stderr.txt'), result.stderr, { mode: 0o600 });
   const after = await snapshot();
   const changed = Object.keys(before).filter(path => before[path] !== after[path]);
   const added = Object.keys(after).filter(path => !(path in before));
-  const outsideScope = added.filter(path => scenario.sandbox === 'read-only' || !path.startsWith('production/qa/') || !path.endsWith('.md'));
+  const outsideScope = added.filter(path => scenario.sandbox === 'read-only' || !(scenario.allowedNewFile?.(path) ?? (path.startsWith('production/qa/') && path.endsWith('.md'))));
   const events = result.stdout.split('\n').filter(Boolean).map(line => JSON.parse(line));
   const report = { scenario: scenarioName, sandbox: scenario.sandbox, status: 'not_assessed', reason: 'Review native parent/child trace and semantic output against studio-tests/roles/qa-tester-codex.md.',
     client: version.stdout.trim(), exitCode: result.exitCode, threadId: events.find(event => event.type === 'thread.started')?.thread_id,
