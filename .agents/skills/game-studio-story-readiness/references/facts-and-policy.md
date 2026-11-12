@@ -18,7 +18,8 @@ Explicit `--review full|lean|solo` overrides only this run's review mode and ski
 Gate decision; never rewrite shared settings. A failed config read is not an
 invitation to invent defaults or claim a policy-complete READY assessment.
 
-Workflow is resolved per story. Its system is the filename stem of the GDD: path;
+After the Phase 2 story reads, resolve workflow per story. Its system is the
+filename stem of the GDD: path;
 only when there is no GDD path may the system portion of a TR-[system]-NNN supply
 it. For each distinct known system resolve:
 
@@ -31,7 +32,20 @@ Without a system use project workflow; surface ambiguous system identity rather
 than choosing a convenient tier. Do not confuse rigor defaults, QA evidence policy,
 review mode and workflow. Stories in one run can have different workflow tiers.
 
-## Scope and single collection
+## Phase 1: Scope discovery
+
+Discover paths before reading story contents or invoking story-facts. `all` uses
+recursive production/epics/**/story-*.md filename discovery. `sprint` reads the
+production/sprint-status.yaml membership entries. A specific path stays one path
+even with spaces. For an epic slug resolve production/epics/<slug>; for its folder
+select that folder's story-*.md files. An empty/absent epic must not fall back to
+all stories. Preserve individually missing requested entries in the selected scope.
+
+Apply the entrypoint's empty/input-error handling or announce the nonempty scope
+now. Story-facts returns parsed story fields and lint, so it belongs to Phase 2,
+not filename discovery.
+
+## Phase 2: Single fact collection
 
 Resolve these installed resources with `node .game-studio/run.cjs resource path
 <resource> --json`, then invoke the actual returned `data.path` (quoted as needed):
@@ -48,11 +62,7 @@ node <adr-status-path> --project .
 node <registry-path> --project . list tr
 ```
 
-Use exactly the relevant story-facts scope form, not all three. `all` selects
-recursive production/epics/**/story-*.md. `sprint` reads production/sprint-status.yaml
-file entries. A specific path remains one argument even with spaces. For an epic
-slug resolve production/epics/<slug>; for its folder use that folder's story-*.md
-files as explicit paths. An empty/absent epic must not fall back to all stories.
+Use exactly the relevant story-facts scope form, not all three.
 
 Story-facts testEvidence is the section's Status observation, not its path or
 proof of testing. Read the actual section to assess its evidence plan.

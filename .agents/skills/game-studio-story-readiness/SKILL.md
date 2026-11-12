@@ -20,8 +20,8 @@ named in the request. Do not guess among ambiguous targets. If scope is blank,
 ask “What would you like to check?” with specific story / current sprint / all
 production stories / one epic choices, then wait for an actual answer.
 
-Read [facts and policy](references/facts-and-policy.md) to resolve actual settings,
-select the files and collect observations. Distinguish an absent sprint plan from
+Read [facts and policy](references/facts-and-policy.md) to resolve project settings
+and select file paths. Collect story observations in Phase 2. Distinguish an absent sprint plan from
 an existing plan listing no stories, malformed input, and individually missing
 story entries. Zero stories: stop with `NOT ASSESSED — no stories in scope`, name
 the scope and searched path, and recommend story creation (epics first at
@@ -128,7 +128,9 @@ other Ready/Not Started Must Have or Should Have stories with no unfinished
 prerequisites. Name each with a one-line description and estimate. Exclude this
 story; do not infer readiness of a missing dependency. If none, say exactly
 `Next ready stories: no sprint file found` or `Next ready stories: none ready in
-[sprint]`. These are recorded candidate states, not fresh readiness verdicts.
+[sprint]`. Put that line between Review and Next step in the one-story footer;
+omit it for other scopes. These are recorded candidate states, not fresh readiness
+verdicts.
 
 Offer to draft missing parts in the conversation (Yes, draft them / No, that's
 all), unless the user requested report-only/stop or already chose. Reuse authorized
@@ -154,7 +156,6 @@ End with:
 
 ```text
 Review: [QL-STORY-READY verdict per story, or skipped — Solo/Lean mode]
-Next ready stories: [up to 3 | no sprint file found | none ready in sprint] (one story)
 Next step: [implement the READY story | fix listed gaps/inputs and rerun readiness]
 Files changed: none
 ```
