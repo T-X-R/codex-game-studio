@@ -66,8 +66,9 @@ The explicit standard-tier Manifest Version advisory rule below still applies.
   Passes when the story has no version field or no manifest exists. Unknown or
   unparseable values are not evidence that it is current.
 - **Engine notes:** post-cutoff engine APIs the story touches have notes or a
-  verification step, or it states `N/A — no engine API involved`. Do not invent a
-  model cutoff, API guarantee or completed verification.
+  verification step, or the story explicitly states `N/A — no engine API involved`.
+  A statement in an ADR does not fill missing notes in the story. Do not invent
+  a model cutoff, API guarantee or completed verification.
 - **Manifest rules noted:** relevant layer rules are listed, or
   `N/A — manifest not yet created`. Passes when no manifest exists.
 
