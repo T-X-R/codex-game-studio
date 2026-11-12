@@ -386,7 +386,7 @@ Each A-row is an individual task owned by `codex-integration`.
 - Verification: TOML/content validation and one actual delegated task using the linked behavior spec. Check role identity, write boundaries, meaningful output and parent aggregation.
 - Record evidence before checking a row. Schema conversion alone is insufficient.
 
-- [ ] A001 Migrate `accessibility-specialist` to `game-studio-accessibility-specialist`. Evidence: pending.
+- [ ] A001 Migrate `accessibility-specialist` to `game-studio-accessibility-specialist`. Partial: [source/content and installed-byte review](../docs/evidence/accessibility-specialist-content-2026-11-13.json) covers all six responsibilities, five domain baselines and eight audit checks, separating studio thresholds, WCAG applicability, severity and gate status. Build/typecheck/content/packed checks and 293 tests per Node 24/26 pass. Seven raw native fixtures are in progress; full behavior, runtime/assistive-technology evidence, desktop and final archive acceptance remain open.
 - [ ] A002 Migrate `ai-programmer` to `game-studio-ai-programmer`. Evidence: pending.
 - [ ] A003 Migrate `analytics-engineer` to `game-studio-analytics-engineer`. Evidence: pending.
 - [ ] A004 Migrate `art-director` to `game-studio-art-director`. Evidence: partial — native role, four gate resources and selected live cases; full source matrix, image review and desktop remain open. See [director evidence](../docs/evidence/director-roles-2026-11-12.json).
