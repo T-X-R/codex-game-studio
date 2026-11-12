@@ -179,3 +179,30 @@ profile when abandoning the fixture. The live fixture script is not shipped in
 the toolkit archive. Its offline input/output contract tests also run in native
 Windows CI. Desktop, shell, permission boundaries, remaining lifecycle behavior
 and production validators remain open.
+
+## Installed project settings Skill — 2026-11-12
+
+A natural-language read request in CLI 0.162.0 selected the installed
+`game-studio-project-settings` Skill without naming it in the prompt. The trace
+shows the actual Skill read and a successful `config get --json` through the
+restored project launcher. The response correctly described personal `solo`
+overriding shared `lean`, rigor-derived values, ignored personal engine settings
+and reserved-setting warnings. Hash verification found no project changes.
+See [the evidence record](evidence/project-settings-skill-2026-11-12.json).
+
+The default Node was unsupported and the Homebrew Node failed to load a library.
+The session found an existing isolated Node 24.22.2 and successfully used it;
+system installations were not changed. These failed attempts remain in the trace.
+
+Host discovery has an observed boundary: `debug prompt-input` from this non-Git
+game's nested `src/nested` directory omitted project Skills, while the same
+command from the game root listed them. Launch Codex from the game root for
+this route. Toolkit commands can independently find their project from a
+subdirectory; that does not establish host Skill discovery. Git-root nested
+discovery and desktop behavior are not established by this comparison.
+
+Five isolated supplied-Skill cases separately exercised read-only inspection,
+approved shared writes, personal overrides, refusals and reserved settings.
+Two regressions verified a clarified before-write read and unset-value wording.
+Those write cases are not native CLI/desktop mutation evidence. The remaining
+settings behavior and full host gates stay open.

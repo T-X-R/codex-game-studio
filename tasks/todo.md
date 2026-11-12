@@ -138,6 +138,7 @@ unreleased; full host and workflow acceptance is still open.
   - Likely files: `toolkit/src/check.ts`, `toolkit/src/package.ts`, `toolkit/test/check.test.ts`, `toolkit/test/package.test.ts`. Scope: M.
 
 - [ ] T14 Migrate the core user journey
+  - 2026-11-12 S037 settings slice: installed Skill and advisory reference, CLI read annotations for reserved/overridden values, and preserved source-derived behavior mapping. Five isolated behavior cases and two post-clarification regressions passed independent file/result checks. A natural-language CLI 0.162.0 read discovered and used the installed Skill from the game root; a non-Git nested launch did not discover it. See `docs/evidence/project-settings-skill-2026-11-12.json`. Local build/typecheck, 128 tests and packed install pass. Native writes, desktop, cancellation and unavailable/conflicting Skill scenarios remain open.
   - 2026-11-12 S040 growth supplement: the installed prototype Skill now routes selected/resumed growth to a focused reference; packed attachment includes the reference and shared TypeScript resources. Independent behavior evaluation plus a separate result verifier completed a scoring/pause fixture without changing its prototype or brief constraints. See `studio-tests/skills/utility/prototype-growth.md` and `docs/evidence/web-growth-skill-2026-11-12.json`. Native CLI/desktop journeys and the other prototype scenarios remain open.
   - Module: `codex-integration`. Dependencies: T13.
   - Work queue: the individual Skill rows for `start`, `prototype`, `next-step`, `project-settings`, `smoke-check`; execute each in bounded slices.
@@ -305,7 +306,7 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S034 Migrate `patch-notes` to `game-studio-patch-notes`. Evidence: pending.
 - [ ] S035 Migrate `perf-profile` to `game-studio-perf-profile`. Evidence: pending.
 - [ ] S036 Migrate `playtest-report` to `game-studio-playtest-report`. Evidence: pending.
-- [ ] S037 Migrate `project-settings` to `game-studio-project-settings`. Evidence: pending.
+- [ ] S037 Migrate `project-settings` to `game-studio-project-settings`. Evidence: partial; installed Skill, five supplied-Skill cases, two regressions and native CLI read in `docs/evidence/project-settings-skill-2026-11-12.json`. Remaining cases in `studio-tests/skills/utility/project-settings-codex.md`.
 - [ ] S038 Migrate `project-stage-detect` to `game-studio-project-stage-detect`. Evidence: pending.
 - [ ] S039 Migrate `propagate-design-change` to `game-studio-propagate-design-change`. Evidence: pending.
 - [ ] S040 Migrate `prototype` to `game-studio-prototype`. Evidence: pending.
@@ -318,7 +319,7 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S047 Migrate `review-all-gdds` to `game-studio-review-all-gdds`. Evidence: pending.
 - [ ] S048 Migrate `scope-check` to `game-studio-scope-check`. Evidence: pending.
 - [ ] S049 Migrate `security-audit` to `game-studio-security-audit`. Evidence: pending.
-- [ ] S050 Retire alias `settings`; route users to `game-studio-project-settings`. Evidence: pending.
+- [ ] S050 Retire alias `settings`; route users to `game-studio-project-settings`. Evidence: supplied-Skill personal-settings request routes correctly; native alias selection remains pending.
 - [ ] S051 Migrate `setup-engine` to `game-studio-setup-engine`. Evidence: pending.
 - [ ] S052 Migrate `skill-improve` to `game-studio-skill-improve`. Evidence: pending.
 - [ ] S053 Migrate `skill-test` to `game-studio-skill-test`. Evidence: pending.

@@ -34,6 +34,10 @@ Skill setup installs one onboarding Skill in `$CODEX_HOME/skills/game-studio`, o
 `~/.codex/skills/game-studio` when `CODEX_HOME` is unset. Use `--home <codex-home>`
 to choose another Codex home. Start a new Codex session if it is not discovered.
 Project workflows are installed under the game's `.agents/skills/` directory.
+Start Codex from the game root. In CLI 0.162.0, a session started inside a nested
+directory of a non-Git game did not discover the root's Skills; starting from
+the game root did. CLI command project discovery and host Skill discovery are
+separate. See [the observed compatibility limits](docs/codex-compatibility.md).
 
 Open `my-game` in Codex CLI or the desktop app, then describe the game:
 

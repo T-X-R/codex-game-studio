@@ -53,7 +53,7 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   tuning from production. A packed-runtime fixture builds both outputs and proves
   same-seed input/scoring states and screenshots match in real Chrome. Copy does
   not complete TypeScript/data conversion, game-rule tests or human play.
-- Three project Skills: start, prototype and next-step. These are alpha entry
+- Four project Skills: start, prototype, next-step and project-settings. These are alpha entry
   points covering implemented operations; they do not close the full upstream
   behavioral migration rows.
 - The prototype Skill now includes selected/resumed Web growth guidance and
@@ -62,6 +62,14 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   tests and 1 smoke check. Independent type-error injection, source preservation
   and replay/screenshot equality passed. See [the evidence](evidence/web-growth-skill-2026-11-12.json).
   This is not native host-discovery, broad game or human-play acceptance.
+- Project-settings preserves source/rigor explanations, allowed personal
+  overrides, reserved-setting warnings and authorized shared writes. Runtime
+  reads now expose stored layers and override/reserved annotations. Five isolated
+  supplied-Skill scenarios and two follow-up regressions passed file/result
+  verification; a native CLI natural-language read selected the installed Skill
+  and queried the runtime. No files changed in that read. See
+  [the evidence](evidence/project-settings-skill-2026-11-12.json). Native writes,
+  desktop execution and the remaining S037 scenarios are still open.
 
 ## Verification performed
 
