@@ -150,8 +150,12 @@ installed browser. Neither test downloads a browser automatically.
 Canonical Codex content lives in `.agents/skills/` and `studio/`. Build output in
 `toolkit/dist/` and `toolkit/resources/` is generated. The retained `.claude` tree
 and older upstream documentation are migration inputs, excluded from the CLI
-archive. Current project Skills cover start, prototype and next-step; they are not
-a claim that all 75 upstream workflows or 49 roles have been migrated.
+archive. The published alpha includes start, prototype and next-step. Development
+builds now install eleven project Skills, adding brainstorm, project-settings,
+smoke-check, gate-check, map-systems, design-system, design-review and
+architecture-decision. These workflows remain partially validated; see the
+scenario evidence and open requirements in [implementation status](docs/implementation-status.md).
+This does not claim that all 75 upstream workflows or 49 roles have been migrated.
 
 See [host compatibility](docs/codex-compatibility.md),
 [implementation status](docs/implementation-status.md),

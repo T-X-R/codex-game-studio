@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+- Add Codex systems mapping, sectional GDD authoring, independent design review
+  and architecture-decision workflows. Preserve existing design progress,
+  explicit decision ownership and separate authorization for accepting an ADR.
+  These additions have selected CLI evidence; complete workflow/desktop
+  acceptance remains open in the migration plan.
+- Keep review receipts tied to the files actually covered by the latest review;
+  older file hashes cannot establish deeper review coverage for a newer entry.
+- Provide portable registry queries, reference observations, validation,
+  before/after comparison and ID numbering without shell dependencies or
+  automatic registry writes. Observations do not constitute design approval.
 - Resolve workflow depth for a named system and import legacy engine preferences
   without overriding explicit project settings.
 - Add `config set` with validated project/local writes, dry-run effects,
