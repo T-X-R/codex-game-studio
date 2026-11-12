@@ -6,6 +6,31 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Architecture review now collects its fixed global receipt inputs through a
+  Skill-private script before delegating hashing/comparison to the shared helper.
+  This addresses repeated native omissions of TR/master, engine-root references
+  and unread Skill references. Seven deterministic cases and real pinned-package
+  checks cover changed/new/deleted inputs, unmatched classes and failures; the
+  combined suite has 210 passes, with build/typecheck/content and archive checks
+  passing. Native same-input reruns are still pending. Architecture creation
+  separately distinguishes existing ADR evidence from new master choices; that
+  correction also awaits full native revalidation.
+- The pinned [story observer](story-status.md) preserves the original review →
+  progress → ready routing order, first Status header and file ordering. Six
+  [retained-source comparisons](evidence/story-status-2026-11-12.json) match on
+  macOS with `LC_ALL=C`; a discovered Unicode case-folding mismatch is fixed and
+  regression-tested. Build/typecheck/content lint, 203 local tests and the real
+  installed-archive check pass. The first full-suite attempt was blocked by the
+  sandbox's localhost-listen restriction; the authorized rerun passed without
+  changing the preview test. This does not validate the native next-step workflow,
+  whose expanded implementation and behavioral matrix are still in progress.
+- The native Systems Designer has [17 recorded scenarios](evidence/systems-designer-role-2026-11-12.json):
+  15 scoped passes and two retained initial failures caused by ambiguous fixture
+  instructions or role-selection expectations. Clarified variants preserve the
+  original failed inputs. [Independent integration checks](evidence/systems-designer-integration-2026-11-12.json)
+  reconcile all raw hashes, actual workspace bytes, permitted effects and native
+  child identities/inherited settings. Resource-denial, desktop, subdirectory,
+  concurrent-write and additional domain cases remain open; A032 stays partial.
 - Architecture creation, architecture review and the native Systems Designer now
   have Codex implementations, source-mapped specifications and isolated native
   fixtures. The catalog contains thirteen partial Skills and ten partial roles;

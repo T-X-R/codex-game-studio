@@ -71,7 +71,7 @@ try {
     const id = `.agents/skills/game-studio-map-systems/${path}`;
     assert.equal(await readFile(join(project, id), 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
-  for (const skill of ['design-system', 'design-review', 'architecture-decision', 'create-architecture', 'architecture-review']) {
+  for (const skill of ['design-system', 'design-review', 'architecture-decision', 'create-architecture', 'architecture-review', 'next-step']) {
     const path = `.agents/skills/game-studio-${skill}`;
     const source = join(packageRoot, '..', path);
     const expected = [];
@@ -133,6 +133,31 @@ try {
     error.status === 2 && /pinned project runtime/.test(error.stderr.toString()));
   await rm(join(project, receiptInput));
   await rm(join(project, 'receipt-log.md'));
+  const reviewProject = join(temp, 'review inputs 项目');
+  command(globalCli, 'init', reviewProject, '--engine', 'web');
+  command(globalCli, 'restore', '--project', reviewProject, '--archive', archive, '--offline');
+  const reviewInputs = join(reviewProject, '.agents/skills/game-studio-architecture-review/scripts/review-inputs.mjs');
+  for (const [path, content] of [
+    ['design/gdd/combat.md', 'Combat rules'], ['design/gdd/other.md', 'Other rules'],
+    ['docs/architecture/adr-0001.md', 'Decision'], ['docs/architecture/tr-registry.yaml', 'requirements: []'],
+    ['docs/architecture/architecture.md', 'Architecture'], ['docs/engine-reference/web/VERSION.md', 'Web'],
+    ['docs/engine-reference/web/current-best-practices.md', 'Reference'], ['docs/engine-reference/web/modules/core.md', 'Core'],
+  ]) {
+    await mkdir(join(reviewProject, path, '..'), { recursive: true });
+    await writeFile(join(reviewProject, path), content + '\n');
+  }
+  const reviewSet = JSON.parse(execute(reviewInputs, ['list'], reviewProject));
+  assert.equal(reviewSet.qualityAssessed, false); assert.equal(reviewSet.engine, 'Web');
+  for (const path of ['design/gdd/other.md', 'docs/architecture/tr-registry.yaml',
+    'docs/architecture/architecture.md', 'docs/engine-reference/web/current-best-practices.md',
+    '.agents/skills/game-studio-architecture-review/references/writes-and-records.md']) assert.ok(reviewSet.inputs.includes(path), path);
+  assert.ok(reviewSet.inputs.some(path => path.startsWith('.game-studio/node_modules/') && path.endsWith('/studio/scripts/review-receipts.mjs')));
+  await writeFile(join(reviewProject, 'review.md'), execute(reviewInputs, ['hash'], reviewProject));
+  assert.match(execute(reviewInputs, ['check', 'review.md'], reviewProject), /UNCHANGED: docs\/architecture\/tr-registry.yaml/);
+  await writeFile(join(reviewProject, 'docs/architecture/tr-registry.yaml'), 'requirements: [changed]\n');
+  assert.match(execute(reviewInputs, ['check', 'review.md'], reviewProject), /CHANGED: docs\/architecture\/tr-registry.yaml/);
+  await rm(join(reviewProject, 'docs/engine-reference/web/modules/core.md'));
+  assert.throws(() => execute(reviewInputs, ['hash'], reviewProject), error => error.status === 2 && /UNRESOLVED:/.test(error.stderr.toString()));
   const storyHelper = JSON.parse(execute(launcher, ['resource', 'path', 'studio/scripts/story-status.mjs', '--json'], project)).data.path;
   assert.ok(storyHelper.startsWith(join(project, '.game-studio/node_modules')));
   assert.deepEqual(await readFile(storyHelper), await readFile(join(packageRoot, '../studio/scripts/story-status.mjs')));
