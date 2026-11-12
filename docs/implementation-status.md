@@ -6,6 +6,17 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Architecture creation, architecture review and the native Systems Designer now
+  have Codex implementations, source-mapped specifications and isolated native
+  fixtures. The catalog contains thirteen partial Skills and ten partial roles;
+  none is declared fully verified. The first combined content check caught a
+  legacy runtime fallback in architecture creation; it was removed before the
+  corrected build, content lint, 198 tests and installed-archive check passed.
+  Native behavioral acceptance for this batch is in progress, not yet a pass.
+  Review receipt hashing now lives in one pinned shared resource, with the old
+  design-review script forwarding to it; installed-package checks exercise both
+  entry points, changed inputs and failure without the pinned runtime. Review
+  records also track specialist method resources actually used.
 - Three authoring/review workflows now have initial Codex implementations and
   source-derived acceptance matrices: design-system, design-review and
   architecture-decision. Cross-review corrected a review-receipt bug that could
@@ -16,8 +27,8 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   formatting and cross-reference ownership labels. Design review also proves
   actual review-to-reuse behavior in a fresh native session. Root integration
   checks independently reconcile raw hashes, actual file bytes, effects and
-  native-role inheritance; these rows remain partial. The catalog
-  now contains eleven partial Skills, nine partial roles and no verified rows.
+  native-role inheritance; these rows remain partial. That checkpoint
+  contained eleven partial Skills, nine partial roles and no verified rows.
   Shared [registry observations](registry-observations.md) provide real parsed
   reads, validation, comparison and ID numbering. Build/content checks, 198 local
   tests and final installed-archive verification pass. All five jobs for
@@ -429,7 +440,7 @@ The full acceptance contract remains in `tasks/todo.md`. In particular:
 The implementation order was adjusted to exercise deterministic installation and
 Web operations while host compatibility remains open. This does not waive C0–C5
 or make the final migration complete. The published alpha does not install roles
-or hooks. Development packages now install nine roles; their verified CLI scenarios
+or hooks. Development packages now install ten roles; their verified CLI scenarios
 do not establish desktop support. No production Hooks are installed.
 
 Detach retains game configuration, runtime archives/dependencies/lock and backups.

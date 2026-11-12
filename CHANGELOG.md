@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Add tiered master-architecture authoring, architecture coverage/traceability
+  review and a native Systems Designer role. Build and archive checks pass;
+  native behavior acceptance is in progress.
+- Share read-only review receipts through the project's pinned runtime, retaining
+  the design-review script entry point and tracking referenced specialist methods.
 - Add Codex systems mapping, sectional GDD authoring, independent design review
   and architecture-decision workflows. Preserve existing design progress,
   explicit decision ownership and separate authorization for accepting an ADR.

@@ -284,7 +284,7 @@ Each S-row is an individual task owned by `codex-integration`.
 
 - [ ] S001 Migrate `adopt` to `game-studio-adopt`. Evidence: pending.
 - [ ] S002 Migrate `architecture-decision` to `game-studio-architecture-decision`. Partial: author/retrofit/accept Skill, references and complete ADR template; [12 reviewed native cases](../docs/evidence/architecture-decision-skill-2026-11-12.json), retaining the first Layer failure and recovered temporary-file ownership risk. Actual Web expert/TD sequence, authorized Status-only changes and precise story effects verified. Full native/engine/desktop acceptance remains pending in [the Codex matrix](../studio-tests/skills/authoring/architecture-decision-codex.md).
-- [ ] S003 Migrate `architecture-review` to `game-studio-architecture-review`. Evidence: pending.
+- [ ] S003 Migrate `architecture-review` to `game-studio-architecture-review`. Partial: six review modes, stable requirement IDs, engine lenses and structural traceability; build/content lint, 198 regression tests and installed archive pass. Native acceptance is in progress in [the Codex matrix](../studio-tests/skills/review/architecture-review-codex.md); no behavioral pass declared yet.
 - [ ] S004 Migrate `art-bible` to `game-studio-art-bible`. Evidence: pending.
 - [ ] S005 Migrate `asset-audit` to `game-studio-asset-audit`. Evidence: pending.
 - [ ] S006 Migrate `asset-spec` to `game-studio-asset-spec`. Evidence: pending.
@@ -297,7 +297,7 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S012 Migrate `code-review` to `game-studio-code-review`. Evidence: pending.
 - [ ] S013 Migrate `consistency-check` to `game-studio-consistency-check`. Evidence: pending.
 - [ ] S014 Migrate `content-audit` to `game-studio-content-audit`. Evidence: pending.
-- [ ] S015 Migrate `create-architecture` to `game-studio-create-architecture`. Evidence: pending.
+- [ ] S015 Migrate `create-architecture` to `game-studio-create-architecture`. Partial: complete source baseline, tiered architecture and native TD/LP reviews; build/content lint, 198 regression tests and installed archive pass. Native acceptance is in progress in [the Codex matrix](../studio-tests/skills/authoring/create-architecture-codex.md); no behavioral pass declared yet.
 - [ ] S016 Migrate `create-control-manifest` to `game-studio-create-control-manifest`. Evidence: pending.
 - [ ] S017 Migrate `create-epics` to `game-studio-create-epics`. Evidence: pending.
 - [ ] S018 Migrate `create-stories` to `game-studio-create-stories`. Evidence: pending.
@@ -415,7 +415,7 @@ Each A-row is an individual task owned by `codex-integration`.
 - [ ] A029 Migrate `release-manager` to `game-studio-release-manager`. Evidence: pending.
 - [ ] A030 Migrate `security-engineer` to `game-studio-security-engineer`. Evidence: pending.
 - [ ] A031 Migrate `sound-designer` to `game-studio-sound-designer`. Evidence: pending.
-- [ ] A032 Migrate `systems-designer` to `game-studio-systems-designer`. Evidence: pending.
+- [ ] A032 Migrate `systems-designer` to `game-studio-systems-designer`. Partial: native role, complete formula/interaction/tuning methods and 15 isolated scenarios; static and installed-package checks pass. [Native acceptance](../studio-tests/roles/systems-designer-codex.md) is in progress, not yet verified.
 - [ ] A033 Migrate `technical-artist` to `game-studio-technical-artist`. Evidence: pending.
 - [ ] A034 Migrate `technical-director` to `game-studio-technical-director`. Evidence: partial — native role, eight gate resources and selected live cases; full source matrix, engine API validation, ADR acceptance writes and desktop remain open. See [director evidence](../docs/evidence/director-roles-2026-11-12.json).
 - [ ] A035 Migrate `tools-programmer` to `game-studio-tools-programmer`. Evidence: pending.
