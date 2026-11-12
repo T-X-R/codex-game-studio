@@ -23,6 +23,11 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 - Engine inspection preserves engine-specific roots and reports missing,
   ambiguous, case-mismatched, unsafe or unresolved module paths. Inspection does
   not certify editor installation, licensing or execution.
+- Engine setup applies explicit version/language/paths and selected specialist,
+  naming and command settings in one transaction with the technical preference
+  mirror. It preserves custom notes and unspecified values, guards both documents
+  against concurrent edits, and reports uncreated directories without claiming
+  runtime readiness. See [the configuration contract](engine-configuration.md).
 - Configured test/smoke/build execution selects OS-specific project commands,
   uses explicit engine defaults only when applicable, preserves stdout/stderr and
   original exit codes, and distinguishes failure, timeout and unavailable capability.
@@ -58,9 +63,10 @@ were not modified; verification used an isolated Node 24 distribution.
   remains unchanged; an intentional browser error returns failure.
 - Official Skill-format validation for onboarding and the three project Skills.
 
-Source additions after the published alpha: build/typecheck and 81 local tests
+Source additions after the published alpha: build/typecheck and 93 local tests
 pass with no skips. Packed-install tests exercise configuration summaries/writes,
-checkpoint save/reopen/detach preservation, engine inspection and actual test
+checkpoint save/reopen/detach preservation, engine setup dry-run/apply/no-op and
+preference preservation after detach, engine inspection and actual test
 execution through the restored project launcher. These additions are not in the existing
 `v0.1.0-alpha.0` download; a later archive is required to distribute them.
 
@@ -117,7 +123,7 @@ The full acceptance contract remains in `tasks/todo.md`. In particular:
 - All 75 upstream workflow adaptations, 49 roles, 14 scoped rules, individual
   hook behaviors and remaining helper parity. The retained `.claude` source is
   not shipped as an active compatibility layer.
-- Broader validators, remaining configuration helper parity, engine setup and
+- Broader validators, remaining configuration helper parity, engine scaffolding and
   live native-engine build/test acceptance, prototype growth/tuning, checkpoint
   automation and version upgrade.
 - Native platform evidence for the remaining operations, full natural-language journeys,

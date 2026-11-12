@@ -102,8 +102,9 @@ project/local configuration writes, and `config get --system NAME`. These are
 unreleased additions, not commands in the existing `v0.1.0-alpha.0` archive.
 See [configuration syntax and safety](studio/docs/configuration.md).
 
-Additional source-only commands are `engine inspect`, `test` (including
+Additional source-only commands are `engine setup`, `engine inspect`, `test` (including
 `--kind smoke` and `--kind build`), and `checkpoint show/save`. See
+[engine configuration](docs/engine-configuration.md),
 [test execution and engine inspection](studio/docs/testing.md) and
 [checkpoint recovery](studio/docs/recovery.md). Engine directory inspection and
 a successful shell command do not establish editor licensing, test coverage or

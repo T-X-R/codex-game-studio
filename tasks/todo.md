@@ -144,6 +144,7 @@ unreleased; full host and workflow acceptance is still open.
   - Likely files per slice: one Skill body, up to three references, its behavior spec. Scope: M per slice; this parent closes only after all child rows pass.
 
 - [ ] T15 Grow a prototype and configure an engine
+  - 2026-11-12 configuration slice: grouped settings (`2054c77`) and `engine setup` (`8df646e`) atomically update explicit engine/version/language/paths plus selected specialist/naming/command fields and `docs/technical-preferences.md`. Missing directories remain pending; invalid paths and concurrent edits are refused. Build/typecheck and 93 local tests pass. Packed-install coverage verifies dry-run, apply, no-op, pinned runtime dispatch and preference retention after detach. See `docs/engine-configuration.md`. This does not close prototype growth, engine scaffolding, S051 or live editor acceptance.
   - Module: `game-operations`. Dependencies: T14.
   - Acceptance: Web growth preserves the game's behavior and establishes build/test scripts without overwriting toolkit or existing game configuration; engine setup records explicit paths/version.
   - Verification: before/after seeded run, configuration preservation, build/test discovery, and one Web starter fixture per advertised option.

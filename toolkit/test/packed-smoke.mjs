@@ -39,6 +39,19 @@ try {
   const engineInspection = command(launcher, 'engine', 'inspect', '--project', project);
   assert.equal(engineInspection.data.engine.name.value, 'Web');
   assert.equal(engineInspection.data.execution.state, 'not_assessed');
+  const setupInput = 'engine-setup.json';
+  await writeFile(join(project, setupInput), JSON.stringify({ engine: {
+    name: 'Web', version: '7.3.1', language: 'TypeScript', code_root: 'src', test_root: 'tests',
+  }, naming: { variables: 'camelCase' } }));
+  const beforeSetup = await readFile(join(project, 'project.yaml'), 'utf8');
+  const setupPreview = command(launcher, 'engine', 'setup', '--input', setupInput, '--dry-run', '--project', project);
+  assert.deepEqual(setupPreview.data.changes.map(change => change.path), ['project.yaml', 'docs/technical-preferences.md']);
+  assert.equal(await readFile(join(project, 'project.yaml'), 'utf8'), beforeSetup);
+  const setup = command(globalCli, 'engine', 'setup', '--input', setupInput, '--project', project);
+  assert.equal(setup.status, 'ok'); assert.equal(setup.data.execution.state, 'not_assessed');
+  assert.equal(command(launcher, 'config', 'get', 'engine.version', '--project', project).data.settings['engine.version'].value, '7.3.1');
+  assert.match(await readFile(join(project, 'docs/technical-preferences.md'), 'utf8'), /\*\*Engine\*\*: Web 7\.3\.1/);
+  assert.equal(command(launcher, 'engine', 'setup', '--input', setupInput, '--project', project).data.changes.length, 0);
   await writeFile(join(project, 'test-fixture.cjs'), 'console.log("packed test executed");\n');
   command(launcher, 'config', 'set', 'commands.test', 'node test-fixture.cjs', '--project', project);
   assert.equal(command(launcher, 'test', '--output', 'production/evidence/packed-test', '--project', project).data.processExitCode, 0);
@@ -66,6 +79,7 @@ try {
   command(globalCli, 'skills', 'remove', '--home', join(temp, 'codex-home'));
   command(globalCli, 'detach', '--project', project);
   assert.ok(await readFile(join(project, 'project.yaml'), 'utf8'));
+  assert.match(await readFile(join(project, 'docs/technical-preferences.md'), 'utf8'), /Web 7\.3\.1/);
   assert.match(await readFile(join(project, 'production/session-state/active.md'), 'utf8'), /Test controls/);
   console.log('Packed install, exact runtime restore, single-hop dispatch, onboarding and detach passed.');
 } finally { await rm(temp, { recursive: true, force: true }); }
