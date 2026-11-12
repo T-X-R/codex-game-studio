@@ -74,6 +74,21 @@ try {
   }
   command(globalCli, 'restore', '--project', project, '--archive', archive, '--offline');
   const launcher = join(project, '.game-studio/run.cjs');
+  await mkdir(join(project, 'docs/architecture'), { recursive: true });
+  for (const [id, target] of [['01', '02'], ['02', '01'], ['03', '01']]) {
+    await writeFile(join(project, `docs/architecture/adr-${id}.md`), `## ADR Dependencies\n| **Depends On** | ADR-${target} |\n`);
+  }
+  const graph = command(launcher, 'check', '--kind', 'adr-deps', '--project', project).data;
+  assert.deepEqual(graph.cycles.map(cycle => cycle.id), ['adr-01', 'adr-02']);
+  assert.deepEqual(graph.blockedByCycle, ['adr-03']);
+  assert.deepEqual(graph.order, []);
+  assert.equal(graph.qualityAssessed, false);
+  for (const id of ['01', '02', '03']) await rm(join(project, `docs/architecture/adr-${id}.md`));
+  assert.throws(() => command(launcher, 'check', '--kind', 'adr-deps', '--project', project), error => {
+    assert.equal(error.status, 3);
+    assert.equal(JSON.parse(error.stdout).status, 'not_assessed');
+    return true;
+  });
   await mkdir(join(project, 'design/gdd'), { recursive: true });
   const gddText = '## Overview\n[To be designed]\n## Detailed Design\nDamage is clamped.\n';
   await writeFile(join(project, 'design/gdd/combat.md'), gddText);

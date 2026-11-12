@@ -18,6 +18,7 @@ import { applyInstall, describePlan } from './install.js';
 import { inspectGrowth } from './grow-check.js';
 import { planGrowthCopy } from './grow-copy.js';
 import { inspectGdd } from './gdd-structure.js';
+import { inspectAdrDependencies } from './adr-deps.js';
 
 const project: Option = { type: 'string', description: 'Game workspace directory' };
 const dryRun: Option = { type: 'boolean', description: 'Describe effects without creating files or starting a server' };
@@ -141,15 +142,16 @@ export const gameCommands: Record<string, Command> = {
     options: { project, 'dry-run': dryRun, output: { type: 'string', description: 'New project-relative output directory (defaults to builds/<name>-<timestamp>)' } },
     run: async input => success('package', await packagePrototype(await root(input), input.args[0]!,
       input.values.output as string ?? `builds/${basename(input.args[0]!)}-${Date.now()}`, !!input.values['dry-run'])) },
-  check: { description: 'Inspect prototype scripts, installed toolkit content or GDD structure without executing them', effect: 'read', maxArgs: 1,
-    options: { project, kind: { type: 'string', description: 'prototype (default; requires a path), content (no path), or gdd (optional file path; otherwise all system GDDs)' } }, run: async input => {
+  check: { description: 'Inspect scripts, toolkit content, GDD structure or ADR dependencies without executing them', effect: 'read', maxArgs: 1,
+    options: { project, kind: { type: 'string', description: 'prototype (default; requires a path), content (no path), gdd (optional file), or adr-deps (optional directory)' } }, run: async input => {
       const kind = input.values.kind ?? 'prototype';
-      if (!['prototype', 'content', 'gdd'].includes(String(kind)) ||
+      if (!['prototype', 'content', 'gdd', 'adr-deps'].includes(String(kind)) ||
           (kind === 'content' && input.args.length !== 0) || (kind === 'prototype' && input.args.length !== 1)) {
-        throw new StudioError('INVALID_ARGUMENT', 'Use check <path> [--kind prototype], check --kind content, or check [file] --kind gdd');
+        throw new StudioError('INVALID_ARGUMENT', 'Use check <path> [--kind prototype], check --kind content, check [file] --kind gdd, or check [directory] --kind adr-deps');
       }
-      if (kind === 'gdd') {
-        const data = await inspectGdd(await root(input), input.args[0]);
+      if (kind === 'gdd' || kind === 'adr-deps') {
+        const data = kind === 'gdd' ? await inspectGdd(await root(input), input.args[0]) :
+          await inspectAdrDependencies(await root(input), input.args[0]);
         const result = success('check', data);
         if (!data.files.length) {
           process.exitCode = 3; result.status = 'not_assessed';
