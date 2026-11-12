@@ -29,6 +29,9 @@ const workspace = join(directory, 'Lantern game 测试');
 run(cli, ['init', workspace, '--engine', 'web', '--json']);
 run(cli, ['restore', '--project', workspace, '--archive', archive, '--offline', '--json']);
 assert.equal((await runProcess('git', ['init', '--quiet', workspace])).exitCode, 0);
+for (const role of scenario.removeRoles ?? []) {
+  await rm(join(workspace, '.codex/agents', `game-studio-${role}.toml`), { force: true });
+}
 for (const [path, content] of Object.entries(scenario.inputs)) {
   await mkdir(dirname(join(workspace, path)), { recursive: true });
   await writeFile(join(workspace, path), content);
@@ -74,7 +77,7 @@ try {
   await writeFile(join(directory, 'fixture.json'), JSON.stringify({ scenario: name, workspace, args, hashes, packageIntegrity: packed.integrity }, null, 2));
   console.log(JSON.stringify({ directory, scenario: name, status: 'running' }));
   const version = await runProcess('codex', ['--version']);
-  const result = await runProcess('codex', args, { cwd: workspace, timeoutMs: 480000 });
+  const result = await runProcess('codex', args, { cwd: workspace, timeoutMs: scenario.timeoutMs ?? 480000 });
   await writeFile(join(directory, 'events.jsonl'), result.stdout, { mode: 0o600 });
   await writeFile(join(directory, 'stderr.txt'), result.stderr, { mode: 0o600 });
   const after = await snapshot();

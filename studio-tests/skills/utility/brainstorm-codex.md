@@ -74,10 +74,15 @@ keep missing director roles and desktop coverage open. No artifact is evidence o
 an engine build, playable prototype, market research or publication approval.
 
 The opt-in CLI fixture is `node toolkit/test/brainstorm-host.mjs <case>` after a
-maintainer build. Cases are `pick`, `brief`, `negative`, `standard-solo` and
-`full-missing`. It uses the existing Codex login, a fresh packed installation and
+maintainer build. Cases are `pick`, `brief`, `negative`, `standard-solo`,
+`full-missing` and `full-review`. The missing-role case removes only the four
+director role files from the disposable workspace before the snapshot; the full
+review case retains them and authorizes independent read-only director tasks.
+It uses the existing Codex login, a fresh packed installation and
 a temporary trusted-project profile removed on exit; it does not trust Hooks or
 pin a model. Run it only within authorized live-host testing scope. Exit 3 means
 execution finished but semantic review is still required; it is not a test pass.
 Review the emitted directory's trace, artifact, hashes and report. The fixture
 does not exercise interactive choices, resume, other automation modes or desktop.
+Full review allows 15 minutes for four native reviews and concept drafting;
+timeout is a failed/incomplete run, never grounds to skip a required review.

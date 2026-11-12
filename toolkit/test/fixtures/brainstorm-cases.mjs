@@ -25,7 +25,13 @@ export const brainstormScenarios = {
   },
   'full-missing': {
     sandbox: 'workspace-write', expectedFiles: ['design/gdd/game-concept.md'],
+    removeRoles: ['creative-director', 'art-director', 'technical-director', 'producer'],
     inputs: { 'project.yaml': project('full', 'full') },
     request: `${concept} No implementation, installs, commits or publishing. Preserve existing files. You may use available native director roles for the required reviews, with read-only tasks. The installed runtime can inspect settings/resources.`,
+  },
+  'full-review': {
+    sandbox: 'workspace-write', expectedFiles: ['design/gdd/game-concept.md'], timeoutMs: 900000,
+    inputs: { 'project.yaml': project('full', 'full') },
+    request: `${concept} No implementation, installs, commits or publishing. Preserve existing files. Use available native director roles for the required independent read-only reviews. Preserve my already chosen visual direction; a review may flag concerns but cannot choose another one. The installed runtime can inspect settings/resources.`,
   },
 };
