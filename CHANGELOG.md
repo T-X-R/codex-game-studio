@@ -9,6 +9,12 @@
   and destructive YAML shape changes fail before applying a stale plan.
 - Restrict new transaction journals and backups to owner-only POSIX permissions;
   Windows continues to inherit the workspace ACLs.
+- Save and show recoverable checkpoints with stale-write protection, preserved
+  narrative, immutable event deduplication and current Git observations.
+- Expose workflow gate/review summaries and engine-specific directory inspection
+  without silently falling back from invalid or ambiguous roots.
+- Run configured test/smoke/build commands with OS-aware selection, bounded
+  execution and saved reports/logs; unavailable capabilities remain not assessed.
 
 ## Codex Game Studio 0.1.0-alpha.0 — 2026-11-11
 

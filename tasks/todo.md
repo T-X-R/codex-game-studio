@@ -29,6 +29,13 @@ all five jobs in run `43137793165` on the development branch; no new archive is 
 The configuration reader also preserves legacy boolean `testing.strict` fallback
 after explicit per-type overrides; derived gate/engine helper parity is still open.
 
+Further 2026-11-12 slices: checkpoint CLI persistence/recovery (`e19aac9`),
+gate/review/engine/performance summaries (`92ab7f3`), engine root validation
+(`942451a`), configured test/smoke/build execution with logs (`ed3e03b`) and engine
+inspection (`cbe931b`) pass build, typecheck, 74 local tests and packed-install
+verification. These do not close T18's live hook/compaction acceptance or T23's
+native editor execution requirements. Native CI for this batch is pending.
+
 ## M0 Compatibility and contracts
 
 - [ ] T01 Establish Codex integration evidence
@@ -156,6 +163,7 @@ after explicit per-type overrides; derived gate/engine helper parity is still op
   - Likely files per slice: one validator, its adapter binding, one fixture, one test, inventory evidence. Scope: M per row.
 
 - [ ] T18 Implement checkpoint persistence and recovery
+  - Implemented CLI slice: bounded show, expected-hash save, legacy narrative preservation, immutable event deduplication, stale-writer rejection and interrupted transaction recovery. Unit and packed subprocess tests pass; actual Stop/compaction integration and host restart evidence remain open.
   - Module: `project-state`. Dependencies: T04, T16.
   - Acceptance: state save is atomic with concurrency detection; repeated Stop events do not duplicate work; recovery checks files rather than assuming surviving processes.
   - Verification: crash/interruption, two attempted writers, stale hash, restart and compaction scenarios; concise context output.
@@ -192,6 +200,7 @@ after explicit per-type overrides; derived gate/engine helper parity is still op
   - Likely files per helper slice: source/resource, consumer, contract fixture, test, source mapping. Per rule slice: rule, applicability index, behavior fixture. Scope: S/M.
 
 - [ ] T23 Validate engine-specific operations
+  - Implemented shared slice: engine-specific root inspection and configured OS-aware command execution with failure/unavailable/timeout evidence. Tests exercise actual Node/npm processes; they do not certify Godot, Unity or Unreal editor/license/build execution. Engine setup remains open.
   - Module: `game-operations`. Dependencies: T15, T22 relevant helpers.
   - Work queue: separate Web, Godot, Unity and Unreal slices; further split build and test adapters if more than five files are needed.
   - Acceptance per engine: preserve configured roots/version and command semantics; missing editor/license/tests cannot pass; evidence names the actual environment.

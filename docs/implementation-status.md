@@ -9,12 +9,23 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 - Typed CLI argument contracts, JSON results, help/schema and explicit exit codes.
 - Nearest project discovery, configuration reads with provenance and rigor/local
   precedence, named system workflow overrides and legacy technical-preference
-  import, plus legacy boolean test strictness. Derived gate/engine helper parity
-  remains open.
+  import, plus legacy boolean test strictness. Explicit summaries cover gate
+  levels, review gates, engine values/roots and performance budgets. Input-method
+  and specialist summary parity remains open.
 - Configuration writes with local-key restrictions, value validation, comment
   and scalar-quote preservation, no-op detection and synchronized stage mirrors.
   Concurrent changes and destructive YAML shape edits are refused. Transaction
   journals and backups are created with owner-only POSIX permissions.
+- Checkpoint show/save with a bounded recovery preview, whole-record expected
+  hashes, immutable save events, replay protection and interrupted-write recovery.
+  Existing narrative/line endings survive updates. Git observations are separate
+  from recorded claims; automatic lifecycle hook integration remains open.
+- Engine inspection preserves engine-specific roots and reports missing,
+  ambiguous, case-mismatched, unsafe or unresolved module paths. Inspection does
+  not certify editor installation, licensing or execution.
+- Configured test/smoke/build execution selects OS-specific project commands,
+  uses explicit engine defaults only when applicable, preserves stdout/stderr and
+  original exit codes, and distinguishes failure, timeout and unavailable capability.
 - Canonical resource packaging and one globally installed onboarding Skill.
 - Project attachment, exact runtime pins, local launchers, portable development
   archives, explicit npm restore with lifecycle scripts disabled and single-hop
@@ -47,9 +58,10 @@ were not modified; verification used an isolated Node 24 distribution.
   remains unchanged; an intentional browser error returns failure.
 - Official Skill-format validation for onboarding and the three project Skills.
 
-Source additions after the published alpha: build/typecheck and 47 local tests
-pass with no skips. The packed-install test also exercises configuration writes
-through the restored project launcher. These additions are not in the existing
+Source additions after the published alpha: build/typecheck and 74 local tests
+pass with no skips. Packed-install tests exercise configuration summaries/writes,
+checkpoint save/reopen/detach preservation, engine inspection and actual test
+execution through the restored project launcher. These additions are not in the existing
 `v0.1.0-alpha.0` download; a later archive is required to distribute them.
 
 The published alpha commit `92242edc44f99c9c4b7dc0c24ac7bee12c62e7eb`
@@ -78,8 +90,9 @@ The full acceptance contract remains in `tasks/todo.md`. In particular:
 - All 75 upstream workflow adaptations, 49 roles, 14 scoped rules, individual
   hook behaviors and remaining helper parity. The retained `.claude` source is
   not shipped as an active compatibility layer.
-- Broader validators, remaining configuration helper parity, engine setup/build/test adapters,
-  prototype growth/tuning, checkpoint automation and version upgrade.
+- Broader validators, remaining configuration helper parity, engine setup and
+  live native-engine build/test acceptance, prototype growth/tuning, checkpoint
+  automation and version upgrade.
 - Native platform evidence for the remaining operations, full natural-language journeys,
   human play acceptance, and stable-release review.
 

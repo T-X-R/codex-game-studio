@@ -27,7 +27,7 @@ The legacy scalar `testing.strict: true|false` fills per-type strictness after
 valid personal and project per-type values. Absent strictness remains unset;
 workflow-specific defaults are not invented by the configuration reader.
 
-Four explicit summary queries preserve the upstream workflow calculations:
+Explicit summary queries preserve the upstream workflow calculations:
 
 | Query | Result |
 | --- | --- |
@@ -35,6 +35,7 @@ Four explicit summary queries preserve the upstream workflow calculations:
 | `config get review_gate` | Skill and phase gate run/skip decisions from the effective review mode: full runs both, lean runs phase gates, solo skips both. |
 | `config get engine_values` | Name, version and language, each with its own source; missing fields remain unset. |
 | `config get perf_budgets` | The four committed performance budgets with provenance; local budget overrides are ignored. |
+| `config get engine_row` | Engine-specific roots and their observed filesystem state, default commands and excluded framework directories. Missing or ambiguous roots are explicit. |
 
 Summary results describe configured policy, not a completed review or test.
 An explicit workflow review option can still require a review. Stored strictness
