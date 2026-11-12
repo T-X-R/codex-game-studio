@@ -1,6 +1,6 @@
 # Migration inventory for Codex Game Studio
 
-Status: Proposed dispositions; every item is unimplemented and unverified. Baseline: upstream 1.3.0, `abc0de7`, inspected 2026-11-11. This inventory records source identity and intended destination; it does not assert behavioral equivalence. See [the main proposal](plan.md) and [implementation tasks](todo.md).
+Status: Retained source identities and intended dispositions. Baseline: upstream 1.3.0, `abc0de7`, inspected 2026-11-11. This inventory does not assert behavioral equivalence or current implementation status. Current workflow/role declarations are in [catalog v3](../studio-tests/catalog.yaml), with acceptance evidence and remaining work in [implementation tasks](todo.md). See [the main proposal](plan.md).
 
 ## Coverage totals
 

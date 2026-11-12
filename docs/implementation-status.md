@@ -36,6 +36,18 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   uses explicit engine defaults only when applicable, preserves stdout/stderr and
   original exit codes, and distinguishes failure, timeout and unavailable capability.
 - Canonical resource packaging and one globally installed onboarding Skill.
+- `lint:content` now parses canonical Skill YAML and role TOML, checks local
+  references and packaging boundaries, and reconciles catalog v3 with 75 primary
+  workflow inputs, 49 roles and three retired aliases. The current five project
+  Skills and five roles remain explicitly partial; no behavior row is promoted
+  by static checks. Complete-declaration mode correctly fails for open rows.
+  Installed-archive verification uses the packaged validator and rejects a
+  deliberately removed reference before restoring it. Metadata, resource,
+  catalog and negative-path tests bring the local suite to 149 passes. See
+  [validation evidence](evidence/content-validation-2026-11-12.json) and
+  [the contract](content-validation.md). T20 still needs command-example checks,
+  the Codex behavior rubric, rule/hook/helper inventory cross-checks and legacy
+  consumer replacement; host/journey acceptance remains independently open.
 - Project attachment, exact runtime pins, local launchers, portable development
   archives, explicit npm restore with lifecycle scripts disabled and single-hop
   dispatch from a different global CLI version.

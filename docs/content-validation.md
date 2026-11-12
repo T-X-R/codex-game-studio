@@ -26,7 +26,7 @@ Evidence still needs semantic review against the complete approved requirements.
 combined with `--complete`; source inputs/catalog are not distributed at runtime.
 
 This is not the final T20 gate yet: command-example validation, the Codex behavior
-rubric and retirement of legacy lint consumers remain pending. The old linter and
+rubric, rule/hook/helper inventory cross-checks and retirement of legacy lint consumers remain pending. The old linter and
 upstream behavioral specs remain migration inputs until their replacement is
 finished. Shared rules/helpers and host behavior are separately gated by the plan.
 

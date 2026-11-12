@@ -1,0 +1,244 @@
+{
+  "recordedAt": "2026-11-12",
+  "scope": "T20 static metadata, resource and workflow/role catalog foundation; not host or complete migration acceptance",
+  "implementationHead": "138ae1153c1be696f9c7e5718f6427dc76456519",
+  "environment": {
+    "node": "v24.22.2",
+    "platform": "macOS ARM64"
+  },
+  "checks": {
+    "source": {
+      "args": [
+        "toolkit/scripts/lint-content.mjs"
+      ],
+      "exitCode": 0,
+      "result": {
+        "status": "valid",
+        "counts": {
+          "skills": 5,
+          "onboarding": 1,
+          "roles": 5
+        },
+        "checkedFiles": [
+          ".agents/skills/game-studio-next-step/SKILL.md",
+          ".agents/skills/game-studio-project-settings/SKILL.md",
+          ".agents/skills/game-studio-project-settings/references/choosing-settings.md",
+          ".agents/skills/game-studio-prototype/SKILL.md",
+          ".agents/skills/game-studio-prototype/references/grow.md",
+          ".agents/skills/game-studio-smoke-check/SKILL.md",
+          ".agents/skills/game-studio-smoke-check/references/checks.md",
+          ".agents/skills/game-studio-smoke-check/references/runners.md",
+          ".agents/skills/game-studio-smoke-check/references/verdict.md",
+          ".agents/skills/game-studio-start/SKILL.md",
+          ".codex/agents/game-studio-game-designer.toml",
+          ".codex/agents/game-studio-gameplay-programmer.toml",
+          ".codex/agents/game-studio-lead-programmer.toml",
+          ".codex/agents/game-studio-qa-lead.toml",
+          ".codex/agents/game-studio-qa-tester.toml",
+          "studio/docs/configuration.md",
+          "studio/docs/director-gates/lp-code-review.md",
+          "studio/docs/director-gates/ql-story-ready.md",
+          "studio/docs/roles/game-designer.md",
+          "studio/docs/testing.md",
+          "studio/onboarding/game-studio/SKILL.md",
+          "studio/templates/web-growth-support/hook.ts"
+        ],
+        "issues": [],
+        "behaviorVerified": false,
+        "catalog": {
+          "status": "valid",
+          "counts": {
+            "skills": {
+              "total": 75,
+              "pending": 70,
+              "partial": 5,
+              "verified": 0
+            },
+            "agents": {
+              "total": 49,
+              "pending": 44,
+              "partial": 5,
+              "verified": 0
+            },
+            "aliases": {
+              "total": 3,
+              "pending": 3,
+              "partial": 0,
+              "verified": 0
+            }
+          },
+          "declaredComplete": false,
+          "behaviorVerified": false,
+          "issues": []
+        }
+      }
+    },
+    "completeDeclarations": {
+      "args": [
+        "toolkit/scripts/lint-content.mjs",
+        "--complete"
+      ],
+      "exitCode": 1,
+      "result": {
+        "status": "invalid",
+        "counts": {
+          "skills": 5,
+          "onboarding": 1,
+          "roles": 5
+        },
+        "checkedFiles": [
+          ".agents/skills/game-studio-next-step/SKILL.md",
+          ".agents/skills/game-studio-project-settings/SKILL.md",
+          ".agents/skills/game-studio-project-settings/references/choosing-settings.md",
+          ".agents/skills/game-studio-prototype/SKILL.md",
+          ".agents/skills/game-studio-prototype/references/grow.md",
+          ".agents/skills/game-studio-smoke-check/SKILL.md",
+          ".agents/skills/game-studio-smoke-check/references/checks.md",
+          ".agents/skills/game-studio-smoke-check/references/runners.md",
+          ".agents/skills/game-studio-smoke-check/references/verdict.md",
+          ".agents/skills/game-studio-start/SKILL.md",
+          ".codex/agents/game-studio-game-designer.toml",
+          ".codex/agents/game-studio-gameplay-programmer.toml",
+          ".codex/agents/game-studio-lead-programmer.toml",
+          ".codex/agents/game-studio-qa-lead.toml",
+          ".codex/agents/game-studio-qa-tester.toml",
+          "studio/docs/configuration.md",
+          "studio/docs/director-gates/lp-code-review.md",
+          "studio/docs/director-gates/ql-story-ready.md",
+          "studio/docs/roles/game-designer.md",
+          "studio/docs/testing.md",
+          "studio/onboarding/game-studio/SKILL.md",
+          "studio/templates/web-growth-support/hook.ts"
+        ],
+        "issues": [],
+        "behaviorVerified": false,
+        "catalog": {
+          "status": "invalid",
+          "counts": {
+            "skills": {
+              "total": 75,
+              "pending": 70,
+              "partial": 5,
+              "verified": 0
+            },
+            "agents": {
+              "total": 49,
+              "pending": 44,
+              "partial": 5,
+              "verified": 0
+            },
+            "aliases": {
+              "total": 3,
+              "pending": 3,
+              "partial": 0,
+              "verified": 0
+            }
+          },
+          "declaredComplete": false,
+          "behaviorVerified": false,
+          "issues": [
+            {
+              "path": "studio-tests/catalog.yaml",
+              "code": "MIGRATION_INCOMPLETE",
+              "message": "Every workflow, role and alias needs a verified declaration with evidence before the complete catalog gate can pass"
+            }
+          ]
+        }
+      }
+    },
+    "bundle": {
+      "args": [
+        "toolkit/scripts/lint-content.mjs",
+        "--root",
+        "toolkit/resources",
+        "--bundle-only"
+      ],
+      "exitCode": 0,
+      "result": {
+        "status": "valid",
+        "counts": {
+          "skills": 5,
+          "onboarding": 1,
+          "roles": 5
+        },
+        "checkedFiles": [
+          ".agents/skills/game-studio-next-step/SKILL.md",
+          ".agents/skills/game-studio-project-settings/SKILL.md",
+          ".agents/skills/game-studio-project-settings/references/choosing-settings.md",
+          ".agents/skills/game-studio-prototype/SKILL.md",
+          ".agents/skills/game-studio-prototype/references/grow.md",
+          ".agents/skills/game-studio-smoke-check/SKILL.md",
+          ".agents/skills/game-studio-smoke-check/references/checks.md",
+          ".agents/skills/game-studio-smoke-check/references/runners.md",
+          ".agents/skills/game-studio-smoke-check/references/verdict.md",
+          ".agents/skills/game-studio-start/SKILL.md",
+          ".codex/agents/game-studio-game-designer.toml",
+          ".codex/agents/game-studio-gameplay-programmer.toml",
+          ".codex/agents/game-studio-lead-programmer.toml",
+          ".codex/agents/game-studio-qa-lead.toml",
+          ".codex/agents/game-studio-qa-tester.toml",
+          "studio/docs/configuration.md",
+          "studio/docs/director-gates/lp-code-review.md",
+          "studio/docs/director-gates/ql-story-ready.md",
+          "studio/docs/roles/game-designer.md",
+          "studio/docs/testing.md",
+          "studio/onboarding/game-studio/SKILL.md",
+          "studio/templates/web-growth-support/hook.ts"
+        ],
+        "issues": [],
+        "behaviorVerified": false,
+        "catalog": {
+          "status": "not_assessed",
+          "reason": "Explicit bundle-only inspection"
+        }
+      }
+    }
+  },
+  "validation": {
+    "build": "passed",
+    "typecheck": "passed",
+    "toolkitTests": {
+      "tests": 149,
+      "pass": 149,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packedInstall": "passed, including installed validator acceptance and missing-reference rejection followed by byte restoration",
+    "dependencyAudit": {
+      "knownVulnerabilities": 0,
+      "scope": "production dependencies at the recorded time"
+    },
+    "redPhase": "New test files initially failed because their implementation modules did not exist. The missing-module runs are not claimed as executed metadata/behavior assertions."
+  },
+  "sourceHashes": {
+    "toolkit/src/content-check.ts": "6740c133698c61e3a037338f14e5c79225e73b517ea6eb2eb79d37b402342662",
+    "toolkit/src/content-tree.ts": "a679e2c892897cc3ca605a2acce0d86a5d2bf788b626c8aca70826d25c7a2a7c",
+    "toolkit/src/content-catalog.ts": "0c030c42970429eca938ebe03c6b1bc4700d508362f9a66ac97d39725a48dcf2",
+    "toolkit/scripts/lint-content.mjs": "3ef18a0ef57819b198ad7770ab1bb561efca8428ff3804dc0431ee0e9a169494",
+    "toolkit/test/content-check.test.mjs": "717eb24b6ec2cf4f7588a6cef3ed36c9631fb5eda0a6b24582c27489fa1367c2",
+    "toolkit/test/content-tree.test.mjs": "94e32fb6e9a49d33af76bf014e126e85a54e6e631b72664218f35259a568a85b",
+    "toolkit/test/content-catalog.test.mjs": "468657d3773a1f3b658186a2ae3d5095480607f4a7eabcc51fa46b2dedbc4c12",
+    "toolkit/test/content.test.mjs": "be2a6c8eccc456f13eb8db2ae9d9b94bbf934b34859ee06b0f1ac7119eb08f20",
+    "toolkit/test/packed-smoke.mjs": "1c73b901dc38522f5e3c35ad6bf745c26514a8b4c6873f93ef333ea23686458a",
+    "toolkit/package-lock.json": "0c9fa2817aa7375abe66d548bdaf6ba4f1f22d98ed4febefb3ea85d5b7b61ab6",
+    "studio-tests/catalog.yaml": "a8e7d4f94c29510403e88e89b161e4aeeb87fbea451774041d31b199f40b80ea",
+    ".github/workflows/ci.yml": "08459b428ddcfbbbb639d314c817dde4cd36f90c8016fa73911a5cc603579f8f"
+  },
+  "negativeCoverage": [
+    "invalid YAML and TOML, duplicate keys, wrong metadata types, empty instructions and unknown canonical-profile fields",
+    "duplicate names, empty/missing entrypoints, missing and escaping references, personal paths and symbolic links",
+    "nested legacy runtime syntax, encoded and angle-bracket reference paths",
+    "omitted roles, duplicate sources, wrong alias replacements, active alias entrypoints, missing/untracked targets and specs",
+    "unsupported verified declarations, disappearing evidence, malformed catalogs and missing retained inputs",
+    "complete declaration mode refuses open rows; bundle-only cannot masquerade as complete catalog verification"
+  ],
+  "limitations": [
+    "Static validation never establishes actual Skill discovery, triggering, role behavior, permission enforcement or human acceptance.",
+    "A verified catalog declaration and existing evidence files do not prove the evidence is sufficient or truthful; final acceptance still requires semantic review.",
+    "The implemented catalog reconciliation covers 75 primary Skills, 49 roles and three aliases; rule/hook/helper inventory cross-checks remain pending.",
+    "Stale command-example checks, the Codex behavioral rubric and replacement of legacy lint consumers remain pending.",
+    "Dynamic references, escaped Markdown delimiters, anchor targets and remote link availability are not fully interpreted.",
+    "Shared migration docs may describe retained upstream paths; their semantics still require review.",
+    "Node-platform CI results are reported separately; no new native Codex or engine/browser game case ran in this static-validator slice."
+  ]
+}
