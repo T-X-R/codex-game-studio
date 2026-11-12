@@ -11,7 +11,6 @@ import { findBrowser } from '../dist/capture.js';
 
 const directory = await realpath(await mkdtemp(join(tmpdir(), 'game-studio-growth-live-')));
 const project = join(directory, 'Web game 验证');
-const cli = fileURLToPath(new URL('../dist/cli.js', import.meta.url));
 const packageRoot = fileURLToPath(new URL('..', import.meta.url));
 const launcher = join(project, '.game-studio/run.cjs');
 const invocations = [];
@@ -29,6 +28,10 @@ try {
   const npm = await npmPath();
   const packed = await execute(npm, ['pack', packageRoot, '--pack-destination', directory, '--ignore-scripts', '--json']);
   const archive = join(directory, JSON.parse(packed.stdout)[0].filename);
+  // First installation is online; offline restore requires its dependency cache.
+  const prefix = join(directory, 'installed-cli');
+  await execute(npm, ['install', '--prefix', prefix, archive, '--ignore-scripts', '--no-audit', '--no-fund']);
+  const cli = join(prefix, 'node_modules/@t-x-r/game-studio/dist/cli.js');
   await command(cli, ['init', project, '--engine', 'web']);
   await command(cli, ['restore', '--project', project, '--archive', archive, '--offline']);
   await command(launcher, ['prototype', 'scaffold', 'demo', '--project', project]);
@@ -76,7 +79,7 @@ try {
     sourceSha256: digest(Buffer.from(html)), screenshotSha256: digest(referenceImage),
     assetSha256: digest(png), builtSha256: digest(Buffer.from(built)),
     seed: 7, log: 'Enter Space wait:1 Space wait:1', states: rows(replay),
-    checks: ['packed runtime', 'reference repeatability', 'dry-run', 'source preservation', 'binary asset preservation',
+    checks: ['online packed CLI install', 'offline project runtime restore', 'reference repeatability', 'dry-run', 'source preservation', 'binary asset preservation',
       'npm ci from lock', 'configured build discovery', 'single-file build', 'development tuning excluded', 'copy replay equality', 'empty tests do not pass'],
     notAssessed: ['full TypeScript conversion', 'configuration data extraction', 'game-rule unit tests', 'all asset loading patterns', 'human play'] };
   await writeFile(join(directory, 'summary.json'), JSON.stringify(report, null, 2));

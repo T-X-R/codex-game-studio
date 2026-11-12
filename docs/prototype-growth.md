@@ -80,13 +80,17 @@ commands require the meaningful rule and browser tests created during conversion
 an empty test suite fails. For Playwright, set `GAME_STUDIO_BROWSER` to an installed
 browser executable or explicitly install its Chromium browser.
 
-The repeatable `toolkit/test/growth-smoke.mjs` fixture packs and restores the real
-runtime, installs the locked game tools, builds both outputs and compares same-seed
+The repeatable `toolkit/test/growth-smoke.mjs` fixture installs the real CLI archive
+online, restores its project runtime offline using the populated dependency cache,
+installs the locked game tools, builds both outputs and compares same-seed
 Chrome states/screenshots before and after copy. It also checks source/binary
 preservation, removal of development tuning from the build, and rejection of an
 empty unit-test suite. See [recorded evidence](evidence/web-growth-copy-2026-11-12.json).
 This small input/scoring fixture does not establish design quality, every possible
 asset-loading pattern or human play acceptance. CI preserves its reports and images.
+The fixture was also run with a fresh empty npm cache. Offline restoration alone
+requires cached dependency metadata; an initial CI failure exposed that test setup
+assumption, and the fixture now performs the actual first installation explicitly.
 
 ## Remaining workflow
 
