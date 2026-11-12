@@ -25,8 +25,11 @@ select the files and collect observations. Distinguish an absent sprint plan fro
 an existing plan listing no stories, malformed input, and individually missing
 story entries. Zero stories: stop with `NOT ASSESSED — no stories in scope`, name
 the scope and searched path, and recommend story creation (epics first at
-standard/full). Never emit an all-zero clean summary. For nonempty scope say
-`Checking [N] story files.`; individually missing requested stories remain visible.
+standard/full). Never emit an all-zero clean summary. For nonempty scope announce
+`Checking [N] story files.` after selecting the files and before Phase 2
+fact collection or checklist evaluation; a count added only to the final report
+is too late. Individually
+missing requested stories remain visible.
 
 ## Phase 2: Facts, read once for the run
 

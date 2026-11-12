@@ -43,7 +43,8 @@ The explicit standard-tier Manifest Version advisory rule below still applies.
   explicit acceptance once decided (installed architecture-decision accept if
   available). Missing referenced ADR is BLOCKED. Deprecated/Superseded is BLOCKED:
   state the status and actual successor, if known, and direct correction of the
-  existing story's ADR field. Creating stories never rewrites existing stories.
+  existing story's ADR field. Include the reason in that Fix: creating stories
+  never rewrites an existing story, so that action cannot refresh its ADR field.
   No readable Status, including an unfilled/malformed one, is NOT ASSESSED:
   name the file and recommend ADR retrofit. Do not treat unknown as Proposed.
 - **ADR cited or N/A stated:** an ADR or explicit reasoned N/A, e.g.

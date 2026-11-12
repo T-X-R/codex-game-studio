@@ -1,0 +1,468 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "Readiness protocol corrections with two same-input passing reruns and retained original failures; remaining native matrix and host coverage are still open.",
+  "cases": [
+    {
+      "case": "multiple-adrs-precedence",
+      "status": "FAIL",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-oxIlpG",
+      "threadId": "01a1d0a1-d7af-7e73-a682-40bd90933ff4",
+      "hostExitCode": 3,
+      "nativeExitCode": 0,
+      "artifactSha256": {
+        "events.jsonl": "791da8ac182ed83cc0ae6381cae89250b936eca06ae61721f7d042e37ef0abff",
+        "final.txt": "2feba77a3d836fea920b82dcfd7e140d2623e9685ba06a499c45be258c555ca2",
+        "before.json": "bfc3dce0a8d4b20b752683c839542cf35a613d3fe0d00ddf67d575f70d4665ae",
+        "after.json": "bfc3dce0a8d4b20b752683c839542cf35a613d3fe0d00ddf67d575f70d4665ae",
+        "fixture.json": "3e4b4e37130a111d60d0c77fcaf053a3f75d04d29e80cf0e92d9d7eb6d34653e",
+        "inputs.json": "e06c7e9f2882dc3a805e7c20175cbe5ed181e74a33b39ba72b72f2a78c71b931",
+        "report.json": "56630a9c5311665f568171b70c3bd8fab2dc1d36b010feb581fef0c16231ae6b"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "0ec8e9d032d42e5f8a0c956bffd92222dcf7aff1553f2d0f8c558d45bdca755e",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "a3c96f0dde52538b158b20ccf183090971beb349c72e63fb61c761ff89be79d3",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "wholeFilesRehashed": 564,
+      "manualFindings": [
+        "Source Phase 1 count announcement occurred only in final response after all fact/checklist work.",
+        "Core ADR status/verdict precedence, six-group report, actual active successor handling and read-only behavior passed as scoped subchecks."
+      ],
+      "candidateSha256": "a6aa2200b8815f7db3d51fe6824fbf50cb8bb14009488c8cb5f5e5a85cd2c25d",
+      "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-40-29-01a1d0a1-d7af-7e73-a682-40bd90933ff4.jsonl",
+      "rawSessionSha256": "1adbaa8e352b08fc5561abdbfd87b7079479b8a92572d5602a6422d47227a6ec",
+      "rootReview": "Rehashed all recorded regular files, raw artifacts and session; read final findings against the source contract. Agent audited full command/results and native identity."
+    },
+    {
+      "case": "source-08-retired-adrs",
+      "status": "FAIL",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-4oowY9",
+      "threadId": "01a1d0a1-ddcd-7ef1-a1aa-65bee3623fe6",
+      "hostExitCode": 3,
+      "nativeExitCode": 0,
+      "artifactSha256": {
+        "events.jsonl": "c411398a9d5b9dc67ab776114301d94255a4fec048c575241f40c673f4d2b694",
+        "final.txt": "7debb6e89bf0f70e0ec1431e65ec32f315ccab6f1408c08529b3a24f03a03300",
+        "before.json": "3b69485f8f5885b0e22024e668d057b9022b9eef53e2ae0bc6ae745b889fecb2",
+        "after.json": "3b69485f8f5885b0e22024e668d057b9022b9eef53e2ae0bc6ae745b889fecb2",
+        "fixture.json": "cc1b0385e9752230d8104d1c883910d8abc337bead5f5b1fe5497929ee7f4e52",
+        "inputs.json": "c30eab51f81e01bb69c578f0b326c5ce29af52e65e83628ae4cfaba0e108ff83",
+        "report.json": "7bbc594f6402e2cc3f4a35d89eaf74d52a2ac0a56e6c67f2b60cd4245bbcf761"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "0ec8e9d032d42e5f8a0c956bffd92222dcf7aff1553f2d0f8c558d45bdca755e",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "a3c96f0dde52538b158b20ccf183090971beb349c72e63fb61c761ff89be79d3",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "wholeFilesRehashed": 567,
+      "manualFindings": [
+        "Source Case 8 explicit correction explanation omitted: creating stories does not rewrite existing stories. Count announcement also occurred after observer facts collection.",
+        "Core ADR status/verdict precedence, six-group report, actual active successor handling and read-only behavior passed as scoped subchecks."
+      ],
+      "candidateSha256": "6603814a37f6301081f11d313c54cc1de3910fb1d704b246e92b10f72dc7d8e6",
+      "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-40-31-01a1d0a1-ddcd-7ef1-a1aa-65bee3623fe6.jsonl",
+      "rawSessionSha256": "e5b11aee73b2d0d1bfdf6ba310c0d5f1958053f1b69224ecd26f2ca9089e6c01",
+      "rootReview": "Rehashed all recorded regular files, raw artifacts and session; read final findings against the source contract. Agent audited full command/results and native identity."
+    },
+    {
+      "case": "proposed-standard-feature",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-VxqB4s",
+      "threadId": "01a1d0a3-c546-7602-ae9e-d1893a97c89b",
+      "hostExitCode": 3,
+      "nativeExitCode": 0,
+      "artifactSha256": {
+        "events.jsonl": "4d95dff825202f4fae6a0bcbc671dac91198b73f1671cf1293f6fcd7b6aab6c0",
+        "final.txt": "be38be8310d0170521b7be1538be14f95217280a358dda72d3a2d72c077b5b4d",
+        "before.json": "c7fadcd59d3b4a3649536dbf018fff2a6921ffc52575eaa4b5ce4befdaba2ed7",
+        "after.json": "c7fadcd59d3b4a3649536dbf018fff2a6921ffc52575eaa4b5ce4befdaba2ed7",
+        "fixture.json": "4a736141dff52699504e3b1a555cd288ab979842a68b8a907bac467e9f193cd8",
+        "inputs.json": "3d907013497588291e2fb01c04f2d8ebcaf6f314010610fa6ed27a7ae8e119bc",
+        "report.json": "36a66da64cda754e57c6340d929c755bcb74144345df6f7bf97f0c38919b8eb1"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "0ec8e9d032d42e5f8a0c956bffd92222dcf7aff1553f2d0f8c558d45bdca755e",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "a3c96f0dde52538b158b20ccf183090971beb349c72e63fb61c761ff89be79d3",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "wholeFilesRehashed": 564,
+      "manualFindings": [
+        "Actual standard workflow and Feature Layer Proposed ADR still correctly BLOCKED.",
+        "Whole target/GDD read, exact policy/system override, one cached ADR/registry observer; six exact groups and correct counts (19/20 standard; 14/15 minimal with five architecture N/A excluded).",
+        "Count announcement is a real intermediate update before GDD/ADR/TR checklist checking, not final-only.",
+        "Minimal other architecture items not promoted to blockers; explicit acceptance recommended only after settling decision.",
+        "No native children/gate-definition reads/write/scratch/game/test execution; all 564 files and installed hashes independently verified unchanged."
+      ],
+      "candidateSha256": "d09cbd4bad29f6aaf98feeeaa5d0d12ecb89e0d7af388ca90938775e04feb0d7",
+      "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-42-36-01a1d0a3-c546-7602-ae9e-d1893a97c89b.jsonl",
+      "rawSessionSha256": "523fc53693cb3d644a3c04e0de46a42e9ef0af8854706fb2a1c2dfcd4684774f",
+      "rootReview": "Rehashed all recorded regular files, raw artifacts and session; read final findings against the source contract. Agent audited full command/results and native identity.",
+      "scope": "Scoped cross-tier Proposed ADR verdict and file preservation only; count announcement followed target-story reading, so complete Phase 1 timing is not passed."
+    },
+    {
+      "case": "minimal-proposed",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-ISAN28",
+      "threadId": "01a1d0a3-fbcc-72a2-a3a2-da0a9683b79f",
+      "hostExitCode": 3,
+      "nativeExitCode": 0,
+      "artifactSha256": {
+        "events.jsonl": "c8defacceb8bf289c1446063380136fffac61447922b27fb944c8374df577fb6",
+        "final.txt": "33087aa8b87903f13786770c534f8f7467019be5a30d9bfd0114bb62b324f98f",
+        "before.json": "13a068b464effa963580211deb356a582daf6e1518c09857dbadacd458c2b97c",
+        "after.json": "13a068b464effa963580211deb356a582daf6e1518c09857dbadacd458c2b97c",
+        "fixture.json": "2836499ce0b2ab0eb9402bac3e3d3f85b8e7fd0b7499358dfdf10f02c6c60ee2",
+        "inputs.json": "fabb7e00f4b2364371cea628c779a540dca9dbc6e6a807555645d782fe5d1b0c",
+        "report.json": "1b4262d313ecf8b23873e5dbdde20a9b6aaa1f827ac02b8ccb1cf67e319bdabb"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "0ec8e9d032d42e5f8a0c956bffd92222dcf7aff1553f2d0f8c558d45bdca755e",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "a3c96f0dde52538b158b20ccf183090971beb349c72e63fb61c761ff89be79d3",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "wholeFilesRehashed": 564,
+      "manualFindings": [
+        "Actual minimal workflow and Feature Layer Proposed ADR still correctly BLOCKED.",
+        "Whole target/GDD read, exact policy/system override, one cached ADR/registry observer; six exact groups and correct counts (19/20 standard; 14/15 minimal with five architecture N/A excluded).",
+        "Count announcement is a real intermediate update before GDD/ADR/TR checklist checking, not final-only.",
+        "Minimal other architecture items not promoted to blockers; explicit acceptance recommended only after settling decision.",
+        "No native children/gate-definition reads/write/scratch/game/test execution; all 564 files and installed hashes independently verified unchanged."
+      ],
+      "candidateSha256": "5810f095984fa36f7a85d409ed10acbebedadac765d0d4eeaaf7e4b5e5dcf218",
+      "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-42-50-01a1d0a3-fbcc-72a2-a3a2-da0a9683b79f.jsonl",
+      "rawSessionSha256": "75cffff528d30d898c976986ff4d0f286c13679ca99b79ea56bd64c2d1c3c204",
+      "rootReview": "Rehashed all recorded regular files, raw artifacts and session; read final findings against the source contract. Agent audited full command/results and native identity.",
+      "scope": "Scoped cross-tier Proposed ADR verdict and file preservation only; count announcement followed target-story reading, so complete Phase 1 timing is not passed."
+    }
+  ],
+  "priorTimingAudit": {
+    "candidateSha256": "6b6ac8731597f2bc3df0d43bae8c63541e1e9781593058a616faa83078fd723d",
+    "rows": [
+      {
+        "case": "source-01-ready-candidates",
+        "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-14-55-01a1d08a-6c44-7511-9d4f-915858fa9786.jsonl",
+        "rawSessionSha256": "cf39e742be124295e64943e2e1942b458402b8a95c3cab02a078f64bdbfe91de",
+        "announcementOrdinals": [
+          44
+        ],
+        "factReadOrdinals": [
+          20,
+          30,
+          48,
+          49,
+          50,
+          55,
+          62
+        ],
+        "assessment": "Late relative to Phase 1/fact collection: count announcement follows the recorded fact reads, but precedes the final report. Preserve the exact ordinal evidence; no claim that prior scoped domain PASS establishes complete announcement-order compliance."
+      },
+      {
+        "case": "source-05-full-native",
+        "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-16-54-01a1d08c-3f69-7e63-8e0d-912ef2d3aa93.jsonl",
+        "rawSessionSha256": "159f4ccd3b07a13522370a42186bbe0061f1fa92caca03ad3dc509c2a0e870c5",
+        "announcementOrdinals": [
+          51
+        ],
+        "factReadOrdinals": [
+          21,
+          37,
+          41,
+          42,
+          43
+        ],
+        "assessment": "Late relative to Phase 1/fact collection: count announcement follows the recorded fact reads, but precedes the final report. Preserve the exact ordinal evidence; no claim that prior scoped domain PASS establishes complete announcement-order compliance."
+      },
+      {
+        "case": "source-09-retired-trs",
+        "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-35-02-01a1d09c-d840-7862-84b3-b5e1f5cc3dd2.jsonl",
+        "rawSessionSha256": "f1691581148644b8d55a5445c01c8d821a90a24226df74843733a181f94febd2",
+        "announcementOrdinals": [
+          43
+        ],
+        "factReadOrdinals": [
+          32,
+          34,
+          35,
+          36
+        ],
+        "assessment": "Late relative to Phase 1/fact collection: count announcement follows the recorded fact reads, but precedes the final report. Preserve the exact ordinal evidence; no claim that prior scoped domain PASS establishes complete announcement-order compliance."
+      },
+      {
+        "case": "source-06-qa-minimal-types",
+        "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-35-02-01a1d09c-d840-77f0-874d-e638e7b3881c.jsonl",
+        "rawSessionSha256": "95a614f1ca308f5acc303bf9565b87375f7916efd688fdede93e148a2886f3de",
+        "announcementOrdinals": [
+          45
+        ],
+        "factReadOrdinals": [
+          32,
+          37,
+          38,
+          39
+        ],
+        "assessment": "Late relative to Phase 1/fact collection: count announcement follows the recorded fact reads, but precedes the final report. Preserve the exact ordinal evidence; no claim that prior scoped domain PASS establishes complete announcement-order compliance."
+      },
+      {
+        "case": "source-08-retired-adrs",
+        "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-40-31-01a1d0a1-ddcd-7ef1-a1aa-65bee3623fe6.jsonl",
+        "rawSessionSha256": "e5b11aee73b2d0d1bfdf6ba310c0d5f1958053f1b69224ecd26f2ca9089e6c01",
+        "announcementOrdinals": [
+          45
+        ],
+        "factReadOrdinals": [
+          37,
+          38,
+          39,
+          47
+        ],
+        "assessment": "Late relative to Phase 1/fact collection: count announcement follows the recorded fact reads, but precedes the final report. Preserve the exact ordinal evidence; no claim that prior scoped domain PASS establishes complete announcement-order compliance."
+      },
+      {
+        "case": "multiple-adrs-precedence",
+        "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-40-29-01a1d0a1-d7af-7e73-a682-40bd90933ff4.jsonl",
+        "rawSessionSha256": "1adbaa8e352b08fc5561abdbfd87b7079479b8a92572d5602a6422d47227a6ec",
+        "announcementOrdinals": [
+          53
+        ],
+        "factReadOrdinals": [
+          22,
+          44,
+          45,
+          46
+        ],
+        "assessment": "FAIL: no count announcement until final report, after all review commands."
+      }
+    ]
+  },
+  "corrections": [
+    "After selecting nonempty scope, announce its count before Phase 2 fact collection or checklist evaluation, as required by retained source Phase 1.",
+    "An inactive ADR Fix explicitly explains that creating stories cannot refresh an existing story reference, as required by retained source Case 8."
+  ],
+  "sourceHashes": {
+    ".agents/skills/game-studio-story-readiness/SKILL.md": "396728d3cd57d4d057bf6f93c4bfa0e016e349f34633c4d3d0902ff21e4f657b",
+    ".agents/skills/game-studio-story-readiness/references/checklist.md": "52831ea0c4df91ad81de8922b7bb8e5e7795e62df87f0fa44c34ed0b9d3526e2"
+  },
+  "localValidation": {
+    "build": "PASS",
+    "contentLint": "PASS",
+    "installedArchive": "PASS",
+    "note": "Instruction-only correction; the preceding integrated source passed 287 tests on each Node24/26 and all five CI jobs. These do not establish corrected native protocol behavior.",
+    "logs": {
+      "build": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28",
+      "lint": "b95046b2809e1f0c6970a758de470d299e0d1c8cdf5e22775dd998a733386ec8",
+      "pack": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+    }
+  },
+  "reruns": [
+    {
+      "case": "multiple-adrs-precedence",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-vaeIXP",
+      "threadId": "01a1d0a6-e321-74d0-b5f1-600b75dbb147",
+      "hostExitCode": 3,
+      "nativeExitCode": 0,
+      "artifactSha256": {
+        "events.jsonl": "79d8c08a11d228196fdfa0d5648391696f3deca8f8ac679f5889fe90a256616f",
+        "final.txt": "de7f313d878ea59e0bdf143755725e84e4984b2c25efcee3fb314ebcd8357f0e",
+        "before.json": "1e9a87f99597b606494a1a574709c8f710e521e2c344a8937f9112aafeaa40ac",
+        "after.json": "1e9a87f99597b606494a1a574709c8f710e521e2c344a8937f9112aafeaa40ac",
+        "fixture.json": "a87fb8549c8cbf6eb622df04d08145ce1235193aea61c0e21b6d5ca3a37d0fa4",
+        "inputs.json": "e06c7e9f2882dc3a805e7c20175cbe5ed181e74a33b39ba72b72f2a78c71b931",
+        "report.json": "4ccf979a2f1953213d898e64f09b505e871fb206cef2adaed04d184d8e64999b"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "396728d3cd57d4d057bf6f93c4bfa0e016e349f34633c4d3d0902ff21e4f657b",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "52831ea0c4df91ad81de8922b7bb8e5e7795e62df87f0fa44c34ed0b9d3526e2",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "wholeFilesRehashed": 564,
+      "manualFindings": [
+        "Exact inputs.json and user request bytes match the preserved FAIL run; only installed Skill entry/checklist hashes changed.",
+        "Real count commentary precedes Phase2 story/GDD/helper fact reads; no final-only announcement.",
+        "Known missing ADR blockers retain unreadable-status unknowns, or both retired ADRs remain BLOCKED at standard; six groups and 19/20 count correct.",
+        "Unassessed ADR status remains unknown rather than Proposed; known missing ADRs dominate overall BLOCKED.",
+        "Whole original files and installed resources rehashed; no mutation/scratch/test execution or native children; Solo gate not loaded."
+      ],
+      "candidateSha256": "fd63836f4cac83c2e29171aee84502df6e32aa8578ec7070e4c084cb9dcf1659",
+      "originalFailureThread": "01a1d0a1-d7af-7e73-a682-40bd90933ff4",
+      "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-46-00-01a1d0a6-e321-74d0-b5f1-600b75dbb147.jsonl",
+      "rawSessionSha256": "c01ddf906d4a26c203a1f97f34d43e380a3dc29b8f0e4922f5367bf1c4f04681",
+      "identicalInputFileSha256": "e06c7e9f2882dc3a805e7c20175cbe5ed181e74a33b39ba72b72f2a78c71b931",
+      "identicalRequestSha256": "538a006bfa5f50f32fc2c4a1fd2441c464b1078f3e553246e4c02e81867a5790",
+      "changedResources": [
+        ".agents/skills/game-studio-story-readiness/SKILL.md",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md"
+      ],
+      "rootReview": "Independently verified every recorded raw/session/workspace hash, exact old/new inputs and request bytes, read actual final and actual count announcement before fact calls.",
+      "countAnnouncementResponseLine1Based": 36
+    },
+    {
+      "case": "source-08-retired-adrs",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-yqJCqh",
+      "threadId": "01a1d0a6-ec40-7a43-bff8-b89abc4bf6ae",
+      "hostExitCode": 3,
+      "nativeExitCode": 0,
+      "artifactSha256": {
+        "events.jsonl": "a6b947dc3ee9abe4229356f616568ea33ff1f8dd5ee68657fba59afc3dc2b317",
+        "final.txt": "6580f11db9b335e51fcd73a93fff232de1c092670c884d5f686d0079e8713f5f",
+        "before.json": "1f68a058f6405aa1ef58c5bd75d9bef1439a404efce14338c203d9b1dd225114",
+        "after.json": "1f68a058f6405aa1ef58c5bd75d9bef1439a404efce14338c203d9b1dd225114",
+        "fixture.json": "83edb77c8c3d61faa577e2ccdf7103840c02d7b27574ddbee72aa9bf728acc80",
+        "inputs.json": "c30eab51f81e01bb69c578f0b326c5ce29af52e65e83628ae4cfaba0e108ff83",
+        "report.json": "f2d327f291592209d9567e93321549b05751936af756c17ef858676b4e3a9873"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "396728d3cd57d4d057bf6f93c4bfa0e016e349f34633c4d3d0902ff21e4f657b",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "52831ea0c4df91ad81de8922b7bb8e5e7795e62df87f0fa44c34ed0b9d3526e2",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "wholeFilesRehashed": 567,
+      "manualFindings": [
+        "Exact inputs.json and user request bytes match the preserved FAIL run; only installed Skill entry/checklist hashes changed.",
+        "Real count commentary precedes Phase2 story/GDD/helper fact reads; no final-only announcement.",
+        "Known missing ADR blockers retain unreadable-status unknowns, or both retired ADRs remain BLOCKED at standard; six groups and 19/20 count correct.",
+        "Retired-ADR retry explicitly explains creating stories cannot refresh an existing ADR field; applies actual successor without inventing an unrecorded one.",
+        "Whole original files and installed resources rehashed; no mutation/scratch/test execution or native children; Solo gate not loaded."
+      ],
+      "candidateSha256": "37507a76f3c0615ff2e0f89a41728dfd017bfc06116cb4eef8a7c102391c1fee",
+      "originalFailureThread": "01a1d0a1-ddcd-7ef1-a1aa-65bee3623fe6",
+      "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-46-02-01a1d0a6-ec40-7a43-bff8-b89abc4bf6ae.jsonl",
+      "rawSessionSha256": "758ec39e87e665ad10d05741768b31d737c8756ef26e401c2cc34938e3c9f80a",
+      "identicalInputFileSha256": "c30eab51f81e01bb69c578f0b326c5ce29af52e65e83628ae4cfaba0e108ff83",
+      "identicalRequestSha256": "22fbb952dfddd44aa56a9e6e201c3221a52c5b0ae867c927eaff2958c41f140c",
+      "changedResources": [
+        ".agents/skills/game-studio-story-readiness/SKILL.md",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md"
+      ],
+      "rootReview": "Independently verified every recorded raw/session/workspace hash, exact old/new inputs and request bytes, read actual final and actual count announcement before fact calls.",
+      "countAnnouncementResponseLine1Based": 37
+    }
+  ],
+  "limits": [
+    "Prior scoped domain PASS entries do not establish complete announcement timing.",
+    "Original failure artifacts and inputs are preserved.",
+    "Exact encrypted dispatch field completeness, remaining scenarios and desktop remain open."
+  ]
+}
