@@ -44,6 +44,10 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 - Web fixed-step scaffold, standalone game import, classic-script static checks,
   localhost preview, deterministic browser replay and a new static distribution
   directory with development-only evidence omitted.
+- Read-only Web growth prerequisites detect existing game/toolchain conflicts,
+  invalid engine choices and dirty prototype code, including both rename paths.
+  Broken Git inspection is not assessed. Eligibility does not claim a completed
+  growth, build or gameplay comparison. See [the growth contract](prototype-growth.md).
 - Three project Skills: start, prototype and next-step. These are alpha entry
   points covering implemented operations; they do not close the full upstream
   behavioral migration rows.
@@ -67,7 +71,7 @@ were not modified; verification used an isolated Node 24 distribution.
   remains unchanged; an intentional browser error returns failure.
 - Official Skill-format validation for onboarding and the three project Skills.
 
-Source additions after the published alpha: build/typecheck and 107 local tests
+Source additions after the published alpha: build/typecheck and 115 local tests
 pass with no skips. Packed-install tests exercise configuration summaries/writes,
 checkpoint save/reopen/detach preservation, engine setup dry-run/apply/no-op and
 preference preservation after detach, engine inspection and actual test
