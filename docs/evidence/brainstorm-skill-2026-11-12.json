@@ -223,5 +223,12 @@
     ".agents/skills/game-studio-brainstorm/references/full-concept.md": "62a20ce55ea7d99df750b755941487042806752a028111e20ab4444a46194862",
     "toolkit/test/brainstorm-host.mjs": "f28fedd72f1e5af3b381c52bf2a026a2a3cb0aadbe35143cb6e6cfac2e967860",
     "toolkit/test/fixtures/brainstorm-cases.mjs": "9c22108d4c29aba175b98f74b4b74523874b0d4896a97b92d1b2c5d988367795"
+  },
+  "ci": {
+    "head": "f8455b723f46302ca9a91f9ad15070cc857e9a59",
+    "run": 43196937621,
+    "conclusion": "success",
+    "jobsPassed": 5,
+    "url": "https://github.com/T-X-R/codex-game-studio/actions/runs/43196937621"
   }
 }

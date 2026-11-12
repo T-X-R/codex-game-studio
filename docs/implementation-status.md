@@ -39,7 +39,7 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 - `lint:content` now parses canonical Skill YAML and role TOML, checks local
   references and packaging boundaries, and reconciles catalog v3 with 75 primary
   workflow inputs, 49 roles and three retired aliases. The current six project
-  Skills and five roles remain explicitly partial; no behavior row is promoted
+  Skills and nine roles remain explicitly partial; no behavior row is promoted
   by static checks. Complete-declaration mode correctly fails for open rows.
   Installed-archive verification uses the packaged validator and rejects a
   deliberately removed reference before restoring it. Metadata, resource,
@@ -95,8 +95,13 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   brief incorrectly copied tooling/permission text into game design; a focused
   correction and fresh same-request replay removed that contamination while
   preserving exact game input. See [the evidence](evidence/brainstorm-skill-2026-11-12.json).
-  These observations do not close S008: interactive selections, resume, mode
-  variations, real director execution and desktop acceptance remain open.
+  A subsequent [four-role integration](evidence/brainstorm-directors-2026-11-12.json)
+  selects independent native creative/art reviewers, then technical and production
+  reviewers. The draft retains APPROVE / STRONG / CONCERNS / OPTIMISTIC without
+  silently accepting schedule changes; all 392 original files are preserved.
+  Removing the four roles in a separate fixture still produces honest NOT ASSESSED
+  reviews. These observations do not close S008: interactive selections, resume,
+  mode variations, remaining director verdict paths and desktop remain open.
 - The prototype Skill now includes selected/resumed Web growth guidance and
   shared TypeScript hook/tuning resources. An independent scoring/pause fixture
   completed typed modules, JSON/live configuration, 5 rule tests, 3 real Chrome
@@ -173,6 +178,15 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   See [designer evidence](evidence/game-designer-2026-11-12.json). Existing-brief
   updates, initial design choices, broader domain/host coverage and final validation
   remain open; written design is not proof of a playable or accepted game.
+- Creative Director, Art Director, Technical Director and Producer now have native
+  roles and all 23 corresponding gate resources. Seven isolated native CLI cases
+  prove actual role selection, requested gate reads, exact verdict vocabularies
+  and preserved files: pillar approval, weak visual-direction concerns,
+  implementation-feasibility concerns, zero-buffer scope, missing pillars,
+  missing capacity and a phase-required architecture blocker. See
+  [director evidence](evidence/director-roles-2026-11-12.json). Their full source
+  matrices, other gate paths, strategic decisions, writes, image/engine evidence
+  and desktop behavior remain open; role files alone do not establish these.
 - Lead Programmer now has a canonical role and installed LP code-review/feasibility
   gates. Two native cases distinguish sound code, a formula defect, omitted versus
   nonexistent GDD and estimate-based performance blockers. The actual role cites
@@ -330,7 +344,7 @@ The full acceptance contract remains in `tasks/todo.md`. In particular:
 The implementation order was adjusted to exercise deterministic installation and
 Web operations while host compatibility remains open. This does not waive C0–C5
 or make the final migration complete. The published alpha does not install roles
-or hooks. Development packages now install five roles; their verified CLI scenarios
+or hooks. Development packages now install nine roles; their verified CLI scenarios
 do not establish desktop support. No production Hooks are installed.
 
 Detach retains game configuration, runtime archives/dependencies/lock and backups.

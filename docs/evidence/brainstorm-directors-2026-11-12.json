@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-12",
+  "implementationCommit": "5192a32a2bd963d7638651bb73869747bc66f76a",
+  "status": "partial",
+  "environment": {
+    "codex": "0.162.0",
+    "node": "24.22.2",
+    "platform": "macOS ARM64"
+  },
+  "scope": "Brainstorm with installed native directors, plus explicit missing-role regression",
+  "cases": [
+    {
+      "scenario": "full-review",
+      "status": "PASS",
+      "scopeOfPass": "Preselected concept, actual native review sequence and honest unresolved verdicts",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-DInUwW",
+      "parentThreadId": "01a1cf43-a9a6-75e3-8942-35c1c13e6298",
+      "parentTraceSha256": "027e4595b675bb727937ee0075d27c54ae95e6e540b0a61f3a1ae89acf3f94b9",
+      "reviews": [
+        {
+          "role": "game-studio-creative-director",
+          "roleSha256": "6c8f2bbc9c3214223c3a76973e64341752cbf1e2dec9cb595271d3a2b91aeb40",
+          "childThreadId": "01a1cf44-3e98-7c01-8ef3-6475dcc45be6",
+          "selectedAt": "2026-11-12T10:18:38.579Z",
+          "finalAt": "2026-11-12T10:19:04.390Z",
+          "verdict": "CD-PILLARS: APPROVE",
+          "gateRead": "cd-pillars.md",
+          "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T18-18-38-01a1cf44-3e98-7c01-8ef3-6475dcc45be6.jsonl",
+          "traceSha256": "c89bd4e8954b99a52515d177d3df173e33bffc4fac1388c10be7e7df65a12e66"
+        },
+        {
+          "role": "game-studio-art-director",
+          "roleSha256": "0ec48b5b04954bf89ecc71a70f0b943233988c86decbb4fefe0b3a1b8ed34a9f",
+          "childThreadId": "01a1cf44-6d25-7432-979d-3b1a100ab193",
+          "selectedAt": "2026-11-12T10:18:50.519Z",
+          "finalAt": "2026-11-12T10:19:31.061Z",
+          "verdict": "AD-CONCEPT-VISUAL: STRONG",
+          "gateRead": "ad-concept-visual.md",
+          "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T18-18-50-01a1cf44-6d25-7432-979d-3b1a100ab193.jsonl",
+          "traceSha256": "d290c79c5e701abc42cc2a0815749bd834c22ffb175a71f371cca98fce95665f"
+        },
+        {
+          "role": "game-studio-technical-director",
+          "roleSha256": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+          "childThreadId": "01a1cf45-5935-7873-a5bc-101c20d2dcea",
+          "selectedAt": "2026-11-12T10:19:50.942Z",
+          "finalAt": "2026-11-12T10:20:28.035Z",
+          "verdict": "TD-FEASIBILITY: CONCERNS",
+          "gateRead": "td-feasibility.md",
+          "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T18-19-50-01a1cf45-5935-7873-a5bc-101c20d2dcea.jsonl",
+          "traceSha256": "78b0dcc9cf8fc8cdc086cb694eaf79f05616031ab52be810de7162706cd6c36e"
+        },
+        {
+          "role": "game-studio-producer",
+          "roleSha256": "bd05d4e2a1489c7a50898252d559e4c21bd66d476fe5ec82d3d9e761eb669ff6",
+          "childThreadId": "01a1cf4a-509c-7522-a067-1e8030a487bc",
+          "selectedAt": "2026-11-12T10:25:16.334Z",
+          "finalAt": "2026-11-12T10:26:04.666Z",
+          "verdict": "PR-SCOPE: OPTIMISTIC",
+          "gateRead": "pr-scope.md",
+          "trace": "/Users/tori/.codex/sessions/2026/11/12/rollout-2026-11-12T18-25-16-01a1cf4a-509c-7522-a067-1e8030a487bc.jsonl",
+          "traceSha256": "2b83a5deecaa73e9271c7fcf3faf484fac9d72afb8f05880c6c2f37be88dde15"
+        }
+      ],
+      "preservedFiles": 392,
+      "added": [
+        "design/gdd/game-concept.md"
+      ],
+      "changed": [],
+      "outsideScope": [],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "profileRemoved": true,
+      "artifact": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-DInUwW/Lantern game \u6d4b\u8bd5/design/gdd/game-concept.md",
+      "artifactSha256": "47978ba9e3fcb77acce99b360551626e562829732fde47ecfe0789140806f497"
+    },
+    {
+      "scenario": "full-missing",
+      "status": "PASS",
+      "scopeOfPass": "Missing-role reporting after deliberate role removal, not full concept acceptance",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-j96sCr",
+      "parentThreadId": "01a1cf43-b43b-78a0-91be-508aadc59f5a",
+      "parentTraceSha256": "0d89d7e47cf072752f091eb8f450399394623b9189e302c8353dd558af171dfc",
+      "reviews": [],
+      "preservedFiles": 388,
+      "added": [
+        "design/gdd/game-concept.md"
+      ],
+      "changed": [],
+      "outsideScope": [],
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "profileRemoved": true,
+      "artifact": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-brainstorm-j96sCr/Lantern game \u6d4b\u8bd5/design/gdd/game-concept.md",
+      "artifactSha256": "e1e7bbcc7b1ea1627d85bac1e177d6133bf52dc4f3a9a0db71d0221fb24a36f6"
+    }
+  ],
+  "reviewedObservations": [
+    "Natural request selected installed Brainstorm and the full-concept flow; no model override or production Hook trust was introduced.",
+    "Creative and art role executions overlapped and were independent; technical review started after both completed, and scope review after technical review.",
+    "Each actual child read its matching gate and returned its own vocabulary. The coordinator alone wrote the concept.",
+    "Final document preserves the six-week full target, two-week MVP, Paper Coast, locked pillars and exact scope counts. Proposed mechanics and schedule recommendations remain labeled.",
+    "Final review register matches all four actual verdicts. Technical concerns and producer recommendations remain open; no user scope/date decision is fabricated.",
+    "Final response explicitly says final approval NOT ASSESSED despite a saved complete draft. No build, playtest, performance, market or release acceptance is claimed.",
+    "Negative fixture removes only four project role files before baseline hashing; all four reviews remain NOT ASSESSED and no substitute child ran."
+  ],
+  "limitations": [
+    "This is the preselected/locked-decision path; initial concept interviews, creative selection, adverse pillar revisions and other verdict combinations remain untested.",
+    "No desktop, subdirectory, collaborative/autonomous, resume or human-decision acceptance is established.",
+    "Role-specific full matrices and the full S008 workflow remain partial.",
+    "Local raw traces and artifacts are temporary-machine evidence; hashes and reviewed observations are preserved here."
+  ]
+}

@@ -15,7 +15,7 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
-The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Six project Skill entry points and five roles (Game Designer, Lead Programmer, Gameplay Programmer and two QA roles) exist, but their full behavioral migration rows remain open.
+The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Six project Skill entry points and nine roles (Game Designer, Lead Programmer, Gameplay Programmer, two QA roles, Creative Director, Art Director, Technical Director and Producer) exist, but their full behavioral migration rows remain open.
 
 2026-11-12: configuration reads now cover named-system workflow overrides and
 legacy engine preferences (`8bf457f`). `config set` adds validated project/local
@@ -286,8 +286,8 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S005 Migrate `asset-audit` to `game-studio-asset-audit`. Evidence: pending.
 - [ ] S006 Migrate `asset-spec` to `game-studio-asset-spec`. Evidence: pending.
 - [ ] S007 Migrate `balance-check` to `game-studio-balance-check`. Evidence: pending.
-- [ ] S008 Migrate `brainstorm` to `game-studio-brainstorm`. Evidence: partial — [native CLI scenarios and preserved failure](../docs/evidence/brainstorm-skill-2026-11-12.json); interactive choices, resume, other modes, real director reviews and desktop remain open.
-  - Planned bounded slices: B1 shared brief/concept templates; B2 four director gate resources; B3 canonical entrypoint, lean/full references, catalog state and Codex behavior spec; B4 disposable installed-package native scenarios, artifact review and evidence. Keep S008 open until its complete trigger, tier, mode, gate, resume and host matrix is verified. Missing director roles are explicit unavailable dependencies, not solo reviews counted as director evidence.
+- [ ] S008 Migrate `brainstorm` to `game-studio-brainstorm`. Evidence: partial — [native CLI scenarios and preserved failure](../docs/evidence/brainstorm-skill-2026-11-12.json), plus [four native director reviews and missing-role regression](../docs/evidence/brainstorm-directors-2026-11-12.json); interactive choices, resume, other modes, remaining gate-verdict paths and desktop remain open.
+  - Slices B1–B4 now have templates, gates, entrypoint/references and selected native evidence. Keep S008 open until its complete trigger, tier, mode, gate, resume and host matrix is verified. Missing director roles are explicit unavailable dependencies, not solo reviews counted as director evidence.
 - [ ] S009 Migrate `bug-report` to `game-studio-bug-report`. Evidence: pending.
 - [ ] S010 Migrate `bug-triage` to `game-studio-bug-triage`. Evidence: pending.
 - [ ] S011 Retire alias `changelog`; route users to `game-studio-write-changelog`. Evidence: pending.
@@ -372,10 +372,10 @@ Each A-row is an individual task owned by `codex-integration`.
 - [ ] A001 Migrate `accessibility-specialist` to `game-studio-accessibility-specialist`. Evidence: pending.
 - [ ] A002 Migrate `ai-programmer` to `game-studio-ai-programmer`. Evidence: pending.
 - [ ] A003 Migrate `analytics-engineer` to `game-studio-analytics-engineer`. Evidence: pending.
-- [ ] A004 Migrate `art-director` to `game-studio-art-director`. Evidence: pending.
+- [ ] A004 Migrate `art-director` to `game-studio-art-director`. Evidence: partial — native role, four gate resources and selected live cases; full source matrix, image review and desktop remain open. See [director evidence](../docs/evidence/director-roles-2026-11-12.json).
 - [ ] A005 Migrate `audio-director` to `game-studio-audio-director`. Evidence: pending.
 - [ ] A006 Migrate `community-manager` to `game-studio-community-manager`. Evidence: pending.
-- [ ] A007 Migrate `creative-director` to `game-studio-creative-director`. Evidence: pending.
+- [ ] A007 Migrate `creative-director` to `game-studio-creative-director`. Evidence: partial — native role, six gate resources and selected live cases; full source matrix, conflicts, writes and desktop remain open. See [director evidence](../docs/evidence/director-roles-2026-11-12.json).
 - [ ] A008 Migrate `devops-engineer` to `game-studio-devops-engineer`. Evidence: pending.
 - [ ] A009 Migrate `economy-designer` to `game-studio-economy-designer`. Evidence: pending.
 - [ ] A010 Migrate `engine-programmer` to `game-studio-engine-programmer`. Evidence: pending.
@@ -393,7 +393,7 @@ Each A-row is an individual task owned by `codex-integration`.
 - [ ] A022 Migrate `narrative-director` to `game-studio-narrative-director`. Evidence: pending.
 - [ ] A023 Migrate `network-programmer` to `game-studio-network-programmer`. Evidence: pending.
 - [ ] A024 Migrate `performance-analyst` to `game-studio-performance-analyst`. Evidence: pending.
-- [ ] A025 Migrate `producer` to `game-studio-producer`. Evidence: pending.
+- [ ] A025 Migrate `producer` to `game-studio-producer`. Evidence: partial — native role, five gate resources and selected live cases; full source matrix, planning writes and desktop remain open. See [director evidence](../docs/evidence/director-roles-2026-11-12.json).
 - [ ] A026 Migrate `prototyper` to `game-studio-prototyper`. Evidence: pending.
 - [ ] A027 Migrate `qa-lead` to `game-studio-qa-lead`. Partial: canonical role and two portable QL gate definitions pass TOML parsing, packed installation/resource resolution and detach. Native CLI readiness and minimal-policy scenarios preserve all 321 existing files per fixture; read-only work creates no artifact, while an authorized plan adds only its named report. Readiness initially confused missing GDD input with a story defect; a definition/role correction and identical-input native rerun restore NOT ASSESSED. Standard coverage correctly rejects zero-test PASS, distinguishes advisory Config evidence, triages reported data loss and refuses release, but initially misroutes test-harness ownership; its corrected native rerun assigns the actual QA tester and preserves all 327 original files, adding only the named report. See [behavior spec](../studio-tests/roles/qa-lead-codex.md) and [five-run evidence including both failures](../docs/evidence/qa-lead-2026-11-12.json). Desktop, nested collaboration, remaining matrix and final validator acceptance remain open.
 - [ ] A028 Migrate `qa-tester` to `game-studio-qa-tester`. Partial: canonical TOML and packed install/detach pass; native CLI selected the real role, inherited model/permissions, rejected zero-test PASS, reported the static score defect and returned nine unexecuted test cases plus pending decisions. All 322 pre-existing files were unchanged; only two authorized Markdown reports were added. See [behavior spec](../studio-tests/roles/qa-tester-codex.md) and [initial evidence](../docs/evidence/qa-role-2026-11-12.json). Additional [workflow evidence](../docs/evidence/qa-role-workflows-2026-11-12.json) verifies read-only output with no changes, targeted save regression/edge cases, explicit gate policy, unavailable-lead/S1 escalation and no release approval. A first regression run invented an extra UI sign-off gate; the role was corrected and a fresh run with identical inputs returned 11 unexecuted cases without extra approval gates, preserving all 321 existing files. [Godot evidence](../docs/evidence/qa-godot-2026-11-12.json) now verifies actual role-authored GdUnit tests, 12 passing assertions/zero orphans, honest engine-error reporting and independent failure/cleanup controls; all 836 original files were preserved. Clean native engine execution, Unity/Unreal scaffolds and the final validator remain open.
@@ -402,7 +402,7 @@ Each A-row is an individual task owned by `codex-integration`.
 - [ ] A031 Migrate `sound-designer` to `game-studio-sound-designer`. Evidence: pending.
 - [ ] A032 Migrate `systems-designer` to `game-studio-systems-designer`. Evidence: pending.
 - [ ] A033 Migrate `technical-artist` to `game-studio-technical-artist`. Evidence: pending.
-- [ ] A034 Migrate `technical-director` to `game-studio-technical-director`. Evidence: pending.
+- [ ] A034 Migrate `technical-director` to `game-studio-technical-director`. Evidence: partial — native role, eight gate resources and selected live cases; full source matrix, engine API validation, ADR acceptance writes and desktop remain open. See [director evidence](../docs/evidence/director-roles-2026-11-12.json).
 - [ ] A035 Migrate `tools-programmer` to `game-studio-tools-programmer`. Evidence: pending.
 - [ ] A036 Migrate `ue-blueprint-specialist` to `game-studio-ue-blueprint-specialist`. Evidence: pending.
 - [ ] A037 Migrate `ue-gas-specialist` to `game-studio-ue-gas-specialist`. Evidence: pending.
