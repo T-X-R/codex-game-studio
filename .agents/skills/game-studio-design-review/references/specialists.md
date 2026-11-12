@@ -44,11 +44,14 @@ known findings from available reviewers while full coverage remains unassessed.
 Each task receives the actual GDD path/content, effective requirements, declared
 dependency/context paths and the main structural findings. Ask for adversarial,
 specific domain criticism, not validation of a desired verdict. Reviewers read
-the full GDD in heading ranges. Encourage disagreement and source-linked findings.
+the full GDD in heading ranges and identify the actual role-method resources they
+used. Include those resources with the role definitions in the final receipt
+evidence set; an unchanged TOML cannot certify a changed referenced method.
+Encourage disagreement and source-linked findings.
 
 - Game Designer: test rules against the actual Player Fantasy and supplied concept/
   brief; identify mechanics undermining the intended feeling without inventing it.
-- Systems Designer: substitute minimum/maximum plausible inputs into every formula;
+- Systems Designer: substitute declared minimum/maximum inputs into every formula;
   flag negative, infinite, undefined or otherwise degenerate boundary outputs.
 - QA Lead: inspect every acceptance criterion; quote untestable wording and propose
   concrete, measurable rewrites without changing approved design intent.

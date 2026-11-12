@@ -38,6 +38,10 @@ const paths = [`${skillRoot}/SKILL.md`, `${skillRoot}/scripts/review-receipts.mj
   ...['freshness-and-inputs', 'assessment-and-output', 'specialists', 'follow-up-and-records'].map(ref => `${skillRoot}/references/${ref}.md`),
   ...['game-designer', 'qa-lead', 'creative-director'].map(role => `.codex/agents/game-studio-${role}.toml`)];
 const hashes = {};
+const sharedReceipt = '.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/review-receipts.mjs';
+const sharedBytes = await readFile(join(workspace, sharedReceipt));
+assert.deepEqual(sharedBytes, await readFile(join(sourceRoot, 'studio/scripts/review-receipts.mjs')));
+hashes[sharedReceipt] = createHash('sha256').update(sharedBytes).digest('hex');
 for (const path of paths) {
   const installed = await readFile(join(workspace, path));
   assert.deepEqual(installed, await readFile(join(sourceRoot, path)), path);
@@ -47,7 +51,7 @@ for (const role of scenario.removeRoles ?? []) await rm(join(workspace, '.codex/
 const configMarker = `DESIGN_REVIEW_CONFIG_${randomUUID()}`;
 await writeFile(join(workspace, '.codex/config.toml'), `developer_instructions = "Fixture config ${configMarker}"\n`);
 if (scenario.receipt) {
-  const inputPaths = [...new Set(['AGENTS.md', ...Object.keys(scenario.inputs), ...paths.filter(path => path.startsWith(skillRoot)), ...(scenario.completeReceipt ? ['.codex/config.toml', '.game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md'] : [])])];
+  const inputPaths = [...new Set(['AGENTS.md', sharedReceipt, ...Object.keys(scenario.inputs), ...paths.filter(path => path.startsWith(skillRoot)), ...(scenario.completeReceipt ? ['.codex/config.toml', '.game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md'] : [])])];
   const stamps = run(join(workspace, skillRoot, 'scripts/review-receipts.mjs'), ['hash', ...inputPaths], workspace);
   const logPath = join(workspace, 'design/gdd/reviews/resolve-hit-review-log.md');
   await mkdir(dirname(logPath), { recursive: true });

@@ -56,8 +56,10 @@ Findings:
 ```
 
 Write `- none` when there were no findings. Include target, registry when present,
-all Skill logic files, relevant policy sources, related GDDs, concept/brief,
-narrative files and specialist definitions actually used. Hash using:
+all Skill logic files and the resolved shared receipt implementation, relevant
+policy sources, related GDDs, concept/brief,
+narrative files, specialist definitions and their referenced method resources
+actually used. Hash using:
 
 ```sh
 node .agents/skills/game-studio-design-review/scripts/review-receipts.mjs hash <reviewed-path> ...

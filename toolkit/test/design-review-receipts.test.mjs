@@ -5,7 +5,7 @@ import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
 
-const script = resolve(import.meta.dirname, '../../.agents/skills/game-studio-design-review/scripts/review-receipts.mjs');
+const script = resolve(import.meta.dirname, '../../studio/scripts/review-receipts.mjs');
 async function workspace(t) {
   const root = await mkdtemp(join(tmpdir(), 'studio-review-receipts-'));
   t.after(() => rm(root, { recursive: true, force: true }));

@@ -1,14 +1,17 @@
 # Freshness and the evidence set
 
 The review log is `design/gdd/reviews/<doc-stem>-review-log.md`. Use the installed
-Skill's sibling `scripts/review-receipts.mjs`; resolve its actual path from the
-Skill location, not a guessed shared-resource path. It is read-only and requires
-Node. From the game root:
+Skill's sibling `scripts/review-receipts.mjs`. This compatibility entry point
+resolves `studio/scripts/review-receipts.mjs` through the restored, pinned project
+runtime; it never selects a global CLI. It is read-only and requires Node.
+From the game root:
 
 ```sh
 node .agents/skills/game-studio-design-review/scripts/review-receipts.mjs check design/gdd/reviews/<doc-stem>-review-log.md <target-gdd> .agents/skills/game-studio-design-review/SKILL.md design/registry/entities.yaml
 ```
 
+Resolve the shared implementation with `node .game-studio/run.cjs resource path studio/scripts/review-receipts.mjs --json`
+and include its actual project-relative path in the evidence set.
 Also pass this Skill's references/helper, effective policy sources, and all
 currently discovered relevant context paths. Only the latest review entry supplies
 the comparison hashes: older stamps cannot fill gaps beneath a newer verdict or
