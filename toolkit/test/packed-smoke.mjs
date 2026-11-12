@@ -30,6 +30,10 @@ try {
     assert.equal(await readFile(join(project, '.agents/skills/game-studio-project-settings', path), 'utf8'),
       await readFile(join(packageRoot, '../.agents/skills/game-studio-project-settings', path), 'utf8'));
   }
+  for (const path of ['SKILL.md', 'references/runners.md', 'references/checks.md', 'references/verdict.md']) {
+    assert.equal(await readFile(join(project, '.agents/skills/game-studio-smoke-check', path), 'utf8'),
+      await readFile(join(packageRoot, '../.agents/skills/game-studio-smoke-check', path), 'utf8'));
+  }
   assert.equal(await readFile(join(project, '.agents/skills/game-studio-prototype/references/grow.md'), 'utf8'),
     await readFile(join(packageRoot, '../.agents/skills/game-studio-prototype/references/grow.md'), 'utf8'));
   for (const path of ['hook.ts', 'tune.ts']) {
