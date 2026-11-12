@@ -25,8 +25,8 @@ try {
   assert.equal(command(globalCli, 'version').status, 'ok');
   const project = join(temp, '我的 game');
   assert.equal(command(globalCli, 'init', project, '--engine', 'web').status, 'ok');
-  const qaRoles = ['qa-tester', 'qa-lead'].map(role => `.codex/agents/game-studio-${role}.toml`);
-  for (const role of qaRoles) {
+  const roles = ['qa-tester', 'qa-lead', 'game-designer'].map(role => `.codex/agents/game-studio-${role}.toml`);
+  for (const role of roles) {
     assert.equal(await readFile(join(project, role), 'utf8'),
       await readFile(join(packageRoot, '..', role), 'utf8'));
   }
@@ -35,6 +35,9 @@ try {
     const result = command(globalCli, 'resource', 'path', id);
     assert.equal(await readFile(result.data.path, 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
+  const designResource = 'studio/docs/roles/game-designer.md';
+  const designPath = command(globalCli, 'resource', 'path', designResource).data.path;
+  assert.equal(await readFile(designPath, 'utf8'), await readFile(join(packageRoot, '..', designResource), 'utf8'));
   await assert.rejects(readFile(join(project, '.codex/config.toml')), { code: 'ENOENT' });
   assert.match(await readFile(join(project, '.agents/skills/game-studio-prototype/SKILL.md'), 'utf8'), /name: game-studio-prototype/);
   for (const path of ['SKILL.md', 'references/choosing-settings.md']) {
@@ -153,7 +156,7 @@ try {
   command(globalCli, 'skills', 'setup', '--home', join(temp, 'codex-home'));
   command(globalCli, 'skills', 'remove', '--home', join(temp, 'codex-home'));
   command(globalCli, 'detach', '--project', project);
-  for (const role of qaRoles) await assert.rejects(readFile(join(project, role)), { code: 'ENOENT' });
+  for (const role of roles) await assert.rejects(readFile(join(project, role)), { code: 'ENOENT' });
   assert.ok(await readFile(join(project, 'project.yaml'), 'utf8'));
   assert.match(await readFile(join(project, 'docs/technical-preferences.md'), 'utf8'), /Web 7\.3\.1/);
   assert.match(await readFile(join(project, 'production/session-state/active.md'), 'utf8'), /Test controls/);
