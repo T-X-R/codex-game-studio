@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+- Resolve workflow depth for a named system and import legacy engine preferences
+  without overriding explicit project settings.
+- Add `config set` with validated project/local writes, dry-run effects,
+  comment/quote preservation and synchronized stage records. Conflicting edits
+  and destructive YAML shape changes fail before applying a stale plan.
+- Restrict new transaction journals and backups to owner-only POSIX permissions;
+  Windows continues to inherit the workspace ACLs.
+
 ## Codex Game Studio 0.1.0-alpha.0 — 2026-11-11
 
 Initial executable CLI-and-Skills adaptation: protected project attachment and

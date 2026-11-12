@@ -97,6 +97,11 @@ Finite commands return one JSON result; foreground preview returns its readiness
 result and stays running. Exit codes distinguish bad input, missing capability,
 file conflicts, failed checks, timeout and interruption.
 
+The current source also provides `config set KEY VALUE --dry-run`, validated
+project/local configuration writes, and `config get --system NAME`. These are
+unreleased additions, not commands in the existing `v0.1.0-alpha.0` archive.
+See [configuration syntax and safety](studio/docs/configuration.md).
+
 ## Recovery and removal
 
 ```bash
