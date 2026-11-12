@@ -48,8 +48,12 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   [the contract](content-validation.md). A subsequent [command-example slice](evidence/command-examples-2026-11-12.json)
   checks explicit invocations against runtime command metadata, including an
   installed-archive stale-command control; 153 local tests pass. T20 still needs
-  the Codex behavior rubric, rule/hook/helper inventory cross-checks and legacy
-  consumer replacement; host/journey acceptance remains independently open.
+  rule/hook/helper inventory cross-checks and remaining legacy consumer/spec
+  replacement; host/journey acceptance remains independently open. The
+  [Codex rubric](../studio-tests/quality-rubric.md), maintainer guide and spec
+  templates now preserve 15 categories/57 metrics with guided authorization and
+  separate static versus behavioral evidence. Their migration is documentation
+  work, not a new live acceptance result.
 - Project attachment, exact runtime pins, local launchers, portable development
   archives, explicit npm restore with lifecycle scripts disabled and single-hop
   dispatch from a different global CLI version.

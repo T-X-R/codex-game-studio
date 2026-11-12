@@ -25,10 +25,14 @@ Evidence still needs semantic review against the complete approved requirements.
 `--bundle-only` explicitly leaves catalog inspection NOT ASSESSED and cannot be
 combined with `--complete`; source inputs/catalog are not distributed at runtime.
 
-This is not the final T20 gate yet: the Codex behavior
-rubric, rule/hook/helper inventory cross-checks and retirement of legacy lint consumers remain pending. The old linter and
-upstream behavioral specs remain migration inputs until their replacement is
-finished. Shared rules/helpers and host behavior are separately gated by the plan.
+The [Codex behavior rubric](../studio-tests/quality-rubric.md) now separates
+instruction review from observed behavior and preserves the original 15 categories
+and 57 metric identities. The maintainer guide and spec templates use Codex
+mechanics and guided authorization. This is not the final T20 gate yet:
+rule/hook/helper inventory cross-checks, individual spec migration and remaining
+legacy consumer replacement are open. The old linter and upstream behavioral
+specs remain migration inputs. Shared rules/helpers and host behavior are
+separately gated by the plan.
 
 Checks include required nonempty Skill/onboarding/role trees, readable entrypoints,
 YAML/TOML parsing, duplicate keys/names, nonempty instructions, local reference
