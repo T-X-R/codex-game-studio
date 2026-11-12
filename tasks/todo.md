@@ -31,6 +31,7 @@ after explicit per-type overrides; derived gate/engine helper parity is still op
 ## M0 Compatibility and contracts
 
 - [ ] T01 Establish Codex integration evidence
+  - 2026-11-12 evidence: a fresh read-only CLI role fixture completed but returned `ROLE_SELECTION_UNAVAILABLE`, with no child or hidden marker. The reproducible probe and sanitized record are linked from `docs/codex-compatibility.md`. Native role selection and desktop acceptance remain open.
   - Module: `codex-integration`. Dependencies: none.
   - Verify custom-agent TOML, project Skill discovery, Hook trust, patch payload and real block behavior in desktop and CLI. Include launch from a subdirectory and desktop PATH differences.
   - Acceptance: exact client versions, positive/negative transcripts and filesystem observations recorded; unsupported behavior listed without a silent fallback.
