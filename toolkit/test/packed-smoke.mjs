@@ -33,6 +33,9 @@ try {
   assert.equal(await readFile(join(project, 'production/stage.txt'), 'utf8'), 'Concept\n');
   command(launcher, 'config', 'set', 'modes.automation', 'autonomous', '--local', '--project', project);
   assert.equal(command(globalCli, 'config', 'get', 'modes.automation', '--project', project).data.settings['modes.automation'].source, 'project.local.yaml');
+  await writeFile(join(project, 'checkpoint-draft.md'), '**Current task:** Prototype movement\n**Next step:** Test controls\n');
+  command(launcher, 'checkpoint', 'save', '--input', 'checkpoint-draft.md', '--expect-hash', 'missing', '--project', project);
+  assert.equal(command(globalCli, 'checkpoint', 'show', '--project', project).data.fields['Next step'], 'Test controls');
   command(globalCli, 'prototype', 'scaffold', 'smoke', '--project', project);
   assert.equal(command(globalCli, 'check', 'prototypes/smoke', '--project', project).status, 'ok');
   command(globalCli, 'package', 'prototypes/smoke', '--output', 'builds/smoke', '--project', project);
@@ -53,5 +56,6 @@ try {
   command(globalCli, 'skills', 'remove', '--home', join(temp, 'codex-home'));
   command(globalCli, 'detach', '--project', project);
   assert.ok(await readFile(join(project, 'project.yaml'), 'utf8'));
+  assert.match(await readFile(join(project, 'production/session-state/active.md'), 'utf8'), /Test controls/);
   console.log('Packed install, exact runtime restore, single-hop dispatch, onboarding and detach passed.');
 } finally { await rm(temp, { recursive: true, force: true }); }

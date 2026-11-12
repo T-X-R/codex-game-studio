@@ -6,6 +6,8 @@ import { setupCommands } from './setup-commands.js';
 import { gameCommands } from './game-commands.js';
 import { planConfigSet } from './config-write.js';
 import { applyInstall, describePlan } from './install.js';
+import { planCheckpointSave, showCheckpoint } from './checkpoint.js';
+import { readText, safePath } from './files.js';
 
 export interface Option { type: 'string' | 'boolean'; description: string }
 export interface Input { args: string[]; values: Record<string, string | boolean | undefined> }
@@ -24,6 +26,32 @@ export const commonOptions: Record<string, Option> = {
 export const commands: Record<string, Command> = {
   ...setupCommands,
   ...gameCommands,
+  'checkpoint show': {
+    description: 'Read a bounded recovery record and observe current Git state', effect: 'read',
+    options: { project: { type: 'string', description: 'Game workspace directory' } },
+    run: async ({ values }) => {
+      const data = await showCheckpoint(await resolveProject(values.project as string | undefined));
+      return { ...success('checkpoint show', data), warnings: data.warnings };
+    },
+  },
+  'checkpoint save': {
+    description: 'Replace the checkpoint region after verifying its previously observed hash', effect: 'write',
+    options: { project: { type: 'string', description: 'Game workspace directory' },
+      input: { type: 'string', description: 'Project-relative Markdown file containing the checkpoint body' },
+      'expect-hash': { type: 'string', description: 'Required sha256 from checkpoint show, or missing for a new record' },
+      'event-id': { type: 'string', description: 'Stable event identifier for idempotent lifecycle retries' },
+      'dry-run': { type: 'boolean', description: 'Describe changes without writing files' } },
+    run: async ({ values }) => {
+      const root = await resolveProject(values.project as string | undefined);
+      if (!values.input) throw new StudioError('INVALID_ARGUMENT', '--input is required');
+      const input = await readText(await safePath(root, values.input as string));
+      if (input === null) throw new StudioError('INVALID_ARGUMENT', 'Checkpoint input file does not exist');
+      const { plan, warnings, duplicate, eventId } = await planCheckpointSave(root, input,
+        values['expect-hash'] as string | undefined, values['event-id'] as string | undefined);
+      if (!values['dry-run']) await applyInstall(plan);
+      return { ...success('checkpoint save', { ...describePlan(plan), duplicate, eventId, dryRun: !!values['dry-run'] }), warnings };
+    },
+  },
   'config set': {
     description: 'Write one project setting and synchronize the stage mirror when applicable', effect: 'write', minArgs: 2, maxArgs: 2,
     options: { project: { type: 'string', description: 'Game workspace directory' },
