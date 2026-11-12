@@ -45,3 +45,17 @@ jobs:
       - run: npm --prefix toolkit ci --ignore-scripts
       - run: npm --prefix toolkit run build
       - run: npm --prefix toolkit run test:browser
+      - name: Verify packed Web growth and replay equivalence
+        run: node toolkit/test/growth-smoke.mjs
+        env:
+          TMPDIR: ${{ runner.temp }}
+      - name: Preserve growth evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-growth-evidence
+          path: |
+            ${{ runner.temp }}/game-studio-growth-live-*/summary.json
+            ${{ runner.temp }}/game-studio-growth-live-*/commands.json
+            ${{ runner.temp }}/game-studio-growth-live-*/Web game */production/evidence/**
+          retention-days: 14
