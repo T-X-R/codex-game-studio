@@ -6,6 +6,36 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Shared [story facts](../studio-tests/helpers/story-facts-codex.md) now expose
+  story headers, requirement/ADR links, AC counts and lint observations without
+  assigning readiness. [Nineteen checks](evidence/story-facts-2026-11-12.json)
+  include nine real Bash comparisons and installed-package validation. Empty
+  files remain visible; invalid sprint YAML fails instead of looking like an
+  empty sprint. Build/typecheck/content, the 231-test integrated suite and archive
+  checks pass on macOS. Windows Bash comparisons are explicitly unsupported;
+  portable tests remain applicable. ADR observations and readiness consumers are
+  separate unfinished slices.
+- Architecture review has [39 recorded native runs](evidence/architecture-review-skill-2026-11-12.json),
+  retaining eight historical failures and latest scoped passes for 31 scenarios.
+  [Independent reconciliation](evidence/architecture-review-integration-2026-11-12.json)
+  verifies raw hashes, actual files, exact write effects and no delegated roles.
+  Runs span recorded resource versions; this does not claim a complete newest-
+  archive matrix, all engines or desktop acceptance. The final same-input fix
+  preserves global module hashing while limiting semantic reads to named ADR
+  module references.
+- Sprint status now has a read-only Codex Skill with minimal build-order and
+  sprint/YAML routes, a source-mapped specification and 25 isolated native
+  fixtures. The catalog now has fourteen partial Skills and ten partial roles,
+  with no verified rows. Independent source review, build/content checks, 34
+  relevant tests, 210 full regression tests and installed resource checks pass.
+  Initial [native results](evidence/sprint-status-skill-2026-11-12.json) preserve
+  output-contract failures as well as scoped successes; date/risk calculations
+  do not imply full output or host acceptance. The remaining matrix stays open.
+- The previous integrated development checkpoint `58b777dcd0cc61c107ce2948a16b33e5fa4e3dd1`
+  passed all five jobs in [CI](https://github.com/T-X-R/codex-game-studio/actions/runs/43240601570),
+  including four platform/Node combinations and actual browser/Web-growth checks.
+  This precedes sprint-status and subsequent content corrections and does not
+  certify those additions or the full migration.
 - Architecture review now collects its fixed global receipt inputs through a
   Skill-private script before delegating hashing/comparison to the shared helper.
   This addresses repeated native omissions of TR/master, engine-root references
@@ -33,7 +63,7 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   concurrent-write and additional domain cases remain open; A032 stays partial.
 - Architecture creation, architecture review and the native Systems Designer now
   have Codex implementations, source-mapped specifications and isolated native
-  fixtures. The catalog contains thirteen partial Skills and ten partial roles;
+  fixtures. That checkpoint contained thirteen partial Skills and ten partial roles;
   none is declared fully verified. The first combined content check caught a
   legacy runtime fallback in architecture creation; it was removed before the
   corrected build, content lint, 198 tests and installed-archive check passed.

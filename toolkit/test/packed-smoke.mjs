@@ -71,7 +71,7 @@ try {
     const id = `.agents/skills/game-studio-map-systems/${path}`;
     assert.equal(await readFile(join(project, id), 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
-  for (const skill of ['design-system', 'design-review', 'architecture-decision', 'create-architecture', 'architecture-review', 'next-step']) {
+  for (const skill of ['design-system', 'design-review', 'architecture-decision', 'create-architecture', 'architecture-review', 'next-step', 'sprint-status']) {
     const path = `.agents/skills/game-studio-${skill}`;
     const source = join(packageRoot, '..', path);
     const expected = [];
@@ -171,6 +171,29 @@ try {
   assert.deepEqual(storyRows.stories.map(row => row.group), ['IN_REVIEW', 'TODO']);
   assert.match(execute(storyHelper, ['--project', storyProject, '--text']), /^IN_REVIEW    production\/epics\/one\/story-02.md\nTODO/);
   assert.throws(() => execute(storyHelper, []), error => error.status === 2);
+  const factsHelper = JSON.parse(execute(launcher, ['resource', 'path', 'studio/scripts/story-facts.mjs', '--json'], project)).data.path;
+  assert.ok(factsHelper.startsWith(join(project, '.game-studio/node_modules')));
+  assert.deepEqual(await readFile(factsHelper), await readFile(join(packageRoot, '../studio/scripts/story-facts.mjs')));
+  const facts = JSON.parse(execute(factsHelper, ['--project', storyProject, '--all', '--lint']));
+  assert.equal(facts.status, 'observed'); assert.equal(facts.qualityAssessed, false);
+  assert.equal(facts.counts.TODO, 1); assert.equal(facts.counts.IN_REVIEW, 1);
+  assert.equal(facts.lint.filter(row => row.rule === 'type_missing').length, 2);
+  assert.throws(() => execute(factsHelper, ['--project', storyProject, 'production/epics/one/story-01.md', 'missing.md']), error => {
+    assert.equal(error.status, 3);
+    const partial = JSON.parse(error.stdout);
+    assert.equal(partial.stories.length, 1); assert.deepEqual(partial.missingPaths, ['missing.md']);
+    return true;
+  });
+  await writeFile(join(storyProject, 'production/sprint-status.yaml'), 'stories: [broken\n');
+  assert.throws(() => execute(factsHelper, ['--project', storyProject, '--sprint']), error => {
+    assert.equal(error.status, 1);
+    const result = JSON.parse(error.stdout);
+    assert.equal(result.status, 'not_assessed'); assert.equal(result.error.code, 'INVALID_SPRINT');
+    return true;
+  });
+  await writeFile(join(storyProject, 'production/sprint-status.yaml'), 'stories: [{file: production/epics/one/story-02.md, status: review}]\n');
+  const sprintFacts = JSON.parse(execute(factsHelper, ['--project', storyProject, '--sprint']));
+  assert.equal(sprintFacts.stories.length, 1); assert.equal(sprintFacts.stories[0].sprintStatus, 'review');
   const artifacts = command(launcher, 'check', '--kind', 'artifacts', '--project', project).data;
   assert.equal(artifacts.counts.groups, 7);
   assert.equal(artifacts.counts.steps, 49);

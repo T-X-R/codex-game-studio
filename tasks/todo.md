@@ -326,7 +326,7 @@ Each S-row is an individual task owned by `codex-integration`.
   - [ ] M3 Validate natural triggering, missing context, new/resumed indexes, lean/solo/full reviews, fixed table contracts, explicit next-system routing and authorized checkpoint effects in isolated native fixtures. Preserve untested interactive, adverse-review and desktop cases as open.
     - Eight selected CLI cases pass manual artifact/trace review: new solo, resume, missing source, read-only next, voluntary minimal, full sequential director reviews, one-run solo override and negative trigger. Checkpoint saves retain one event/backup transaction and exact observed identity fields. Build/typecheck, 184 regression tests and corrected packed install pass. Missing roles, adverse outcomes, interactive modes, density/cycles, recovery conflicts and desktop remain open.
 - [ ] S031 Migrate `milestone-review` to `game-studio-milestone-review`. Evidence: pending.
-- [ ] S032 Migrate `next-step` to `game-studio-next-step`. Evidence: pending.
+- [ ] S032 Migrate `next-step` to `game-studio-next-step`. Partial: complete source routes, installed capability checks, pinned artifact/story observations and 40 native scenarios defined. Selected native cases and same-input fixes are in progress; full matrix and both-host acceptance remain open. See [Codex specification](../studio-tests/skills/utility/next-step-codex.md).
 - [ ] S033 Migrate `onboard` to `game-studio-onboard`. Evidence: pending.
 - [ ] S034 Migrate `patch-notes` to `game-studio-patch-notes`. Evidence: pending.
 - [ ] S035 Migrate `perf-profile` to `game-studio-perf-profile`. Evidence: pending.
@@ -351,7 +351,7 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S054 Migrate `smoke-check` to `game-studio-smoke-check`. Evidence: partial; installed Skill, seven supplied-Skill scenarios, platform-table regression and native CLI zero-test rerun with prior-evidence preservation in `docs/evidence/smoke-skill-2026-11-12.json`. Remaining matrix: `studio-tests/skills/utility/smoke-check-codex.md`.
 - [ ] S055 Migrate `soak-test` to `game-studio-soak-test`. Evidence: pending.
 - [ ] S056 Migrate `sprint-plan` to `game-studio-sprint-plan`. Evidence: pending.
-- [ ] S057 Migrate `sprint-status` to `game-studio-sprint-status`. Evidence: pending.
+- [ ] S057 Migrate `sprint-status` to `game-studio-sprint-status`. Partial: read-only minimal/sprint routes, source boundary rules and independent source review; native behavioral verification in progress. See [Codex specification](../studio-tests/skills/sprint/sprint-status-codex.md).
 - [ ] S058 Migrate `start` to `game-studio-start`. Evidence: pending.
 - [ ] S059 Migrate `story-done` to `game-studio-story-done`. Evidence: pending.
 - [ ] S060 Migrate `story-readiness` to `game-studio-story-readiness`. Evidence: pending.
@@ -415,7 +415,7 @@ Each A-row is an individual task owned by `codex-integration`.
 - [ ] A029 Migrate `release-manager` to `game-studio-release-manager`. Evidence: pending.
 - [ ] A030 Migrate `security-engineer` to `game-studio-security-engineer`. Evidence: pending.
 - [ ] A031 Migrate `sound-designer` to `game-studio-sound-designer`. Evidence: pending.
-- [ ] A032 Migrate `systems-designer` to `game-studio-systems-designer`. Partial: native role, complete formula/interaction/tuning methods and 15 isolated scenarios; static and installed-package checks pass. [Native acceptance](../studio-tests/roles/systems-designer-codex.md) is in progress, not yet verified.
+- [ ] A032 Migrate `systems-designer` to `game-studio-systems-designer`. Partial: native role and complete formula/interaction/tuning methods; [17 recorded native scenarios](../docs/evidence/systems-designer-role-2026-11-12.json) include 15 scoped passes and two retained initial failures, plus [independent file/trace reconciliation](../docs/evidence/systems-designer-integration-2026-11-12.json). Static and installed-package checks pass; missing-resource/denial, desktop/subdirectory, concurrent-write and remaining domain acceptance stay open.
 - [ ] A033 Migrate `technical-artist` to `game-studio-technical-artist`. Evidence: pending.
 - [ ] A034 Migrate `technical-director` to `game-studio-technical-director`. Evidence: partial — native role, eight gate resources and selected live cases; full source matrix, engine API validation, ADR acceptance writes and desktop remain open. See [director evidence](../docs/evidence/director-roles-2026-11-12.json).
 - [ ] A035 Migrate `tools-programmer` to `game-studio-tools-programmer`. Evidence: pending.
