@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-12",
+  "implementationCommit": "2fb62fb30fd4d346998f32b7b94b896798cfcc35",
+  "scope": "Installed project check --kind content using the pinned toolkit runtime",
+  "environment": {
+    "node": "24.22.2",
+    "os": "macOS ARM64"
+  },
+  "validation": {
+    "build": "passed",
+    "typecheck": "passed",
+    "lint:content": "passed",
+    "tests": {
+      "passed": 167,
+      "failed": 0,
+      "skipped": 0
+    },
+    "packedInstall": "passed"
+  },
+  "observations": [
+    "Actual project Skill and role bodies are inspected; unrelated entrypoint namespaces are reported unassessed.",
+    "Deleted complete Skill/role entries are detected against the running package baseline.",
+    "Literal resource calls use the package root; relative Markdown links retain their original root and cannot escape it.",
+    "Actual project docs resolve; a missing local document does not fall back to the bundle.",
+    "Empty or missing package baseline is invalid.",
+    "CLI errors use exit 5/CHECK_FAILED; malformed arguments use exit 2; existing prototype checks still work.",
+    "Packed fixture restores the exact runtime, invokes the project launcher, and observes a resource root inside the private project runtime.",
+    "Packed fixture changes an installed Skill to include an unknown command, observes exit 5 and the project source path, restores exact bytes and observes success."
+  ],
+  "limitations": [
+    "Static project content checks do not establish native Skill discovery, role execution, game behavior or human acceptance.",
+    "Project mode does not inspect global onboarding, source migration catalogs, or every unreferenced package resource.",
+    "No skill-test workflow or migration row is declared complete by this command."
+  ],
+  "sha256": {
+    "toolkit/src/content-tree.ts": "fda269194e40711eaa4ae8c721ad05493cd1df0a62f435fd9937adec529f8a66",
+    "toolkit/src/game-commands.ts": "c10efceca025817786cf930fe2b8f49318e7bc2eff0b76788851002fc42f2b06",
+    "toolkit/test/project-content.test.mjs": "2bf61caceb1a3541b930411988e79f0ae32b719535deddf69cd18cdd46171d04",
+    "toolkit/test/packed-smoke.mjs": "c10c79ab02ea86be90e39f76c3d6d3686141796f27f23cad269de5cba8529cf1"
+  }
+}

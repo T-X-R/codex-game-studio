@@ -60,6 +60,12 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   CRLF reproduction and corrected fixtures bring local tests to 162 passes. The
   validator is unchanged. See [source inventory evidence](evidence/source-inventory-2026-11-12.json),
   including the failed CI attempt.
+- Installed project content checks through `check --kind content` validate actual
+  Skill/role bodies and missing expected entries, resolve shared resources from
+  the running pinned package, and preserve local Markdown reference semantics.
+  Other namespaces remain unassessed; no command or Hook executes during the
+  check. 167 local tests and packed positive/mutation/restoration checks pass.
+  See [project content evidence](evidence/project-content-check-2026-11-12.json).
 - Project attachment, exact runtime pins, local launchers, portable development
   archives, explicit npm restore with lifecycle scripts disabled and single-hop
   dispatch from a different global CLI version.
