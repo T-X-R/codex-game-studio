@@ -25,12 +25,12 @@ try {
   assert.equal(command(globalCli, 'version').status, 'ok');
   const project = join(temp, '我的 game');
   assert.equal(command(globalCli, 'init', project, '--engine', 'web').status, 'ok');
-  const roles = ['qa-tester', 'qa-lead', 'game-designer'].map(role => `.codex/agents/game-studio-${role}.toml`);
+  const roles = ['qa-tester', 'qa-lead', 'game-designer', 'lead-programmer'].map(role => `.codex/agents/game-studio-${role}.toml`);
   for (const role of roles) {
     assert.equal(await readFile(join(project, role), 'utf8'),
       await readFile(join(packageRoot, '..', role), 'utf8'));
   }
-  for (const gate of ['ql-story-ready', 'ql-test-coverage']) {
+  for (const gate of ['ql-story-ready', 'ql-test-coverage', 'lp-code-review', 'lp-feasibility']) {
     const id = `studio/docs/director-gates/${gate}.md`;
     const result = command(globalCli, 'resource', 'path', id);
     assert.equal(await readFile(result.data.path, 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
