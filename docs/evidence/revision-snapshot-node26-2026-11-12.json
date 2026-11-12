@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "status": "local-pass-ci-pending",
+  "status": "scoped-pass",
   "failedCi": {
     "url": "https://github.com/T-X-R/codex-game-studio/actions/runs/43249513547",
     "head": "f6fa1f10d021531b2b016d6735f6e012bee78d80",
@@ -47,7 +47,7 @@
     "installedArchive": "PASS"
   },
   "limits": [
-    "New cross-platform CI result remains pending.",
+    "All five CI jobs passed at the recorded head after browser-only retry; later changes require their own CI.",
     "Other isolated native-test hosts still use recursive readdir. Current recorded Node24 fixtures have verified hashes; those helpers need separate symlink-boundary coverage before claiming Node26 fixture-host compatibility.",
     "Production toolkit source and shared runtime scripts contain no equivalent recursive readdir call found by this focused search."
   ],
@@ -60,5 +60,13 @@
     "game-studio-node26-resume-before.log": "cba231026215c7a9b58715cd922376ec27ab670b3957565389087db295b3867a",
     "game-studio-node26-resume-after.log": "5e3b2b4f84c302ff0f2f202535bc671500504b233102307b13e6251dc83d5a1b",
     "game-studio-node24-resume-after.log": "a69142e8fc4b63e5d20bb296580783d4bddc77a668ecb23ed5f1b590b3460d66"
+  },
+  "ciResult": {
+    "head": "10af471c32df8f81eb3dac18b35a8e67fe30f1d7",
+    "url": "https://github.com/T-X-R/codex-game-studio/actions/runs/43252643697",
+    "jobs": "All five PASS after rerunning browser only.",
+    "initialBrowserAttempt": "Cancelled before any step; runner_name empty. No browser execution occurred in that attempt.",
+    "retry": "Actual browser job passed; four platform/Node jobs already passed.",
+    "scope": "Predates later TR compatibility and S060 source changes."
   }
 }

@@ -351,10 +351,10 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S054 Migrate `smoke-check` to `game-studio-smoke-check`. Evidence: partial; installed Skill, seven supplied-Skill scenarios, platform-table regression and native CLI zero-test rerun with prior-evidence preservation in `docs/evidence/smoke-skill-2026-11-12.json`. Remaining matrix: `studio-tests/skills/utility/smoke-check-codex.md`.
 - [ ] S055 Migrate `soak-test` to `game-studio-soak-test`. Evidence: pending.
 - [ ] S056 Migrate `sprint-plan` to `game-studio-sprint-plan`. Evidence: pending.
-- [ ] S057 Migrate `sprint-status` to `game-studio-sprint-status`. Partial: read-only minimal/sprint routes, source boundary rules and independent source review; native behavioral verification in progress. See [Codex specification](../studio-tests/skills/sprint/sprint-status-codex.md).
+- [ ] S057 Migrate `sprint-status` to `game-studio-sprint-status`. Partial: read-only minimal/sprint routes and source boundary rules. [33 native runs](../docs/evidence/sprint-status-skill-2026-11-12.json) retain 26 scoped passes and seven original/intermediate failures; all 26 defined scenarios have selected passes after same-input corrections. Desktop, subdirectory, unavailable-runtime and broader source variants remain open. See [Codex specification](../studio-tests/skills/sprint/sprint-status-codex.md).
 - [ ] S058 Migrate `start` to `game-studio-start`. Evidence: pending.
 - [ ] S059 Migrate `story-done` to `game-studio-story-done`. Evidence: pending.
-- [ ] S060 Migrate `story-readiness` to `game-studio-story-readiness`. Evidence: pending.
+- [ ] S060 Migrate `story-readiness` to `game-studio-story-readiness`. Partial: complete six-phase/six-group source mapping, pinned observers and true per-story QA routing; 39 scenarios defined. [Initial native evidence](../docs/evidence/story-readiness-skill-2026-11-13.json) has one selected Solo PASS and Full observable checks passed with exact encrypted dispatch fields NOT ASSESSED. Remaining 37 fixtures, follow-up choices and desktop are open. Build/typecheck/content, 243 tests per Node24/26 and installed-package checks pass locally.
 - [ ] S061 Migrate `team-audio` to `game-studio-team-audio`. Evidence: pending.
 - [ ] S062 Migrate `team-combat` to `game-studio-team-combat`. Evidence: pending.
 - [ ] S063 Migrate `team-level` to `game-studio-team-level`. Evidence: pending.

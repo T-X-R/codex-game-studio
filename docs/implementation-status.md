@@ -1,4 +1,4 @@
-# Implementation status — 2026-11-12
+# Implementation status — 2026-11-13
 
 This is an initial executable alpha, not completion of the full migration plan.
 The owner authorized implementation and chose GitHub owner `T-X-R`, repository
@@ -6,14 +6,36 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
-- Latest local integration passes build/typecheck/content checks, actual archive
+- Story readiness now has its six-phase Codex implementation, all six checklist
+  groups, 39 raw-input fixtures and [two initial native runs](evidence/story-readiness-skill-2026-11-13.json).
+  Solo selection passes. Full actually invokes QA Lead, which independently reads
+  the story and returns ADEQUATE with inherited settings, but exact encrypted
+  dispatch-message field completeness remains NOT ASSESSED. Two startup failures
+  occurred before native execution and are recorded separately. The catalog has
+  fifteen partial Skills and ten partial roles; none is fully verified.
+- A [TR compatibility regression](evidence/registry-tr-compatibility-2026-11-13.json)
+  reproduced an upstream-supported unquoted successor status being rejected as
+  malformed YAML. The scoped in-memory correction preserves original bytes and
+  warnings, while other invalid YAML still withholds entries. Focused checks,
+  243 integrated tests on each of Node 24 and 26, build/typecheck/content checks
+  and installed-package verification pass locally. New-head CI remains pending.
+- Sprint status now has [33 recorded native runs](evidence/sprint-status-skill-2026-11-12.json):
+  26 scoped passes and seven retained initial/intermediate failures. All 26 defined
+  scenarios have a selected pass. Same-input corrections restore required report
+  sections/tables and the source's optional Should Have opportunity without adding
+  another assigned action. Original failures, resource versions and date inputs
+  remain explicit; this is not complete desktop or final-archive acceptance.
+- The prior local integration passed build/typecheck/content checks, actual archive
   installation and 242 tests on each of Node 24.22.2 and 26.13.1. The previous
   [Linux Node 26 CI failure](https://github.com/T-X-R/codex-game-studio/actions/runs/43249513547)
   was reproduced locally: recursive directory enumeration followed a directory
   link, and the revision snapshot correctly refused to read through it. The
   [fix and retained failure](evidence/revision-snapshot-node26-2026-11-12.json)
-  use explicit directory traversal without following links. A new cross-platform
-  run is still required; this is not a claim that the failed CI passed.
+  use explicit directory traversal without following links. All five jobs at
+  `10af471c32df8f81eb3dac18b35a8e67fe30f1d7` now pass in
+  [CI](https://github.com/T-X-R/codex-game-studio/actions/runs/43252643697). Its first
+  browser attempt was cancelled before any step or runner assignment; a browser-only
+  rerun passed. That head predates the later TR correction and story-readiness slice.
 - Shared [ADR observations](evidence/adr-status-2026-11-12.json) preserve status,
   date, dependencies and template gaps without accepting decisions. Eleven checks
   include five retained-Bash comparisons; actual pinned script/template routing
