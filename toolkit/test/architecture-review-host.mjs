@@ -35,7 +35,7 @@ for (const [path, content] of Object.entries(scenario.inputs)) {
   await writeFile(join(workspace, path), content);
 }
 const skillRoot = '.agents/skills/game-studio-architecture-review';
-const paths = [`${skillRoot}/SKILL.md`,
+const paths = [`${skillRoot}/SKILL.md`, `${skillRoot}/scripts/review-inputs.mjs`,
   ...['inputs-and-freshness', 'requirements-and-traceability', 'conflicts-and-engine', 'engine-lens', 'report-and-handoff', 'writes-and-records'].map(ref => `${skillRoot}/references/${ref}.md`),
   'studio/scripts/review-receipts.mjs', 'studio/scripts/registry.mjs', 'studio/docs/integration.md', 'studio/docs/recovery.md'];
 const hashes = {}, installedPaths = {};

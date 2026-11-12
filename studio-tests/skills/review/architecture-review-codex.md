@@ -109,6 +109,21 @@ per-gap domain/risk-or-unknown. Preserve its workflow FAIL separately from the
 correct project FAIL. The same raw input must produce the complete existing gap
 contract; do not coach the test request with the expected missing fields.
 
+The initial focused runs `consistency` (c5srr9), `dependency-graph` (bOcJ82)
+and `engine-revision-readonly` (cosmjT) assessed their domain correctly but omitted
+mandatory global receipt inputs or substituted a nonexistent TR registry path.
+The first consistency assessment was corrected after inspecting upstream Phase 1a;
+retain its assessment history. Receipt hashing is global for every non-rtm focus,
+while semantic content reads remain scoped. Preserve these workflow failures and
+revalidate the unchanged owner inputs after the private deterministic input collector.
+The collector uses actual pinned config and shared receipts; it does not decide
+coverage, verdict, module relevance or authorization. Its deterministic tests use
+real config/receipt implementations with a local routing fixture, not a native
+model or archive-installation acceptance substitute.
+The `single-missing-index` run (HLY1Iu) likewise omitted a root engine reference
+from its saved receipt; its missing-index write boundary is a separate successful
+observation. Keep `malformed-adrs` (cHLtm4) module over-read as an independent failure.
+
 ## Full matrix still required
 
 The original five groups and coverage notes remain required, including independent

@@ -78,8 +78,9 @@ no creation of an absent log, no implicit append under report-only authorization
 
 Write the report last. First apply/validate authorized registry and conflict-log
 changes; verify every other reviewed input hash remains current. Reassess any
-unexpected change. Then obtain receipt stamps for the same effective input set
-used in the freshness check and paste those actual lines under the report header.
+unexpected change. Then obtain receipt stamps through the private `scripts/review-inputs.mjs hash`
+collector with the same extra consumed paths used for its freshness check, and
+paste those actual lines under the report header.
 A failed/unresolved stamp stays explicit; do not fabricate hashes or a complete
 receipt. Include correct Mode/Workflow, actual scope and verdict. Verify saved
 artifacts and semantic field/row preservation, not just successful tool exit.
