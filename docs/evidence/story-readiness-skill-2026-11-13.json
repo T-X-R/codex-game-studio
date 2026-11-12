@@ -1,7 +1,7 @@
 {
   "date": "2026-11-13",
   "status": "partial",
-  "scope": "Initial S060 source migration and two selected CLI scenarios; no full Skill/desktop acceptance.",
+  "scope": "S060 source migration and four selected CLI scenarios; three scoped passes and one full-role case with exact encrypted dispatch field coverage still unassessed. No full Skill/desktop acceptance.",
   "definedScenarios": 39,
   "cases": [
     {
@@ -208,7 +208,7 @@
           "command": [
             "/bin/zsh",
             "-lc",
-            "cat '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-LX6vNp/Lantern readiness \u6d4b\u8bd5/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md'"
+            "cat '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-LX6vNp/Lantern readiness 测试/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md'"
           ],
           "exitCode": 0
         },
@@ -217,7 +217,7 @@
           "command": [
             "/bin/zsh",
             "-lc",
-            "'/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node' '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-LX6vNp/Lantern readiness \u6d4b\u8bd5/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/adr-status.mjs' --project ."
+            "'/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node' '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-LX6vNp/Lantern readiness 测试/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/adr-status.mjs' --project ."
           ],
           "exitCode": 0
         },
@@ -226,7 +226,7 @@
           "command": [
             "/bin/zsh",
             "-lc",
-            "'/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node' '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-LX6vNp/Lantern readiness \u6d4b\u8bd5/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/story-facts.mjs' --project . --lint --granularity coarse 'production/epics/core/story-001-light pickup.md'"
+            "'/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node' '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-LX6vNp/Lantern readiness 测试/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/story-facts.mjs' --project . --lint --granularity coarse 'production/epics/core/story-001-light pickup.md'"
           ],
           "exitCode": 0
         },
@@ -235,7 +235,7 @@
           "command": [
             "/bin/zsh",
             "-lc",
-            "'/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node' '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-LX6vNp/Lantern readiness \u6d4b\u8bd5/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/registry.mjs' --project . list tr"
+            "'/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node' '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-LX6vNp/Lantern readiness 测试/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/registry.mjs' --project . list tr"
           ],
           "exitCode": 0
         },
@@ -664,6 +664,464 @@
         "Only one full happy-path gate observed; adverse/unknown/override/role-absence/desktop and remaining scenarios pending."
       ],
       "rootReconciliation": "Original raw evidence and full current regular-file inventory independently rehashed; final report read. Native command/role details attributed to author trace audit; exact encrypted dispatch fields remain unassessed."
+    },
+    {
+      "case": "source-06-qa-minimal-types",
+      "status": "PASS",
+      "scope": "Selected native CLI scenario only; broader source/host matrix remains pending.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-NSihhM",
+      "threadId": "01a1d09c-d840-77f0-874d-e638e7b3881c",
+      "hostExitCode": 3,
+      "nativeExitCode": 0,
+      "artifactSha256": {
+        "events.jsonl": "d3803d0483c7329b4ae92f9b1dcab291e28cf6cbddfb3409b439368ff76dab76",
+        "final.txt": "e8960c9c6bd4a31746a8055fba3db574c379232b708390da1abe4124dabf734c",
+        "before.json": "ed6160e98ea83aa970a55c3d6a9bf3d2a899258bfe5d44aad98e3d74f69237d6",
+        "after.json": "ed6160e98ea83aa970a55c3d6a9bf3d2a899258bfe5d44aad98e3d74f69237d6",
+        "fixture.json": "f6d6fd39b45beca0e36b3331b7f074e58a1db89bea684ad3e4cce6538187795c",
+        "inputs.json": "e815efb72b3ff37392f693e0d778c9bde13df94b64503d783c8899ade5b678f8",
+        "report.json": "bfc3f03e4ee379bc7be58307a5d13b270c476e1ff4923222ce812894e088b2f7"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "0ec8e9d032d42e5f8a0c956bffd92222dcf7aff1553f2d0f8c558d45bdca755e",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "a3c96f0dde52538b158b20ccf183090971beb349c72e63fb61c761ff89be79d3",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "wholeFilesRehashed": 556,
+      "manualFindings": [
+        "All five distinct type stories and source rules read in full; actual standard/coarse/minimal/solo and per-system policy.",
+        "Logic/Integration/Config Data READY with no missing-test file/folder/runner gap or footer; UI and Visual/Feel NEEDS WORK solely for applicable planned screenshots/evidence.",
+        "Missing registry and manifest distinguished and noted once as waived; no_tr_id lint not promoted to requirement.",
+        "Six exact groups and 19/20 for both deficient stories; concrete type-specific planned evidence fixes, no demand to execute tests or capture screenshots now.",
+        "19 commands, expected missing-manifest rg exit2 handled honestly; no native children/gate definition reads/mutation/execution."
+      ],
+      "commandCount": 19,
+      "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-35-02-01a1d09c-d840-77f0-874d-e638e7b3881c.jsonl",
+      "rawSessionSha256": "95a614f1ca308f5acc303bf9565b87375f7916efd688fdede93e148a2886f3de",
+      "candidateSha256": "47c736026984ef15ac086b4196f07b691bbbcfdfc68c1d59ec40d9cda999ff52",
+      "commands": [
+        {
+          "ordinal": 15,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "pwd"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 16,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "cat .agents/skills/game-studio-story-readiness/SKILL.md .agents/skills/game-studio-story-readiness/references/facts-and-policy.md .agents/skills/game-studio-story-readiness/references/checklist.md"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 20,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "rg --files -g AGENTS.md -g 'story-*.md' -g '*registry*' -g '*manifest*' -g '*config*' -g '*brief*' -g '*.yaml' -g '*.md' production design docs .game-studio .agents/skills/game-studio-story-readiness"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 22,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get review_gate --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 23,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get gate_level --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 24,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 25,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs resource path studio/scripts/adr-status.mjs --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 26,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs resource path studio/docs/integration.md --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 27,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs resource path studio/scripts/story-facts.mjs --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 28,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs resource path studio/scripts/registry.mjs --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 32,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "cat production/epics/core/story-001-Logic.md production/epics/core/story-002-Integration.md production/epics/core/story-003-Config-Data.md production/epics/core/story-004-UI.md production/epics/core/story-005-Visual-Feel.md design/gdd/light.md"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 33,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "rg -n '^.*Manifest Version.*$' docs/architecture/control-manifest.md"
+          ],
+          "exitCode": 2
+        },
+        {
+          "ordinal": 34,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "rg --files --hidden -g AGENTS.md -g '!node_modules' -g '!.git' ."
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 35,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "cat '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-NSihhM/Lantern readiness 测试/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md'"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 37,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-NSihhM/Lantern readiness 测试/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/adr-status.mjs' --project ."
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 38,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-NSihhM/Lantern readiness 测试/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/registry.mjs' --project . list tr"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 39,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-NSihhM/Lantern readiness 测试/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/story-facts.mjs' --project . --lint --granularity coarse --all"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 47,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "cat AGENTS.md"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 49,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --system light --json"
+          ],
+          "exitCode": 0
+        }
+      ],
+      "rootReview": "Rehashed every recorded regular file and artifact/session, verified before equals after, read actual final and command inventory against source contract. No blocking finding; selected scenario only."
+    },
+    {
+      "case": "source-09-retired-trs",
+      "status": "PASS",
+      "scope": "Selected native CLI scenario only; broader source/host matrix remains pending.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-LWlBfe",
+      "threadId": "01a1d09c-d840-7862-84b3-b5e1f5cc3dd2",
+      "hostExitCode": 3,
+      "nativeExitCode": 0,
+      "artifactSha256": {
+        "events.jsonl": "eb20886ac49eeb74bd9b124281030459cf0823608e1562e1c983b066b5a16953",
+        "final.txt": "be353d345adbad0098fd60bd93bbba0983e76391fa18a500743ac2fa1972b8c3",
+        "before.json": "5d4f8228a7f2f1a1cc5ffd9cdfbd8479eed22fc69327496b025c27fcf10579fb",
+        "after.json": "5d4f8228a7f2f1a1cc5ffd9cdfbd8479eed22fc69327496b025c27fcf10579fb",
+        "fixture.json": "872efe048fe4a8e30093a777ad98f79d239161360b28b758789020ab2c6323f7",
+        "inputs.json": "3525b50597c5943d3cc65bc45d8e3ae50eba70b304ae33d2a8615df169c7e68d",
+        "report.json": "69d43030fa9a6fe93a39a42c3fba007598b9609c6fd0aea6fd86f7af9e9504ee"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "0ec8e9d032d42e5f8a0c956bffd92222dcf7aff1553f2d0f8c558d45bdca755e",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "a3c96f0dde52538b158b20ccf183090971beb349c72e63fb61c761ff89be79d3",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "wholeFilesRehashed": 557,
+      "manualFindings": [
+        "Four stories and GDD read in full; exact full/coarse/minimal/solo policy, explicit light override resolution.",
+        "One ADR table and registry list; actual registry returns read state, 4 entries, including both quoted and unquoted superseded-by values.",
+        "Aggregate 1 READY and 3 NEEDS WORK, no BLOCKED; retired TR gaps only, six exact groups and 19/20 on each deficient story.",
+        "Fixes retain real successor IDs but do not claim missing successor rows active; deprecated story is directed to matching active GDD ID.",
+        "Only manifest version read; 19 commands, no native children, no gate definitions, no mutation or execution."
+      ],
+      "commandCount": 19,
+      "rawSession": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-35-02-01a1d09c-d840-7862-84b3-b5e1f5cc3dd2.jsonl",
+      "rawSessionSha256": "f1691581148644b8d55a5445c01c8d821a90a24226df74843733a181f94febd2",
+      "candidateSha256": "0c9e8f1b5167df51d4a319b93e378f2f105449ec312fd934838d555c99ca8faa",
+      "commands": [
+        {
+          "ordinal": 14,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "pwd"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 15,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "cat .agents/skills/game-studio-story-readiness/SKILL.md .agents/skills/game-studio-story-readiness/references/facts-and-policy.md .agents/skills/game-studio-story-readiness/references/checklist.md"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 21,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "rg --files -g AGENTS.md -g '*.yaml' -g '*.yml' -g 'story-*.md' -g '*registry*' -g '*config*' -g 'game-brief.md' -g '*.md' production design docs .game-studio .agents 2>/dev/null"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 22,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs resource path studio/scripts/registry.mjs --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 23,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 24,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs resource path studio/scripts/story-facts.mjs --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 25,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs resource path studio/scripts/adr-status.mjs --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 26,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get gate_level --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 27,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get review_gate --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 31,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "rg --files --hidden -g AGENTS.md -g '!node_modules' -g '!.git'"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 32,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "cat production/epics/core/story-*.md design/gdd/light.md"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 33,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "rg -n '^.*Manifest Version.*$' docs/architecture/control-manifest.md"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 34,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-LWlBfe/Lantern readiness 测试/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/adr-status.mjs' --project ."
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 35,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-LWlBfe/Lantern readiness 测试/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/story-facts.mjs' --project . --lint --granularity coarse --all"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 36,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node '/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-LWlBfe/Lantern readiness 测试/.game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/registry.mjs' --project . list tr"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 45,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "cat AGENTS.md"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 47,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs resource path studio/docs/integration.md --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 48,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --system light --json"
+          ],
+          "exitCode": 0
+        },
+        {
+          "ordinal": 52,
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "cat '.game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md'"
+          ],
+          "exitCode": 0
+        }
+      ],
+      "rootReview": "Rehashed every recorded regular file and artifact/session, verified before equals after, read actual final and command inventory against source contract. No blocking finding; selected scenario only."
     }
   ],
   "infrastructure": {
@@ -701,9 +1159,9 @@
     },
     "installedArchive": "PASS"
   },
-  "remainingAcceptance": "37 defined scenarios unexecuted; full exact dispatch payload, real follow-up choices, broader source matrix and desktop remain open.",
+  "remainingAcceptance": "35 defined scenario outcomes not yet accepted in this record; full exact dispatch payload, real follow-up choices, broader source matrix and desktop remain open.",
   "limits": [
-    "Read-only sandbox and no writes were observed for these two runs; no implementation/test/game/play acceptance follows from READY.",
+    "Read-only sandbox and unchanged files were observed for all four recorded runs; no implementation/test/game/play acceptance follows from READY.",
     "Full real typed QA reviewer, ordering, inherited settings, file reads and ADEQUATE are observed; plaintext field completeness of the encrypted dispatch is not proven. No decryption attempted.",
     "Infrastructure failures occurred before native execution and are separate from behavior outcomes."
   ]

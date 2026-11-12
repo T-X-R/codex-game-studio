@@ -43,7 +43,7 @@ try {
   assert.equal(command(globalCli, 'version').status, 'ok');
   const project = join(temp, '我的 game');
   assert.equal(command(globalCli, 'init', project, '--engine', 'web').status, 'ok');
-  const roles = ['qa-tester', 'qa-lead', 'game-designer', 'lead-programmer', 'gameplay-programmer', 'systems-designer'].map(role => `.codex/agents/game-studio-${role}.toml`);
+  const roles = ['qa-tester', 'qa-lead', 'game-designer', 'lead-programmer', 'gameplay-programmer', 'systems-designer', 'ui-programmer'].map(role => `.codex/agents/game-studio-${role}.toml`);
   for (const role of roles) {
     assert.equal(await readFile(join(project, role), 'utf8'),
       await readFile(join(packageRoot, '..', role), 'utf8'));
@@ -75,7 +75,7 @@ try {
     const id = `.agents/skills/game-studio-map-systems/${path}`;
     assert.equal(await readFile(join(project, id), 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
-  for (const skill of ['design-system', 'design-review', 'architecture-decision', 'create-architecture', 'architecture-review', 'next-step', 'sprint-status']) {
+  for (const skill of ['design-system', 'design-review', 'architecture-decision', 'create-architecture', 'architecture-review', 'next-step', 'sprint-status', 'story-done']) {
     const path = `.agents/skills/game-studio-${skill}`;
     const source = join(packageRoot, '..', path);
     const expected = [];
@@ -206,6 +206,19 @@ try {
   await writeFile(join(storyProject, 'production/sprint-status.yaml'), 'stories: [{file: production/epics/one/story-02.md, status: review}]\n');
   const sprintFacts = JSON.parse(execute(factsHelper, ['--project', storyProject, '--sprint']));
   assert.equal(sprintFacts.stories.length, 1); assert.equal(sprintFacts.stories[0].sprintStatus, 'review');
+  const sectionHelper = JSON.parse(execute(launcher, ['resource', 'path', 'studio/scripts/md-section.mjs', '--json'], project)).data.path;
+  assert.ok(sectionHelper.startsWith(join(project, '.game-studio/node_modules')));
+  assert.deepEqual(await readFile(sectionHelper), await readFile(join(packageRoot, '../studio/scripts/md-section.mjs')));
+  const sectionText = '# Root\r\n## Rules\r\nfirst\r\n### Detail\r\nsecond\r\n## End\r\nlast';
+  await writeFile(join(storyProject, 'sections.md'), sectionText);
+  const section = JSON.parse(execute(sectionHelper, ['--project', storyProject, 'extract', 'sections.md', 'Rules', '--body']));
+  assert.equal(section.qualityAssessed, false); assert.equal(section.content, 'first\n### Detail\nsecond\n');
+  assert.equal(execute(sectionHelper, ['--project', storyProject, 'extract', 'sections.md', 'Rules', '--body', '--text']), section.content);
+  const missingSection = JSON.parse(execute(sectionHelper, ['--project', storyProject, 'status', 'sections.md', 'Missing']));
+  assert.equal(missingSection.counts.not_found, 1);
+  assert.throws(() => execute(sectionHelper, ['--project', storyProject, 'extract', 'sections.md', 'Missing']), error => error.status === 3);
+  assert.throws(() => execute(sectionHelper, ['--project', storyProject, 'replace', 'sections.md', 'Rules']), error => error.status === 2);
+  assert.equal(await readFile(join(storyProject, 'sections.md'), 'utf8'), sectionText);
   const adrHelper = JSON.parse(execute(launcher, ['resource', 'path', 'studio/scripts/adr-status.mjs', '--json'], project)).data.path;
   assert.ok(adrHelper.startsWith(join(project, '.game-studio/node_modules')));
   assert.deepEqual(await readFile(adrHelper), await readFile(join(packageRoot, '../studio/scripts/adr-status.mjs')));

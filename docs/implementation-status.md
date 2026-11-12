@@ -6,13 +6,25 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Story completion and UI Programmer now have [reviewed Codex content](evidence/story-close-ui-integration-2026-11-13.json),
+  with all eight story phases, three conditional references and the role's full
+  UI responsibilities. Independent source review, build/typecheck/content checks,
+  287 tests on each of Node 24 and 26, and installed archive checks pass locally.
+  Their native behavioral matrices remain open. The catalog now has sixteen
+  partial Skills and eleven partial roles; none is fully verified.
+- The [read-only Markdown section helper](evidence/md-section-2026-11-13.json)
+  ports list/status/extract with 44 checks and 228 real Bash comparisons, including
+  documented source parser quirks. Actual installed-resource extraction and
+  unchanged input bytes are verified. Writing commands remain unimplemented;
+  content observations do not establish document quality or workflow acceptance.
 - Story readiness now has its six-phase Codex implementation, all six checklist
-  groups, 39 raw-input fixtures and [two initial native runs](evidence/story-readiness-skill-2026-11-13.json).
-  Solo selection passes. Full actually invokes QA Lead, which independently reads
+  groups, 39 raw-input fixtures and [four native runs](evidence/story-readiness-skill-2026-11-13.json).
+  Selection, QA-minimal type distinctions and retired TR references pass their
+  selected scenarios with independently rehashed unchanged workspaces. Full actually invokes QA Lead, which independently reads
   the story and returns ADEQUATE with inherited settings, but exact encrypted
   dispatch-message field completeness remains NOT ASSESSED. Two startup failures
-  occurred before native execution and are recorded separately. The catalog has
-  fifteen partial Skills and ten partial roles; none is fully verified.
+  occurred before native execution and are recorded separately. Thirty-five
+  defined scenario outcomes remain unaccepted in this evidence record.
 - A [TR compatibility regression](evidence/registry-tr-compatibility-2026-11-13.json)
   reproduced an upstream-supported unquoted successor status being rejected as
   malformed YAML. The scoped in-memory correction preserves original bytes and
