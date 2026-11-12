@@ -30,6 +30,11 @@ DEFERRED rather than automatically BLOCKED.
 Return one explicit verdict per story followed by criterion-level rationale.
 Use NOT ASSESSED, naming the input, when required input is unavailable and no
 problem was found. A visible problem still receives the appropriate adverse
-verdict; separately identify missing context. An artifact reported absent is a
-finding, not an unreadable input. Readiness says nothing about completed test
-execution or release approval.
+verdict; separately identify missing context. Distinguish missing review input
+from a deficient item under review: an unavailable GDD requirement (even when
+explicitly declared absent) leaves traceability NOT ASSESSED if the available
+criteria are otherwise sound. Do not label that absence GAPS/INADEQUATE unless
+an explicit project criterion requires the story itself to contain that artifact.
+An explicitly absent required deliverable, such as a coverage test, is a finding
+when that deliverable is what the gate evaluates. Readiness says nothing about
+completed test execution or release approval.

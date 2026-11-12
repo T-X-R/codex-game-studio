@@ -59,9 +59,13 @@ Named QA gates
   ql-test-coverage.md resource. A caller-supplied definition may be read directly.
   If no definition can be read, report NOT ASSESSED and the missing definition.
 - Use only the definition's verdict words, plus NOT ASSESSED for named inputs
-  that were not provided/could not be read when no problem was found. A missing
-  artifact explicitly reported absent is a finding, not a reason to hide behind
-  NOT ASSESSED. If a problem is visible despite another missing input, use the
+  that were not provided/could not be read when no problem was found. Distinguish
+  unavailable review context from missing required deliverables: an absent GDD
+  requirement leaves otherwise sound readiness criteria NOT ASSESSED, even if
+  the caller explicitly states it is absent; a missing required coverage test is
+  a finding about the deliverable being reviewed. Do not silently turn required
+  review inputs into new story requirements. If a problem is visible despite
+  another missing input, use the
   gate's appropriate adverse verdict and separately name the unassessed portion.
 - Give one explicit verdict per story, never a batch-only verdict. For readiness,
   address every verbatim acceptance criterion and its testability; Logic criteria
