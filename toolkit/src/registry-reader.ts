@@ -37,19 +37,20 @@ export async function readRegistry(root: string, registry: RegistryName, path: s
   let counter = new LineCounter();
   let doc = parseDocument(text, { lineCounter: counter, uniqueKeys: true });
   const diagnostic = (code: string, line: number, message: string) => result.diagnostics.push({ code, registry, path, line, message });
-  // The upstream writer emitted this one invalid YAML scalar before 1.2.0.
+  // Retained sources permit these legacy unquoted status scalars.
   // Repair only a parser-reported error line in memory, never matching block text.
-  if (registry === 'architecture' && doc.errors.length) {
+  const legacyPrefix = registry === 'architecture' ? 'superseded_by: ' : registry === 'tr' ? 'superseded-by: ' : null;
+  if (legacyPrefix && doc.errors.length) {
     const repairs = new Map<number, string>();
     for (const error of doc.errors) {
       const line = counter.linePos(error.pos[0]).line;
-      const match = lines[line - 1]?.match(/^( {2}| {4})status: (superseded_by: [^#\r\n]+?)(\s+#.*)?$/);
-      if (match && !match[2]!.slice('superseded_by: '.length).includes(':')) repairs.set(line, `${match[1]}status: ${JSON.stringify(match[2]!.trim())}${match[3] ?? ''}`);
+      const match = lines[line - 1]?.match(/^( {2}| {4})status: (superseded[_-]by: [^#\r\n]+?)(\s+#.*)?$/);
+      if (match && match[2]!.startsWith(legacyPrefix) && !match[2]!.slice(legacyPrefix.length).includes(':')) repairs.set(line, `${match[1]}status: ${JSON.stringify(match[2]!.trim())}${match[3] ?? ''}`);
     }
     if (repairs.size) {
       text = lines.map((line, index) => repairs.get(index + 1) ?? line).join('\n');
       counter = new LineCounter(); doc = parseDocument(text, { lineCounter: counter, uniqueKeys: true });
-      for (const line of repairs.keys()) diagnostic('UNQUOTED', line, 'Quote the legacy superseded_by status; input bytes were not changed.');
+      for (const line of repairs.keys()) diagnostic('UNQUOTED', line, `Quote the legacy ${legacyPrefix.trim()} status; input bytes were not changed.`);
     }
   }
   for (const error of [...doc.errors, ...doc.warnings]) diagnostic('LAYOUT', counter.linePos(error.pos[0]).line, error.message);

@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-13",
+  "status": "scoped-pass",
+  "scope": "Read-only compatibility with the retained TR superseded-by scalar; no semantic readiness or approval verdict.",
+  "sourceContract": {
+    "path": "studio-tests/skills/readiness/story-readiness.md",
+    "case": 9,
+    "sha256": "6271b06e41f8c2c1a2efe128c1122858fbbf5fb1f08473c8796493be84aafd76"
+  },
+  "initialFailure": {
+    "scope": "Unquoted TR status made the whole registry layout-invalid despite source contract accepting it.",
+    "focusedRegression": {
+      "pass": 5,
+      "fail": 1
+    },
+    "logSha256": "220198d31e4b733369e77c94255c3aff4d00c79dece9aa93afbfbfc0faf6abe0"
+  },
+  "fix": "Recover only parser-reported legacy status lines in memory: superseded_by for architecture and superseded-by for TR; preserve UNQUOTED warnings and original bytes. Other malformed YAML and block text remain untouched.",
+  "validation": {
+    "focusedReaderAndCommands": {
+      "pass": 11,
+      "fail": 0,
+      "skip": 0
+    },
+    "fullSuitePerNode": {
+      "versions": [
+        "24.22.2",
+        "26.13.1"
+      ],
+      "pass": 243,
+      "fail": 0,
+      "skip": 0
+    },
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "installedPackage": "PASS",
+    "independentSourceReview": "Confirmed scoped compatibility, safe error-line repairs, no block-scalar rewriting and no entries exposed when another layout error remains."
+  },
+  "regressionCoverage": [
+    "Both supported list indentation styles",
+    "Quoted/unquoted forms together with active entry",
+    "Block-scalar text and original bytes unchanged",
+    "Unrelated broken syntax still withholds all entries",
+    "Unknown malformed scalar remains layout error",
+    "Actual packaged list tr preserves status and warning"
+  ],
+  "fileHashes": {
+    "toolkit/src/registry-reader.ts": "6dd3e8cfac877dcbd70da32c7277a042d5600e710f67c89ac692638d2f6b6403",
+    "toolkit/test/registry.test.mjs": "e6da3bb04975c679f87d4d6f1aac4b889f2d85a973c9f284c024670d8358c165",
+    "docs/registry-observations.md": "fdbbceabfc48a4594346f93000b811667d0e2e43a83ea850de014ba92fdceb16",
+    "toolkit/test/packed-smoke.mjs": "158de0de25086700956e058828bcd5426b759f76936342812cf728153f105332"
+  },
+  "logHashes": {
+    "game-studio-tr-legacy-green.log": "74d386bf247913d0869aa581c05870eac925b95ef4d944337ec63746d70555a4",
+    "game-studio-readiness-build.log": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28",
+    "game-studio-readiness-typecheck.log": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b",
+    "game-studio-readiness-lint.log": "59b6212da13b7dbe3349261c34198ef85f22699ce44ebfa65a1c88828caa43b6",
+    "game-studio-readiness-tests24.log": "55a23e507c4ab80c0b5122d603f99d23978fed5585e337566504a8799afd0545",
+    "game-studio-readiness-tests26.log": "2ca12db13b59e67054852a0e4bcc24e101bb8043ed06cc2207c9268d59df05ee",
+    "game-studio-readiness-pack.log": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+  },
+  "limits": [
+    "Cross-platform CI at the new change is pending.",
+    "S060 native acceptance is separate; a parsed status is not a ready story."
+  ]
+}

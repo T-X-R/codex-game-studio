@@ -37,8 +37,10 @@ of the source registries. Valid nested YAML is parsed rather than searched with
 regular expressions. YAML errors, duplicate keys, aliases, wrong entry keys or
 unsupported section structures withhold that registry's entries. This is not
 byte-for-byte emulation of the old AWK layout lexer. The old unquoted architecture
-`superseded_by` status is recovered only at a parser-reported error line and
-reported as `UNQUOTED`; the file itself stays unchanged.
+`superseded_by` status and TR `superseded-by` status are recovered only in their
+respective registries at a parser-reported error line, with an `UNQUOTED`
+diagnostic. Block text and other malformed YAML are not repaired; original
+input bytes stay unchanged.
 
 Exit 0 means observations were collected. In particular, `validate` and
 `compare` retain exit 0 when they report findings. Consumers must examine

@@ -50,6 +50,25 @@ test('legacy architecture status is observed and warned without rewriting input 
   assert.equal(await readFile(join(root, 'docs/registry/architecture.yaml'), 'utf8'), source);
 });
 
+test('quoted and legacy unquoted TR successors retain all entries without repairing other malformed YAML', async t => {
+  const { root, write } = await fixture(t);
+  for (const indent of ['', '  ']) {
+    const source = `requirements:\n${indent}- id: TR-light-001\n${indent}  status: active\n${indent}- id: TR-light-005\n${indent}  status: "superseded-by: TR-light-009"\n${indent}- id: TR-light-006\n${indent}  status: superseded-by: TR-light-010 # legacy\n${indent}  notes: |\n${indent}    status: superseded-by: TR-example-999\n`;
+    await write('docs/architecture/tr-registry.yaml', source);
+    const result = await readRegistry(root, 'tr');
+    assert.equal(result.state, 'read');
+    assert.deepEqual(result.entries.map(e => e.fields.status), ['active', 'superseded-by: TR-light-009', 'superseded-by: TR-light-010']);
+    assert.equal(result.entries[2].fields.notes, 'status: superseded-by: TR-example-999\n');
+    assert.deepEqual(result.diagnostics.map(d => [d.code, d.line]), [['UNQUOTED', 7]]);
+    assert.equal(await readFile(join(root, 'docs/architecture/tr-registry.yaml'), 'utf8'), source);
+    await write('docs/architecture/tr-registry.yaml', source + 'broken: [\n');
+    const broken = await readRegistry(root, 'tr');
+    assert.equal(broken.state, 'layout'); assert.deepEqual(broken.entries, []);
+    await write('docs/architecture/tr-registry.yaml', source.replace('superseded-by: TR-light-010', 'another: value'));
+    assert.equal((await readRegistry(root, 'tr')).state, 'layout');
+  }
+});
+
 test('registry refuses unsafe input paths and symlinks instead of treating them as absent', async t => {
   const { root, write } = await fixture(t);
   await assert.rejects(readRegistry(root, 'entities', '../outside.yaml'));
