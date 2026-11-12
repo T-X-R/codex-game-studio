@@ -26,8 +26,11 @@ is missing. Editor execution, licensing and test discovery still need real engin
 evidence before that path can be advertised as verified.
 
 Commands run from the game root using the operating system's shell: `/bin/sh`
-on macOS/Linux and `cmd.exe` on Windows. Use the OS-aware map for shell-specific
-syntax. The command and its scripts retain their normal behavior. A dry run
+on macOS/Linux and a temporary UTF-8 `.cmd` script on Windows. Windows batch
+syntax applies (for example, `%%i` in a `for` loop); use `call` when invoking
+another batch file if subsequent lines must run. The wrapper retains the final
+ERRORLEVEL, including command-not-found 9009, and is removed after execution.
+Use the OS-aware map for shell-specific syntax. A dry run
 resolves the command and output path without starting a process or writing files.
 
 Each real invocation creates a new directory with `report.json`, `stdout.log`

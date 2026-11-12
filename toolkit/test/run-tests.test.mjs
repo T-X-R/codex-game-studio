@@ -106,3 +106,15 @@ test('CLI exit and result status distinguish an unavailable runner from a failin
   assert.equal(JSON.parse(failed.stdout).error.code, 'CHECK_FAILED');
   assert.equal(JSON.parse(failed.stdout).data.processExitCode, 7);
 });
+
+test('quoted Unicode script paths and arguments survive shell execution without hiding exit one', async t => {
+  const root = await fixture(t, '{}');
+  await writeFile(join(root, 'test folder/检查 & check.cjs'), 'console.log(JSON.stringify(process.argv.slice(2))); process.exitCode=1;');
+  const configured = 'node "test folder/检查 & check.cjs" "玩家 & one"';
+  await writeFile(join(root, 'project.yaml'), `commands:\n  test: ${JSON.stringify(configured)}\n`);
+  const result = await runConfiguredTest(root, 'test', 'evidence/unicode');
+  const stdout = await readFile(join(root, 'evidence/unicode/stdout.log'), 'utf8');
+  assert.equal(result.exitCode, 5, JSON.stringify(result));
+  assert.equal(result.processExitCode, 1);
+  assert.deepEqual(JSON.parse(stdout), ['玩家 & one']);
+});

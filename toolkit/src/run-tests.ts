@@ -4,6 +4,22 @@ import { readText, safePath } from './files.js';
 import { exists } from './project.js';
 import { runProcess } from './process.js';
 import { writeNewDirectory } from './prototype.js';
+import { mkdtemp, writeFile, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+
+async function executeCommand(command: string, cwd: string, timeoutMs: number) {
+  if (process.platform !== 'win32') return runProcess('/bin/sh', ['-c', command], { cwd, timeoutMs });
+  const directory = await mkdtemp(join(tmpdir(), 'game-studio-command-'));
+  try {
+    const script = join(directory, 'run.cmd');
+    // A batch context retains ERRORLEVEL (including command-not-found 9009).
+    // Direct cmd /c collapses some shell errors to 1. UTF-8 supports game paths.
+    await writeFile(script, `@chcp 65001 >nul\r\n@echo off\r\n${command}\r\nexit /b\r\n`, { flag: 'wx' });
+    return await runProcess(process.env.ComSpec ?? 'cmd.exe', ['/d', '/s', '/c', `""${script}""`],
+      { cwd, timeoutMs, windowsVerbatimArguments: true });
+  } finally { await rm(directory, { recursive: true, force: true }); }
+}
 
 const operations = new Set(['test', 'smoke', 'build']);
 export async function resolveCommand(root: string, kind: string, platform: NodeJS.Platform = process.platform) {
@@ -58,10 +74,7 @@ export async function runConfiguredTest(project: string, kind: string, output: s
   let execution = { exitCode: 3, stdout: '', stderr: '' };
   let reason = selected.reason;
   if (selected.command !== null) {
-    const executable = process.platform === 'win32' ? process.env.ComSpec ?? 'cmd.exe' : '/bin/sh';
-    // Match Node's cmd.exe shell serialization; C-runtime escaping breaks quoted paths.
-    const args = process.platform === 'win32' ? ['/d', '/s', '/c', `"${selected.command}"`] : ['-c', selected.command];
-    try { execution = await runProcess(executable, args, { cwd: project, timeoutMs, windowsVerbatimArguments: process.platform === 'win32' }); }
+    try { execution = await executeCommand(selected.command, project, timeoutMs); }
     catch (error) {
       if (!(error instanceof StudioError) || error.code !== 'DEPENDENCY_MISSING') throw error;
       reason = error.message;
