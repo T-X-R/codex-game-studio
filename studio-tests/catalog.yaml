@@ -415,6 +415,7 @@ skills:
     category: utility
     target: .agents/skills/game-studio-next-step/SKILL.md
     migration_state: partial
+    codex_spec: studio-tests/skills/utility/next-step-codex.md
 
   - name: brainstorm
     spec: studio-tests/skills/utility/brainstorm.md
