@@ -121,6 +121,27 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   the parent only delegated and aggregated. All temporary trust profiles were removed.
   These synthetic assessments do not prove actual game execution or release
   acceptance. A027, desktop, nested collaboration and the final validator remain open.
+- Game Designer now has a canonical role and installed professional-methods
+  reference. Four native CLI cases cover full/standard/minimal document authoring
+  and read-only review. The actual role reads effective policy, preserves approved
+  numbers and movement ownership, flags a capacity/reset contradiction for the
+  owner, and keeps human criteria/proposed thresholds separate from acceptance.
+  Review uses all supplied pillars, identifies hazard-rule gaps and routes formula
+  detail and final lore without writing implementation or narrative. Each fixture
+  preserves its original regular files and permits only the specified artifact.
+  See [designer evidence](evidence/game-designer-2026-11-12.json). Existing-brief
+  updates, initial design choices, broader domain/host coverage and final validation
+  remain open; written design is not proof of a playable or accepted game.
+- Lead Programmer now has a canonical role and installed LP code-review/feasibility
+  gates. Two native cases distinguish sound code, a formula defect, omitted versus
+  nonexistent GDD and estimate-based performance blockers. The actual role cites
+  source/requirements, does not transfer clean-test results to the faulty candidate,
+  and returns creative cost decisions separately from architecture approval.
+  Three actual Node fixture tests and an independent runtime counterexample are
+  maintainer evidence, not native agent execution. A preparation-only TAP/spec
+  reporter mismatch was fixed before the successful native review. See
+  [programmer evidence](evidence/lead-programmer-2026-11-12.json). No benchmark,
+  engine API acceptance, real feature hand-off or full T19 completion is claimed.
 
 ## Verification performed
 
@@ -239,7 +260,7 @@ The full acceptance contract remains in `tasks/todo.md`. In particular:
 The implementation order was adjusted to exercise deterministic installation and
 Web operations while host compatibility remains open. This does not waive C0–C5
 or make the final migration complete. The published alpha does not install roles
-or hooks. Development packages now install two QA roles; the verified CLI audits
+or hooks. Development packages now install four roles; their verified CLI scenarios
 do not establish desktop support. No production Hooks are installed.
 
 Detach retains game configuration, runtime archives/dependencies/lock and backups.

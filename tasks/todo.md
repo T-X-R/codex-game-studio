@@ -15,7 +15,7 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
-The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Five project Skill entry points and two QA roles exist, but their full behavioral migration rows remain open.
+The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Five project Skill entry points and four roles (Game Designer, Lead Programmer and two QA roles) exist, but their full behavioral migration rows remain open.
 
 2026-11-12: configuration reads now cover named-system workflow overrides and
 legacy engine preferences (`8bf457f`). `config set` adds validated project/local
@@ -371,14 +371,14 @@ Each A-row is an individual task owned by `codex-integration`.
 - [ ] A008 Migrate `devops-engineer` to `game-studio-devops-engineer`. Evidence: pending.
 - [ ] A009 Migrate `economy-designer` to `game-studio-economy-designer`. Evidence: pending.
 - [ ] A010 Migrate `engine-programmer` to `game-studio-engine-programmer`. Evidence: pending.
-- [ ] A011 Migrate `game-designer` to `game-studio-game-designer`. Evidence: pending.
+- [ ] A011 Migrate `game-designer` to `game-studio-game-designer`. Partial: canonical role/methods resource and packed install/detach pass. Four native CLI cases exercise full/standard/minimal authoring and read-only specialist review. The role preserves approved rules, writes only the requested tier's document, flags the capacity/reset conflict without silently changing it, returns pillar tensions and formula/lore ownership, and claims no play acceptance. All 325 existing regular files in each initial fixture and 329 in the later minimal fixture remain unchanged; no checkpoint side writes. See [behavior spec](../studio-tests/roles/game-designer-codex.md) and [evidence](../docs/evidence/game-designer-2026-11-12.json). Existing-brief edits, open initial choices, economy/progression depth, real specialist collaboration, desktop and final validator remain open.
 - [ ] A012 Migrate `gameplay-programmer` to `game-studio-gameplay-programmer`. Evidence: pending.
 - [ ] A013 Migrate `godot-csharp-specialist` to `game-studio-godot-csharp-specialist`. Evidence: pending.
 - [ ] A014 Migrate `godot-gdextension-specialist` to `game-studio-godot-gdextension-specialist`. Evidence: pending.
 - [ ] A015 Migrate `godot-gdscript-specialist` to `game-studio-godot-gdscript-specialist`. Evidence: pending.
 - [ ] A016 Migrate `godot-shader-specialist` to `game-studio-godot-shader-specialist`. Evidence: pending.
 - [ ] A017 Migrate `godot-specialist` to `game-studio-godot-specialist`. Evidence: pending.
-- [ ] A018 Migrate `lead-programmer` to `game-studio-lead-programmer`. Evidence: pending.
+- [ ] A018 Migrate `lead-programmer` to `game-studio-lead-programmer`. Partial: canonical role and two LP gates pass metadata/packed checks. Native code review returns APPROVE for sound combat, REJECT for armor addition, NOT ASSESSED for omitted GDD and CONCERNS for explicitly nonexistent GDD. Three real maintainer Node tests and an independent faulty-candidate run support the observations without being attributed to the native agent. A read-only feasibility task quantifies budgets/estimates, proposes unapproved alternatives and preserves creative versus technical ownership. Review preserves 338 original regular files and adds only its report; feasibility preserves 328 and adds none. A preparation reporter mismatch was corrected before native execution. See [behavior spec](../studio-tests/roles/lead-programmer-codex.md) and [evidence](../docs/evidence/lead-programmer-2026-11-12.json). Architecture/refactoring writes, real specialist implementation hand-off, engine API validation, desktop and final validator remain open.
 - [ ] A019 Migrate `level-designer` to `game-studio-level-designer`. Evidence: pending.
 - [ ] A020 Migrate `live-ops-designer` to `game-studio-live-ops-designer`. Evidence: pending.
 - [ ] A021 Migrate `localization-lead` to `game-studio-localization-lead`. Evidence: pending.

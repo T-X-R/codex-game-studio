@@ -2,6 +2,30 @@
 
 Status: CLI custom role selection and a startup/patch Hook fixture verified with controls; full host compatibility gate is open.
 
+## Packaged design and programming roles — 2026-11-12
+
+Codex CLI 0.162.0 on macOS ARM64 selected the packaged
+`game-studio-game-designer` in four fresh projects: full, standard and minimal
+authoring plus response-only review. It read installed methods and effective
+workflow, wrote the appropriate artifact, preserved approved decisions and
+returned a conflicting future tuning rule without silently changing it. Review
+retained creative, formula and narrative ownership. See [designer evidence](evidence/game-designer-2026-11-12.json).
+
+The packaged `game-studio-lead-programmer` ran two native tasks: code review with
+sound/faulty/missing-context controls, and read-only quantitative feasibility.
+Original Node tests and an independent defect execution are identified as
+maintainer evidence; feasibility numbers remain estimates, not measured results.
+Its first preparation attempt failed on the Node reporter format before native
+execution; explicit TAP output corrected that fixture issue. See
+[programmer evidence](evidence/lead-programmer-2026-11-12.json).
+
+All six native sessions selected the actual role, loaded full instructions only
+in the child, inherited parent model/effort/sandbox, preserved original regular
+files and stayed within their permitted outputs. Parent sessions only delegated
+and aggregated. Temporary project-trust profiles were removed; no Hook trust was
+configured. These tests do not prove desktop discovery, intentional write denial,
+nested specialist collaboration, engine performance or human play acceptance.
+
 ## Packaged QA Lead — 2026-11-12
 
 The development package also supplies `game-studio-qa-lead` and two portable QL
