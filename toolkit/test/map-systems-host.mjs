@@ -39,10 +39,11 @@ for (const [path, content] of Object.entries(scenario.inputs)) {
 const hashes = {};
 const skillRoot = '.agents/skills/game-studio-map-systems';
 const paths = [`${skillRoot}/SKILL.md`, `${skillRoot}/references/reviews.md`, `${skillRoot}/references/index-and-handoff.md`,
+  ...['technical-director', 'producer', 'creative-director'].map(role => `.codex/agents/game-studio-${role}.toml`),
   'studio/templates/systems-index.md', 'studio/docs/integration.md', 'studio/docs/recovery.md',
   ...['td-system-boundary', 'pr-scope', 'cd-systems'].map(gate => `studio/docs/director-gates/${gate}.md`)];
 for (const path of paths) {
-  const installedPath = path.startsWith('.agents/') ? join(workspace, path)
+  const installedPath = path.startsWith('.agents/') || path.startsWith('.codex/') ? join(workspace, path)
     : JSON.parse(run(join(workspace, '.game-studio/run.cjs'), ['resource', 'path', path, '--json'])).data.path;
   const installed = await readFile(installedPath);
   assert.deepEqual(installed, await readFile(join(sourceRoot, path)), path);
@@ -120,6 +121,14 @@ try {
   console.log(JSON.stringify({ directory, ...report }));
   assert.deepEqual(changed.filter(path => !(scenario.allowedChanges ?? []).includes(path)), []); assert.deepEqual(outsideScope, []);
   for (const path of scenario.expectedFiles) assert.ok(added.includes(path), `Missing artifact: ${path}`);
+  if (scenario.saveCheckpoint) {
+    const launcher = join(workspace, '.game-studio/run.cjs');
+    const observed = JSON.parse(run(launcher, ['checkpoint', 'show', '--project', workspace, '--json'])).data;
+    const stage = JSON.parse(run(launcher, ['config', 'get', 'project.stage', '--project', workspace, '--json'])).data.settings['project.stage'].value;
+    await writeFile(join(directory, 'checkpoint-readback.json'), JSON.stringify(observed, null, 2), { mode: 0o600 });
+    if (observed.fields.Branch) assert.equal(observed.fields.Branch.replace(/^`|`$/g, ''), observed.git.branch);
+    if (observed.fields.Stage) assert.equal(observed.fields.Stage.replace(/^`|`$/g, ''), stage);
+  }
   // Success is pending semantic review, not an automatic behavior pass.
   process.exitCode = result.exitCode === 0 ? 3 : result.exitCode;
 } finally { await rm(profilePath); }

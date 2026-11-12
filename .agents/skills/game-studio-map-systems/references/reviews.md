@@ -7,8 +7,10 @@ changes project configuration. In full mode use the named native role with
 inherited model/permissions. An unavailable role is NOT ASSESSED, not a generic
 subagent or coordinator approval. Do not install roles to manufacture a review.
 
-Ask each reviewer to read its own packaged definition through `resource path`;
-the coordinator supplies actual context and aggregates the returned result.
+Ask each reviewer to read the gate definition at the exact `studio/docs/director-gates/`
+path listed below through `resource path`. Native role instructions are loaded
+from `.codex/agents/<role-name>.toml`; they are not a second shared resource.
+The coordinator supplies actual context and aggregates the returned result.
 Delegated reviews are read-only: no shared-index writes, checkpoint saves, scope
 changes, ADR acceptance or publication. Read the selected role's actual result
 before moving to the next dependent phase.
