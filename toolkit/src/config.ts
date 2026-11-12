@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import { parseDocument } from 'yaml';
 import { StudioError } from './contract.js';
 import { exists } from './project.js';
+import { readLegacyPreferences } from './legacy-config.js';
 
 export type Json = null | string | number | boolean | Json[] | { [key: string]: Json };
 type ObjectValue = { [key: string]: Json };
@@ -72,15 +73,18 @@ function flatten(value: ObjectValue, prefix = '', result: ObjectValue = {}): Obj
   return result;
 }
 
-export async function readSettings(root: string, requested?: string[]): Promise<{ settings: Record<string, Setting>; warnings: string[] }> {
+export async function readSettings(root: string, requested?: string[], options: { system?: string } = {}): Promise<{ settings: Record<string, Setting>; warnings: string[] }> {
   for (const key of requested ?? []) {
-    if (!/^[a-zA-Z0-9_]+(?:\.[a-zA-Z0-9_]+)*$/.test(key) || key.split('.').some(part => ['__proto__', 'prototype', 'constructor'].includes(part))) {
+    if (!/^[a-zA-Z0-9_-]+(?:\.[a-zA-Z0-9_-]+)*$/.test(key) || key.split('.').some(part => ['__proto__', 'prototype', 'constructor'].includes(part))) {
       throw new StudioError('INVALID_ARGUMENT', `Invalid configuration key: ${key}`);
     }
   }
-  const project = flatten(await readConfig(join(root, 'project.yaml')));
+  if (options.system !== undefined && !/^[a-zA-Z0-9_-]+$/.test(options.system)) throw new StudioError('INVALID_ARGUMENT', 'System must be a single identifier');
+  const rawProject = await readConfig(join(root, 'project.yaml'));
+  const project = flatten(rawProject);
   const local = flatten(await readConfig(join(root, 'project.local.yaml')));
   const warnings: string[] = [];
+  const preferences = await readLegacyPreferences(root);
   for (const key of Object.keys(local)) {
     if (!localKeys.has(key) && key !== 'schema_version' && !key.startsWith('framework.')) warnings.push(`${key} in project.local.yaml is not locally overridable; ignored`);
   }
@@ -99,13 +103,18 @@ export async function readSettings(root: string, requested?: string[]): Promise<
   const rigor = valid('modes.rigor', project['modes.rigor'], 'project.yaml') ? String(project['modes.rigor']) : 'minimal';
   const derived = Object.fromEntries(rigorKeys.map((key, i) => [key, rigorValues[rigor]![i]!])) as ObjectValue;
   const settings: Record<string, Setting> = {};
-  for (const key of requested ?? new Set([...Object.keys(enums), ...Object.keys(defaults), ...Object.keys(project), ...localKeys])) {
+  for (const key of requested ?? new Set([...Object.keys(enums), ...Object.keys(defaults), ...Object.keys(project), ...Object.keys(preferences.values), ...localKeys])) {
+    const systemKey = options.system ? `workflow_overrides.system_overrides.${options.system}` : undefined;
     const candidates: [Json | undefined, string][] = [
+      [key === 'modes.workflow' && systemKey ? project[systemKey] : undefined, `project.yaml:${systemKey}`],
       [localKeys.has(key) ? local[key] : undefined, 'project.local.yaml'], [project[key], 'project.yaml'],
-      [legacy[key], mirrors[key] ?? 'legacy'], [derived[key], `rigor:${rigor}`], [defaults[key], 'default'],
+      [legacy[key], mirrors[key] ?? 'legacy'],
+      [key.startsWith('specialists.') && Object.hasOwn(rawProject, 'specialists') ? undefined : preferences.values[key], preferences.source],
+      [derived[key], `rigor:${rigor}`], [defaults[key], 'default'],
     ];
     const selected = candidates.find(([value, source]) => valid(key, value, source));
     settings[key] = selected ? { value: selected[0]!, source: selected[1] } : { value: null, source: 'unset' };
+    if (selected?.[1] === '.claude/docs/technical-preferences.md') warnings.push('Using legacy technical preferences; migrate the project-owned record to docs/technical-preferences.md');
   }
   return { settings, warnings: [...new Set(warnings)] };
 }

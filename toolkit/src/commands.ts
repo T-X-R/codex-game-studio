@@ -24,10 +24,11 @@ export const commands: Record<string, Command> = {
   ...gameCommands,
   'config get': {
     description: 'Read effective project settings with provenance', effect: 'read', maxArgs: 1,
-    options: { project: { type: 'string', description: 'Game workspace directory' } },
+    options: { project: { type: 'string', description: 'Game workspace directory' },
+      system: { type: 'string', description: 'Resolve the workflow tier for a named system' } },
     run: async ({ args, values }) => {
       const root = await resolveProject(values.project as string | undefined);
-      const { settings, warnings } = await readSettings(root, args.length ? args : undefined);
+      const { settings, warnings } = await readSettings(root, args.length ? args : undefined, { system: values.system as string | undefined });
       return { ...success('config get', { project: root, settings }), warnings };
     },
   },

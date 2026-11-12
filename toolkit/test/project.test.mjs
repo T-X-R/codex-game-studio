@@ -64,3 +64,38 @@ test('unsafe object keys and duplicate YAML keys are rejected', async t => {
   await writeFile(join(root, 'project.yaml'), 'engine: Web\nengine: Godot\n');
   await assert.rejects(readSettings(root), { code: 'INVALID_CONFIG' });
 });
+
+test('system workflow overrides are scoped and invalid values fall back with provenance', async t => {
+  const root = await fixture(t, { 'project.yaml': 'modes:\n  rigor: standard\nworkflow_overrides:\n  system_overrides:\n    combat-loop: full\n    inventory: typo\n' });
+  assert.deepEqual((await readSettings(root, ['modes.workflow'], { system: 'combat-loop' })).settings['modes.workflow'],
+    { value: 'full', source: 'project.yaml:workflow_overrides.system_overrides.combat-loop' });
+  const invalid = await readSettings(root, ['modes.workflow'], { system: 'inventory' });
+  assert.equal(invalid.settings['modes.workflow'].value, 'standard');
+  assert.ok(invalid.warnings.some(warning => warning.includes('inventory')));
+  assert.equal((await readSettings(root, ['modes.workflow'])).settings['modes.workflow'].value, 'standard');
+  await assert.rejects(readSettings(root, undefined, { system: '../escape' }), { code: 'INVALID_ARGUMENT' });
+});
+
+test('legacy technical preferences fill absent engine fields without overriding project decisions', async t => {
+  const root = await fixture(t, {
+    'project.yaml': 'engine:\n  version: "5.5"\nspecialists:\n  code: null\n',
+    '.claude/docs/technical-preferences.md': '- **Engine**: Unreal Engine 5.4\n- **Language**: C++\n- **Language/Code Specialist**: unreal-cpp-specialist\n',
+  });
+  const { settings, warnings } = await readSettings(root, ['engine.name', 'engine.version', 'engine.language', 'specialists.code']);
+  assert.equal(settings['engine.name'].value, 'Unreal');
+  assert.equal(settings['engine.version'].value, '5.5');
+  assert.equal(settings['engine.language'].value, 'C++');
+  assert.equal(settings['specialists.code'].value, null);
+  assert.ok(warnings.some(warning => warning.includes('legacy')));
+  await mkdir(join(root, 'docs'));
+  await writeFile(join(root, 'docs/technical-preferences.md'), '- **Engine**: Godot 4.7\n- **Language**: GDScript\n');
+  assert.equal((await readSettings(root, ['engine.name'])).settings['engine.name'].value, 'Godot');
+});
+
+test('legacy placeholder preferences stay unset and invalid inherited property keys are rejected', async t => {
+  const root = await fixture(t, { 'project.yaml': '{}', 'docs/technical-preferences.md': '- **Engine**: [TO BE CONFIGURED]\n- **Language**: [TO BE CONFIGURED]\n' });
+  const { settings } = await readSettings(root, ['engine.name', 'engine.language']);
+  assert.equal(settings['engine.name'].value, null);
+  assert.equal(settings['engine.language'].value, null);
+  await assert.rejects(readSettings(root, ['constructor']), { code: 'INVALID_ARGUMENT' });
+});
