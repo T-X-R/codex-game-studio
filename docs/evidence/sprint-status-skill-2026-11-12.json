@@ -14,6 +14,109 @@
   },
   "cases": [
     {
+      "scenario": "source-04-stale",
+      "runId": "game-studio-sprint-status-QGilDK",
+      "status": "PASS",
+      "scopeOfResult": "Same-input source-04 rerun restores table-before-burndown ordering, keeps six-day stale work in Attention Needed, and correctly reports no Must Haves qualifying under the late-window rule. Four rows, 2/4 complete and 5 of 10 days remain correct.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d057-00da-7493-83bd-91d8fa7d6c7b",
+      "parentTraceSha256": "4aa6b76f78d86e83b41e5f8a11186fbfd47a10b58f1c5d2304ca2f3e4f80fd97",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-6F2dVbvBDa1+xfJatTpSoyi8VMC88vGHVKUgxDW+P1oEJ9rB9yiOhv8iyJ0LlA102RUqqMu5wanuCT5NRtbHOg==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 541,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc 'pwd; cat .agents/skills/game-studio-sprint-status/SKILL.md; cat .agents/skills/game-studio-sprint-status/references/sprint.md; /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json; /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "rawHashes": {
+        "fixture.json": "a8d4d43d8308c398cb4b187ebc7429fd0032eadcf41c30d3bb80546fd6be381d",
+        "report.json": "c2b43418409c597aa98c7d13fa38dafa2a95c95318666532b1bdbe9f4a5d5282",
+        "before.json": "9863dbec5ea6585c5e8c541ea29a53e5f8c5cff137a23565e54244f81878297d",
+        "after.json": "9863dbec5ea6585c5e8c541ea29a53e5f8c5cff137a23565e54244f81878297d",
+        "events.jsonl": "891feb088dca19e27ab4365fa4f9954abe054b7d0ab2f957d309c43edc2397a1",
+        "final.txt": "ff47f3e65fbca9b2716c5d687f0c906d9c15f4b0b802dc0ea7bf701a5a8e99d0",
+        "prompt-input.json": "e46d0a618346318ff1602804633bb367e5927cf2131894d254f713f01a635899"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
+      "scenario": "source-02-complete",
+      "runId": "game-studio-sprint-status-Ebzgzw",
+      "status": "PASS",
+      "scopeOfResult": "Source-02 reports all five entries complete, nonempty three-Must-Have completion flag, 100 percent versus 50 percent time and On Track, no timestamp concerns or late-window risk. No action is appropriate because both Should Haves are already complete; this does not cover a remaining Should Have backlog.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d056-f279-7e31-8770-74bdff1b39de",
+      "parentTraceSha256": "872ab95e2fd23fe809e8f8fc62cf92f417961db8f7ca7be1e16a9bf3c280091d",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-6F2dVbvBDa1+xfJatTpSoyi8VMC88vGHVKUgxDW+P1oEJ9rB9yiOhv8iyJ0LlA102RUqqMu5wanuCT5NRtbHOg==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 542,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'",
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json'"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 0,
+      "rawHashes": {
+        "fixture.json": "471e13412f522d52366ea581d90be8b0e85be79d181fc7e6f571c5c5451db747",
+        "report.json": "da9d46bb06b50f765606d03df97dc1e7a73fbabdc4b706a9133c74abbf08720f",
+        "before.json": "8e193781fefd2ccf61d1eacd48cf45d638fecd13a2b433f98bccce33f3bae8ff",
+        "after.json": "8e193781fefd2ccf61d1eacd48cf45d638fecd13a2b433f98bccce33f3bae8ff",
+        "events.jsonl": "dc3a1d784168d042698a00c8414603d509f7c5fa06057a53f82d1d4703083dce",
+        "final.txt": "30231889f6570d932640766756cb8f816eaba6f2d9ef5c8ae8ded7a49a6a58bb",
+        "prompt-input.json": "2593ddeda76da72b061a0fefdd8f293c49b2f17ce8d66a18779973de961b0e55"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
       "scenario": "source-01-mixed",
       "runId": "game-studio-sprint-status-5rp3sd",
       "status": "PASS",
@@ -222,8 +325,8 @@
       "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
     }
   ],
-  "definedScenarios": 25,
-  "remainingMatrix": "Unexecuted rows in toolkit/test/fixtures/sprint-status-cases.mjs remain open; source-01 rerun passed; source-04 output partition/order failure is retained for unchanged-input revalidation.",
+  "definedScenarios": 26,
+  "remainingMatrix": "Unexecuted rows in toolkit/test/fixtures/sprint-status-cases.mjs remain open; Source-01 and source-04 unchanged-input reruns passed; both original output failures remain. Four distinct scenarios have selected passes; the rest remain open.",
   "validation": {
     "build": "PASS",
     "contentLint": "PASS",
@@ -241,5 +344,37 @@
     "Source Phase 5 total-day display was omitted in initial run; the formatting instruction was corrected and original inputs preserved for fresh-session rerun.",
     "Desktop, missing-runtime and project-subdirectory behavior remain open."
   ],
-  "sanitization": "No credentials, local home paths, encrypted prompts or hidden reasoning. Only public runtime policy and raw evidence hashes retained."
+  "sanitization": "No credentials, local home paths, encrypted prompts or hidden reasoning. Only public runtime policy and raw evidence hashes retained.",
+  "sameInputReruns": [
+    {
+      "initialRunId": "game-studio-sprint-status-uV11Fc",
+      "rerunId": "game-studio-sprint-status-5rp3sd",
+      "identicalOwnerInputHashes": {
+        "project.yaml": "947757643a66b2492ec96fc6aa0af97d652bbc50bc69fbff7ac8bdf9aa719b72",
+        "production/sprint-status.yaml": "69edf5d54944e6e573068ab5014d22996da5666e80cacae501d70d20547534c8",
+        "production/sprints/sprint-004.md": "22ae8e3d3913d1b17d5b8c1c638c8bb6992eacbc8a457e2c698f0f144e7d2b37",
+        "production/epics/core/story-001.md": "3daf5d3c0068ed8cd2b34211d55b6114ee25aaca28c7e9a4ea7fb3a10551fda7",
+        "production/epics/core/story-002.md": "6af69df3b3a8885da9a1eac886159915dacdd1b0eea46ef7120263d232dcaa22",
+        "production/epics/core/story-003.md": "1f67897ee1608791272238c2a1947b9b838c5a205c7604e162b76774dc561fc6",
+        "production/epics/core/story-004.md": "c4a17766caf055b46757f0c54da9afd29bbbc6d760c2df2044a700356fc01017",
+        "production/epics/core/story-005.md": "3939315ca397fe31dd2ff236afc6b8eb59d9b48431cb6749c76c0d7887afe991",
+        "production/epics/core/story-006.md": "60f9be9ebba3c426de43fe871d85dcde026f25fd6c574ce8618813065c9d8e43"
+      },
+      "identicalPromptSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65"
+    },
+    {
+      "initialRunId": "game-studio-sprint-status-VUejkK",
+      "rerunId": "game-studio-sprint-status-QGilDK",
+      "identicalOwnerInputHashes": {
+        "project.yaml": "947757643a66b2492ec96fc6aa0af97d652bbc50bc69fbff7ac8bdf9aa719b72",
+        "production/sprint-status.yaml": "30aaf2741f2167b840c6c530ac2276627786035949a68c72b67db8d95a0ad4a3",
+        "production/sprints/sprint-004.md": "a2c22706c313170f36efec78689b95d39d887ecab65037eb256e9a5bf4963fb6",
+        "production/epics/core/story-001.md": "3daf5d3c0068ed8cd2b34211d55b6114ee25aaca28c7e9a4ea7fb3a10551fda7",
+        "production/epics/core/story-002.md": "6af69df3b3a8885da9a1eac886159915dacdd1b0eea46ef7120263d232dcaa22",
+        "production/epics/core/story-003.md": "5140e731226993d391a1a8a72c12470b9fded805bfb1bbc5a82a19fc004a44a1",
+        "production/epics/core/story-004.md": "e8d9e40a1b55e2be95f98b996176d52c55cdba1b1d1584238eb21c6b975e51b7"
+      },
+      "identicalPromptSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65"
+    }
+  ]
 }

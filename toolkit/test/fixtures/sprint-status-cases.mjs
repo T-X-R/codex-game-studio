@@ -46,6 +46,7 @@ const gapRows = [row(1, 'done'), row(2, 'done'), row(3, 'backlog'), row(4, 'back
 export const sprintStatusScenarios = {
   'source-01-mixed': mixed,
   'source-02-complete': complete,
+  'must-haves-complete': sprint([row(1, 'done'), row(2, 'done'), row(3, 'done'), row(4, 'backlog'), row(5, 'backlog')], { start: day(-5), end: day(5) }),
   'source-03-no-sprint': { asOf, request, inputs: { 'project.yaml': `${config}modes:\n  workflow: standard\n` } },
   'source-04-stale': stale,
   'source-05-no-gates': noGate,

@@ -61,6 +61,8 @@ None of these adaptations removes a source branch or lowers a failed assertion.
 
 - Minimal all done, no stories, unknown/no status only, failed helper; no sprint
   table/burndown or false all-complete. No uninstalled Skill invocation.
+- All Must Haves complete while Should Have entries remain: completion flag and
+  one optional pull-backlog recommendation without calling the entire sprint done.
 - Markdown linked/inline/missing tasks and warning; explicit padded sprint; mtime
   selection with a higher-numbered older plan; no/invalid dates and zero entries.
 - 10/25 point gap equality; 40% time remaining equality; stale ages 4/5 and two

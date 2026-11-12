@@ -24,7 +24,7 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   preserves global module hashing while limiting semantic reads to named ADR
   module references.
 - Sprint status now has a read-only Codex Skill with minimal build-order and
-  sprint/YAML routes, a source-mapped specification and 25 isolated native
+  sprint/YAML routes, a source-mapped specification and 26 isolated native
   fixtures. The catalog now has fourteen partial Skills and ten partial roles,
   with no verified rows. Independent source review, build/content checks, 34
   relevant tests, 210 full regression tests and installed resource checks pass.
