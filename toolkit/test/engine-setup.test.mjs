@@ -6,6 +6,7 @@ import { test } from 'node:test';
 import { parse } from 'yaml';
 const { planEngineSetup } = await import('../dist/engine-setup.js');
 const { applyInstall } = await import('../dist/install.js');
+const { readSettings } = await import('../dist/config.js');
 
 const selection = { engine: { name: 'Godot', version: '4.6.1', language: 'GDScript', code_root: 'src', test_root: 'tests',
   rendering: 'Compatibility', physics: 'Godot Physics 2D' },
@@ -102,6 +103,39 @@ test('each supported engine records explicit choices without inventing editor or
     assert.equal(config.specialists, undefined);
     assert.equal(config.naming, undefined);
   }
+});
+
+test('Web can explicitly record an unknown version without retaining a stale pin or changing game files', async t => {
+  const game = { 'package.json': '{"scripts":{"build":"custom-build"}}\n', 'index.html': '<canvas></canvas>\n' };
+  const root = await fixture(t, { ...game,
+    'project.yaml': 'engine:\n  name: Web\n  version: "8.3.4"\ncommands:\n  build: custom-build\n',
+    'docs/technical-preferences.md': '# Notes\n- **Engine**: Web 8.3.4\n\nKeep existing toolchain.\n' });
+  const input = { engine: { name: 'Web', version: null, language: 'JavaScript', code_root: '.', test_root: 'tests' } };
+  const { plan, execution } = await planEngineSetup(root, JSON.stringify(input));
+  assert.deepEqual(plan.changes.map(change => change.path), ['project.yaml', 'docs/technical-preferences.md']);
+  assert.equal(execution.state, 'not_assessed');
+  assert.equal(parse(await readFile(join(root, 'project.yaml'), 'utf8')).engine.version, '8.3.4');
+  await applyInstall(plan);
+  const config = parse(await readFile(join(root, 'project.yaml'), 'utf8'));
+  assert.equal(config.engine.version, null);
+  assert.equal(config.commands.build, 'custom-build');
+  const mirror = await readFile(join(root, 'docs/technical-preferences.md'), 'utf8');
+  assert.match(mirror, /^- \*\*Engine\*\*: Web$/m);
+  assert.match(mirror, /Keep existing toolchain\./);
+  assert.doesNotMatch(mirror, /8\.3\.4|Web null|Web undefined/);
+  assert.equal((await readSettings(root, ['engine.version'])).settings['engine.version'].value, null);
+  for (const [path, content] of Object.entries(game)) assert.equal(await readFile(join(root, path), 'utf8'), content);
+  assert.equal((await planEngineSetup(root, JSON.stringify(input))).plan.changes.length, 0);
+});
+
+test('unknown Web versions must be explicit; engine pins still reject ranges and non-Web nulls', async t => {
+  const root = await fixture(t);
+  for (const engine of [
+    ...['Godot', 'Unity', 'Unreal'].map(name => ({ ...selection.engine, name, version: null })),
+    ...[undefined, '', 'null', '^5.0.0', '~5.0.0', 'latest', '5.x', 5].map(version => ({ ...selection.engine, name: 'Web', version })),
+  ]) await assert.rejects(planEngineSetup(root, JSON.stringify({ engine })), { code: 'INVALID_ARGUMENT' });
+  assert.deepEqual(await readdir(root), ['project.yaml']);
+  assert.equal(await readFile(join(root, 'project.yaml'), 'utf8'), '{}\n');
 });
 
 test('the unchanged half of a setup pair is still guarded against concurrent edits', async t => {

@@ -39,6 +39,13 @@ versions in YAML: a numeric `4.6` is not a version string. Version ranges, `late
 and placeholders are rejected. For Web, record the selected game framework or
 build-tool version and language; the CLI does not choose a toolchain.
 
+For a Web project with no known exact toolchain version, explicitly use
+`engine.version: null`. This clears a stale pin and mirrors the engine as `Web`
+without inventing a version. Omitting the field is still an error, and editor
+engines still require an explicit version string. A dependency range is a declared
+constraint, not proof of the installed version. Setup does not change package
+files, resolve dependencies or certify the existing game.
+
 Optional fields are `engine.rendering` and `engine.physics`; specialists
 `primary`, `code`, `shader`, `ui`, and `additional` (a list); and naming
 `classes`, `variables`, `constants`, `signals`, `files`, and `scenes`.

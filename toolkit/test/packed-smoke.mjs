@@ -351,6 +351,18 @@ try {
   assert.equal(command(launcher, 'config', 'get', 'engine.version', '--project', project).data.settings['engine.version'].value, '7.3.1');
   assert.match(await readFile(join(project, 'docs/technical-preferences.md'), 'utf8'), /\*\*Engine\*\*: Web 7\.3\.1/);
   assert.equal(command(launcher, 'engine', 'setup', '--input', setupInput, '--project', project).data.changes.length, 0);
+  const unversionedInput = 'unversioned-web.json';
+  await writeFile(join(project, unversionedInput), JSON.stringify({ engine: {
+    name: 'Web', version: null, language: 'JavaScript', code_root: '.', test_root: 'tests',
+  } }));
+  const pinnedConfig = await readFile(join(project, 'project.yaml'), 'utf8');
+  command(launcher, 'engine', 'setup', '--input', unversionedInput, '--dry-run', '--project', project);
+  assert.equal(await readFile(join(project, 'project.yaml'), 'utf8'), pinnedConfig);
+  command(globalCli, 'engine', 'setup', '--input', unversionedInput, '--project', project);
+  assert.equal(command(launcher, 'config', 'get', 'engine.version', '--project', project).data.settings['engine.version'].value, null);
+  assert.match(await readFile(join(project, 'docs/technical-preferences.md'), 'utf8'), /^- \*\*Engine\*\*: Web$/m);
+  assert.equal(command(launcher, 'engine', 'setup', '--input', unversionedInput, '--project', project).data.changes.length, 0);
+  command(launcher, 'engine', 'setup', '--input', setupInput, '--project', project);
   await writeFile(join(project, 'test-fixture.cjs'), 'console.log("packed test executed");\n');
   command(launcher, 'config', 'set', 'commands.test', 'node test-fixture.cjs', '--project', project);
   assert.equal(command(launcher, 'test', '--output', 'production/evidence/packed-test', '--project', project).data.processExitCode, 0);

@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "S051 existing Web configuration foundation: explicit unknown toolchain version; not a complete setup-engine Skill migration.",
+  "problem": "The original existing-Web contract permits no known bundler version. Engine setup required a numeric version even for Web, encouraging an invented pin or rejecting that supported branch.",
+  "behavior": "Only Web accepts explicit JSON/YAML null as engine.version. It clears a stale pin and mirrors Engine: Web. Omission, string null, numbers, ranges and all non-Web null pins remain invalid. Game files and existing commands remain unchanged; dry-run is read-only and repeat is no-op.",
+  "sourceHashes": {
+    "toolkit/src/engine-setup.ts": "3eeca2e555050f5704e7bf4e64db3e6ece4c9ece80dba3b1c1d6eb5ba469ae69",
+    "toolkit/test/engine-setup.test.mjs": "cc3db624d0c53d0d8fb049510d6273db773d01476f19a314ed2a425ba4abedce",
+    "toolkit/test/packed-smoke.mjs": "7223899af3a8ee9666dbcc77bf2bd87c2c40b8e564b5bb744d257c5b822ad5b7",
+    "docs/engine-configuration.md": "e264bf29d8e4253acea8fbec33ec359d257a949ebf42bc3a594e32c24f337f37"
+  },
+  "sourceContract": ".claude/skills/setup-engine/references/web.md W1",
+  "review": {
+    "author": "root",
+    "independentReviewer": "design_system_migration",
+    "result": "No blocking finding; actual config null plus rewritten canonical mirror prevents legacy version fallback. Existing transaction guards preserved."
+  },
+  "validation": {
+    "red": "10 pass, 1 expected failure: engine.version rejected null before implementation",
+    "focusedGreen": "11 pass, 0 fail",
+    "node24": "364 pass, 0 fail, 0 skip",
+    "node26": "364 pass, 0 fail, 0 skip",
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS; behaviorVerified false",
+    "installedArchive": "PASS; dry-run, applied unknown version, effective config, mirror, repeat no-op and restoring explicit version use real installed CLI",
+    "CI": "PENDING for this source revision"
+  },
+  "logs": {
+    "red": {
+      "path": "/private/tmp/game-studio-web-version-red.log",
+      "sha256": "7cad38b7198d3855875830262b357a35618e3de9ff6c98aad93b7fa9acb9c716"
+    },
+    "green": {
+      "path": "/private/tmp/game-studio-web-version-green.log",
+      "sha256": "10e1bc600fb12e2d015115daea7b8d49ba772f6a84f928a9f0ffa9563f7180f1"
+    },
+    "build": {
+      "path": "/private/tmp/game-studio-role-boundary-web-build.log",
+      "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+    },
+    "typecheck": {
+      "path": "/private/tmp/game-studio-role-boundary-web-typecheck.log",
+      "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+    },
+    "lint": {
+      "path": "/private/tmp/game-studio-role-boundary-web-lint.log",
+      "sha256": "7747b9ca37f5e28dc44a5feba5528ae2ac94362ad05996ab093071e1dc9d000d"
+    },
+    "pack": {
+      "path": "/private/tmp/game-studio-role-boundary-web-pack.log",
+      "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+    },
+    "tests24": {
+      "path": "/private/tmp/game-studio-role-boundary-web-tests24.log",
+      "sha256": "75d1c76c0a153a5be04370105b3f10ea0a45b2301cde1b148a50e4c3242dbf93"
+    },
+    "tests26": {
+      "path": "/private/tmp/game-studio-role-boundary-web-tests26.log",
+      "sha256": "0dd322fafc66b7ab3c93d06ce646386008efb7e3c713be4e2cd2b7b1a00bffcf"
+    }
+  },
+  "remaining": [
+    "Read-only Web detector must preserve declared ranges versus resolved versions.",
+    "Full existing-Web preservation/build/test/capture, all four new starters, engine reference migration, refresh/upgrade and full native S051 acceptance remain open.",
+    "This does not implement engine.path; that is a separate slice."
+  ]
+}

@@ -30,9 +30,11 @@ function text(value: Json | undefined, key: string, multiline = false): string {
 function edits(input: string): [string, string][] {
   const data = (parseConfig(input, 'engine setup input').toJS({ maxAliasCount: 50 }) ?? {}) as Record<string, Json>;
   const engine = object(data.engine, 'engine');
-  for (const key of ['name', 'version', 'language', 'code_root', 'test_root']) text(engine[key], `engine.${key}`);
+  for (const key of ['name', 'language', 'code_root', 'test_root']) text(engine[key], `engine.${key}`);
   if (!enums['engine.name']!.includes(engine.name as string)) throw new StudioError('INVALID_ARGUMENT', 'engine.name must be Godot, Unity, Unreal or Web');
-  if (!/^\d[0-9A-Za-z.+_-]*$/.test(engine.version as string) || /(?:^|[.-])[xX](?:$|[.-])/.test(engine.version as string)) {
+  const unversionedWeb = engine.name === 'Web' && engine.version === null;
+  if (!unversionedWeb) text(engine.version, 'engine.version');
+  if (!unversionedWeb && (!/^\d[0-9A-Za-z.+_-]*$/.test(engine.version as string) || /(?:^|[.-])[xX](?:$|[.-])/.test(engine.version as string))) {
     throw new StudioError('INVALID_ARGUMENT', 'engine.version must record an explicit version, not latest, a range or a placeholder');
   }
   const entries: [string, string][] = [];
@@ -94,7 +96,8 @@ export async function planEngineSetup(root: string, input: string) {
     if (!['available', 'missing'].includes(directory.state as string)) throw new StudioError('INVALID_ARGUMENT', `engine.${key}: ${directory.reason}`);
     if (directory.state === 'missing') warnings.push(`${key} ${directory.value} has not been created; configure its scaffold before running engine operations.`);
   }
-  const values = new Map<string, string>([['Engine', `${document.getIn(['engine', 'name'])} ${document.getIn(['engine', 'version'])}`]]);
+  const version = document.getIn(['engine', 'version']);
+  const values = new Map<string, string>([['Engine', `${document.getIn(['engine', 'name'])}${version === null ? '' : ` ${version}`}`]]);
   for (const [key, label] of Object.entries(labels)) {
     const [block, field] = key.split('.');
     const value = (config[block!] as Record<string, Json> | undefined)?.[field!];
