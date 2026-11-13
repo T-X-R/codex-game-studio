@@ -6,6 +6,19 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- [GDExtension role content](evidence/godot-gdextension-specialist-content-2026-11-13.json)
+  preserves complete C++/Rust authoring, registration, ownership, ABI, platform
+  and performance duties. Independent source review, 38 content checks per Node
+  version and exact installed/restored package checks pass. Native and compiler/
+  runtime acceptance remain open. Catalog: 18 partial Skills/57 pending,
+  21 partial roles/28 pending; none fully verified.
+
+- [GDScript rationale retries](evidence/godot-gdscript-rationale-retries-2026-11-13.json)
+  pass type-review and abstract-version output contracts. Typed-loop authoring and
+  explanation pass, but its specific conditional native-owner handoff still fails.
+  New typed and abstract artifacts each have their own real-engine verification;
+  no old runtime pass was transferred. Async cleanup remains separately pending.
+
 - [Shader native fixtures and explicit existing-file scope](evidence/godot-shader-fixtures-2026-11-13.json)
   are integrated: six scenarios retain the five original requests, with separate
   genuine compute intent. Both Node versions pass 532 full tests, eight focused

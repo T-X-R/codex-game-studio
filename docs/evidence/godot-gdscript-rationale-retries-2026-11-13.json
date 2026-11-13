@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-13",
+  "status": "partial; conditional native-owner handoff remains FAIL",
+  "scope": "Three same-input rationale retries under role f08f6379; async correction and new native-extension role are not in this archive.",
+  "evidence": [
+    {
+      "path": "/private/tmp/game-studio-a015-rationale-native-iagkzg5_/manifest.json",
+      "sha256": "96b2638beb3a29f1a1fbb0121c08f105bef7792704c67718235e5bc619b375da"
+    },
+    {
+      "path": "/private/tmp/game-studio-a015-rationale-adjudication-81d3sze2/review.md",
+      "sha256": "9bae52841bb1336ad07148c14875f4bfb5cb8cdfc1165bd95a6f394947bdbc7e"
+    },
+    {
+      "path": "/private/tmp/game-studio-a015-rationale-adjudication-81d3sze2/manifest.json",
+      "sha256": "d1abfc8bfec12b56a68d61bd87bce5151cc658b10aeec38f3e1f3f83aefe6a4e"
+    }
+  ],
+  "integrity": {
+    "rootVerifiedNativeFiles": 143,
+    "independentVerifiedCurrentProjectEntries": 2675,
+    "independentVerifiedCurrentPublicTraces": 6,
+    "unchangedOriginalFixtures": 5,
+    "archiveSha256": "809935ec78ac0f992844c5b23240b77080b7c66db5fcee1cec429b529abbb2d0",
+    "roleSha256": "f08f6379ffb43cfe13d6489ddc881d21149f01a059c3bde970e4c2c6d790ea81"
+  },
+  "cases": [
+    {
+      "case": "gdscript-type-review",
+      "child": "01a1d365-2e21-7e23-8578-36bde8650963",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "verdict": "selected PASS",
+      "reason": "Eight missing annotations across six lines identified; tooling/compiler rationale stated, no invented speedup or source rewrite."
+    },
+    {
+      "case": "gdscript-typed-entity-loop",
+      "child": "01a1d367-279a-7623-8dfc-99a41544521d",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "verdict": "narrow FAIL",
+      "reason": "Typed implementation and rationale now pass; final offers caller/performance-owner review and separate approval. Specific GDExtension owner/task or honest unavailability handoff remains absent.",
+      "artifactSha256": "c0a4d0f4f4c81096486f135d7a31bbb652ae5ccbd1060d5f2e7a3909c095fc50",
+      "runtimeEvidence": "godot-gdscript-engine-2026-11-13.json"
+    },
+    {
+      "case": "gdscript-abstract-enemy-46",
+      "child": "01a1d36a-36e6-7d02-9ca4-d2c2ed611965",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "verdict": "selected PASS",
+      "reason": "Actual local transition table and official4.6 documentation establish4.5 introduction and bodyless methods; final retains unknown installed editor. No need to repeat the local pathname mechanically.",
+      "artifactSha256": "ec3f3bd698fc810015fbfeab8acd770e9dd8df9470e495f095bb5ab970c0a54a"
+    }
+  ],
+  "newAbstractEngine": {
+    "scope": "Separate execution on new artifact, not transferred from original code.",
+    "manifest": {
+      "path": "/private/tmp/game-studio-a015-abstract-retry-v_4fo9u4/manifest.json",
+      "sha256": "2734ca511528a50bff5d25c218a61dd66284903dcb96183b065f3d5a189f9b4e"
+    },
+    "review": {
+      "path": "/private/tmp/game-studio-a015-abstract-retry-v_4fo9u4/review.md",
+      "sha256": "f1872e6649d490009b5250240c0a930f7ae26a8088f8d0d05293ffb7bcae56f7"
+    },
+    "rootVerifiedFiles": 125,
+    "engine": "4.6.1.stable.official.14d19694e",
+    "checks": 5,
+    "failed": 0,
+    "importExit": 0,
+    "runtimeExit": 0,
+    "stderr": "empty",
+    "baseInstantiated": false,
+    "notes": "Same original fixtures, two harness scripts and runner. Concrete subclass compilation/instantiation, methods and inheritance pass."
+  },
+  "host": "Full typed-role injection and inherited gpt-6.1-sol/high/on-request/workspace-write observed; no settings override or new Hook trust. Exit0 is not semantic PASS.",
+  "preservation": "Historical failures, plugin warnings, output truncation and one model refresh timeout retained. Original artifacts unchanged.",
+  "pending": [
+    "Specific conditional GDExtension owner/task handoff",
+    "Fresh corrected async generation and real cleanup acceptance",
+    "Whole-role matrix, integration, desktop and export/performance"
+  ]
+}
