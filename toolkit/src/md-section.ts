@@ -1,11 +1,14 @@
-import { readFile, realpath, stat } from 'node:fs/promises';
+import { lstat, open, readFile, realpath, rename, stat, unlink } from 'node:fs/promises';
+import { constants, type Stats } from 'node:fs';
+import { randomUUID } from 'node:crypto';
 import { safePath } from './files.js';
 import { StudioError } from './contract.js';
 
 type Heading = { level: number; first: number; last: number; title: string };
 type Section = { status: 'COMPLETE' | 'EMPTY' | 'PLACEHOLDER' | 'NOT_FOUND'; first: number | null; last: number | null; title: string };
 export interface MdSectionObservation {
-  status: 'observed'; qualityAssessed: false; command: 'list' | 'status' | 'extract'; path: string;
+  status: 'observed'; qualityAssessed: false; command: 'list' | 'status' | 'extract' | 'replace' | 'insert-before' | 'set-field'; path: string;
+  action?: 'replaced' | 'inserted' | 'set' | 'added' | 'unchanged'; line?: number; applied?: boolean; dryRun?: boolean;
   headings?: Heading[]; sections?: Section[]; content?: string;
   counts?: { sections: number; complete: number; empty: number; placeholder: number; not_found: number };
 }
@@ -69,20 +72,151 @@ function parse(content: string) {
     return headings.filter(h => normalize(h.title) === wanted && (!level || level === h.level));
   };
   const section = (h: Heading): Section => ({ ...h, status: marker.slice(h.first, h.last).some(Boolean) ? 'PLACEHOLDER' : text.slice(h.first, h.last).some(Boolean) ? 'COMPLETE' : 'EMPTY' });
-  return { lines, headings, find, section };
+  return { lines, headings, find, section, text };
 }
 
-export async function mdSectionCommand(root: string, args: string[]): Promise<{ data: MdSectionObservation; exitCode: number }> {
+export interface MdSectionWriteInput {
+  readInput?: () => Promise<Buffer>;
+  dryRun?: boolean;
+}
+
+function decodeInput(bytes: Buffer, label: string, exitCode: number): string {
+  try { return new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(bytes); }
+  catch { throw new StudioError('INVALID_UTF8', `${label} must be valid UTF-8. Nothing was written.`, exitCode); }
+}
+
+const lower = (s: string) => s.replace(/[A-Z]/g, c => c.toLowerCase());
+function fieldPrefix(line: string, name: string): string {
+  const normalized = line.replace(/^[ \t]*/, '').replace(/^> ?/, '').replace(/^- /, '').replace(/\*/g, '');
+  if (!lower(normalized).startsWith(`${lower(name)}:`)) return '';
+  const start = lower(line).indexOf(lower(name)); if (start < 0) return '';
+  let end = start + name.length;
+  while (line[end] === '*') end++;
+  if (line[end] !== ':') return '';
+  end++; while (line[end] === '*') end++;
+  while (line[end] === ' ' || line[end] === '\t') end++;
+  return line.slice(0, end);
+}
+
+async function verifySnapshot(root: string, path: string, before: Buffer, snapshot: Stats): Promise<string> {
+  const full = await safePath(root, path);
+  let current: Stats, bytes: Buffer;
+  try { current = await lstat(full); bytes = await readFile(full); }
+  catch { throw new StudioError('FILE_CONFLICT', `File changed while preparing ${path}. Nothing was written.`, 4); }
+  if (!current.isFile() || current.dev !== snapshot.dev || current.ino !== snapshot.ino ||
+      current.mode !== snapshot.mode || !bytes.equals(before)) {
+    throw new StudioError('FILE_CONFLICT', `File changed while preparing ${path}. Nothing was written.`, 4);
+  }
+  return full;
+}
+
+/** One owned temporary file; deliberately not an installation transaction. */
+async function commitWrite(root: string, path: string, before: Buffer, snapshot: Stats, after: Buffer): Promise<void> {
+  const full = await verifySnapshot(root, path, before, snapshot);
+  const temporary = `${full}.${randomUUID()}.tmp`;
+  let owned = false;
+  try {
+    // A rename alone can replace a read-only file. Open without truncation to
+    // require actual file write permission, and inspect the opened identity.
+    const target = await open(full, constants.O_RDWR | (constants.O_NOFOLLOW ?? 0));
+    try {
+      const opened = await target.stat();
+      if (opened.nlink > 1) throw new StudioError('UNSAFE_PATH', `Refusing to change a hard-linked file: ${path}.`, 4);
+      if (opened.dev !== snapshot.dev || opened.ino !== snapshot.ino || !(await target.readFile()).equals(before)) {
+        throw new StudioError('FILE_CONFLICT', `File changed while preparing ${path}. Nothing was written.`, 4);
+      }
+      const staged = await open(temporary, 'wx', 0o600); owned = true;
+      try {
+        await staged.writeFile(after);
+        // open(mode) is filtered by umask; explicitly retain ordinary mode bits.
+        await staged.chmod(snapshot.mode & 0o777); await staged.sync();
+      } finally { await staged.close(); }
+      await verifySnapshot(root, path, before, snapshot);
+      if ((await target.stat()).nlink > 1) throw new StudioError('UNSAFE_PATH', `Refusing to change a hard-linked file: ${path}.`, 4);
+    } finally { await target.close(); }
+    await rename(temporary, full); owned = false;
+  } catch (error) {
+    if (error instanceof StudioError) throw error;
+    throw new StudioError('WRITE_FAILED', `Cannot write ${path}.`, 1);
+  } finally {
+    if (owned) await unlink(temporary).catch(error => {
+      if (error.code !== 'ENOENT') throw new StudioError('WRITE_FAILED', `Cannot clean up the owned temporary file for ${path}.`, 1);
+    });
+  }
+}
+
+export async function mdSectionCommand(root: string, args: string[], input: MdSectionWriteInput = {}): Promise<{ data: MdSectionObservation; exitCode: number }> {
   const [command, path, ...selectors] = args;
-  const usage = () => { throw new StudioError('INVALID_ARGUMENT', 'Use list FILE, status FILE [HEADING ...], or extract FILE HEADING [--body]. Writing commands are not implemented.', 2); };
-  if (command !== 'list' && command !== 'status' && command !== 'extract') return usage();
+  const usage = () => { throw new StudioError('INVALID_ARGUMENT', 'Use list FILE, status FILE [HEADING ...], extract FILE HEADING [--body], replace FILE HEADING, insert-before FILE HEADING, or set-field FILE FIELD VALUE [--after FIELD].', 2); };
+  if (command !== 'list' && command !== 'status' && command !== 'extract' && command !== 'replace' && command !== 'insert-before' && command !== 'set-field') return usage();
   if (!path) return usage();
-  const fullPath = await safePath(await realpath(root).catch(() => { throw new StudioError('READ_FAILED', 'Cannot read project root.', 1); }), path);
-  let content: string;
-  try { if (!(await stat(fullPath)).isFile()) throw new Error('Not a file'); content = await readFile(fullPath, 'utf8'); }
+  const writing = command === 'replace' || command === 'insert-before' || command === 'set-field';
+  const canonical = await realpath(root).catch(() => { throw new StudioError('READ_FAILED', 'Cannot read project root.', 1); });
+  const fullPath = await safePath(canonical, path);
+  let bytes: Buffer, snapshot: Stats;
+  try { snapshot = await stat(fullPath); if (!snapshot.isFile()) throw new Error('Not a file'); bytes = await readFile(fullPath); }
   catch { throw new StudioError('READ_FAILED', `Cannot read ${path}.`, 1); }
-  if (command === 'list' && selectors.length || command === 'extract' && (selectors.length < 1 || selectors.length > 2 || selectors.length === 2 && selectors[1] !== '--body')) return usage();
+  if (command === 'list' && selectors.length || command === 'extract' && (selectors.length < 1 || selectors.length > 2 || selectors.length === 2 && selectors[1] !== '--body') ||
+      (command === 'replace' || command === 'insert-before') && selectors.length !== 1 ||
+      command === 'set-field' && (selectors.length !== 2 && selectors.length !== 4 || selectors.length === 4 && selectors[2] !== '--after' || selectors[1]?.includes('\n')) ||
+      !writing && input.dryRun) return usage();
+  const content = writing ? decodeInput(bytes, path, 1) : bytes.toString('utf8');
   const parsed = parse(content), data: MdSectionObservation = { status: 'observed', qualityAssessed: false, command, path };
+  if (writing) {
+    let candidate = '', line = 0, action: NonNullable<MdSectionObservation['action']>;
+    const raw = parsed.lines, out = (s: string) => `${s}${raw[0]?.endsWith('\r') ? '\r' : ''}\n`;
+    const retained = (lines: string[]) => lines.map(s => `${s}\n`).join('');
+    if (command === 'replace' || command === 'insert-before') {
+      const body = decodeInput(await input.readInput?.() ?? Buffer.alloc(0), 'stdin', 2).split('\n');
+      if (body.at(-1) === '') body.pop();
+      for (let n = 0; n < body.length; n++) body[n] = body[n]!.replace(/\r$/, '');
+      while (body.length && /^[ \t]*$/.test(body[0]!)) body.shift();
+      while (body.length && /^[ \t]*$/.test(body.at(-1)!)) body.pop();
+      if (!body.length) throw new StudioError('INVALID_ARGUMENT', 'Nothing on stdin to write.', 2);
+      const selector = selectors[0]!.split('\n')[0]!, found = parsed.find(selector);
+      if (!found.length) throw new StudioError('HEADING_NOT_FOUND', `No heading "${selector}" in the file.`, 3);
+      if (found.length > 1) throw new StudioError('AMBIGUOUS_HEADING', `"${selector}" matches ${found.length} headings (lines ${found.map(h => h.first).join(', ')}); add a level or a longer title. Nothing was written.`, 4);
+      const heading = found[0]!, at = heading.first - 1;
+      if (command === 'replace') {
+        candidate = retained(raw.slice(0, heading.first)) + out('') + body.map(out).join('') +
+          (heading.last < raw.length ? out('') : '') + retained(raw.slice(heading.last));
+        action = 'replaced'; line = heading.first;
+      } else {
+        const start = at - body.length - 1;
+        const same = start >= 0 && body.every((s, n) => raw[start + n]!.replace(/\r$/, '') === s) && /^[ \t]*$/.test(raw[at - 1]!.replace(/\r$/, ''));
+        const separator = at > 0 && !/^[ \t]*$/.test(raw[at - 1]!.replace(/\r$/, ''));
+        candidate = same ? content : retained(raw.slice(0, at)) + (separator ? out('') : '') + body.map(out).join('') + out('') + retained(raw.slice(at));
+        action = same ? 'unchanged' : 'inserted'; line = same ? start + 1 : heading.first + Number(separator);
+      }
+    } else {
+      const [name, value, , after = ''] = selectors;
+      let at = -1, anchor = -1, prefix = '', anchorPrefix = '';
+      for (let n = 0; n < raw.length; n++) {
+        if (!parsed.text[n]) continue;
+        const s = raw[n]!.replace(/\r$/, '');
+        if (at < 0) { const p = fieldPrefix(s, name!); if (p) { at = n; prefix = p; } }
+        if (after && anchor < 0) { const p = fieldPrefix(s, after); if (p) { anchor = n; anchorPrefix = p; } }
+      }
+      if (at >= 0) {
+        const current = raw[at]!.replace(/\r$/, '').slice(prefix.length);
+        const same = current === value;
+        candidate = same ? content : retained(raw.map((s, n) => n === at ? `${prefix}${value}${s.endsWith('\r') ? '\r' : ''}` : s));
+        action = same ? 'unchanged' : 'set'; line = at + 1;
+      } else {
+        if (anchor < 0) throw new StudioError('FIELD_NOT_FOUND', `No "${name}" field${after ? ` or "${after}" anchor` : ' (add --after FIELD to add it)'}.`, 3);
+        const start = lower(anchorPrefix).indexOf(lower(after));
+        const prefix = anchorPrefix.slice(0, start) + name + anchorPrefix.slice(start + after.length);
+        candidate = retained(raw.slice(0, anchor + 1)) + `${prefix}${value}${raw[anchor]!.endsWith('\r') ? '\r' : ''}\n` + retained(raw.slice(anchor + 1));
+        action = 'added'; line = anchor + 2;
+      }
+    }
+    if (candidate === content) action = 'unchanged';
+    await verifySnapshot(canonical, path, bytes, snapshot);
+    const dryRun = input.dryRun ?? false;
+    if (!dryRun && action !== 'unchanged') await commitWrite(canonical, path, bytes, snapshot, Buffer.from(candidate));
+    Object.assign(data, { action, line, dryRun, applied: !dryRun && action !== 'unchanged' });
+    return { data, exitCode: 0 };
+  }
   if (command === 'list') data.headings = parsed.headings;
   else if (command === 'status') {
     const requests = selectors.flatMap(s => s.split('\n')).filter(Boolean);
@@ -105,6 +239,7 @@ export async function mdSectionCommand(root: string, args: string[]): Promise<{ 
 }
 
 export function formatMdSection(data: MdSectionObservation): string {
+  if (data.action) return `${data.dryRun ? 'dry_run\ttrue\napplied\tfalse\n' : ''}file\t${data.path}\t${data.action}\nline\t${data.line}\t-\n`;
   if (data.command === 'extract') return data.content!;
   const title = (s: string) => s.replace(/\t/g, ' ');
   if (data.command === 'list') return `headings\t${data.headings!.length || ''}\n` + data.headings!.map(h => `${h.level}\t${h.first}\t${h.last}\t${title(h.title)}\n`).join('');

@@ -68,9 +68,9 @@ test('CRLF sections preserve inclusive line bounds and normalize extraction with
   assert.deepEqual(await readFile(join(root, path)), Buffer.from(content));
   assert.equal((await stat(join(root, path))).mtimeMs, before.mtimeMs);
 });
-test('usage, unsupported writers, missing/nonfile input and unsafe paths fail without exposing contents', async t => {
+test('usage, missing/nonfile input and unsafe paths fail without exposing contents', async t => {
   const { root, path } = await fixture(t, '# Title\nsecret\n');
-  for (const args of [[], ['replace',path,'Title'], ['insert-before',path,'Title'], ['set-field',path,'Status','Done'], ['list',path,'extra'], ['extract',path], ['extract',path,'Title','bad']]) await assert.rejects(mdSectionCommand(root,args),e=>e.exitCode===2);
+  for (const args of [[], ['replace',path,'Title'], ['insert-before',path,'Title'], ['set-field',path,'Status'], ['list',path,'extra'], ['extract',path], ['extract',path,'Title','bad']]) await assert.rejects(mdSectionCommand(root,args),e=>e.exitCode===2);
   for (const p of ['../escape.md', '/tmp/escape.md', 'a/../b', 'a\\b', 'a:b', './document with spaces.md']) await assert.rejects(mdSectionCommand(root,['list',p]),e=>e.code==='UNSAFE_PATH' && e.exitCode===4);
   await assert.rejects(mdSectionCommand(root,['list','missing.md']),e=>e.exitCode===1);
   await assert.rejects(mdSectionCommand(root,['list','missing.md','extra']),e=>e.exitCode===1); // Source checks readability before command-specific arguments.

@@ -219,6 +219,24 @@ try {
   assert.throws(() => execute(sectionHelper, ['--project', storyProject, 'extract', 'sections.md', 'Missing']), error => error.status === 3);
   assert.throws(() => execute(sectionHelper, ['--project', storyProject, 'replace', 'sections.md', 'Rules']), error => error.status === 2);
   assert.equal(await readFile(join(storyProject, 'sections.md'), 'utf8'), sectionText);
+  const writeSection = (args, input) => execFileSync(process.execPath,
+    [sectionHelper, '--project', storyProject, ...args],
+    { cwd: temp, input, encoding: 'utf8', timeout: 5000 });
+  const preview = JSON.parse(writeSection(['replace', 'sections.md', 'Rules', '--dry-run'], 'updated\n'));
+  assert.equal(preview.action, 'replaced'); assert.equal(preview.applied, false);
+  assert.equal(preview.dryRun, true); assert.equal(preview.qualityAssessed, false);
+  assert.equal(await readFile(join(storyProject, 'sections.md'), 'utf8'), sectionText);
+  const replacement = JSON.parse(writeSection(['replace', 'sections.md', 'Rules'], 'updated\n'));
+  assert.equal(replacement.applied, true);
+  assert.equal(await readFile(join(storyProject, 'sections.md'), 'utf8'), '# Root\r\n## Rules\r\n\r\nupdated\r\n\r\n## End\r\nlast\n');
+  assert.equal(writeSection(['insert-before', 'sections.md', 'Rules', '--text'], 'Status: Draft\n'),
+    'file\tsections.md\tinserted\nline\t3\t-\n');
+  assert.equal(JSON.parse(writeSection(['set-field', 'sections.md', 'Status', '--text'])).action, 'set');
+  const written = await readFile(join(storyProject, 'sections.md'), 'utf8');
+  assert.match(written, /Status: --text\r\n/);
+  assert.equal(JSON.parse(writeSection(['set-field', 'sections.md', 'Status', '--text'])).action, 'unchanged');
+  assert.throws(() => writeSection(['replace', 'sections.md', 'Missing'], 'payload\n'), error => error.status === 3);
+  assert.equal(await readFile(join(storyProject, 'sections.md'), 'utf8'), written);
   const adrHelper = JSON.parse(execute(launcher, ['resource', 'path', 'studio/scripts/adr-status.mjs', '--json'], project)).data.path;
   assert.ok(adrHelper.startsWith(join(project, '.game-studio/node_modules')));
   assert.deepEqual(await readFile(adrHelper), await readFile(join(packageRoot, '../studio/scripts/adr-status.mjs')));
