@@ -44,7 +44,7 @@ try {
   assert.equal(command(globalCli, 'version').status, 'ok');
   const project = join(temp, '我的 game');
   assert.equal(command(globalCli, 'init', project, '--engine', 'web').status, 'ok');
-  const roles = ['qa-tester', 'qa-lead', 'game-designer', 'lead-programmer', 'gameplay-programmer', 'systems-designer', 'ui-programmer', 'ux-designer', 'accessibility-specialist', 'analytics-engineer', 'audio-director', 'economy-designer', 'godot-specialist'].map(role => `.codex/agents/game-studio-${role}.toml`);
+  const roles = ['qa-tester', 'qa-lead', 'game-designer', 'lead-programmer', 'gameplay-programmer', 'systems-designer', 'ui-programmer', 'ux-designer', 'accessibility-specialist', 'analytics-engineer', 'audio-director', 'economy-designer', 'godot-specialist', 'godot-gdscript-specialist'].map(role => `.codex/agents/game-studio-${role}.toml`);
   for (const role of roles) {
     assert.equal(await readFile(join(project, role), 'utf8'),
       await readFile(join(packageRoot, '..', role), 'utf8'));
@@ -150,10 +150,12 @@ try {
   }
   command(globalCli, 'restore', '--project', project, '--archive', archive, '--offline');
   const launcher = join(project, '.game-studio/run.cjs');
-  const godotRole = '.codex/agents/game-studio-godot-specialist.toml';
-  const restoredGodotRole = command(launcher, 'resource', 'path', godotRole, '--project', project).data.path;
-  assert.ok(restoredGodotRole.startsWith(join(project, '.game-studio/node_modules')));
-  assert.deepEqual(await readFile(restoredGodotRole), await readFile(join(packageRoot, '..', godotRole)));
+  for (const role of ['godot-specialist', 'godot-gdscript-specialist']) {
+    const godotRole = `.codex/agents/game-studio-${role}.toml`;
+    const restoredGodotRole = command(launcher, 'resource', 'path', godotRole, '--project', project).data.path;
+    assert.ok(restoredGodotRole.startsWith(join(project, '.game-studio/node_modules')));
+    assert.deepEqual(await readFile(restoredGodotRole), await readFile(join(packageRoot, '..', godotRole)));
+  }
   for (const [skill, count] of [['setup-engine', 14], ['test-setup', 7]]) {
     const setupId = `.agents/skills/game-studio-${skill}`;
     const restoredSetup = JSON.parse(execute(launcher, ['resource', 'path', setupId, '--json'], project)).data.path;
