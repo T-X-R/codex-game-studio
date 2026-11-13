@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-13",
+  "status": "implemented; native retries pending",
+  "scope": "A016 minimal API-layer explanation and concrete specialist/task output correction",
+  "files": {
+    ".codex/agents/game-studio-godot-shader-specialist.toml": "465053a7ffb0b4ecd53ef164e0837d5fefddec74d1a1c5c8e9ed3d1aee9f5085",
+    "studio-tests/roles/godot-shader-specialist-codex.md": "4da5dd34cf669b728eda962e47ffa9d80bee7bf1cd4e154a2abca801c0cc0621"
+  },
+  "candidate": {
+    "path": "/private/tmp/game-studio-a016-output-revision-0admkcjm/manifest.json",
+    "sha256": "8b182417b2e5b99435238d2c9fdfe4fd310a800a98f4c4963c76c507e63dbae1"
+  },
+  "patch": {
+    "path": "/private/tmp/game-studio-a016-output-revision-0admkcjm/candidate.patch",
+    "sha256": "82892d43c8e20eecca0ed16c75d3c2ba9aea368b03a80aa7c421804a2bbe36b8"
+  },
+  "rootReview": {
+    "path": "/private/tmp/game-studio-a016-output-root-review.md",
+    "sha256": "28823c48e6ac203000e96a5206bfb6c89b53d102bfba2c62e63db6bd0a17a76c"
+  },
+  "failureEvidence": "godot-shader-specialist-native-2026-11-13.json",
+  "changes": [
+    "Explain relevant reference changes at the correct engine-binding versus shader-language layer and their effect on delivered code.",
+    "Return the specific cross-domain specialist and task with honest unavailable/unknown status, without implying execution or additional authority."
+  ],
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS",
+    "node24Content": 38,
+    "node26Content": 38,
+    "pack": "PASS",
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-a016-output-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-output-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-output-content.log",
+        "sha256": "3cfa0e4018b1cb17c158fedd4f675b47387d17ee219718d95d71978eb3d8263a"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-output-content24.log",
+        "sha256": "89296571452b7071212e67681a56d29101688cf4c790628a04dfc0be9b8b01ad"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-output-content26.log",
+        "sha256": "32ffdc19c85db92bc3aaa36e320e02a8a6a8fc614c750357744b761d47d45a7e"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-output-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      }
+    ]
+  },
+  "preservation": "Original five requests/six raw fixtures, prior role archive and all original failures unchanged. Rendering/GPU acceptance remains separate."
+}

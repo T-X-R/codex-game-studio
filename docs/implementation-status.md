@@ -6,6 +6,27 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- [Six actual Shader native cases](evidence/godot-shader-specialist-native-2026-11-13.json)
+  retain four scoped passes and two output omissions: concrete compute-owner
+  handoff and engine-side texture API explanation. Actual water editing and
+  separate far material are preserved; no GPU result is implied. Root checked
+  405 frozen files and 5,396 current entries; independent review agrees. The
+  [minimal correction](evidence/godot-shader-output-revision-2026-11-13.json) passes
+  content/package checks and awaits unchanged-input retries.
+
+- C# and GDExtension original native scenario definitions are now integrated:
+  [C# fixtures](evidence/godot-csharp-fixtures-2026-11-13.json),
+  [native-extension fixtures](evidence/godot-gdextension-fixtures-2026-11-13.json).
+  Their actual native/toolchain acceptance remains pending. The
+  [Quaternion reference correction](evidence/godot-quaternion-reference-2026-11-13.json)
+  changes only the canonical packaged row; historical source/input bytes remain.
+  The [GDScript handoff/cleanup clarification](evidence/godot-gdscript-handoff-revision-2026-11-13.json)
+  is implemented; new native and engine results require separate adjudication.
+
+- All seven [CI jobs at2a81609](https://github.com/T-X-R/codex-game-studio/actions/runs/43376488829)
+  pass. This includes GDExtension content and C# fixtures, but precedes the later
+  handoff, reference, GDExtension-fixture and Shader-output changes.
+
 - [GDExtension role content](evidence/godot-gdextension-specialist-content-2026-11-13.json)
   preserves complete C++/Rust authoring, registration, ownership, ABI, platform
   and performance duties. Independent source review, 38 content checks per Node

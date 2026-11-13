@@ -45,9 +45,11 @@ Project and version evidence
   claims against official version-matched documentation/source and cite what was
   checked; otherwise mark the exact claim unverified. Do not silently refresh
   historical dates, change pins or install/replace an engine.
-- Check the recorded changes where relevant: 4.4 Shader default-texture methods
-  use Texture instead of Texture2D for engine-side arguments/returns; this does
-  not change shading-language sampler2D or texture(). The reference records
+- When a reference change concerns the requested API or a similarly named one,
+  explain whether it affects engine bindings or shader language and what that
+  means for the delivered implementation. For example, 4.4 Shader default-texture
+  methods use Texture instead of Texture2D for engine-side arguments/returns;
+  this does not change shading-language sampler2D or texture(). The reference records
   Shader Baker, SMAA 1x and stencil support in 4.5; glow before tonemapping with
   screen blending in 4.6; AreaLight3D, HDR output, CanvasItem line antialiasing
   feather removal and unclamped LinearToSRGB in 4.7. Re-check applicability to
@@ -189,9 +191,11 @@ Coordination and actual verification
   with game-studio-godot-gdscript-specialist; native compute offloading with
   game-studio-godot-gdextension-specialist. Redirect gameplay implementation to
   game-studio-gameplay-programmer while retaining shader work in this role.
-- Return named owner/task handoffs through the caller. No direct subagent tree is
-  required by this source role. Unavailable specialists remain explicit
-  dependencies; do not claim they executed or substitute a fabricated approval.
+- For work crossing domains, return the concrete specialist role from the owners
+  above and its task through the caller. State missing or unknown availability
+  honestly; retain that handoff instead of a generic owner label. No direct
+  subagent tree is required, and a handoff grants no new execution or write scope.
+  Do not claim a specialist executed or substitute a fabricated approval.
 - Search scripts with rg --glob "*.gd" and shaders with --glob "*.gdshader" or
   the actual resource extension, never a nonexistent gdscript type. Use actual
   tools/resources rather than retained-source runtime paths or Claude metadata.

@@ -1,0 +1,200 @@
+{
+  "date": "2026-11-13",
+  "status": "partial; four scoped passes and two output failures",
+  "scope": "Six original sequential native scenarios retaining five source requests; actual shader source, not renderer acceptance.",
+  "evidence": {
+    "manifest": {
+      "path": "/private/tmp/game-studio-a016-native-evidence-2yhb66sw/manifest.json",
+      "sha256": "16723b5ee1b3776ba0ccb1110691142ffea62ff21873e3b304f71d67a52cb2e5"
+    },
+    "independentReview": {
+      "path": "/private/tmp/game-studio-a016-adjudication-r_blid8s/review.md",
+      "sha256": "84e25557f5fadfed14c8d177338c6de767bca121a7cf9c9999957adfdca6b89f"
+    },
+    "independentManifest": {
+      "path": "/private/tmp/game-studio-a016-adjudication-r_blid8s/manifest.json",
+      "sha256": "c4b6833fa90c3e83df727031971bac361af5bd12c35ef14de171f20b8b4d421d"
+    }
+  },
+  "rootVerification": {
+    "nativeManifestFiles": 405,
+    "independentManifestFiles": 8,
+    "currentWorkspaceEntries": 5396,
+    "manual": "All six actual child finals plus shader/material artifacts; two source-output omissions independently agree with original spec.",
+    "independentPublicTraces": 12
+  },
+  "sourceFreeze": {
+    "path": "/private/tmp/game-studio-a016-native-freeze-ynvx45xf/source",
+    "sha256": "a15c10f159ecef602dc1e7e5f80e4b8e212f7b78720ed31eb0a18fc32d1ebc4e",
+    "provenance": "a3a73101b0151a153e150c9e52234cb1668db062 plus4reviewedfiles identical to1ca661c runtime/host/fixtures; only1ca publicevidence addition excluded"
+  },
+  "cases": [
+    {
+      "case": "shader-dissolve",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "threadId": "01a1d379-84e8-7563-a6f0-59c75d0a8a6f",
+      "childIds": [
+        "01a1d379-af97-7b63-b449-53657bf904aa"
+      ],
+      "archiveSha256": "d260fe96785eece5f081316ec478785f3129075c4513aa437a6f8694589bbe77",
+      "roleSha256": "15d243eba47259a72c636be17e5ba09fbf8405b9f371aa417a59af1d552dc347",
+      "effects": {
+        "preservedFiles": 729,
+        "changed": [],
+        "allowedChangedPaths": [],
+        "outOfScopeChanges": [],
+        "added": [
+          "shaders",
+          "shaders/spatial_enemy_dissolve.gdshader"
+        ],
+        "outsideScope": []
+      },
+      "verdict": "selected PASS",
+      "reason": "Actual Godot material shader preserves source appearance and explicit dissolve endpoints; compilation/rendering pending.",
+      "artifacts": {
+        "shaders/spatial_enemy_dissolve.gdshader": "408b486b84cde93ecdf4eff1ef996c2fad8fbecc5dac4c9461e2a3ff496b99cd"
+      }
+    },
+    {
+      "case": "shader-hlsl-material",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "threadId": "01a1d37c-1dd0-7b30-aab7-c535725c5138",
+      "childIds": [
+        "01a1d37c-57c2-7ce2-8803-5d1ef74c46b2"
+      ],
+      "archiveSha256": "d260fe96785eece5f081316ec478785f3129075c4513aa437a6f8694589bbe77",
+      "roleSha256": "15d243eba47259a72c636be17e5ba09fbf8405b9f371aa417a59af1d552dc347",
+      "effects": {
+        "preservedFiles": 730,
+        "changed": [],
+        "allowedChangedPaths": [],
+        "outOfScopeChanges": [],
+        "added": [
+          "shaders",
+          "shaders/spatial_enemy_dissolve.gdshader"
+        ],
+        "outsideScope": []
+      },
+      "verdict": "selected PASS",
+      "reason": "Supplied intent genuinely calls for a material; authors Godot shader instead of HLSL, preserving consumer files.",
+      "artifacts": {
+        "shaders/spatial_enemy_dissolve.gdshader": "01b8e2e295f5149b8bbb90e9d5bb10287d10aaf416305685b2847978d93d100d"
+      }
+    },
+    {
+      "case": "shader-compute-intent",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "threadId": "01a1d37f-0d5c-7a33-bb23-0ccde715b432",
+      "childIds": [
+        "01a1d37f-54b1-74c0-8ce1-c9af044e91b5"
+      ],
+      "archiveSha256": "d260fe96785eece5f081316ec478785f3129075c4513aa437a6f8694589bbe77",
+      "roleSha256": "15d243eba47259a72c636be17e5ba09fbf8405b9f371aa417a59af1d552dc347",
+      "effects": {
+        "preservedFiles": 730,
+        "changed": [],
+        "allowedChangedPaths": [],
+        "outOfScopeChanges": [],
+        "added": [],
+        "outsideScope": []
+      },
+      "verdict": "narrow output FAIL",
+      "reason": "Correct reusable-mask compute requirement, Compatibility restriction and missing choices; specific GDExtension owner/task or availability handoff missing.",
+      "artifacts": {}
+    },
+    {
+      "case": "shader-texture-api-44",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "threadId": "01a1d381-4761-7143-a114-eb1cfdbb6ac8",
+      "childIds": [
+        "01a1d381-8646-7903-a493-d19d3e83f4f2"
+      ],
+      "archiveSha256": "d260fe96785eece5f081316ec478785f3129075c4513aa437a6f8694589bbe77",
+      "roleSha256": "15d243eba47259a72c636be17e5ba09fbf8405b9f371aa417a59af1d552dc347",
+      "effects": {
+        "preservedFiles": 727,
+        "changed": [],
+        "allowedChangedPaths": [],
+        "outOfScopeChanges": [],
+        "added": [
+          "shaders",
+          "shaders/spatial_debug_noise.gdshader"
+        ],
+        "outsideScope": []
+      },
+      "verdict": "narrow output FAIL",
+      "reason": "Correct sampled shader and actual reference reads; required explanation of engine-side Texture2D/Texture change versus unchanged shader syntax missing. This is not a shader API error.",
+      "artifacts": {
+        "shaders/spatial_debug_noise.gdshader": "44368adbc4b7e0424b28092416694061f8d4110cc7085d16d6ed5efc0efa37a7"
+      }
+    },
+    {
+      "case": "shader-water-lod",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "threadId": "01a1d384-3a65-7363-aa6a-837d3446dbf8",
+      "childIds": [
+        "01a1d384-83b2-7070-8804-345ff5d3816f"
+      ],
+      "archiveSha256": "d260fe96785eece5f081316ec478785f3129075c4513aa437a6f8694589bbe77",
+      "roleSha256": "15d243eba47259a72c636be17e5ba09fbf8405b9f371aa417a59af1d552dc347",
+      "effects": {
+        "preservedFiles": 729,
+        "changed": [
+          "shaders/spatial_env_water.gdshader"
+        ],
+        "allowedChangedPaths": [
+          "shaders/spatial_env_water.gdshader"
+        ],
+        "outOfScopeChanges": [],
+        "added": [
+          "shaders/spatial_env_water_far.gdshader",
+          "materials/water_far.tres"
+        ],
+        "outsideScope": []
+      },
+      "verdict": "selected PASS",
+      "reason": "Actual near edit retains five parameters/eight reads, moves affine UV work; separate far shader uses two reads and mip filter with correct material. Consumers/selector/distance unchanged; no GPU improvement inferred.",
+      "artifacts": {
+        "materials/water_far.tres": "d94702b28e34b89bd59bc182c2f82bceae51511c40a6ee348a8a0570c664d21a",
+        "shaders/spatial_env_water.gdshader": "686099c5e9e89f71b801577a3065f00d3372e6d53d58b66863ac094084bd762b",
+        "shaders/spatial_env_water_far.gdshader": "b2f231d3107d7489d823858184da87393286314cc79e0e710cf3c524b107b9c1"
+      }
+    },
+    {
+      "case": "shader-glow-46-unknown",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "threadId": "01a1d387-feef-76d3-a5a0-aca9b1bffda4",
+      "childIds": [
+        "01a1d388-48bc-70d2-8675-e50d28a5d8b9"
+      ],
+      "archiveSha256": "d260fe96785eece5f081316ec478785f3129075c4513aa437a6f8694589bbe77",
+      "roleSha256": "15d243eba47259a72c636be17e5ba09fbf8405b9f371aa417a59af1d552dc347",
+      "effects": {
+        "preservedFiles": 729,
+        "changed": [],
+        "allowedChangedPaths": [],
+        "outOfScopeChanges": [],
+        "added": [],
+        "outsideScope": []
+      },
+      "verdict": "selected PASS",
+      "reason": "Read-only true questions, renderer/environment and4.6 glow processing explanation. Installed version, shared-resource choice and tuning remain unresolved.",
+      "artifacts": {}
+    }
+  ],
+  "host": "Actual full named-role instructions and inherited settings observed; native0/wrapper3 means awaiting manual review, not automatic pass. No engine/GPU or new Hook trust.",
+  "preservation": "Original failures, wrong-path read, URL/search failures, truncated outputs and stderr remain. No old generated artifact repaired.",
+  "pending": [
+    "Same-input output-contract retries",
+    "Actual shader compile/render and screenshots",
+    "Mip import/near-far selector/material synchronization",
+    "Target GPU measurement, approved glow tuning, full shader/particle/compositor/VisualShader coverage",
+    "Desktop and complete-role acceptance"
+  ]
+}

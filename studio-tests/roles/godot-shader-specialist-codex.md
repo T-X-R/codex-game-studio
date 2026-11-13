@@ -72,8 +72,10 @@ Explain that Godot materials use .gdshader, not HLSL, and supply the equivalent
 material approach for the given dissolve intent: noise threshold, discard and
 edge emission where appropriate. If actual compute is intended, preserve that
 requirement as a separate RenderingDevice path; Compatibility cannot provide
-it. Route compute offloading to the Godot GDExtension specialist through the
-caller, marking unavailability honestly. Do not silently turn a confirmed
+it. Return game-studio-godot-gdextension-specialist and its compute-offloading
+assessment task through the caller, marking missing or unknown availability
+honestly. This conditional handoff does not authorize dispatch, renderer changes
+or implementation. Do not silently turn a confirmed
 compute requirement into an unrelated fragment-only implementation or assume
 HLSL is Godot's compute format. An unresolved material-versus-compute choice can
 block dependent edits without preventing a clearly qualified explanation.
@@ -83,9 +85,10 @@ block dependent edits without preventing a clearly qualified explanation.
 > Use `texture()` with a sampler2D to sample the noise texture in the shader.
 
 Observe actual reference reads in order: VERSION.md, breaking-changes.md and
-modules/rendering.md before code. Preserve the source4.4 distinction: Shader
-set_default_texture_parameter/get_default_texture_parameter changed engine-side
-Texture2D argument/return types to Texture, not shading-language syntax. Use
+modules/rendering.md before code. Explain the source4.4 distinction and its impact
+on the current implementation: Shader set_default_texture_parameter/
+get_default_texture_parameter changed engine-side Texture2D argument/return types
+to Texture, leaving the requested shading-language sampling unchanged. Use
 uniform sampler2D noise_texture and texture(noise_texture, UV); do not invent a
 replacement sampling syntax for4.4–4.6. Report unknown installed-editor evidence
 without treating verified documentation as a local compile. Actual material
