@@ -1,0 +1,350 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "scenario": "inventory-configured-input",
+  "method": "Read-only independent audit of retained actual native and root-observer evidence; no native/build/engine/test rerun.",
+  "judgments": {
+    "selectedOriginalSourceCore": "PASS",
+    "configuredInputAndRuntimeBehavior": "PASS",
+    "fullConfiguredFixture": "FAIL",
+    "failure": "WRITE_SCOPE_TRANSIENT_ROOT_EXPORT",
+    "allUiProgrammerSourceCases": "NOT ASSESSED"
+  },
+  "scope": "Selected source Case 1 inventory implementation core plus explicit configured initial focus/remappable-input addition, on actual Godot 4.7.2. This is not all five original cases or original Godot 4.6 case proof.",
+  "sessions": {
+    "parent": {
+      "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T09-40-30-01a1d290-3df6-72e2-a080-86b5ceeb3b03.jsonl",
+      "sha256": "0970b592bb2a4ad0935d1d4c9f8d252307be53e54f5922e86fdc1fd87eebfb2d",
+      "publicTrace": "parent-public.json",
+      "threadId": "01a1d290-3df6-72e2-a080-86b5ceeb3b03"
+    },
+    "child": {
+      "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T09-40-45-01a1d290-75b5-7c41-a975-36953956566c.jsonl",
+      "sha256": "1ba82d3d2114d2c1cbe18671686e4f76fd82780c99ce6b375c878e7a7795fec6",
+      "publicTrace": "child-public.json",
+      "threadId": "01a1d290-75b5-7c41-a975-36953956566c"
+    }
+  },
+  "nativeRole": {
+    "actualRole": "game-studio-ui-programmer",
+    "actualChildCount": 1,
+    "publicSpawn": {
+      "task_name": "inventory_ui",
+      "agent_type": "game-studio-ui-programmer",
+      "fork_turns": "all"
+    },
+    "roleInstructionsExactMatch": true,
+    "inheritedParentAndChild": {
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "approvalPolicy": "on-request",
+      "sandbox": "workspace-write",
+      "networkAccess": false
+    },
+    "parentDirectWorkCommands": 0,
+    "childToolBatches": 22,
+    "childDelegations": 0,
+    "opaqueAssignmentMessage": "NOT ASSESSED: exact encrypted message was not decoded; actual public child instructions/input/commands/results independently inspected.",
+    "threeExplicitEscalatedEngineCommands": "Actual render, final runtime checks and final import used require_escalated. They were not default-sandbox passes; inherited settings were otherwise unchanged.",
+    "temporaryProfileRemoved": true
+  },
+  "integrity": "integrity-audit.json",
+  "preservation": {
+    "beforeFiles": 570,
+    "nativeAfterFiles": 635,
+    "observerBeforeEqualsNativeAfter": true,
+    "observerFrozenFiles": 635,
+    "observerAfterFiles": 645,
+    "originalFileChanges": 0,
+    "nativeAdded": 65,
+    "observerAdded": 10,
+    "everyRecordedFileHashRecomputed": true,
+    "archiveInstalledFilesMatched": 207,
+    "cacheExclusions": [
+      ".git",
+      ".godot"
+    ],
+    "limitation": "Snapshots prove recorded file preservation, not all transient writes or engine effects outside the project. Public tool trace was additionally inspected."
+  },
+  "coldOpen": {
+    "status": "PASS",
+    "observerSource": "workspace/tests/ui_inventory_observer.gd",
+    "ordering": "await record(initial) precedes pointer/click and both manual slot0.grab_focus calls; implementation independently schedules Slot0 focus in _ready.",
+    "initialTickMs": 528,
+    "slot0Focus": true,
+    "selectionCommands": [],
+    "details": "",
+    "selectionVisual": "Initial occupied slots use normal background, not selected green; independently viewed initial.png.",
+    "mainSceneLimitation": "Observer loads the actual main-scene resource via change_scene_to_file in a fresh process; separately launched ordinary application entrypoint was not observed."
+  },
+  "states": [
+    {
+      "state": "initial",
+      "ticksMs": 528,
+      "commands": [],
+      "focus": [
+        "Slot0"
+      ],
+      "details": "",
+      "screenshot": "production/qa/evidence/observer-12d6e049-0f59-4af1-8819-32608cd80318/initial.png",
+      "captureError": 0,
+      "visuallyReviewed": true
+    },
+    {
+      "state": "pointer-over-first-slot",
+      "ticksMs": 536,
+      "commands": [],
+      "focus": [
+        "Slot0"
+      ],
+      "details": "",
+      "screenshot": "production/qa/evidence/observer-12d6e049-0f59-4af1-8819-32608cd80318/pointer-over-first-slot.png",
+      "captureError": 0,
+      "visuallyReviewed": true
+    },
+    {
+      "state": "first-slot-mouse-activation",
+      "ticksMs": 546,
+      "commands": [
+        0
+      ],
+      "focus": [
+        "Slot0"
+      ],
+      "details": "Potion x2",
+      "screenshot": "production/qa/evidence/observer-12d6e049-0f59-4af1-8819-32608cd80318/first-slot-mouse-activation.png",
+      "captureError": 0,
+      "visuallyReviewed": true
+    },
+    {
+      "state": "game-side-quantity-change",
+      "ticksMs": 553,
+      "commands": [
+        0
+      ],
+      "focus": [
+        "Slot0"
+      ],
+      "details": "Potion x7",
+      "screenshot": "production/qa/evidence/observer-12d6e049-0f59-4af1-8819-32608cd80318/game-side-quantity-change.png",
+      "captureError": 0,
+      "visuallyReviewed": true
+    },
+    {
+      "state": "keyboard-right-and-accept",
+      "ticksMs": 565,
+      "commands": [
+        0,
+        1
+      ],
+      "focus": [
+        "Slot1"
+      ],
+      "details": "Key x1",
+      "screenshot": "production/qa/evidence/observer-12d6e049-0f59-4af1-8819-32608cd80318/keyboard-right-and-accept.png",
+      "captureError": 0,
+      "visuallyReviewed": true
+    },
+    {
+      "state": "gamepad-right-focus-before-confirm",
+      "ticksMs": 574,
+      "commands": [
+        0,
+        1
+      ],
+      "focus": [
+        "Slot1"
+      ],
+      "details": "Key x1",
+      "screenshot": "production/qa/evidence/observer-12d6e049-0f59-4af1-8819-32608cd80318/gamepad-right-focus-before-confirm.png",
+      "captureError": 0,
+      "visuallyReviewed": true
+    },
+    {
+      "state": "gamepad-accept",
+      "ticksMs": 583,
+      "commands": [
+        0,
+        1,
+        1
+      ],
+      "focus": [
+        "Slot1"
+      ],
+      "details": "Key x1",
+      "screenshot": "production/qa/evidence/observer-12d6e049-0f59-4af1-8819-32608cd80318/gamepad-accept.png",
+      "captureError": 0,
+      "visuallyReviewed": true
+    },
+    {
+      "state": "empty-slot-activation",
+      "ticksMs": 593,
+      "commands": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "focus": [
+        "Slot2"
+      ],
+      "details": "",
+      "screenshot": "production/qa/evidence/observer-12d6e049-0f59-4af1-8819-32608cd80318/empty-slot-activation.png",
+      "captureError": 0,
+      "visuallyReviewed": true
+    },
+    {
+      "state": "locked-slot-click",
+      "ticksMs": 602,
+      "commands": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "focus": [
+        "Slot3"
+      ],
+      "details": "",
+      "screenshot": "production/qa/evidence/observer-12d6e049-0f59-4af1-8819-32608cd80318/locked-slot-click.png",
+      "captureError": 0,
+      "visuallyReviewed": true
+    }
+  ],
+  "sourceCore": {
+    "fiveStates": "PASS: actual default/hover/selected/empty/locked images and real controls; correct precedence and supplied palette.",
+    "layout": "PASS for supplied 640x480: four 151x64 slots with 12px gaps, title and Details; responsive/locale/font structural checks executed separately.",
+    "dataOwnership": "PASS: UI calls request_select, consumes selection_requested and changed, never mutates authoritative slots. Runtime check and observer command/quantity sequence corroborate.",
+    "input": "PASS for injected actual mouse/key/gamepad events and existing remappable actions. Cold focus causes no selection; navigation/accept operate through Godot Controls.",
+    "localization": "PASS for provided English resource; supplemental synthetic Arabic/RTL, long-label equal widths, inherited Theme font size and viewport resize assertions executed. Not complete localization visual acceptance.",
+    "documentation": "Class ownership and non-obvious focus/selection transition comments retained; no extra exported public UI methods introduced.",
+    "designOwnership": "Approved architecture/spec preserved; no invented gameplay, sound or animation. No consequential unresolved choice in this supplied fixture.",
+    "engineReference": "Project pin and VERSION read before implementation; missing UI modules explicitly discovered, exact installed engine API exported/read as substitute. Export crash and output path violation remain failures.",
+    "screenshots": "All nine independent screenshots manually reviewed; capture_error=0 for each.",
+    "lockedFocusObservation": "Godot reports locked Slot3 focused after mouse click but disabled=true and commands unchanged. Spec only requires locked disabled/no activation; does not prohibit focus on disabled controls."
+  },
+  "actualChecks": {
+    "finalImport": {
+      "status": "PASS",
+      "processExitCode": 0,
+      "engineErrors": false,
+      "evidence": "workspace/production/qa/evidence/inventory-ui-20261113-import-final/report.json"
+    },
+    "finalRuntime": {
+      "status": "PASS",
+      "executed": 49,
+      "passed": 49,
+      "failed": 0,
+      "processExitCode": 0,
+      "wrapperExitCode": 0,
+      "engineErrors": false,
+      "evidence": "workspace/production/qa/evidence/inventory-ui-20261113-checks-final-data/results.json"
+    },
+    "nativeRender": {
+      "status": "PASS for scoped observed behavior",
+      "processExitCode": 0,
+      "screenshots": 9
+    },
+    "independentRender": {
+      "status": "PASS for scoped observed behavior",
+      "processExitCode": 0,
+      "stderr": "",
+      "display": "macOS",
+      "renderer": "OpenGL 4.1 Metal 89.4 Compatibility Apple M4",
+      "screenshots": 9,
+      "execution": "observation/execution.json"
+    }
+  },
+  "failuresRetained": [
+    {
+      "kind": "scope",
+      "status": "FAIL",
+      "source": "child-public.json lines58/65/68",
+      "detail": "--dump-extension-api-with-docs emitted extension_api.json at project root; only two named source files, new tests/ui_* and fresh evidence paths were authorized. Child then moved it into evidence. Final absence does not erase transient write."
+    },
+    {
+      "kind": "engine",
+      "status": "FAIL",
+      "source": "child-public.json lines60/68",
+      "detail": "Offline API export produced JSON then signal11 shutdown crash, exit134; user/cache access errors recorded. Not a successful engine check."
+    },
+    {
+      "kind": "audit-script",
+      "status": "FAIL then fixed",
+      "source": "child-public.json lines72/75/77/80",
+      "detail": "Initial preservation script readdirSync empty path raised ENOENT; corrected to directory dot, then recorded570files."
+    },
+    {
+      "kind": "import",
+      "status": "FAIL then clean final rerun",
+      "detail": "First import process0 but engine errors for macOS certificates/editor settings/user snapshots; wrapper5."
+    },
+    {
+      "kind": "test-harness",
+      "status": "FAIL then fixed",
+      "detail": "First48 assertions:47passed/1failed because local parent font override did not inherit. Fixed test to assign Theme.default_font_size; UI source unchanged."
+    },
+    {
+      "kind": "wrapper",
+      "status": "FAIL then fixed",
+      "detail": "First test wrapper exit4 FILE_CONFLICT: test emitted into same fresh directory before wrapper could create it. Later fresh data and wrapper directories separated."
+    },
+    {
+      "kind": "engine",
+      "status": "FAIL then clean final rerun",
+      "detail": "Second48assertions allpassed but certificate engine error caused wrapper5/process0. Retained failed report."
+    },
+    {
+      "kind": "render",
+      "status": "FAIL then desktop render",
+      "detail": "Sandbox renderer process1/wrapper5 with empty diagnostics and no screenshot; actual cause not established beyond sandbox-context failure."
+    }
+  ],
+  "unassessed": [
+    "Physical keyboard, mouse and gamepad hardware",
+    "Screen-reader/live-region behavior",
+    "Human play acceptance",
+    "Full performance/nonblocking measurements",
+    "Visual clipping for all locales/font sizes/viewports",
+    "Remapping settings UI and arbitrary mappings beyond supplied action injection",
+    "Color-vision simulations and complete accessibility conformance",
+    "Original remaining source cases and Godot4.6-specific case",
+    "Exact opaque dispatch message contents",
+    "Global engine user/editor cache writes: no whole-machine before/after snapshot"
+  ],
+  "status": "partial",
+  "nativeRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-gqAyut",
+  "observerRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-observation-CuNc6d",
+  "rootVerification": {
+    "candidateArtifactsChecked": 674,
+    "actualRegularFilesChecked": 645,
+    "frozenNativeBeforeObserverFilesChecked": 635,
+    "preservedOriginals": 570,
+    "symlinks": 2,
+    "candidateSha256": "20390b481b6eaaad0f129b9e1ce3b8a2eedf4cdb76c770f8e1f438a067389389",
+    "manifestSha256": "234b0b57f493ac50369b71772bf7a1b600a6b8e1b3ce2323dfcae5b30e2a814f",
+    "rootVisualReview": [
+      "initial",
+      "gamepad-accept"
+    ],
+    "rootSourceReview": [
+      "observer initial ordering",
+      "actual source failure commands58/65",
+      "complete candidate findings; all9images/source/tests/tool traces reviewed by delegated auditor"
+    ],
+    "native": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-gqAyut",
+    "observation": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-observation-CuNc6d"
+  },
+  "independentReviewer": "architecture_decision_migration",
+  "frozenCandidate": {
+    "path": "/private/tmp/game-studio-ui-configured-audit-u4839dp0",
+    "candidateSha256": "20390b481b6eaaad0f129b9e1ce3b8a2eedf4cdb76c770f8e1f438a067389389",
+    "manifestSha256": "234b0b57f493ac50369b71772bf7a1b600a6b8e1b3ce2323dfcae5b30e2a814f"
+  },
+  "correction": {
+    "status": "PROPOSED; not applied or rebuilt while other native consumers are packing",
+    "scope": "Before engine/tool execution establish destinations for generated and temporary files; do not assume cwd controls output or move an unauthorized write afterward.",
+    "candidateRoleSha256": "1d86df9295f099f49b18f3094f196c1841ff251ba4f766cc424d3f652669e8f3",
+    "retry": "PENDING; no changed historical fixture or original result"
+  }
+}

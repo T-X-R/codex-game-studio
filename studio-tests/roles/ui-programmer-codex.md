@@ -10,8 +10,12 @@ Status: partial. The requirements below are the acceptance contract. Actual
 [empty-slot continuation](../../docs/evidence/ui-programmer-empty-2026-11-13.json)
 retain selected successes and full-fixture failures. A fresh
 [configured-input case](../../docs/evidence/ui-programmer-inputmap-2026-11-13.json)
-provides approved game-owned mappings and initial state; only its engine preflight
-is accepted so far. No complete role, desktop or physical-device pass is claimed.
+provides approved game-owned mappings and initial state. Its [native implementation
+and independent observation](../../docs/evidence/ui-programmer-configured-input-2026-11-13.json)
+pass the selected core, including cold-open focus without selection and actual
+injected keyboard/gamepad events. Final runtime checks pass 49/49; the complete
+fixture still FAILS a transient API export outside authorized paths. Original
+failures are retained. No complete role, desktop or physical-device pass is claimed.
 
 ## Translation and source fidelity
 
