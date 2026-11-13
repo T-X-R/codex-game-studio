@@ -1,0 +1,711 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "scenario": "inventory-configured-input",
+  "method": "Read-only source/public-call/hash/actual screenshot audit; no rerun, build or source change.",
+  "judgments": {
+    "fullConfiguredFixture": "FAIL",
+    "selectedSourceCore": "PARTIAL: implementation and native assertions corroborate core, independent empty activation conflicts",
+    "coldOpenFocusAndNoSelection": "PASS",
+    "originalSuccessfulRootExportRecurrence": "NOT OBSERVED in all visible public calls",
+    "preExecutionOutputDestinationInstruction": "FAIL_FAILED_ATTEMPT",
+    "confirmedNewUnauthorizedFileCreation": "NOT ESTABLISHED",
+    "allUiSourceCases": "NOT ASSESSED"
+  },
+  "nativeRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-tHtfnO",
+  "observerRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-observation-9NIOBY",
+  "sessions": {
+    "parent": {
+      "threadId": "01a1d2b6-11ea-7401-805c-902b0e192faa",
+      "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T10-21-49-01a1d2b6-11ea-7401-805c-902b0e192faa.jsonl",
+      "sha256": "fef5ea573f9ac59b5004a07ae388b7f71593e73ed539d242ce17c79687533397",
+      "publicTrace": "parent-public.json"
+    },
+    "child": {
+      "threadId": "01a1d2b6-516a-7233-84dc-2c1bbd2fec51",
+      "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T10-22-06-01a1d2b6-516a-7233-84dc-2c1bbd2fec51.jsonl",
+      "sha256": "5778480e652eec68fc73d083f0c741a72ac7c507a460d254e10a35298df87f81",
+      "publicTrace": "child-public.json"
+    }
+  },
+  "nativeRole": {
+    "name": "game-studio-ui-programmer",
+    "exactInstructionsInjected": true,
+    "parentWorkCommands": 0,
+    "children": 1,
+    "childExecBatches": 30,
+    "childFurtherDelegations": 0,
+    "explicitEscalationCalls": [
+      213,
+      228,
+      236
+    ],
+    "opaqueDispatchContents": "NOT ASSESSED"
+  },
+  "integrity": {
+    "before": {
+      "files": 574,
+      "badActual": [],
+      "symlinks": {
+        ".game-studio/node_modules/.bin/game-studio": "../@t-x-r/game-studio/dist/cli.js",
+        ".game-studio/node_modules/.bin/yaml": "../yaml/bin.mjs"
+      }
+    },
+    "after": {
+      "files": 658,
+      "badActual": [],
+      "symlinks": {
+        ".game-studio/node_modules/.bin/game-studio": "../@t-x-r/game-studio/dist/cli.js",
+        ".game-studio/node_modules/.bin/yaml": "../yaml/bin.mjs"
+      }
+    },
+    "observer-before": {
+      "files": 658,
+      "badActual": [],
+      "symlinks": {
+        ".game-studio/node_modules/.bin/game-studio": "../@t-x-r/game-studio/dist/cli.js",
+        ".game-studio/node_modules/.bin/yaml": "../yaml/bin.mjs"
+      }
+    },
+    "observer-after": {
+      "files": 668,
+      "badActual": [],
+      "symlinks": {
+        ".game-studio/node_modules/.bin/game-studio": "../@t-x-r/game-studio/dist/cli.js",
+        ".game-studio/node_modules/.bin/yaml": "../yaml/bin.mjs"
+      }
+    },
+    "inputByteIdentical": true,
+    "requestByteIdentical": true,
+    "nativeAfterEqualsObserverBefore": true,
+    "originalMissingOrChanged": [],
+    "observerChanged": [],
+    "observerAdded": [
+      "production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/empty-slot-activation.png",
+      "production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/first-slot-mouse-activation.png",
+      "production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/game-side-quantity-change.png",
+      "production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/gamepad-accept.png",
+      "production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/gamepad-right-focus-before-confirm.png",
+      "production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/initial.png",
+      "production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/keyboard-right-and-accept.png",
+      "production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/locked-slot-click.png",
+      "production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/observations.json",
+      "production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/pointer-over-first-slot.png"
+    ],
+    "archive": {
+      "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-tHtfnO/t-x-r-game-studio-0.1.0-alpha.0.tgz",
+      "sha256": "d32e8844cd743f9dd64ca666b5fa46e05efa3637a0e9b45453f0e4e90a1888de",
+      "matchedInstalledFiles": 209,
+      "mismatch": []
+    },
+    "roleExactInjected": true,
+    "roleSha256": "1d86df9295f099f49b18f3094f196c1841ff251ba4f766cc424d3f652669e8f3",
+    "lockArchiveIntegrityMatches": [
+      "node_modules/@t-x-r/game-studio"
+    ],
+    "observerSourceHashMismatches": [],
+    "uniqueParentChildSettings": [
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        },
+        "cwd": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-tHtfnO/UI game \u6d4b\u8bd5"
+      }
+    ]
+  },
+  "archiveComparison": {
+    "added": [
+      "package/resources/.codex/agents/game-studio-audio-director.toml",
+      "package/resources/.codex/agents/game-studio-economy-designer.toml"
+    ],
+    "removed": [],
+    "changed": [
+      "package/dist/engine-setup.js",
+      "package/resources/.codex/agents/game-studio-analytics-engineer.toml",
+      "package/resources/.codex/agents/game-studio-ui-programmer.toml"
+    ]
+  },
+  "observations": [
+    {
+      "state": "initial",
+      "ticksMs": 1176,
+      "commands": [],
+      "focus": [
+        "Slot0"
+      ],
+      "details": "",
+      "screenshot": "res://production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/initial.png",
+      "captureError": 0,
+      "visuallyReviewed": true,
+      "verdict": "PASS_SCOPED"
+    },
+    {
+      "state": "pointer-over-first-slot",
+      "ticksMs": 1206,
+      "commands": [],
+      "focus": [
+        "Slot0"
+      ],
+      "details": "",
+      "screenshot": "res://production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/pointer-over-first-slot.png",
+      "captureError": 0,
+      "visuallyReviewed": true,
+      "verdict": "PASS_SCOPED"
+    },
+    {
+      "state": "first-slot-mouse-activation",
+      "ticksMs": 1318,
+      "commands": [
+        0
+      ],
+      "focus": [
+        "Slot0"
+      ],
+      "details": "Potion x2",
+      "screenshot": "res://production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/first-slot-mouse-activation.png",
+      "captureError": 0,
+      "visuallyReviewed": true,
+      "verdict": "PASS_SCOPED"
+    },
+    {
+      "state": "game-side-quantity-change",
+      "ticksMs": 1337,
+      "commands": [
+        0
+      ],
+      "focus": [
+        "Slot0"
+      ],
+      "details": "Potion x7",
+      "screenshot": "res://production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/game-side-quantity-change.png",
+      "captureError": 0,
+      "visuallyReviewed": true,
+      "verdict": "PASS_SCOPED"
+    },
+    {
+      "state": "keyboard-right-and-accept",
+      "ticksMs": 1416,
+      "commands": [
+        0,
+        1
+      ],
+      "focus": [
+        "Slot1"
+      ],
+      "details": "Key x1",
+      "screenshot": "res://production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/keyboard-right-and-accept.png",
+      "captureError": 0,
+      "visuallyReviewed": true,
+      "verdict": "PASS_SCOPED"
+    },
+    {
+      "state": "gamepad-right-focus-before-confirm",
+      "ticksMs": 1470,
+      "commands": [
+        0,
+        1
+      ],
+      "focus": [
+        "Slot1"
+      ],
+      "details": "Key x1",
+      "screenshot": "res://production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/gamepad-right-focus-before-confirm.png",
+      "captureError": 0,
+      "visuallyReviewed": true,
+      "verdict": "PASS_SCOPED"
+    },
+    {
+      "state": "gamepad-accept",
+      "ticksMs": 1515,
+      "commands": [
+        0,
+        1,
+        1
+      ],
+      "focus": [
+        "Slot1"
+      ],
+      "details": "Key x1",
+      "screenshot": "res://production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/gamepad-accept.png",
+      "captureError": 0,
+      "visuallyReviewed": true,
+      "verdict": "PASS_SCOPED"
+    },
+    {
+      "state": "empty-slot-activation",
+      "ticksMs": 1587,
+      "commands": [
+        0,
+        1,
+        1
+      ],
+      "focus": [
+        "Slot2"
+      ],
+      "details": "Key x1",
+      "screenshot": "res://production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/empty-slot-activation.png",
+      "captureError": 0,
+      "visuallyReviewed": true,
+      "verdict": "FAIL"
+    },
+    {
+      "state": "locked-slot-click",
+      "ticksMs": 1654,
+      "commands": [
+        0,
+        1,
+        1
+      ],
+      "focus": [
+        "Slot3"
+      ],
+      "details": "Key x1",
+      "screenshot": "res://production/qa/evidence/observer-8cae91d5-93e1-4ecf-bbd8-d7f847bc54ef/locked-slot-click.png",
+      "captureError": 0,
+      "visuallyReviewed": true,
+      "verdict": "PASS_SCOPED",
+      "scope": "No additional command; retained prior Key details follow failed empty activation and do not validate clearing."
+    }
+  ],
+  "actualAssertions": [
+    {
+      "artifact": "workspace/production/qa/evidence/inventory-ui-20261113-a/checks-2.json",
+      "total": 29,
+      "passed": 24,
+      "failed": 5,
+      "failedChecks": [
+        "Mouse click requests selection",
+        "Game-side changed refreshes selected quantity",
+        "Empty activation requests selection and clears Details",
+        "Locked click sends no command",
+        "Activation follows a remapped ui_accept action"
+      ]
+    },
+    {
+      "artifact": "workspace/production/qa/evidence/inventory-ui-20261113-a/checks-3.json",
+      "total": 29,
+      "passed": 24,
+      "failed": 5,
+      "failedChecks": [
+        "Mouse click requests selection",
+        "Game-side changed refreshes selected quantity",
+        "Empty activation requests selection and clears Details",
+        "Locked click sends no command",
+        "Activation follows a remapped ui_accept action"
+      ]
+    },
+    {
+      "artifact": "workspace/production/qa/evidence/inventory-ui-20261113-a/checks-final.json",
+      "total": 29,
+      "passed": 29,
+      "failed": 0,
+      "failedChecks": []
+    },
+    {
+      "artifact": "workspace/production/qa/evidence/inventory-ui-20261113-a/checks-native-2.json",
+      "total": 29,
+      "passed": 29,
+      "failed": 0,
+      "failedChecks": []
+    },
+    {
+      "artifact": "workspace/production/qa/evidence/inventory-ui-20261113-a/checks-native.json",
+      "total": 29,
+      "passed": 24,
+      "failed": 5,
+      "failedChecks": [
+        "Mouse click requests selection",
+        "Game-side changed refreshes selected quantity",
+        "Empty activation requests selection and clears Details",
+        "Locked click sends no command",
+        "Activation follows a remapped ui_accept action"
+      ]
+    },
+    {
+      "artifact": "workspace/production/qa/evidence/inventory-ui-20261113-a/checks.json",
+      "total": 29,
+      "passed": 24,
+      "failed": 5,
+      "failedChecks": [
+        "Mouse click requests selection",
+        "Game-side changed refreshes selected quantity",
+        "Empty activation requests selection and clears Details",
+        "Locked click sends no command",
+        "Activation follows a remapped ui_accept action"
+      ]
+    }
+  ],
+  "failuresRetained": [
+    {
+      "kind": "prior-scope",
+      "run": "gqAyut",
+      "status": "FAIL_RETAINED",
+      "detail": "Successful transient root extension_api.json export later moved; preserved prior-failure.json. Not reproduced in new visible calls."
+    },
+    {
+      "kind": "output-destination-instruction",
+      "status": "FAIL",
+      "publicCall": 63,
+      "publicResult": 66,
+      "detail": "Relative log path caused failed user://production directory creation. Intended log and doctool files ultimately under authorized evidence. Failed attempt, not proof of successful unauthorized write."
+    },
+    {
+      "kind": "engine-cache",
+      "status": "ERROR_RETAINED_WITHIN_ALLOWED_CACHE_EXCEPTION",
+      "publicCall": 63,
+      "publicResult": 66,
+      "detail": "Refused editor_doc_cache-4.7.res deletion; do not classify allowed engine cache itself as unauthorized scope."
+    },
+    {
+      "kind": "import",
+      "status": "FAIL",
+      "artifact": "workspace/production/qa/evidence/inventory-ui-20261113-a/import/report.json",
+      "detail": "Process0/toolkit5: certificate and global editor-settings save errors. No actual global mutation established; project settings hashes unchanged."
+    },
+    {
+      "kind": "headless-tests",
+      "status": "FAIL_THEN_ASSERTIONS_PASS_WITH_ENGINE_ERROR",
+      "detail": "checks/checks-2/checks-3:24/29; diagnostic found64x64; corrected test viewport gives29/29 but certificate error leaves toolkit5. UI source unchanged."
+    },
+    {
+      "kind": "render",
+      "status": "FAIL_THEN_SEPARATE_NATIVE_RENDER",
+      "artifact": "workspace/production/qa/evidence/inventory-ui-20261113-a/render-run/report.json",
+      "detail": "Sandbox renderer process1/toolkit5 with no screenshot. Subsequent explicitly escalated display render process0 with nine actual PNGs."
+    },
+    {
+      "kind": "native-tests",
+      "status": "FAIL_THEN_PASS",
+      "detail": "First rendered check24/29 from mouse-sequence failures. Final test uses viewport-local push_input and records29/29/process0. Retain both; no UI source changes."
+    },
+    {
+      "kind": "independent-observation",
+      "status": "FAIL_CAUSE_UNRESOLVED",
+      "detail": "empty-slot-activation keeps[0,1,1]/Key x1; Slot2 focus. Native-run observer differs([0,1,1,2]/empty), so overall runtime not cleanly revalidated."
+    },
+    {
+      "kind": "coverage",
+      "status": "NOT_ASSESSED",
+      "detail": "Parent-only font override plus geometry assertions do not establish descendant enlarged font; no current-run effective-font evidence."
+    },
+    {
+      "kind": "read-only-probe",
+      "status": "FAILED_ATTEMPT_RETAINED",
+      "publicCall": 103,
+      "detail": "Incorrect dist/commands glob produced shell no-matches error; later actual flat dist inspected. Nonmutating."
+    }
+  ],
+  "limits": [
+    "Physical keyboard/mouse/gamepad hardware",
+    "Human play acceptance",
+    "Screen reader/live accessibility behavior",
+    "Scalable-font effective size and complete locale/viewport visual coverage",
+    "Complete accessibility/color-vision assessment",
+    "Performance/nonblocking measurements",
+    "All remaining original role cases and original Godot4.6-specific case",
+    "Codex desktop native-role execution",
+    "Whole-machine cache/editor-config before/after state",
+    "Root cause of independent empty-click disagreement",
+    "Exact opaque dispatch messages"
+  ],
+  "hostResults": {
+    "nativeProcessExitCode": 0,
+    "nativeHostWrapperExitCode": 3,
+    "independentEngineExitCode": 0,
+    "observerHostWrapperExitCode": 3,
+    "automatedSemanticPass": false
+  },
+  "reviewer": "architecture_decision_migration",
+  "details": "findings.md",
+  "status": "partial",
+  "rootVerification": {
+    "candidateArtifactsChecked": 696,
+    "actualRegularFilesChecked": 668,
+    "frozenNativeBeforeObserverFilesChecked": 658,
+    "preservedOriginals": 574,
+    "symlinks": 2,
+    "candidateSha256": "6046f216462df2611b004f9002800b4d5734ee3ea98377f2e8e29436258e3a36",
+    "manifestSha256": "b9433c4b818e35964b7afe7658ebe727a5aff3992e35535f0c6e18c7415bf524",
+    "rootVisualReview": [
+      "initial",
+      "empty-slot-activation"
+    ],
+    "rootSourceReview": [
+      "observer initial ordering",
+      "actual output-scope call63 and result66 independently read",
+      "complete candidate findings; all9images/source/tests/tool traces reviewed by delegated auditor"
+    ],
+    "native": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-tHtfnO",
+    "observation": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-observation-9NIOBY",
+    "installedArchiveMembersChecked": 209,
+    "sameRawInputAndRequest": true,
+    "sameInputScope": "Owner input bytes and final natural user request; generated workspace/profile/context metadata differ."
+  },
+  "candidate": {
+    "directory": "/private/tmp/game-studio-ui-output-audit-8rz8xx7y",
+    "sha256": "6046f216462df2611b004f9002800b4d5734ee3ea98377f2e8e29436258e3a36",
+    "manifestSha256": "b9433c4b818e35964b7afe7658ebe727a5aff3992e35535f0c6e18c7415bf524"
+  },
+  "scope": "A040 configured-input output-path retry only; full fixture FAIL",
+  "followupDiagnostic": {
+    "directory": "/private/tmp/game-studio-ui-input-diagnostic-z50e5jsv",
+    "manifestSha256": "ff33af0f616fa0b6966ca6aaebf9a53453f71d292e75a5e522fcea2bdb52ebd1",
+    "frozenFilesChecked": 62,
+    "analysisSha256": "5b6203e70ecbb421681718111c5776396344cc9bb5d354d51a298c788467e634",
+    "result": {
+      "verdict": "INCONCLUSIVE_FOR_ORIGINAL_FAILURE",
+      "sourceCodeUnchanged": {
+        "project.godot": true,
+        "project.yaml": true,
+        "src/inventory_model.gd": true,
+        "src/inventory_model.gd.uid": true,
+        "src/ui/inventory_screen.gd": true,
+        "src/ui/inventory_screen.tscn": true,
+        "src/ui/inventory_screen.gd.uid": true,
+        "i18n/en.po": true,
+        "tests/ui_inventory_observer.gd": true,
+        "tests/ui_inventory_checks.gd": true
+      },
+      "allInputHashesMatch": true,
+      "plannedGroups": 1,
+      "executedGroups": 1,
+      "processes": [
+        "import",
+        "comparison"
+      ],
+      "retries": 0,
+      "routes": [
+        {
+          "route": "parse_original",
+          "initial": {
+            "requests": [],
+            "details": "",
+            "environment": {
+              "content_scale_factor": 1.0,
+              "content_scale_mode": 0,
+              "content_scale_size": "(640, 480)",
+              "content_scale_stretch": 0,
+              "final_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "focused": "/root/InventoryScreen/Layout/Slots/Slot0",
+              "hovered": "",
+              "input_mouse": "(872.0, 132.0)",
+              "screen_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "stretch_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "viewport_mouse": "(872.0, 132.0)",
+              "viewport_visible_rect": "[P: (0.0, 0.0), S: (640.0, 480.0)]",
+              "window_position": "(2248, 3578)",
+              "window_size": "(640, 480)"
+            }
+          },
+          "empty": {
+            "requests": [
+              0,
+              1,
+              1,
+              2
+            ],
+            "details": "",
+            "environment": {
+              "content_scale_factor": 1.0,
+              "content_scale_mode": 0,
+              "content_scale_size": "(640, 480)",
+              "content_scale_stretch": 0,
+              "final_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "focused": "/root/InventoryScreen/Layout/Slots/Slot2",
+              "hovered": "/root/InventoryScreen/Layout/Slots/Slot2",
+              "input_mouse": "(872.0, 132.0)",
+              "screen_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "stretch_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "viewport_mouse": "(872.0, 132.0)",
+              "viewport_visible_rect": "[P: (0.0, 0.0), S: (640.0, 480.0)]",
+              "window_position": "(2248, 3578)",
+              "window_size": "(640, 480)"
+            }
+          },
+          "emptyGuiMousePositions": [
+            {
+              "kind": "InputEventMouseMotion",
+              "pressed": false,
+              "local": "(75.5, 32.0)",
+              "control": "/root/InventoryScreen/Layout/Slots/Slot2"
+            },
+            {
+              "kind": "InputEventMouseButton",
+              "pressed": true,
+              "local": "(75.5, 32.0)",
+              "control": "/root/InventoryScreen/Layout/Slots/Slot2"
+            },
+            {
+              "kind": "InputEventMouseButton",
+              "pressed": false,
+              "local": "(75.5, 32.0)",
+              "control": "/root/InventoryScreen/Layout/Slots/Slot2"
+            }
+          ],
+          "emptySignals": [
+            "button_down",
+            "pressed",
+            "button_up"
+          ]
+        },
+        {
+          "route": "parse_final_transform",
+          "initial": {
+            "requests": [],
+            "details": "",
+            "environment": {
+              "content_scale_factor": 1.0,
+              "content_scale_mode": 0,
+              "content_scale_size": "(640, 480)",
+              "content_scale_stretch": 0,
+              "final_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "focused": "/root/InventoryScreen/Layout/Slots/Slot0",
+              "hovered": "",
+              "input_mouse": "(872.0, 132.0)",
+              "screen_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "stretch_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "viewport_mouse": "(872.0, 132.0)",
+              "viewport_visible_rect": "[P: (0.0, 0.0), S: (640.0, 480.0)]",
+              "window_position": "(2248, 3578)",
+              "window_size": "(640, 480)"
+            }
+          },
+          "empty": {
+            "requests": [
+              0,
+              1,
+              1,
+              2
+            ],
+            "details": "",
+            "environment": {
+              "content_scale_factor": 1.0,
+              "content_scale_mode": 0,
+              "content_scale_size": "(640, 480)",
+              "content_scale_stretch": 0,
+              "final_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "focused": "/root/InventoryScreen/Layout/Slots/Slot2",
+              "hovered": "/root/InventoryScreen/Layout/Slots/Slot2",
+              "input_mouse": "(872.0, 132.0)",
+              "screen_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "stretch_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "viewport_mouse": "(872.0, 132.0)",
+              "viewport_visible_rect": "[P: (0.0, 0.0), S: (640.0, 480.0)]",
+              "window_position": "(2248, 3578)",
+              "window_size": "(640, 480)"
+            }
+          },
+          "emptyGuiMousePositions": [
+            {
+              "kind": "InputEventMouseMotion",
+              "pressed": false,
+              "local": "(75.5, 32.0)",
+              "control": "/root/InventoryScreen/Layout/Slots/Slot2"
+            },
+            {
+              "kind": "InputEventMouseButton",
+              "pressed": true,
+              "local": "(75.5, 32.0)",
+              "control": "/root/InventoryScreen/Layout/Slots/Slot2"
+            },
+            {
+              "kind": "InputEventMouseButton",
+              "pressed": false,
+              "local": "(75.5, 32.0)",
+              "control": "/root/InventoryScreen/Layout/Slots/Slot2"
+            }
+          ],
+          "emptySignals": [
+            "button_down",
+            "pressed",
+            "button_up"
+          ]
+        },
+        {
+          "route": "push_local",
+          "initial": {
+            "requests": [],
+            "details": "",
+            "environment": {
+              "content_scale_factor": 1.0,
+              "content_scale_mode": 0,
+              "content_scale_size": "(640, 480)",
+              "content_scale_stretch": 0,
+              "final_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "focused": "/root/InventoryScreen/Layout/Slots/Slot0",
+              "hovered": "",
+              "input_mouse": "(872.0, 132.0)",
+              "screen_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "stretch_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "viewport_mouse": "(872.0, 132.0)",
+              "viewport_visible_rect": "[P: (0.0, 0.0), S: (640.0, 480.0)]",
+              "window_position": "(2248, 3578)",
+              "window_size": "(640, 480)"
+            }
+          },
+          "empty": {
+            "requests": [
+              0,
+              1,
+              1,
+              2
+            ],
+            "details": "",
+            "environment": {
+              "content_scale_factor": 1.0,
+              "content_scale_mode": 0,
+              "content_scale_size": "(640, 480)",
+              "content_scale_stretch": 0,
+              "final_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "focused": "/root/InventoryScreen/Layout/Slots/Slot2",
+              "hovered": "/root/InventoryScreen/Layout/Slots/Slot2",
+              "input_mouse": "(872.0, 132.0)",
+              "screen_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "stretch_transform": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+              "viewport_mouse": "(872.0, 132.0)",
+              "viewport_visible_rect": "[P: (0.0, 0.0), S: (640.0, 480.0)]",
+              "window_position": "(2248, 3578)",
+              "window_size": "(640, 480)"
+            }
+          },
+          "emptyGuiMousePositions": [
+            {
+              "kind": "InputEventMouseMotion",
+              "pressed": false,
+              "local": "(75.5, 32.0)",
+              "control": "/root/InventoryScreen/Layout/Slots/Slot2"
+            },
+            {
+              "kind": "InputEventMouseButton",
+              "pressed": true,
+              "local": "(75.5, 32.0)",
+              "control": "/root/InventoryScreen/Layout/Slots/Slot2"
+            },
+            {
+              "kind": "InputEventMouseButton",
+              "pressed": false,
+              "local": "(75.5, 32.0)",
+              "control": "/root/InventoryScreen/Layout/Slots/Slot2"
+            }
+          ],
+          "emptySignals": [
+            "button_down",
+            "pressed",
+            "button_up"
+          ]
+        }
+      ],
+      "finalTransformsIdentity": true,
+      "originalFailurePreserved": true,
+      "runtimePatchProposed": false,
+      "explanation": "No coordinate discrepancy or UI logic failure reproduced in this fixed group. All three methods deliver Slot2 local (75.5,32) down/up and pressed, yielding request2/empty Details. Cannot infer old root cause or close original failing acceptance."
+    },
+    "rootReview": "Root read complete experiment README and verified all frozen file hashes. Three route experiments and screenshots reviewed by independent architecture agent; no demonstrated root cause or runtime patch, original failed observation unchanged."
+  }
+}

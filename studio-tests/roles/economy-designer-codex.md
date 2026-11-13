@@ -10,7 +10,7 @@ failure. Root reconciled 109 frozen artifacts, 2,864 preserved originals and the
 single authorized new document. Gold arithmetic and ownership pass their scoped
 review, but its actual first write skipped the complete skeleton and combined
 several sections. A general persistence correction is implemented; its same-input
-retry is assessed separately. Full choices/continuations, desktop, engine,
+[retry](../../docs/evidence/economy-designer-retry-2026-11-13.json) saves the full skeleton and first six sections individually, but still batches the last two. Full choices/continuations, desktop, engine,
 simulation, telemetry and player acceptance remain open. No director gate belongs
 to this role; structural validation is not behavioral PASS.
 
