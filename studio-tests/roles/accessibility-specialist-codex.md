@@ -6,9 +6,10 @@ Migration row **A001**, verified at tasks/migration-inventory.md:107. Sources:
 `.codex/agents/game-studio-accessibility-specialist.toml`.
 
 Status: partial. [Native evidence](../../docs/evidence/accessibility-specialist-native-2026-11-13.json)
-records seven initial cases and an unchanged-input ownership retry. Latest selected
-cases are six PASS and one gate-attribution FAIL; both original failures remain.
-A further gate-basis correction awaits native retest. Actual assistive technology,
+records seven initial cases and an unchanged-input ownership retry. A further
+[gate-basis retry](../../docs/evidence/accessibility-specialist-gate-retry-2026-11-13.json)
+passes its selected case: latest per-scenario outcomes are seven PASS, while both
+original failures remain. These scenarios span recorded role/archive revisions. Actual assistive technology,
 game runtime, certification and desktop acceptance remain open. No director gate.
 
 ## Source review and translation

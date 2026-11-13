@@ -10,8 +10,8 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   preserving telemetry, funnel, experiment, dashboard, privacy and design-insight
   responsibilities, including assigned non-game pipeline work. All six source
   scenarios are mapped; build/content and exact installed-byte checks pass. Native
-  cases are unrun because model workers reached the account usage limit. This is
-  content acceptance only, not a completed role migration.
+  outcomes require separate recorded semantic acceptance. This is content
+  acceptance only, not a completed role migration.
 - Markdown section writes now have [integrated evidence](evidence/md-section-writers-2026-11-13.json):
   replace, insert-before and set-field preserve the source transformations, with
   explicit dry-run and project-scoped atomic writes. Build/typecheck/content/pack
@@ -24,9 +24,12 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   typecheck, content lint, packed installation and 293 tests on each Node 24/26
   pass. [Seven initial native cases and an ownership retry](evidence/accessibility-specialist-native-2026-11-13.json)
   retain two original failures. The same-input flow retry passes; latest selected
-  cases total six passes and one gate-attribution failure. A reviewed distinction
-  between studio and normative gate evidence awaits native retest. Root checked
-  3,970 initial regular files plus 567 unchanged retry files. The catalog now has
+  cases initially totaled six passes and one gate-attribution failure. The
+  [unchanged-input gate retry](evidence/accessibility-specialist-gate-retry-2026-11-13.json)
+  now separates studio gaps from unknown normative evidence correctly. Root checked
+  its 569 preserved originals and sole authorized audit, in addition to 3,970 initial
+  regular files and 567 ownership-retry files. Latest seven selected scenarios pass
+  across recorded revisions; both historical failures and broader acceptance remain. The catalog now has
   sixteen partial Skills and fourteen partial roles, with no fully verified rows.
 - UX Designer now has a [source-reviewed native role](evidence/ux-designer-content-2026-11-13.json)
   preserving flow/interaction/IA/onboarding/feedback responsibilities, all seven
