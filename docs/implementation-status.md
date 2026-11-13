@@ -6,6 +6,31 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- [Godot shader](evidence/godot-shader-specialist-content-2026-11-13.json) and
+  [Godot C#](evidence/godot-csharp-specialist-content-2026-11-13.json) roles now
+  preserve their complete source authoring responsibilities and original five
+  cases each. Independent source/official-reference review, build/typecheck,
+  38 content checks per Node 24/26 and exact global/restored archive checks pass
+  for each integration. Native, renderer/GPU and .NET runtime acceptance remain
+  pending. Current catalog: 18 partial Skills/57 pending, 20 partial roles/29
+  pending, none fully verified.
+
+- [Four unchanged-input Godot retries](evidence/godot-specialist-native-retries-2026-11-13.json)
+  close the four selected failures below; their original evidence remains intact.
+  Root verified actual typed roles, full instructions and current recorded project
+  entries. The controlled runtime changes only the role. Latest six selected
+  scenarios have scoped passes across recorded revisions; whole-role, actual
+  subordinate delegation and engine/desktop coverage remain open.
+
+- [Five initial GDScript native cases](evidence/godot-gdscript-specialist-native-2026-11-13.json)
+  preserve all originals and create exactly the three authorized source artifacts.
+  Shader redirection and static async authoring pass selected checks; three outputs
+  omit source-required typing rationale, conditional native handoff or feature
+  introduction evidence. Those failures remain while unchanged-input retries and
+  separate real-engine verification proceed. The preceding integration at
+  [8b1b6d3](https://github.com/T-X-R/codex-game-studio/actions/runs/43370734777)
+  passes all seven CI jobs; later role additions require their own CI result.
+
 - The [GDScript specialist content](evidence/godot-gdscript-specialist-content-2026-11-13.json)
   is installed with its complete authoring, typing, async, scene/resource and
   version responsibilities. Independent review and actual global/restored archive
