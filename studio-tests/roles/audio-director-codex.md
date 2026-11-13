@@ -9,8 +9,11 @@ spec: `studio-tests/agents/leads/audio-director.md`. Targets:
 Status: partial. [Five original CLI scenarios](../../docs/evidence/audio-director-native-2026-11-13.json)
 record four selected passes and one UX-review ownership failure. Root reconciled
 96 frozen artifacts, 2,862 unchanged original regular files, inputs, archives and
-actual role traces. The ownership correction has a separate same-input retry in
-progress. Document persistence, actual technical arbitration, audio playback/
+actual role traces. The [same-input ownership retry](../../docs/evidence/audio-director-retry-2026-11-13.json)
+passes its selected boundary: the child returns UX review to its owner and limits
+its findings to audio controls and unassessed audibility. Root reconciled 28
+frozen artifacts and 573 unchanged originals; the original failure remains.
+Document persistence, actual technical arbitration, audio playback/
 measurement, engine integration and desktop remain unassessed. There is no audio
 director gate.
 

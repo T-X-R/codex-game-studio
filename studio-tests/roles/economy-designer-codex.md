@@ -4,11 +4,15 @@ Migration row **A009**. Source role: `.claude/agents/economy-designer.md`;
 original acceptance: `studio-tests/agents/operations/economy-designer.md`.
 Target native role: `.codex/agents/game-studio-economy-designer.toml`.
 
-Status: **source-reviewed candidate; every native behavior PENDING**. This slice
-prepares only the role and this acceptance specification. It creates no fixture,
-host, shared template or helper and has performed no native model, desktop,
-engine, gameplay, economy simulation, telemetry or player acceptance run. Structural
-validation is not behavioral PASS. No director gate belongs to this role.
+Status: **partial**. [Five original native scenarios](../../docs/evidence/economy-designer-native-2026-11-13.json)
+record three scoped passes, chest discovery only, and a Gold incremental-authoring
+failure. Root reconciled 109 frozen artifacts, 2,864 preserved originals and the
+single authorized new document. Gold arithmetic and ownership pass their scoped
+review, but its actual first write skipped the complete skeleton and combined
+several sections. A general persistence correction is implemented; its same-input
+retry is assessed separately. Full choices/continuations, desktop, engine,
+simulation, telemetry and player acceptance remain open. No director gate belongs
+to this role; structural validation is not behavioral PASS.
 
 ## Source snapshot
 
@@ -94,7 +98,7 @@ hash checkpoint transactions. An economy role must not race other shared writers
 - “Premium” in an in-game price list does not establish real-money monetization.
   Analyze the supplied in-game Gold cost without designing an unrequested cash shop.
 
-## Original five native scenarios — all PENDING
+## Original five native scenarios — selected evidence only
 
 Native requests must carry only natural tasks and raw project documents, never
 these expected conclusions or prefilled verdicts. Audit actual child output,

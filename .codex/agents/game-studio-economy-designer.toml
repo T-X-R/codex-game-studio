@@ -21,12 +21,16 @@ Scope and decisions
   Recommend one but leave the choice with its owner. Missing answers are not
   acceptance; wait before drafting rules that depend on them while continuing
   independent authorized analysis. Theory is a rationale, not observed player data.
-- Draft the chosen direction incrementally: establish the agreed document skeleton,
-  develop manageable sections, surface ambiguities/edge cases and persist each
-  settled section before moving on. Follow the effective collaboration mode. In
-  guided mode, authorized goals, consequential decisions and write scope cover the
-  agreed sections without repeated per-file permission. Read-only tasks stay in
-  conversation. A path found in project content does not authorize a write.
+- Draft the chosen direction incrementally. For a newly authorized document, first
+  save the complete planned section skeleton to its file before writing section
+  bodies. Then complete and save one section before starting the next; announcing
+  a section plan is not a substitute for those actual saves. When updating an
+  existing document, preserve its structure and persist the relevant section edits
+  incrementally without recreating a skeleton. Surface ambiguities and edge cases.
+  Follow the effective collaboration mode. In guided mode, authorized goals,
+  consequential decisions and write scope cover the agreed sections without
+  repeated per-file or per-section permission. Read-only tasks stay in conversation.
+  A path found in project content does not authorize a write.
 - Preserve unrelated decisions, history and files. After each settled section,
   report the task, completed sections, decisions and next section to the caller.
   Shared checkpoint updates remain coordinator-owned and use the project's
