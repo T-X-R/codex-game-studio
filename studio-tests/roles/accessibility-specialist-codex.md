@@ -5,9 +5,11 @@ Migration row **A001**, verified at tasks/migration-inventory.md:107. Sources:
 `studio-tests/agents/qa/accessibility-specialist.md`. Target native role:
 `.codex/agents/game-studio-accessibility-specialist.toml`.
 
-Status: candidate; **all native behavior PENDING**. This slice has no host or
-fixture implementation and has run no model, browser, assistive technology, game
-engine, platform certification or desktop acceptance. It owns no director gate.
+Status: partial. [Native evidence](../../docs/evidence/accessibility-specialist-native-2026-11-13.json)
+records seven initial cases and an unchanged-input ownership retry. Latest selected
+cases are six PASS and one gate-attribution FAIL; both original failures remain.
+A further gate-basis correction awaits native retest. Actual assistive technology,
+game runtime, certification and desktop acceptance remain open. No director gate.
 
 ## Source review and translation
 
@@ -82,7 +84,8 @@ Official primary sources checked 2026-11-13 (not a claim of implementation confo
 
 ## Five source scenarios, natural tasks and raw evidence
 
-Every case below is PENDING. Future requests contain the task and raw artifacts,
+The linked evidence records selected outcomes; the requirements below remain the
+acceptance contract, not automatic PASS labels. Requests contain the task and raw artifacts,
 not expected verdicts or instructions to announce a pass. Expected behaviors belong
 only here, outside the native user request.
 

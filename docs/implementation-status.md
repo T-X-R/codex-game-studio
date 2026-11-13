@@ -16,9 +16,12 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   The role distinguishes supplied design values from measured results, studio
   baselines from WCAG conditions, and issue severity from gate status. Build,
   typecheck, content lint, packed installation and 293 tests on each Node 24/26
-  pass. Seven raw native cases are in progress; their outcomes require separate
-  semantic acceptance. The catalog has sixteen partial Skills and thirteen partial
-  roles, with no fully verified rows.
+  pass. [Seven initial native cases and an ownership retry](evidence/accessibility-specialist-native-2026-11-13.json)
+  retain two original failures. The same-input flow retry passes; latest selected
+  cases total six passes and one gate-attribution failure. A reviewed distinction
+  between studio and normative gate evidence awaits native retest. Root checked
+  3,970 initial regular files plus 567 unchanged retry files. The catalog now has
+  sixteen partial Skills and fourteen partial roles, with no fully verified rows.
 - UX Designer now has a [source-reviewed native role](evidence/ux-designer-content-2026-11-13.json)
   preserving flow/interaction/IA/onboarding/feedback responsibilities, all seven
   accessibility checks and research-based design choices. Guided authorization

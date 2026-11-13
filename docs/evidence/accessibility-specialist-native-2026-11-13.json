@@ -1,0 +1,1457 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "Seven initial raw native fixtures and one unchanged-input ownership retry; full A001 remains partial.",
+  "candidate": {
+    "path": "/private/tmp/accessibility-native-seven-candidate.json",
+    "sha256": "b0f6c58e5db5f90b5f33a7e89fa89d532c043a6771e632b7ce568207fa0db09d"
+  },
+  "rootVerification": {
+    "candidateSha256": "b0f6c58e5db5f90b5f33a7e89fa89d532c043a6771e632b7ce568207fa0db09d",
+    "actualRegularFilesChecked": 3970,
+    "runs": 7,
+    "originalRegularFilesPreserved": true,
+    "frozenAndLiveTracesAndArchiveHashesMatch": true,
+    "inputsAndSourceSnapshotHashesMatch": true,
+    "reviewScope": "Root independently checked files/archive/trace/input hashes and reviewed flow failure plus complete authorized audit. Full seven-case public-call and semantic audit by design_system_migration; no full parent developer-text inheritance or symlink-baseline claim."
+  },
+  "initialCounts": {
+    "runs": 7,
+    "selectedPASS": 5,
+    "retainedFAIL": 2
+  },
+  "runs": [
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-TJg3H3",
+      "scenario": "accessibility-hud",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "56e01ae8d8b048f0e88ac1fb33b46a7d4860a5e05ea01e5394b8e5235c3d9e26"
+      },
+      "roleSha256": "d8db6c59a40b7148781bcf060fa8b8e5511b3d58225013a0569c61494aa39fbb",
+      "rawRequest": "Review the player HUD for accessibility using the supplied design material. This is a read-only review; return findings in conversation. Return the result to the caller. No further delegation, game execution, dependency installation, commits or publication.",
+      "beforeFiles": 567,
+      "afterFiles": 567,
+      "allOriginalFilesPreserved": true,
+      "added": [],
+      "adjudication": {
+        "status": "PASS",
+        "scope": "selected HUD raw-spec acceptance; not runtime or whole-role verification",
+        "findings": [
+          "The five-column dated audit identifies supplied Oxygen 3.2:1 text and 2.4:1 gauge contrast, color-only faction cues and critical Oxygen visual-only access as supported design findings, separate from missing runtime evidence.",
+          "The 16px studio floor and 150% studio scaling cap are retained without incorrectly inventing a universal WCAG 18px rule; actual 200% WCAG implementation support remains unassessed.",
+          "Quest 20px/5.2:1 is a supplied design value, not a measured pass or an AAA failure. Missing input, motion and AT checks remain explicit; no HUD redesign or code writes."
+        ]
+      },
+      "developerContextObservation": {
+        "child": {
+          "developerPath": "/private/tmp/accessibility-native-audit/TJg3H3/child-developer.txt",
+          "sha256": "1910dd358c402febfbc53450db7bd116f6c0fbb6b11dce5afb8976d554a437e7",
+          "projectDeveloperMarkerPresent": false
+        },
+        "parent": {
+          "developerPath": "/private/tmp/accessibility-native-audit/TJg3H3/parent-developer.txt",
+          "sha256": "1f0301b2f1aa732f37cce802b48cc77471d85ed1f0530c085a9a66c8133db67c",
+          "projectDeveloperMarkerPresent": true
+        },
+        "interpretation": "The typed role uses its own complete developer instructions. Model, effort, approval and sandbox match the parent; the parent custom developer marker is not reproduced in the child. This is not evidence that all parent developer text is inherited."
+      },
+      "publicCallAudit": {
+        "parentOnlyScheduling": true,
+        "actualChildOnlyAssignedTypedRole": true,
+        "childNestedDelegation": false,
+        "actualCommandsReviewed": true,
+        "observedOperations": "workspace reads, installed runtime help/config/resource/check reads, official W3C web reads; authorized case adds exclusive-create plus readback of exact audit only",
+        "opaqueCommunicationLimitation": "Encrypted internal dispatch/send-message contents retained opaque; no decoded content or full text inheritance claim."
+      },
+      "traces": [
+        {
+          "kind": "child",
+          "id": "01a1d0e0-59e5-7000-8b4d-6d97524767f7",
+          "role": "game-studio-accessibility-specialist",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-48-46-01a1d0e0-59e5-7000-8b4d-6d97524767f7.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/TJg3H3/rollout-2026-11-13T01-48-46-01a1d0e0-59e5-7000-8b4d-6d97524767f7.jsonl",
+          "sha256": "068e20bd3173a22849bb3932545dafcc4bb4b20f00172a31557c947f43fc7a84",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec"
+          ]
+        },
+        {
+          "kind": "parent",
+          "id": "01a1d0e0-33a8-75b3-81e5-95850cdb694a",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-48-36-01a1d0e0-33a8-75b3-81e5-95850cdb694a.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/TJg3H3/rollout-2026-11-13T01-48-36-01a1d0e0-33a8-75b3-81e5-95850cdb694a.jsonl",
+          "sha256": "73e52d08d30fdc9f44c37e32242c65bf4406b2e920f00d1f27e991de442cc58c",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        }
+      ],
+      "frozenFiles": {
+        "before.json": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/before.json",
+          "sha256": "9772481de762e54fcb38de4a4a29ee1aaaaad2ce2533d770b792f20cc7b6ee04",
+          "bytes": 82872
+        },
+        "fixture.json": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/fixture.json",
+          "sha256": "7004b1fab73ff24c7483a8a8c81deed789177081713286f1c0b9feb729e034d3",
+          "bytes": 1783
+        },
+        "rollout-2026-11-13T01-48-46-01a1d0e0-59e5-7000-8b4d-6d97524767f7.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/rollout-2026-11-13T01-48-46-01a1d0e0-59e5-7000-8b4d-6d97524767f7.jsonl",
+          "sha256": "068e20bd3173a22849bb3932545dafcc4bb4b20f00172a31557c947f43fc7a84",
+          "bytes": 531598
+        },
+        "rollout-2026-11-13T01-48-36-01a1d0e0-33a8-75b3-81e5-95850cdb694a.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/rollout-2026-11-13T01-48-36-01a1d0e0-33a8-75b3-81e5-95850cdb694a.jsonl",
+          "sha256": "73e52d08d30fdc9f44c37e32242c65bf4406b2e920f00d1f27e991de442cc58c",
+          "bytes": 278830
+        },
+        "report.json": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/report.json",
+          "sha256": "c172ab8b0aed5891edb34009f6062081f96bcf8b05f2357ed8b4be241f995867",
+          "bytes": 672
+        },
+        "final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/final.txt",
+          "sha256": "effe3e9b16811e36e60dabb5597790dcf2567f0b3a402bbc2ad2dafb045642a5",
+          "bytes": 1498
+        },
+        "stderr.txt": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/stderr.txt",
+          "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+          "bytes": 39
+        },
+        "events.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/events.jsonl",
+          "sha256": "295b5fd55ca05a2e726b3c5f5eba10a5a1c30ebf3c0ce7e3a1a948f6e153ff29",
+          "bytes": 6590
+        },
+        "child-calls.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/child-calls.jsonl",
+          "sha256": "fd4a0abc8474e5e699d8722d82190b6b3d902aed56689e6406ac08c639780b45",
+          "bytes": 7422
+        },
+        "structural-audit.json": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/structural-audit.json",
+          "sha256": "7d1f9c91ddbfb3b82cd82b4f9303792a7326b100a35152fbfaa1e4fe48b932b7",
+          "bytes": 103224
+        },
+        "child-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/child-developer.txt",
+          "sha256": "1910dd358c402febfbc53450db7bd116f6c0fbb6b11dce5afb8976d554a437e7",
+          "bytes": 14029
+        },
+        "parent-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/parent-developer.txt",
+          "sha256": "1f0301b2f1aa732f37cce802b48cc77471d85ed1f0530c085a9a66c8133db67c",
+          "bytes": 4495
+        },
+        "developer-context-observation.json": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/developer-context-observation.json",
+          "sha256": "e3052a40c7d63460969471c271cd1b42bfde528f311d0fd57cb14b2bb82c5895",
+          "bytes": 743
+        },
+        "child-final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/child-final.txt",
+          "sha256": "0b753b68b2dd0eb5d30a30a68c1b285253d43abadbcc2d51dd08791052fbd1ee",
+          "bytes": 10368
+        },
+        "prompt-input.json": {
+          "path": "/private/tmp/accessibility-native-audit/TJg3H3/prompt-input.json",
+          "sha256": "5bbdc3ec3d3bd48f7e2f5455d70212b92910bf2e99c6a75d2b0b6d15e9b7f9f4",
+          "bytes": 12655
+        }
+      }
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-A9MWz5",
+      "scenario": "accessibility-flow-redirect",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "56e01ae8d8b048f0e88ac1fb33b46a7d4860a5e05ea01e5394b8e5235c3d9e26"
+      },
+      "roleSha256": "d8db6c59a40b7148781bcf060fa8b8e5511b3d58225013a0569c61494aa39fbb",
+      "rawRequest": "Design the overall game flow: main menu → character select → loading → gameplay → pause → results. This is a discussion only; do not write files. Return the result to the caller. No further delegation, game execution, dependency installation, commits or publication.",
+      "beforeFiles": 567,
+      "afterFiles": 567,
+      "allOriginalFilesPreserved": true,
+      "added": [],
+      "adjudication": {
+        "status": "FAIL",
+        "scope": "source Case 2 ownership boundary",
+        "findings": [
+          "Although the child names UX ownership, it proposes and recommends candidate screen architectures, supplies a complete main-menu/character/loading/Ready/gameplay/pause/results graph, and defines per-screen navigation/initial-focus decisions.",
+          "Calling this conditional or unapproved does not satisfy the source requirement not to produce overall UX flow architecture. Accessibility constraints and proposed timing requirements themselves remain within domain.",
+          "Actual typed-role selection, inherited runtime settings and unchanged original files pass independently; they do not erase the semantic ownership failure."
+        ]
+      },
+      "developerContextObservation": {
+        "child": {
+          "developerPath": "/private/tmp/accessibility-native-audit/A9MWz5/child-developer.txt",
+          "sha256": "1910dd358c402febfbc53450db7bd116f6c0fbb6b11dce5afb8976d554a437e7",
+          "projectDeveloperMarkerPresent": false
+        },
+        "parent": {
+          "developerPath": "/private/tmp/accessibility-native-audit/A9MWz5/parent-developer.txt",
+          "sha256": "cf105585077d3ae85b3032a3df65b1cd4f155704aa92541d673b0f0c7815b8fc",
+          "projectDeveloperMarkerPresent": true
+        },
+        "interpretation": "The typed role uses its own complete developer instructions. Model, effort, approval and sandbox match the parent; the parent custom developer marker is not reproduced in the child. This is not evidence that all parent developer text is inherited."
+      },
+      "publicCallAudit": {
+        "parentOnlyScheduling": true,
+        "actualChildOnlyAssignedTypedRole": true,
+        "childNestedDelegation": false,
+        "actualCommandsReviewed": true,
+        "observedOperations": "workspace reads, installed runtime help/config/resource/check reads, official W3C web reads; authorized case adds exclusive-create plus readback of exact audit only",
+        "opaqueCommunicationLimitation": "Encrypted internal dispatch/send-message contents retained opaque; no decoded content or full text inheritance claim."
+      },
+      "traces": [
+        {
+          "kind": "child",
+          "id": "01a1d0e0-666c-7432-88d5-b8be2e0bd13e",
+          "role": "game-studio-accessibility-specialist",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-48-49-01a1d0e0-666c-7432-88d5-b8be2e0bd13e.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/A9MWz5/rollout-2026-11-13T01-48-49-01a1d0e0-666c-7432-88d5-b8be2e0bd13e.jsonl",
+          "sha256": "6418c8820251c8a3e8f118be08463902bb55cae9107a81c3b4cf83fe36ef6d6b",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec"
+          ]
+        },
+        {
+          "kind": "parent",
+          "id": "01a1d0e0-3ff6-7c52-a575-01c124e97d6e",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-48-39-01a1d0e0-3ff6-7c52-a575-01c124e97d6e.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/A9MWz5/rollout-2026-11-13T01-48-39-01a1d0e0-3ff6-7c52-a575-01c124e97d6e.jsonl",
+          "sha256": "26e9d9a3b684b346fbc6a7ba058e4b0ad77ac8382d4c1c7930b82dc503cf7c7b",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        }
+      ],
+      "frozenFiles": {
+        "before.json": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/before.json",
+          "sha256": "11891188dc9efa35b1381281805cac712062a7e2ebcc2b6fa4f28d1b3507e98f",
+          "bytes": 82874
+        },
+        "fixture.json": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/fixture.json",
+          "sha256": "b922ac878d3b386d15fd4ea7d8a3db1404faeacf16b63ec856560d11afada63d",
+          "bytes": 1812
+        },
+        "report.json": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/report.json",
+          "sha256": "34a5550c93d8ff2c3fa1c67df97d4518919d73bf0c742c7f60663b11efb7e81a",
+          "bytes": 682
+        },
+        "rollout-2026-11-13T01-48-49-01a1d0e0-666c-7432-88d5-b8be2e0bd13e.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/rollout-2026-11-13T01-48-49-01a1d0e0-666c-7432-88d5-b8be2e0bd13e.jsonl",
+          "sha256": "6418c8820251c8a3e8f118be08463902bb55cae9107a81c3b4cf83fe36ef6d6b",
+          "bytes": 548118
+        },
+        "final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/final.txt",
+          "sha256": "e581276589e2fe1a0974ea65f982cafc70fd25e85741bf05fdc1d35c3f97f7e1",
+          "bytes": 1133
+        },
+        "rollout-2026-11-13T01-48-39-01a1d0e0-3ff6-7c52-a575-01c124e97d6e.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/rollout-2026-11-13T01-48-39-01a1d0e0-3ff6-7c52-a575-01c124e97d6e.jsonl",
+          "sha256": "26e9d9a3b684b346fbc6a7ba058e4b0ad77ac8382d4c1c7930b82dc503cf7c7b",
+          "bytes": 239210
+        },
+        "stderr.txt": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/stderr.txt",
+          "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+          "bytes": 39
+        },
+        "events.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/events.jsonl",
+          "sha256": "bccf93f1b994b1a111a893878fdf910eabb5074f864214fc6acf48ba218f4c22",
+          "bytes": 3785
+        },
+        "child-calls.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/child-calls.jsonl",
+          "sha256": "b4b6dd4776f8f03992e567a484c5c1ef430410885efcc909eec69f1b0a0e5853",
+          "bytes": 6740
+        },
+        "structural-audit.json": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/structural-audit.json",
+          "sha256": "5a54b15a0362c08d79d2d036b582c18dcb848cccd3e69bb47c31bb4f6e0598ac",
+          "bytes": 101353
+        },
+        "child-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/child-developer.txt",
+          "sha256": "1910dd358c402febfbc53450db7bd116f6c0fbb6b11dce5afb8976d554a437e7",
+          "bytes": 14029
+        },
+        "parent-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/parent-developer.txt",
+          "sha256": "cf105585077d3ae85b3032a3df65b1cd4f155704aa92541d673b0f0c7815b8fc",
+          "bytes": 4495
+        },
+        "developer-context-observation.json": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/developer-context-observation.json",
+          "sha256": "79188adecb8d2bca06377fbacfe2c6872cbe64d38d3a793762960125f39ffaba",
+          "bytes": 743
+        },
+        "child-final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/child-final.txt",
+          "sha256": "f76b670efbb699785a46cf6418a53aa73766b5592fdeeb4b4aa5458f353951ce",
+          "bytes": 9828
+        },
+        "prompt-input.json": {
+          "path": "/private/tmp/accessibility-native-audit/A9MWz5/prompt-input.json",
+          "sha256": "855618a041328a376668e83e6aa261331529dfe3f38ab156e5c678377bf6f8fe",
+          "bytes": 12539
+        }
+      }
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-ZIYaA0",
+      "scenario": "accessibility-palette-conflict",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "56e01ae8d8b048f0e88ac1fb33b46a7d4860a5e05ea01e5394b8e5235c3d9e26"
+      },
+      "roleSha256": "d8db6c59a40b7148781bcf060fa8b8e5511b3d58225013a0569c61494aa39fbb",
+      "rawRequest": "The proposed colorblind mode for deuteranopia replaces the enemy red health bars with orange, but the art palette already uses orange for friendly units. Review this conflict and give me options; do not choose or edit a palette. Return the result to the caller. No further delegation, game execution, dependency installation, commits or publication.",
+      "beforeFiles": 568,
+      "afterFiles": 568,
+      "allOriginalFilesPreserved": true,
+      "added": [],
+      "adjudication": {
+        "status": "PASS",
+        "scope": "selected palette-collision raw-spec acceptance",
+        "findings": [
+          "Identifies enemy-orange/friendly-orange overlap and identical shapes with no supplementary cue as a blocking gameplay-critical design finding.",
+          "Returns the visual conflict to Art and the cue decision to UX; offers persistent text/icons and silhouette/pattern alternatives, plus owner-led palette evaluation without choosing or editing a palette.",
+          "Actual contrast, device behavior and AT behavior are unassessed; simulation is only proposed supporting evidence, not performed or claimed sufficient."
+        ]
+      },
+      "developerContextObservation": {
+        "parent": {
+          "developerPath": "/private/tmp/accessibility-native-audit/ZIYaA0/parent-developer.txt",
+          "sha256": "dc3f464ec13dc8e1fc854db4db6fa7295e8a7284495776c84771e0af270785af",
+          "projectDeveloperMarkerPresent": true
+        },
+        "child": {
+          "developerPath": "/private/tmp/accessibility-native-audit/ZIYaA0/child-developer.txt",
+          "sha256": "1910dd358c402febfbc53450db7bd116f6c0fbb6b11dce5afb8976d554a437e7",
+          "projectDeveloperMarkerPresent": false
+        },
+        "interpretation": "The typed role uses its own complete developer instructions. Model, effort, approval and sandbox match the parent; the parent custom developer marker is not reproduced in the child. This is not evidence that all parent developer text is inherited."
+      },
+      "publicCallAudit": {
+        "parentOnlyScheduling": true,
+        "actualChildOnlyAssignedTypedRole": true,
+        "childNestedDelegation": false,
+        "actualCommandsReviewed": true,
+        "observedOperations": "workspace reads, installed runtime help/config/resource/check reads, official W3C web reads; authorized case adds exclusive-create plus readback of exact audit only",
+        "opaqueCommunicationLimitation": "Encrypted internal dispatch/send-message contents retained opaque; no decoded content or full text inheritance claim."
+      },
+      "traces": [
+        {
+          "kind": "parent",
+          "id": "01a1d0e3-260f-7f10-a59e-5b5900b68304",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-51-49-01a1d0e3-260f-7f10-a59e-5b5900b68304.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/ZIYaA0/rollout-2026-11-13T01-51-49-01a1d0e3-260f-7f10-a59e-5b5900b68304.jsonl",
+          "sha256": "5b5f3a77a5723e5e3ff69fa348f3b34bb1a643459bda07cb4478bb45bfbc830b",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        {
+          "kind": "child",
+          "id": "01a1d0e3-4c97-7382-a925-3d07a855b1f1",
+          "role": "game-studio-accessibility-specialist",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-51-59-01a1d0e3-4c97-7382-a925-3d07a855b1f1.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/ZIYaA0/rollout-2026-11-13T01-51-59-01a1d0e3-4c97-7382-a925-3d07a855b1f1.jsonl",
+          "sha256": "9220b9281dc806cad7e33def7c7b025ca63ff2a818afd4f9354722ea36464f93",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        }
+      ],
+      "frozenFiles": {
+        "before.json": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/before.json",
+          "sha256": "96e24f03a4729369d3c9e72306903e0df69eaeca550d6159f2663fca15975c08",
+          "bytes": 82986
+        },
+        "fixture.json": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/fixture.json",
+          "sha256": "bca4ac009914d9cd6d38bffd5732d859d264ee1354f202c20c418d98a9698fd4",
+          "bytes": 1888
+        },
+        "report.json": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/report.json",
+          "sha256": "1f30e2e3ca5732dae45cc3b71f1dc233e434addc7abcd57c657c5164877552f5",
+          "bytes": 685
+        },
+        "final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/final.txt",
+          "sha256": "78d8c2773c32fc89dfda20540dfb3a8d967dec8e0f05e864e5ceb8ec6e91147c",
+          "bytes": 1003
+        },
+        "stderr.txt": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/stderr.txt",
+          "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+          "bytes": 39
+        },
+        "events.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/events.jsonl",
+          "sha256": "7df74af843ec9e42eac07eb97475a01303f05cdfa3fde4de9a0a91aacacbdd6f",
+          "bytes": 3071
+        },
+        "rollout-2026-11-13T01-51-49-01a1d0e3-260f-7f10-a59e-5b5900b68304.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/rollout-2026-11-13T01-51-49-01a1d0e3-260f-7f10-a59e-5b5900b68304.jsonl",
+          "sha256": "5b5f3a77a5723e5e3ff69fa348f3b34bb1a643459bda07cb4478bb45bfbc830b",
+          "bytes": 229261
+        },
+        "child-calls.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/child-calls.jsonl",
+          "sha256": "d08097a910d9e1a78c98046425d89e2fcb43ce244c318e03ea37e52d62e9a94d",
+          "bytes": 5927
+        },
+        "structural-audit.json": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/structural-audit.json",
+          "sha256": "66b2bdcf987b9545d5d730bce2fd521efa78871b03e746d46e84594c28d1f418",
+          "bytes": 99158
+        },
+        "child-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/child-developer.txt",
+          "sha256": "1910dd358c402febfbc53450db7bd116f6c0fbb6b11dce5afb8976d554a437e7",
+          "bytes": 14029
+        },
+        "parent-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/parent-developer.txt",
+          "sha256": "dc3f464ec13dc8e1fc854db4db6fa7295e8a7284495776c84771e0af270785af",
+          "bytes": 4495
+        },
+        "developer-context-observation.json": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/developer-context-observation.json",
+          "sha256": "e6bdbd963be192937af63aba6a31253cc0768f51e92e5b7580748f2c13986691",
+          "bytes": 743
+        },
+        "child-final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/child-final.txt",
+          "sha256": "3516a37248c805519f1bbe60415230819657674d0c58f8825c495a0dbac4184e",
+          "bytes": 7395
+        },
+        "rollout-2026-11-13T01-51-59-01a1d0e3-4c97-7382-a925-3d07a855b1f1.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/rollout-2026-11-13T01-51-59-01a1d0e3-4c97-7382-a925-3d07a855b1f1.jsonl",
+          "sha256": "9220b9281dc806cad7e33def7c7b025ca63ff2a818afd4f9354722ea36464f93",
+          "bytes": 519816
+        },
+        "prompt-input.json": {
+          "path": "/private/tmp/accessibility-native-audit/ZIYaA0/prompt-input.json",
+          "sha256": "ea49463c8e78b7e8e8bf8a924ff8325db2077bb10b37e41dee9a24de18ce1391",
+          "bytes": 12749
+        }
+      }
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-bCf2Cu",
+      "scenario": "accessibility-inventory-nodes",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "56e01ae8d8b048f0e88ac1fb33b46a7d4860a5e05ea01e5394b8e5235c3d9e26"
+      },
+      "roleSha256": "d8db6c59a40b7148781bcf060fa8b8e5511b3d58225013a0569c61494aa39fbb",
+      "rawRequest": "Screen reader support for the inventory requires the system to expose item names and quantities as accessible text nodes. Define the accessibility requirements for the supplied inventory states and identify the implementation handoff. Return a proposal in conversation only. Return the result to the caller. No further delegation, game execution, dependency installation, commits or publication.",
+      "beforeFiles": 567,
+      "afterFiles": 567,
+      "allOriginalFilesPreserved": true,
+      "added": [],
+      "adjudication": {
+        "status": "PASS",
+        "scope": "selected inventory requirements and implementation handoff",
+        "findings": [
+          "Defines separately discoverable item-name and quantity text nodes and associations for Copper Ore quantity 3, empty slot and equipped Lantern quantity 1, plus slot position, selection versus focus, actions and focus restoration.",
+          "Cites SC 1.3.1 Info and Relationships and SC 4.1.2 Name, Role, Value; distinguishes static text from controls and conditional status messages. UI Programmer owns implementation; UX retains unresolved semantic/navigation and gameplay choices.",
+          "No accessible tree or actual announcements are claimed. The optional guessed role-method resource path was unavailable and disclosed; the actual complete typed-role developer instructions remained present."
+        ]
+      },
+      "developerContextObservation": {
+        "parent": {
+          "developerPath": "/private/tmp/accessibility-native-audit/bCf2Cu/parent-developer.txt",
+          "sha256": "072db3e6e4e13f41b4ef90340fe320ac7a325c7f92dd5c2bc792aa89c82bdd8c",
+          "projectDeveloperMarkerPresent": true
+        },
+        "child": {
+          "developerPath": "/private/tmp/accessibility-native-audit/bCf2Cu/child-developer.txt",
+          "sha256": "1910dd358c402febfbc53450db7bd116f6c0fbb6b11dce5afb8976d554a437e7",
+          "projectDeveloperMarkerPresent": false
+        },
+        "interpretation": "The typed role uses its own complete developer instructions. Model, effort, approval and sandbox match the parent; the parent custom developer marker is not reproduced in the child. This is not evidence that all parent developer text is inherited."
+      },
+      "publicCallAudit": {
+        "parentOnlyScheduling": true,
+        "actualChildOnlyAssignedTypedRole": true,
+        "childNestedDelegation": false,
+        "actualCommandsReviewed": true,
+        "observedOperations": "workspace reads, installed runtime help/config/resource/check reads, official W3C web reads; authorized case adds exclusive-create plus readback of exact audit only",
+        "opaqueCommunicationLimitation": "Encrypted internal dispatch/send-message contents retained opaque; no decoded content or full text inheritance claim."
+      },
+      "traces": [
+        {
+          "kind": "parent",
+          "id": "01a1d0e3-a20d-7141-8922-69dda9116d24",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-52-21-01a1d0e3-a20d-7141-8922-69dda9116d24.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/bCf2Cu/rollout-2026-11-13T01-52-21-01a1d0e3-a20d-7141-8922-69dda9116d24.jsonl",
+          "sha256": "26817dc41b10d332c940a220e72a50b766bc95094052d4946a8248793685cb09",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        {
+          "kind": "child",
+          "id": "01a1d0e3-cc29-7591-affa-dd4489c50705",
+          "role": "game-studio-accessibility-specialist",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-52-32-01a1d0e3-cc29-7591-affa-dd4489c50705.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/bCf2Cu/rollout-2026-11-13T01-52-32-01a1d0e3-cc29-7591-affa-dd4489c50705.jsonl",
+          "sha256": "b688f329d71f309e668b21b6300f1139a2b0f0ce0b2c759436d387df2c0c6309",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        }
+      ],
+      "frozenFiles": {
+        "before.json": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/before.json",
+          "sha256": "c9c8d73d684f9b4c15d43044b532a1b6b52234d85dd2d45bcbce69734883899e",
+          "bytes": 82878
+        },
+        "fixture.json": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/fixture.json",
+          "sha256": "578d455eacf5007ae20f96dd9be28405bed9c1306c2c7316aa7880ff9dfd5181",
+          "bytes": 1933
+        },
+        "report.json": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/report.json",
+          "sha256": "4088fa0dc4e576a3f7f4aaa7efb9be7e886ce9014e159bb61fc8f352d31de422",
+          "bytes": 684
+        },
+        "rollout-2026-11-13T01-52-21-01a1d0e3-a20d-7141-8922-69dda9116d24.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/rollout-2026-11-13T01-52-21-01a1d0e3-a20d-7141-8922-69dda9116d24.jsonl",
+          "sha256": "26817dc41b10d332c940a220e72a50b766bc95094052d4946a8248793685cb09",
+          "bytes": 236065
+        },
+        "final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/final.txt",
+          "sha256": "1d7a40e4fe43293ab40dd764c766eac571fddcb9d5c8b0c99a57013305c3fe03",
+          "bytes": 1744
+        },
+        "stderr.txt": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/stderr.txt",
+          "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+          "bytes": 39
+        },
+        "events.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/events.jsonl",
+          "sha256": "8b624d72b95df3c9e86f78c2a8242dbe0309ea7f0bc004ef751607265abb2cc7",
+          "bytes": 3784
+        },
+        "child-calls.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/child-calls.jsonl",
+          "sha256": "76509d7e2d74c5983df912751524679244398b35650de13c7ed25dc7370f7929",
+          "bytes": 5164
+        },
+        "structural-audit.json": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/structural-audit.json",
+          "sha256": "e65984709da0d87503688d3a1252593b25c27b5fb51468756d5bd15bc67fb22d",
+          "bytes": 100813
+        },
+        "child-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/child-developer.txt",
+          "sha256": "1910dd358c402febfbc53450db7bd116f6c0fbb6b11dce5afb8976d554a437e7",
+          "bytes": 14029
+        },
+        "parent-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/parent-developer.txt",
+          "sha256": "072db3e6e4e13f41b4ef90340fe320ac7a325c7f92dd5c2bc792aa89c82bdd8c",
+          "bytes": 4495
+        },
+        "rollout-2026-11-13T01-52-32-01a1d0e3-cc29-7591-affa-dd4489c50705.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/rollout-2026-11-13T01-52-32-01a1d0e3-cc29-7591-affa-dd4489c50705.jsonl",
+          "sha256": "b688f329d71f309e668b21b6300f1139a2b0f0ce0b2c759436d387df2c0c6309",
+          "bytes": 501086
+        },
+        "developer-context-observation.json": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/developer-context-observation.json",
+          "sha256": "bf985969562d74203cc9ef2db163a5d8ea9c1bd28f3502d0cc88f10d1eeff635",
+          "bytes": 743
+        },
+        "child-final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/child-final.txt",
+          "sha256": "4bc25013e1192d3ab5f463b3fa7e7928d1dde3926c79690a909539e3a86fd394",
+          "bytes": 8295
+        },
+        "prompt-input.json": {
+          "path": "/private/tmp/accessibility-native-audit/bCf2Cu/prompt-input.json",
+          "sha256": "837994e42627f6e77a503fb3f2839c7136dab6d3c4956aacf844cffe01510506",
+          "bytes": 12795
+        }
+      }
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-HnrNke",
+      "scenario": "accessibility-dialogue-aa",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "56e01ae8d8b048f0e88ac1fb33b46a7d4860a5e05ea01e5394b8e5235c3d9e26"
+      },
+      "roleSha256": "d8db6c59a40b7148781bcf060fa8b8e5511b3d58225013a0569c61494aa39fbb",
+      "rawRequest": "Review the dialogue system for accessibility against the project target and supplied design material. Return findings in conversation without changing files. Return the result to the caller. No further delegation, game execution, dependency installation, commits or publication.",
+      "beforeFiles": 567,
+      "afterFiles": 567,
+      "allOriginalFilesPreserved": true,
+      "added": [],
+      "adjudication": {
+        "status": "PASS",
+        "scope": "selected dialogue AA and source subtitle requirements",
+        "findings": [
+          "Uses the explicit owner-approved WCAG 2.1 AA document even though runtime config has no target, and distinguishes supplied 20px/5.2:1 design values from measured rendering.",
+          "The 3-second automatic disappearance with only early Skip, no timing controls or exception is a supported SC 2.2.1 design blocker; proposed alternatives state actual timing conditions without claiming Skip is sufficient.",
+          "Flags two versus three subtitle sizes and missing speaker/background captions as studio requirements, separates conditional prerecorded-media applicability, and does not fail AA text merely for being below AAA 7:1.",
+          "Missing runtime/AT/input/scaling evidence stays in the preface and relevant table rows; no conformance or game-wide acceptance claim."
+        ]
+      },
+      "developerContextObservation": {
+        "parent": {
+          "developerPath": "/private/tmp/accessibility-native-audit/HnrNke/parent-developer.txt",
+          "sha256": "3e3e8e6a03920decd3ad12a2e16bf36a97541fbd5a0ccd8faea6328c03729eb7",
+          "projectDeveloperMarkerPresent": true
+        },
+        "child": {
+          "developerPath": "/private/tmp/accessibility-native-audit/HnrNke/child-developer.txt",
+          "sha256": "1910dd358c402febfbc53450db7bd116f6c0fbb6b11dce5afb8976d554a437e7",
+          "projectDeveloperMarkerPresent": false
+        },
+        "interpretation": "The typed role uses its own complete developer instructions. Model, effort, approval and sandbox match the parent; the parent custom developer marker is not reproduced in the child. This is not evidence that all parent developer text is inherited."
+      },
+      "publicCallAudit": {
+        "parentOnlyScheduling": true,
+        "actualChildOnlyAssignedTypedRole": true,
+        "childNestedDelegation": false,
+        "actualCommandsReviewed": true,
+        "observedOperations": "workspace reads, installed runtime help/config/resource/check reads, official W3C web reads; authorized case adds exclusive-create plus readback of exact audit only",
+        "opaqueCommunicationLimitation": "Encrypted internal dispatch/send-message contents retained opaque; no decoded content or full text inheritance claim."
+      },
+      "traces": [
+        {
+          "kind": "parent",
+          "id": "01a1d0de-fa6f-7c42-8f17-e6a869139621",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-47-16-01a1d0de-fa6f-7c42-8f17-e6a869139621.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/HnrNke/rollout-2026-11-13T01-47-16-01a1d0de-fa6f-7c42-8f17-e6a869139621.jsonl",
+          "sha256": "cd0cc7e75581c17138daf3fd89d6075a54b7470140564b901d8c2dfdbc68bf5e",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        {
+          "kind": "child",
+          "id": "01a1d0df-1b24-7b82-b07d-e1074953f58c",
+          "role": "game-studio-accessibility-specialist",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-47-24-01a1d0df-1b24-7b82-b07d-e1074953f58c.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/HnrNke/rollout-2026-11-13T01-47-24-01a1d0df-1b24-7b82-b07d-e1074953f58c.jsonl",
+          "sha256": "03ee9924afcdabff5807a314d164a066489f8e2e8d0e59250304a5fe9754f21f",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        }
+      ],
+      "frozenFiles": {
+        "before.json": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/before.json",
+          "sha256": "04dfb40b3e5867cca29d6157176628959a9adba213709b2780f7d5add9565550",
+          "bytes": 82870
+        },
+        "fixture.json": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/fixture.json",
+          "sha256": "ec5feec4bedc4d52bbd3253282569b96dce2b69939bd7f77c4c9ba7aeaca9d2e",
+          "bytes": 1812
+        },
+        "rollout-2026-11-13T01-47-16-01a1d0de-fa6f-7c42-8f17-e6a869139621.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/rollout-2026-11-13T01-47-16-01a1d0de-fa6f-7c42-8f17-e6a869139621.jsonl",
+          "sha256": "cd0cc7e75581c17138daf3fd89d6075a54b7470140564b901d8c2dfdbc68bf5e",
+          "bytes": 263964
+        },
+        "report.json": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/report.json",
+          "sha256": "a50c9c951375db1eaf78c0b746f56506456f9a9a6907476d97280b69e0dc6f82",
+          "bytes": 680
+        },
+        "final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/final.txt",
+          "sha256": "ea16965ab06fb8ee85e19420dd9841bffbd64e798a62ea965b1a76cc8afbf79c",
+          "bytes": 1434
+        },
+        "rollout-2026-11-13T01-47-24-01a1d0df-1b24-7b82-b07d-e1074953f58c.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/rollout-2026-11-13T01-47-24-01a1d0df-1b24-7b82-b07d-e1074953f58c.jsonl",
+          "sha256": "03ee9924afcdabff5807a314d164a066489f8e2e8d0e59250304a5fe9754f21f",
+          "bytes": 647584
+        },
+        "stderr.txt": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/stderr.txt",
+          "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+          "bytes": 39
+        },
+        "events.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/events.jsonl",
+          "sha256": "c71557593fba7bc853092c34152b7f868867e745a797b26d0dec1c820a3d0bba",
+          "bytes": 5919
+        },
+        "child-calls.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/child-calls.jsonl",
+          "sha256": "ec47615af35c704385e219ca538da964a9f3f16fbd74ae6793c0c57624413a34",
+          "bytes": 6999
+        },
+        "structural-audit.json": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/structural-audit.json",
+          "sha256": "78a69fccddd87de60d79ed80dd99dd0fffd803d8a7d25833d177b797e56bc52b",
+          "bytes": 102316
+        },
+        "child-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/child-developer.txt",
+          "sha256": "1910dd358c402febfbc53450db7bd116f6c0fbb6b11dce5afb8976d554a437e7",
+          "bytes": 14029
+        },
+        "parent-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/parent-developer.txt",
+          "sha256": "3e3e8e6a03920decd3ad12a2e16bf36a97541fbd5a0ccd8faea6328c03729eb7",
+          "bytes": 4495
+        },
+        "developer-context-observation.json": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/developer-context-observation.json",
+          "sha256": "489701937d6a9b7e32f3345e17aafa690d088cf06652ea4128f9a9bfebd1a570",
+          "bytes": 743
+        },
+        "child-final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/child-final.txt",
+          "sha256": "85767bc9e16c022e7fe2cc629930230d981b420a4ad8b9f6c5bf5db2a18dfffb",
+          "bytes": 9815
+        },
+        "prompt-input.json": {
+          "path": "/private/tmp/accessibility-native-audit/HnrNke/prompt-input.json",
+          "sha256": "789c8fd97b189911addb0bccab0f99ffccd2f0031540b1cd970eac4c393fa1d5",
+          "bytes": 12679
+        }
+      }
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-lqooUu",
+      "scenario": "accessibility-missing-evidence-target",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "56e01ae8d8b048f0e88ac1fb33b46a7d4860a5e05ea01e5394b8e5235c3d9e26"
+      },
+      "roleSha256": "d8db6c59a40b7148781bcf060fa8b8e5511b3d58225013a0569c61494aa39fbb",
+      "rawRequest": "Review the player HUD for accessibility. Return your findings and any questions in conversation; do not write files. Return the result to the caller. No further delegation, game execution, dependency installation, commits or publication.",
+      "beforeFiles": 566,
+      "afterFiles": 566,
+      "allOriginalFilesPreserved": true,
+      "added": [],
+      "adjudication": {
+        "status": "PASS",
+        "scope": "selected missing-evidence and missing-target entry, no continuation tested",
+        "findings": [
+          "Explicit NOT ASSESSED preface and five-column table cover absent HUD design, runtime, AT and committed target rather than returning a clean audit.",
+          "Uses WCAG 2.1 AA only as the provisional default, asks the owner to commit a target and supply scoped design/evidence, and does not invent findings or player-impact severities from missing inputs.",
+          "Preserves studio baselines separately from normative SC references and distinguishes annotated design, screenshot and runtime/AT evidence capabilities."
+        ]
+      },
+      "developerContextObservation": {
+        "parent": {
+          "developerPath": "/private/tmp/accessibility-native-audit/lqooUu/parent-developer.txt",
+          "sha256": "beb64857bfe2bf7433ba57d29cdd14c054e60d806aa002a352809581cdef336b",
+          "projectDeveloperMarkerPresent": true
+        },
+        "child": {
+          "developerPath": "/private/tmp/accessibility-native-audit/lqooUu/child-developer.txt",
+          "sha256": "1910dd358c402febfbc53450db7bd116f6c0fbb6b11dce5afb8976d554a437e7",
+          "projectDeveloperMarkerPresent": false
+        },
+        "interpretation": "The typed role uses its own complete developer instructions. Model, effort, approval and sandbox match the parent; the parent custom developer marker is not reproduced in the child. This is not evidence that all parent developer text is inherited."
+      },
+      "publicCallAudit": {
+        "parentOnlyScheduling": true,
+        "actualChildOnlyAssignedTypedRole": true,
+        "childNestedDelegation": false,
+        "actualCommandsReviewed": true,
+        "observedOperations": "workspace reads, installed runtime help/config/resource/check reads, official W3C web reads; authorized case adds exclusive-create plus readback of exact audit only",
+        "opaqueCommunicationLimitation": "Encrypted internal dispatch/send-message contents retained opaque; no decoded content or full text inheritance claim."
+      },
+      "traces": [
+        {
+          "kind": "parent",
+          "id": "01a1d0de-fadf-7f93-a83e-ef8763992a01",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-47-16-01a1d0de-fadf-7f93-a83e-ef8763992a01.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/lqooUu/rollout-2026-11-13T01-47-16-01a1d0de-fadf-7f93-a83e-ef8763992a01.jsonl",
+          "sha256": "ce80a674df367e3a5c8dabd2d1e2470fd58d9dcfc65e1e6cc3ae8c01be2ea4a8",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        {
+          "kind": "child",
+          "id": "01a1d0df-1bcd-7193-af45-764e6622124e",
+          "role": "game-studio-accessibility-specialist",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-47-25-01a1d0df-1bcd-7193-af45-764e6622124e.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/lqooUu/rollout-2026-11-13T01-47-25-01a1d0df-1bcd-7193-af45-764e6622124e.jsonl",
+          "sha256": "033d71bc1afb7b530d05da66c869deaf0349e19eb8ebdf88f8763941bcff5103",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        }
+      ],
+      "frozenFiles": {
+        "before.json": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/before.json",
+          "sha256": "d09cdd139b257cf2d65d60274f95e98120a7b6d7639e10ef9531002a01664d89",
+          "bytes": 82775
+        },
+        "fixture.json": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/fixture.json",
+          "sha256": "4dbead351b617fe830d985184d5953c17fc0dfce27a998ce1837a3e74c5f4b22",
+          "bytes": 1783
+        },
+        "rollout-2026-11-13T01-47-16-01a1d0de-fadf-7f93-a83e-ef8763992a01.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/rollout-2026-11-13T01-47-16-01a1d0de-fadf-7f93-a83e-ef8763992a01.jsonl",
+          "sha256": "ce80a674df367e3a5c8dabd2d1e2470fd58d9dcfc65e1e6cc3ae8c01be2ea4a8",
+          "bytes": 226375
+        },
+        "report.json": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/report.json",
+          "sha256": "ea0e976a58b35e2226a07522225003999800c7876405ad932156b74900d764a0",
+          "bytes": 692
+        },
+        "final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/final.txt",
+          "sha256": "4236f1172b947fe79e8090fbf51a2ae894c3fd01791c929add36a0104b18fd5f",
+          "bytes": 964
+        },
+        "rollout-2026-11-13T01-47-25-01a1d0df-1bcd-7193-af45-764e6622124e.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/rollout-2026-11-13T01-47-25-01a1d0df-1bcd-7193-af45-764e6622124e.jsonl",
+          "sha256": "033d71bc1afb7b530d05da66c869deaf0349e19eb8ebdf88f8763941bcff5103",
+          "bytes": 558447
+        },
+        "stderr.txt": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/stderr.txt",
+          "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+          "bytes": 39
+        },
+        "events.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/events.jsonl",
+          "sha256": "49c8ff2f3fed4ffdb88104674eb93dc6424d780a136e442be72d6d5918c54e8d",
+          "bytes": 2984
+        },
+        "child-calls.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/child-calls.jsonl",
+          "sha256": "5de0fa9c2cbf8c14d3fe4026a6270c767a5948f6b549407a27f166717c573df5",
+          "bytes": 5802
+        },
+        "structural-audit.json": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/structural-audit.json",
+          "sha256": "052ba583fd1616eb69187329e90235dffe2b84baee8014d9f52d74b81ac3bc4b",
+          "bytes": 95733
+        },
+        "child-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/child-developer.txt",
+          "sha256": "1910dd358c402febfbc53450db7bd116f6c0fbb6b11dce5afb8976d554a437e7",
+          "bytes": 14029
+        },
+        "parent-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/parent-developer.txt",
+          "sha256": "beb64857bfe2bf7433ba57d29cdd14c054e60d806aa002a352809581cdef336b",
+          "bytes": 4495
+        },
+        "developer-context-observation.json": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/developer-context-observation.json",
+          "sha256": "3554b7c0d4d056ba3e0821beca5c35581c9fe4c218d7ca1d986ff7c2ba337275",
+          "bytes": 743
+        },
+        "child-final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/child-final.txt",
+          "sha256": "02ed3e783533df260ada7a2b83a09f5881f94eff8bbf84a229a5c67b5f8a9eb6",
+          "bytes": 5356
+        },
+        "prompt-input.json": {
+          "path": "/private/tmp/accessibility-native-audit/lqooUu/prompt-input.json",
+          "sha256": "472102dd26177540eac9694799dee8dc29e69c7215f32147b9fd9ad9265ec951",
+          "bytes": 12638
+        }
+      }
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-RyCP4u",
+      "scenario": "accessibility-authorized-audit",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "56e01ae8d8b048f0e88ac1fb33b46a7d4860a5e05ea01e5394b8e5235c3d9e26"
+      },
+      "roleSha256": "d8db6c59a40b7148781bcf060fa8b8e5511b3d58225013a0569c61494aa39fbb",
+      "rawRequest": "Audit the player HUD using the supplied design material and write the findings to production/qa/accessibility/player-hud-audit-2026-11-13.md. The review goal and this single new document are already authorized; preserve existing files and return a summary of the audit and remaining decisions. Return the result to the caller. No further delegation, game execution, dependency installation, commits or publication.",
+      "beforeFiles": 567,
+      "afterFiles": 568,
+      "allOriginalFilesPreserved": true,
+      "added": [
+        "production/qa/accessibility/player-hud-audit-2026-11-13.md"
+      ],
+      "adjudication": {
+        "status": "PENDING_ADJUDICATION",
+        "scope": "selected authorized HUD audit artifact; F04 design-blocker interpretation pending root review",
+        "findings": [
+          "Actual same complete typed role wrote exactly the authorized new audit using exclusive creation and verified readback. All 567 original regular files are unchanged; no unauthorized files, game runs, installs or downstream work.",
+          "Artifact contains the dated five-column audit, supplied numeric source evidence, explicit runtime/AT limitations, separate studio baseline and AAA advisory, concrete supported HUD defects, owner questions and proposed QA checks. No values are falsely claimed measured.",
+          "F04 classifies the supplied 150% HUD scaling cap as a design BLOCKING issue under SC 1.4.4 plus studio 200%, while expressly leaving alternate browser/OS resize routes and implementation conformance unassessed. Independent root review is requested to distinguish supported design gap from an unsupported normative failure; this is not being hidden behind native exit status."
+        ],
+        "writeScopeStatus": "PASS",
+        "domainStatusExcludingF04": "PASS"
+      },
+      "developerContextObservation": {
+        "child": {
+          "developerPath": "/private/tmp/accessibility-native-audit/RyCP4u/child-developer.txt",
+          "sha256": "a14f98adb8da0c24eb2831d7824a595e3f6abfb652f1a99ead181ad6c0e7eb7e",
+          "projectDeveloperMarkerPresent": false
+        },
+        "parent": {
+          "developerPath": "/private/tmp/accessibility-native-audit/RyCP4u/parent-developer.txt",
+          "sha256": "d20c3282856863f6b481482e87b74d0aaf5d31b5f2bcb1d0ce681d09cca89400",
+          "projectDeveloperMarkerPresent": true
+        },
+        "interpretation": "The typed role uses its own complete developer instructions. Model, effort, approval and sandbox match the parent; the parent custom developer marker is not reproduced in the child. This is not evidence that all parent developer text is inherited."
+      },
+      "publicCallAudit": {
+        "parentOnlyScheduling": true,
+        "actualChildOnlyAssignedTypedRole": true,
+        "childNestedDelegation": false,
+        "actualCommandsReviewed": true,
+        "observedOperations": "workspace reads, installed runtime help/config/resource/check reads, official W3C web reads; authorized case adds exclusive-create plus readback of exact audit only",
+        "opaqueCommunicationLimitation": "Encrypted internal dispatch/send-message contents retained opaque; no decoded content or full text inheritance claim."
+      },
+      "traces": [
+        {
+          "kind": "child",
+          "id": "01a1d0e6-cc04-74e1-bf96-febc8bac4a15",
+          "role": "game-studio-accessibility-specialist",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-55-48-01a1d0e6-cc04-74e1-bf96-febc8bac4a15.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/RyCP4u/rollout-2026-11-13T01-55-48-01a1d0e6-cc04-74e1-bf96-febc8bac4a15.jsonl",
+          "sha256": "ef06e4cd87e4cafd81c52897e84f596be0214cb1349196017f5d9306a5b3fc96",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec"
+          ]
+        },
+        {
+          "kind": "parent",
+          "id": "01a1d0e6-a4bc-7771-914f-b81f8a114711",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-55-38-01a1d0e6-a4bc-7771-914f-b81f8a114711.jsonl",
+          "frozen": "/private/tmp/accessibility-native-audit/RyCP4u/rollout-2026-11-13T01-55-38-01a1d0e6-a4bc-7771-914f-b81f8a114711.jsonl",
+          "sha256": "acc9064abc3509108c007b45ef7d6fab43ad3640f5a3d903dd34b68d20c27a8e",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent"
+          ]
+        }
+      ],
+      "frozenFiles": {
+        "before.json": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/before.json",
+          "sha256": "973d888e3301ee48d62b8a26a8b3abcaa652d0dcb9e7eff36456e019df396cc5",
+          "bytes": 82872
+        },
+        "fixture.json": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/fixture.json",
+          "sha256": "d72f7d4ce66bc5db94bfb60d023fe646fab7370e8e57389002fa4a263c7d74aa",
+          "bytes": 1959
+        },
+        "report.json": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/report.json",
+          "sha256": "4c5a79319702b567b17604dbb2fafbd876d87eee386393ce452ce6dd77ea7b85",
+          "bytes": 759
+        },
+        "final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/final.txt",
+          "sha256": "a5a7d09c9fe5c83912bd7e0f2dde3a1d934f018e109ec865f55cb29712897d2a",
+          "bytes": 765
+        },
+        "rollout-2026-11-13T01-55-48-01a1d0e6-cc04-74e1-bf96-febc8bac4a15.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/rollout-2026-11-13T01-55-48-01a1d0e6-cc04-74e1-bf96-febc8bac4a15.jsonl",
+          "sha256": "ef06e4cd87e4cafd81c52897e84f596be0214cb1349196017f5d9306a5b3fc96",
+          "bytes": 738923
+        },
+        "rollout-2026-11-13T01-55-38-01a1d0e6-a4bc-7771-914f-b81f8a114711.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/rollout-2026-11-13T01-55-38-01a1d0e6-a4bc-7771-914f-b81f8a114711.jsonl",
+          "sha256": "acc9064abc3509108c007b45ef7d6fab43ad3640f5a3d903dd34b68d20c27a8e",
+          "bytes": 268170
+        },
+        "stderr.txt": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/stderr.txt",
+          "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+          "bytes": 39
+        },
+        "events.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/events.jsonl",
+          "sha256": "e2ee2e0b96340adc673073475bf26c47276fcdea2b64c33df112fb660b77d600",
+          "bytes": 5759
+        },
+        "child-calls.jsonl": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/child-calls.jsonl",
+          "sha256": "983b01b0e43e02f31f52ecf81709c969aad08c08a1081e2d8bfcdd42895f8cf8",
+          "bytes": 35075
+        },
+        "structural-audit.json": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/structural-audit.json",
+          "sha256": "f72cdb7ac02a27cbf210438378d941bb85d4d0962e336540b6283b2dd73a2464",
+          "bytes": 94374
+        },
+        "child-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/child-developer.txt",
+          "sha256": "a14f98adb8da0c24eb2831d7824a595e3f6abfb652f1a99ead181ad6c0e7eb7e",
+          "bytes": 14335
+        },
+        "parent-developer.txt": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/parent-developer.txt",
+          "sha256": "d20c3282856863f6b481482e87b74d0aaf5d31b5f2bcb1d0ce681d09cca89400",
+          "bytes": 4801
+        },
+        "developer-context-observation.json": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/developer-context-observation.json",
+          "sha256": "4d6e6826f8c8a7b7586c4c1e08a6f56fcc47fb331c5b07a3c890a9123cbe8dd2",
+          "bytes": 743
+        },
+        "child-final.txt": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/child-final.txt",
+          "sha256": "e7b540626e66ab961268df1dd24e84f819797fc304fe9209d8eb043ac2d7d477",
+          "bytes": 1407
+        },
+        "prompt-input.json": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/prompt-input.json",
+          "sha256": "95b1c95db5eff821681ca84429c464b34798098e2c14fba4582b49bd59e04cce",
+          "bytes": 12815
+        },
+        "artifacts/production/qa/accessibility/player-hud-audit-2026-11-13.md": {
+          "path": "/private/tmp/accessibility-native-audit/RyCP4u/artifacts/production/qa/accessibility/player-hud-audit-2026-11-13.md",
+          "sha256": "d67b3e6587d2495f533295a0434d3887d40846ee7f5aace918b7c12f2ba578b4",
+          "bytes": 23789
+        }
+      },
+      "rootStatus": "FAIL_gate_attribution"
+    }
+  ],
+  "rootAdjudication": {
+    "authorizedAudit": "FAIL_gate_attribution: F04 acknowledges only studio scaling deficiency is certain and alternate resize mechanisms remain unassessed, yet labels the mixed studio/WCAG row BLOCKING and adds it to release blockers. Authorized write, other supported findings and explicit runtime limits pass their narrower checks.",
+    "standard": "https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html",
+    "basis": "Official explanation checked 2026-11-13: at least one supported scaling mechanism can satisfy the criterion. The studio requirement is still a real spec gap; lack of normative evidence does not convert it into a proven target failure.",
+    "candidatePreservation": "Frozen candidate retains its pre-adjudication PENDING value; raw files and artifact were not changed."
+  },
+  "limitations": [
+    "Parent custom QA_CONFIG developer marker was not inherited into the child role developer message. Actual role instructions and model/effort/approval/sandbox are verified separately.",
+    "Host captures regular-file hashes, not a pre-run symlink baseline.",
+    "No actual screen reader/device/game runtime or legal/platform certification is established.",
+    "Latest gate-attribution instruction correction awaits native retry; model workers reached account usage limit."
+  ],
+  "ownershipRetry": {
+    "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-ZFeqkp",
+    "status": "PASS_selected_flow_boundary",
+    "nativeExitCode": 0,
+    "wrapperExitCode": 3,
+    "sameNativePromptAndRawInputs": true,
+    "originalFilesPreserved": 567,
+    "archiveSha256": "ba1c622365c68973519c50b56fcdcc041e4a32afc3d9348c1e3a0251e03a0685",
+    "roleSha256": "549d5a83860572d2905fbc842f2edcbc0c084f40c9f773f9212f8411a3a609ae",
+    "changedArchiveMembers": [
+      "package/resources/.codex/agents/game-studio-accessibility-specialist.toml"
+    ],
+    "rawHashes": {
+      "fixture.json": "5c9bbdfcce11e193b2cedf8ce5259577287ed199f45d04b5439300934c31202d",
+      "before.json": "d841c3601576dea185fb7e7b287c6e5ab3c77e085c191d24b9170a6abbd38ca8",
+      "report.json": "277bd47eb1a603821ef0486893e6ea1a55fa339e691a05259637fa8c9f3e6116",
+      "events.jsonl": "f96006ee8080ea1f69a7b753887ad6e3b29927adce8d641bc91c695a6af9cd64",
+      "stderr.txt": "240f7a76253ddd5b6895679c58bbf9555928194ecd4434d7e54991d8effb4cec",
+      "final.txt": "73b4975927789bbb749ae23e0c27dbe7a010f62e7cc2bbe5960ec0af0e474765",
+      "prompt-input.json": "2233cc5813cacefdd6bcc49068f6ce3e1b96bbf45b8ccd27868baf6f1a0f9410"
+    },
+    "traces": [
+      {
+        "kind": "parent",
+        "id": "01a1d0ea-0ade-7cb3-bcf3-9ed3ef72d1ea",
+        "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-59-21-01a1d0ea-0ade-7cb3-bcf3-9ed3ef72d1ea.jsonl",
+        "frozen": "/private/tmp/accessibility-native-audit/ZFeqkp/rollout-2026-11-13T01-59-21-01a1d0ea-0ade-7cb3-bcf3-9ed3ef72d1ea.jsonl",
+        "sha256": "848964807047e81498d15f8ee99cafe86a9975290d0a9284a865728cf7bcc362",
+        "callNames": [
+          "spawn_agent",
+          "wait_agent",
+          "wait_agent",
+          "send_message",
+          "wait_agent",
+          "wait_agent",
+          "send_message",
+          "wait_agent"
+        ],
+        "contexts": [
+          {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "read-only"
+            }
+          }
+        ],
+        "finalSha256": "73b4975927789bbb749ae23e0c27dbe7a010f62e7cc2bbe5960ec0af0e474765"
+      },
+      {
+        "kind": "child",
+        "id": "01a1d0ea-2fda-7072-9121-4e97abeed171",
+        "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-59-31-01a1d0ea-2fda-7072-9121-4e97abeed171.jsonl",
+        "frozen": "/private/tmp/accessibility-native-audit/ZFeqkp/rollout-2026-11-13T01-59-31-01a1d0ea-2fda-7072-9121-4e97abeed171.jsonl",
+        "sha256": "28ae0ddea352ba29e27b3f26ebebff40bff4e135b38c989e8eb1976592749cb0",
+        "callNames": [
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "send_message",
+          "exec",
+          "send_message"
+        ],
+        "contexts": [
+          {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "read-only"
+            }
+          },
+          {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "read-only"
+            }
+          }
+        ],
+        "finalSha256": "093ef46c6d71a952700ebd3bd0ae65588df1591b47c71a16bcb7ce312b4cb10f"
+      }
+    ],
+    "rootReview": "Read complete child final and all public executable tool calls. Assesses supplied stages/transition requirements without authoring a new graph or screen composition; returns consequential owner decisions and honest evidence limits. No writes, builds or installs.",
+    "limits": "Child messages to parent contain opaque payloads; exact text not inferred or decrypted. Final output and public metadata remain observable."
+  },
+  "latestSelectedCounts": {
+    "PASS": 6,
+    "FAIL": 1
+  },
+  "historicalCounts": {
+    "runs": 8,
+    "PASS": 6,
+    "FAIL": 2
+  },
+  "finalInstructionRevision": {
+    "path": ".codex/agents/game-studio-accessibility-specialist.toml",
+    "sha256": "a3a8943d96e40f84c1fb4d5f696dc778089fdfd01ed0db37171afa7db6f6b46c",
+    "ownershipRevisionNative": "PASS on separately recorded earlier role hash",
+    "gateBasisNative": "PENDING due account model-worker usage limit",
+    "independentReview": "design_system_migration reviewed both general source-boundary corrections before model-worker limit; root applied exact scoped changes.",
+    "localValidation": {
+      "build": "PASS",
+      "contentLint": "PASS",
+      "installedRoleBytes": "PASS"
+    }
+  }
+}
