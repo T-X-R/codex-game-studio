@@ -1287,7 +1287,8 @@ agents:
     last_category_result: ""
     category: engine
     target: .codex/agents/game-studio-godot-gdextension-specialist.toml
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/roles/godot-gdextension-specialist-codex.md
 
   # Engine Specialists — Unity
   - name: unity-specialist
