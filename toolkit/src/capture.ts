@@ -1,7 +1,7 @@
-import { access, mkdtemp, readFile, rm, mkdir, writeFile } from 'node:fs/promises';
+import { access, mkdtemp, readFile, rm, mkdir, writeFile, readdir, stat } from 'node:fs/promises';
 import { constants } from 'node:fs';
 import { delimiter, dirname, join, resolve } from 'node:path';
-import { tmpdir } from 'node:os';
+import { homedir, tmpdir } from 'node:os';
 import { pathToFileURL } from 'node:url';
 import { StudioError } from './contract.js';
 import { safePath } from './files.js';
@@ -10,16 +10,43 @@ import { resourcePath } from './resources.js';
 import { collect, writeNewDirectory } from './prototype.js';
 import { runProcess } from './process.js';
 
-export async function findBrowser(explicit = process.env.GAME_STUDIO_BROWSER): Promise<string> {
-  const candidates = explicit ? [resolve(explicit)] : [
-    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
-    ...['PROGRAMFILES', 'PROGRAMFILES(X86)', 'LOCALAPPDATA'].flatMap(key => process.env[key] ? [join(process.env[key]!, 'Google/Chrome/Application/chrome.exe'), join(process.env[key]!, 'Microsoft/Edge/Application/msedge.exe')] : []),
-    ...(process.env.PATH ?? '').split(delimiter).flatMap(path => ['chromium', 'chromium-browser', 'google-chrome', 'chrome-headless-shell'].map(name => join(path, name))),
+async function executable(path: string) {
+  try { await access(path, constants.X_OK); return (await stat(path)).isFile(); }
+  catch (error) { if (['ENOENT', 'EACCES', 'ENOTDIR'].includes((error as NodeJS.ErrnoException).code ?? '')) return false; throw error; }
+}
+
+export async function findHeadlessShell(): Promise<string | null> {
+  const names = process.platform === 'win32' ? ['chrome-headless-shell.exe', 'chrome-headless-shell'] : ['chrome-headless-shell'];
+  const candidates = (process.env.PATH ?? '').split(delimiter).flatMap(path => names.map(name => join(path, name)));
+  const stores = process.env.PLAYWRIGHT_BROWSERS_PATH ? [process.env.PLAYWRIGHT_BROWSERS_PATH] : [
+    join(homedir(), '.cache/ms-playwright'), join(homedir(), 'Library/Caches/ms-playwright'),
+    ...(process.env.LOCALAPPDATA ? [join(process.env.LOCALAPPDATA, 'ms-playwright')] : []),
   ];
-  for (const candidate of candidates) {
-    try { await access(candidate, constants.X_OK); return candidate; }
-    catch (error) { if (!['ENOENT', 'EACCES', 'ENOTDIR'].includes((error as NodeJS.ErrnoException).code ?? '')) throw error; }
+  for (const store of stores) {
+    let versions: string[];
+    try { versions = (await readdir(store)).filter(name => name.startsWith('chromium_headless_shell-')).sort((a, b) => b.localeCompare(a, 'en', { numeric: true })); }
+    catch (error) { if (['ENOENT', 'EACCES', 'ENOTDIR'].includes((error as NodeJS.ErrnoException).code ?? '')) continue; throw error; }
+    for (const version of versions) {
+      for (const platform of ['chrome-headless-shell-mac-arm64', 'chrome-headless-shell-mac-x64', 'chrome-headless-shell-linux64', 'chrome-headless-shell-win64']) {
+        candidates.push(...names.map(name => join(store, version, platform, name)));
+      }
+    }
   }
+  for (const candidate of candidates) if (await executable(candidate)) return resolve(candidate);
+  return null;
+}
+
+export async function findBrowser(explicit = process.env.GAME_STUDIO_BROWSER): Promise<string> {
+  const names = (name: string) => process.platform === 'win32' && !name.toLowerCase().endsWith('.exe') ? [name, `${name}.exe`] : [name];
+  const candidates = explicit ? /[/\\]/.test(explicit) ? [resolve(explicit)]
+    : (process.env.PATH ?? '').split(delimiter).flatMap(path => names(explicit).map(name => join(path, name))) : [
+    ...(process.platform === 'darwin' ? ['/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+      '/Applications/Chromium.app/Contents/MacOS/Chromium'] : []),
+    ...['PROGRAMFILES', 'PROGRAMFILES(X86)', 'LOCALAPPDATA'].flatMap(key => process.env[key] ? [join(process.env[key]!, 'Google/Chrome/Application/chrome.exe'), join(process.env[key]!, 'Microsoft/Edge/Application/msedge.exe')] : []),
+    ...(process.env.PATH ?? '').split(delimiter).flatMap(path => ['chromium', 'chromium-browser', 'google-chrome', 'google-chrome-stable', 'microsoft-edge', 'msedge', 'chrome-headless-shell'].flatMap(names).map(name => join(path, name))),
+  ];
+  for (const candidate of candidates) if (await executable(candidate)) return resolve(candidate);
+  if (!explicit) { const shell = await findHeadlessShell(); if (shell) return shell; }
   throw new StudioError('DEPENDENCY_MISSING', 'Configure --browser or GAME_STUDIO_BROWSER with an installed Chromium-family executable', 3);
 }
 

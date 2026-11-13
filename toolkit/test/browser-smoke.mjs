@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { scaffoldPrototype } from '../dist/prototype.js';
 import { capturePrototype } from '../dist/capture.js';
+import { pageShot } from '../dist/page-shot.js';
 const root = await mkdtemp(join(tmpdir(), 'game-studio-browser-test-'));
 try {
   await scaffoldPrototype(root, 'replay');
@@ -32,6 +33,22 @@ try {
   assert.equal(blockedModule.exitCode, 3, JSON.stringify(blockedModule));
   assert.equal(blockedModule.replayComplete, false);
   assert.ok(blockedModule.notAssessed.some(reason => reason.includes('window.game.step')));
+  await writeFile(htmlPath, '<html><body><h1>Plain existing page</h1></body></html>');
+  const plain = await pageShot(root, 'prototypes/replay/index.html', 'evidence/plain', { timeoutMs: 30000 });
+  assert.equal(plain.exitCode, 0, JSON.stringify(plain));
+  assert.equal(plain.replayAssessed, false); assert.equal(plain.qualityAssessed, false);
+  const modulePage = '<html><body><h1 id="status">Module pending</h1><script type="module" src="entry.js"></script></body></html>';
+  const moduleCode = 'const data = await fetch("./data.json").then(r => r.json()); document.getElementById("status").textContent = "Loaded " + data.value; console.log("LOCAL_MODULE_AND_DATA_LOADED:" + data.value);';
+  await writeFile(htmlPath, modulePage);
+  await writeFile(join(root, 'prototypes/replay/entry.js'), moduleCode);
+  await writeFile(join(root, 'prototypes/replay/data.json'), '{"value":42}');
+  const denied = await pageShot(root, 'prototypes/replay/index.html', 'evidence/plain-module-denied', { timeoutMs: 30000 });
+  assert.equal(denied.exitCode, 0); assert.ok(!denied.console.some(line => line.includes('LOCAL_MODULE_AND_DATA_LOADED')));
+  const allowed = await pageShot(root, 'prototypes/replay/index.html', 'evidence/plain-module-allowed', { timeoutMs: 30000, software: true, fileAccess: true });
+  assert.equal(allowed.exitCode, 0, JSON.stringify(allowed));
+  assert.ok(allowed.console.includes('LOCAL_MODULE_AND_DATA_LOADED:42'), JSON.stringify(allowed.console));
+  assert.equal(await readFile(htmlPath, 'utf8'), modulePage);
+  assert.equal(await readFile(join(root, 'prototypes/replay/entry.js'), 'utf8'), moduleCode);
   console.log(JSON.stringify({ browser: first.rows.find(row => row[0] === 'ua')?.[1],
-    checks: ['fixed-seed state equality', 'identical screenshots', 'source preservation', 'real browser error detection', 'missing game hook is not assessed', 'file module loading failure is not assessed'] }));
+    checks: ['fixed-seed state equality', 'identical screenshots', 'source preservation', 'real browser error detection', 'missing game hook is not assessed', 'file module loading failure is not assessed', 'plain scriptless screenshot without a game hook', 'local module and data access requires explicit file-access', 'plain capture preserves game sources'] }));
 } finally { await rm(root, { recursive: true, force: true }); }
