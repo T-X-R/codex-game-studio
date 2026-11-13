@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A015 general output-rationale clarification; actual unchanged-input retries are under manual review, not claimed fully passed.",
+  "role": {
+    "path": ".codex/agents/game-studio-godot-gdscript-specialist.toml",
+    "sha256": "f08f6379ffb43cfe13d6489ddc881d21149f01a059c3bde970e4c2c6d790ea81"
+  },
+  "changes": [
+    "Explain static typing tooling and compiler-path rationale without claiming measured speedup.",
+    "Communicate conditional performance handoff when profiling still identifies a bottleneck, without adopting native code.",
+    "Report documented feature introduction and source alongside actual installed-version uncertainty."
+  ],
+  "independentReview": {
+    "path": "/private/tmp/game-studio-a015-rationale-independent-kx4k904i/review.md",
+    "sha256": "fd20d05f1802bceb284c6aefee850d5cc19b5e91d9c4fed6577642e423375cd5"
+  },
+  "candidate": {
+    "path": "/private/tmp/game-studio-a015-rationale-revision-cegnym_o/manifest.json",
+    "sha256": "87cb95058cbea09603bb0fb4399893f0354195664f4bd307249fd67c4940cfa0"
+  },
+  "controlledRetry": {
+    "freeze": {
+      "path": "/private/tmp/game-studio-a015-rationale-independent-kx4k904i/retry-root/freeze.json",
+      "sha256": "8c2eeac33be14007d250ba841399c8d4a2f9931e9aa48613b91171860a0e223c"
+    },
+    "rootRehashedFiles": 470,
+    "rootComparedArchiveMembers": 327,
+    "onlyChangedMember": "package/resources/.codex/agents/game-studio-godot-gdscript-specialist.toml",
+    "hostAndInputs": "Unchanged from the initial five-case runtime",
+    "newShaderRolePresent": false
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "package": "PASS: exact global/restored instructions and owned detach",
+    "node24": {
+      "tests": 529,
+      "pass": 529,
+      "fail": 0,
+      "skip": 0
+    },
+    "node26": {
+      "tests": 529,
+      "pass": 529,
+      "fail": 0,
+      "skip": 0
+    },
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-a015-rationale-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-rationale-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-rationale-content.log",
+        "sha256": "ec5882ff3f418037a76fec844fceef64801bfc4547cbc4fc97508b672d3bb061"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-rationale-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      },
+      {
+        "path": "/private/tmp/game-studio-godot-language-final24.log",
+        "sha256": "a294c25e58156e9c8620c9b5a006e4a35cc3eb1193ab416df1891a8f2a64910b"
+      },
+      {
+        "path": "/private/tmp/game-studio-godot-language-final26.log",
+        "sha256": "4bd51accaf361439d4de1aea474905d87d1a8c12c091b4656e300628bfb7976e"
+      }
+    ]
+  },
+  "limits": [
+    "Original failures remain intact. Full behavior is not inferred from instruction text or green toolkit tests.",
+    "Separate real-engine verification is investigating asynchronous request cleanup; this instruction change does not repair or waive that runtime issue.",
+    "Actual role/native, engine/platform, existing-file edits and desktop coverage remain separately tracked."
+  ]
+}

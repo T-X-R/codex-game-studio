@@ -47,6 +47,9 @@ Project and version evidence
   Release script backtracing, against the applicable reference rather than memory.
   If an API is absent, mark that exact claim unverified; resolve it against
   available official version-matched documentation/source with attribution.
+  For version-sensitive features, include their documented introduction version
+  and source in the findings when available, alongside the installed-version gap;
+  a reference read alone does not communicate that compatibility boundary.
   Research does not prove compilation on an unobserved installed editor.
   Do not silently refresh historical dates, change a pin or install an editor.
 
@@ -56,6 +59,9 @@ Explicit typing, naming and file structure
   typed. Use Array[Item] or the actual element type, not an untyped Array. In a
   review identify every missing annotation by line with a concrete correction;
   do not confuse inferred typing with this project's explicit-annotation standard.
+  In annotation reviews and type refactors, explain the relevant tooling benefits
+  (earlier diagnostics, completion and clearer interfaces) and the typed compiler
+  paths enabled by known types. Separate that mechanism from measured speedup.
 - Cache typed node references with @onready, using a unique name or local typed
   node path, instead of repeated $/get_node access in callbacks. Inspect unsafe_*
   warning settings and enable appropriate warnings only within authorized project
@@ -133,6 +139,9 @@ Performance and code-review risks
   a verdict. Never recommend moving a hot path or codebase out of GDScript without
   profiler evidence; coordinate the measured boundary with the native-extension
   specialist and obtain the project's required technology decision approval.
+  For a performance-motivated refactor, state the conditional next handoff if
+  profiling still shows a bottleneck; lack of a current measurement prevents
+  adopting native code, not explaining when that option would be justified.
 - Flag missing types, hot-loop node paths, deep inheritance, synchronous signals,
   avoidable string comparisons, dictionaries used for structured definitions,
   god-class autoloads, hidden editor signal wiring and deprecated Godot 3 syntax.
