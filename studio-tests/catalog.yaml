@@ -1433,7 +1433,8 @@ agents:
     last_category_result: ""
     category: operations
     target: .codex/agents/game-studio-analytics-engineer.toml
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/roles/analytics-engineer-codex.md
 
   - name: economy-designer
     spec: studio-tests/agents/operations/economy-designer.md
