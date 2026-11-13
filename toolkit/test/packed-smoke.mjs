@@ -260,6 +260,14 @@ try {
     await assert.rejects(readFile(join(existingWeb, 'shot/report.json')), { code: 'ENOENT' });
   }
   for (const [runtime, entry] of [['global', globalCli], ['restored', launcher]]) {
+    const testScaffold = command(entry, 'resource', 'path', 'studio/scripts/test-scaffold.mjs', '--project', project).data.path;
+    assert.deepEqual(await readFile(testScaffold), await readFile(join(packageRoot, '../studio/scripts/test-scaffold.mjs')));
+    if (runtime === 'restored') assert.ok(testScaffold.startsWith(join(project, '.game-studio/node_modules')));
+    for (const name of await readdir(join(packageRoot, '../studio/templates/test-scaffold'))) {
+      const id = `studio/templates/test-scaffold/${name}`;
+      const installed = command(entry, 'resource', 'path', id, '--project', project).data.path;
+      assert.deepEqual(await readFile(installed), await readFile(join(packageRoot, '..', id)));
+    }
     const parseHelper = command(entry, 'resource', 'path', 'studio/scripts/godot-parse-check.gd', '--project', project).data.path;
     assert.deepEqual(await readFile(parseHelper), await readFile(join(packageRoot, '../studio/scripts/godot-parse-check.gd')));
     if (runtime === 'restored') assert.ok(parseHelper.startsWith(join(project, '.game-studio/node_modules')));
@@ -295,6 +303,32 @@ try {
       assert.deepEqual(observed.probes, []);
       if (engine !== 'Web') assert.equal(observed.observations.find(row => row.check === 'reference-series').state, 'MATCH');
       assert.match(execute(coherenceHelper, ['--project', target, '--text']), /Observations only/);
+      assert.equal(await readFile(join(target, 'project.yaml'), 'utf8'), config);
+      if (engine === 'Web') {
+        await writeFile(join(target, 'package.json'), JSON.stringify({ scripts: { build: 'webpack', test: 'playwright test' },
+          devDependencies: { webpack: '5.99.0', '@playwright/test': '1.56.0' } }));
+        await writeFile(join(target, 'package-lock.json'), '{}');
+      }
+      const scaffoldArgs = ['--project', target, engine];
+      if (engine === 'Unreal') scaffoldArgs.push('--module', 'ActualModule', '--project-name', 'Shooter', '--test-prefix', 'ProductSpec');
+      const plannedTests = JSON.parse(execute(testScaffold, [...scaffoldArgs, '--dry-run']));
+      assert.equal(plannedTests.qualityAssessed, false);
+      const expectedScaffoldCount = { Godot: 6, Unity: 6, Unreal: 5, Web: 7 }[engine];
+      assert.equal(plannedTests.files.length, expectedScaffoldCount);
+      assert.ok(plannedTests.files.every(file => file.state === 'WOULD_CREATE'));
+      await assert.rejects(readFile(join(target, 'tests/README.md')), { code: 'ENOENT' });
+      const scaffolded = JSON.parse(execute(testScaffold, scaffoldArgs));
+      assert.equal(scaffolded.files.length, expectedScaffoldCount);
+      assert.ok(scaffolded.files.every(file => file.state === 'CREATED'));
+      assert.match(await readFile(join(target, 'tests/README.md'), 'utf8'), /^# Test Infrastructure/);
+      if (engine === 'Unreal') for (const id of ['editor_target', 'module_build_rules', 'project_file', 'ue_root']) {
+        assert.ok(scaffolded.needs.some(need => need.id === id));
+      }
+      await writeFile(join(target, 'tests/README.md'), 'Owner-maintained test instructions\r\n');
+      const repeated = JSON.parse(execute(testScaffold, scaffoldArgs));
+      assert.equal(repeated.files.length, expectedScaffoldCount);
+      assert.ok(repeated.files.every(file => file.state === 'EXISTS'));
+      assert.equal(await readFile(join(target, 'tests/README.md'), 'utf8'), 'Owner-maintained test instructions\r\n');
       assert.equal(await readFile(join(target, 'project.yaml'), 'utf8'), config);
     }
     for (const starter of ['none', 'three', 'phaser', 'pixi']) {
