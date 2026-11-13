@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-13",
+  "scope": "Actual child-process browser fixture isolation and bounded environment observations",
+  "status": "LOCAL_PASS_NATIVE_CI_PENDING",
+  "previousAttempt": {
+    "head": "b36a2c5849b9057c019180443ff31748e61e27c5",
+    "ci": "https://github.com/T-X-R/codex-game-studio/actions/runs/43360195517",
+    "outcome": "Windows still selects installed Chrome in the PATH-only fixture; other four jobs passed",
+    "log": {
+      "path": "/private/tmp/game-studio-b36a2c5-windows-ci.log",
+      "sha256": "e62209436944258d6ad4fdda1bbe04cac8c5abd0812f4b50ff3d9ff2488a583b"
+    }
+  },
+  "correctionToPriorExplanation": "Case-insensitive parent env filtering is appropriate but did not fix the native failure. The full cause is not established. Do not infer libuv automatically restores ProgramFiles: reviewed Node/libuv source does not list that variable among the required spawn defaults.",
+  "change": "Inside the actual child, record presence of only six browser discovery keys, clear their case aliases, install isolated PATH/cache, and assert that the cleared state survives importing the production module. Keep findBrowser and the msedge.exe expected result unchanged. Diagnostics include only booleans and Node/libuv/architecture, never the full environment.",
+  "canonicalFile": {
+    "path": "toolkit/test/page-shot.test.mjs",
+    "sha256": "5e9c82837aa041f8120e53b93cda5e986dd30916d0d6f4fba140a8b6684398fc"
+  },
+  "focused": {
+    "node24": {
+      "pass": 14,
+      "fail": 0,
+      "skip": 0,
+      "path": "/private/tmp/game-studio-page-shot-child-env24-final.log",
+      "sha256": "5ccac694e325fca614e105a1b76d22204e1b7e76edd3202487ecda9b14e25b50"
+    },
+    "node26": {
+      "pass": 14,
+      "fail": 0,
+      "skip": 0,
+      "path": "/private/tmp/game-studio-page-shot-child-env26-final.log",
+      "sha256": "6a12a6f0cd96bbfaf8f79797fcdc7bfd614e6162942e5241e95f86d416539046"
+    }
+  },
+  "limits": [
+    "Native Windows diagnostics and exact-head result remain pending.",
+    "No product implementation, browser discovery priority or test expectation was changed.",
+    "Earlier failure logs and the incomplete first explanation remain retained and are superseded by this explicit qualification."
+  ]
+}

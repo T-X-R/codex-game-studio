@@ -136,17 +136,31 @@ test('automatic Windows PATH discovery includes executable suffixes without requ
   const { root } = await fixture(t);
   await writeFile(join(root, 'msedge.exe'), '', { mode: 0o755 });
   const module = new URL('../dist/capture.js', import.meta.url).href;
+  const isolated = ['PATH', 'PLAYWRIGHT_BROWSERS_PATH', 'GAME_STUDIO_BROWSER', 'PROGRAMFILES', 'PROGRAMFILES(X86)', 'LOCALAPPDATA'];
   const script = `Object.defineProperty(process, 'platform', { value: 'win32' });
+    const isolated = ${JSON.stringify(isolated)};
+    const before = Object.fromEntries(isolated.map(key => [key, !!process.env[key]]));
+    for (const key of Object.keys(process.env)) if (isolated.includes(key.toUpperCase())) delete process.env[key];
+    process.env.PATH = ${JSON.stringify(root)};
+    process.env.PLAYWRIGHT_BROWSERS_PATH = ${JSON.stringify(join(root, 'empty-cache'))};
+    const after = Object.fromEntries(isolated.map(key => [key, !!process.env[key]]));
     const { findBrowser } = await import(${JSON.stringify(module)});
-    console.log(await findBrowser());`;
+    const afterImport = Object.fromEntries(isolated.map(key => [key, !!process.env[key]]));
+    console.log(JSON.stringify({ browser: await findBrowser(), before, after, afterImport,
+      node: process.version, uv: process.versions.uv, arch: process.arch }));`;
   // A copied environment is a plain object: deleting PROGRAMFILES does not remove
   // ProgramFiles. Windows resolves those aliases again when the child starts.
-  const isolated = new Set(['PATH', 'PLAYWRIGHT_BROWSERS_PATH', 'GAME_STUDIO_BROWSER', 'PROGRAMFILES', 'PROGRAMFILES(X86)', 'LOCALAPPDATA']);
-  const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => !isolated.has(key.toUpperCase())));
+  const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => !isolated.includes(key.toUpperCase())));
   Object.assign(env, { PATH: root, PLAYWRIGHT_BROWSERS_PATH: join(root, 'empty-cache') });
   const run = spawnSync(process.execPath, ['--input-type=module', '-e', script], { env, encoding: 'utf8' });
   assert.equal(run.status, 0, run.stderr);
-  assert.equal(run.stdout.trim(), join(root, 'msedge.exe'));
+  const observed = JSON.parse(run.stdout);
+  t.diagnostic(JSON.stringify({ node: observed.node, uv: observed.uv, arch: observed.arch,
+    browserEnvironmentPresence: { parent: Object.fromEntries(isolated.map(key => [key, !!env[key]])),
+      before: observed.before, after: observed.after, afterImport: observed.afterImport } }));
+  assert.deepEqual(observed.after, Object.fromEntries(isolated.map(key => [key, ['PATH', 'PLAYWRIGHT_BROWSERS_PATH'].includes(key)])));
+  assert.deepEqual(observed.afterImport, observed.after);
+  assert.equal(observed.browser, join(root, 'msedge.exe'));
 });
 
 test('timeout uses one explicitly recorded real-time retry and once suppresses it', async t => {

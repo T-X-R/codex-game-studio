@@ -6,6 +6,13 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- The [follow-up Windows fixture attempt](evidence/page-shot-child-environment-2026-11-13.json)
+  still failed on `b36a2c5`, so the parent-environment explanation below is
+  incomplete. The fixture now checks and clears browser-discovery environment
+  keys inside the actual child and records bounded before/after-import presence
+  diagnostics. Product behavior and the original assertion remain unchanged.
+  Both local Node versions pass 14 focused checks; native CI remains required.
+
 - The integrated `984f071` CI exposed a [Windows test-fixture environment leak](evidence/page-shot-windows-fixture-2026-11-13.json):
   the test removed `PROGRAMFILES` but retained `ProgramFiles`, so normal discovery
   selected installed Chrome. The fixture now removes case aliases before setting
