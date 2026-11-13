@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-13",
+  "status": "implemented and packaged; not engine/runtime acceptance",
+  "scope": "Correct one unsupported universal Quaternion4.6 transition statement in the canonical runtime reference.",
+  "file": {
+    "path": "studio/engine-reference/godot/breaking-changes.md",
+    "before": "7cb4375e8b343a32b2b3e9a433cdf5c876093cfcf80e161fb13961a25748f739",
+    "after": "93dc25510d2c04dbc5204f239e7666916893b37b7295c0347a23661dfee97540"
+  },
+  "source": "https://github.com/godotengine/godot-cpp/blob/godot-4.5-stable/include/godot_cpp/variant/quaternion.hpp",
+  "sourceSha256": "a064efe84f98fda74c22c8e1c0695331d85200c0984595478cb9c8f96cb54634",
+  "rootReview": "Read exact one-row diff and official tagged header: components default to0,0,0,1 and empty default constructor. This contradicts the universal claim for C++4.5; it is not a claim about every language/constructor.",
+  "candidate": {
+    "path": "/private/tmp/game-studio-quaternion-reference-43utb5cq/manifest.json",
+    "sha256": "59a9e853693e63e2de278bad3c5e6fe5035ed99227ebd63b3628af83889b5803"
+  },
+  "sourceAndImpact": {
+    "path": "/private/tmp/game-studio-quaternion-reference-43utb5cq/SOURCES-AND-IMPACT.md",
+    "sha256": "847a8d5a167ab7b7adfd735d62a25066c3c3a9792a74a1cc99def7172a49215f"
+  },
+  "independentSourceReview": {
+    "path": "/private/tmp/game-studio-a014-independent-oazm_gbv/review.md",
+    "sha256": "206ac8d619fa69576b90d9f17c9694fdbfb8847cc0bba1db6d2dbe39b5096174"
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS",
+    "node24ReferenceTests": 16,
+    "node26ReferenceTests": 16,
+    "pack": "PASS; actual installed references equal current canonical bytes",
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-quaternion-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      {
+        "path": "/private/tmp/game-studio-quaternion-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      {
+        "path": "/private/tmp/game-studio-quaternion-content.log",
+        "sha256": "3cfa0e4018b1cb17c158fedd4f675b47387d17ee219718d95d71978eb3d8263a"
+      },
+      {
+        "path": "/private/tmp/game-studio-quaternion-test24.log",
+        "sha256": "b972c5c555247cd133e807506f9cfeeb8b6901295fcac314beb2818462d1a49b"
+      },
+      {
+        "path": "/private/tmp/game-studio-quaternion-test26.log",
+        "sha256": "702685ce4a35a9ef8687e69606f6bc5401a04e390feca78a550a55fd0ead6657"
+      },
+      {
+        "path": "/private/tmp/game-studio-quaternion-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      }
+    ]
+  },
+  "preservation": {
+    "rootHistoricalSourceSha256": "6d566ed89500235f1935aef48ddf66bb7677e16d0f98ea4de2a977e21eeafdca",
+    "frozenNativeInputSha256": "5c22957492e7b372bbdb95910bbc9656a3f755dc4d6e00f86f658a0759b3dbb6",
+    "notes": "Original root source, historical native fixture snapshots, prior archives and failures unchanged. New packages contain corrected canonical reference. Existing user reference directories are not silently overwritten."
+  },
+  "limitations": [
+    "No ABI/compiler/engine/all-language default acceptance.",
+    "Historical fixture scenarios intentionally retain source conflict for real disclosure testing."
+  ]
+}

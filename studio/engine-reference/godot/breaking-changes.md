@@ -55,7 +55,7 @@ change behaviour or defaults. The guide lists no deprecations.
 | Physics | Jolt is now the DEFAULT 3D physics engine | New projects use Jolt automatically. Existing projects keep their setting. Some HingeJoint3D properties (like `damp`) only work with GodotPhysics. |
 | Rendering | Glow processes BEFORE tonemapping | Was after tonemapping. Scenes with glow will look different. Adjust intensity/blend in WorldEnvironment. |
 | Rendering | AgX tonemapper new controls | White point and contrast parameters added. |
-| Core | Quaternion initializes to identity | Was zero. Unlikely to affect most code but technically breaking. |
+| Core | Quaternion defaults — historical claim corrected | The claimed universal zero→identity change in 4.6 is not supported: [godot-cpp 4.5](https://github.com/godotengine/godot-cpp/blob/godot-4.5-stable/include/godot_cpp/variant/quaternion.hpp) already default-initializes to `(0, 0, 0, 1)`. Verify the actual language, binding and constructor; C# default struct initialization needs separate verification and cannot be inferred from this C++ header. |
 | UI | Dual-focus system | Mouse/touch focus now separate from keyboard/gamepad focus. Visual feedback differs by input method. |
 | Animation | IK system fully restored | CCDIK, FABRIK, Jacobian IK, Spline IK, TwoBoneIK via SkeletonModifier3D nodes. |
 | Editor | New "Modern" theme default | Grayscale replaces blue-tint. Restore: Editor Settings → Interface → Theme → Style: Classic |
