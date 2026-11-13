@@ -1242,7 +1242,8 @@ agents:
     last_category_result: ""
     category: engine
     target: .codex/agents/game-studio-godot-specialist.toml
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/roles/godot-specialist-codex.md
 
   - name: godot-gdscript-specialist
     spec: studio-tests/agents/engine/godot/godot-gdscript-specialist.md

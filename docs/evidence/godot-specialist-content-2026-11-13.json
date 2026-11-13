@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A017 complete source-role content, independent review and actual packaged installation; native behavior remains unassessed.",
+  "files": {
+    ".codex/agents/game-studio-godot-specialist.toml": "c4cb4f5de4e99f1ea0ac9a3d037079ed322a030e291ab4d1bad17bee4c3bb0f1",
+    "studio-tests/roles/godot-specialist-codex.md": "d22dff75701ab3122126280a510ebb7dc77664b312661bd15493d85b4b6a2d53",
+    "studio-tests/catalog.yaml": "689fd4775bae0d8eaa82f288dc4e0b8f8607b572ee1bbf312b5c5409369c8674",
+    "toolkit/test/packed-smoke.mjs": "55161a04a1c252e664e6fae493430947e3d28e3f71fe7dd03815d0bef435692e"
+  },
+  "source": {
+    ".claude/agents/godot-specialist.md": "05a4bc411c9d9f52fbdb904fdb2905c644c435ecc1f50b8f19a8a934f10e7ae7",
+    "studio-tests/agents/engine/godot/godot-specialist.md": "6927a15231190b1ec26bc417f14f732fc7c2a60f7f2218257e52e73cd99c00ae"
+  },
+  "review": {
+    "candidateManifest": {
+      "path": "/private/tmp/game-studio-godot-specialist-sf5j_n4y/manifest.json",
+      "sha256": "2a42d077977bad2e7418b1f34d4f37f27688fb5a704dba2352e947b2af77baf3"
+    },
+    "independent": {
+      "path": "/private/tmp/game-studio-a017-review-67t4eate/review.md",
+      "sha256": "29734b51fe3e9c833d49127934cb595eea96992969384893682743dd672572f7",
+      "verdict": "No blocking content finding; full native/engine acceptance not assessed"
+    },
+    "root": "Read source, complete role and acceptance mapping; verified all source/candidate hashes before integration. Spec candidate labels updated for partial integration; role bytes unchanged."
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS; behaviorVerified remains false",
+    "package": "PASS: actual global install initializes the exact role, restored runtime resolves identical role bytes, detach removes the installed role. No runtime role invocation implied.",
+    "node24": {
+      "tests": 496,
+      "pass": 496,
+      "fail": 0,
+      "skip": 0
+    },
+    "node26": {
+      "tests": 496,
+      "pass": 496,
+      "fail": 0,
+      "skip": 0
+    },
+    "logs": {
+      "build": {
+        "path": "/private/tmp/game-studio-godot-role-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      "typecheck": {
+        "path": "/private/tmp/game-studio-godot-role-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      "content": {
+        "path": "/private/tmp/game-studio-godot-role-content.log",
+        "sha256": "f75d02eb20c0ef9cc65b853997c325e4b9bf6821535ba803b148ad8cfebf29a2"
+      },
+      "pack-restored": {
+        "path": "/private/tmp/game-studio-godot-role-pack-restored.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      },
+      "test24": {
+        "path": "/private/tmp/game-studio-godot-role-test24.log",
+        "sha256": "f94dda6fed5bf28604b37bb008c7ec8a1e2dcec495ce7ca9d2b0c1211c7b5aab"
+      },
+      "test26": {
+        "path": "/private/tmp/game-studio-godot-role-test26.log",
+        "sha256": "e2a81110baeda7728b44c742eef1d4b3f2a02209e68e35e1df5552c9831641a3"
+      }
+    }
+  },
+  "catalogCounts": {
+    "skills": {
+      "partial": 17,
+      "pending": 58,
+      "verified": 0
+    },
+    "roles": {
+      "partial": 17,
+      "pending": 32,
+      "verified": 0
+    },
+    "aliases": {
+      "pending": 3
+    }
+  },
+  "limits": [
+    "All five original role cases and explicit Unity variant require actual native runs.",
+    "Four Godot subordinate roles are still absent; only honest unavailable-role handoffs can currently be tested.",
+    "No role-specific engine, language compilation, export, profiling or desktop behavior is proved by content/package checks.",
+    "CI result for this integration is tracked separately."
+  ]
+}
