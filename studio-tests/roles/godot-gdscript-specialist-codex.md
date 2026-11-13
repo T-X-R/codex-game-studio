@@ -86,9 +86,14 @@ retains accepted-request ownership; [terminal collection](https://github.com/god
 consumes it. Therefore FAILED collection/discard is distinct from successful
 PackedScene instantiation. INVALID/rejected requests do not authorize blind get.
 This exception is version-backed; other pins require their actual API evidence.
-Cancellation also needs a surviving approved owner, not a continuation assumed
-to run on a freed node. No global service or particular cleanup algorithm is
-mandated. Functional no-spawn assertions alone do not prove request cleanup.
+Cancellation needs cleanup that survives the requester, not a continuation
+assumed to run on a freed node. A short-lived internal cleanup object within the
+approved component/interface is an ordinary implementation choice, not a missing
+owner decision; no existing named owner or renewed permission is required. New
+public interfaces, cross-scene persistent services or autoloads need the caller's
+design decision unless already authorized. No concrete cleanup algorithm is
+mandated. This clarifies authorization, not proven runtime correctness; functional
+no-spawn assertions alone do not prove request cleanup.
 The revised role still requires fresh native/output and actual-engine acceptance;
 this source correction does not turn any earlier artifact or failure into PASS.
 
@@ -129,9 +134,10 @@ between polls, is_instance_valid(self) after await before spawn, PackedScene
 handling and explicit failure/invalid branches. Apply the version-backed ownership
 correction above: accepted owned terminal FAILED is collected/discarded once,
 not instantiated; INVALID/rejected submissions never trigger blind retrieval.
-On cancellation, observe no late spawn and cleanup by a surviving approved owner
-when the requester is actually freed, without an in-progress getter or blocking
-_exit_tree. Preserve load errors separately from leaked-request residue. No yield
+On cancellation, observe no late spawn and exact-once terminal cleanup within
+the approved component scope when the requester is actually freed, without relying
+on that freed node, an in-progress getter or blocking _exit_tree. Preserve load
+errors separately from leaked-request residue. No yield
 or busy/blocking loop. Source calls for testable code suitable for tests/unit;
 actual testing requires the project runner, fixture scenes and authorization.
 Missing runner never converts planned code into executed tests.
@@ -143,9 +149,13 @@ Missing runner never converts planned code into executed tests.
 Give the actual loop/type contract where available. Produce the scoped typed
 Array[Node] or real specific-element refactor and explain compiler paths; do not
 invent a workload result. Proposed refactor may be returned as code without an
-unassigned file write. Only remaining measured bottleneck justifies discussing a
-native boundary with GDExtension specialist;1000nodes is not evidence to migrate
-that loop or the whole codebase. No profiler evidence means no such recommendation.
+unassigned file write. Explain the conditional next handoff: if profiling still
+identifies a bottleneck, route the measured hot path through the caller to
+game-studio-godot-gdextension-specialist for native-boundary and integration-cost
+evaluation, reporting an unavailable owner honestly. This future option can be
+explained before measurement; recommending actual native adoption needs profiler
+evidence and the project's technology decision approval. 1000nodes alone does not
+justify migrating that loop or the codebase, or claiming the specialist ran.
 
 ### Case 5 — version-qualified abstract authoring
 

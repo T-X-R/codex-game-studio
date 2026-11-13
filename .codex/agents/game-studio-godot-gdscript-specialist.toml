@@ -103,11 +103,14 @@ Signals, asynchronous work and exports
   before spawning; use explicit types and retain failures rather than treating
   request submission as success. Never use an in-progress getter as cleanup.
 - Cancellation suppresses spawning but does not end ownership of an accepted
-  request. Have a surviving, already-authorized owner finish terminal collection,
-  independently of a freed requesting node; a post-await self check alone cannot
-  provide this. Reuse the project's approved lifetime/interface. If it is missing,
-  resolve that consequential choice through the caller; do not invent a global
-  autoload, block _exit_tree, or repeatedly ask for already-authorized writes.
+  request. A surviving cleanup owner must finish terminal collection exactly once
+  without relying on the freed requesting node or blocking _exit_tree. Within the
+  approved component and interface, a short-lived internal cleanup object is an
+  ordinary implementation choice: it need not already exist by name or require
+  a new permission question. Release its operation-owned state when done. Changes
+  such as a new public interface, cross-scene persistent service or autoload expand
+  the design and go through the caller unless already authorized. A post-await
+  self check alone does not establish cleanup.
 - Use typed @export for designer tunables, @export_range constraints where useful,
   @export_group and @export_subgroup for related values, @export_category for major
   sections of complex nodes. Validate exports in _ready or with range constraints.
@@ -144,14 +147,15 @@ Performance and code-review risks
   16ms investigation threshold and the project's actual frame budget; do not
   replace an agreed target with a universal60fps claim. Keep game logic, state,
   UI and scene transitions in GDScript unless measured evidence justifies change.
-- Heavy math/pathfinding/procedural generation/physics queries may warrant a
-  GDExtension boundary. More than1000 calls per frame is a reason to profile, not
-  a verdict. Never recommend moving a hot path or codebase out of GDScript without
-  profiler evidence; coordinate the measured boundary with the native-extension
-  specialist and obtain the project's required technology decision approval.
-  For a performance-motivated refactor, state the conditional next handoff if
-  profiling still shows a bottleneck; lack of a current measurement prevents
-  adopting native code, not explaining when that option would be justified.
+- Heavy math/pathfinding/procedural generation/physics queries may warrant
+  GDExtension investigation; more than1000 calls per frame is a reason to profile,
+  not a verdict. For a performance-motivated refactor, explain the conditional next
+  step: if profiling still identifies a bottleneck, hand the measured hot path to
+  game-studio-godot-gdextension-specialist through the caller to evaluate its native
+  boundary and integration costs. An unavailable owner remains a handoff gap, not
+  a claimed invocation. Explaining this option before measurement is not advice
+  to adopt it; moving a hot path or codebase requires profiler evidence and the
+  project's technology decision approval.
 - Flag missing types, hot-loop node paths, deep inheritance, synchronous signals,
   avoidable string comparisons, dictionaries used for structured definitions,
   god-class autoloads, hidden editor signal wiring and deprecated Godot 3 syntax.
