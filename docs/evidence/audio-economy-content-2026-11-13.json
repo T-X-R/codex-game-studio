@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A005/A009 complete source-role translations, source scenario fixtures and installed package checks; native behavior pending separately.",
+  "sourceHashes": {
+    ".codex/agents/game-studio-audio-director.toml": "f48faead7727e5d840729af73291eae48eea12516bed2cdf62bbab4d6fbf4d5d",
+    ".codex/agents/game-studio-economy-designer.toml": "14637f1c6925c30f84d9d36dbd5be362af3cf36f74b24e5281a4492772c45374",
+    "studio-tests/roles/audio-director-codex.md": "b8b478632370a263841dd8e1a0de36f6737f7f6bdb4680f13b14eda8ed3f4f92",
+    "studio-tests/roles/economy-designer-codex.md": "6017c0c8679a2609dea51984400f1268faa1b1884ca1ccc92e57ae10b7275c29",
+    "toolkit/test/fixtures/audio-director-cases.mjs": "11d9cf7a16a69deddb18d7b35148c91f128189729d55cc83b4f5262ea83afaf8",
+    "toolkit/test/fixtures/economy-designer-cases.mjs": "aa6717c6f057db54b7580d485cfd017609a4e15407df46a5043963126a2d5fad",
+    "studio-tests/catalog.yaml": "8e7533bea29f57da74c8859b76fc207bec42c578b8d8cc902e310390aba8e9b8",
+    "toolkit/test/packed-smoke.mjs": "5ae0075cc500a84d3d040c7d3828c157414db06f52ddcf2251430ddd71f96c2c",
+    "toolkit/test/qa-role-host.mjs": "1724323e3031584d936b550ce0df09c69a49239d52bb53e19b0d9e072778bfee"
+  },
+  "review": {
+    "audio": {
+      "author": "architecture_decision_migration",
+      "independentReviewer": "design_system_migration",
+      "root": "Source reviewed earlier; final persistence correction, complete specification mapping and all five raw fixtures checked before integration.",
+      "coverage": "Six audio responsibilities, every named pillar/emotional target, asset specifications/naming, scope and honest technical handoffs. No audio director gate; AD belongs to Art."
+    },
+    "economy": {
+      "author": "design_system_migration",
+      "independentReviewer": "architecture_decision_migration",
+      "root": "Source reviewed earlier; complete final specification, telemetry ownership correction and five raw fixtures checked before integration.",
+      "coverage": "Registry/value authority, all-tier distributions and expectations, finite flows/sinks, formula indices and time-to-cap, actual Gold arithmetic, real owner choice. Analytics specifies telemetry; programmers implement game tracking."
+    }
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS; behaviorVerified remains false",
+    "packedInstall": "PASS; actual installed role bytes match canonical files",
+    "node24": {
+      "tests": 362,
+      "pass": 362,
+      "fail": 0,
+      "skip": 0
+    },
+    "node26": {
+      "tests": 362,
+      "pass": 362,
+      "fail": 0,
+      "skip": 0
+    },
+    "initialRestrictedNode24": "361 PASS, 1 environment failure: preview listen EPERM at 127.0.0.1. Original log retained; same source rerun with authorized local port access passes.",
+    "native": "PENDING; separately frozen opt-in runs started after checks",
+    "desktop": "PENDING",
+    "CI": "PENDING for this slice"
+  },
+  "catalogCounts": {
+    "skills": {
+      "partial": 16,
+      "pending": 59,
+      "verified": 0
+    },
+    "roles": {
+      "partial": 16,
+      "pending": 33,
+      "verified": 0
+    },
+    "aliases": {
+      "pending": 3
+    }
+  },
+  "logs": {
+    "build": {
+      "path": "/private/tmp/game-studio-audio-economy-build.log",
+      "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+    },
+    "typecheck": {
+      "path": "/private/tmp/game-studio-audio-economy-typecheck.log",
+      "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+    },
+    "lint": {
+      "path": "/private/tmp/game-studio-audio-economy-lint.log",
+      "sha256": "7747b9ca37f5e28dc44a5feba5528ae2ac94362ad05996ab093071e1dc9d000d"
+    },
+    "pack": {
+      "path": "/private/tmp/game-studio-audio-economy-pack.log",
+      "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+    },
+    "tests24": {
+      "path": "/private/tmp/game-studio-audio-economy-tests24.log",
+      "sha256": "b1361a9bc0f729db20e03ebafebeccd49b1fa96fff8e8e34f10720587cb64c81"
+    },
+    "tests24-host": {
+      "path": "/private/tmp/game-studio-audio-economy-tests24-host.log",
+      "sha256": "51d85599236002fc05433bbdd5f410dccc4bcb73f927f573177172049befe646"
+    },
+    "tests26-host": {
+      "path": "/private/tmp/game-studio-audio-economy-tests26-host.log",
+      "sha256": "aefe8be3316c2097c582ce573c1465051ee673a3861f222b992ce42d925baee0"
+    }
+  },
+  "limits": [
+    "Five Audio fixtures are conversation-only and cannot prove incremental file persistence or real technical arbitration.",
+    "Economy chest first turn proves only discovery/options; full source case needs a real owner choice in the same conversation.",
+    "Only the Economy Gold case permits one exact new analysis document; it does not approve price or earning changes.",
+    "No balance, listening, simulation, human play, runtime safety or complete-role acceptance inferred from static or package checks."
+  ]
+}

@@ -1074,7 +1074,8 @@ agents:
     last_category_result: ""
     category: lead
     target: .codex/agents/game-studio-audio-director.toml
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/roles/audio-director-codex.md
 
   - name: game-designer
     spec: studio-tests/agents/leads/game-designer.md
@@ -1444,7 +1445,8 @@ agents:
     last_category_result: ""
     category: operations
     target: .codex/agents/game-studio-economy-designer.toml
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/roles/economy-designer-codex.md
 
   - name: localization-lead
     spec: studio-tests/agents/operations/localization-lead.md
