@@ -6,6 +6,12 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Analytics Engineer has a [source-reviewed Codex role](evidence/analytics-engineer-content-2026-11-13.json)
+  preserving telemetry, funnel, experiment, dashboard, privacy and design-insight
+  responsibilities, including assigned non-game pipeline work. All six source
+  scenarios are mapped; build/content and exact installed-byte checks pass. Native
+  cases are unrun because model workers reached the account usage limit. This is
+  content acceptance only, not a completed role migration.
 - Markdown section writes now have [integrated evidence](evidence/md-section-writers-2026-11-13.json):
   replace, insert-before and set-field preserve the source transformations, with
   explicit dry-run and project-scoped atomic writes. Build/typecheck/content/pack
