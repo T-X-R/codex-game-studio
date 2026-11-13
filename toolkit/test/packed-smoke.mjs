@@ -90,6 +90,26 @@ try {
     assert.deepEqual(installed.sort(), expected.sort());
   }
   const registryHelper = command(globalCli, 'resource', 'path', 'studio/scripts/registry.mjs').data.path;
+  const webDetector = command(globalCli, 'resource', 'path', 'studio/scripts/web-detect.mjs').data.path;
+  assert.deepEqual(await readFile(webDetector), await readFile(join(packageRoot, '../studio/scripts/web-detect.mjs')));
+  const existingWeb = join(temp, 'existing webpack game');
+  await mkdir(join(existingWeb, 'SRC'), { recursive: true });
+  const webPackage = JSON.stringify({ scripts: { dev: 'vite', build: 'webpack', test: 'jest' },
+    devDependencies: { vite: '^7.3.1', webpack: '^5.99.0', jest: '^30.0.0' }, dependencies: { phaser: '^3.90.0' } });
+  await writeFile(join(existingWeb, 'package.json'), webPackage);
+  await writeFile(join(existingWeb, 'package-lock.json'), '{}');
+  await writeFile(join(existingWeb, 'SRC/game.js'), 'window.game = game;');
+  const webFacts = JSON.parse(execute(webDetector, ['--project', existingWeb]));
+  assert.equal(webFacts.qualityAssessed, false);
+  assert.equal(webFacts.bundlers[0].name, 'webpack');
+  assert.equal(webFacts.engineVersion.value, null);
+  assert.equal(webFacts.engineVersion.declared, '^5.99.0');
+  assert.equal(webFacts.commands.build.command, 'npm run build');
+  assert.deepEqual(webFacts.files.codeRootCandidates, ['SRC']);
+  assert.equal(webFacts.hook.state, 'present');
+  assert.equal(webFacts.testRunners[0].name, 'jest');
+  assert.equal(webFacts.libraries[0].package, 'phaser');
+  assert.equal(await readFile(join(existingWeb, 'package.json'), 'utf8'), webPackage);
   assert.deepEqual(await readFile(registryHelper), await readFile(join(packageRoot, '../studio/scripts/registry.mjs')));
   const registryProject = join(temp, 'registry 项目');
   await mkdir(join(registryProject, 'docs/architecture'), { recursive: true });
@@ -207,6 +227,10 @@ try {
   const sprintFacts = JSON.parse(execute(factsHelper, ['--project', storyProject, '--sprint']));
   assert.equal(sprintFacts.stories.length, 1); assert.equal(sprintFacts.stories[0].sprintStatus, 'review');
   const sectionHelper = JSON.parse(execute(launcher, ['resource', 'path', 'studio/scripts/md-section.mjs', '--json'], project)).data.path;
+  const restoredWebDetector = JSON.parse(execute(launcher, ['resource', 'path', 'studio/scripts/web-detect.mjs', '--json'], project)).data.path;
+  assert.ok(restoredWebDetector.startsWith(join(project, '.game-studio/node_modules')));
+  assert.deepEqual(JSON.parse(execute(restoredWebDetector, ['--project', existingWeb])), webFacts);
+  assert.match(execute(restoredWebDetector, ['--project', existingWeb, '--text']), /engine_version\t-\tpackage.json \^5\.99\.0/);
   assert.ok(sectionHelper.startsWith(join(project, '.game-studio/node_modules')));
   assert.deepEqual(await readFile(sectionHelper), await readFile(join(packageRoot, '../studio/scripts/md-section.mjs')));
   const sectionText = '# Root\r\n## Rules\r\nfirst\r\n### Detail\r\nsecond\r\n## End\r\nlast';

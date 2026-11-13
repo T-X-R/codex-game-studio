@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-13",
+  "scope": "Portable full-source Web detection helper; S051 workflow remains pending",
+  "status": "PASS_SCOPED",
+  "sourceContracts": {
+    ".claude/scripts/web-detect.sh": "e638e014193ec00fbc0a8ac66c3fdca6eade6ec3e02d7b63484fd13d6effc853",
+    ".claude/scripts/json-flat.awk": "9ea94aa603a3e09e9932f5eb22ca9aeb88f50996a9a437e996fead92ee471919",
+    ".claude/skills/setup-engine/references/web.md": "785d42767f422530302d9b57545c260ca467b01535be4fc075fb1cede604bc86"
+  },
+  "canonicalFiles": {
+    "toolkit/src/web-detect.ts": "96d64de2f8dace81d3eea9a44726f7063483b3a0da58dc09c9fd93f91e699f0d",
+    "studio/scripts/web-detect.mjs": "58e2ed687d3f7e1bc9369b6f9608e00f88860dd53c598ceb1c35c358fedf375d",
+    "toolkit/test/web-detect.test.mjs": "a851af7e970b03d6fdc1bff3a1f3344318ea1cf844e594c35f2921362df2656b",
+    "studio-tests/helpers/web-detect-codex.md": "55ad7638f849b281ce26fe3f58119f0ea42444a42fd8ff8174309607b4771da3"
+  },
+  "candidate": {
+    "directory": "/private/tmp/game-studio-web-detect-j8nbuqe3",
+    "manifestSha256": "51c15c16d896625cfd6c1364ab63d4b8deb71c2a5d742eb68487b89490d5b7c5",
+    "diffSha256": "a49a347b1b5d573d85e7e81352852b4f206962f9d38445bcea101c690711e97b"
+  },
+  "review": "Root independently read full source Bash and TypeScript implementation, wrapper, helper contract and observable tests; kept PM/scripts/root/language/bundler/runner/library/hook coverage. No runtime gate verdict or hidden execution.",
+  "sourceComparisons": {
+    "byteIdenticalCases": 46,
+    "intentionalDifferences": [
+      "range remains unresolved",
+      "build-script bundler before dev-only",
+      "malformed JSON is explicit error",
+      "workspace raw declaration evidence",
+      "comparison is not hook assignment",
+      "comment is not hook assignment",
+      "test-directory hook excluded",
+      "Codex framework trees excluded",
+      "symlink source excluded"
+    ],
+    "withdrawnHypothesis": "Empty project root was already correct in source. No repair claim; final helper contract corrected.",
+    "parityReport": {
+      "path": "/private/tmp/game-studio-web-detect-j8nbuqe3/logs/bash-parity.json",
+      "sha256": "2077bdb541e4c34ac957f742b5b019cbd9aec288489fd0f9d37741d9cd4008ce"
+    },
+    "differenceReport": {
+      "path": "/private/tmp/game-studio-web-detect-j8nbuqe3/logs/bash-intentional-differences.json",
+      "sha256": "b62f875537a9a08707889c231464eb9fa30fb4b0e6bdef2e30d4deb7cb184842"
+    },
+    "initialFailures": {
+      "path": "/private/tmp/game-studio-web-detect-j8nbuqe3/logs/legacy-red-node24.log",
+      "sha256": "6eb6ade134412ae125b9d8415fa294425ebd6f9e436a9a1c6dbf4cda436068f6",
+      "scope": "Five initial tests intentionally demonstrate old Bash defects, not failures of the integrated candidate."
+    }
+  },
+  "focusedTests": {
+    "node24": 30,
+    "node26": 30,
+    "fail": 0,
+    "skipped": 0
+  },
+  "sharedChecks": {
+    "build": {
+      "path": "/private/tmp/game-studio-web-detect-build.log",
+      "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28",
+      "exitCode": 0
+    },
+    "typecheck": {
+      "path": "/private/tmp/game-studio-web-detect-typecheck.log",
+      "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b",
+      "exitCode": 0
+    },
+    "lint": {
+      "path": "/private/tmp/game-studio-web-detect-lint.log",
+      "sha256": "7747b9ca37f5e28dc44a5feba5528ae2ac94362ad05996ab093071e1dc9d000d",
+      "exitCode": 0
+    },
+    "tests24": {
+      "path": "/private/tmp/game-studio-web-detect-tests24.log",
+      "sha256": "8baf699cc5f3644904f893b2afa33f4854c02ba48d18404a82dd041b248f8d0e",
+      "exitCode": 0
+    },
+    "tests26": {
+      "path": "/private/tmp/game-studio-web-detect-tests26.log",
+      "sha256": "46cbaf90f141a6d80031d383e0db3421f19a5c6c6364b55d680bd78ea0af0ffa",
+      "exitCode": 0
+    },
+    "pack": {
+      "path": "/private/tmp/game-studio-web-detect-pack.log",
+      "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38",
+      "exitCode": 0
+    }
+  },
+  "fullTests": {
+    "node24": 405,
+    "node26": 405,
+    "fail": 0,
+    "skipped": 0
+  },
+  "installedPackage": "Actual global resource and pinned restored launcher both ran installed wrapper against webpack-build/Vite-dev/Jest/Phaser fixture with uppercase SRC and a dependency range; JSON observations agree, TSV preserves unresolved range and package bytes remain unchanged. Wrapper bytes match canonical file.",
+  "limits": [
+    "Observations only; existing-project choice/setup, installation, actual browser/build/test and full S051 native workflows remain separate.",
+    "Lexical script/hook observations are not a shell/ECMAScript parser or proof of runtime behavior.",
+    "Bounded scan exposes incomplete state; symlinked package stores intentionally do not yield a resolved version.",
+    "Filesystem guards are not protection against adversarial concurrent directory replacement.",
+    "Exact-head cross-platform CI for this change remains separate."
+  ]
+}

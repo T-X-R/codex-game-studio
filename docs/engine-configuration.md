@@ -83,6 +83,16 @@ its report. Full engine acceptance remains separate work in the migration plan.
 
 ## Project scaffolding
 
+For an existing Web project, resolve `studio/scripts/web-detect.mjs` with
+`game-studio resource path studio/scripts/web-detect.mjs --json`, then invoke the
+returned `data.path` with Node and `--project <game-directory>`. It reports the
+project's own package manager, scripts, roots, toolchain and version provenance.
+Use `--pm npm|pnpm|yarn|bun` only after choosing between conflicting managers.
+The helper reads files; it does not install dependencies, run scripts, change
+configuration or certify a game. Inspect diagnostics and `scan.complete` before
+concluding that a capability is absent. See the
+[full helper contract](../studio-tests/helpers/web-detect-codex.md).
+
 `game-studio engine scaffold --dry-run --json` previews project creation from
 the existing `project.yaml`; omit `--dry-run` to apply it. This separate command
 keeps configuration updates from implicitly creating or launching an engine.

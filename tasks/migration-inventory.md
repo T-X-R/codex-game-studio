@@ -235,7 +235,7 @@ Only registrations in `.claude/settings.json` count as active source bindings. T
 | [test-run.sh](../.claude/scripts/test-run.sh) | `engine-tests` | Retain engine-specific semantics; wrap execution/timeouts/results with declared dependencies. |
 | [test-scaffold.sh](../.claude/scripts/test-scaffold.sh) | `engine-tests` | Retain engine-specific semantics; wrap execution/timeouts/results with declared dependencies. |
 | [vendor-three.sh](../.claude/scripts/vendor-three.sh) | `game-operations` | Retain gameplay behavior and evidence contracts; make project root and packaged resource paths explicit. |
-| [web-detect.sh](../.claude/scripts/web-detect.sh) | `game-operations` | Retain gameplay behavior and evidence contracts; make project root and packaged resource paths explicit. |
+| [web-detect.sh](../.claude/scripts/web-detect.sh) | `game-operations` | Ported to `studio/scripts/web-detect.mjs` and `toolkit/src/web-detect.ts`; read-only bounded observations preserve package/script/root/toolchain coverage and separate declared from resolved versions. See `studio-tests/helpers/web-detect-codex.md`; complete S051 workflow acceptance remains separate. |
 | [web-scaffold.sh](../.claude/scripts/web-scaffold.sh) | `game-operations` | Retain gameplay behavior and evidence contracts; make project root and packaged resource paths explicit. |
 | [write-guard.sh](../.claude/scripts/write-guard.sh) | `validation` | Reuse validation intent; rewrite Claude metadata/payload assumptions and expose through check or private validators. |
 | [yaml-get.awk](../.claude/scripts/yaml-get.awk) | `host-and-config-adapters` | Replace host/parsing coupling; preserve supported legacy config migration as an explicit command path. |
