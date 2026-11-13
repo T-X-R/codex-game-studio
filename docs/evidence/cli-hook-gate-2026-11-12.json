@@ -1,0 +1,70 @@
+{
+  "recordedAt": "2026-11-12",
+  "client": "codex-cli 0.162.0",
+  "platform": "macOS ARM64",
+  "model": "gpt-6.1-sol",
+  "scope": "SessionStart context and single-file apply_patch PreToolUse allow/deny from a project root",
+  "authorization": "User explicitly approved trusting these two isolated fixture hooks in this chat",
+  "trustMechanism": "Each fixture hook reviewed and trusted in native CLI /hooks; no bypass flag or direct trust-store edits",
+  "uiObservation": {
+    "before": {
+      "installed": 2,
+      "active": 0,
+      "needsReview": 2
+    },
+    "after": {
+      "installed": 2,
+      "active": 2,
+      "needsReview": 0
+    },
+    "reviewSessionId": "01a1cdbc-8489-7f32-9796-2428531df9e9"
+  },
+  "trusted": {
+    "threadId": "01a1cdc0-451a-7ee0-90e6-35e86d866d03",
+    "configPreflightPassed": true,
+    "hookEventNames": [
+      "SessionStart",
+      "PreToolUse",
+      "PreToolUse"
+    ],
+    "startupMarkerInDeveloperContext": true,
+    "toolName": "apply_patch",
+    "payloadCommandPath": "tool_input.command",
+    "execution": "tools.apply_patch nested inside functions.exec",
+    "allow": {
+      "before": "original\n",
+      "after": "changed\n",
+      "toolCompleted": true
+    },
+    "deny": {
+      "before": "original\n",
+      "after": "original\n",
+      "nativeToolResultContainsHookRejection": true,
+      "retries": 0
+    }
+  },
+  "untrustedControl": {
+    "threadId": "01a1cdba-0ff1-7310-82b6-1b5914316efb",
+    "freshSeparateFixture": true,
+    "configPreflightPassed": true,
+    "hookEvents": 0,
+    "allowedAfter": "changed\n",
+    "blockedAfter": "changed\n",
+    "bothNativePatchCallsCompleted": true
+  },
+  "fixtureScriptSha256": "aa87f999010df9c4518a871cdf8dd396bb66a62c94e92a8ac784c3d5cbcf917c",
+  "fixtureFilesUnchanged": true,
+  "temporaryProfilesRemoved": true,
+  "result": "passed_for_stated_scope",
+  "remaining": [
+    "desktop host",
+    "subdirectory launches",
+    "multi-file patches",
+    "Bash tool coverage",
+    "permission boundary tests",
+    "malformed and failed hooks",
+    "lifecycle events beyond startup",
+    "production validators and runtime adapter"
+  ],
+  "traceSha256": "654aff637cd65b2cc9c117af88fe9da96befc096157e52ab01116c88f7b6b688"
+}

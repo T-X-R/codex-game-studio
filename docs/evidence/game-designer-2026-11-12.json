@@ -1,0 +1,418 @@
+{
+  "recordedAt": "2026-11-12",
+  "scope": "Four native Game Designer fixtures: approved full/standard/minimal authoring and read-only review; synthetic design inputs, no game or human play",
+  "fixture": "toolkit/test/qa-role-host.mjs",
+  "casesSource": "toolkit/test/fixtures/game-designer-cases.mjs",
+  "behaviorSpec": "studio-tests/roles/game-designer-codex.md",
+  "cases": {
+    "full": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-CiHHRS",
+      "runnerResult": {
+        "scenario": "designer-full",
+        "role": "game-studio-game-designer",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/game-designer-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ce9a-49de-7661-aed4-b260d8ae43dd",
+        "preservedFiles": 325,
+        "changed": [],
+        "added": [
+          "design/gdd/stamina-dodge.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-game-designer",
+      "traceReview": {
+        "01a1ce9a-49de-7661-aed4-b260d8ae43dd": {
+          "file": "rollout-2026-11-12T15-13-00-01a1ce9a-49de-7661-aed4-b260d8ae43dd.jsonl",
+          "sha256": "716cfe970512abd7f7f6c32c70d2302eade24c45396026e9d257f6439a6ca80f",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1ce9a-73a4-75b2-a95a-55bebea87d10": {
+          "file": "rollout-2026-11-12T15-13-11-01a1ce9a-73a4-75b2-a95a-55bebea87d10.jsonl",
+          "sha256": "501f500da559787c0a718a2a8986a1e44b84c9825af1aea99805d0d1b0785bce",
+          "role": "game-studio-game-designer",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec",
+            "exec",
+            "send_message"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "d38baa78eef03ee2909debeaef7caca96575c875ccebd95cb49fda38c2d64cf0",
+        "before.json": "276d236de77a95a163d8d34ac0027b0a3ad7b74b39fcbe7e1dc0303994a2d56e",
+        "final.txt": "f6f9987318dd3aeb3328b7cbeb44e5358e437b2aa8e7a6653a3165de4ca67b88",
+        "QA game \u6d4b\u8bd5/design/gdd/stamina-dodge.md": "d5cff06b0342cd86bcbd95adef0f6870adbc52e1f449101942fa3a11f3b304d1"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "headings": [
+          "Overview",
+          "Player Fantasy",
+          "Detailed Design",
+          "Formulas",
+          "Edge Cases",
+          "Dependencies",
+          "Tuning Knobs",
+          "Acceptance Criteria"
+        ],
+        "observations": [
+          "Read actual workflow and packaged methods; wrote only authorized document without repeat section approval",
+          "Preserved approved numeric rules, half-open immunity, eligible-time regeneration, pause and movement ownership",
+          "Documented variables, ranges, tuning categories, future external data and worked examples",
+          "Identified low-capacity versus fixed reset conflict without silently changing approved inputs",
+          "Human protocol/thresholds remain proposals or pending; no tests, runtime data, code, checkpoint or play acceptance claimed"
+        ]
+      }
+    },
+    "standard": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-TtUdeh",
+      "runnerResult": {
+        "scenario": "designer-standard",
+        "role": "game-studio-game-designer",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/game-designer-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ce9a-2edf-7ea3-bcea-acf019d2a7a5",
+        "preservedFiles": 325,
+        "changed": [],
+        "added": [
+          "design/gdd/stamina-dodge.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-game-designer",
+      "traceReview": {
+        "01a1ce9a-2edf-7ea3-bcea-acf019d2a7a5": {
+          "file": "rollout-2026-11-12T15-12-53-01a1ce9a-2edf-7ea3-bcea-acf019d2a7a5.jsonl",
+          "sha256": "863311b70cfb3db1afb638c133c341ebbaeac4aab8632475c81dbb4acedf9604",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1ce9a-56a0-7932-b05f-5e5dd2957e7e": {
+          "file": "rollout-2026-11-12T15-13-03-01a1ce9a-56a0-7932-b05f-5e5dd2957e7e.jsonl",
+          "sha256": "5fc1880aeed4ffcfca9a5bde95bbfe523ca2f89485d0db5ab2ffde8875effd7d",
+          "role": "game-studio-game-designer",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "send_message",
+            "exec"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "bd7b60b74344f489b1e0a2092b523a601a032d4f946f5d17a4efb1dad1033a09",
+        "before.json": "341be49cca8670420ba6d6ed8415ce7619689937a24decce5d647712cd957747",
+        "final.txt": "352518cffbae1a18f03b2311c283c2a03684ae03c79f3dd4194e0964d8673645",
+        "QA game \u6d4b\u8bd5/design/gdd/stamina-dodge.md": "5417f92e1c027bcc8a24622479590b688d7c04bcfc76df4baa6725dca0ea93ac"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "headings": [
+          "Overview",
+          "Detailed Design",
+          "Formulas",
+          "Edge Cases",
+          "Dependencies",
+          "Acceptance Criteria"
+        ],
+        "observations": [
+          "Read actual workflow and packaged methods; wrote only authorized document without repeat section approval",
+          "Preserved approved numeric rules, half-open immunity, eligible-time regeneration, pause and movement ownership",
+          "Documented variables, ranges, tuning categories, future external data and worked examples",
+          "Identified low-capacity versus fixed reset conflict without silently changing approved inputs",
+          "Human protocol/thresholds remain proposals or pending; no tests, runtime data, code, checkpoint or play acceptance claimed"
+        ]
+      }
+    },
+    "minimal": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-Xr0iDs",
+      "runnerResult": {
+        "scenario": "designer-minimal",
+        "role": "game-studio-game-designer",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/game-designer-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1cea0-194e-77b3-890f-11f5db797014",
+        "preservedFiles": 329,
+        "changed": [],
+        "added": [
+          "design/game-brief.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-game-designer",
+      "traceReview": {
+        "01a1cea0-194e-77b3-890f-11f5db797014": {
+          "file": "rollout-2026-11-12T15-19-21-01a1cea0-194e-77b3-890f-11f5db797014.jsonl",
+          "sha256": "a6169b8b50652cf080a030ae749f62b10a739547f9f7de31c4b22b2524cf2e59",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1cea0-565a-7ca2-8a29-11beb7cb98c9": {
+          "file": "rollout-2026-11-12T15-19-36-01a1cea0-565a-7ca2-8a29-11beb7cb98c9.jsonl",
+          "sha256": "e7f46698e6fd950caf2f305a4bae08ac5bb9dc5216dec13c81672a65ddfa7d52",
+          "role": "game-studio-game-designer",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "3a861d29d6db3c56a589b955f4c532f2df115bb6c9a16f15252114af90525255",
+        "before.json": "920514a9853339f634065dfb0d34aea64f0eca8277dea5713da4510ac7a416f9",
+        "final.txt": "dd2a85e541cf839de4e546a34e321b1c0649da6421b82ad03a8c549ea481fb1f",
+        "QA game \u6d4b\u8bd5/design/game-brief.md": "e97135c065e2c9966b2e70ffde9ad4137d40c005447e63df44d6329ae9981937"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "headings": [
+          "Experience and loops",
+          "Approved rules and integration",
+          "Numbers, boundaries and tuning",
+          "Acceptance and remaining decisions"
+        ],
+        "observations": [
+          "Read actual workflow and packaged methods; wrote only authorized document without repeat section approval",
+          "Preserved approved numeric rules, half-open immunity, eligible-time regeneration, pause and movement ownership",
+          "Documented variables, ranges, tuning categories, future external data and worked examples",
+          "Identified low-capacity versus fixed reset conflict without silently changing approved inputs",
+          "Human protocol/thresholds remain proposals or pending; no tests, runtime data, code, checkpoint or play acceptance claimed"
+        ]
+      }
+    },
+    "review": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-ht2mMj",
+      "runnerResult": {
+        "scenario": "designer-review",
+        "role": "game-studio-game-designer",
+        "sandbox": "read-only",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/game-designer-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ce9a-2e81-7b23-b400-ff9cc66b79be",
+        "preservedFiles": 325,
+        "changed": [],
+        "added": [],
+        "outsideScope": [],
+        "roleSha256": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-game-designer",
+      "traceReview": {
+        "01a1ce9a-2e81-7b23-b400-ff9cc66b79be": {
+          "file": "rollout-2026-11-12T15-12-53-01a1ce9a-2e81-7b23-b400-ff9cc66b79be.jsonl",
+          "sha256": "4851b6c09bbe71ae141596556f36622f87c15b565c2e540426158ca189ca6e9d",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "read-only"
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent"
+          ]
+        },
+        "01a1ce9a-5c4a-7371-8d39-df7aba7836df": {
+          "file": "rollout-2026-11-12T15-13-05-01a1ce9a-5c4a-7371-8d39-df7aba7836df.jsonl",
+          "sha256": "3a14d2f47d130698b886de9c95d3c8094aaeb7a0ec2dc4188980729f33cc0fd3",
+          "role": "game-studio-game-designer",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "read-only"
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "75be7e2cd798a24adbd1a6966e10c39cf820dd4b111162141893fb287185c81e",
+        "before.json": "55618f0af819a739eb504bafbd373e628805c3c717995bf797d71432e972f93e",
+        "final.txt": "6d8680546789e8edf243c7db9c275e23a6066b0ac41a320b38b489882a064a0f"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "observations": [
+          "Hazard findings identify overlap, protection/dodge interaction and unspecified damage cadence, tied to dangerous-but-fair/readable fantasy",
+          "All three supplied legacy pillars assessed by name; tensions and bounded-legacy option remain owner choices",
+          "Formula examples explicitly illustrative and not adopted",
+          "Systems designer owns formula granularity; creative director resolves experience conflict",
+          "Final lore routed to narrative director/writer; no narrative text, implementation or workflow verdict",
+          "Response only, no extra delegation or playtest claim"
+        ]
+      }
+    }
+  },
+  "independentArithmeticReview": {
+    "oneCostRecoveryAfterAcceptanceSeconds": 3.1,
+    "fourDodgeBurstRefillAbsoluteSeconds": 11.2,
+    "crossingRecoveryBoundaryGain": 0.5000000000000004,
+    "compoundingLegacyExampleAfterTenDeaths": 162.8894626777442,
+    "interpretation": "Checked supplied-document arithmetic only, not executed game behavior."
+  },
+  "validation": {
+    "build": "passed",
+    "typecheck": "passed",
+    "unitTests": {
+      "passed": 131,
+      "failed": 0,
+      "skipped": 0
+    },
+    "packedInstall": "passed: exact role/gate/method bytes, runtime restore and owned detach",
+    "nativeRunnerExitExplanation": "Exit 3 requests semantic review; all recorded native processes exited 0. Reviews below assess the actual outputs separately."
+  },
+  "sourceHashes": {
+    ".codex/agents/game-studio-game-designer.toml": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5",
+    "studio/docs/roles/game-designer.md": "1b4e8fa159cdcde6240515f119243a1aaa271cfa94d39ba923da8492d21bc804",
+    "toolkit/test/fixtures/game-designer-cases.mjs": "8297bdd8b413ef5ccffd687d0211095c82b49dfe6931d401ba461a863727414c",
+    "toolkit/test/qa-role-host.mjs": "5c9803c9dc513bdb9fe962155724ad25d96d54eae812e3c70c7bd2bd0033528f"
+  },
+  "limitations": [
+    "Native CLI 0.162.0/macOS ARM64 only; desktop, subdirectory, unavailable runtime/resource/role, intentional permission denial and final validator remain open.",
+    "New-document authoring only; editing an existing brief and checkpoint conflicts are not exercised.",
+    "No open-ended initial decision interview, dedicated economy/progression system or actual specialist collaboration acceptance.",
+    "Filesystem counts are runner snapshots of regular files excluding .git; do not substitute child self-reported counts with different scopes.",
+    "No code, runtime game, balance playtest, human acceptance or complete A011/T19 claim."
+  ]
+}

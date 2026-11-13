@@ -1,0 +1,1072 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "S060 final four initial matrix cases and two same-input protocol reruns; supplements the frozen38-run matrix",
+  "previousEvidence": "docs/evidence/story-readiness-matrix-2026-11-13.json",
+  "manifestSources": [
+    {
+      "path": "/private/tmp/game-studio-story-readiness-matrix-87_c1c41/frozen-runs-39-42-manifest.json",
+      "sha256": "1816e75cc67c4c36d9360ddf50a614084e231b710e0523763d3c65d3af6027ae"
+    },
+    {
+      "path": "/private/tmp/game-studio-story-readiness-matrix-87_c1c41/frozen-runs-43-44-manifest.json",
+      "sha256": "2377acdbb52aa36bd0a3ce70ec7bd115c67f5bf44a31dae197932f4f65c3a251"
+    }
+  ],
+  "cases": [
+    {
+      "case": "full-native-multi",
+      "status": "FAIL",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-NQY5he",
+      "threadId": "01a1d0c5-4bac-78d0-8a5c-018877991756",
+      "nativeExitCode": 0,
+      "hostReportStatus": "not_assessed",
+      "artifactSha256": {
+        "events.jsonl": "a46f9b2526fe70b5757bcdc8a210687d12323fceb9ca276955281bee9d718f07",
+        "final.txt": "5f665ed894ab7fef809a86b4516c055fca07dce2a5a8b72b64ee73cab99848a9",
+        "before.json": "1330d4d1c4a6bd2d8e931af4b508074743aa7329e14cce6d6f5ba040a5cd5350",
+        "after.json": "1330d4d1c4a6bd2d8e931af4b508074743aa7329e14cce6d6f5ba040a5cd5350",
+        "fixture.json": "5058e20857723c0e2f9c39ddaf3f28f6720f632badd069bc46e2bc18b621c6a6",
+        "inputs.json": "abf0de57ec8331a859874afc12f8ad2b247c8bde9fe1210a501fa8afe3425d16",
+        "report.json": "cf5ec53e51dba32fa7e0c91a51052815297beb5c9be86bc480a4dc3e35813122"
+      },
+      "wholeFilesRehashed": 567,
+      "unchanged": true,
+      "installedResourcesVerified": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "verified",
+        ".codex/agents/game-studio-qa-lead.toml": "verified",
+        "studio/docs/director-gates/ql-story-ready.md": "verified",
+        "studio/docs/integration.md": "verified",
+        "studio/scripts/story-facts.mjs": "verified",
+        "studio/scripts/adr-status.mjs": "verified",
+        "studio/scripts/registry.mjs": "verified",
+        "studio/templates/architecture-decision-record.md": "verified",
+        "toolkit/dist/story-facts.js": "verified",
+        "toolkit/dist/adr-status.js": "verified",
+        "toolkit/dist/registry.js": "verified",
+        "toolkit/dist/registry-reader.js": "verified",
+        "toolkit/dist/config.js": "verified",
+        "toolkit/dist/config-derived.js": "verified",
+        "toolkit/dist/legacy-config.js": "verified",
+        "toolkit/dist/engine.js": "verified",
+        "toolkit/dist/resources.js": "verified",
+        "toolkit/dist/project.js": "verified",
+        "toolkit/dist/files.js": "verified",
+        "toolkit/dist/contract.js": "verified"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "396728d3cd57d4d057bf6f93c4bfa0e016e349f34633c4d3d0902ff21e4f657b",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "5d35120eab62d0f185a744909a69100bb972050357f487057cb14963fbe0817d",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "final": "## Story Readiness Summary — all — 2026-11-13\n\nReady: **2** · Needs Work: **0** · Blocked: **0** · Not Assessed: **0**\n\nReady:\n\n- **Light pickup** (`production/epics/core/story-001-light pickup.md`)\n- **Second light** (`production/epics/core/story-002-second.md`)\n\nBoth pass all applicable checklist items under Full workflow. Requirements trace to the GDD, ADR-0003 is Accepted, TR-light-001 is active, and manifest versions match. No gaps or unknown inputs were found.\n\nReview: QL-STORY-READY — **ADEQUATE** for each story, returned by the native QA Lead.\n\nReviewed offline. Tests and game code were not executed.\n\nNext step: implement the READY stories. Stopped after this report as requested.  \nFiles changed: none",
+      "roleAudit": [
+        {
+          "childId": "01a1d0c6-2fde-78f3-9b42-983e8a2f5be1",
+          "installedDeveloperInstructionExactMatch": true,
+          "role": "game-studio-qa-lead",
+          "firstCommand": [
+            "/bin/zsh",
+            "-lc",
+            "cat '.game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/director-gates/ql-story-ready.md' && cat 'production/epics/core/story-001-light pickup.md' && cat 'design/gdd/light.md'"
+          ],
+          "sameContextAsParent": true
+        },
+        {
+          "childId": "01a1d0c6-66ec-72d3-8d51-2e4d15a75378",
+          "installedDeveloperInstructionExactMatch": true,
+          "role": "game-studio-qa-lead",
+          "firstCommand": [
+            "/bin/zsh",
+            "-lc",
+            "cat .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/director-gates/ql-story-ready.md"
+          ],
+          "sameContextAsParent": true
+        }
+      ],
+      "hostExitCode": 3,
+      "findings": [
+        "Timing violation: story-facts --all --lint command37 returns all field/lint observations before count announcement41; source current entry requires count before Phase2 facts.",
+        "Observable role/domain subchecks PASS: both individual checklist verdicts61 before QAref64 and real separate QA Lead dispatch72/78; each actual child reads own gate first, then own story/GDD and returns3verbatim criteria with automated approaches andADEQUATE.",
+        "Parent never reads gate definition; actual installed role instructions exact-match and contexts inherited;567files unchanged/23hash verified;no nesteddelegation/writes/tests."
+      ],
+      "limitations": [
+        "Encrypted exact dispatch field completeness NOT ASSESSED, no decryption/privateAPI.",
+        "Timing FAIL preserved independently of domain/role success."
+      ],
+      "sessions": [
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-20-11-01a1d0c6-2fde-78f3-9b42-983e8a2f5be1.jsonl",
+          "sha256": "8add71cbbdd1cfb517a684850ba5d6ff5934daad3c0b6c2eb3f6dfe1d942b31b",
+          "id": "01a1d0c6-2fde-78f3-9b42-983e8a2f5be1",
+          "source": {
+            "subagent": {
+              "thread_spawn": {
+                "parent_thread_id": "01a1d0c5-4bac-78d0-8a5c-018877991756",
+                "depth": 1,
+                "agent_path": "/root/qa_light_pickup",
+                "agent_nickname": "Sartre",
+                "agent_role": "game-studio-qa-lead"
+              }
+            }
+          },
+          "role": "game-studio-qa-lead",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-20-25-01a1d0c6-66ec-72d3-8d51-2e4d15a75378.jsonl",
+          "sha256": "82472e4e7b1238d470f86c8a9ab708b8ce018e5718af25ac20b67e392ffd1099",
+          "id": "01a1d0c6-66ec-72d3-8d51-2e4d15a75378",
+          "source": {
+            "subagent": {
+              "thread_spawn": {
+                "parent_thread_id": "01a1d0c5-4bac-78d0-8a5c-018877991756",
+                "depth": 1,
+                "agent_path": "/root/qa_second_light",
+                "agent_nickname": "Ramanujan",
+                "agent_role": "game-studio-qa-lead"
+              }
+            }
+          },
+          "role": "game-studio-qa-lead",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-19-13-01a1d0c5-4bac-78d0-8a5c-018877991756.jsonl",
+          "sha256": "b6347a084016619a9e20e5c01786db38cc3a8b92b13509a461806fd9f90a2d47",
+          "id": "01a1d0c5-4bac-78d0-8a5c-018877991756",
+          "source": "exec",
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        }
+      ],
+      "rootReconciliation": {
+        "rawAndSessionHashesMatch": true,
+        "candidateSha256": "bac581071f5399070a1bd83af069e90f106dc9c3ba6a409dffd0a2131835e60a",
+        "actualUnchangedFilesRehashed": 567
+      }
+    },
+    {
+      "case": "full-native-visible-gap",
+      "status": "NOT ASSESSED",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-JtsLT2",
+      "threadId": "01a1d0c5-4bd0-7523-8aa8-01f3b835f106",
+      "nativeExitCode": 0,
+      "hostReportStatus": "not_assessed",
+      "artifactSha256": {
+        "events.jsonl": "4323e527242a2166860c0d708f899964ecc389e4108ef5432b7eb0148f0c6d5d",
+        "final.txt": "91c01193b40d677b34548f2629808286e6545485610069c83fab2972014df366",
+        "before.json": "045c3570e80fa9ccb36b14a5546456cd14b0da3c93f067047f5e7ac4ece49ed7",
+        "after.json": "045c3570e80fa9ccb36b14a5546456cd14b0da3c93f067047f5e7ac4ece49ed7",
+        "fixture.json": "b7741d475b48117513cb42a30d4f246e3e1d53c791faa9cea040ff0f2e84c5f8",
+        "inputs.json": "977f33f16f2af5be9b4047a2cf5584f8efca70a3fa2b5ec29a8aff2d0e68bfbe",
+        "report.json": "6104f4a16a453844dfa890d53928e5ad28ce5141662133fba8920d4dca0931d1"
+      },
+      "wholeFilesRehashed": 566,
+      "unchanged": true,
+      "installedResourcesVerified": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "verified",
+        ".codex/agents/game-studio-qa-lead.toml": "verified",
+        "studio/docs/director-gates/ql-story-ready.md": "verified",
+        "studio/docs/integration.md": "verified",
+        "studio/scripts/story-facts.mjs": "verified",
+        "studio/scripts/adr-status.mjs": "verified",
+        "studio/scripts/registry.mjs": "verified",
+        "studio/templates/architecture-decision-record.md": "verified",
+        "toolkit/dist/story-facts.js": "verified",
+        "toolkit/dist/adr-status.js": "verified",
+        "toolkit/dist/registry.js": "verified",
+        "toolkit/dist/registry-reader.js": "verified",
+        "toolkit/dist/config.js": "verified",
+        "toolkit/dist/config-derived.js": "verified",
+        "toolkit/dist/legacy-config.js": "verified",
+        "toolkit/dist/engine.js": "verified",
+        "toolkit/dist/resources.js": "verified",
+        "toolkit/dist/project.js": "verified",
+        "toolkit/dist/files.js": "verified",
+        "toolkit/dist/contract.js": "verified"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "396728d3cd57d4d057bf6f93c4bfa0e016e349f34633c4d3d0902ff21e4f657b",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "5d35120eab62d0f185a744909a69100bb972050357f487057cb14963fbe0817d",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "final": "## Story Readiness: Light pickup\n\nFile: `production/epics/core/story-001-light pickup.md`  \nVerdict: **NEEDS WORK**\n\nPolicy: Full workflow, coarse story granularity, minimal QA. Your `--review full` override applied for this review.\n\n### Passing Checks (16/20)\n\nDesign Completeness: Specific GDD requirement traced.  \nArchitecture Completeness: ADR-0003 Accepted; ADR cited; TR-light-001 active; manifest version current; engine N/A explained; manifest rules addressed.  \nScope Clarity: Two-hour estimate, explicit exclusions and dependencies.  \nOpen Questions: No open markers; dependencies explicitly None.  \nAsset References: No asset references.  \nDefinition of Done: Performance impact explained; Logic type declared; automated test evidence requirement waived at minimal QA.\n\n### Gaps\n\n- **Self-contained:** The acceptance criteria omit the GDD’s rule that collecting the same pickup again adds nothing.  \n  Fix: Add an explicit repeated-pickup criterion.\n\n- **Testable:** “Picking up a light feels good” has no observable expected result.  \n  Fix: Have the design owner define the intended behavior and verification method.\n\n- **No judgement calls:** The subjective criterion is unsuitable as written for a Logic story.  \n  Fix: Replace it with measurable Logic behavior, or separately define the intended feedback and acceptance method.\n\n- **Enough acceptance criteria:** Only two criteria are observable; coarse Logic stories require three.  \n  Fix: Replace the subjective criterion with an author-confirmed criterion such as: “Given a stored count of 1 after collecting pickup A, collecting pickup A again leaves the stored count at 1.”\n\nThe native QA Lead returned **QL-STORY-READY: GAPS**, confirming the subjective criterion and missing repeated-pickup coverage. The design owner’s choice remains unresolved; implementation handoff is pending. No tests or game code were executed.\n\nReview: QL-STORY-READY — GAPS  \nNext ready stories: no sprint file found  \nNext step: Fix the listed gaps and rerun readiness.  \nFiles changed: none",
+      "roleAudit": [
+        {
+          "childId": "01a1d0c6-669e-7200-83d7-31888478265d",
+          "installedDeveloperInstructionExactMatch": true,
+          "sameContextAsParent": true,
+          "gateReadFirstCommand": 19
+        }
+      ],
+      "hostExitCode": 3,
+      "findings": [
+        "Observable subchecks PASS: count40 before facts43/46; checklistNEEDS59 before QAref62/spawn71; real QA Lead child own-gate first19, actual story/GDD and3verbatimcriteria including subjective flaw.",
+        "Actual childGAPS plus parentNEEDS16/20 retained; unresolved design-owner choice and implementation handoff pending explicit; stop-after-report respected without fabricated acceptance.",
+        "Installed role instruction exact-match;contexts inherited;566files unchanged/23hash verified;parentneverreads gate definition,no nestedspawn/writes/tests."
+      ],
+      "limitations": [
+        "Exact encrypted dispatch fields NOT ASSESSED; no decryption/privateAPI. Observable role/gap/decision behavior passed; not entire full-contract PASS."
+      ],
+      "sessions": [
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-20-25-01a1d0c6-669e-7200-83d7-31888478265d.jsonl",
+          "sha256": "466f32501d946c493aed2a69bff262f2c614ad975cd9860c92e62e98cd9068c0",
+          "id": "01a1d0c6-669e-7200-83d7-31888478265d",
+          "source": {
+            "subagent": {
+              "thread_spawn": {
+                "parent_thread_id": "01a1d0c5-4bd0-7523-8aa8-01f3b835f106",
+                "depth": 1,
+                "agent_path": "/root/qa_story_001",
+                "agent_nickname": "Lorentz",
+                "agent_role": "game-studio-qa-lead"
+              }
+            }
+          },
+          "role": "game-studio-qa-lead",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-19-13-01a1d0c5-4bd0-7523-8aa8-01f3b835f106.jsonl",
+          "sha256": "f02479aee5b68e14611f7d47999870b1da9b4205306b6f9d8b3ed86b0a7ee2a3",
+          "id": "01a1d0c5-4bd0-7523-8aa8-01f3b835f106",
+          "source": "exec",
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        }
+      ],
+      "rootReconciliation": {
+        "rawAndSessionHashesMatch": true,
+        "candidateSha256": "9e09de672715c89f27b296a44ed3d43111de054bfce1f631320e7520a11438e6",
+        "actualUnchangedFilesRehashed": 566
+      }
+    },
+    {
+      "case": "full-native-subjective",
+      "status": "NOT ASSESSED",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-b49nif",
+      "threadId": "01a1d0c8-712f-7330-bc3c-3e2f11c26595",
+      "nativeExitCode": 0,
+      "hostReportStatus": "not_assessed",
+      "artifactSha256": {
+        "events.jsonl": "28357612564fb4ee30a247ee6b805bbc13fd4cbb558fc27e5dd060f42d5d3259",
+        "final.txt": "6c9099573920dcf2dd5edb934cd15cfe43043c3c6ad9a09adf149792146999b2",
+        "before.json": "c76d6bff780abeff9aabb4fc1c127630356f2df75a25b81880d016fbc7d27571",
+        "after.json": "c76d6bff780abeff9aabb4fc1c127630356f2df75a25b81880d016fbc7d27571",
+        "fixture.json": "c1762b916c8b92b2f4861f3a9ab706cfc24b91a48f8ac0e7c3131414cdf47757",
+        "inputs.json": "3d177746616343e6a8b87b7c326ee967a512249acb53bcdf4fd1eb474709b78b",
+        "report.json": "b84078b104632733ffdcaa109f95c09f862238720e2f0a7d76ad34d5a58b94db"
+      },
+      "wholeFilesRehashed": 566,
+      "unchanged": true,
+      "installedResourcesVerified": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "verified",
+        ".codex/agents/game-studio-qa-lead.toml": "verified",
+        "studio/docs/director-gates/ql-story-ready.md": "verified",
+        "studio/docs/integration.md": "verified",
+        "studio/scripts/story-facts.mjs": "verified",
+        "studio/scripts/adr-status.mjs": "verified",
+        "studio/scripts/registry.mjs": "verified",
+        "studio/templates/architecture-decision-record.md": "verified",
+        "toolkit/dist/story-facts.js": "verified",
+        "toolkit/dist/adr-status.js": "verified",
+        "toolkit/dist/registry.js": "verified",
+        "toolkit/dist/registry-reader.js": "verified",
+        "toolkit/dist/config.js": "verified",
+        "toolkit/dist/config-derived.js": "verified",
+        "toolkit/dist/legacy-config.js": "verified",
+        "toolkit/dist/engine.js": "verified",
+        "toolkit/dist/resources.js": "verified",
+        "toolkit/dist/project.js": "verified",
+        "toolkit/dist/files.js": "verified",
+        "toolkit/dist/contract.js": "verified"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "396728d3cd57d4d057bf6f93c4bfa0e016e349f34633c4d3d0902ff21e4f657b",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "5d35120eab62d0f185a744909a69100bb972050357f487057cb14963fbe0817d",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "final": "## Story Readiness: Light pickup\n\nFile: [production/epics/core/story-001-light pickup.md](< /private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-b49nif/Lantern readiness 测试/production/epics/core/story-001-light pickup.md>)\nVerdict: **NEEDS WORK**\n\nEffective policy: full workflow, full review, fine granularity, minimal QA. Project settings and the `light` system resolution agree; no configuration warnings.\n\n### Passing Checks (15/20)\n\n15 passed, 4 failed, 1 N/A.\n\n- **Design Completeness:** Specific GDD pickup rule and TR-light-001 traced.\n- **Architecture Completeness:** ADR-0003 Accepted; ADR cited; TR-light-001 active; manifest versions match at 2026-03-10; engine API exclusion and manifest applicability stated.\n- **Scope Clarity:** Two-hour estimate, explicit exclusions, and dependencies listed as None.\n- **Open Questions:** No open markers; no prerequisite stories.\n- **Asset References:** No asset references — existence check N/A.\n- **Definition of Done:** Logic type declared; performance impact explained; test evidence plan clear. Automated evidence is waived by minimal QA.\n\n### Gaps\n\nThe sole acceptance criterion is:\n\n> Collecting a light feels wonderful.\n\n- **Self-contained:** It omits the required pickup behavior.  \n  Fix: State that an empty inventory returns zero, each unique pickup contributes one unit, and collecting the same pickup again adds nothing.\n- **Testable:** It specifies no observable expected result.  \n  Fix: Express the rules as assertions about inventory counts after collection.\n- **No judgement calls:** “Feels wonderful” is subjective for a Logic story.  \n  Fix: Replace it with the observable behavior defined in the GDD.\n- **Enough acceptance criteria:** The raw checkbox count meets fine granularity’s minimum of one, but there are zero observable criteria.  \n  Fix: Add observable checkbox criteria covering the pickup rule.\n\n### QA Lead Review\n\nThe native QA Lead returned **QL-STORY-READY: INADEQUATE**. The planned unit-test location and isolated fixtures are useful, but cannot establish completion against the current criterion. Recommended cases cover empty inventory, first collection, repeated collection, and a second unique pickup.\n\nThe review was offline. No tests or game code were executed.\n\nReview: QL-STORY-READY — INADEQUATE  \nNext ready stories: no sprint file found  \nNext step: Fix the listed acceptance-criteria gaps and rerun readiness.  \nFiles changed: none",
+      "roleAudit": [
+        {
+          "childId": "01a1d0c9-84eb-7b10-a634-5f70a4a8e34a",
+          "installedDeveloperInstructionExactMatch": true,
+          "sameContextAsParent": true,
+          "gateReadFirstCommand": 19
+        }
+      ],
+      "hostExitCode": 3,
+      "findings": [
+        "Observable contract subchecks PASS: Count38 before facts; NEEDS checklist63 beforeQAref66/spawn75. RealQA Lead INADEQUATE cites sole subjective criterion verbatim; parent retainsNEEDS, explains fine raw count1 but0observable, no useroverride invented.",
+        "Actualinstalled role instruction exact-match, everycontext inherited;childgatefirst19;parentneverreads definition;all files unchanged/23hash verified;no writes/tests/nestedspawn."
+      ],
+      "limitations": [
+        "Exact encrypted dispatch message field completeness NOT ASSESSED; no decryption/privateAPI. Observable role/domain behavior passed; no entire full-contract PASS claimed."
+      ],
+      "sessions": [
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-23-50-01a1d0c9-84eb-7b10-a634-5f70a4a8e34a.jsonl",
+          "sha256": "dfc26cb590206dc18c1708c614b82f6a13ad295798f397ff8ea137ea36926f52",
+          "id": "01a1d0c9-84eb-7b10-a634-5f70a4a8e34a",
+          "source": {
+            "subagent": {
+              "thread_spawn": {
+                "parent_thread_id": "01a1d0c8-712f-7330-bc3c-3e2f11c26595",
+                "depth": 1,
+                "agent_path": "/root/qa_story_001",
+                "agent_nickname": "Lovelace",
+                "agent_role": "game-studio-qa-lead"
+              }
+            }
+          },
+          "role": "game-studio-qa-lead",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-22-39-01a1d0c8-712f-7330-bc3c-3e2f11c26595.jsonl",
+          "sha256": "539b9a02c6755a45378e9cf5c4e8c6942f02e37101871d3fd008bb65aa050c57",
+          "id": "01a1d0c8-712f-7330-bc3c-3e2f11c26595",
+          "source": "exec",
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        }
+      ],
+      "rootReconciliation": {
+        "rawAndSessionHashesMatch": true,
+        "candidateSha256": "6a26840e4f752b2ae265776214cfc153951bf5c7df203f474228a3cdbf12dec0",
+        "actualUnchangedFilesRehashed": 566
+      }
+    },
+    {
+      "case": "full-native-missing-design",
+      "status": "NOT ASSESSED",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-fK7nSh",
+      "threadId": "01a1d0c8-7006-7513-b25f-bc075da1beb5",
+      "nativeExitCode": 0,
+      "hostReportStatus": "not_assessed",
+      "artifactSha256": {
+        "events.jsonl": "0c504c71c6c1c69c2d4bad1b9c90c755a10b73f610a4cb782b9b9282c6756f6f",
+        "final.txt": "1a867d4bcfba5b5f40bac02f0eb59a53c935f9d87654836c187ad4f7b1dbb287",
+        "before.json": "d6622752b6e40787cc5a5d462f43f7d6911e97ebc1a809d59c2dbbce0919c77f",
+        "after.json": "d6622752b6e40787cc5a5d462f43f7d6911e97ebc1a809d59c2dbbce0919c77f",
+        "fixture.json": "2930ccb9ef48fe465f0b9ea82dce4693c42968665c90a1074f7485bef6b76ab7",
+        "inputs.json": "371df4e157928925f5e9c0df975105d5042789cf3a7f84019cc87a6747b57619",
+        "report.json": "bff97627ba094edbc80de934f4de4f3a099e2bc2bc015e0deb989585609b6cf6"
+      },
+      "wholeFilesRehashed": 565,
+      "unchanged": true,
+      "installedResourcesVerified": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "verified",
+        ".codex/agents/game-studio-qa-lead.toml": "verified",
+        "studio/docs/director-gates/ql-story-ready.md": "verified",
+        "studio/docs/integration.md": "verified",
+        "studio/scripts/story-facts.mjs": "verified",
+        "studio/scripts/adr-status.mjs": "verified",
+        "studio/scripts/registry.mjs": "verified",
+        "studio/templates/architecture-decision-record.md": "verified",
+        "toolkit/dist/story-facts.js": "verified",
+        "toolkit/dist/adr-status.js": "verified",
+        "toolkit/dist/registry.js": "verified",
+        "toolkit/dist/registry-reader.js": "verified",
+        "toolkit/dist/config.js": "verified",
+        "toolkit/dist/config-derived.js": "verified",
+        "toolkit/dist/legacy-config.js": "verified",
+        "toolkit/dist/engine.js": "verified",
+        "toolkit/dist/resources.js": "verified",
+        "toolkit/dist/project.js": "verified",
+        "toolkit/dist/files.js": "verified",
+        "toolkit/dist/contract.js": "verified"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "396728d3cd57d4d057bf6f93c4bfa0e016e349f34633c4d3d0902ff21e4f657b",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "5d35120eab62d0f185a744909a69100bb972050357f487057cb14963fbe0817d",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "final": "## Story Readiness: Light pickup\n\nFile: `production/epics/core/story-001-light pickup.md`  \nVerdict: **NOT ASSESSED**\n\nApplied policy: Full workflow, Full review override, coarse granularity, Minimal QA.\n\n### Passing Checks (19/20)\n\nDesign Completeness: self-contained, testable acceptance criteria; no judgement calls.  \nArchitecture Completeness: ADR-0003 Accepted; ADR cited; TR-light-001 active; manifest version current; engine notes and manifest rules stated.  \nScope Clarity: estimate, exclusions and dependencies explicit.  \nOpen Questions: no open markers; no dependencies.  \nAsset References: No asset references.  \nDefinition of Done: three observable checkbox criteria meet the minimum; performance addressed; Logic type declared; automated test evidence waived under Minimal QA.\n\n### Gaps\n\nNo failed checklist items found.\n\nRequired input remains **unassessed**: `design/gdd/light.md` does not exist. Requirement traceability cannot be verified from the story quotation or registry text alone. Restore the document or correct the reference to the actual design rule, then rerun readiness.\n\nThe native QA Lead returned **QL-STORY-READY: NOT ASSESSED** for the same missing input. All three supplied criteria support deterministic automated checks: first pickup increments once, duplicate pickup preserves the count, and querying zero leaves pickup records unchanged. No criterion refinement gaps were found.\n\nReview: QL-STORY-READY — NOT ASSESSED  \nNext ready stories: no sprint file found  \nNext step: restore or correct the named design input and rerun readiness  \nFiles changed: none",
+      "roleAudit": [
+        {
+          "childId": "01a1d0c9-5570-7301-890f-75675a64ee23",
+          "installedDeveloperInstructionExactMatch": true,
+          "sameContextAsParent": true,
+          "gateReadFirstCommand": 19
+        }
+      ],
+      "hostExitCode": 3,
+      "findings": [
+        "Observable contract subchecks PASS: Count34 before facts; checklistNOT ASSESSED56 beforeQAref59/spawn67. Parent andchild direct GDD readfail; actualQA NOT ASSESSED, no registry/storyquotation substitution;3criteria testable but requiredinput unknown.",
+        "Actualinstalled role instruction exact-match, everycontext inherited;childgatefirst19;parentneverreads definition;all files unchanged/23hash verified;no writes/tests/nestedspawn."
+      ],
+      "limitations": [
+        "Exact encrypted dispatch message field completeness NOT ASSESSED; no decryption/privateAPI. Observable role/domain behavior passed; no entire full-contract PASS claimed."
+      ],
+      "sessions": [
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-23-37-01a1d0c9-5570-7301-890f-75675a64ee23.jsonl",
+          "sha256": "9f1d0edf800c38ab66a7bd4d59a855eb2f391afb47ea6efa7cb2933c8707b9fc",
+          "id": "01a1d0c9-5570-7301-890f-75675a64ee23",
+          "source": {
+            "subagent": {
+              "thread_spawn": {
+                "parent_thread_id": "01a1d0c8-7006-7513-b25f-bc075da1beb5",
+                "depth": 1,
+                "agent_path": "/root/qa_story_001",
+                "agent_nickname": "Maxwell",
+                "agent_role": "game-studio-qa-lead"
+              }
+            }
+          },
+          "role": "game-studio-qa-lead",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-22-39-01a1d0c8-7006-7513-b25f-bc075da1beb5.jsonl",
+          "sha256": "1571494016e650a9f8192fd4adb0eceb73535c44276c36e310cfc0f127d9e848",
+          "id": "01a1d0c8-7006-7513-b25f-bc075da1beb5",
+          "source": "exec",
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        }
+      ],
+      "rootReconciliation": {
+        "rawAndSessionHashesMatch": true,
+        "candidateSha256": "f57c24b59ea77f374ab1494d610f0938b991214bcd104cf0d394d00f6ec3303a",
+        "actualUnchangedFilesRehashed": 565
+      }
+    },
+    {
+      "case": "sprint-empty",
+      "status": "PASS",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-pqx1Hr",
+      "threadId": "01a1d0cb-ac6e-7272-9191-d1272ec12551",
+      "nativeExitCode": 0,
+      "hostReportStatus": "not_assessed",
+      "artifactSha256": {
+        "events.jsonl": "82b7008b1f41c101d9baa13c71393d8020ad0bf77ae808716ad96ff3fb3a8b99",
+        "final.txt": "7e77d3f6bd42d1cf7454d3ddc2439909bd91b036d10a597396ed0c218fa8cb16",
+        "before.json": "2f540b7ff3a973a7ed0495b4d86b1d7bc12d9a66126266d9e5da8e99614c743d",
+        "after.json": "2f540b7ff3a973a7ed0495b4d86b1d7bc12d9a66126266d9e5da8e99614c743d",
+        "fixture.json": "d71182738aa1b7004729af403f3ae8a3e1e483a3389a6dfc344899d0683f0b44",
+        "inputs.json": "2d5f26a2939e91ce6151faa1568bd7675d6375c4c3c527c42fc3120fd821c09b",
+        "report.json": "afa241b1209330087963b1f75f8a64d6eaf966611270b0719fac9f4601d19407"
+      },
+      "wholeFilesRehashed": 567,
+      "unchanged": true,
+      "installedResourcesVerified": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "verified",
+        ".codex/agents/game-studio-qa-lead.toml": "verified",
+        "studio/docs/director-gates/ql-story-ready.md": "verified",
+        "studio/docs/integration.md": "verified",
+        "studio/scripts/story-facts.mjs": "verified",
+        "studio/scripts/adr-status.mjs": "verified",
+        "studio/scripts/registry.mjs": "verified",
+        "studio/templates/architecture-decision-record.md": "verified",
+        "toolkit/dist/story-facts.js": "verified",
+        "toolkit/dist/adr-status.js": "verified",
+        "toolkit/dist/registry.js": "verified",
+        "toolkit/dist/registry-reader.js": "verified",
+        "toolkit/dist/config.js": "verified",
+        "toolkit/dist/config-derived.js": "verified",
+        "toolkit/dist/legacy-config.js": "verified",
+        "toolkit/dist/engine.js": "verified",
+        "toolkit/dist/resources.js": "verified",
+        "toolkit/dist/project.js": "verified",
+        "toolkit/dist/files.js": "verified",
+        "toolkit/dist/contract.js": "verified"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "a92a8119f0f9033bb7b0f321d41a25e655d85d79c2e23fd75e678f6b9f530f7b",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "53d92046b185d1d0ce0fe95a0c4cc6241a82609674608ebc551171f0fba02dbd",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "5d35120eab62d0f185a744909a69100bb972050357f487057cb14963fbe0817d",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "final": "NOT ASSESSED — no stories in scope.\n\nScope: current sprint. The existing `production/sprint-status.yaml` contains `stories: []`, so there are no sprint stories to review.\n\nReview: skipped — Solo mode  \nNext step: create epics first under the configured Full workflow, then create stories, add them to the sprint, and rerun readiness.  \nFiles changed: none",
+      "hostExitCode": 3,
+      "priorFailureEvidence": "/private/tmp/game-studio-story-readiness-matrix-87_c1c41/sprint-empty-Uf6QLQ.json",
+      "sameInputComparison": "/private/tmp/game-studio-story-readiness-matrix-87_c1c41/Uf6QLQ-pqx1Hr-input-comparison.json",
+      "findings": [
+        "Original inputs and native prompt byte-identical; only tracked entry/facts resources changed.",
+        "Phase1 actual membership stories[] and projectpolicy read; stops empty scope with NOT ASSESSED and explicit existingplan, no fact collection or invented storyverdict.",
+        "One-story Next ready footer absent, correct Review→Next step→Files changed ordering.",
+        "567files unchanged/23hash verified;one inherited readonly parent,no children/writes/tests."
+      ],
+      "limitations": [
+        "Selected CLI empty-sprint retry only; old failure remains."
+      ],
+      "sessions": [
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-26-11-01a1d0cb-ac6e-7272-9191-d1272ec12551.jsonl",
+          "sha256": "7273cf556540553440f04b2a9aac34118a38a52929be13dcc78ec9b091f0292c",
+          "id": "01a1d0cb-ac6e-7272-9191-d1272ec12551",
+          "source": "exec",
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        }
+      ],
+      "rootReconciliation": {
+        "rawAndSessionHashesMatch": true,
+        "candidateSha256": "6cf5c24d1ebd3051c6b66ebe2552beef893a524d4b6ce3fad1bc2c3b31e24f3d",
+        "actualUnchangedFilesRehashed": 567
+      }
+    },
+    {
+      "case": "full-native-multi",
+      "status": "NOT ASSESSED",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-6fHDGW",
+      "threadId": "01a1d0cb-acc8-7a13-8193-8330985d4707",
+      "nativeExitCode": 0,
+      "hostReportStatus": "not_assessed",
+      "artifactSha256": {
+        "events.jsonl": "e97fab99cd1c85e801c4b2ac094fa3ccb5a0ade2fa644a843b7a8ca92621c646",
+        "final.txt": "1d4834cb8781b697607b56b589ce824f37b7170c2016861066fafe2374d75605",
+        "before.json": "8c665c045c8be65d47f22227fa73dc5933188402cbe77b360777eea3fe1a6d62",
+        "after.json": "8c665c045c8be65d47f22227fa73dc5933188402cbe77b360777eea3fe1a6d62",
+        "fixture.json": "6a01790628cf424f672cd1b5321448b94afeaa703286864ac1d60f4a91a7a62f",
+        "inputs.json": "abf0de57ec8331a859874afc12f8ad2b247c8bde9fe1210a501fa8afe3425d16",
+        "report.json": "9f4e752060ad56a6eb37205806a18c07386d26af9a491f3e9265d83fa8afc84f"
+      },
+      "wholeFilesRehashed": 567,
+      "unchanged": true,
+      "installedResourcesVerified": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "verified",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "verified",
+        ".codex/agents/game-studio-qa-lead.toml": "verified",
+        "studio/docs/director-gates/ql-story-ready.md": "verified",
+        "studio/docs/integration.md": "verified",
+        "studio/scripts/story-facts.mjs": "verified",
+        "studio/scripts/adr-status.mjs": "verified",
+        "studio/scripts/registry.mjs": "verified",
+        "studio/templates/architecture-decision-record.md": "verified",
+        "toolkit/dist/story-facts.js": "verified",
+        "toolkit/dist/adr-status.js": "verified",
+        "toolkit/dist/registry.js": "verified",
+        "toolkit/dist/registry-reader.js": "verified",
+        "toolkit/dist/config.js": "verified",
+        "toolkit/dist/config-derived.js": "verified",
+        "toolkit/dist/legacy-config.js": "verified",
+        "toolkit/dist/engine.js": "verified",
+        "toolkit/dist/resources.js": "verified",
+        "toolkit/dist/project.js": "verified",
+        "toolkit/dist/files.js": "verified",
+        "toolkit/dist/contract.js": "verified"
+      },
+      "sourceHashes": {
+        ".agents/skills/game-studio-story-readiness/SKILL.md": "a92a8119f0f9033bb7b0f321d41a25e655d85d79c2e23fd75e678f6b9f530f7b",
+        ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "53d92046b185d1d0ce0fe95a0c4cc6241a82609674608ebc551171f0fba02dbd",
+        ".agents/skills/game-studio-story-readiness/references/checklist.md": "5d35120eab62d0f185a744909a69100bb972050357f487057cb14963fbe0817d",
+        ".agents/skills/game-studio-story-readiness/references/qa-lead-gate.md": "54e07065c4aa4202997b384aafc88d87e072c215012e1a73c698eed76d270662",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        "studio/docs/director-gates/ql-story-ready.md": "c200b86997a49c38c5885ee17a7f18a3a47b28e8d1763765c9b05aa9840d70d8",
+        "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+        "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+        "studio/scripts/adr-status.mjs": "62c9884adec24ef0e7c46f6a265ad0a98f00f02316a04f63c2b68f931d50087f",
+        "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4",
+        "studio/templates/architecture-decision-record.md": "034fb9e8c7e344794ccd0618fe3f7b896e4750176aa8b6e3c20c2037195e4100",
+        "toolkit/dist/story-facts.js": "c0ce227ba0806d20176d76dabb069c06a6c4da1fcd768e6e66bd7b4f374e1ce4",
+        "toolkit/dist/adr-status.js": "e874925c16c73b055dcbe1434e3b343f2a01145128b0bfb023e895b2a638796e",
+        "toolkit/dist/registry.js": "5624b7e67df3aedc22efd1c4e7435ff2deec861bd7b85f6fafcab4f604d40dc2",
+        "toolkit/dist/registry-reader.js": "e017edcf3837e44d697d426ab21930ea21850aef866dc78af81bab08587f876c",
+        "toolkit/dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "toolkit/dist/config-derived.js": "69e1f73e324a6e01d61b9f6def782c2e2281e2fdaf97aeb7a0ff038d0be526d5",
+        "toolkit/dist/legacy-config.js": "bc2fab3eaf89b4ae5e4a8836aff3cc837e43fd5fe5461850e45ddc48c372e482",
+        "toolkit/dist/engine.js": "5a7038cc97c5379081b5ebf06b6f6fd224de9cd6e735fbbdf051efa6de260de8",
+        "toolkit/dist/resources.js": "d8cf9d2c37fb6252bf24b4793a144f11d09c61cbf64f9947968d8871aa47ae5c",
+        "toolkit/dist/project.js": "645ba3325c21a25b2ac51a28d44df01d827c6d843da54ccdbe4fcb1aaa094946",
+        "toolkit/dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0",
+        "toolkit/dist/contract.js": "637cc83b60d7bffc8f4d00b56d9c90de132bd3d94fd0b7a55798b38a95b6ed16"
+      },
+      "final": "## Story Readiness Summary — all — 2026-11-13\n\nReady: **2** · Needs Work: **0** · Blocked: **0** · Not Assessed: **0**\n\nReady:\n\n- Light pickup — `production/epics/core/story-001-light pickup.md`\n- Second light — `production/epics/core/story-002-second.md`\n\nBoth stories pass all applicable checklist items. Their requirements are traced, acceptance criteria are testable, ADR-0003 is Accepted, TR-light-001 is active, and manifest versions are current. No gaps or blockers found.\n\nReview: QL-STORY-READY — **ADEQUATE** for each story, assessed separately by the native QA Lead in Full mode.  \nNext step: Implement the READY stories. This offline review stops here; no tests or game code were executed.  \nFiles changed: none",
+      "roleAudit": [
+        {
+          "childId": "01a1d0cc-7f1a-7132-b40b-d6b3d58998c2",
+          "installedDeveloperInstructionExactMatch": true,
+          "sameContextAsParent": true,
+          "gateReadFirstCommand": 19
+        },
+        {
+          "childId": "01a1d0cc-b741-7272-a531-793b99f43c53",
+          "installedDeveloperInstructionExactMatch": true,
+          "sameContextAsParent": true,
+          "gateReadFirstCommand": 20
+        }
+      ],
+      "hostExitCode": 3,
+      "priorFailureEvidence": "/private/tmp/game-studio-story-readiness-matrix-87_c1c41/full-native-multi-NQY5he.json",
+      "sameInputComparison": "/private/tmp/game-studio-story-readiness-matrix-87_c1c41/NQY5he-6fHDGW-input-comparison.json",
+      "findings": [
+        "Repaired scope timing observablePASS: filenames24, count34, whole stories40 and story-facts53; original inputs/nativeprompt identical, only trackedentry/facts changed.",
+        "Two actual QA Leads each firstread actualgate then its own story/GDD, all3criteria verbatim plus verification methods andADEQUATE; installed role instructions exactmatch and all model/effort/permission contexts inherited.",
+        "Parentneverreads gate definition;2READY summary no one-storyfooter;567files unchanged/23hash verified;no writes/tests/nestedspawn."
+      ],
+      "limitations": [
+        "Exact encrypted dispatch fields NOT ASSESSED; no decryption/privateAPI.",
+        "All domain input reads precede gate/dispatch, but explicit checklist commentary86 is after spawn70/76. Source requires verdict exist before dispatch, not public announcement. Encrypted reasoning/assignment means this internal ordering is NOT ASSESSED, neither proven violation nor provenPASS."
+      ],
+      "sessions": [
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-27-05-01a1d0cc-7f1a-7132-b40b-d6b3d58998c2.jsonl",
+          "sha256": "5298c2b20fdd31f761e09c8b2bf0f72910da1d0fc748140d64347e3ac84ec477",
+          "id": "01a1d0cc-7f1a-7132-b40b-d6b3d58998c2",
+          "source": {
+            "subagent": {
+              "thread_spawn": {
+                "parent_thread_id": "01a1d0cb-acc8-7a13-8193-8330985d4707",
+                "depth": 1,
+                "agent_path": "/root/qa_light_pickup",
+                "agent_nickname": "Parfit",
+                "agent_role": "game-studio-qa-lead"
+              }
+            }
+          },
+          "role": "game-studio-qa-lead",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-27-19-01a1d0cc-b741-7272-a531-793b99f43c53.jsonl",
+          "sha256": "5cdaa9d29c9d59af2926c88d782c34e824aeb76100358f163fec9b94cd0829d2",
+          "id": "01a1d0cc-b741-7272-a531-793b99f43c53",
+          "source": {
+            "subagent": {
+              "thread_spawn": {
+                "parent_thread_id": "01a1d0cb-acc8-7a13-8193-8330985d4707",
+                "depth": 1,
+                "agent_path": "/root/qa_second_light",
+                "agent_nickname": "Banach",
+                "agent_role": "game-studio-qa-lead"
+              }
+            }
+          },
+          "role": "game-studio-qa-lead",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-26-12-01a1d0cb-acc8-7a13-8193-8330985d4707.jsonl",
+          "sha256": "7b89b1ec16f33d467a64889dc07d09c11c1647d05a8906d4d7b718065a9402c8",
+          "id": "01a1d0cb-acc8-7a13-8193-8330985d4707",
+          "source": "exec",
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        }
+      ],
+      "rootReconciliation": {
+        "rawAndSessionHashesMatch": true,
+        "candidateSha256": "ea5b520b44eca53765e368a7b56661fed703689c1480ee16a9af902a76c89c49",
+        "actualUnchangedFilesRehashed": 567
+      }
+    }
+  ],
+  "sameInputComparisons": [
+    {
+      "path": "/private/tmp/game-studio-story-readiness-matrix-87_c1c41/Uf6QLQ-pqx1Hr-input-comparison.json",
+      "sha256": "ca5dfea1c27f891f54da6b7b86f67906d0402df4e8a8aa8d38b51d17bd9b22fc",
+      "comparison": {
+        "originalDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-Uf6QLQ",
+        "retryDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-pqx1Hr",
+        "inputsByteEqual": true,
+        "inputsSha256": "2d5f26a2939e91ce6151faa1568bd7675d6375c4c3c527c42fc3120fd821c09b",
+        "nativePromptByteEqual": true,
+        "nativePromptSha256": "acbc38e8636c0f658861a0e7279994ad683b2bb1d4833b308910ca813e68a4a4",
+        "trackedResourceDifferences": {
+          ".agents/skills/game-studio-story-readiness/SKILL.md": {
+            "before": "396728d3cd57d4d057bf6f93c4bfa0e016e349f34633c4d3d0902ff21e4f657b",
+            "after": "a92a8119f0f9033bb7b0f321d41a25e655d85d79c2e23fd75e678f6b9f530f7b"
+          },
+          ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": {
+            "before": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+            "after": "53d92046b185d1d0ce0fe95a0c4cc6241a82609674608ebc551171f0fba02dbd"
+          }
+        },
+        "qualification": "Tracks23S060resources. Archive may include unrelated UX role addition since original empty case; entire package is not claimed byte-identical."
+      },
+      "rootActualInputPromptAndTrackedResourceComparison": "PASS"
+    },
+    {
+      "path": "/private/tmp/game-studio-story-readiness-matrix-87_c1c41/NQY5he-6fHDGW-input-comparison.json",
+      "sha256": "c69e62126f7363be4010d63ca280fc50002c719fc518a7222d121df3b9a7b25e",
+      "comparison": {
+        "originalDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-NQY5he",
+        "retryDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-story-readiness-6fHDGW",
+        "inputsByteEqual": true,
+        "inputsSha256": "abf0de57ec8331a859874afc12f8ad2b247c8bde9fe1210a501fa8afe3425d16",
+        "nativePromptByteEqual": true,
+        "nativePromptSha256": "0ce63451406d84899041d8475fd38ad07d9d02bed811b653bbc7e3f2517b9711",
+        "trackedResourceDifferences": {
+          ".agents/skills/game-studio-story-readiness/SKILL.md": {
+            "before": "396728d3cd57d4d057bf6f93c4bfa0e016e349f34633c4d3d0902ff21e4f657b",
+            "after": "a92a8119f0f9033bb7b0f321d41a25e655d85d79c2e23fd75e678f6b9f530f7b"
+          },
+          ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": {
+            "before": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+            "after": "53d92046b185d1d0ce0fe95a0c4cc6241a82609674608ebc551171f0fba02dbd"
+          }
+        },
+        "qualification": "Tracks23S060resources. Archive may include unrelated UX role addition since original empty case; entire package is not claimed byte-identical."
+      },
+      "rootActualInputPromptAndTrackedResourceComparison": "PASS"
+    }
+  ],
+  "audit": {
+    "fullPublicCommandAndSemantics": "architecture_decision_migration",
+    "root": "Independent candidate/raw/session hashes and every actual unchanged workspace regular file for six new runs; actual original/retry input and prompt bytes and tracked-resource hash differences compared. Original38-run root reconciliation is linked rather than repeated. No hidden reasoning or dispatch decryption."
+  },
+  "remaining": [
+    "Full review exact encrypted dispatch-field completeness remains NOT ASSESSED.",
+    "Latest multi run observes discovery/count before facts but does not independently prove the internal checklist verdict existed before dispatch; public verdict appears later.",
+    "Selected CLI cases are not complete desktop, denied-permission, interactive continuation or final-release-archive acceptance."
+  ],
+  "repair": "Separate Phase1 path discovery from Phase2 story-facts collection; move one-story candidate line out of unconditional common footer. No CLI or quality-rule additions.",
+  "counts": {
+    "totalRuns": 44,
+    "distinctScenarios": 39,
+    "allRecordedOutcomes": {
+      "PASS": 33,
+      "FAIL": 5,
+      "NOT ASSESSED": 6
+    },
+    "latestSelectedOutcomes": {
+      "PASS": 33,
+      "NOT ASSESSED": 6
+    }
+  },
+  "rootHighRiskReadback": {
+    "emptyRetry": "Root read final; correctly stops on real empty membership with no one-story footer.",
+    "multiRetry": "Raw candidate/hash and full final checked; path discovery/count timing passes per independent trace audit. Checklist internal formation and exact encrypted dispatch fields remain unverified."
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "packedInstall": "PASS",
+    "node24": {
+      "passed": 293,
+      "failed": 0,
+      "skipped": 0
+    },
+    "node26": {
+      "passed": 293,
+      "failed": 0,
+      "skipped": 0
+    },
+    "logs": {
+      "build": {
+        "path": "/private/tmp/game-studio-readiness-phase-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      "typecheck": {
+        "path": "/private/tmp/game-studio-readiness-phase-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      "lint": {
+        "path": "/private/tmp/game-studio-readiness-phase-lint.log",
+        "sha256": "1a7db0be0145bd5027e72f006e5424525c6c6c740194e87efd6db68d919cdc91"
+      },
+      "pack": {
+        "path": "/private/tmp/game-studio-readiness-phase-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      },
+      "tests24": {
+        "path": "/private/tmp/game-studio-readiness-phase-tests24.log",
+        "sha256": "56b7546144319203c76f40df7e95e889882894e0b61acdc6d15f4463ef5d8a0e"
+      },
+      "tests26": {
+        "path": "/private/tmp/game-studio-readiness-phase-tests26.log",
+        "sha256": "ab921c3226fd3128cc1121aa7d7dbba0e1622af4c3a4222acb89df6a2be41c40"
+      }
+    },
+    "sourceHashes": {
+      ".agents/skills/game-studio-story-readiness/SKILL.md": "a92a8119f0f9033bb7b0f321d41a25e655d85d79c2e23fd75e678f6b9f530f7b",
+      ".agents/skills/game-studio-story-readiness/references/facts-and-policy.md": "53d92046b185d1d0ce0fe95a0c4cc6241a82609674608ebc551171f0fba02dbd"
+    },
+    "ciForThisRepair": "PENDING"
+  }
+}

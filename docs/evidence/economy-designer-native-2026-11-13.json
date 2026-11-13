@@ -1,0 +1,163 @@
+{
+  "scope": "A009 original five raw scenarios, first native attempt only; source1 discovery only",
+  "overall": "PARTIAL_ACCEPTANCE_WITH_ONE_NARROW_AUTHORING_FAILURE",
+  "cases": {
+    "economy-chest": {
+      "sourceCase": 1,
+      "verdict": "PASS_DISCOVERY_ONLY",
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-rqO3VP",
+      "parent": "01a1d2ac-1261-7d80-9f48-7b422918db20",
+      "child": "01a1d2ac-5d01-7243-805c-3e6ea68fe452",
+      "preservedFiles": 574,
+      "added": [],
+      "requestSha256": "8143af9daa929f4ee551b7a8198f682b618f2b59474ac0759d255c67fdfef50a",
+      "manualReview": {
+        "verdict": "PASS_DISCOVERY_ONLY",
+        "sourceCase": 1,
+        "evidence": "Registry/item/chest raw read occurred before authored findings. All five canonical item rarities/values/weights retained. Existing wooden table explicitly distinguished from unchosen standard chest; distribution sums 100%, expectations 1.6667/4/10/25/100 independent draws, EV32.6 Gold, Rare+15%=>6.6667 correct. Four policy options, pillar/theory tradeoffs, recommendation and four unresolved questions; no selected new distribution, pity, rate or creative policy. 574 original files unchanged; public operations inspect only.",
+        "sourceCompletion": "Original source Case1 full chosen table/actual owner continuation and registration branch remain OPEN; this run proves only discovery and existing-reference analysis.",
+        "nonBlockingObservation": "Parent summary calls registered weights physical; child more precisely says units unspecified and not drop probabilities. No value or rules changed."
+      }
+    },
+    "economy-event-redirect": {
+      "sourceCase": 2,
+      "verdict": "PASS_SCOPED",
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-Tuz9wr",
+      "parent": "01a1d2ac-183f-7ff1-86ac-17523f8e63e4",
+      "child": "01a1d2ac-49ca-7291-af1d-dd06e28aa4c3",
+      "preservedFiles": 572,
+      "added": [],
+      "requestSha256": "06e82b31b3b4428aaf5f35224c3ec16513440aa85a59c9ac35c923f37d80de4a",
+      "manualReview": {
+        "verdict": "PASS_SCOPED",
+        "sourceCase": 2,
+        "evidence": "All assistant commentary/final and actual exec calls inspected. No candidate event dates, duration or cadence were supplied; actual brief/request and constraints read. Missing year/regions/capacity/content effort returned to caller; reward-value work offered after Live Ops structure. No consultation claimed or delegation performed. 572 original regular files preserved.",
+        "limitations": "Actual Live Ops role availability was not queried or asserted; actual inter-role handoff is not proven. Calendar/content quality is outside this role case.",
+        "permissions": "Readonly; child only project inspection and installed CLI help/config/resource resolution. No builds/tests/simulations or writes."
+      }
+    },
+    "economy-gold-analysis": {
+      "sourceCase": 5,
+      "verdict": "FAIL_INCREMENTAL_AUTHORING_SCOPED",
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-pegE54",
+      "parent": "01a1d2b1-d5e2-72f3-a3b0-f35593562ea7",
+      "child": "01a1d2b2-0e4b-73e2-8691-4d927cc91d19",
+      "preservedFiles": 573,
+      "added": [
+        "design/economy/gold-analysis.md"
+      ],
+      "requestSha256": "382fe5a2bb6ddd736585dca631df5045442ec69fb228a2f595fceca1bcf42c14",
+      "manualReview": {
+        "verdict": "FAIL_INCREMENTAL_AUTHORING_SCOPED",
+        "sourceCase": 5,
+        "sourceCaseCore": "PASS_SCOPED_NUMERICAL_CONTENT",
+        "evidence": "Supplied300Gold/session,4.444h/6.667sessions/7whole ordinary,11.111h/16.667sessions/17whole premium verified. Three alternative tunings and shared-wallet combined purchases recomputed. Fixed recurring sink sensitivity, current-stock purchasing-power difference and finite catalog capacity explicitly conditional, missing actual population/pacing/sinks not fabricated. No cash monetization, owner policy choice, balance signoff or game changes.",
+        "authorization": "Exactly single authorized new design/economy/gold-analysis.md. All573 preexisting regular files preserved; no checkpoint/registry edits, tests/simulations/analytics/build/install/commit/delegation. Actual typed child matches fullrole and inherited model/effort/approval/workspace-write.",
+        "failure": {
+          "contract": "Source: create target with skeleton(all section headers), one section at a time, write each section as approved. Canonical: establish agreed skeleton and persist each settled section before moving on. Guided authorization eliminates repeated permissions but preserves incremental persistence.",
+          "actual": "Three patches only: firstAdd10672characters contains four complete major sections and two placeholders; secondUpdate11374characters fills price/health/handoff in one batch; thirdUpdate1277characters corrects conditional wallet formula. No standalone complete skeleton or per-section saves before moving to later sections; Health heading not in first write.",
+          "artifacts": [
+            "actual-writes.json",
+            "actual-patch-1.txt",
+            "actual-patch-2.txt",
+            "actual-patch-3.txt",
+            "first-write-document.md"
+          ],
+          "scope": "Delivery/resumability failure only; no missing artifact, wrong final math, unauthorized file change or fabricated approval. Initial draft wallet expression was self-corrected before final, so not a separate final semantic failure.",
+          "rootReview": "Independent adjudication requested; no source change or rerun performed."
+        },
+        "limits": "No actual chosen policy continuation, registry changes, shared checkpoint transaction, full-model matrices, real simulation or player evidence tested."
+      }
+    },
+    "economy-prestige": {
+      "sourceCase": 3,
+      "verdict": "PASS_SCOPED",
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-9sEcuH",
+      "parent": "01a1d2ad-8448-7653-90c2-6628b3028c4e",
+      "child": "01a1d2ad-cb0d-7173-8b5c-54627fdeb08d",
+      "preservedFiles": 573,
+      "added": [],
+      "requestSha256": "6efcc0516a52a5733f898714bba577592f6c0540159b05b9d4c263f9c5468cc3",
+      "manualReview": {
+        "verdict": "PASS_SCOPED",
+        "sourceCase": 3,
+        "independentChecks": {
+          "weeklyFaucet": 120,
+          "totalFaucet": 960,
+          "sinkCapacity": 600,
+          "exhaustionWeek": 5,
+          "tail": 360,
+          "catalogAbsorption": 0.625,
+          "illustrativeRepricing": [
+            144.0,
+            240.0,
+            288.0,
+            288.0
+          ],
+          "repricedChallengeCounts": [
+            5,
+            8,
+            10,
+            10
+          ]
+        },
+        "evidence": "Finite challenge total, cohort weekly rate, individual affordability, feasible explicit week-by-week spending path and terminal stock all independently checked. Distinguishes catch-up from weekly supply and cohort spend choice from actual uptake. Four economic alternatives, explicit no balanced verdict while sink unresolved, all policies left proposed. Empty registry limitation and intended registration returned, no registration or actual consultation claimed.",
+        "operations": "Only project/instruction reads, config/resource/help and readonly GDD structural check. Missing economy-designer SKILL lookup retained; actual custom role fully injected. No tests/simulation/analytics/builds or mutation. 573 original files preserved.",
+        "limits": "Actual owner choice, missing-data-only variant, chosen sink adoption/registry and player utility remain OPEN. Source Case3 scenario itself scoped PASS."
+      }
+    },
+    "economy-xp-curve": {
+      "sourceCase": 4,
+      "verdict": "PASS_SCOPED",
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-o5cv5t",
+      "parent": "01a1d2ae-9e51-7131-93fd-6fc779edc7e4",
+      "child": "01a1d2ae-e387-7c91-9051-642b75a7ae6b",
+      "preservedFiles": 572,
+      "added": [],
+      "requestSha256": "120344eb37f32a6cf4a896d1c0efab8449263e945712d9f3df591116d76f950a",
+      "manualReview": {
+        "verdict": "PASS_SCOPED",
+        "sourceCase": 4,
+        "evidence": "Current and three alternatives independently recomputed from supplied integer n/transition definition; 20/25/30/35 anchors and19/36 boundaries correct. Current210500/base122500/1.5x144500 totals and175h25m/102h05m/120h25m correct. Reward scaling equivalence valid for fresh character because every mid cost divisible by300 and zero overflow at boundaries; eligibility remains proposed. Half-surcharge fractional encounters differentiated from actual per-level completion, global carried overflow respected. Existing attack power/unlocks untouched and source values correct; later content49h35m remains while access advances.",
+        "operations": "Four public exec batches only project/Skill/integration/config/resource reads; missing registry ls limitation disclosed. No arithmetic program, simulation, test, build, write or extra role. 572 original files preserved.",
+        "limits": "No approved target, owner choice, migration treatment, actual balance/player evidence or post-cap rule assumed. Complaint-only missing-formula branch remains OPEN."
+      }
+    }
+  },
+  "runtime": "All five native exit0/wrapper3 pending manual; no automatic PASS inferred. Exactly one actual native typed Economy Designer child per case, full canonical role text in developer row3; gpt-6.1-sol/high/on-request and read-only or assigned workspace-write inherited. Parent executes no workspace commands. Parent custom config marker does not survive role override; recorded separately, not falsely claimed inherited. Opaque internal messages not decrypted.",
+  "frozenBuildArchiveSha256": "245fc32c7bedef210e1ea9141dcca85b25fa75ead9339faa5b2edffcdfd4a447",
+  "canonicalRoleSha256": "14637f1c6925c30f84d9d36dbd5be362af3cf36f74b24e5281a4492772c45374",
+  "fixtureSha256": "aa6717c6f057db54b7580d485cfd017609a4e15407df46a5043963126a2d5fad",
+  "permissions": "Four readonly; Gold single new document only. All original inputs/files retained. No shared source, canonical instruction, fixture or build changed by this acceptance. No failed run auto-fixed or repeated.",
+  "failuresPreserved": "Gold sourceCase5 numerical/domain/authority content passes but original skeleton/section-persistence workflow not met; all3 actual patches and firstwrite preserved. Native self-corrected a draft wallet expression before final; final arithmetic accepted, draft retained.",
+  "open": [
+    "SourceCase1 actual owner choice and same-session continuation, chosen complete new loot distribution, new-item registration",
+    "Case3 missing-data-only branch and actual approved sink continuation",
+    "Case4 complaint-only unknown-curve branch",
+    "Registry conflicting values, authorized/denied update, preservation and referencing-document propagation",
+    "Conditional/weighted/pity expectation variants, no-random-reward dedicated source branch",
+    "Guided skeleton/each-section persistence and real resume (Gold current FAIL), separately authorized shared checkpoint transaction",
+    "Actual interdisciplinary consultation and unavailable specialist outcomes beyond honest owner handoff",
+    "Full economy model, exploit loops, population telemetry, simulation, player engagement, desktop-specific acceptance"
+  ],
+  "limits": "Analytical synthetic data only. No blanket A009/T19 or source-matrix completion, host-enforced tool restriction, actual economy balance, player acceptance or launch claim.",
+  "date": "2026-11-13",
+  "status": "partial",
+  "candidate": {
+    "directory": "/private/tmp/game-studio-economy-native.xjmd2klo",
+    "manifestSha256": "33cf328d45c39a03feddbb3dad5a5de138b5af7cb0b937957b7e9be5ac9ae00b",
+    "reviewSha256": "afcbbb5028f484cdc72e61f9d14cf72f1a8d096f17baaa2f64c317a568ec3b33"
+  },
+  "rootVerification": {
+    "frozenArtifacts": 109,
+    "preservedOriginalFiles": 2864,
+    "actualCurrentFiles": 2865,
+    "rawInputsLiveTracesFullRoleActualArchives": "PASS",
+    "semantics": "All five full traces and outputs reviewed by design_review_migration. Root and independent architecture reviewer read original incremental contract and actual Gold patches, confirming the narrow authoring failure; numerical/domain judgment remains separately scoped."
+  },
+  "correction": {
+    "roleSha256": "b2f295e5bc8ebba71691f850a42515d5c6a726d9cf653f4b8454ba4c15f8a46f",
+    "scope": "New authorized documents save the complete planned skeleton first, then each completed section before proceeding. Existing documents retain structure; guided authorization is reused.",
+    "state": "Implemented after independent review; unchanged-input native retry pending"
+  }
+}

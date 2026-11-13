@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-12",
+  "status": "scoped-pass",
+  "scope": "Portable story-facts observations only; no story-readiness, implementation, closure, gate or desktop acceptance is inferred.",
+  "source": ".claude/scripts/story-facts.sh",
+  "sourceSha256": "234f648bd2f4888d6eec361f8db88254c65672e4252d43aad5e4ce13ed376e22",
+  "environment": {
+    "node": "24.22.2",
+    "platform": "macOS ARM64"
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "fullSuite": {
+      "pass": 231,
+      "fail": 0,
+      "skip": 0
+    },
+    "helperTestsIncludingSubtests": 19,
+    "realBashDifferentials": 9,
+    "installedArchive": "PASS"
+  },
+  "installedArchiveChecks": [
+    "Actual pinned resource path and source bytes",
+    "JSON states, counts, lint and qualityAssessed false",
+    "Missing requested file returns exit3 with successfully read rows",
+    "Malformed sprint YAML returns not_assessed / INVALID_SPRINT / exit1",
+    "Valid flow-style YAML reads the real selected story and status through bundled yaml dependency"
+  ],
+  "sourceCorrections": [
+    "Retain empty files as NO_STATUS observations rather than omitting them.",
+    "Reject invalid YAML/schema/conversion as unavailable; support real flow syntax rather than silently reading no rows.",
+    "Reject unsafe project paths and symlinks explicitly."
+  ],
+  "initialValidationFailure": {
+    "scope": "Aggregate tests captured a separately developing resume-host test before its implementation file was created.",
+    "error": "ERR_MODULE_NOT_FOUND for create-architecture-resume-host.mjs",
+    "disposition": "Kept the failed log; froze the completed test/implementation slice and reran the entire suite without excluding any test.",
+    "logSha256": "8e5747512d4289c4a856696feda32f050fbcd19d53a0595ebbfa32b39ed439ca"
+  },
+  "fileHashes": {
+    "toolkit/src/story-facts.ts": "211a49d4096d6017e3f05368a3a6db1be997d2f32a6645145510b66c62dfeac2",
+    "studio/scripts/story-facts.mjs": "f453459a64f24ce0100060e34dd46d68aa1b89aea57867c6533d6c000d550dc9",
+    "toolkit/test/story-facts.test.mjs": "09ea46c99694db1661adeaae952cbf6e26c6fd01ce2b276baf14584f28b10821",
+    "studio-tests/helpers/story-facts-codex.md": "968bedace1d041f7a28a7bfcd259f63b1f60a2fcacb5746dc2400cbfd24b3648",
+    "toolkit/test/packed-smoke.mjs": "be9932bfbab0da2e86f30a738572540b24796c7818db5548abbc46db080e44b7"
+  },
+  "logs": {
+    "game-studio-story-facts-build.log": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28",
+    "game-studio-story-facts-typecheck.log": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b",
+    "game-studio-story-facts-lint.log": "235c6f0228878e5f1f2b4f281d97cef27bd43e7cc6ae91a152a2a2c092644e6d",
+    "game-studio-story-facts-pack.log": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38",
+    "game-studio-story-facts-regression-final.log": "569d579fca9e57c13e0cb249a790d187ef2972832d926e2a9544281c11bb47d8"
+  },
+  "limits": [
+    "Real Bash differential cases are Unix-only and explicitly skipped on Windows; portable observation/process/path tests remain applicable there.",
+    "Full suite includes two independently scoped resume protection tests, not proof that the native continuation completed.",
+    "ADR-status and readiness consumers are separate unfinished slices."
+  ]
+}

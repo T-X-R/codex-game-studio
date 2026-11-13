@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-13",
+  "status": "PASS_SCOPED",
+  "repository": "T-X-R/codex-game-studio",
+  "run": "https://github.com/T-X-R/codex-game-studio/actions/runs/43368875096",
+  "head": "e20aab266bb50bf347325878c9c9b91c6925a7cd",
+  "allSevenJobs": "success",
+  "toolkitResults": {
+    "macosNode24": {
+      "tests": 529,
+      "pass": 529,
+      "fail": 0,
+      "skip": 0
+    },
+    "linuxNode24": {
+      "tests": 529,
+      "pass": 529,
+      "fail": 0,
+      "skip": 0
+    },
+    "linuxNode26": {
+      "tests": 529,
+      "pass": 529,
+      "fail": 0,
+      "skip": 0
+    },
+    "windowsNode24": {
+      "tests": 475,
+      "pass": 412,
+      "fail": 0,
+      "skip": 63
+    }
+  },
+  "windowsRepair": {
+    "previousRun": "https://github.com/T-X-R/codex-game-studio/actions/runs/43368280519",
+    "previousHead": "38cae8f9b440b85e34a560cfe66769874985cdef",
+    "failure": "24 scaffold tests attempted dynamic import of a native Windows D: path, producing ERR_UNSUPPORTED_ESM_URL_SCHEME.",
+    "fix": "Convert runtime path with pathToFileURL before import; original assertions unchanged.",
+    "observed": "All 26 original scaffold tests now pass. The same 63 Windows skip names/reasons remain.",
+    "comparisonLimit": "The two complete run heads also differ by five added A017 harness tests; only the scaffold file differs by the two-line URL fix."
+  },
+  "additionalJobs": {
+    "browser": "Actual Chrome 156: nine checks and scoped packed Web copy-growth pass.",
+    "godotLinuxAndWindows": "Both real Godot 4.7.2 jobs report ten selected script-loading cases PASS_SCOPED."
+  },
+  "independentAudit": {
+    "path": "/private/tmp/game-studio-ci-independent-s33z6lr0/review.md",
+    "sha256": "a45e40a5d667f8a8c9d3293871f7522bb7ca9b9938cd2a18a723af6924aca8bb"
+  },
+  "manifest": {
+    "path": "/private/tmp/game-studio-ci-independent-s33z6lr0/manifest.json",
+    "sha256": "bd6df546added5d36774502bb589f76f42bd38c874765f3dd4dc11b1ca7c40e8"
+  },
+  "rootVerification": {
+    "liveRunHeadAndSevenStatuses": "verified",
+    "frozenAuditFilesRehashed": 12
+  },
+  "limits": [
+    "Platform skips are not passes.",
+    "CI job-log audit did not redownload Godot artifacts or rerun engines. Earlier artifact audit remains separate evidence.",
+    "This head predates A015 role and fixture integration; no later changes are covered.",
+    "This is not complete native workflow, engine/game runtime, desktop or release acceptance."
+  ]
+}

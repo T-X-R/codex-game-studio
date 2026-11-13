@@ -1,0 +1,567 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "Four same-input UX native retries; A047 remains partial. Historical failures remain in ux-designer-native-2026-11-13.json.",
+  "candidate": {
+    "path": "/private/tmp/ux-native-reruns-candidate.json",
+    "sha256": "108db9dab3f95d23467d68c8f34a8c91aa99e5224c71b4f45f3e447bfbe2e8b9"
+  },
+  "counts": {
+    "additionalRuns": 4,
+    "selectedPASS": 2,
+    "retainedContractFAIL": 2,
+    "allRecordedRuns": 10,
+    "allRecordedPASS": 4,
+    "allRecordedFAIL": 6,
+    "latestPerScenarioPASS": 4,
+    "latestPerScenarioFAIL": 2
+  },
+  "correction": "Wait for answers to unresolved core decisions before dependent flow drafting; report evidence and hand-offs before the final short decision block. No fixture-specific option count or table prohibition.",
+  "independentRootVerification": {
+    "candidateSha256": "108db9dab3f95d23467d68c8f34a8c91aa99e5224c71b4f45f3e447bfbe2e8b9",
+    "actualRegularFilesChecked": 2255,
+    "runs": 4,
+    "allOriginalRegularFilesPreserved": true,
+    "rawArchivesTracesAndFinalsMatch": true,
+    "sameRawInputsAndPrompt": true,
+    "actualTarMemberComparisonsMatch": true
+  },
+  "review": "Root read all four complete child finals; independently checked actual files, raw artifacts, frozen/live traces, final plaintext, same input/prompt and actual tar member changes. Public call audit by design_system_migration.",
+  "runs": [
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-kU35Do",
+      "scenario": "ux-compress-flow",
+      "roleSha256": "6b44d55adbb704d55fc3ffa9e6be73ad8e2feb72699cb3a6b18647c80740a0e8",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "6def07dcbcb9faeb93de09acc272de8506740c38d256e2c05dd7729bcfc41177"
+      },
+      "rawRequest": "The lead designer says the current five-step crafting flow is too deep: maximum three primary steps. Read design/ux/crafting-current.md and propose alternatives for me to choose from. Do not choose for me or write files. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+      "beforeFiles": 564,
+      "afterFiles": 564,
+      "allOriginalFilesPreserved": true,
+      "added": [],
+      "semanticReview": {
+        "status": "PASS_selected_fixture",
+        "domain": "PASS",
+        "protocol": "PASS",
+        "notes": [
+          "All5originalpurposes remain in3explicit stages with mappings and meaningful costs,including required substitutions/no default,exactcost,explicitspending and cancelwithoutspend.",
+          "Distinct short3choiceblock follows evidence/artifacts/hand-offs;labels1–5words,onesentencewithtradeoff,Recommended. A final genuine open question clarifies stages versus buttonpresses and is part of the decision ending,not another artifacts report.",
+          "No chosenoption, no inventedplaytest/audit, no writes."
+        ]
+      },
+      "rawHashes": {
+        "before.json": "7d590e19ac429bb05163d970278f17dd3907f75f3e14bc57d762eb5eabf581d3",
+        "fixture.json": "d5673da1f6bc245fe5641e3d2e822a3b81011947350f1d3cbc6bd509aded7b21",
+        "report.json": "24dd47e30099198857cc5d9a3b5507094a0eeead8bd1e96331ab13b8bdb861c2",
+        "final.txt": "11641c77f7ff813c37986311b37ff8f9c6bd9caf0beaa0b8663243cad0824068",
+        "stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+        "events.jsonl": "0fa50c623a6ef3cf8844723dc37787ad516fb2a23b8e6a9570bc83407b1a37d4",
+        "prompt-input.json": "590a4f4e8dfa65fc0c0914cb02ac13b4435faf36a113b9ccd73798355b2bdc1e"
+      },
+      "traces": [
+        {
+          "kind": "child",
+          "id": "01a1d0d8-bfb0-7250-aa82-3c76b16448fe",
+          "role": "game-studio-ux-designer",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-40-28-01a1d0d8-bfb0-7250-aa82-3c76b16448fe.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/kU35Do/rollout-2026-11-13T01-40-28-01a1d0d8-bfb0-7250-aa82-3c76b16448fe.jsonl",
+          "sha256": "7296648ed1a37590851f622686278129cb92d372120440ba444e62546f59bfa3",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        },
+        {
+          "kind": "parent",
+          "id": "01a1d0d8-9851-70c0-90d6-e1b9ef27d1a5",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-40-18-01a1d0d8-9851-70c0-90d6-e1b9ef27d1a5.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/kU35Do/rollout-2026-11-13T01-40-18-01a1d0d8-9851-70c0-90d6-e1b9ef27d1a5.jsonl",
+          "sha256": "9d7c278cfc2b8251058aae1f99e2bfd886c6ef36c695805953644cdb835ea0a6",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        }
+      ],
+      "sameInputAndPackageComparison": {
+        "scenario": "ux-compress-flow",
+        "old": "ucMu8w",
+        "new": "kU35Do",
+        "rawRequest": "The lead designer says the current five-step crafting flow is too deep: maximum three primary steps. Read design/ux/crafting-current.md and propose alternatives for me to choose from. Do not choose for me or write files. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+        "nativePromptByteEqual": true,
+        "nativePromptSha256": "3cedda1a2feaa0da5f2e16c2e8498ef8b3b4a97aff2ead801551c0c35deeeea6",
+        "inputsByteEqual": true,
+        "inputHashes": {
+          "design/game-brief.md": "ed92c4f3a8769e87e91cfb4e1f118a855b513fbe54acf669e3f092897e17b806",
+          "design/ux/accessibility-requirements.md": "00140157678811de02d06f97a9ffd990a2e2ad5f0dfdb851c78e40d44ec4a534",
+          "docs/owner-notes.md": "2f6aa4b00199180cb8512e60572bc323d96da440ddd9b54c0a8104e87e91a313",
+          "src/inventory_model.gd": "df7c6c02146a852846cfaf996d408f69f21f31f4da123e5ef4d7e2b693900e4c",
+          "design/ux/crafting-current.md": "b2e3fe5c04b371a6041ed50a5d3c0dbeaad6006cd991b7b83ab7914573fb0b9a"
+        },
+        "archives": [
+          {
+            "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-ucMu8w/t-x-r-game-studio-0.1.0-alpha.0.tgz",
+            "sha256": "926ad95fe59090766d76fa8ab5ca9c6adee8e76f4892f57fae38c8a967056a89"
+          },
+          {
+            "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-kU35Do/t-x-r-game-studio-0.1.0-alpha.0.tgz",
+            "sha256": "6def07dcbcb9faeb93de09acc272de8506740c38d256e2c05dd7729bcfc41177"
+          }
+        ],
+        "archiveMemberChanges": [
+          {
+            "path": "package/resources/.agents/skills/game-studio-story-readiness/SKILL.md",
+            "old": "396728d3cd57d4d057bf6f93c4bfa0e016e349f34633c4d3d0902ff21e4f657b",
+            "new": "a92a8119f0f9033bb7b0f321d41a25e655d85d79c2e23fd75e678f6b9f530f7b"
+          },
+          {
+            "path": "package/resources/.agents/skills/game-studio-story-readiness/references/facts-and-policy.md",
+            "old": "916fc29cc4b5f12e39aa6aff6341e8db88996cc78240da36c94267df77907b79",
+            "new": "53d92046b185d1d0ce0fe95a0c4cc6241a82609674608ebc551171f0fba02dbd"
+          },
+          {
+            "path": "package/resources/.codex/agents/game-studio-ux-designer.toml",
+            "old": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+            "new": "6b44d55adbb704d55fc3ffa9e6be73ad8e2feb72699cb3a6b18647c80740a0e8"
+          }
+        ]
+      },
+      "childFinalPlaintextSha256": "345a9366da3951bafe24583f97ea74d06a6e56bb3176d838457cf66ff65392fe"
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-zisbUC",
+      "scenario": "ux-discovery",
+      "roleSha256": "6b44d55adbb704d55fc3ffa9e6be73ad8e2feb72699cb3a6b18647c80740a0e8",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "6def07dcbcb9faeb93de09acc272de8506740c38d256e2c05dd7729bcfc41177"
+      },
+      "rawRequest": "Design the inventory management flow for my survival game. We have not settled the intended experience or control scheme yet. This is a discussion, not permission to write files. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+      "beforeFiles": 563,
+      "afterFiles": 563,
+      "allOriginalFilesPreserved": true,
+      "added": [],
+      "semanticReview": {
+        "status": "FAIL_protocol",
+        "domain": "PASS_selected_discovery_boundary",
+        "protocol": "FAIL",
+        "notes": [
+          "Original dependent fullflow is gone; actual output explicitly waits for answers before detailed opening/transfer/interruption/failure/retry flow.",
+          "Experience/controldirections remain unapprovedchoices and independentinteractionprinciples; no implementedmechanics or inventedanswers.",
+          "Thefourrealquestions and earlieroptions are followed by hand-offs andArtifacts paragraph,not the required closing decisionblock. Core correction is evidenced; presentation is not fullycorrected.",
+          "A complete same-session owneranswer→options→choice→authorizedspec chain remains unassessed."
+        ]
+      },
+      "rawHashes": {
+        "before.json": "c0b89948c7b657ca46f76d66b969e57c7d3cd72c431c4d85aa759e5d5581189d",
+        "fixture.json": "d627b452acded0ebe83cad7349f648e399aa1137525b5b6ce701dfdbf13b32e8",
+        "report.json": "e68f660dcbe17c44fc04f8dcd9098971fd92426a97d7489eeb7e46b69051378e",
+        "final.txt": "4b72159d52a31651127828bdd7810a8c4cb17f49916dfe900c114acc0359e065",
+        "stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+        "events.jsonl": "76ee025de63888698825c3b42538b124ba073198180166b87730be67252356c2",
+        "prompt-input.json": "9d48f8a3ed9fb70e3bd15f23434e2953fc3f3a07ea1561b95afcbdfc287ae96a"
+      },
+      "traces": [
+        {
+          "kind": "child",
+          "id": "01a1d0d8-c00d-7ca3-b3aa-045687f520f3",
+          "role": "game-studio-ux-designer",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-40-28-01a1d0d8-c00d-7ca3-b3aa-045687f520f3.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/zisbUC/rollout-2026-11-13T01-40-28-01a1d0d8-c00d-7ca3-b3aa-045687f520f3.jsonl",
+          "sha256": "7abbce6cec4ad305a2331d67a1f23bc062ff33c42a2bbd5487f9c9e24a50e274",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        },
+        {
+          "kind": "parent",
+          "id": "01a1d0d8-9a5b-7852-b68c-adfd55c1403f",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-40-18-01a1d0d8-9a5b-7852-b68c-adfd55c1403f.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/zisbUC/rollout-2026-11-13T01-40-18-01a1d0d8-9a5b-7852-b68c-adfd55c1403f.jsonl",
+          "sha256": "063d76cfe8c5bed4118a224716e3ccea4ec7fed2237baaeafb13e2305cffa07f",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        }
+      ],
+      "sameInputAndPackageComparison": {
+        "scenario": "ux-discovery",
+        "old": "AnEAks",
+        "new": "zisbUC",
+        "rawRequest": "Design the inventory management flow for my survival game. We have not settled the intended experience or control scheme yet. This is a discussion, not permission to write files. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+        "nativePromptByteEqual": true,
+        "nativePromptSha256": "86b0386a8995f52fa1473b43dcac0c71ecf1f6da7e64724179e08e58ae0579c2",
+        "inputsByteEqual": true,
+        "inputHashes": {
+          "design/game-brief.md": "38ced8e721ccde530f43282e3eea08d37880101763dab2fc82f60992751728b2",
+          "design/ux/accessibility-requirements.md": "293885c5f9cc79804f9349fba9b14a05ea07c30800fac2256eb51abd041efddf",
+          "docs/owner-notes.md": "2f6aa4b00199180cb8512e60572bc323d96da440ddd9b54c0a8104e87e91a313",
+          "src/inventory_model.gd": "df7c6c02146a852846cfaf996d408f69f21f31f4da123e5ef4d7e2b693900e4c"
+        },
+        "archives": [
+          {
+            "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-AnEAks/t-x-r-game-studio-0.1.0-alpha.0.tgz",
+            "sha256": "2a221299f2011aacd9bb76123d93cad1ce9e578d2f871629e2d13fe79f0116c1"
+          },
+          {
+            "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-zisbUC/t-x-r-game-studio-0.1.0-alpha.0.tgz",
+            "sha256": "6def07dcbcb9faeb93de09acc272de8506740c38d256e2c05dd7729bcfc41177"
+          }
+        ],
+        "archiveMemberChanges": [
+          {
+            "path": "package/resources/.codex/agents/game-studio-ux-designer.toml",
+            "old": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+            "new": "6b44d55adbb704d55fc3ffa9e6be73ad8e2feb72699cb3a6b18647c80740a0e8"
+          }
+        ]
+      },
+      "childFinalPlaintextSha256": "6a998e44fbfa8fa44d6932928db06687905f105530c54348eef4cbe223204948"
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-dLIm9I",
+      "scenario": "ux-timing",
+      "roleSha256": "6b44d55adbb704d55fc3ffa9e6be73ad8e2feb72699cb3a6b18647c80740a0e8",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "6def07dcbcb9faeb93de09acc272de8506740c38d256e2c05dd7729bcfc41177"
+      },
+      "rawRequest": "Our onboarding prompt automatically advances after three seconds to keep pace, but the project requires user-controlled timing. Review the conflict and present options with their trade-offs. Tell me what needs the accessibility owner. Do not write or implement a choice. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+      "beforeFiles": 564,
+      "afterFiles": 564,
+      "allOriginalFilesPreserved": true,
+      "added": [],
+      "semanticReview": {
+        "status": "FAIL_protocol",
+        "domain": "PASS_selected_core_constraints_and_owner_handling",
+        "protocol": "FAIL",
+        "sourceAlternativeFamilyCoverage": "limited",
+        "notes": [
+          "ExplicitContinue andSummary/Details alternatives preserve playercontrol,teachingpurpose,pacingtradeoffs and actualownerchoice; twooptions are permitted.",
+          "Doesnotrecommend3s/longertimer/skipalone/hiddenoptionalsetting as compliance. Originalstrongprojectreadingrequirement remains authoritative.",
+          "SC2.2.1 and auditconditions belongtoaccessibilityowner; nofakespecialistconsult or workflow.",
+          "Pause/disable-auto family analysis remainslimited,notanadditionalfail solelybecause2options or rejectionofincompatibletimer.",
+          "Options are in earlieranalysis table;finalparagraph isexecution/artifactreport,not a closing shortchoiceblock."
+        ]
+      },
+      "rawHashes": {
+        "before.json": "2ed23bff94fa621dc642d1d3649e2ab421a3def3be9a7934cf95446d919c78bd",
+        "fixture.json": "9bfaf20ed0a16874c84d5a8fd0083cd4b250257335c06c75f55899675af302dd",
+        "report.json": "124a6b0513634858fbfa0efb4da374c993d4a78ca1213c2fe4f850047b99364c",
+        "final.txt": "be165f10236f171897b99aeef82e3b1f2b88221607f799e7b5f8c1da4d02a446",
+        "stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+        "events.jsonl": "f3cbced8e2f3f4bcbded1126faf6c42ea9a249cfb79795075a5b40a1e522d015",
+        "prompt-input.json": "37a14322cef6b9293e207e218f4ea11d06cbb94fe4c46ded698bc7c08ef356cb"
+      },
+      "traces": [
+        {
+          "kind": "parent",
+          "id": "01a1d0da-5911-7432-be20-1be6ee55fd2e",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-42-13-01a1d0da-5911-7432-be20-1be6ee55fd2e.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/dLIm9I/rollout-2026-11-13T01-42-13-01a1d0da-5911-7432-be20-1be6ee55fd2e.jsonl",
+          "sha256": "67b2b514acc9035a8f0d4b3a0c824d6505a225af637113dc475d26d1bf5e6eb4",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        {
+          "kind": "child",
+          "id": "01a1d0da-7f0d-72c1-9ad9-5059892082e4",
+          "role": "game-studio-ux-designer",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-42-22-01a1d0da-7f0d-72c1-9ad9-5059892082e4.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/dLIm9I/rollout-2026-11-13T01-42-22-01a1d0da-7f0d-72c1-9ad9-5059892082e4.jsonl",
+          "sha256": "fe656bc07f5ea6bf35d2d89e7bd109ade38011bb288d0456ea68af6345c69da5",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        }
+      ],
+      "sameInputAndPackageComparison": {
+        "scenario": "ux-timing",
+        "old": "Vo5nMp",
+        "new": "dLIm9I",
+        "rawRequest": "Our onboarding prompt automatically advances after three seconds to keep pace, but the project requires user-controlled timing. Review the conflict and present options with their trade-offs. Tell me what needs the accessibility owner. Do not write or implement a choice. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+        "nativePromptByteEqual": true,
+        "nativePromptSha256": "46d7bdb68d2595eb9c749f5957ab190781198067f1282c4b09a6de3313a70def",
+        "inputsByteEqual": true,
+        "inputHashes": {
+          "design/game-brief.md": "ed92c4f3a8769e87e91cfb4e1f118a855b513fbe54acf669e3f092897e17b806",
+          "design/ux/accessibility-requirements.md": "00140157678811de02d06f97a9ffd990a2e2ad5f0dfdb851c78e40d44ec4a534",
+          "docs/owner-notes.md": "2f6aa4b00199180cb8512e60572bc323d96da440ddd9b54c0a8104e87e91a313",
+          "src/inventory_model.gd": "df7c6c02146a852846cfaf996d408f69f21f31f4da123e5ef4d7e2b693900e4c",
+          "design/ux/onboarding.md": "64ca429b7dff628b92480a39a166bcba7df6dcfd794af97c5e2abc68f189f040"
+        },
+        "archives": [
+          {
+            "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-Vo5nMp/t-x-r-game-studio-0.1.0-alpha.0.tgz",
+            "sha256": "2a221299f2011aacd9bb76123d93cad1ce9e578d2f871629e2d13fe79f0116c1"
+          },
+          {
+            "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-dLIm9I/t-x-r-game-studio-0.1.0-alpha.0.tgz",
+            "sha256": "6def07dcbcb9faeb93de09acc272de8506740c38d256e2c05dd7729bcfc41177"
+          }
+        ],
+        "archiveMemberChanges": [
+          {
+            "path": "package/resources/.codex/agents/game-studio-ux-designer.toml",
+            "old": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+            "new": "6b44d55adbb704d55fc3ffa9e6be73ad8e2feb72699cb3a6b18647c80740a0e8"
+          }
+        ]
+      },
+      "childFinalPlaintextSha256": "13e31025d0f9cfb31ae0d595b58252d6de0b4ee213d32291465fe843ffed3a90"
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-l3pfPW",
+      "scenario": "ux-research",
+      "roleSha256": "6b44d55adbb704d55fc3ffa9e6be73ad8e2feb72699cb3a6b18647c80740a0e8",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "6def07dcbcb9faeb93de09acc272de8506740c38d256e2c05dd7729bcfc41177"
+      },
+      "rawRequest": "Redesign the navigation information architecture for crafting using the supplied playtest research. Give me alternatives and a recommendation before I choose; no file writes. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+      "beforeFiles": 564,
+      "afterFiles": 564,
+      "allOriginalFilesPreserved": true,
+      "added": [],
+      "semanticReview": {
+        "status": "PASS_selected_fixture",
+        "domain": "PASS",
+        "protocol": "PASS",
+        "notes": [
+          "Explicitrealresearch:playerslookforCraftinginsideInventory,comparematerials andlosecontextatmainmenu; no inventedstudies/statistics.",
+          "Threeoptions preserve mentalmodel withproscons/theory;tabrecommendation labeleddesignjudgment,notresearchproof ofpreferredlayout.",
+          "Top-levelshortcutrequiredentrycase retainedasunknownratherthansilentlyremoved.",
+          "Actualfinalthree-itemshortchoiceblock has1–5wordlabels,onesentencedescription/tradeoffandRecommended; follows evidence/artifact/handoffs.",
+          "No filewrites or falselycompletedtests/specialistreview."
+        ]
+      },
+      "rawHashes": {
+        "before.json": "eaf84b80ea67a02ccbd15f5c45cafd6781f7e0cb32614e1beda7f8a4438ec80e",
+        "fixture.json": "04cd40c46a4f0403760bbe3d2ffb1e80278977428e67532610fb8563461a4462",
+        "report.json": "46b32121042b150b1cee58eb809c19f2424790e3ba6832ee50bcb1e87e3ab8f1",
+        "final.txt": "63318f06607f6fb37e70fe6391b3dcc4de2f5587168d62053fbdf61ab114bb75",
+        "stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+        "events.jsonl": "1b9d93bbb147ae869c39110a5fbb8179a79404dd017d803ba729759617837f9e",
+        "prompt-input.json": "34d22e84cada42729758b770397b729a415aeb892a511bbe2cad5cf414be1a11"
+      },
+      "traces": [
+        {
+          "kind": "child",
+          "id": "01a1d0db-134e-7400-8282-096b800d0521",
+          "role": "game-studio-ux-designer",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-43-00-01a1d0db-134e-7400-8282-096b800d0521.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/l3pfPW/rollout-2026-11-13T01-43-00-01a1d0db-134e-7400-8282-096b800d0521.jsonl",
+          "sha256": "1d6cfa09cff9ea42c8718229ae28ef74582c5f53594e9b4812116eec9a800982",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec",
+            "exec",
+            "send_message"
+          ]
+        },
+        {
+          "kind": "parent",
+          "id": "01a1d0da-ec82-7fa2-90c9-99e00e05a93d",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-42-50-01a1d0da-ec82-7fa2-90c9-99e00e05a93d.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/l3pfPW/rollout-2026-11-13T01-42-50-01a1d0da-ec82-7fa2-90c9-99e00e05a93d.jsonl",
+          "sha256": "1e77765dc6c274979a0e7d346e7ca1c34b955149d7eecea3079d496fe0957cd6",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        }
+      ],
+      "sameInputAndPackageComparison": {
+        "scenario": "ux-research",
+        "old": "PPzTOv",
+        "new": "l3pfPW",
+        "rawRequest": "Redesign the navigation information architecture for crafting using the supplied playtest research. Give me alternatives and a recommendation before I choose; no file writes. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+        "nativePromptByteEqual": true,
+        "nativePromptSha256": "87c1671258a7a5c7e779bdea559e3446572a58ac06a27e4bcd591043130d9f00",
+        "inputsByteEqual": true,
+        "inputHashes": {
+          "design/game-brief.md": "ed92c4f3a8769e87e91cfb4e1f118a855b513fbe54acf669e3f092897e17b806",
+          "design/ux/accessibility-requirements.md": "00140157678811de02d06f97a9ffd990a2e2ad5f0dfdb851c78e40d44ec4a534",
+          "docs/owner-notes.md": "2f6aa4b00199180cb8512e60572bc323d96da440ddd9b54c0a8104e87e91a313",
+          "src/inventory_model.gd": "df7c6c02146a852846cfaf996d408f69f21f31f4da123e5ef4d7e2b693900e4c",
+          "design/research/crafting-playtest.md": "96a468ff812e483d1762c1226ec7675f71cf93fdc1486c0cbc449aa13695663f"
+        },
+        "archives": [
+          {
+            "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-PPzTOv/t-x-r-game-studio-0.1.0-alpha.0.tgz",
+            "sha256": "2a221299f2011aacd9bb76123d93cad1ce9e578d2f871629e2d13fe79f0116c1"
+          },
+          {
+            "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-l3pfPW/t-x-r-game-studio-0.1.0-alpha.0.tgz",
+            "sha256": "6def07dcbcb9faeb93de09acc272de8506740c38d256e2c05dd7729bcfc41177"
+          }
+        ],
+        "archiveMemberChanges": [
+          {
+            "path": "package/resources/.codex/agents/game-studio-ux-designer.toml",
+            "old": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+            "new": "6b44d55adbb704d55fc3ffa9e6be73ad8e2feb72699cb3a6b18647c80740a0e8"
+          }
+        ]
+      },
+      "childFinalPlaintextSha256": "a18624bafd7eb1d206f95403a4030c3892fa59496a69190d980b851fdc3dd7f5"
+    }
+  ],
+  "limitations": [
+    "Discovery no longer drafts dependent flow before answers, but discovery and timing still place reporting after the choices. These remain protocol failures.",
+    "Two valid timing alternatives are not inherently a failure; coverage of the source example family remains limited.",
+    "The compress-flow retry archive also includes two unrelated readiness-resource corrections. Other three retries change only the UX role payload.",
+    "No symlink baseline was captured by this host; unchanged regular files do not prove symlink preservation.",
+    "Actual user-choice continuation, specialist coordination, desktop and remaining source cases remain open."
+  ]
+}

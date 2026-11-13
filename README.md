@@ -34,6 +34,10 @@ Skill setup installs one onboarding Skill in `$CODEX_HOME/skills/game-studio`, o
 `~/.codex/skills/game-studio` when `CODEX_HOME` is unset. Use `--home <codex-home>`
 to choose another Codex home. Start a new Codex session if it is not discovered.
 Project workflows are installed under the game's `.agents/skills/` directory.
+Start Codex from the game root. In CLI 0.162.0, a session started inside a nested
+directory of a non-Git game did not discover the root's Skills; starting from
+the game root did. CLI command project discovery and host Skill discovery are
+separate. See [the observed compatibility limits](docs/codex-compatibility.md).
 
 Open `my-game` in Codex CLI or the desktop app, then describe the game:
 
@@ -97,6 +101,20 @@ Finite commands return one JSON result; foreground preview returns its readiness
 result and stays running. Exit codes distinguish bad input, missing capability,
 file conflicts, failed checks, timeout and interruption.
 
+The current source also provides `config set KEY VALUE --dry-run`, validated
+project/local configuration writes, and `config get --system NAME`. These are
+unreleased additions, not commands in the existing `v0.1.0-alpha.0` archive.
+See [configuration syntax and safety](studio/docs/configuration.md).
+
+Additional source-only commands are `engine setup`, `engine inspect`,
+`engine scaffold`, `engine verify`, `test` (including
+`--kind smoke` and `--kind build`), and `checkpoint show/save`. See
+[engine configuration](docs/engine-configuration.md),
+[test execution and engine inspection](studio/docs/testing.md) and
+[checkpoint recovery](studio/docs/recovery.md). Engine directory inspection and
+a successful shell command do not establish editor licensing, test coverage or
+human play acceptance. Automatic checkpoint hooks remain unverified.
+
 ## Recovery and removal
 
 ```bash
@@ -132,8 +150,13 @@ installed browser. Neither test downloads a browser automatically.
 Canonical Codex content lives in `.agents/skills/` and `studio/`. Build output in
 `toolkit/dist/` and `toolkit/resources/` is generated. The retained `.claude` tree
 and older upstream documentation are migration inputs, excluded from the CLI
-archive. Current project Skills cover start, prototype and next-step; they are not
-a claim that all 75 upstream workflows or 49 roles have been migrated.
+archive. The published alpha includes start, prototype and next-step. Development
+builds now install thirteen project Skills, adding brainstorm, project-settings,
+smoke-check, gate-check, map-systems, design-system, design-review,
+architecture-decision, create-architecture and architecture-review. These
+workflows remain partially validated; see the
+scenario evidence and open requirements in [implementation status](docs/implementation-status.md).
+This does not claim that all 75 upstream workflows or 49 roles have been migrated.
 
 See [host compatibility](docs/codex-compatibility.md),
 [implementation status](docs/implementation-status.md),

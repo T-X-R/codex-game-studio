@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-13",
+  "scope": "Windows portable-browser discovery fixture isolation only",
+  "status": "LOCAL_PASS_NATIVE_CI_PENDING",
+  "originalCi": {
+    "url": "https://github.com/T-X-R/codex-game-studio/actions/runs/43359323647",
+    "head": "984f071118c9c527746dde639f987dc59d3629b2",
+    "job": 131668826015,
+    "pass": 336,
+    "fail": 1,
+    "skipped": 56,
+    "log": {
+      "path": "/private/tmp/game-studio-984f071-windows-ci.log",
+      "sha256": "1a14aac97a8cf11544e3f948834d11ae4da743f3c3f81cabbb36ed4910894ea3"
+    }
+  },
+  "cause": "The plain env object retained ProgramFiles while deleting only PROGRAMFILES. Windows resolves variable aliases case-insensitively, so normal discovery correctly preferred the runner installed Chrome over the isolated PATH fixture. PATH/Path could also coexist in the copied object.",
+  "correction": "Exclude all case variants of browser discovery environment keys, then set one PATH and one empty browser cache. Keep the original msedge.exe assertion; no product code, browser priority, skip or weakened expectation.",
+  "primarySource": "https://r2.nodejs.org/docs/latest-v24.x/api/child_process.html",
+  "independentReview": "Separate reviewer read original job failure and the corrected fixture; confirmed environment isolation repair, with no assertion relaxation. Review does not prove native Windows execution.",
+  "canonicalFile": {
+    "path": "toolkit/test/page-shot.test.mjs",
+    "sha256": "38686bd3935cdbb4280eb8226087ca7c63b6636febdf208ce42ecdd13e64d2f4"
+  },
+  "focused": {
+    "node24": {
+      "pass": 14,
+      "fail": 0,
+      "skip": 0,
+      "log": {
+        "path": "/private/tmp/game-studio-page-shot-windows-fixture24.log",
+        "sha256": "70a98ed1e80f30e8726b5d9a68fd40f9aed6904c3a6609c433a0458be05178b7"
+      }
+    },
+    "node26": {
+      "pass": 14,
+      "fail": 0,
+      "skip": 0,
+      "log": {
+        "path": "/private/tmp/game-studio-page-shot-windows-fixture26.log",
+        "sha256": "7ea4e4f0a3660562051295629fd971eaf6859273526629b515fd9bba92e39e3b"
+      }
+    }
+  },
+  "limits": [
+    "Original CI Windows source parity checks skipped on that platform are not counted as passes.",
+    "New exact-head Windows and cross-platform CI remain pending; no rerun of the old head is represented as a fix.",
+    "Whole migration and S051 remain open."
+  ]
+}

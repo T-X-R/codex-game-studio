@@ -1,0 +1,123 @@
+{
+  "migrationRow": "A005",
+  "scenario": "audio-director-settings-flow",
+  "runId": "3Nj3SU",
+  "date": "2026-11-13",
+  "status": "PASS",
+  "scope": "Single corrected source Case 2 read-only CLI consultation, not whole-role/desktop acceptance.",
+  "nativeExitCode": 0,
+  "wrapperExitCode": 3,
+  "review": [
+    "Actual child returns menu intuitiveness/organization to UX and explicitly does not assess/redesign navigation. It does not repeat the original Advanced/Resume/navigation-architecture findings.",
+    "Own findings remain within the four supplied Master/Music/SFX/Dialogue bus controls and the documented intelligibility/warning-audibility requirements. Missing controls in a proposal are unverified coverage, not falsely asserted missing implementation.",
+    "No named pillars, audio or usability evidence is invented; no listening, measurements, engine validation, file writes or actual UX consultation claimed. A single handoff is not a new creative options decision.",
+    "Actual full installed role, parent scheduling-only, runtime setting read, model/effort/approval/sandbox context equality and all 573 regular original file hashes pass. Parent custom developer marker is not present in typed child, so full parent developer inheritance is not claimed."
+  ],
+  "originalFailure": {
+    "runId": "qt41UV",
+    "status": "FAIL",
+    "candidatePath": "/private/tmp/audio-director-native-audit-lgov95l8/candidate.json",
+    "candidateSha256": "825bfb30476a2df6cd2fde0cea8d0161ca4e779505eb58a8b461d8a6f1aff986",
+    "originalManifestAndTraceAndWorkspaceHashesRechecked": true,
+    "reason": "Original child reviewed navigation ambiguity and exit paths despite UX ownership. Original raw outcome is not rewritten by this passing retry."
+  },
+  "sameInputAndPackageComparison": {
+    "originalRun": "/private/tmp/audio-director-native-audit-lgov95l8/qt41UV",
+    "newRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-3Nj3SU",
+    "sameNativePrompt": true,
+    "nativePromptSha256": "4b9d4e86686c3febe8070f7b8171dbb1e9cb611c5839fa9c15a9060fc72d4c2f",
+    "rawRequestSame": true,
+    "rawInputs": {
+      "design/game-brief.md": {
+        "sha256": "84d35dfa24ad1e0f569a868b1b64bf7ae7efbb233700746da389ebd7ff76e3e7",
+        "bytes": 255,
+        "same": true
+      },
+      "docs/owner-notes.md": {
+        "sha256": "2f6aa4b00199180cb8512e60572bc323d96da440ddd9b54c0a8104e87e91a313",
+        "bytes": 31,
+        "same": true
+      },
+      "src/audio.ts": {
+        "sha256": "78381b557e021c3bc6e643d836bff44903277956bfb0971a5d2f8e7db23ab3f2",
+        "bytes": 109,
+        "same": true
+      },
+      "assets/audio/asset-list.md": {
+        "sha256": "cf3194713e5d76e2d8ac1ca9fa87d21749c3ce88b13f706c0fb7364eb3d5f325",
+        "bytes": 82,
+        "same": true
+      },
+      "design/ux/audio-settings-proposal.md": {
+        "sha256": "2b8240445e7850a4905777d6d14579ead8d228d7bb8e98064d53367c68ae327c",
+        "bytes": 281,
+        "same": true
+      },
+      "design/audio/mix-notes.md": {
+        "sha256": "50030ea4e1183ffa2b56bb95e634480aac546236ac2d7254cbd161a022f00caa",
+        "bytes": 358,
+        "same": true
+      }
+    },
+    "rawFixtureSha256": "11d9cf7a16a69deddb18d7b35148c91f128189729d55cc83b4f5262ea83afaf8",
+    "packageChangedMembers": [
+      {
+        "path": "package/dist/engine-setup.js",
+        "oldSha256": "131990ddda635c45681c573ff5f1804dfc2a30df4575a4a99c17d603b0ee3f60",
+        "newSha256": "9802a0a24baa45c77ffdc31d26aea798a8b498880db7301ba54f3075653b8176"
+      },
+      {
+        "path": "package/resources/.codex/agents/game-studio-audio-director.toml",
+        "oldSha256": "f48faead7727e5d840729af73291eae48eea12516bed2cdf62bbab4d6fbf4d5d",
+        "newSha256": "a2ffb1c6fb8ac16f1696b6338b5f1d91465a8b10c56ae0b0c99f93d50afe22ae"
+      },
+      {
+        "path": "package/resources/.codex/agents/game-studio-ui-programmer.toml",
+        "oldSha256": "4b0d20be98016eaf0cb5888f5b3af9c77c34044e3357401ccc07086b71ab0290",
+        "newSha256": "1d86df9295f099f49b18f3094f196c1841ff251ba4f766cc424d3f652669e8f3"
+      }
+    ],
+    "limitation": "Only natural native prompt and owner raw input bytes are identical. Isolated workspace/profile/config markers differ. Package also includes independently changed UI role and engine setup implementation; this is not a whole-package Audio-only change."
+  },
+  "archive": {
+    "t-x-r-game-studio-0.1.0-alpha.0.tgz": {
+      "original": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-3Nj3SU/t-x-r-game-studio-0.1.0-alpha.0.tgz",
+      "frozen": "/private/tmp/audio-director-settings-retry-q_d44pbf/3Nj3SU/t-x-r-game-studio-0.1.0-alpha.0.tgz",
+      "sha256": "d32e8844cd743f9dd64ca666b5fa46e05efa3637a0e9b45453f0e4e90a1888de"
+    }
+  },
+  "developerContext": {
+    "parent": {
+      "path": "/private/tmp/audio-director-settings-retry-q_d44pbf/3Nj3SU/parent-developer.txt",
+      "sha256": "969effa0fb443c078ede3f66485a4210c7263dbc593a317ffb2f9d489a71edf6",
+      "projectDeveloperMarkerPresent": true
+    },
+    "child": {
+      "path": "/private/tmp/audio-director-settings-retry-q_d44pbf/3Nj3SU/child-developer.txt",
+      "sha256": "9246cc3c6a20e7a6840cd0f6b432066e6cad526e7df2793da9fe9d6235dab808",
+      "projectDeveloperMarkerPresent": false
+    }
+  },
+  "limitations": [
+    "Only this one failed raw scenario reran; no full-matrix regression or generic role reliability claim.",
+    "New package changed three members: Audio role, UI role and engine-setup.js; only native request and owner raw inputs are identical, not generated profile/workspace markers or all package content.",
+    "All tasks here are read-only; incremental document authoring, shared checkpoint behavior, actual independent technical arbitration, real audio/listening/measurement and desktop acceptance remain pending.",
+    "Encrypted internal dispatch fields remain opaque. Baseline regular-file inventory excludes .git and does not include original symlink inventory; final package-bin links match expected installed links."
+  ],
+  "candidate": {
+    "directory": "/private/tmp/audio-director-settings-retry-q_d44pbf",
+    "sha256": "c37842a6622d0615f82b53b017d5822c326b927f60a0a7b2b3791ce43b8c0bfd",
+    "manifestSha256": "887d12da7036b0dd7106183550bfce48ac927571d5e524be7804ce61ae7b7cc7"
+  },
+  "rootVerification": {
+    "frozenArtifacts": 28,
+    "actualOriginalFiles": 573,
+    "rawInputsRequestLiveTracesFullRoleAndTarDifferences": "PASS",
+    "semantics": "Root read complete actual child final: only audio-bus requirements and unassessed audibility, with UX ownership returned to caller. Agent independently reviewed full public tool trace."
+  },
+  "aggregate": {
+    "originalFive": "Four selected passes and one preserved ownership failure",
+    "latestSelectedFive": "Scoped PASS across revisions; original occlusion remains initial consultation only",
+    "fullRole": "partial"
+  }
+}

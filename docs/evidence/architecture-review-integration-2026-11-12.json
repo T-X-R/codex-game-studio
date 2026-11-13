@@ -1,0 +1,508 @@
+{
+  "date": "2026-11-12",
+  "status": "scoped-pass",
+  "scope": "Independent root reconciliation of 39 recorded architecture-review runs: immutable raw hashes, actual regular workspace bytes, exact write effects, parent trace identity and absence of delegation. Per-scenario domain judgments remain in the separately reviewed evidence.",
+  "sourceEvidence": "docs/evidence/architecture-review-skill-2026-11-12.json",
+  "sourceEvidenceSha256": "eab1a17dda9d67c361974407fa9728cb8f483bb5de8362ca9e27b7c3825a7c26",
+  "runs": [
+    {
+      "scenario": "full-accepted",
+      "threadId": "01a1cff8-0e4f-7113-bded-29af51f502f4",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-lLBJ4G",
+      "actualFileBytesVerified": 537,
+      "preservedFiles": 537,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "b4ea0c30f25fb8b00cf30ab7b8bde4262274543619ec1bd6a1aac04ca3462a4e",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "stable-registration",
+      "threadId": "01a1cff8-167a-7dc3-a6d1-8b7d795fce5a",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-BJFzLW",
+      "actualFileBytesVerified": 539,
+      "preservedFiles": 536,
+      "changed": [
+        "docs/architecture/tr-registry.yaml"
+      ],
+      "added": [
+        "docs/architecture/architecture-review-2026-11-12.md",
+        "docs/architecture/requirements-traceability.md"
+      ],
+      "parentTraceSha256": "80f2804455d0bdd585a2c9707e9f160357f12526d3dc3ae222518af12964268c",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "rtm-linkage",
+      "threadId": "01a1cffa-aa61-7f40-987d-e363e7776559",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-IYz4HY",
+      "actualFileBytesVerified": 541,
+      "preservedFiles": 540,
+      "changed": [],
+      "added": [
+        "docs/architecture/requirements-traceability.md"
+      ],
+      "parentTraceSha256": "f4f666c33dd10c31b9be8058d0cf13108002b2f288b9a72859c7bade9a257455",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "freshness-reuse",
+      "threadId": "01a1cffd-9a7e-7003-9294-7d141be985a5",
+      "recordedStatus": "FAIL",
+      "runId": "game-studio-architecture-review-N8IDpT",
+      "actualFileBytesVerified": 538,
+      "preservedFiles": 538,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "6b834b353ed8cc352d29fe0d9c092731d8a686c82df3f6a003bcd12b94ed1638",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "single-existing-index",
+      "threadId": "01a1cffd-93f6-7682-92bd-0cd070bc5a17",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-j7y22P",
+      "actualFileBytesVerified": 539,
+      "preservedFiles": 536,
+      "changed": [
+        "docs/architecture/requirements-traceability.md",
+        "docs/architecture/tr-registry.yaml"
+      ],
+      "added": [
+        "docs/architecture/architecture-review-2026-11-12.md"
+      ],
+      "parentTraceSha256": "02ba968324b28b0a9ef82c7ccf276712d9e8835bad09b3adf70d71ce067d0c3f",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "foundation-conflict",
+      "threadId": "01a1d001-2357-7f91-bd92-d37b0f5d9f94",
+      "recordedStatus": "FAIL",
+      "runId": "game-studio-architecture-review-uwawUJ",
+      "actualFileBytesVerified": 537,
+      "preservedFiles": 537,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "828eba51c97113e18b0336e513ddc5bb3af1bb4084943b10737c7ca7aa8c5018",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "freshness-reuse",
+      "threadId": "01a1d008-ffcb-75b3-aa8d-3fa9c898453c",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-GxBdq8",
+      "actualFileBytesVerified": 538,
+      "preservedFiles": 538,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "fdf6447593b4b0e2692cca2685697f14fcb430ca3153bd431cc12548c739d7d0",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "foundation-conflict",
+      "threadId": "01a1d009-1a5c-7d40-b127-14f9b9a1d2da",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-MuIFiG",
+      "actualFileBytesVerified": 537,
+      "preservedFiles": 537,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "8199a9c3eb7b6e67d13d9bd9430b42547d84ed99d62dd1330510f9f1c83fd5a4",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "coverage",
+      "threadId": "01a1d00d-91a5-76c1-8b4b-d0663f12d21b",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-cXB6wC",
+      "actualFileBytesVerified": 537,
+      "preservedFiles": 537,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "23fb372fd35eb61ed34f269474a23f9e2c62fb3d9607d8325aac36d2a493c1f6",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "consistency",
+      "threadId": "01a1d00d-a038-7402-ae91-f27e87c511d1",
+      "recordedStatus": "FAIL",
+      "runId": "game-studio-architecture-review-c5srr9",
+      "actualFileBytesVerified": 538,
+      "preservedFiles": 538,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "e4ef2fb53250544e65ae851d8cc20b6093415da3324987d3831ab1460e43b696",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "minimal-policy",
+      "threadId": "01a1d010-18c6-7521-b6cd-9cf51de68ab5",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-TYdml5",
+      "actualFileBytesVerified": 537,
+      "preservedFiles": 537,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "f61ed49bfa39c059259c7447e9798e02672fdf7ecbc84948b12571d7e52ad898",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "engine",
+      "threadId": "01a1d010-05b5-7243-9da4-5e2be820bb3b",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-YdCtWD",
+      "actualFileBytesVerified": 537,
+      "preservedFiles": 537,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "58b22dccb8c7c905b9de0db9662e23881a21744b3c8e59f49556f7238874193b",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "standard-critical",
+      "threadId": "01a1d011-dd8f-76f1-85a3-8195ab2a791d",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-WXuQUm",
+      "actualFileBytesVerified": 537,
+      "preservedFiles": 537,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "0dc7ad2180a5bac97d2e3b9e5aa175932b3b62e5898aa0b6a31a6abfb37e5ef3",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "engine-revision-approved",
+      "threadId": "01a1d012-68a4-7e20-a835-c0ace8100593",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-I1onMt",
+      "actualFileBytesVerified": 538,
+      "preservedFiles": 537,
+      "changed": [
+        "design/gdd/systems-index.md"
+      ],
+      "added": [],
+      "parentTraceSha256": "d3485258b6163f909b88c38727ef17809fae7ca9f5270c608faad7b7df388b40",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "proposed-coverage",
+      "threadId": "01a1d015-31ea-7a62-8aa0-e304d363ecf1",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-Et36zO",
+      "actualFileBytesVerified": 538,
+      "preservedFiles": 538,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "f31b684f41b2e0d1eba6c4b09e7f6363b68f04aa62ec71f9ab47d51bc3e7ae80",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "engine-revision-readonly",
+      "threadId": "01a1d015-1130-7402-9dc1-23c87d21d9b2",
+      "recordedStatus": "FAIL",
+      "runId": "game-studio-architecture-review-cosmjT",
+      "actualFileBytesVerified": 538,
+      "preservedFiles": 538,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "07b757d4567c7907f8532019ca1ec80b8aab02dbee4bdf22afe5ad42ba237b02",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "missing-master",
+      "threadId": "01a1d01b-b76a-7393-a56d-58b1f52bbf98",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-VoosGf",
+      "actualFileBytesVerified": 536,
+      "preservedFiles": 536,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "9b06d770d588b005d3e1f115cfb9a6e57a80cee86a12becd61c6d63f67e169d9",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "malformed-adrs",
+      "threadId": "01a1d01b-b46c-7680-b8a1-fc12d76d95b8",
+      "recordedStatus": "FAIL",
+      "runId": "game-studio-architecture-review-cHLtm4",
+      "actualFileBytesVerified": 537,
+      "preservedFiles": 537,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "d1818173626010a68f44a4461bbe0c7c3e16d78ead8e16f1fca9d1bdeb6326c1",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "negative",
+      "threadId": "01a1d01f-353e-7c80-b058-a1e7db618747",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-i5Ktf2",
+      "actualFileBytesVerified": 518,
+      "preservedFiles": 518,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "a680f1ad678e67972155a38f551ea59ec0ec016036f4550ae121431bfe23d19c",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "no-engine",
+      "threadId": "01a1d01f-2eb6-71a0-8db0-fd5fe1f589a5",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-bkimpX",
+      "actualFileBytesVerified": 537,
+      "preservedFiles": 537,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "0b18f9375157eeddc9ff2c375b9fce0d2ce3667e4604de9f389d24826e6a1d86",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "legacy-gdd",
+      "threadId": "01a1d022-4cf9-7753-a35c-2bcc9b9551fc",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-ivJFPW",
+      "actualFileBytesVerified": 539,
+      "preservedFiles": 539,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "97b9332568fc11149840f3c67d3b6a6ae940f416c4835cf5c84dc0449c879d3c",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "dependency-graph",
+      "threadId": "01a1d022-432c-78e3-8a5a-04bcc8b30d91",
+      "recordedStatus": "FAIL",
+      "runId": "game-studio-architecture-review-bOcJ82",
+      "actualFileBytesVerified": 542,
+      "preservedFiles": 542,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "d4b6b921acccfb62fa9bb64b67cf6f06e6dd48aaa15e20cb158fb92c2822f71d",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "ambiguous-requirement",
+      "threadId": "01a1d025-8917-7e53-8b60-7d1569c062b7",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-0vzEQX",
+      "actualFileBytesVerified": 539,
+      "preservedFiles": 539,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "092b2597f2568ae46d0c27f353502b3d46cda6ffa354fa5367d68721a517eb92",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "single-missing-index",
+      "threadId": "01a1d025-72f9-7e32-8806-0cca7a2fe8de",
+      "recordedStatus": "FAIL",
+      "runId": "game-studio-architecture-review-HLY1Iu",
+      "actualFileBytesVerified": 540,
+      "preservedFiles": 539,
+      "changed": [],
+      "added": [
+        "docs/architecture/architecture-review-2026-11-12.md"
+      ],
+      "parentTraceSha256": "602be38af2975d668ec591c7a7fdf167d232e88d71ad6b68ea0d95eb01ef867e",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "consistency",
+      "threadId": "01a1d037-b89b-7b83-b2e2-69ce711197bf",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-uf5Os5",
+      "actualFileBytesVerified": 548,
+      "preservedFiles": 548,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "80a581164119a663f2c75c25fec53618cdff6e82cf9d812f3608b6a30f8853cf",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "dependency-graph",
+      "threadId": "01a1d037-e21b-7fb2-b706-385ad1e8e385",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-EyJzRW",
+      "actualFileBytesVerified": 550,
+      "preservedFiles": 550,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "52a3238df17cce3b225356a9bc414b8369bcb16dd5fa484603c081fa7c409783",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "engine-revision-readonly",
+      "threadId": "01a1d03a-4b8c-7140-a4af-e3f46bc079ec",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-vxvj6S",
+      "actualFileBytesVerified": 548,
+      "preservedFiles": 548,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "bc7a807ae0d2d90bbb91decc79f49897829d1b764659ec48256442cdbcb0ed14",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "single-missing-index",
+      "threadId": "01a1d03a-5ea6-7c20-b935-426d144518df",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-CpHtbd",
+      "actualFileBytesVerified": 548,
+      "preservedFiles": 547,
+      "changed": [],
+      "added": [
+        "docs/architecture/architecture-review-2026-11-12.md"
+      ],
+      "parentTraceSha256": "eda59f52f8eac53f6df53f0cbfeb8875a7807b067eff6fe914ccbfab691baaef",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "report-only-conflict",
+      "threadId": "01a1d03c-f221-7390-acd9-1f39356baeb3",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-0NvEh5",
+      "actualFileBytesVerified": 550,
+      "preservedFiles": 549,
+      "changed": [],
+      "added": [
+        "docs/architecture/architecture-review-2026-11-12.md"
+      ],
+      "parentTraceSha256": "4fcfb78742d6d8f0212eaa67c0591c8c7528f68ee3c66d5937532bd756f64378",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "conflict-log-approved",
+      "threadId": "01a1d03e-9de1-7193-b3cc-20c3fb5032fe",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-SZmCa5",
+      "actualFileBytesVerified": 551,
+      "preservedFiles": 548,
+      "changed": [
+        "docs/consistency-failures.md"
+      ],
+      "added": [
+        "docs/architecture/architecture-review-2026-11-12.md",
+        "docs/architecture/requirements-traceability.md"
+      ],
+      "parentTraceSha256": "f453ddd5be7b4f6893da1d220a544dfd96356e1964b7316dc4719b582e046550",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "freshness-scope",
+      "threadId": "01a1d041-5a3f-7270-b844-99c6e7dac337",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-LHx3Sa",
+      "actualFileBytesVerified": 548,
+      "preservedFiles": 548,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "4c4784d80c8fa924249d7201fcdd8a79723fe336aaab8bccada15b0139a312df",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "freshness-workflow",
+      "threadId": "01a1d045-184e-7ae2-8cf6-5264db18c016",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-54BpNj",
+      "actualFileBytesVerified": 548,
+      "preservedFiles": 548,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "2663f194c85d64ac6ba8c44cafde27927e7977486fe840cfa3ffeeac7e53057b",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "malformed-adrs",
+      "threadId": "01a1d045-25ff-75c1-b224-7d4954046c33",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-0ChXp7",
+      "actualFileBytesVerified": 547,
+      "preservedFiles": 547,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "b69cba10356e0de9cd37f1fe2b892de392205c98020006e5ef8745c111e9d74c",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "freshness-engine-change",
+      "threadId": "01a1d04a-6c5f-7401-b8e2-f5838c8853bb",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-R4cHA8",
+      "actualFileBytesVerified": 554,
+      "preservedFiles": 554,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "60eab3628b5ef9a47a5e4fb77e94c5a679bb3d280c81da9f0005fa187b716f85",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "freshness-gone",
+      "threadId": "01a1d04a-6f5b-7e91-94c7-59f84858d118",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-yBRm6z",
+      "actualFileBytesVerified": 553,
+      "preservedFiles": 553,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "43966b5c0157ac87402f80170aac86876d0b1110a0261d132395a2a53c4f8a70",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "rtm-fresh",
+      "threadId": "01a1d04d-a9dc-7060-82d6-f09ed358c57f",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-hHBUfc",
+      "actualFileBytesVerified": 557,
+      "preservedFiles": 557,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "2dece724f076cdc7c4f1695a1ffc20837e8c15771ba010aa165691e5ecaa3eef",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "freshness-unresolved",
+      "threadId": "01a1d04d-b08b-7231-b2ad-92a51fc564b0",
+      "recordedStatus": "FAIL",
+      "runId": "game-studio-architecture-review-SoTXvi",
+      "actualFileBytesVerified": 551,
+      "preservedFiles": 551,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "04bceea65a23d46b9748e92e2857019b4e9ae73458d5264b8c032eaa9b6bfbf8",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "missing-prerequisites",
+      "threadId": "01a1d04f-57c3-77e3-b4b5-f2260a5673d3",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-tuR3ch",
+      "actualFileBytesVerified": 548,
+      "preservedFiles": 548,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "242378d61c54a056801e5178575f769bdc0976ff48ad348f959ae552dc6d2be1",
+      "nativeChildren": 0
+    },
+    {
+      "scenario": "freshness-unresolved",
+      "threadId": "01a1d056-df56-75c2-8554-e14dd22a4a8b",
+      "recordedStatus": "PASS",
+      "runId": "game-studio-architecture-review-r6voja",
+      "actualFileBytesVerified": 553,
+      "preservedFiles": 553,
+      "changed": [],
+      "added": [],
+      "parentTraceSha256": "aa4f8d51156f402e20976af2d17c18bea3bcfab9bafadbe2af5a66e648d84b9a",
+      "nativeChildren": 0
+    }
+  ],
+  "latestScenarioDispositions": 31,
+  "retainedFailures": 8,
+  "limits": [
+    "Runs cover multiple evolving resource versions; inspect each recorded installed hash. This is not a claim that all 31 ran against the newest archive.",
+    "Full original, cross-engine, desktop and remaining interactive/concurrent-write contracts stay open."
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-13",
+  "status": "PASS_SCOPED",
+  "integration": {
+    "logs": {
+      "build": {
+        "path": "/private/tmp/game-studio-setup-web-integrated-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      "typecheck": {
+        "path": "/private/tmp/game-studio-setup-web-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      "content": {
+        "path": "/private/tmp/game-studio-setup-web-content.log",
+        "sha256": "7747b9ca37f5e28dc44a5feba5528ae2ac94362ad05996ab093071e1dc9d000d"
+      },
+      "tests24": {
+        "path": "/private/tmp/game-studio-setup-web-test24-authorized.log",
+        "sha256": "8b96b372231686e7e37eabcabd7a9c4d6075874fe655a8d384050cb68658da1b"
+      },
+      "tests26": {
+        "path": "/private/tmp/game-studio-setup-web-test26-authorized.log",
+        "sha256": "931505ed14d6becdb7f6686d7f8b23690e15d7b235ce054adef259b6b4e73c5a"
+      },
+      "pack": {
+        "path": "/private/tmp/game-studio-setup-web-pack-final.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      },
+      "browser": {
+        "path": "/private/tmp/game-studio-page-shot-browser.log",
+        "sha256": "1339ae3837a22168e18d10ed84fcf7b93a7cbcbfd9702dff7940cf4d07915837"
+      }
+    },
+    "fullTests": {
+      "node24": 447,
+      "node26": 447,
+      "fail": 0,
+      "skip": 0
+    },
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS",
+    "installedPackage": "PASS",
+    "initialSandboxFailures": [
+      {
+        "path": "/private/tmp/game-studio-setup-web-test24.log",
+        "sha256": "d482c9d30318e9345fbd4dd6021a97658106ca49609a4d641c5cf4539b390f69"
+      },
+      {
+        "path": "/private/tmp/game-studio-setup-web-test26.log",
+        "sha256": "65fef13733956f7e1842aa25e688904a55fa6d40d5bcd8fb21ab670bd5a1e0da"
+      }
+    ],
+    "failureExplanation": "Both initial suites passed 446/447; preview could not bind 127.0.0.1 (EPERM). Identical full suites in the authorized environment pass 447/447. No test or product change was made for this environment failure.",
+    "scope": "Integrated worktree containing engine settings/mirror, Web starters and plain page capture. Exact-head cross-platform CI remains separate."
+  },
+  "fullMigrationComplete": false,
+  "S051": "pending",
+  "scope": "Portable direct screenshot/console capture of an existing local page, without hook injection or a server",
+  "canonicalFiles": {
+    "toolkit/src/page-shot.ts": "76abde7801cf1bbf7af2358bbdc150c55882f5aac2b5bac16d67f3eaca8df103",
+    "toolkit/src/capture.ts": "49bdc120482c880238c61895dc6124a776779ad0dd502f572708234c6070fcae",
+    "studio/scripts/page-shot.mjs": "0b5900dcaeeaf1820b2bdec77e8e842d2127fa19d3fd4ac35fca7a98b12bbdf7",
+    "toolkit/test/page-shot.test.mjs": "ecc000dc923c0e7668870dda96eb9a3041d1be22a597f65f37440d980fea0b77",
+    "toolkit/test/browser-smoke.mjs": "3ef7e7d540e8706e8d6b59ace9f49aa683121c5bce0fd2cc02166ca5a159d221",
+    "studio-tests/helpers/page-shot-codex.md": "804f1e4c4a76c8ba387b458e41a0e98f6b621e9c0c4add835137b6f5be0f9aa7"
+  },
+  "sourceContract": {
+    "path": "/Users/tori/Desktop/Project/Claude-Code-Game-Studios/.claude/scripts/page-shot.sh",
+    "sha256": "5957db41d3ce9b602bac905e46d4a9c8c2e49c94ad9f1acb2bed56130a6980f1"
+  },
+  "originalReview": {
+    "path": "/private/tmp/game-studio-page-shot-review.KJlA8z/review.md",
+    "sha256": "c5143c4ec8a660e365e4852cb21377c966381dd8ea8593cd424f4098222f13d6"
+  },
+  "correctionReview": {
+    "path": "/private/tmp/game-studio-page-shot-review-3wg61rrx/review.md",
+    "sha256": "ffff06e4a60bc83a30fd3654f883b5710b2735b0afb23714d38e5b1c8ae93be2"
+  },
+  "regressionRed": {
+    "path": "/private/tmp/game-studio-page-shot-review-red.log",
+    "sha256": "132a47f15c867175642480be39c37323001c862f5fc16a41489983c5aa3c260c"
+  },
+  "regressionGreen": {
+    "path": "/private/tmp/game-studio-page-shot-review-green.log",
+    "sha256": "8be83ee5778fcc71332343bf14aaa53a9c77a89abe3a7dede5670e2d1cc35a59"
+  },
+  "focused": {
+    "node24": 14,
+    "node26Independent": 14,
+    "fail": 0,
+    "skip": 0
+  },
+  "repairs": [
+    "A 24-byte signature is not sufficient: check container bounds/CRCs/IHDR/dimensions/image data/IEND before selecting a PNG. Retain corrupt raw attempts.",
+    "Include .exe candidates in automatic Windows PATH discovery, sharing name expansion with explicit names."
+  ],
+  "fixtureCorrection": "The prior tiny positive PNG fixture had an invalid IDAT CRC. Its CRC was corrected after checking the decoded data; corrupted-CRC input is now a separate negative control.",
+  "realBrowser": {
+    "checks": 9,
+    "log": {
+      "path": "/private/tmp/game-studio-page-shot-browser.log",
+      "sha256": "1339ae3837a22168e18d10ed84fcf7b93a7cbcbfd9702dff7940cf4d07915837"
+    },
+    "retainedVerification": {
+      "path": "/private/tmp/game-studio-page-shot-live-YNV5wQ/verification.json",
+      "sha256": "797c642c08dff907097f3135d43229777a7cbf585f3cc370e245ad12107325e0"
+    },
+    "images": [
+      {
+        "path": "/private/tmp/game-studio-page-shot-live-YNV5wQ/denied/screenshot.png",
+        "sha256": "b2b770a34da523457bd087052e1dd2091c6bba264f980369f06e8b656a76dbc7"
+      },
+      {
+        "path": "/private/tmp/game-studio-page-shot-live-YNV5wQ/allowed/screenshot.png",
+        "sha256": "0016b763063c8350882cfe799bfc87974f84c4ac7a8ba9cf279fe922ee45ef92"
+      }
+    ],
+    "rootImageReview": "Both images opened directly. Without file access the original page shows Module pending; explicit file access shows Loaded 42. Console markers and all three unchanged original source hashes agree."
+  },
+  "installedCheck": "Resolve and invoke the actual global and restored resource wrappers: --which and --dry-run return expected executable/query/flags without browser execution or evidence writes. Actual Chrome capture was separately run through the built runtime, not represented as an installed-wrapper capture.",
+  "limits": [
+    "PNG checks container integrity, not full decoding or visual correctness. qualityAssessed/replayAssessed remain false.",
+    "Native Windows execution remains for CI; local test simulates Windows discovery only.",
+    "Unexpected filesystem/discovery errors may happen before evidence is written.",
+    "Full S051 and desktop/human game acceptance remain open."
+  ]
+}

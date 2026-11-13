@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "stage": "copy",
+  "node": "v24.22.2",
+  "browser": "HeadlessChrome/157.0.0.0",
+  "sourceSha256": "86ab6749ee7e2e68eb1ab530a36c2c1b0d12758ba97402559f1cf9e4ac812c86",
+  "screenshotSha256": "2ad2676d3b9b04826335d9d4d2dcae5aa949081ca5fd1a2cc2bbf2a6534b048d",
+  "assetSha256": "47839320dd68a744e7ff9e91d1c5c5899142dc739320089a668a8df52edc53fe",
+  "builtSha256": "72d5d254f20ffb493662264bf55ab69852a75edef8995e43273a499ea8d06dea",
+  "seed": 7,
+  "log": "Enter Space wait:1 Space wait:1",
+  "states": [
+    [
+      "scene",
+      "0",
+      "title"
+    ],
+    [
+      "state",
+      "0",
+      "title",
+      "{\"t\":0,\"score\":0,\"gained\":\"\"}"
+    ],
+    [
+      "scene",
+      "1",
+      "play"
+    ],
+    [
+      "state",
+      "1",
+      "play",
+      "{\"t\":0,\"score\":0,\"gained\":\"\"}"
+    ],
+    [
+      "state",
+      "162",
+      "play",
+      "{\"t\":2.68,\"score\":4,\"gained\":\"\"}"
+    ]
+  ],
+  "checks": [
+    "online packed CLI install",
+    "offline project runtime restore",
+    "reference repeatability",
+    "dry-run",
+    "source preservation",
+    "binary asset preservation",
+    "npm ci from lock",
+    "configured build discovery",
+    "single-file build",
+    "development tuning excluded",
+    "copy replay equality",
+    "empty tests do not pass"
+  ],
+  "notAssessed": [
+    "full TypeScript conversion",
+    "configuration data extraction",
+    "game-rule unit tests",
+    "all asset loading patterns",
+    "human play"
+  ],
+  "date": "2026-11-12",
+  "implementationCommit": "b1c4a1f",
+  "fixture": "toolkit/test/growth-smoke.mjs",
+  "fixtureSha256": "59e135ac6930e45c69cd4b6890236a7411027b135f66485ca575c9d306092ad8",
+  "cache": "Fresh empty npm cache; online CLI installation precedes offline project restore.",
+  "scope": "Copy-stage fixture, not a completed game or complete migration acceptance.",
+  "priorCiFailure": {
+    "run": 43154957120,
+    "reason": "The fixture incorrectly assumed dependency metadata was cached before offline restore.",
+    "productChangeRequired": false
+  }
+}

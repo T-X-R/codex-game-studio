@@ -1,0 +1,54 @@
+{
+  "recordedAt": "2026-11-12",
+  "client": "codex-cli 0.162.0",
+  "platform": "macOS ARM64",
+  "model": "gpt-6.1-sol",
+  "scope": "Native custom role selection and instruction loading in fresh persisted CLI sessions only",
+  "configuration": {
+    "roleFile": ".codex/agents/game-studio-probe.toml",
+    "trust": "Temporary named user profiles; removed after each run",
+    "projectConfigLoadedInBothPreflights": true,
+    "roleMarkerAbsentFromParentInputs": true,
+    "baseUserConfigurationEdited": false,
+    "gitInitialized": true
+  },
+  "positive": {
+    "threadId": "01a1cdaa-635b-71a3-a8aa-68ae1a114ec4",
+    "childThreadId": "01a1cdaa-7f9e-7413-92c0-27a63af7c655",
+    "nativeTool": "collaboration.spawn_agent",
+    "agentType": "game-studio-probe",
+    "forkTurns": "none",
+    "childSessionRole": "game-studio-probe",
+    "childParentMatches": true,
+    "markerInParentDeveloperContext": false,
+    "markerInChildDeveloperContext": true,
+    "childToolCalls": 0,
+    "childSandbox": "read-only",
+    "childAndParentReturnedHiddenMarker": true,
+    "roleFileUnchanged": true,
+    "processExitCode": 0
+  },
+  "negative": {
+    "threadId": "01a1cdac-3ff4-7f23-9e45-c5b8c9afbc00",
+    "roleFilePresent": false,
+    "toolCalls": 1,
+    "toolActivity": "Searched tool catalog metadata only; no file read, shell, web or child spawn",
+    "markerObserved": false,
+    "response": "ROLE_SELECTION_UNAVAILABLE; native spawn interface has no custom-agent selector",
+    "processExitCode": 0
+  },
+  "result": "passed_for_stated_scope",
+  "remaining": [
+    "desktop role selection",
+    "subdirectory launch",
+    "actual write boundary enforcement",
+    "all 49 role behavior specifications",
+    "hook trust and event contracts"
+  ],
+  "source": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+  "traceHashes": {
+    "rollout-2026-11-12T10-50-58-01a1cdaa-635b-71a3-a8aa-68ae1a114ec4.jsonl": "f9a85f4759cf65de67d622198e19b8eca57779af06440635a3c5b771431f3748",
+    "rollout-2026-11-12T10-51-05-01a1cdaa-7f9e-7413-92c0-27a63af7c655.jsonl": "2b2622f0e40a5c538577031937579077f4e7807e3601edeec6396be41c00fed5",
+    "rollout-2026-11-12T10-53-00-01a1cdac-3ff4-7f23-9e45-c5b8c9afbc00.jsonl": "9a9725ec1916983e66cf0784ec2a39068a05534062edc01d4b84719cdc2f95ba"
+  }
+}

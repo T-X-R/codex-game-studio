@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-13",
+  "status": "PASS_SCOPED",
+  "integration": {
+    "logs": {
+      "build": {
+        "path": "/private/tmp/game-studio-setup-web-integrated-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      "typecheck": {
+        "path": "/private/tmp/game-studio-setup-web-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      "content": {
+        "path": "/private/tmp/game-studio-setup-web-content.log",
+        "sha256": "7747b9ca37f5e28dc44a5feba5528ae2ac94362ad05996ab093071e1dc9d000d"
+      },
+      "tests24": {
+        "path": "/private/tmp/game-studio-setup-web-test24-authorized.log",
+        "sha256": "8b96b372231686e7e37eabcabd7a9c4d6075874fe655a8d384050cb68658da1b"
+      },
+      "tests26": {
+        "path": "/private/tmp/game-studio-setup-web-test26-authorized.log",
+        "sha256": "931505ed14d6becdb7f6686d7f8b23690e15d7b235ce054adef259b6b4e73c5a"
+      },
+      "pack": {
+        "path": "/private/tmp/game-studio-setup-web-pack-final.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      },
+      "browser": {
+        "path": "/private/tmp/game-studio-page-shot-browser.log",
+        "sha256": "1339ae3837a22168e18d10ed84fcf7b93a7cbcbfd9702dff7940cf4d07915837"
+      }
+    },
+    "fullTests": {
+      "node24": 447,
+      "node26": 447,
+      "fail": 0,
+      "skip": 0
+    },
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS",
+    "installedPackage": "PASS",
+    "initialSandboxFailures": [
+      {
+        "path": "/private/tmp/game-studio-setup-web-test24.log",
+        "sha256": "d482c9d30318e9345fbd4dd6021a97658106ca49609a4d641c5cf4539b390f69"
+      },
+      {
+        "path": "/private/tmp/game-studio-setup-web-test26.log",
+        "sha256": "65fef13733956f7e1842aa25e688904a55fa6d40d5bcd8fb21ab670bd5a1e0da"
+      }
+    ],
+    "failureExplanation": "Both initial suites passed 446/447; preview could not bind 127.0.0.1 (EPERM). Identical full suites in the authorized environment pass 447/447. No test or product change was made for this environment failure.",
+    "scope": "Integrated worktree containing engine settings/mirror, Web starters and plain page capture. Exact-head cross-platform CI remains separate."
+  },
+  "fullMigrationComplete": false,
+  "S051": "pending",
+  "scope": "Typed platform/performance/testing settings, engine-table root fallback and project-owned rich-mirror preservation",
+  "canonicalFiles": {
+    "toolkit/src/engine-setup.ts": "d8144f411fb26d613ee18cef30392f757828587a27af2e665a0a3711fbbc4453",
+    "toolkit/src/config-write.ts": "15324d7127185a587566a077b1b755ad7fa034a027100db333acaf47682ea52b",
+    "toolkit/src/md-section.ts": "81315fd076006a1ed2d6fef7f0b60678cf1903010f3540c858b2d9d7517c13bf",
+    "toolkit/test/engine-setup-contract.test.mjs": "e61608c1b6e6524f4fc25627f901e454c381ef24a7117b8bf0a76068d1a2cee8",
+    "toolkit/test/config-write-flow-null.test.mjs": "fab893023cafb462645b5dd1fa816e7f4338f3d617571b8dba4dc7e605a17836",
+    "toolkit/test/engine-setup.test.mjs": "047c460a51b713916cf7ecb32e71256d36aaa4b6ee3520ee86cb0be6f17e109d",
+    "studio-tests/helpers/engine-setup-codex.md": "f8b2bb5d8a4fa225fd7929b36c3e2eea99ac8b2186454727519d5ea4914c2875"
+  },
+  "candidateManifest": {
+    "path": "/private/tmp/game-studio-setup-contract.9vbn77qr/frozen-revised/manifest.json",
+    "sha256": "48e003cc72e36f75789929a9ce4bb040beee6a32cea0a98fd603465e402c42de"
+  },
+  "candidatePatch": {
+    "path": "/private/tmp/game-studio-setup-contract.9vbn77qr/frozen-revised/candidate.patch",
+    "sha256": "e4d7fbbe4b0cfb4c9055561ee92656a16088c6ff586004429b324f5b45f5cbd0"
+  },
+  "originalIndependentReview": {
+    "path": "/private/tmp/game-studio-setup-independent-d5yc8vxd/review.md",
+    "sha256": "2f5041faab54e22da418e25ae05b775824c0ab827de3dada335236a065ca95a4"
+  },
+  "repairs": [
+    "Preserve inline/multiline HTML comment suffixes without exposing hidden labels.",
+    "Recognize explicit GDScript + C# without flattening it.",
+    "Refuse engine changes leaving actual old Unreal routing unresolved.",
+    "Explicit null in a new YAML flow mapping remains null after serialization."
+  ],
+  "retainedRed": {
+    "path": "/private/tmp/game-studio-setup-contract.9vbn77qr/frozen-revised/revision-red.log",
+    "sha256": "0fccaaf8ad3fec7863dd03508d584c01909e75f164a8a091285fa9d83e7d2c93"
+  },
+  "focused": {
+    "node24": 166,
+    "node26": 166,
+    "fail": 0,
+    "skip": 0
+  },
+  "rootReview": "Read complete revised engine setup, parser delta, tests and supporting flow-null correction; verified all candidate manifest and six shared baseline hashes before applying. Existing root validation, engine path and paired transaction protections remain.",
+  "installedCheck": "Actual global write, restored read/no-op and dry-run preserve the selected platform, performance, framework and explicit null mirror values.",
+  "limits": [
+    "Configuration only; no editor or .NET execution is implied.",
+    "Rich Both/per-file/routing/Platform Notes authoring remains explicit Skill section edits with final readback; no new whole-document API.",
+    "Complete native setup workflow, reference maintenance, stable AGENTS pointer and desktop acceptance remain open."
+  ]
+}

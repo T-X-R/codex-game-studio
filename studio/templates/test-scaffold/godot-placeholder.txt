@@ -1,0 +1,2 @@
+# This file keeps the test folder in version control. It is not .gdignore;
+# Godot and GdUnit4 must still discover tests in this folder.

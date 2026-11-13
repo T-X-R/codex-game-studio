@@ -1,0 +1,890 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "Six predefined raw UX-role fixtures only; whole A047 remains partial. Strict source-contract findings are maintainer-review candidates for root adjudication, not automatic native0 results.",
+  "candidate": {
+    "path": "/private/tmp/ux-native-six-candidate.json",
+    "sha256": "fb21336d4e7ddb105a7fcf68ee4d1133b101704a4e25de6ef552e19103daded7"
+  },
+  "counts": {
+    "nativeRuns": 6,
+    "selectedPASS": 2,
+    "retainedContractFAIL": 4,
+    "nativeZero": 6
+  },
+  "review": {
+    "fullNativePublicCallAudit": "design_system_migration",
+    "root": "Read all six complete child final responses, adjudicated functionality versus presentation/decision gaps, and independently verified every actual regular file, archive, raw evidence hash and frozen/live native trace.",
+    "symlinks": "The reused host did not capture a symlink baseline. Observed package-bin links do not establish pre/post symlink preservation."
+  },
+  "hashes": {
+    "sourceRoleSha256": "90d079a8d336c9f477b6d4e9ebf7479da9573ceb5f2390854163357c2714530d",
+    "canonicalRoleSha256": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+    "fixtureSha256": "b65cf5f05631e8ec6a758e2eb14f47e048fde23512939651584f504dff318ce8",
+    "specSha256": "eac66b63e2cc849b62c7f020b8d4bf624f13cf757951d7fd7126bc3f50104f8a",
+    "hostSha256": "f7816ec9ffc71b34810f3a62afacd2600c4fee3d5a1a4a1d97a8f2c04e5da1ba"
+  },
+  "runs": [
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-ucMu8w",
+      "scenario": "ux-compress-flow",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "926ad95fe59090766d76fa8ab5ca9c6adee8e76f4892f57fae38c8a967056a89"
+      },
+      "roleSha256": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+      "rawRequest": "The lead designer says the current five-step crafting flow is too deep: maximum three primary steps. Read design/ux/crafting-current.md and propose alternatives for me to choose from. Do not choose for me or write files. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+      "nativePrompt": "Use native custom-role selection to delegate exactly one task to game-studio-ux-designer: The lead designer says the current five-step crafting flow is too deep: maximum three primary steps. Read design/ux/crafting-current.md and propose alternatives for me to choose from. Do not choose for me or write files. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication. The child may use the installed runtime within the assigned scope; its Node executable is /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node. Wait for completion and summarize its actual findings, artifacts and remaining decisions. You as parent must not inspect workspace files, run shell commands or write the report yourself. Do not simulate this role with a generic agent; if unavailable, report ROLE_SELECTION_UNAVAILABLE.",
+      "inputs": {
+        "design/game-brief.md": {
+          "content": "# Trail Shelter\nPillars: deliberate preparation, understandable consequences, low menu friction.\nSingle-player survival game. Existing gameplay rules already own equip, drop and\ncombine; this assignment changes presentation and navigation, not those rules.\nDesktop keyboard/mouse and gamepad are supported. Touch is outside this release.\nNo final visual palette or icon style is assigned to UX.\n",
+          "sha256": "ed92c4f3a8769e87e91cfb4e1f118a855b513fbe54acf669e3f092897e17b806"
+        },
+        "design/ux/accessibility-requirements.md": {
+          "content": "# Project accessibility requirements\nKeyboard-only and gamepad-only operation; all actions remappable.\nText remains readable at the supported 18px minimum and 1280x720 / 1920x1080.\nInformation must not rely on color alone. Warn before flashing content.\nAll dialogue has subtitles. UI must scale at both supported resolutions.\nTutorial reading and decision time is controlled by the player; no automatic\ndismissal or action may occur while the player is reading an onboarding prompt.\nThe accessibility owner is responsible for applicable criteria and audit.\nThese are agreed project requirements, not an implementation conformance report.\n",
+          "sha256": "00140157678811de02d06f97a9ffd990a2e2ad5f0dfdb851c78e40d44ec4a534"
+        },
+        "docs/owner-notes.md": {
+          "content": "KEEP: unrelated owner history.\n",
+          "sha256": "2f6aa4b00199180cb8512e60572bc323d96da440ddd9b54c0a8104e87e91a313"
+        },
+        "src/inventory_model.gd": {
+          "content": "# Existing gameplay-owned interface; design work must not change it.\n",
+          "sha256": "df7c6c02146a852846cfaf996d408f69f21f31f4da123e5ef4d7e2b693900e4c"
+        },
+        "design/ux/crafting-current.md": {
+          "content": "# Current crafting flow\n1. Open Inventory: inspect available resources while managing the carried load.\n2. Open Crafting: discover recipes and compare what can be made.\n3. Choose recipe: inspect the result and its recipe-specific ingredient requirements.\n4. Configure quantity and substitutions: choose batch size and preserve rare resources\n   by choosing one of the gameplay-approved equivalent ingredients. Both are required.\n5. Review and confirm: inspect the exact cost/result, then explicitly commit spending.\nCancel before confirmation spends nothing. Ingredient substitution and exact-cost\nconfirmation must remain reachable, including when the recipe has no default choice.\nThe primary-path step count is a design constraint, not permission to remove a goal.\n",
+          "sha256": "b2e3fe5c04b371a6041ed50a5d3c0dbeaad6006cd991b7b83ab7914573fb0b9a"
+        }
+      },
+      "beforeFiles": 564,
+      "afterFiles": 564,
+      "allOriginalFilesPreserved": true,
+      "observedPackageBinSymlinks": {
+        ".game-studio/node_modules/.bin/game-studio": "../@t-x-r/game-studio/dist/cli.js",
+        ".game-studio/node_modules/.bin/yaml": "../yaml/bin.mjs"
+      },
+      "symlinkBaselineLimitation": "qa-role-host stores regular-file hashes only; actual links are limited to the two expected installed package bin links, not an original link snapshot comparison",
+      "added": [],
+      "traces": [
+        {
+          "kind": "parent",
+          "id": "01a1d0c7-365a-7502-bb9c-2858ee67864e",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-21-18-01a1d0c7-365a-7502-bb9c-2858ee67864e.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/ucMu8w/rollout-2026-11-13T01-21-18-01a1d0c7-365a-7502-bb9c-2858ee67864e.jsonl",
+          "sha256": "3f565e2576242c0c5c213281e4194a9964c5fec19888cd3e583c7e942fdf498e",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ],
+          "final": [
+            "The native **game-studio-ux-designer** completed the task and returned three alternatives. It interpreted “primary steps” as navigation stages, rather than individual button presses.\n\n| Alternative | Three primary stages | Main tradeoff |\n|---|---|---|\n| **Shared workbench** | Browse and prepare → Configure → Review and confirm | Keeps configuration and final review separate, but makes the first stage denser. |\n| **Inventory first** | Inspect inventory → Plan craft → Review and confirm | Preserves dedicated inventory preparation, but concentrates complexity in planning. |\n| **Review in place** | Inspect inventory → Browse recipes → Configure and commit | Shows costs beside configuration, but needs stronger protection against accidental confirmation. |\n\nThe designer recommends **Shared workbench**, but **no alternative was selected**. All three preserve inventory/load management, recipe comparison, quantity and substitution choices, exact-cost review, and explicit confirmation before spending.\n\nThe designer read the current flow, game brief, accessibility requirements and project guidance. These are design proposals; no layout, usability or accessibility testing occurred. It also reported that no installed accessibility-recording workflow was found.\n\nYour remaining decisions are:\n\n- Choose an alternative.\n- Confirm whether the three-step limit means navigation stages.\n- Supply any recipe-complexity constraints or player research before detailed layout work.\n\n**Artifacts:** the child’s conversational proposal only. No files were written, further tasks delegated, game executed, dependencies installed, commits made or content published."
+          ]
+        },
+        {
+          "kind": "child",
+          "id": "01a1d0c7-5937-77f1-9777-81e12787ba36",
+          "role": "game-studio-ux-designer",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-21-27-01a1d0c7-5937-77f1-9777-81e12787ba36.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/ucMu8w/rollout-2026-11-13T01-21-27-01a1d0c7-5937-77f1-9777-81e12787ba36.jsonl",
+          "sha256": "117a5f47ee74dbfa94cc91ed09606509001fb14c011de4ef89ab5c1c6bf93a90",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ],
+          "final": [
+            "The five steps can become three primary stages without removing any recorded player goal. No option has been selected.\n\nI read [crafting-current.md](design/ux/crafting-current.md), [game-brief.md](design/game-brief.md), [accessibility-requirements.md](design/ux/accessibility-requirements.md), project instructions and runtime collaboration guidance. The project is in guided mode. No player research, reference preferences or existing control map was supplied.\n\nI interpret “primary steps” as navigation stages, not individual button presses. Recipe selection, quantity adjustment and confirmation still require deliberate actions within those stages.\n\n| Alternative | Three primary stages and original-step mapping | Benefits | Costs |\n|---|---|---|---|\n| **Shared workbench — recommended** | **1. Browse and prepare:** inventory/load management plus recipe comparison, selection and result/requirements preview **[1+2+3]** → **2. Configure:** quantity and approved substitutions **[4]** → **3. Review and confirm:** exact cost/result and explicit spending **[5]** | Removes two navigation transitions while retaining a distinct configuration stage and deliberate final review. Shared resource and recipe context supports understandable consequences. | The combined first stage needs careful hierarchy and focus navigation, especially at 1280×720 with 18px text. |\n| **Inventory first** | **1. Inspect inventory:** resources and load management **[1]** → **2. Plan craft:** recipe comparison, selection, preview, quantity and substitutions **[2+3+4]** → **3. Review and confirm** **[5]** | Preserves inventory as a dedicated preparation space and retains a separate review before spending. | The middle stage carries the most information and interaction complexity; players must navigate between comparison and configuration within it. |\n| **Review in place** | **1. Inspect inventory** **[1]** → **2. Browse recipes:** compare, select and inspect requirements/result **[2+3]** → **3. Configure and commit:** quantity, substitutions and live exact-cost/result review beside explicit confirmation **[4+5]** | Keeps the opening stages focused and makes the consequence of each configuration change immediately visible. | Confirmation shares space with editing controls, increasing accidental-activation risk unless focus and input handling clearly separate them. |\n\n**Recommendation, not approval:** Shared workbench best supports the supplied pillars of deliberate preparation, understandable consequences and low menu friction. It reduces navigation while preserving a dedicated final decision. This is a design judgment, not a playtest finding; recipe complexity and small-resolution layout feasibility could favor another option.\n\nAll three preserve the purposes of every original step:\n\n- Inventory inspection **and carried-load management** remain available, with existing equip/drop/combine rules unchanged.\n- Recipe discovery, comparison and result/ingredient inspection remain visible in the assigned stage.\n- Quantity and gameplay-approved substitutions remain reachable. A recipe without a default substitution must expose an explicit choice; it cannot silently pick one.\n- Players inspect the exact configured cost/result before explicitly committing. Cancelling beforehand spends nothing.\n\nProgressive disclosure can reveal detailed ingredient information within a stage, but required substitution choices and exact-cost review must remain discoverable. A mandatory configuration or review screen introduced afterward would add another primary stage and break the proposed count.\n\nThe following interaction rules are proposals common to the alternatives:\n\n- **Inputs:** Use the project’s remappable action names once supplied. Keyboard and gamepad users need complete focus routes through resource management, recipes, quantity controls, substitution choices and confirmation. Pointer users can click controls; dragging cannot be required.\n- **Navigation:** Keep recipe-list focus predictable and preserve selection when returning from configuration or review. Clearly identify the active pane and current recipe. Do not move focus to Confirm when a selection or quantity changes.\n- **Commit protection:** Require a fresh activation for spending; the input that opens a stage or finishes an edit must not carry through into confirmation. Option 3 especially needs a distinct, explicitly reached confirmation control.\n- **Invalid actions:** Show the precise reason confirmation is unavailable—such as a missing substitution or insufficient ingredients—with text and a focusable route to the relevant control. Recalculate the displayed exact cost when configuration changes.\n- **Completion and retry:** Show the crafted result and resources spent after a successful commit. If confirmation cannot complete, explain why and return to editable configuration without spending. Any changed cost must be reviewed again. Do not promise undo or introduce crafting rules not supplied.\n- **Feedback:** Use persistent text and focus/state indicators for selections, cost changes, errors and completion. Optional audio/haptics may reinforce these messages; neither should carry essential information alone.\n- **Onboarding:** Contextual explanations remain until the player dismisses them; no automatic dismissal or action while reading.\n\nThe recorded accessibility requirements apply to every option: remappable keyboard/gamepad operation, readable text at the 18px minimum, scaling at 1280×720 and 1920×1080, information beyond color alone, warnings before flashing content and subtitles for dialogue. None of these proposals has undergone layout, usability or accessibility testing.\n\nNo installed `game-studio-ux-design` accessibility recording workflow was found. The caller should return the bounded task of confirming/recording the accessibility tier and applicable audit criteria to the accessibility owner; the existing requirements remain usable.\n\nRemaining decisions and hand-offs:\n\n1. **User:** Choose Shared workbench, Inventory first or Review in place, and confirm whether the lead’s limit means navigation stages as interpreted above.\n2. **User/context:** Supply any recipe-complexity limits, player findings or reference preferences before detailed layout decisions.\n3. **UI programmer:** Assess the chosen layout at both resolutions and supply the existing remappable actions/focus conventions.\n4. **Gameplay owner:** Clarify any missing commit-failure behavior before implementation; existing gameplay rules remain authoritative.\n\nArtifacts: this conversational proposal only. No files were written, no further delegation occurred, and no game execution, dependency installation, commits or publication were performed."
+          ]
+        }
+      ],
+      "status": "manual_semantic_review_pending",
+      "semanticReview": {
+        "status": "FAIL_output_contract",
+        "functional": "PASS_selected_flow_preservation",
+        "findings": [
+          "Three alternatives map1+2+3/4/5,1/2+3+4/5,1/2+3/4+5; all preserve load management, recipe comparison, quantities, substitutions including no default, exact cost and explicit spending confirmation. Recommendation remains proposal.",
+          "The required end-of-analysis concise choice list is absent: alternatives are a long table before analysis; final list contains handoffs, not labels with one-sentence option descriptions and marked recommendation. No loss of functional flow content is alleged."
+        ],
+        "remaining": [
+          "Owner choice and same-session refined spec were not exercised."
+        ]
+      },
+      "rawEvidenceHashes": {
+        "before.json": "efb5b5108b6199c8237e565d239d654fe05db1ba948dc295145f89573e738ed0",
+        "fixture.json": "42f0bd68fc8989cec1d0279d75796158b8784a8e293a8301ded53f0e3a1de6a0",
+        "report.json": "7f4f04a7b8a19e68a34d29cb422ed4a95946a57d67fd8bfbba03abd5295f6e9e",
+        "final.txt": "159802e148a551334dd906a0cfd5f8f12af51e84dc9f44ea25b9199ab819bf52",
+        "stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+        "events.jsonl": "88db51de261a4497fb1e03f9ee76d873b7f3c8bf950941f348d56d39b051d999",
+        "prompt-input.json": "e7e536da3e02fbe1084408ad9509043f281318eb915baa9b0795943cff6f176b"
+      },
+      "rootVerification": {
+        "actualOriginalRegularFilesUnchanged": 564,
+        "actualCurrentRegularFilesRehashed": 564,
+        "rawArchiveAndTraceHashesMatch": true,
+        "childFinalMatchesFrozenNativeTrace": true,
+        "frozenStructuralAuditSha256": "0d7af868d5ed6b003227878642feaaf8830244db794cc27a64f42085bcb29656"
+      },
+      "rootAdjudication": {
+        "domain": "PASS_selected",
+        "protocol": "FAIL_end_of_analysis_choice_block",
+        "qualification": "The earlier alternatives table is useful and choices remain unselected; the failure concerns the source requirement for a final concise caller-presentable choice block, not the table format itself."
+      }
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-uD4BJc",
+      "scenario": "ux-approved-spec",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "926ad95fe59090766d76fa8ab5ca9c6adee8e76f4892f57fae38c8a967056a89"
+      },
+      "roleSha256": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+      "rawRequest": "The inventory direction below is already approved. Write the interaction specification to design/ux/inventory-flow.md, using the agreed rules and existing accessibility requirements. Do not reopen settled choices or ask for per-file permission. Record genuinely missing consequential decisions without choosing for me. This authorizes this new spec only; preserve all existing files. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+      "nativePrompt": "Use native custom-role selection to delegate exactly one task to game-studio-ux-designer: The inventory direction below is already approved. Write the interaction specification to design/ux/inventory-flow.md, using the agreed rules and existing accessibility requirements. Do not reopen settled choices or ask for per-file permission. Record genuinely missing consequential decisions without choosing for me. This authorizes this new spec only; preserve all existing files. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication. The child may use the installed runtime within the assigned scope; its Node executable is /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node. Wait for completion and summarize its actual findings, artifacts and remaining decisions. You as parent must not inspect workspace files, run shell commands or write the report yourself. Do not simulate this role with a generic agent; if unavailable, report ROLE_SELECTION_UNAVAILABLE.",
+      "inputs": {
+        "design/game-brief.md": {
+          "content": "# Trail Shelter\nPillars: deliberate preparation, understandable consequences, low menu friction.\nSingle-player survival game. Existing gameplay rules already own equip, drop and\ncombine; this assignment changes presentation and navigation, not those rules.\nDesktop keyboard/mouse and gamepad are supported. Touch is outside this release.\nNo final visual palette or icon style is assigned to UX.\n",
+          "sha256": "ed92c4f3a8769e87e91cfb4e1f118a855b513fbe54acf669e3f092897e17b806"
+        },
+        "design/ux/accessibility-requirements.md": {
+          "content": "# Project accessibility requirements\nKeyboard-only and gamepad-only operation; all actions remappable.\nText remains readable at the supported 18px minimum and 1280x720 / 1920x1080.\nInformation must not rely on color alone. Warn before flashing content.\nAll dialogue has subtitles. UI must scale at both supported resolutions.\nTutorial reading and decision time is controlled by the player; no automatic\ndismissal or action may occur while the player is reading an onboarding prompt.\nThe accessibility owner is responsible for applicable criteria and audit.\nThese are agreed project requirements, not an implementation conformance report.\n",
+          "sha256": "00140157678811de02d06f97a9ffd990a2e2ad5f0dfdb851c78e40d44ec4a534"
+        },
+        "docs/owner-notes.md": {
+          "content": "KEEP: unrelated owner history.\n",
+          "sha256": "2f6aa4b00199180cb8512e60572bc323d96da440ddd9b54c0a8104e87e91a313"
+        },
+        "src/inventory_model.gd": {
+          "content": "# Existing gameplay-owned interface; design work must not change it.\n",
+          "sha256": "df7c6c02146a852846cfaf996d408f69f21f31f4da123e5ef4d7e2b693900e4c"
+        },
+        "design/ux/approved-direction.md": {
+          "content": "# Approved inventory direction\nGoal: inspect and act on carried items without losing location/context. No comparison\ngame is required. Use one Inventory screen with a list and contextual action panel.\nOpen with the existing remappable inventory action, initially focus the first\navailable item; browse with pointer or navigation actions, without automatic wrap.\nSelect an item to inspect its details and available gameplay-approved actions.\nThe gameplay interface determines equip/drop/combine availability. Equip commits\nits existing command, drop requests explicit confirmation, combine opens the\napproved compatible-item picker before confirmation. Cancel returns one level;\ncancel from the list closes Inventory and restores the invoking control's focus.\nUse remappable accept/cancel/navigation actions for keyboard and gamepad; pointer\nclicks are equivalent. Held accept must not repeat destructive actions. Touch is\nout of scope. Invalid actions retain state and explain the reason in text and an\nexisting feedback event; successful commands get status text and the existing\nconfirmation event. No haptics or animation are requested for this release.\nArt owns styling. Reuse the existing non-color-only focus marker. Long text wraps\nand the list scrolls within the supported viewport; no new gameplay behavior.\nThis is an approved design choice, not measured usability or runtime test evidence.\n",
+          "sha256": "724956771ed440fb5e524d8a0fe9771fbe8f2458b839cae003719f3c01bb4a2d"
+        }
+      },
+      "beforeFiles": 564,
+      "afterFiles": 565,
+      "allOriginalFilesPreserved": true,
+      "observedPackageBinSymlinks": {
+        ".game-studio/node_modules/.bin/game-studio": "../@t-x-r/game-studio/dist/cli.js",
+        ".game-studio/node_modules/.bin/yaml": "../yaml/bin.mjs"
+      },
+      "symlinkBaselineLimitation": "qa-role-host stores regular-file hashes only; actual links are limited to the two expected installed package bin links, not an original link snapshot comparison",
+      "added": [
+        "design/ux/inventory-flow.md"
+      ],
+      "traces": [
+        {
+          "kind": "child",
+          "id": "01a1d0c7-67e8-7a20-8dfd-d7719e2fac64",
+          "role": "game-studio-ux-designer",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-21-31-01a1d0c7-67e8-7a20-8dfd-d7719e2fac64.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/uD4BJc/rollout-2026-11-13T01-21-31-01a1d0c7-67e8-7a20-8dfd-d7719e2fac64.jsonl",
+          "sha256": "cc89879fbd9d47f1a7ae716f7234b7126af85cc055b02977a0888c4b4d6114f0",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "send_message",
+            "exec"
+          ],
+          "final": [
+            "Created [design/ux/inventory-flow.md](</private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-uD4BJc/QA game 测试/design/ux/inventory-flow.md>).\n\nThe spec translates the approved direction into flow transitions, input/focus rules, confirmations, feedback, accessibility targets and implementation hand-offs.\n\nTwo decisions remain explicitly pending, with recommendations documented but not enacted:\n\n- World-time behavior while Inventory is open; retrieve any existing gameplay policy first.\n- Initial confirmation focus: Cancel or Confirm.\n\nIntegration gaps remain: the gameplay file contains only an ownership comment, so command contracts, bindings, picker behavior, event identifiers and focus-recovery policies could not be verified. The installed UX accessibility workflow is unavailable; the spec references existing requirements and returns workflow recording/audit to the caller.\n\nValidation confirmed all 584 pre-existing files remained unchanged and exactly one file was added. Five source links, eight required sections and eleven coverage checks passed. These are document checks, not implementation verification.\n\nNo further delegation, game execution, dependency installation, commits or publication occurred."
+          ]
+        },
+        {
+          "kind": "parent",
+          "id": "01a1d0c7-365a-7051-9099-896b3239bf01",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-21-18-01a1d0c7-365a-7051-9099-896b3239bf01.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/uD4BJc/rollout-2026-11-13T01-21-18-01a1d0c7-365a-7051-9099-896b3239bf01.jsonl",
+          "sha256": "95f45b46fa9838732dbefb998a17876d37f505ba1d220d87abb42b3dae840110",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ],
+          "final": [
+            "The native `game-studio-ux-designer` completed [inventory-flow.md](</private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-uD4BJc/QA game 测试/design/ux/inventory-flow.md>) using the approved direction and accessibility requirements.\n\nIt covers transitions, inputs, focus, confirmations, feedback and implementation handoffs. Two decisions remain pending:\n\n- World-time behavior while Inventory is open.\n- Initial confirmation focus: Cancel or Confirm.\n\nGameplay integration contracts could not be verified, and the installed UX workflow was unavailable.\n\nThe designer reports that document checks passed, all 584 existing files remained unchanged, and only the authorized spec was added. No further delegation, game execution, installation, commits or publication occurred."
+          ]
+        }
+      ],
+      "status": "manual_semantic_review_pending",
+      "semanticReview": {
+        "status": "PASS_selected_authorized_spec",
+        "findings": [
+          "Only authorized design/ux/inventory-flow.md added; settled direction reused without per-file confirmation.",
+          "Open/browse/select/equip/drop/combine/cancel/close, contextual actions,held-accept buffering, non-pointer input equivalence, feedback,all7accessibility checks retained. No art/code/gameplay implementation.",
+          "Missing world-time and confirmation initial focus are explicitly unresolved with options,not enacted; unverified API/focus contracts handed off. Existing accessibility requirements preserved; missing workflow and no actual specialist audit disclosed.",
+          "584 preservation count includes20 .git files in child snapshot; maintainer host excludes .git and verifies564. Counts use different scopes, not evidence of mutation."
+        ],
+        "remaining": [
+          "No same-session discovery/selection chain; fresh approved direction only.",
+          "No implementation or accessibility audit evidence."
+        ]
+      },
+      "rawEvidenceHashes": {
+        "before.json": "97fbf48ee5098548f83bc1bc45fcad64887f2d922a05cd22eea223a1309d5219",
+        "fixture.json": "5f0eacc134c639055f8aa19e19ddf2507308266d786536c2c62136a70fa3ddf0",
+        "report.json": "462f041d09c2b3ec1fb99be210dc493f2d7820ac8fdacc7f5b8135f81ea6a375",
+        "final.txt": "6b5864668e50377fe5f988cea028181c1d978371aa67324523107e9c7ff1d7d4",
+        "stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+        "events.jsonl": "35d13be304e9460fa13f2a060c23b0c8d2b1374f86728bc87c9cba0163d2dea8",
+        "prompt-input.json": "0c406201d58ab3e70caea36f73e90d7dca291498b88873155ad05d8aab8af5d4"
+      },
+      "rootVerification": {
+        "actualOriginalRegularFilesUnchanged": 564,
+        "actualCurrentRegularFilesRehashed": 565,
+        "rawArchiveAndTraceHashesMatch": true,
+        "childFinalMatchesFrozenNativeTrace": true,
+        "frozenStructuralAuditSha256": "286ec91d6921ad48124275e376f8e71347e08a5a1a7eb9ac6542417ba5b0b0c8"
+      },
+      "rootAdjudication": {
+        "selectedScenario": "PASS",
+        "qualification": "Does not establish the complete role or every collaboration protocol branch."
+      }
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-AnEAks",
+      "scenario": "ux-discovery",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "2a221299f2011aacd9bb76123d93cad1ce9e578d2f871629e2d13fe79f0116c1"
+      },
+      "roleSha256": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+      "rawRequest": "Design the inventory management flow for my survival game. We have not settled the intended experience or control scheme yet. This is a discussion, not permission to write files. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+      "nativePrompt": "Use native custom-role selection to delegate exactly one task to game-studio-ux-designer: Design the inventory management flow for my survival game. We have not settled the intended experience or control scheme yet. This is a discussion, not permission to write files. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication. The child may use the installed runtime within the assigned scope; its Node executable is /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node. Wait for completion and summarize its actual findings, artifacts and remaining decisions. You as parent must not inspect workspace files, run shell commands or write the report yourself. Do not simulate this role with a generic agent; if unavailable, report ROLE_SELECTION_UNAVAILABLE.",
+      "inputs": {
+        "design/game-brief.md": {
+          "content": "# New survival game\nInventory management needs design.\n",
+          "sha256": "38ced8e721ccde530f43282e3eea08d37880101763dab2fc82f60992751728b2"
+        },
+        "design/ux/accessibility-requirements.md": {
+          "content": "# Accessibility\nProject scope and requirements have not been chosen.\n",
+          "sha256": "293885c5f9cc79804f9349fba9b14a05ea07c30800fac2256eb51abd041efddf"
+        },
+        "docs/owner-notes.md": {
+          "content": "KEEP: unrelated owner history.\n",
+          "sha256": "2f6aa4b00199180cb8512e60572bc323d96da440ddd9b54c0a8104e87e91a313"
+        },
+        "src/inventory_model.gd": {
+          "content": "# Existing gameplay-owned interface; design work must not change it.\n",
+          "sha256": "df7c6c02146a852846cfaf996d408f69f21f31f4da123e5ef4d7e2b693900e4c"
+        }
+      },
+      "beforeFiles": 563,
+      "afterFiles": 563,
+      "allOriginalFilesPreserved": true,
+      "observedPackageBinSymlinks": {
+        ".game-studio/node_modules/.bin/game-studio": "../@t-x-r/game-studio/dist/cli.js",
+        ".game-studio/node_modules/.bin/yaml": "../yaml/bin.mjs"
+      },
+      "symlinkBaselineLimitation": "qa-role-host stores regular-file hashes only; actual links are limited to the two expected installed package bin links, not an original link snapshot comparison",
+      "added": [],
+      "traces": [
+        {
+          "kind": "child",
+          "id": "01a1d0cb-df45-7810-988b-23c96971635e",
+          "role": "game-studio-ux-designer",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-26-24-01a1d0cb-df45-7810-988b-23c96971635e.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/AnEAks/rollout-2026-11-13T01-26-24-01a1d0cb-df45-7810-988b-23c96971635e.jsonl",
+          "sha256": "2caf9b8416589008f10ec099358b7e2251ff4d79d21230cbeda4cdbaf4176265",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ],
+          "final": [
+            "Returned a discussion draft only. **No files or other artifacts were created.** No game execution, tests, installation, further delegation, commits or publication occurred.\n\nThe supplied [brief](design/game-brief.md) only says inventory management needs design. The [accessibility document](design/ux/accessibility-requirements.md) explicitly leaves scope and requirements undecided. Runtime settings identify a Web project at Concept stage, with minimal documentation and guided collaboration. No existing inventory flow, player research, pillars, control assignments or gameplay rules were supplied; the inventory source contains only an ownership comment.\n\nThe following recommendations are proposals, not approved decisions or research findings.\n\n1. **What should managing inventory feel like?**\n\n   | Option | Benefit and cost |\n   |---|---|\n   | **Deliberate planning — recommended** | Give players time to compare and organize; supports considered choices, but interrupts survival pressure. |\n   | **Exposed scavenging** | Keep management subject to world danger; sustains tension, but adds time pressure and accessibility constraints. |\n   | **Context-dependent access** | Vary management opportunities by context; can balance tension and planning, but introduces rules players must learn. |\n\n   The recommendation assumes comparison and preparation matter more than speed. World timing, multiplayer behavior and interruption rules need the user’s choice and gameplay ownership; none are settled here.\n\n2. **Which controls should lead the design?**\n\n   | Option | Benefit and cost |\n   |---|---|\n   | **Keyboard/mouse and gamepad — recommended** | Use explicit selection and actions across both devices; supports predictable focus, with more navigation design work. |\n   | **Keyboard/mouse first** | Provides efficient pointer interaction; controller navigation still needs a separate complete route if supported. |\n   | **Touch first** | Prioritizes direct selection and larger targets; reduces information density and makes hover information unsuitable. |\n\n   This recommendation preserves options while the platform scope remains open. Web configuration alone does not settle supported devices.\n\n3. **How much inventory complexity belongs in the game?**\n\n   | Option | Benefit and cost |\n   |---|---|\n   | **Simple item list — recommended** | Makes finding and comparing items straightforward; offers little spatial organization. |\n   | **Fixed-slot inventory** | Makes occupied space visible; requires clear placement, stacking and overflow rules. |\n   | **Spatial packing** | Makes arrangement a player task; adds navigation and accessibility work and changes the gameplay experience. |\n\n   Start with the simplest representation unless arranging items is an intended source of enjoyment. Capacity, stacking, weight, equipment, containers and crafting remain gameplay decisions—not inferred requirements.\n\n4. **What context should guide these choices?**\n\n   Ask the user for the main player goal, intended feature scope and existing inventory rules, references they like or dislike, and any required accessibility accommodations or supported screen sizes. These inputs are missing, not implicitly accepted defaults.\n\nA provisional flow that survives those choices is:\n\n**Play → open inventory → browse → inspect an item → choose an available action → choose destination or quantity when required → receive result feedback → continue managing or return to play.**\n\nNo existing steps were available to merge or remove. Progressive disclosure can keep destination and quantity controls hidden until relevant without removing those purposes.\n\nSuggested interaction behavior, pending approval:\n\n- Use named actions such as **Open inventory, Navigate, Confirm, Back, Item actions**. Candidate bindings are arrows plus confirm/back on keyboard, D-pad plus confirm/back on gamepad, and tap on touch. Final bindings must follow the project’s eventual remapping rules.\n- Every drag operation needs a **select item → choose destination → confirm** alternative.\n- Preserve focus when returning from item details; when an item disappears, move focus to a predictable neighbor. Opening or closing input must not accidentally activate an item or gameplay action.\n- Invalid actions keep the player’s selection and explain the reason in text. Successful actions update item counts and focus with visible feedback; sound and haptics may reinforce this.\n- Back cancels an uncommitted quantity or destination choice. Interruption behavior, death, item loss and retry paths require the gameplay rules before specification.\n- Introduce navigation and actions progressively on first use; hints must remain readable and dismissible without requiring precise timing.\n\nAccessibility is **not assessed or approved**. The installed skills do not include the assigned UX accessibility recording workflow. Return that bounded task to the caller: establish the tier, scaling and minimum text requirements, supported resolutions, remapping, timing conditions and applicable subtitle/flashing requirements with the accessibility owner. Keyboard-only and gamepad-only completion, non-color feedback and scaling remain verification requirements, not passed tests.\n\nAfter the user settles the choices, the next handoff is an interaction specification for `game-studio-ui-programmer`, with gameplay questions routed to `game-studio-game-designer` and visual presentation questions to `game-studio-art-director`. No specialist review beyond this UX discussion occurred."
+          ]
+        },
+        {
+          "kind": "parent",
+          "id": "01a1d0cb-be17-7810-a754-77594a0cfefb",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-26-15-01a1d0cb-be17-7810-a754-77594a0cfefb.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/AnEAks/rollout-2026-11-13T01-26-15-01a1d0cb-be17-7810-a754-77594a0cfefb.jsonl",
+          "sha256": "cce2637615fa6d3ee09c6512a3a0e6125cd82723a2f2bc84f3ef420a9cb82499",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent"
+          ],
+          "final": [
+            "The native `game-studio-ux-designer` completed the single delegated discussion task.\n\nIts proposed flow is:\n\n**Play → open inventory → browse → inspect item → choose action → select destination or quantity if needed → receive feedback → continue or return to play.**\n\nThe designer provisionally recommends deliberate planning, a simple item list, and explicit actions that support keyboard/mouse and gamepad. These remain proposals because the intended experience and controls are undecided.\n\nKey interaction suggestions include a non-drag alternative for moving items, predictable focus, clear explanations for invalid actions, and Back to cancel uncommitted choices.\n\nRemaining decisions:\n\n- Whether inventory management pauses danger or happens under pressure.\n- Supported devices and primary controls.\n- List, fixed slots, or spatial packing.\n- Capacity, stacking, equipment, containers, and crafting rules.\n- Accessibility requirements and interruption behavior.\n\nExisting project documentation did not settle those questions. Accessibility was not assessed, and no usability tests were run.\n\n**Artifacts:** conversational design draft only; no files created. No further delegation, game execution, installation, commits, or publication occurred."
+          ]
+        }
+      ],
+      "status": "manual_semantic_review_pending",
+      "semanticReview": {
+        "status": "FAIL_question_first_choice_boundary",
+        "functional": "Questions/ownership/read-only PASS",
+        "findings": [
+          "Asks4groups aboutexperience/controls/complexity/context and marks choices unapproved.",
+          "Still drafts a provisional flow and concrete initial/back/focus behavior before any actual user answer or selected direction. This does not establish required question→answer→options→selection→draft progression, and goes beyond stopping dependent design.",
+          "All563existingfiles retained, no game execution/installs/nested agents."
+        ],
+        "remaining": [
+          "Actual owner answers,selected alternative,and same-session refinement/write still pending."
+        ]
+      },
+      "rawEvidenceHashes": {
+        "before.json": "d973981a490dc481c8fc67aa2e0eac294da2963a5c918eba582d16430cba4c61",
+        "fixture.json": "cc792c7d9c100d800e71607190a316bd9a823f962065fbc0b2ef247db3a0b75c",
+        "report.json": "3281d38fd9ad0a12e04ddc3c447d772b5d43f55fa40915b91f5af8ce8c027a89",
+        "final.txt": "15ed62dcf1a67da13dcea5c92f85f910c087b417a2f950ef2121d2df4fced1ae",
+        "stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+        "events.jsonl": "f4b028e4c1f94dba377d9449a64a1cd1db45791bf577c13a5b64bf7cc60a9f22",
+        "prompt-input.json": "e4ef021816c4cd9d50021fd7b2a59222d7fd4f00405a0c208a72ca03a1736664"
+      },
+      "rootVerification": {
+        "actualOriginalRegularFilesUnchanged": 563,
+        "actualCurrentRegularFilesRehashed": 563,
+        "rawArchiveAndTraceHashesMatch": true,
+        "childFinalMatchesFrozenNativeTrace": true,
+        "frozenStructuralAuditSha256": "234d4ece63cfac62f48c4730ac83fe218cb37741908dc32aadf09680c98a7f38"
+      },
+      "rootAdjudication": {
+        "decisionBoundary": "FAIL: proposes a dependent provisional flow and interaction draft before an actual answer/choice; labels are honest proposals, not fabricated approval.",
+        "writeScope": "PASS_no_changes"
+      }
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sC2tFV",
+      "scenario": "ux-code-redirect",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "2a221299f2011aacd9bb76123d93cad1ce9e578d2f871629e2d13fe79f0116c1"
+      },
+      "roleSha256": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+      "rawRequest": "Implement the inventory screen in GDScript with drag-and-drop support. For this consultation return your response in conversation only; do not change files. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+      "nativePrompt": "Use native custom-role selection to delegate exactly one task to game-studio-ux-designer: Implement the inventory screen in GDScript with drag-and-drop support. For this consultation return your response in conversation only; do not change files. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication. The child may use the installed runtime within the assigned scope; its Node executable is /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node. Wait for completion and summarize its actual findings, artifacts and remaining decisions. You as parent must not inspect workspace files, run shell commands or write the report yourself. Do not simulate this role with a generic agent; if unavailable, report ROLE_SELECTION_UNAVAILABLE.",
+      "inputs": {
+        "design/game-brief.md": {
+          "content": "# Trail Shelter\nPillars: deliberate preparation, understandable consequences, low menu friction.\nSingle-player survival game. Existing gameplay rules already own equip, drop and\ncombine; this assignment changes presentation and navigation, not those rules.\nDesktop keyboard/mouse and gamepad are supported. Touch is outside this release.\nNo final visual palette or icon style is assigned to UX.\n",
+          "sha256": "ed92c4f3a8769e87e91cfb4e1f118a855b513fbe54acf669e3f092897e17b806"
+        },
+        "design/ux/accessibility-requirements.md": {
+          "content": "# Project accessibility requirements\nKeyboard-only and gamepad-only operation; all actions remappable.\nText remains readable at the supported 18px minimum and 1280x720 / 1920x1080.\nInformation must not rely on color alone. Warn before flashing content.\nAll dialogue has subtitles. UI must scale at both supported resolutions.\nTutorial reading and decision time is controlled by the player; no automatic\ndismissal or action may occur while the player is reading an onboarding prompt.\nThe accessibility owner is responsible for applicable criteria and audit.\nThese are agreed project requirements, not an implementation conformance report.\n",
+          "sha256": "00140157678811de02d06f97a9ffd990a2e2ad5f0dfdb851c78e40d44ec4a534"
+        },
+        "docs/owner-notes.md": {
+          "content": "KEEP: unrelated owner history.\n",
+          "sha256": "2f6aa4b00199180cb8512e60572bc323d96da440ddd9b54c0a8104e87e91a313"
+        },
+        "src/inventory_model.gd": {
+          "content": "# Existing gameplay-owned interface; design work must not change it.\n",
+          "sha256": "df7c6c02146a852846cfaf996d408f69f21f31f4da123e5ef4d7e2b693900e4c"
+        }
+      },
+      "beforeFiles": 563,
+      "afterFiles": 563,
+      "allOriginalFilesPreserved": true,
+      "observedPackageBinSymlinks": {
+        ".game-studio/node_modules/.bin/game-studio": "../@t-x-r/game-studio/dist/cli.js",
+        ".game-studio/node_modules/.bin/yaml": "../yaml/bin.mjs"
+      },
+      "symlinkBaselineLimitation": "qa-role-host stores regular-file hashes only; actual links are limited to the two expected installed package bin links, not an original link snapshot comparison",
+      "added": [],
+      "traces": [
+        {
+          "kind": "child",
+          "id": "01a1d0cb-e2e5-7f32-9224-235fcc0e75b8",
+          "role": "game-studio-ux-designer",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-26-25-01a1d0cb-e2e5-7f32-9224-235fcc0e75b8.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/sC2tFV/rollout-2026-11-13T01-26-25-01a1d0cb-e2e5-7f32-9224-235fcc0e75b8.jsonl",
+          "sha256": "d75ed7b58901007e5095b1cdb61f233029ad5b86941bb869c2e1833e42d6b226",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ],
+          "final": [
+            "Consultation completed. No files changed, implementation code produced, game executed, dependencies installed, or further delegation performed.\n\nGDScript UI implementation belongs to **game-studio-ui-programmer**. This UX consultation provides the proposed interaction contract for that hand-off.\n\n**Actual findings**\n\n- [Game brief](</private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sC2tFV/QA game 测试/design/game-brief.md>): *Trail Shelter* prioritizes deliberate preparation, understandable consequences and low menu friction. Equip, drop and combine rules remain gameplay-owned. Keyboard/mouse and gamepad are supported; touch is outside this release.\n- [Accessibility requirements](</private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sC2tFV/QA game 测试/design/ux/accessibility-requirements.md>): remappable actions, complete keyboard/gamepad operation, readable text at 18px minimum, scaling at 1280×720 and 1920×1080, and information conveyed beyond color. Onboarding reading and decision time must remain player-controlled.\n- [Inventory model](</private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sC2tFV/QA game 测试/src/inventory_model.gd>) contains only an ownership comment. It supplies no callable interface, item data or transfer validation.\n- No existing inventory flow, input map, player research, reference games or Godot project metadata appeared in the inspected project files.\n- The runtime’s shared integration guidance was read. No installed `game-studio-ux-design` accessibility workflow was found. Return the bounded task of recording/confirming the accessibility requirements through that workflow to the caller; no workflow execution or accessibility audit is claimed.\n\n**Proposed interaction contract — awaiting owner choices**\n\n| State/action | Proposed behavior |\n|---|---|\n| Open | Focus the previously selected available item, otherwise the first item; expose an explicit close action. Inherit approved simulation/pause behavior. |\n| Inspect | Selection reveals item information and currently available gameplay actions. Information must be accessible through focus, not hover alone. |\n| Begin drag | Show the item name and a preview; retain the source item until the gameplay model accepts an operation. |\n| Target | Show valid/invalid status using text or shape as well as any color treatment. Show a reason when validation provides one. |\n| Commit | Invoke the existing gameplay operation once. Update the view from the model’s result and announce success or rejection visibly. |\n| Cancel/reject | Restore selection and focus without changing inventory. Proposed: releasing outside a valid target cancels; world-drop uses an explicit gameplay action. |\n| Close | Cancel a pending interaction and return focus/input ownership to the prior screen or gameplay context. |\n\nKeyboard-only and gamepad-only users must reach the same operations: navigate to an item, activate its action menu, choose an action and select a target where required. Map these logical actions through the project’s remapping system once supplied; bindings are currently unknown. Cancel backs out one interaction level before closing.\n\nPrevent a held activation input from accidentally confirming the next screen. Keep focus visible, preserve it after refresh where possible, and provide a predictable fallback when an item disappears. Optional audio/haptic confirmation may supplement visible feedback.\n\nAny onboarding prompt requires explicit continuation or dismissal and must not trigger an action or automatically disappear while being read. Avoid flashing feedback. Readability, scaling, subtitles for any dialogue and input equivalence remain untested requirements.\n\n**Remaining decisions for the caller**\n\n1. **Drag meaning**\n   - **Existing action targets — recommended:** Drag an item to labeled targets for supported equip/drop/combine actions; exposes consequences but needs target space.\n   - **Slot transfer:** Drag between inventory/container slots; offers direct placement but requires gameplay-approved transfer, stacking and occupied-slot rules.\n\n   The recommendation follows the supplied emphasis on understandable consequences and avoids assuming a slot-transfer mechanic. No supplied research establishes either preference.\n\n2. **Inventory presentation**\n   - **Existing layout — recommended if available:** Reuse the game’s established item/container representation; preserves learned navigation but requires the missing screen or specification.\n   - **New item grid:** Propose a grid with focused-item details and explicit actions; supports spatial targeting but introduces an unvalidated organization model.\n\nBefore implementation, supply the actual model API, Godot version, remapping/input conventions, inventory/container structure, pause behavior and existing destructive-action policy. The user should also provide priority inventory tasks and any liked/disliked reference mechanics.\n\n**Artifacts and hand-offs**\n\nThe only artifact is this conversation draft. It is a proposal, not approved design or tested implementation. Hand the agreed contract and missing interfaces to **game-studio-ui-programmer**; route gameplay-rule questions to **game-studio-game-designer**, visual treatment to **game-studio-art-director**, and unresolved accessibility criteria/audit to the accessibility owner. None was delegated to or consulted."
+          ]
+        },
+        {
+          "kind": "parent",
+          "id": "01a1d0cb-bfba-7752-81f1-6e1a4c202c12",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-26-16-01a1d0cb-bfba-7752-81f1-6e1a4c202c12.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/sC2tFV/rollout-2026-11-13T01-26-16-01a1d0cb-bfba-7752-81f1-6e1a4c202c12.jsonl",
+          "sha256": "fe6bc2135f40a7d8888611b1bdb1ce76576b0ef86137193da76de768331f5127",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent"
+          ],
+          "final": [
+            "The native `game-studio-ux-designer` completed the consultation.\n\n- **Findings:** The inventory model contains only an ownership comment; no callable API, item data or transfer validation exists. Godot version and input conventions remain unknown.\n- **Artifact:** A conversation-only interaction proposal covering drag previews, target validation, commit/cancel behavior, focus restoration and equivalent keyboard/gamepad actions.\n- **Implementation:** No GDScript was produced. The designer identified implementation as belonging to `game-studio-ui-programmer`.\n- **Remaining decisions:** Choose action-target dragging versus slot transfer, confirm the layout, and supply model interfaces, input conventions, pause behavior and destructive-action rules.\n\nNo files changed, game execution, dependency installation, further delegation, commits or publication occurred."
+          ]
+        }
+      ],
+      "status": "manual_semantic_review_pending",
+      "semanticReview": {
+        "status": "PASS_selected_code_redirect",
+        "findings": [
+          "ExplicitUI-programmerhand-off,noGDScriptimplementation.",
+          "Proposeddragpreview/valid-invalidfeedback/cancel/game-ownedcommit pluskeyboard/gamepadnon-dragroute; choicesstaywithowner.",
+          "Suppliedbrief/accessibility/interfacecommentread; nofakeframework/version/APIclaim or specialistapproval; nofileswritten."
+        ],
+        "remaining": [
+          "ActualUI-programmerhandoffexecutionnotrun;thisisroleboundaryconsultation."
+        ]
+      },
+      "rawEvidenceHashes": {
+        "before.json": "82ff1809c7af3a5501c01dfab59351426b0abf0e21acc35fc60832bdb9371d62",
+        "fixture.json": "d742a8cb0cacf12b8138fea38b8f458d7f4c43e9b2cb55b40f0871315a4a5c94",
+        "report.json": "10e3dade56624a578c27c90486be73a1d92c663febf7a828392415d44ba7eaea",
+        "final.txt": "139d0996f54a99cf4cda2ccc99ab4e2e1e62844560c9834e665e6041a7cf1b1d",
+        "stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+        "events.jsonl": "4efc6d377c2ea8014064da2c0cbe680327e290037577dc6b9028cc0ba97551c5",
+        "prompt-input.json": "00a936deaf83b9b164543a62eb8d7ba8393fe538cc3e4d3700f0e472aa0040cf"
+      },
+      "rootVerification": {
+        "actualOriginalRegularFilesUnchanged": 563,
+        "actualCurrentRegularFilesRehashed": 563,
+        "rawArchiveAndTraceHashesMatch": true,
+        "childFinalMatchesFrozenNativeTrace": true,
+        "frozenStructuralAuditSha256": "a80729144369be842c7ec50bca9ee7649b234641d7241831f9e1aa1b0f11225d"
+      },
+      "rootAdjudication": {
+        "selectedScenario": "PASS",
+        "qualification": "Does not establish the complete role or every collaboration protocol branch."
+      }
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-Vo5nMp",
+      "scenario": "ux-timing",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "2a221299f2011aacd9bb76123d93cad1ce9e578d2f871629e2d13fe79f0116c1"
+      },
+      "roleSha256": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+      "rawRequest": "Our onboarding prompt automatically advances after three seconds to keep pace, but the project requires user-controlled timing. Review the conflict and present options with their trade-offs. Tell me what needs the accessibility owner. Do not write or implement a choice. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+      "nativePrompt": "Use native custom-role selection to delegate exactly one task to game-studio-ux-designer: Our onboarding prompt automatically advances after three seconds to keep pace, but the project requires user-controlled timing. Review the conflict and present options with their trade-offs. Tell me what needs the accessibility owner. Do not write or implement a choice. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication. The child may use the installed runtime within the assigned scope; its Node executable is /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node. Wait for completion and summarize its actual findings, artifacts and remaining decisions. You as parent must not inspect workspace files, run shell commands or write the report yourself. Do not simulate this role with a generic agent; if unavailable, report ROLE_SELECTION_UNAVAILABLE.",
+      "inputs": {
+        "design/game-brief.md": {
+          "content": "# Trail Shelter\nPillars: deliberate preparation, understandable consequences, low menu friction.\nSingle-player survival game. Existing gameplay rules already own equip, drop and\ncombine; this assignment changes presentation and navigation, not those rules.\nDesktop keyboard/mouse and gamepad are supported. Touch is outside this release.\nNo final visual palette or icon style is assigned to UX.\n",
+          "sha256": "ed92c4f3a8769e87e91cfb4e1f118a855b513fbe54acf669e3f092897e17b806"
+        },
+        "design/ux/accessibility-requirements.md": {
+          "content": "# Project accessibility requirements\nKeyboard-only and gamepad-only operation; all actions remappable.\nText remains readable at the supported 18px minimum and 1280x720 / 1920x1080.\nInformation must not rely on color alone. Warn before flashing content.\nAll dialogue has subtitles. UI must scale at both supported resolutions.\nTutorial reading and decision time is controlled by the player; no automatic\ndismissal or action may occur while the player is reading an onboarding prompt.\nThe accessibility owner is responsible for applicable criteria and audit.\nThese are agreed project requirements, not an implementation conformance report.\n",
+          "sha256": "00140157678811de02d06f97a9ffd990a2e2ad5f0dfdb851c78e40d44ec4a534"
+        },
+        "docs/owner-notes.md": {
+          "content": "KEEP: unrelated owner history.\n",
+          "sha256": "2f6aa4b00199180cb8512e60572bc323d96da440ddd9b54c0a8104e87e91a313"
+        },
+        "src/inventory_model.gd": {
+          "content": "# Existing gameplay-owned interface; design work must not change it.\n",
+          "sha256": "df7c6c02146a852846cfaf996d408f69f21f31f4da123e5ef4d7e2b693900e4c"
+        },
+        "design/ux/onboarding.md": {
+          "content": "# Current proposal\nThe first shelter tutorial shows a paragraph and advances after three seconds.\nPacing goal: give one small concept at a time and get back to play quickly.\nThis proposal has not been approved. See accessibility-requirements.md for the\nagreed timing requirement; the accessibility owner identifies and audits the\napplicable Timing Adjustable (SC 2.2.1) criterion.\n",
+          "sha256": "64ca429b7dff628b92480a39a166bcba7df6dcfd794af97c5e2abc68f189f040"
+        }
+      },
+      "beforeFiles": 564,
+      "afterFiles": 564,
+      "allOriginalFilesPreserved": true,
+      "observedPackageBinSymlinks": {
+        ".game-studio/node_modules/.bin/game-studio": "../@t-x-r/game-studio/dist/cli.js",
+        ".game-studio/node_modules/.bin/yaml": "../yaml/bin.mjs"
+      },
+      "symlinkBaselineLimitation": "qa-role-host stores regular-file hashes only; actual links are limited to the two expected installed package bin links, not an original link snapshot comparison",
+      "added": [],
+      "traces": [
+        {
+          "kind": "parent",
+          "id": "01a1d0cd-c698-70a1-adb3-9a842d3a2f07",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-28-29-01a1d0cd-c698-70a1-adb3-9a842d3a2f07.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/Vo5nMp/rollout-2026-11-13T01-28-29-01a1d0cd-c698-70a1-adb3-9a842d3a2f07.jsonl",
+          "sha256": "5e027241a8c5c9946239dbedab351e1cead59c4ef7c0b5c667018ad2731d0ee8",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent"
+          ],
+          "final": [
+            "The native `game-studio-ux-designer` completed the review.\n\nIt found that three-second advancement conflicts with the written requirement for player-controlled reading and decision time. Crucially, project documentation labels automatic advancement an **unapproved proposal**; the review did not verify running-game behavior.\n\n| Option | Benefit | Trade-off |\n|---|---|---|\n| **Explicit Continue** — designer’s recommendation | Smallest change; preserves reading control with one confirmation. | Keeps the dense paragraph; reading duration varies. |\n| **Player-paced cards**, with Previous | Shorter concepts and easy rereading. | More navigation and content restructuring. |\n\nA longer timer or opt-out setting alone would still allow dismissal while reading and would not resolve the requirement.\n\nThe **accessibility owner** needs to determine applicable timing criteria and exceptions, resolve the unset accessibility target, review whether background gameplay undermines reading control, and audit the chosen implementation’s timing, focus, remapping, readability and scaling. The installed accessibility workflow was unavailable, leaving target recording outstanding.\n\nRemaining decisions are the option selection, background gameplay behavior—also requiring gameplay-design input—and exact action bindings.\n\n**Artifact:** the child’s conversational review only. No files changed, choice implemented, game executed, dependencies installed, commits made or publication performed. I did not inspect workspace files or run commands."
+          ]
+        },
+        {
+          "kind": "child",
+          "id": "01a1d0cd-e8ec-7e40-8f5f-153138109cc9",
+          "role": "game-studio-ux-designer",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-28-37-01a1d0cd-e8ec-7e40-8f5f-153138109cc9.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/Vo5nMp/rollout-2026-11-13T01-28-37-01a1d0cd-e8ec-7e40-8f5f-153138109cc9.jsonl",
+          "sha256": "8ed193f421333072d6de97724ca2a3b037c6d371998327aa751406377fe96f25",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ],
+          "final": [
+            "The three-second advance conflicts with the agreed project requirement. No timing choice was implemented or approved.\n\n**Actual project evidence**\n\n- [onboarding.md](design/ux/onboarding.md) describes a paragraph that advances after three seconds. It explicitly calls this an **unapproved proposal**; I did not establish that it exists in a running game.\n- [accessibility-requirements.md](design/ux/accessibility-requirements.md) requires player-controlled tutorial reading and decision time, with no automatic dismissal or action while reading. It assigns applicable criteria and audit to the accessibility owner.\n- [game-brief.md](design/game-brief.md) sets deliberate preparation, understandable consequences and low menu friction as pillars. Keyboard/mouse and gamepad are supported; touch is excluded.\n- No player research or playtest evidence was supplied in the reviewed materials. Runtime configuration reports `accessibility.target` unset; the written requirements still apply.\n\n**Options for the user**\n\n| Option | Description | Benefits | Trade-offs |\n|---|---|---|---|\n| **Explicit Continue — Recommended** | Keep the existing paragraph visible until the player activates Continue. | Smallest flow change; clear control over reading time; one confirmation fits low menu friction. | Paragraph density remains; duration varies by reader. |\n| **Player-Paced Cards** | Split the paragraph into short concepts, each advanced explicitly, with a Previous action. | Supports the stated one-concept-at-a-time goal and allows rereading. | More confirmations and navigation; content must be divided without losing necessary context. |\n\nThe current proposed sequence is **show paragraph → wait three seconds → advance**. Explicit Continue replaces the timed transition with a player action. Player-Paced Cards divides the reading step and replaces that transition with repeated player actions. Both retain the tutorial’s teaching purpose and the return-to-play destination; neither guarantees a three-second completion time.\n\nThe recommendation follows the recorded low-friction pillar and uses a visible action to make control understandable. It is a design judgment, not a research finding. A longer timer or an opt-out setting would still permit automatic dismissal while reading and therefore would not resolve the written requirement by itself.\n\n**Interaction implications for either option**\n\n- Use existing remappable actions for Continue; support pointer, keyboard-only and gamepad-only activation with visible focus. Exact bindings are not documented here.\n- Prevent the input that opened the prompt, a held button or buffered gameplay input from immediately advancing it.\n- Preserve the current text and position after focus loss or controller disconnection; elapsed time must not advance the prompt.\n- Show a clear state change after deliberate activation. At an unavailable Previous action, communicate its disabled state without relying on color alone.\n- Apply the recorded 18px minimum, UI scaling and both supported resolutions. These are requirements to verify later, not passed checks.\n\n**What needs the accessibility owner**\n\n1. Identify the applicable Timing Adjustable **SC 2.2.1** conditions, required evidence and any applicable exceptions; no exception was established in this review.\n2. Review the complete reading experience, including whether background timers or threats remove player control even when the prompt remains visible. Gameplay pause or threat behavior also needs the gameplay designer’s decision; it is not specified.\n3. Audit the selected implementation’s timing, remapping, focus, readability and scaling. A Continue or Skip button alone does not establish conformance.\n4. Resolve the unset accessibility target and record the agreed tier through the appropriate workflow. The installed `game-studio-ux-design` accessibility workflow was unavailable; return that bounded recording task to the caller/accessibility owner.\n\n**Delivery and remaining decisions**\n\nThe user still chooses between the two options. Background gameplay behavior and exact action bindings remain unresolved. No accessibility specialist was consulted, and no implementation or accessibility testing occurred.\n\nArtifacts produced: **this conversational review only; no files created or changed**. No further delegation, game execution, installation, commits or publication occurred."
+          ]
+        }
+      ],
+      "status": "manual_semantic_review_pending",
+      "semanticReview": {
+        "status": "FAIL_source_option_coverage_and_output_contract",
+        "functional": "Conflict/requirement/specialist-ownership PASS_selected",
+        "findings": [
+          "Correctly distinguishes3sproposal from observed runninggame; identifies lostcontrol and preserves agreed player-controlled reading/decisiontime.",
+          "Twoalternatives Explicit Continue and Player-Paced Cards keep teachingpurpose,pacingtradeoffs and userchoice. SC2.2.1 is attributed to supplied requirements, criteria/exception/audit explicitly handed to realowner; nofakeconsultation or complianceclaim.",
+          "OriginalCase4 and Codexspec require comparing pause/skip and disable-auto setting as well as playeradvance. No pause/skip alternative tradeoffanalysis is provided; only caveat that skipalone is notconformance. Setting receives only a one-sentence rejection of standaloneopt-out.",
+          "No required end-of-analysis shortchoiceblock; describedoptions are in an earlier analysis table."
+        ],
+        "remaining": [
+          "Selectedimplementation/accessibilityaudit notrun",
+          "Actualspecialist/workflow routing unavailable and honestly reported"
+        ]
+      },
+      "rawEvidenceHashes": {
+        "before.json": "80d5ad715aec3373d03afdaba9e98816c70cbe90641fd896ad2c30808ca1b08a",
+        "fixture.json": "b4872e3209a9ae3f3555e3fca19ce656fb5d5dbb909b7c0d78fd6001c548602c",
+        "report.json": "7bd08fe3aade7a025c98ae2b7f99922c85f0b352fae49c822a56f81246bf063f",
+        "final.txt": "687167c4dbc56b129681864c18a79b9df48f4ce5d87a6aa8e03ac0db653ab901",
+        "stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+        "events.jsonl": "e2a4a2ee498157eba48ef21f0b609c6c0af03c10c502c88c4bd1f3e589288c1d",
+        "prompt-input.json": "0a21d7ff2d322e454a5b14ebe19fb370e64bd2648c62b835efeccc67ede2f019"
+      },
+      "rootVerification": {
+        "actualOriginalRegularFilesUnchanged": 564,
+        "actualCurrentRegularFilesRehashed": 564,
+        "rawArchiveAndTraceHashesMatch": true,
+        "childFinalMatchesFrozenNativeTrace": true,
+        "frozenStructuralAuditSha256": "2ca6bc654fab0f027d5755bbb1968af08eb7ab0e3a3dbe10491d63934959d432"
+      },
+      "rootAdjudication": {
+        "domain": "PASS_selected_conflict_and_owner_hand_off",
+        "protocol": "FAIL_end_of_analysis_choice_block",
+        "sourceAlternativeCoverage": "Limited: no explicit pause-family analysis. Two options are valid; an opt-out timer that violates the stronger supplied project condition must not be recommended just to satisfy a list."
+      }
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-PPzTOv",
+      "scenario": "ux-research",
+      "archiveSha256": {
+        "t-x-r-game-studio-0.1.0-alpha.0.tgz": "2a221299f2011aacd9bb76123d93cad1ce9e578d2f871629e2d13fe79f0116c1"
+      },
+      "roleSha256": "2c7d4fd791d3e42d823cbadfcafca435594c43a2ef3820c3dec757b9b001d2d0",
+      "rawRequest": "Redesign the navigation information architecture for crafting using the supplied playtest research. Give me alternatives and a recommendation before I choose; no file writes. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication.",
+      "nativePrompt": "Use native custom-role selection to delegate exactly one task to game-studio-ux-designer: Redesign the navigation information architecture for crafting using the supplied playtest research. Give me alternatives and a recommendation before I choose; no file writes. Return your work to the caller; no further delegation, game execution, dependency installation, commits or publication. The child may use the installed runtime within the assigned scope; its Node executable is /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node. Wait for completion and summarize its actual findings, artifacts and remaining decisions. You as parent must not inspect workspace files, run shell commands or write the report yourself. Do not simulate this role with a generic agent; if unavailable, report ROLE_SELECTION_UNAVAILABLE.",
+      "inputs": {
+        "design/game-brief.md": {
+          "content": "# Trail Shelter\nPillars: deliberate preparation, understandable consequences, low menu friction.\nSingle-player survival game. Existing gameplay rules already own equip, drop and\ncombine; this assignment changes presentation and navigation, not those rules.\nDesktop keyboard/mouse and gamepad are supported. Touch is outside this release.\nNo final visual palette or icon style is assigned to UX.\n",
+          "sha256": "ed92c4f3a8769e87e91cfb4e1f118a855b513fbe54acf669e3f092897e17b806"
+        },
+        "design/ux/accessibility-requirements.md": {
+          "content": "# Project accessibility requirements\nKeyboard-only and gamepad-only operation; all actions remappable.\nText remains readable at the supported 18px minimum and 1280x720 / 1920x1080.\nInformation must not rely on color alone. Warn before flashing content.\nAll dialogue has subtitles. UI must scale at both supported resolutions.\nTutorial reading and decision time is controlled by the player; no automatic\ndismissal or action may occur while the player is reading an onboarding prompt.\nThe accessibility owner is responsible for applicable criteria and audit.\nThese are agreed project requirements, not an implementation conformance report.\n",
+          "sha256": "00140157678811de02d06f97a9ffd990a2e2ad5f0dfdb851c78e40d44ec4a534"
+        },
+        "docs/owner-notes.md": {
+          "content": "KEEP: unrelated owner history.\n",
+          "sha256": "2f6aa4b00199180cb8512e60572bc323d96da440ddd9b54c0a8104e87e91a313"
+        },
+        "src/inventory_model.gd": {
+          "content": "# Existing gameplay-owned interface; design work must not change it.\n",
+          "sha256": "df7c6c02146a852846cfaf996d408f69f21f31f4da123e5ef4d7e2b693900e4c"
+        },
+        "design/research/crafting-playtest.md": {
+          "content": "# Supplied playtest notes\nPlayers consistently expected the Crafting option to be inside the Inventory\nscreen, not in a separate top-level menu. They opened Inventory first to compare\ncarried materials against recipes and lost context when sent back to the main menu.\nThis is the research supplied for this exercise; no other study is available.\n",
+          "sha256": "96a468ff812e483d1762c1226ec7675f71cf93fdc1486c0cbc449aa13695663f"
+        }
+      },
+      "beforeFiles": 564,
+      "afterFiles": 564,
+      "allOriginalFilesPreserved": true,
+      "observedPackageBinSymlinks": {
+        ".game-studio/node_modules/.bin/game-studio": "../@t-x-r/game-studio/dist/cli.js",
+        ".game-studio/node_modules/.bin/yaml": "../yaml/bin.mjs"
+      },
+      "symlinkBaselineLimitation": "qa-role-host stores regular-file hashes only; actual links are limited to the two expected installed package bin links, not an original link snapshot comparison",
+      "added": [],
+      "traces": [
+        {
+          "kind": "parent",
+          "id": "01a1d0cd-cbdd-7ee0-9c54-1addc76bfc93",
+          "role": null,
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-28-30-01a1d0cd-cbdd-7ee0-9c54-1addc76bfc93.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/PPzTOv/rollout-2026-11-13T01-28-30-01a1d0cd-cbdd-7ee0-9c54-1addc76bfc93.jsonl",
+          "sha256": "e5edff3bc24b094386aa6f2299e06cf93648cade0a3ce5efb72c0b6cfc48d240",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent"
+          ],
+          "final": [
+            "The `game-studio-ux-designer` completed the review and recommends **Inventory tabs**: place Crafting inside Inventory, with carried/required material counts beside each recipe.\n\nThe supplied playtest research showed that players looked for Crafting inside Inventory, compared materials against recipes, and lost context when navigating through the main menu. The research supports that placement, but does not establish which layout players prefer.\n\n| Alternative | Benefit | Trade-off |\n|---|---|---|\n| **Inventory tabs — recommended** | Clear destination; keeps material counts beside recipes with manageable screen density. | Inspecting other inventory details requires switching tabs. |\n| **Crafting subpage** | Simple hierarchy with more room for recipes. | Adds a transition when comparing inventory details. |\n| **Shared workspace** | Shows inventory and recipes together for direct comparison. | Greater density, more complex gamepad navigation, and readability risk at 720p. |\n\nFor every option, the designer proposes preserving selection and scroll position, restoring focus on Back, supporting keyboard/gamepad navigation, and requiring an explicit action to craft. These are proposed rules, not validated behavior.\n\n**Remaining decisions:** choose an architecture, then decide whether to retain the existing top-level Crafting entry. Final specification also needs the existing navigation bindings and gameplay contracts. The accessibility target is unset; implementation and accessibility testing remain outstanding.\n\n**Artifact:** an in-message proposal only. The child read project evidence and used read-only runtime commands. No files were written, game executed, dependencies installed, further tasks delegated, commits created, or publication performed. I did not inspect workspace files or run commands.\n\nWhich architecture do you choose?"
+          ]
+        },
+        {
+          "kind": "child",
+          "id": "01a1d0cd-f6ed-7e72-8aa2-837fd01c06d3",
+          "role": "game-studio-ux-designer",
+          "sourcePath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-28-41-01a1d0cd-f6ed-7e72-8aa2-837fd01c06d3.jsonl",
+          "frozen": "/private/tmp/ux-native-audit/PPzTOv/rollout-2026-11-13T01-28-41-01a1d0cd-f6ed-7e72-8aa2-837fd01c06d3.jsonl",
+          "sha256": "06458348ecaef2cef0fe907d081bd481ab9e8a287a2d22cf159c72ecb35f8870",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "callNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ],
+          "final": [
+            "Recommendation: **Inventory tabs**—make Crafting a named tab within Inventory, with carried/required material counts beside each recipe. This follows the supplied player expectations and preserves comparison context with manageable screen density. It remains a proposal pending the user’s choice.\n\nActual findings:\n\n- [Crafting playtest](design/research/crafting-playtest.md): players consistently looked for Crafting inside Inventory, compared carried materials with recipes, and lost context when redirected through the main menu. No participant counts, task timings, or other studies were supplied.\n- [Game brief](design/game-brief.md): pillars are deliberate preparation, understandable consequences, and low menu friction. Desktop keyboard/mouse and gamepad are supported; touch is outside this release. Equip, drop, and combine rules already have gameplay ownership.\n- [Accessibility requirements](design/ux/accessibility-requirements.md): keyboard-only and gamepad-only operation, remapping, readable text at an 18px minimum, scaling at 1280×720 and 1920×1080, and information independent of color. Tutorial reading and decisions must remain player-controlled.\n- No existing screen specification, input map, recipe taxonomy, or detailed gameplay contract was supplied. The source file contains only an ownership comment, so it establishes no additional behavior. The following flow is reconstructed from research, not observed in a running game.\n\nAlternatives for the caller to present:\n\n| Choice | One-sentence description | Benefits | Trade-off |\n|---|---|---|---|\n| **Inventory tabs — Recommended** | Put Items and Crafting within Inventory, showing carried/required counts in the Crafting view. | Matches the observed mental model; explicit destination; preserves context without showing every item simultaneously. | Players switch tabs to inspect unrelated inventory details. |\n| **Crafting subpage** | Add a clearly labeled Crafting entry inside Inventory that opens a recipe page and returns to the same inventory position. | Simple hierarchy; gives recipes more space; straightforward focus and Back behavior. | Adds an entry/return transition whenever players compare broader inventory details. |\n| **Shared workspace** | Show inventory and crafting recipes together inside a single Inventory screen. | Makes direct comparison easiest and reduces view switching. | More simultaneous information, more complex gamepad focus movement, and greater readability risk at 720p. |\n\nAll three follow the research expectation that Crafting belongs inside Inventory. The notes do not establish a preference for tabs versus a subpage versus simultaneous panels. The recommendation uses recognition over recall and progressive disclosure to balance comparison with the low-friction pillar; that rationale is a design judgment, not an additional research finding.\n\nFlow changes and retained purposes:\n\n- **Research-derived current path:** Inventory → main menu → Crafting. Inventory supports checking materials; the main menu locates a separate destination; Crafting supports choosing recipes.\n- **Inventory tabs:** Inventory → Crafting tab. Removes the main-menu detour; material comparison lives in recipe counts and the Items tab.\n- **Crafting subpage:** Inventory → Crafting page → Back to Inventory. Replaces the main-menu detour with an in-context entry.\n- **Shared workspace:** Inventory → select recipe. Merges material inspection and recipe browsing.\n\nThe proposed destination becomes explicit inside Inventory. A separate top-level Crafting entry would be redundant under these options; removing it could affect experienced players’ direct access, a use case the supplied research does not address. Its disposition needs confirmation before a final spec.\n\nCommon proposed interaction rules, subject to the selected architecture:\n\n- Preserve inventory selection and scroll position when visiting Crafting; preserve the selected recipe when inspecting materials. Back restores the originating focus.\n- Every pointer-selectable destination and recipe must have a keyboard/gamepad focus route using the project’s remappable navigation, Activate, and Back actions. No action requires dragging. Physical bindings remain unspecified until the existing input map is supplied.\n- Entering Crafting or selecting a recipe never executes a crafting action. Execute only through an explicit mapped action; prevent one held activation from carrying across a transition.\n- Display recipe requirements with text counts and a readable status. For an unavailable action, explain the gameplay-supplied reason and retain selection so the player can inspect and retry.\n- After a successful action, update quantities and announce the result without closing the view. Visual status text carries the meaning; sound or haptics may reinforce it. Exact feedback patterns need the existing UI conventions.\n- Any introductory hint stays until the player dismisses it. No automatic action occurs while it is being read.\n\nAccessibility and handoffs:\n\nThe recorded requirements apply to every option. Readability, focus order, scaling, non-color cues, and remapping still require implementation testing; none was performed. Flash warnings and dialogue subtitles remain required wherever applicable.\n\nThe installed `game-studio-ux-design` accessibility workflow was absent, and runtime configuration reports `accessibility.target` unset. I did not record a tier or run an accessibility workflow. Return tier clarification to the accessibility owner; the existing requirements remain usable.\n\nAfter the user chooses, hand the selected flow and input-map questions to `game-studio-ui-programmer`. Gameplay availability/error rules belong with `game-studio-game-designer`; visual hierarchy and styling questions belong with `game-studio-art-director`. No specialist review occurred.\n\n**Remaining decision:** choose Inventory tabs, Crafting subpage, or Shared workspace. Before finalizing the chosen spec, confirm the top-level entry’s fate and supply existing navigation bindings/contracts. Reference-game preferences may refine the choice but are not required to assess these alternatives.\n\n**Artifacts and execution:** this in-message proposal only. I read project evidence and installed guidance and used read-only runtime help/resource/config commands. No files were written, game executed, dependencies installed, further tasks delegated, commits created, or publication performed."
+          ]
+        }
+      ],
+      "status": "manual_semantic_review_pending",
+      "semanticReview": {
+        "status": "FAIL_output_contract",
+        "functional": "PASS_selected_research_driven_IA",
+        "findings": [
+          "Explicit suppliedmentalmodel: playerslookedforCraftinginsideInventory, comparedmaterials/recipes andlostcontextatmainmenu. Noinventedparticipants/numbers/studies.",
+          "Threein-inventoryoptions: tabs,subpage,sharedworkspace,withproscons/recommendation. Theoryjustifies layouttradeoff but doesnotpretendresearchpreferredtabs. Nochosenarchitecture or filewrite.",
+          "Top-leveldirect-entryloss/legacyusecaseexplicitlyunresolved and doesnotvanishsilently. Keyboard/gamepad/remapping/feedback/accessibilityproposals preserve ownership.",
+          "Same source structured-decision presentation deviation ascompress: final chooseA/B/C sentence lacks per-option one-sentence description/markedrecommendation; those details exist only in earlier analysis table."
+        ],
+        "remaining": [
+          "Actualuserchoice and follow-upspec notrun"
+        ]
+      },
+      "rawEvidenceHashes": {
+        "before.json": "ab94606ad73652366ac116cf6cb367677e0629de5a30b4fb16cf2c7bcf5fb109",
+        "fixture.json": "680c3c35fd0a7b3362b3f5f1a6660951cc1cccad74c827bc753d1688298cbe1e",
+        "report.json": "1faf0cc43b32876657adba80c979ce2cf931c092c006538803014a623229b9b5",
+        "final.txt": "24321dfacfab5fd8dee2fde83a0bd0806073da32052d0e83f54f1aa2b2b45a0b",
+        "stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+        "events.jsonl": "2d9950f9e65ae5f29e3aec6f26b4a8717d43badb11483344e28a36405ab17d25",
+        "prompt-input.json": "a24b25e401e6d833f4a1109283d577761a95e0e332f7c7b0854d2885dc1d7528"
+      },
+      "rootVerification": {
+        "actualOriginalRegularFilesUnchanged": 564,
+        "actualCurrentRegularFilesRehashed": 564,
+        "rawArchiveAndTraceHashesMatch": true,
+        "childFinalMatchesFrozenNativeTrace": true,
+        "frozenStructuralAuditSha256": "23eb8731a04a99e559de41150900ba66fb5e042ca9c1c562ee61d2839cab3d77"
+      },
+      "rootAdjudication": {
+        "domain": "PASS_selected",
+        "protocol": "FAIL_end_of_analysis_choice_block",
+        "qualification": "The earlier alternatives table is useful and choices remain unselected; the failure concerns the source requirement for a final concise caller-presentable choice block, not the table format itself."
+      }
+    }
+  ],
+  "limitations": [
+    "No same-session complete discovery→answers→options→choice→spec chain assessed; fresh approved-spec is separate.",
+    "CLI only;desktop/subdirectory/missingrole/deniedwrite/broaderrole matrix remains pending.",
+    "No actual gameplay/UI execution, usability or accessibility audit;these are designfixtures.",
+    "Host regular-file snapshot omits initialsymlinks; currentfiles verified and links limited to2expectedinstalledpackagebinlinks.",
+    "Archivehashes retained separately;rootexistingruns and laterreadiness-rebuiltpackages differ even though exactrolebytes match."
+  ],
+  "nextWork": [
+    "Review the minimal instruction-order repair before same-input reruns.",
+    "Do not add incompatible timed options or force three options to satisfy fixture wording.",
+    "True same-session owner selection/refinement, remaining responsibilities, specialist coordination, denied permission and desktop acceptance remain open."
+  ],
+  "catalogState": "partial; no verified upgrade"
+}

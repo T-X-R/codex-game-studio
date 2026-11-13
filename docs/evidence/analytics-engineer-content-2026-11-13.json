@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A003 complete source-role translation and installed archive bytes; no native behavioral acceptance yet.",
+  "sourceHashes": {
+    ".claude/agents/analytics-engineer.md": "8e9209c41928e761c10ff0e185d2eb873195053f48aba1a1aff6668959fe424f",
+    "studio-tests/agents/operations/analytics-engineer.md": "b094b99c64563537bb0188ae8264e274dcdd692d5f8501f14b7989d3e6ddc609",
+    ".codex/agents/game-studio-analytics-engineer.toml": "dec935c6e2548321c7b0628491a2929e76cea3b600025894908408d1df20fa4c",
+    "studio-tests/roles/analytics-engineer-codex.md": "3fc8ca3e8cd002b7dab8749c90b6d7886034084fb4df8a5adb994f66df07d93b",
+    "toolkit/test/packed-smoke.mjs": "d543d69f5578a4abe6640357bd32f6bb32b0fe1b77ecd66156403d0e838d34a1"
+  },
+  "review": {
+    "author": "root",
+    "independentFullSourceRoleReview": "design_review_migration",
+    "reviewedRoleSha256": "dec935c6e2548321c7b0628491a2929e76cea3b600025894908408d1df20fa4c",
+    "finding": "No blocking source omission found. Six original cases retain event purposes/triggers, mandatory integration spec, all experiment fields, stable per-player assignment, qualitative/quantitative design ownership, explicit naming conflict and three overlap remedies. Explicitly assigned non-game pipeline work remains supported.",
+    "translation": "Guided authorization replaces repeated file approval; game-code tracking remains programmer-owned. No invented model/tool enforcement, director gate, legal certification or experiment deployment."
+  },
+  "validation": {
+    "build": "PASS",
+    "contentLint": "PASS",
+    "packedInstallExactBytesAndDetach": "PASS",
+    "native": "PENDING: model workers reached account usage limit",
+    "desktop": "PENDING",
+    "priorRuntimeRegression": "362/362 on both Node24/26 for the Markdown writer code before these content-only additions; not a new Analytics behavioral test"
+  },
+  "logs": {
+    "build": {
+      "path": "/private/tmp/game-studio-analytics-build.log",
+      "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+    },
+    "lint": {
+      "path": "/private/tmp/game-studio-analytics-lint.log",
+      "sha256": "e3f39d44034111bae43358e107b7b7ff22f186db9ee725ade200b9159f7b0af5"
+    },
+    "pack": {
+      "path": "/private/tmp/game-studio-analytics-pack.log",
+      "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+    }
+  },
+  "catalog": {
+    "partialSkills": 16,
+    "partialRoles": 14,
+    "verified": 0
+  },
+  "remaining": [
+    "Six original raw native scenarios and remaining dashboard/pipeline/funnel obligations.",
+    "Actual missing-input and owner-choice continuation, guided edits, denied-write and specialist hand-offs.",
+    "CLI/desktop full acceptance and final archive validation."
+  ]
+}

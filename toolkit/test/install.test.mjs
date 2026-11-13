@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdtemp, writeFile, readFile, mkdir, rm, symlink, realpath } from 'node:fs/promises';
+import { mkdtemp, writeFile, readFile, mkdir, rm, symlink, realpath, readdir, stat } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
@@ -96,4 +96,16 @@ test('a live installer cannot be recovered and forged journal paths are refused'
     project: root, version: '0.1', changes: [{ path: '../escape', before: null, after: 'x' }],
   }));
   await assert.rejects(recoverInstall(root), { code: 'UNSAFE_PATH' });
+});
+
+test('transaction backups containing original user files are private on POSIX', async t => {
+  const root = await workspace(t);
+  await writeFile(join(root, 'project.local.yaml'), 'modes:\n  automation: guided\n', { mode: 0o600 });
+  await applyInstall({ project: root, version: '0.1', changes: [{ path: 'project.local.yaml',
+    before: 'modes:\n  automation: guided\n', after: 'modes:\n  automation: autonomous\n' }] });
+  const backups = await readdir(join(root, '.game-studio/backups'));
+  assert.equal(backups.length, 1);
+  const path = join(root, '.game-studio/backups', backups[0]);
+  assert.match(await readFile(path, 'utf8'), /guided/);
+  if (process.platform !== 'win32') assert.equal((await stat(path)).mode & 0o777, 0o600);
 });

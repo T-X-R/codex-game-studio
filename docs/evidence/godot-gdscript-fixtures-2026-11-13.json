@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A015 original five request definitions and inherited-policy host registration; no native result inferred.",
+  "files": {
+    "toolkit/test/fixtures/godot-gdscript-specialist-cases.mjs": "589ca309ccbd1bf61bf349a0d37e9405cbdd93fa0f203c965cdef9cd9e91b07c",
+    "toolkit/test/qa-role-host.mjs": "57ff426765e57e335e68f8a70a301a2c09df9fd375ffee731af00044ced116f0"
+  },
+  "review": {
+    "path": "/private/tmp/game-studio-a015-fixture-review-czvusn5l/review.md",
+    "sha256": "939c68f4e248f26f0c046d7c825069afecbed12be9cb35bacd3868647b755c56"
+  },
+  "candidate": {
+    "path": "/private/tmp/game-studio-gdscript-fixtures-mua3uz8d/manifest.json",
+    "sha256": "8e7c21b0c2f3cf16dd2dfd539cc83cfed462bac3016c05893eda6e9c7de8d5c8"
+  },
+  "validation": {
+    "node24HostHarness": "5 groups PASS",
+    "node26HostHarness": "5 groups PASS",
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-a015-host24.log",
+        "sha256": "c2de2908b535d76d28a26806b2120ca663aab3c68c13f8c2661bee07129e828e"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-host26.log",
+        "sha256": "829c57bfdbe0995d187b211ec2dc7f5e17f3bc3d701e99ccd274fedb8afac296"
+      }
+    ],
+    "fullRegression": {
+      "node24": {
+        "tests": 529,
+        "pass": 529,
+        "fail": 0,
+        "skip": 0
+      },
+      "node26": {
+        "tests": 529,
+        "pass": 529,
+        "fail": 0,
+        "skip": 0
+      },
+      "logs": [
+        {
+          "path": "/private/tmp/game-studio-a015-final24-localhost.log",
+          "sha256": "828656520e706ba6d366ffbba60bd8d9a565373c3aa314792f3743cde3e602c5"
+        },
+        {
+          "path": "/private/tmp/game-studio-a015-final26-localhost.log",
+          "sha256": "3089302c85307a6184b777ff3121ba0b2476647b9c3bce2afad70f92bcd17e41"
+        }
+      ],
+      "initialEnvironmentFailures": {
+        "reason": "Both sandboxed runs passed 528/529; the same local HTTP listener test failed with EPERM on 127.0.0.1. Unchanged full suites passed with authorized outer local-listener access.",
+        "logs": [
+          {
+            "path": "/private/tmp/game-studio-a015-final24.log",
+            "sha256": "d54e8904e04164d9a0bf1dffe5634afccd4b6fc4e1ea0cea7c8a7bd87924e33d"
+          },
+          {
+            "path": "/private/tmp/game-studio-a015-final26.log",
+            "sha256": "3f796fbd066b533a01c29eb3cde1198491fc913bed1e39fa86ad2d9847cb2dac"
+          }
+        ]
+      }
+    }
+  },
+  "scopeRules": [
+    "Five original request strings retained; two read-only cases and three exactly named new source artifacts.",
+    "Existing inputs remain immutable; no expected algorithm or verdict is injected into the request.",
+    "No native model/effort/sandbox/approval override, Hook trust or engine execution is added.",
+    "Async runtime/error/cancellation, existing-scene adoption, measured performance and real Godot 4.6 compilation remain separate acceptance."
+  ],
+  "nativeFreeze": {
+    "path": "/private/tmp/game-studio-a015-native-freeze-by5y2vgr/freeze.json",
+    "sha256": "5d7fa560d508e2b2b6c452bfd729567cea568e6ef389d89edf0be7ec3009f528"
+  }
+}

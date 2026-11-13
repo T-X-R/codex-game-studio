@@ -1,174 +1,80 @@
-# Studio Tests
+# Codex Game Studio verification
 
-Quality assurance infrastructure for the **Claude Code Game Studios** framework.
-Tests the skills and agents themselves — not any game built with them.
+This directory preserves the original Claude Code Game Studios domain contracts
+and tracks their migration to Codex. It tests the toolkit's Skills and roles;
+it is separate from tests of a user's game. The complete migration scope remains
+75 primary Skills, three retired aliases and 49 roles, plus the rule, Hook and
+helper queues in [the implementation plan](../tasks/todo.md).
 
-**This ships as part of the template, and it is meant to.** Claude Code Game Studios is a template
-you are expected to customize — edit a skill, add your own, retune an agent. This
-folder is how you check that what you changed still holds up: `catalog.yaml`
-tracks all 75 skills and 49 agents, `quality-rubric.md` defines per-category
-pass/fail metrics, and `templates/` gives you the spec format for anything new
-you write. Driven by `/skill-test` and `/skill-improve`.
+Start with [catalog.yaml](catalog.yaml). `spec` identifies the retained source
+contract, `target` identifies the intended canonical Codex entrypoint, and
+`migration_state` is `pending`, `partial` or `verified`. A target name is not
+proof that it is installed. Source specs and historical result fields are not
+Codex acceptance evidence. Current support and limitations are recorded in
+[implementation status](../docs/implementation-status.md).
 
-> **If you remove it, two of the four `/skill-test` modes stop working.**
->
-> | Mode | Without this folder |
-> |------|---------------------|
-> | `/skill-test static` | **Works** — the 7 structural checks read only the skill's own files |
-> | `/skill-test audit` | **Degrades** — reports that no catalog exists |
-> | `/skill-test spec` | **Breaks** — the behavioral specs live here |
-> | `/skill-test category` | **Breaks** — reads `quality-rubric.md` from here |
-> | `/skill-improve` | **Degrades** — its test-fix-retest loop loses the category pass |
->
-> `/skill-test` and `/skill-improve` read this folder by path, so removing it is a
-> real trade, not a free cleanup — the table above states the actual cost.
+## Static checks
 
----
+From the repository root, after installing maintainer dependencies:
 
-## What's in here
-
-```
-studio-tests/
-├── README.md              ← you are here
-├── CLAUDE.md              ← tells Claude how to use this framework
-├── catalog.yaml           ← master registry: all 75 skills + 49 agents, coverage tracking
-├── quality-rubric.md      ← category-specific pass/fail metrics for /skill-test category
-│
-├── skills/                ← behavioral spec files for all 75 skills
-│   ├── gate/              ← gate category specs
-│   ├── review/            ← review category specs
-│   ├── authoring/         ← authoring category specs
-│   ├── readiness/         ← readiness category specs
-│   ├── pipeline/          ← pipeline category specs
-│   ├── analysis/          ← analysis category specs
-│   ├── team/              ← team category specs
-│   ├── sprint/            ← sprint category specs
-│   └── utility/           ← utility category specs
-│
-├── agents/                ← behavioral spec files for agents (one per agent)
-│   ├── directors/         ← creative-director, technical-director, producer, art-director
-│   ├── leads/             ← lead-programmer, narrative-director, audio-director, game-designer, systems-designer, level-designer, qa-lead
-│   ├── specialists/       ← gameplay/engine/network/AI/tools/UI programmers, technical-artist, sound-designer, ux-designer, performance-analyst, prototyper, writer, world-builder
-│   ├── engine/            ← engine-specific specialists, split per engine:
-│   │   ├── godot/         ← Godot-specific specialists
-│   │   ├── unity/         ← Unity-specific specialists
-│   │   └── unreal/        ← Unreal-specific specialists
-│   ├── operations/        ← devops, release, live-ops, community, analytics, economy, localization
-│   └── qa/                ← qa-tester, security-engineer, accessibility-specialist
-│
-├── templates/             ← spec file templates for writing new specs
-│   ├── skill-test-spec.md ← template for skill behavioral specs
-│   └── agent-test-spec.md ← template for agent behavioral specs
-│
-└── results/               ← test run outputs (written by /skill-test spec; not gitignored — add it to .gitignore to keep them out of commits)
+```sh
+npm --prefix toolkit run build
+npm --prefix toolkit run typecheck
+npm --prefix toolkit run lint:content
+npm --prefix toolkit run test
+npm --prefix toolkit run test:pack
 ```
 
----
+`lint:content` checks canonical metadata, references, explicit command examples
+and the source catalog. `-- --complete` additionally checks complete declarations
+and evidence-file presence; it currently fails because migration is unfinished.
+Neither mode judges the truth of behavioral evidence. See the exact checks and
+limits in [content validation](../docs/content-validation.md).
 
-## How to use it
+The retained `.claude` linter and `/skill-test` examples in upstream specs are
+migration inputs, not the current Codex maintainer interface. Do not run those
+old checks and interpret a result as Codex compliance. No replacement
+`game-studio-skill-test` workflow is advertised until its own row is implemented
+and verified. `CLAUDE.md` here is retained historical guidance; Codex maintainers
+use [AGENTS.md](AGENTS.md) and the current rubric.
 
-All testing is driven by two skills already in the framework:
+## Behavioral acceptance
 
-### Check structural compliance
+Use [the Codex rubric](quality-rubric.md) alongside the original domain spec.
+Draft a Codex spec using the [Skill template](templates/skill-test-spec.md) or
+[role template](templates/agent-test-spec.md). Preserve domain outcomes; explicitly
+map changed host mechanics, automation policy and unsupported capabilities.
+Do not silently waive an upstream requirement because a current implementation
+cannot satisfy it.
 
-```
-/skill-test static [skill-name]     # Check one skill (7 checks)
-/skill-test static all              # Check all 75 skills
-```
+Run fresh, disposable installed-package fixtures. Record exact host/OS/Node and
+engine versions where relevant, installed content hashes, input state, actual
+native transcripts, process results, file changes and expected-vs-observed
+assertions. Keep instruction review separate from live behavior. Test the CLI
+and desktop independently; delegated fixtures or CLI success alone do not prove
+native Skill discovery or desktop compatibility. Human play and approval need
+actual human observations.
 
-### Run a behavioral spec test
+Only mark a case PASS when its complete assertions are observed. Missing inputs,
+capabilities or unrun checks are NOT ASSESSED; contradictions are FAIL; mixed or
+incomplete coverage is PARTIAL. Preserve failed attempts with their explanation
+and the exact subsequent recheck, rather than replacing them with later success.
 
-```
-/skill-test spec gate-check         # Evaluate a skill against its written spec
-/skill-test spec design-review
-/skill-test spec creative-director  # Agents too: evaluates agents/directors/creative-director.md
-```
+## Recording migration progress
 
-### Check against category rubric
+- Keep `spec`, source identity, category and original scope intact.
+- Move `pending` to `partial` when the canonical target is added. Include required
+  references in the package and update content/packed-install coverage.
+- Add `codex_spec` pointing to the adapted behavior specification. Record sanitized
+  results under `docs/evidence/`; transcripts may be summarized with trace IDs,
+  hashes and concrete assertions, without secrets or private source payloads.
+- Set `verified` only after reviewing all applicable source, rubric, host and
+  workflow assertions. Supply the evidence path list required by the catalog.
+  Static green status and evidence-file existence are insufficient.
+- Update the corresponding S/A task and any parent gate only when its complete
+  acceptance scope is proved. Alias rows require the approved replacement and
+  absence of a duplicate active entrypoint. Rules/Hooks/helpers retain their
+  separate full inventory and acceptance queues.
 
-```
-/skill-test category gate-check     # Evaluate one skill against its category metrics
-/skill-test category art-director   # Or one agent, against its agent category
-/skill-test category all            # Run rubric checks across every categorized skill and agent
-```
-
-### See full coverage picture
-
-```
-/skill-test audit                   # Skills + agents: has-spec, last tested, result
-```
-
-### Improve a failing skill
-
-```
-/skill-improve gate-check           # Test → diagnose → propose fix → retest loop
-```
-
----
-
-## Skill categories
-
-| Category | Skills | Key metrics |
-|----------|--------|-------------|
-| `gate` | gate-check | Review mode read, full/lean/solo director panel, no auto-advance |
-| `review` | design-review, architecture-review, review-all-gdds | Read-only, 8-section check, correct verdicts |
-| `authoring` | design-system, quick-design, art-bible, create-architecture, … | Section-by-section May-I-write, skeleton-first |
-| `readiness` | story-readiness, story-done | Blockers surfaced, director gate in full mode |
-| `pipeline` | create-epics, create-stories, dev-story, map-systems, … | Upstream dependency check, handoff path clear |
-| `analysis` | consistency-check, balance-check, code-review, tech-debt, … | Read-only report, verdict keyword, no writes |
-| `team` | team-combat, team-narrative, team-audio, … | All required agents spawned, blocked surfaced |
-| `sprint` | sprint-plan, sprint-status, milestone-review, … | Reads sprint data, status keywords present |
-| `utility` | start, adopt, hotfix, localize, setup-engine, … | Passes static checks |
-
----
-
-## Agent tiers
-
-| Tier (directory) | Agents |
-|------|--------|
-| `directors` | creative-director, technical-director, producer, art-director |
-| `leads` | lead-programmer, narrative-director, audio-director, game-designer, systems-designer, level-designer, qa-lead |
-| `specialists` | gameplay-programmer, engine-programmer, network-programmer, ai-programmer, tools-programmer, ui-programmer, ux-designer, technical-artist, sound-designer, performance-analyst, prototyper, writer, world-builder |
-| `engine/godot` | godot-specialist, godot-gdscript-specialist, godot-csharp-specialist, godot-shader-specialist, godot-gdextension-specialist |
-| `engine/unity` | unity-specialist, unity-ui-specialist, unity-shader-specialist, unity-dots-specialist, unity-addressables-specialist |
-| `engine/unreal` | unreal-specialist, ue-gas-specialist, ue-replication-specialist, ue-umg-specialist, ue-blueprint-specialist |
-| `operations` | devops-engineer, release-manager, live-ops-designer, community-manager, analytics-engineer, economy-designer, localization-lead |
-| `qa` | qa-tester, security-engineer, accessibility-specialist |
-
----
-
-## Updating the catalog
-
-`catalog.yaml` tracks test coverage for every skill and agent. After running a test:
-
-- `/skill-test spec [name]` will offer to update `last_spec` and `last_spec_result`
-- `/skill-test category [name]` will offer to update `last_category` and `last_category_result`
-- `last_static` and `last_static_result` are updated manually or via `/skill-improve`
-
----
-
-## Writing a new spec
-
-1. Find the spec template at `templates/skill-test-spec.md`
-2. Copy it to `skills/[category]/[skill-name].md`
-3. Update the `spec:` field in `catalog.yaml` to point to the new file
-4. Run `/skill-test spec [skill-name]` to validate it
-
-For an agent, copy `templates/agent-test-spec.md` to `agents/[tier]/[agent-name].md`,
-set the `spec:` field on its entry under `agents:` in `catalog.yaml`, and run
-`/skill-test spec [agent-name]`.
-
----
-
-## Removing this framework
-
-No hook or import in the main project depends on this folder, but `/skill-test`
-and `/skill-improve` read it by path. To remove:
-
-```bash
-rm -rf studio-tests
-```
-
-Afterwards `/skill-test static` works as before, `spec` and `category` stop
-working, `audit` reports that no catalog exists, and `/skill-improve` skips its
-category checks — the table at the top of this file lists the cost per mode.
+No live result or aggregate count in this directory implies permission to
+publish, trust Hooks, weaken a sandbox or change another project's files.

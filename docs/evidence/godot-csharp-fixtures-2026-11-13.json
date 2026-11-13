@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A013 original five native request definitions and registration; no native or .NET acceptance inferred.",
+  "files": {
+    "toolkit/test/fixtures/godot-csharp-specialist-cases.mjs": "290d5319890fcb133aca073fc34fbb0128da610761eaf1c8ed858863d1c90692",
+    "toolkit/test/qa-role-host.mjs": "7bcdf045ac964bf7167f6f77fbd9327ab62afbe0d5dcbb4ec1d3cfc51a98ce07"
+  },
+  "candidate": {
+    "path": "/private/tmp/game-studio-csharp-fixtures-no4fcmpk/manifest.json",
+    "sha256": "647c16206b30326dd891b4d0415be1104c057ac53e420ccc430a80af19a470a6"
+  },
+  "sourceMapping": {
+    "path": "/private/tmp/game-studio-csharp-fixtures-no4fcmpk/PLAN.md",
+    "sha256": "263bb92dd2dc1a94d4d7a9a0c37874a70904b89a2a9932c2505bbaa96a23c2dc"
+  },
+  "review": {
+    "independent": {
+      "path": "/private/tmp/game-studio-a013-fixture-review-2qhxdh0o/review.md",
+      "sha256": "598d72f65d1fc619d0f798637a51b43ce22a91957b934da993a11d41da73fddb"
+    },
+    "root": {
+      "path": "/private/tmp/game-studio-a013-fixture-root-review.md",
+      "sha256": "3cf541699dabb70754ccaf5b2e9b6efac7b870adb70d25b466f641716857d038"
+    }
+  },
+  "validation": {
+    "rootOriginalRequestsAndScope": "PASS; five original requests, exact existing/new paths, no host policy overrides",
+    "fullRegression": {
+      "node24": 532,
+      "node26": 532,
+      "fail": 0,
+      "skip": 0,
+      "logs": [
+        {
+          "path": "/private/tmp/game-studio-a013-fixture-full24.log",
+          "sha256": "a0f1b4f94ac52154901e182af6f3c16b2ef928952476b074cd13bd1b804adfef"
+        },
+        {
+          "path": "/private/tmp/game-studio-a013-fixture-full26.log",
+          "sha256": "113e882834cfd97612f7c86c693239926963b0d7d267df4630912df44d19339f"
+        }
+      ]
+    }
+  },
+  "cases": {
+    "csharp-export-health": "Actual existing property edit; bounds and repeated assignment preserved; managed clamp execution pending.",
+    "csharp-gdscript-redirect": "Read-only actual API handoff; no language rewrite authorized.",
+    "csharp-animation-await": "Normal-completion proposal and genuine unanswered interruption/replacement questions; not full workflow completion.",
+    "csharp-background-node": "Actual live-node background mutation correction in existing source; preserve pure computation and freed-target semantics.",
+    "csharp-typed-signal-47": "New consumer for actual signal, initial state and lifetime; attachment and runtime pending."
+  },
+  "limits": [
+    "Owner csproj4.7.0/net8.0/C#12 is not a successful restore or compatible installed-toolchain observation.",
+    "No source/gate/model/effort/sandbox/Hook settings changed.",
+    "No native, .NET build, engine import, actual signal/thread/async behavior or full source acceptance claimed."
+  ]
+}

@@ -1,0 +1,472 @@
+{
+  "recordedAt": "2026-11-12",
+  "scope": "Native Codex QA Godot/GdUnit test authoring, real assertion execution, independent mutation/orphan controls and packed CLI diagnostic fix",
+  "fixtureCommit": "7097738",
+  "diagnosticFixCommit": "6f22e7d",
+  "environment": {
+    "platform": "macOS ARM64",
+    "node": "24.22.2",
+    "editor": "4.7.2.stable.official.ed1daf0bf",
+    "editorSha256": "c7cccbf8fb143e34e02fd6521e09be2c2b974f0d5db080b19071c9c570718ccf",
+    "gdunit": "6.2.2",
+    "gdunitCommit": "0127a55f4543dfc24746f6e5c7ba6f94105d51f2",
+    "sourceArchiveSha256": "58a391b0c85cbbcf7aeb09b718c8173793d45ab511950cd65eec0183aabf0e50",
+    "source": "https://github.com/godot-gdunit-labs/gdUnit4/tree/0127a55f4543dfc24746f6e5c7ba6f94105d51f2",
+    "license": "MIT; addon LICENSE copied with local fixture dependency; dependency is not bundled in toolkit"
+  },
+  "native": {
+    "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ",
+    "runnerResult": {
+      "scenario": "godot",
+      "sandbox": "workspace-write",
+      "status": "not_assessed",
+      "reason": "Review native parent/child trace and semantic output against studio-tests/roles/qa-tester-codex.md.",
+      "client": "codex-cli 0.162.0",
+      "exitCode": 0,
+      "threadId": "01a1ce6f-928f-76f3-9093-a9315e100108",
+      "preservedFiles": 836,
+      "changed": [],
+      "added": [
+        "tests/combat_damage_test.gd",
+        "tests/combat_damage_test.gd.uid",
+        "production/qa/godot-audit.md",
+        "production/qa/evidence/gdunit/report_1/index.html",
+        "production/qa/evidence/gdunit/report_1/results.xml",
+        "production/qa/evidence/gdunit/report_1/test_suites/tests.combat_damage_test.html",
+        "production/qa/evidence/gdunit/report_1/path/tests.html",
+        "production/qa/evidence/gdunit/report_1/css/breadcrumb.css",
+        "production/qa/evidence/gdunit/report_1/css/logo.png",
+        "production/qa/evidence/gdunit/report_1/css/styles.css",
+        "production/qa/evidence/damage-20261112-f6ZW9t/engine-layout.json",
+        "production/qa/evidence/damage-20261112-f6ZW9t/gate-level.json",
+        "production/qa/evidence/damage-20261112-f6ZW9t/godot-qa-run.log",
+        "production/qa/evidence/damage-20261112-f6ZW9t/preservation-after-execution.json",
+        "production/qa/evidence/damage-20261112-f6ZW9t/preservation-before.json",
+        "production/qa/evidence/damage-20261112-f6ZW9t/preservation-final.json",
+        "production/qa/evidence/damage-20261112-f6ZW9t/settings.json",
+        "production/qa/evidence/damage-20261112-f6ZW9t/toolkit-version.json",
+        "production/qa/evidence/damage-20261112-f6ZW9t/tests/report.json",
+        "production/qa/evidence/damage-20261112-f6ZW9t/tests/stderr.log",
+        "production/qa/evidence/damage-20261112-f6ZW9t/tests/stdout.log",
+        "production/qa/evidence/damage-20261112-f6ZW9t/import/help.stderr.log",
+        "production/qa/evidence/damage-20261112-f6ZW9t/import/help.stdout.log",
+        "production/qa/evidence/damage-20261112-f6ZW9t/import/import-1.stderr.log",
+        "production/qa/evidence/damage-20261112-f6ZW9t/import/import-1.stdout.log",
+        "production/qa/evidence/damage-20261112-f6ZW9t/import/report.json",
+        "production/qa/evidence/damage-20261112-f6ZW9t/import/version.stderr.log",
+        "production/qa/evidence/damage-20261112-f6ZW9t/import/version.stdout.log"
+      ],
+      "outsideScope": [],
+      "roleSha256": "96d33762c19d3780f2b5666f42589d854a14c3f9e4e84c24f772ca4a6488c3c0"
+    },
+    "runnerExitCode": 3,
+    "traceReview": {
+      "01a1ce6f-928f-76f3-9093-a9315e100108": {
+        "file": "rollout-2026-11-12T14-26-20-01a1ce6f-928f-76f3-9093-a9315e100108.jsonl",
+        "sha256": "46e06fe0766ccdbf34d674e062497b63538e00e8506e2900c257113e32b16a21",
+        "role": null,
+        "source": "exec",
+        "fullRoleInstructionsPresent": false,
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        },
+        "toolNames": [
+          "spawn_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "send_message",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "send_message",
+          "wait_agent",
+          "wait_agent"
+        ],
+        "selectedRole": "game-studio-qa-tester"
+      },
+      "01a1ce6f-d979-78c0-85b3-d0320bc5dc56": {
+        "file": "rollout-2026-11-12T14-26-39-01a1ce6f-d979-78c0-85b3-d0320bc5dc56.jsonl",
+        "sha256": "7e00496354a0403dfc79fd660bfab463e67192b82cecf19f3520db5bd455ed5a",
+        "role": "game-studio-qa-tester",
+        "source": {
+          "subagent": {
+            "thread_spawn": {
+              "parent_thread_id": "01a1ce6f-928f-76f3-9093-a9315e100108",
+              "depth": 1,
+              "agent_path": "/root/damage_qa",
+              "agent_nickname": "Avicenna",
+              "agent_role": "game-studio-qa-tester"
+            }
+          }
+        },
+        "fullRoleInstructionsPresent": true,
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        },
+        "toolNames": [
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "send_message",
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "send_message",
+          "exec",
+          "exec",
+          "exec"
+        ]
+      }
+    },
+    "artifactHashes": {
+      "report.json": "432a190d37261db4bc2f2b9addcd7b375f43ebac88388b09f0d90abdd483761a",
+      "before.json": "ad036ea442d5e8ae06b116725ccc8fbee88d1dc780c4557728c55f38b6e90889",
+      "final.txt": "6afde193814f5be09dd58f40dc24a746eda7509c09352296e3bdea1458eff472",
+      "QA game \u6d4b\u8bd5/tests/combat_damage_test.gd": "0f6a08416a47ba57b70c67275c1ef3f18c943fe5cf0aad98b4a5abe32db9fe8a",
+      "QA game \u6d4b\u8bd5/tests/combat_damage_test.gd.uid": "e0fc74a5296261c2c7d924dacd8d08377cd63886eddeed7dc22fb8958d530392",
+      "QA game \u6d4b\u8bd5/production/qa/godot-audit.md": "6894f6dfd8fd9cc38887e1253f593256e6328195705fd88483bbd10222d2f6da",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/gdunit/report_1/index.html": "d8f9de4120eb63ce52557b7bd552e5a82170aaa2c4e25e817098067a150bb921",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/gdunit/report_1/results.xml": "34b95e186c4293605fed65938c81b6586753aa532e74d5962074a97c2db6b206",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/gdunit/report_1/test_suites/tests.combat_damage_test.html": "bff75faf3a11659caece000cfd7d6157c3886052e78f837dee17e6b312916507",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/gdunit/report_1/path/tests.html": "a28fcc4932a7d3371bb41b607a29115fca39fe2bf6913a6b18fca978ad45fd4b",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/gdunit/report_1/css/breadcrumb.css": "68d42eb10ac6533e36378969cbaa94535ff75d7977d9d90fa5939736d04ceb3a",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/gdunit/report_1/css/logo.png": "ed176306a061dff6c2a97c76e572bbbdee50cb7f5a496ba10d6898721f198351",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/gdunit/report_1/css/styles.css": "03b4882981f58bce30961b5e7bb7f7b4a46fbdb12ff2c3a2ffbc56f795731c0a",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/engine-layout.json": "7544c9a096a4c90d467070f8ee47881e7ad601fa621728b0c571f85a0a30064a",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/gate-level.json": "af629784282e2fbfd49f96421a9bf857e503a408c0c846aea5913ee8ba1a87d2",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/godot-qa-run.log": "c76903a7058fc7bc399a6b8f9ce0385bea3ae7010efcfd718927c8b6df78c64e",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/preservation-after-execution.json": "0b44a8b7ffae1b78314dfa0780f772994d254e288ef58913ffb52ee7774acfe0",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/preservation-before.json": "5b9206907c5393950244d1bd3b1439af621e34fe520e34124727de003ef4cce3",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/preservation-final.json": "523e83e5666034e6c09daad42770884d1acdd28f381de7e8d655bc51631db839",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/settings.json": "e57c5b726a2f0cbc9b50846a4fbb5b1b59ca0aa61eb05f618002a2ced84e29c4",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/toolkit-version.json": "896d780e416ae15c76a6efe6d618c0dc2078542f9702a3f3d70e97396432dfd6",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/tests/report.json": "57fa515efa16df2cc46687db961959d3e953120735dfe2c03d141bf2352ccde8",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/tests/stderr.log": "d0b6d2ca414745356e1418fccf57bca501a6a4f2d57cf37d7819a3e851740777",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/tests/stdout.log": "4c5dffd3fe3375338e6f8f0bc8662a86babe8db5901693f54638b9017c55a35b",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/import/help.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/import/help.stdout.log": "acbe9a35e39f6ccfe18d7ca6911faeb2f41b64d23d0252a5aa61f635f21402a3",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/import/import-1.stderr.log": "5987c0146dafa2cc39a8554544dda9531e38abeacf5af1bcd7867508c256e460",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/import/import-1.stdout.log": "2a9752b0e87d1b4e2b644c4898f4c42a62528165661579a41b9149b79378249c",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/import/report.json": "5536cb09acb18c23fad021f6c0a54fd369a47bdaf19767accf3f90d27ccae4cd",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/import/version.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/import/version.stdout.log": "edff16c1721dd4ae989cadf29a01f574ae8d51b118221f664725bd6980bbba5d"
+    }
+  },
+  "semanticReview": {
+    "roleBehavior": "verified_scaffolding_and_honest_evidence_reporting",
+    "nativeOverallAudit": "FAIL; retained editor/user-directory/certificate diagnostics, not a clean native execution",
+    "actualCases": 12,
+    "passed": 12,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "orphans": 0,
+    "coverage": [
+      "normal and positive modifier",
+      "fractional tolerance",
+      "zero base and armor",
+      "armor floor",
+      "negative and minimum modifiers",
+      "maximum supported inputs/output",
+      "exact armor equality"
+    ],
+    "nodeCleanup": "auto_free on every Node subject",
+    "outsideDomain": "No invented null/out-of-range behavior",
+    "executionVersusAssertionStatusSeparated": true,
+    "parentAggregatedFailuresAndPassingAssertions": true,
+    "nativeImmutableFiles": 836,
+    "engineCacheExcluded": ".godot/",
+    "humanPlay": "not_assessed"
+  },
+  "nativeExecutionReports": {
+    "import": {
+      "project": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/QA game \u6d4b\u8bd5",
+      "engine": "Godot",
+      "declaredVersion": "4.7.2",
+      "actualVersion": "4.7.2.stable.official.ed1daf0bf",
+      "command": {
+        "executable": "/Users/tori/Desktop/Project/Games/Shield-Dodge/.tools/Godot.app/Contents/MacOS/Godot",
+        "args": [
+          "--headless",
+          "--path",
+          "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/QA game \u6d4b\u8bd5",
+          "--import"
+        ]
+      },
+      "timeoutMs": 120000,
+      "output": "production/qa/evidence/damage-20261112-f6ZW9t/import",
+      "durationMs": 2371,
+      "status": "failed",
+      "exitCode": 5,
+      "reason": "import-1 reported engine errors; inspect its logs even though the process may have exited zero",
+      "warnings": [],
+      "checks": [
+        {
+          "phase": "version",
+          "args": [
+            "--version"
+          ],
+          "processExitCode": 0,
+          "signal": null,
+          "errorDetected": false
+        },
+        {
+          "phase": "help",
+          "args": [
+            "--help"
+          ],
+          "processExitCode": 0,
+          "signal": null,
+          "errorDetected": false
+        },
+        {
+          "phase": "import-1",
+          "args": [
+            "--headless",
+            "--path",
+            "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/QA game \u6d4b\u8bd5",
+            "--import"
+          ],
+          "processExitCode": 0,
+          "signal": null,
+          "errorDetected": true
+        }
+      ],
+      "judgment": "Editor import only; builds, test coverage, main-scene execution and human play acceptance are not assessed."
+    },
+    "test": {
+      "command": "'/Users/tori/Desktop/Project/Games/Shield-Dodge/.tools/Godot.app/Contents/MacOS/Godot' --headless --path . --log-file .godot/qa-run.log -s -d --remote-debug tcp://127.0.0.1:0 res://addons/gdUnit4/bin/GdUnitCmdTool.gd -a res://tests --ignoreHeadlessMode -rd res://production/qa/evidence/gdunit",
+      "source": "project.yaml:commands.test",
+      "os": "macos",
+      "reason": "Godot reported engine errors; inspect stdout.log and stderr.log even if its process exited zero",
+      "kind": "test",
+      "project": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/QA game \u6d4b\u8bd5",
+      "output": "production/qa/evidence/damage-20261112-f6ZW9t/tests",
+      "timeoutMs": 900000,
+      "durationMs": 1209,
+      "engine": "Godot",
+      "engineErrorDetected": true,
+      "exitCode": 5,
+      "processExitCode": 0,
+      "status": "failed",
+      "judgment": "Command execution evidence only; inspect test reports for test coverage. Human play acceptance is not assessed."
+    }
+  },
+  "independentControls": {
+    "status": "passed_for_test_sensitivity_and_cleanup_only",
+    "controls": [
+      {
+        "name": "baseline",
+        "output": "production/qa/evidence/control-baseline-b77394f5-3840-49a6-a15a-75a4fdfdb413",
+        "cliExit": 5,
+        "processExit": 0,
+        "engineErrorDetected": true,
+        "registered": 12,
+        "executed": 12,
+        "errors": 0,
+        "failures": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "orphans": 0
+      },
+      {
+        "name": "formula-mutation",
+        "output": "production/qa/evidence/control-formula-mutation-f9dd4dd6-9768-4b43-88d0-d7c6880d1668",
+        "cliExit": 5,
+        "processExit": 100,
+        "engineErrorDetected": true,
+        "registered": 12,
+        "executed": 1,
+        "errors": 0,
+        "failures": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "orphans": 0
+      },
+      {
+        "name": "orphan-control",
+        "output": "production/qa/evidence/control-orphan-control-89bc2d25-4bf5-4b8d-8b51-b085c1afdf10",
+        "cliExit": 5,
+        "processExit": 101,
+        "engineErrorDetected": true,
+        "registered": 12,
+        "executed": 12,
+        "errors": 0,
+        "failures": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "orphans": 12
+      },
+      {
+        "name": "restored",
+        "output": "production/qa/evidence/control-restored-d498d095-dd36-499e-85d2-67010c990d79",
+        "cliExit": 5,
+        "processExit": 0,
+        "engineErrorDetected": true,
+        "registered": 12,
+        "executed": 12,
+        "errors": 0,
+        "failures": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "orphans": 0
+      }
+    ],
+    "preservedFiles": 884,
+    "changed": [],
+    "limitation": "These maintainer engine runs are separate from the native host sandbox. Preserve command-level diagnostics; this is not clean host execution or human acceptance."
+  },
+  "controlReview": {
+    "formulaMutation": "Changed - armor to + armor; GdUnit exit 100, one executed failing assertion before fail-fast",
+    "orphanMutation": "Removed auto_free; exit 101, 12 passing assertions and 12 orphans",
+    "restored": "Source/tests restored byte-for-byte; 12 passed with zero orphans",
+    "counterDistinction": "GdUnit XML tests=12 is discovery count on fail-fast, while console execution count=1. The verifier initially assumed equality, failed visibly, and was corrected; original control evidence retained.",
+    "executionMode": "Maintainer engine execution, separate from native workspace-write sandbox",
+    "preFixCommandFalseFailure": "Even clean maintainer tests returned CLI 5 for the exact port-zero debugger pair alone"
+  },
+  "packedFix": {
+    "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gdunit-command-3FX9Zy",
+    "positive": {
+      "command": "'/Users/tori/Desktop/Project/Games/Shield-Dodge/.tools/Godot.app/Contents/MacOS/Godot' --headless --path . --log-file .godot/qa-run.log -s -d --remote-debug tcp://127.0.0.1:0 res://addons/gdUnit4/bin/GdUnitCmdTool.gd -a res://tests --ignoreHeadlessMode -rd res://production/qa/evidence/gdunit",
+      "source": "project.yaml:commands.test",
+      "os": "macos",
+      "reason": null,
+      "kind": "test",
+      "project": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gdunit-command-3FX9Zy/game",
+      "output": "production/qa/evidence/command-pass",
+      "timeoutMs": 120000,
+      "durationMs": 841,
+      "engine": "Godot",
+      "engineErrorDetected": false,
+      "exitCode": 0,
+      "processExitCode": 0,
+      "portZeroDebuggerExpected": true,
+      "status": "ok",
+      "judgment": "Command execution evidence only; inspect test reports for test coverage. Human play acceptance is not assessed.",
+      "artifacts": {
+        "project": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gdunit-command-3FX9Zy/game",
+        "directory": "production/qa/evidence/command-pass",
+        "files": [
+          {
+            "path": "production/qa/evidence/command-pass/report.json",
+            "bytes": 891,
+            "sha256": "772ae17697ddec944d7b4cdd467f4bed34182221709c0ed87607754f2ecb29cc"
+          },
+          {
+            "path": "production/qa/evidence/command-pass/stdout.log",
+            "bytes": 7430,
+            "sha256": "927643e572eceef3fa2d5a1530d862dd52a71fc868241dc7a7049e9c6443fef7"
+          },
+          {
+            "path": "production/qa/evidence/command-pass/stderr.log",
+            "bytes": 255,
+            "sha256": "6ea999eed1e45bdc8e8489e2e6653f8d7c350930bf8a9b299391c466bc3b6abe"
+          }
+        ]
+      }
+    },
+    "parseError": {
+      "command": "'/Users/tori/Desktop/Project/Games/Shield-Dodge/.tools/Godot.app/Contents/MacOS/Godot' --headless --path . --log-file .godot/qa-run.log -s -d --remote-debug tcp://127.0.0.1:0 res://addons/gdUnit4/bin/GdUnitCmdTool.gd -a res://tests --ignoreHeadlessMode -rd res://production/qa/evidence/gdunit-broken",
+      "source": "invocation:--command",
+      "os": "macos",
+      "reason": "Godot reported engine errors; inspect stdout.log and stderr.log even if its process exited zero",
+      "kind": "test",
+      "project": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gdunit-command-3FX9Zy/game",
+      "output": "production/qa/evidence/command-broken",
+      "timeoutMs": 120000,
+      "durationMs": 1027,
+      "engine": "Godot",
+      "engineErrorDetected": true,
+      "exitCode": 5,
+      "processExitCode": 105,
+      "portZeroDebuggerExpected": true,
+      "status": "failed",
+      "judgment": "Command execution evidence only; inspect test reports for test coverage. Human play acceptance is not assessed.",
+      "artifacts": {
+        "project": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gdunit-command-3FX9Zy/game",
+        "directory": "production/qa/evidence/command-broken",
+        "files": [
+          {
+            "path": "production/qa/evidence/command-broken/report.json",
+            "bytes": 993,
+            "sha256": "88cd6a63a1e070b425736ac0f546aebf70a18aee82b97e495f323be9ea3cb7f0"
+          },
+          {
+            "path": "production/qa/evidence/command-broken/stdout.log",
+            "bytes": 1071,
+            "sha256": "d3909b6d1433953d6a3066ad496d99cd578ea2aba84193e88a1fb2be6c502450"
+          },
+          {
+            "path": "production/qa/evidence/command-broken/stderr.log",
+            "bytes": 2318,
+            "sha256": "5d5881abcd104e6e5251c97eefa40c26309f60d051b5392f051dd3c4e00476e4"
+          }
+        ]
+      }
+    },
+    "testCount": 12,
+    "rawPortZeroDiagnosticsPreserved": true,
+    "otherErrorsRemainFailures": true,
+    "nativeEnvironmentErrorsNotSuppressed": true,
+    "initialHelperAttempt": {
+      "directory": "game-studio-gdunit-command-CCJLn6",
+      "result": "Positive CLI run succeeded; helper needed ANSI normalization before summary matching. Fresh rerun completed both checks."
+    }
+  },
+  "localValidation": {
+    "build": "passed",
+    "typecheck": "passed",
+    "tests": {
+      "passed": 131,
+      "failed": 0,
+      "skipped": 0
+    },
+    "pack": "passed"
+  },
+  "artifactHashes": {
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/engine-preparation.json": "266a6ad715978553fdfbc549da94dc5bc13fc8c2c331f3472687d5b4e394952b",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/independent-controls.json": "c5b72a8c4ac9469720100279e85fca424c435534d4df8549f0859065e5ab9248",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/tests/report.json": "57fa515efa16df2cc46687db961959d3e953120735dfe2c03d141bf2352ccde8",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/tests/stdout.log": "4c5dffd3fe3375338e6f8f0bc8662a86babe8db5901693f54638b9017c55a35b",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/tests/stderr.log": "d0b6d2ca414745356e1418fccf57bca501a6a4f2d57cf37d7819a3e851740777",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/QA game \u6d4b\u8bd5/production/qa/evidence/damage-20261112-f6ZW9t/import/report.json": "5536cb09acb18c23fad021f6c0a54fd369a47bdaf19767accf3f90d27ccae4cd",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/QA game \u6d4b\u8bd5/tests/combat_damage_test.gd": "0f6a08416a47ba57b70c67275c1ef3f18c943fe5cf0aad98b4a5abe32db9fe8a",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/QA game \u6d4b\u8bd5/production/qa/godot-audit.md": "6894f6dfd8fd9cc38887e1253f593256e6328195705fd88483bbd10222d2f6da",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/QA game \u6d4b\u8bd5/production/qa/evidence/gdunit/report_1/results.xml": "34b95e186c4293605fed65938c81b6586753aa532e74d5962074a97c2db6b206",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sivkPJ/t-x-r-game-studio-0.1.0-alpha.0.tgz": "c2c367c021f9b2d77ed1ad83ee027d22543404876033d157a054f36754f2a67e",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-gdunit-command-3FX9Zy/t-x-r-game-studio-0.1.0-alpha.0.tgz": "26769ac4b18575d1c1083b58e35c98a5b9a2d4e569e3bbc161870f227aa99a85"
+  },
+  "remaining": [
+    "Clean native editor/test execution with authorized isolated user/editor data and certificate access",
+    "Unity and Unreal QA scaffolds and actual engine acceptance",
+    "A028 final validator and T19 collaboration",
+    "Desktop host acceptance",
+    "Other OS/editor combinations, C#/.NET, export/rendering and human play",
+    "Full migration and a new release archive"
+  ],
+  "temporaryProfilesRemaining": []
+}

@@ -31,6 +31,7 @@ jobs:
       - run: npm --prefix toolkit ci --ignore-scripts
       - run: npm --prefix toolkit run build
       - run: npm --prefix toolkit run typecheck
+      - run: npm --prefix toolkit run lint:content
       - run: npm --prefix toolkit test
       - run: npm --prefix toolkit run test:pack
       - run: npm --prefix toolkit audit --omit=dev --audit-level=high
@@ -45,3 +46,81 @@ jobs:
       - run: npm --prefix toolkit ci --ignore-scripts
       - run: npm --prefix toolkit run build
       - run: npm --prefix toolkit run test:browser
+      - name: Verify packed Web growth and replay equivalence
+        run: node toolkit/test/growth-smoke.mjs
+        env:
+          TMPDIR: ${{ runner.temp }}
+      - name: Preserve growth evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-growth-evidence
+          path: |
+            ${{ runner.temp }}/game-studio-growth-live-*/summary.json
+            ${{ runner.temp }}/game-studio-growth-live-*/commands.json
+            ${{ runner.temp }}/game-studio-growth-live-*/Web game */production/evidence/**
+          retention-days: 14
+  godot:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            archive: Godot_v4.7.2-stable_linux.x86_64.zip
+            sha256: cadd3204e728a35d3f13adb7fd0d7902636b79f6b95c40c265eb73b6c35329e4
+            executable: Godot_v4.7.2-stable_linux.x86_64
+          - os: windows-latest
+            archive: Godot_v4.7.2-stable_win64.exe.zip
+            sha256: 731980f9608d61333e5baf54a2ef17210acc7a538446c0cb9969f002aca1e953
+            executable: Godot_v4.7.2-stable_win64_console.exe
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    env:
+      GODOT_ARCHIVE: ${{ matrix.archive }}
+      GODOT_SHA256: ${{ matrix.sha256 }}
+      GODOT_BINARY: ${{ matrix.executable }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm --prefix toolkit ci --ignore-scripts
+      - run: npm --prefix toolkit run build
+      - name: Install pinned Godot on Linux
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          archive="$RUNNER_TEMP/$GODOT_ARCHIVE"
+          curl --fail --location --retry 2 --max-time 120 --output "$archive" "https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/$GODOT_ARCHIVE"
+          echo "$GODOT_SHA256  $archive" | sha256sum --check
+          unzip -q "$archive" -d "$RUNNER_TEMP/godot engine"
+          chmod +x "$RUNNER_TEMP/godot engine/$GODOT_BINARY"
+          echo "GODOT_EXE=$RUNNER_TEMP/godot engine/$GODOT_BINARY" >> "$GITHUB_ENV"
+      - name: Install pinned Godot on Windows
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $archive = Join-Path $env:RUNNER_TEMP $env:GODOT_ARCHIVE
+          Invoke-WebRequest "https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/$env:GODOT_ARCHIVE" -OutFile $archive -TimeoutSec 120
+          if ((Get-FileHash $archive -Algorithm SHA256).Hash.ToLowerInvariant() -ne $env:GODOT_SHA256) { throw 'Godot archive checksum mismatch' }
+          $engine = Join-Path $env:RUNNER_TEMP 'godot engine'
+          Expand-Archive -LiteralPath $archive -DestinationPath $engine
+          "GODOT_EXE=$(Join-Path $engine $env:GODOT_BINARY)" >> $env:GITHUB_ENV
+      - name: Verify script loading through a clean package installation
+        shell: bash
+        run: |
+          package_dir="$RUNNER_TEMP/godot package"
+          mkdir -p "$package_dir"
+          npm pack ./toolkit --ignore-scripts --pack-destination "$package_dir" --json > "$package_dir/pack.json"
+          archive_name="$(node -e 'console.log(JSON.parse(require("node:fs").readFileSync(process.argv[1], "utf8"))[0].filename)' "$package_dir/pack.json")"
+          npm install --prefix "$package_dir/installed runtime" --ignore-scripts --no-audit --no-fund "$package_dir/$archive_name"
+          node toolkit/test/godot-parse-smoke.mjs --executable "$GODOT_EXE" --runtime "$package_dir/installed runtime/node_modules/@t-x-r/game-studio" --output "$RUNNER_TEMP/godot-parse-evidence"
+      - name: Preserve Godot evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-script-loading-${{ matrix.os }}
+          path: |
+            ${{ runner.temp }}/godot-parse-evidence/**
+            ${{ runner.temp }}/godot package/pack.json
+          retention-days: 14

@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-13",
+  "status": "scoped-pass",
+  "scope": "Read-only Markdown section observations; no writer, document-quality, native consumer or desktop acceptance.",
+  "source": ".claude/scripts/md-section.sh",
+  "sourceSha256": "0ffa55a3f7215fda020c4070c160e7992577005b00aad3d7b6d527870dd7cfa8",
+  "environment": {
+    "platform": "macOS ARM64",
+    "node": [
+      "24.22.2",
+      "26.13.1"
+    ]
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "helperTestsIncludingSubtests": 44,
+    "realBashDifferentials": 228,
+    "fullSuitePerNode": {
+      "pass": 287,
+      "fail": 0,
+      "skip": 0
+    },
+    "installedArchive": "PASS",
+    "independentSourceReview": "Reviewed retained parser and source parity; corrected Windows symlink fixture to a directory junction and added portable CRLF assertions before integration."
+  },
+  "installedArchiveChecks": [
+    "Pinned script source bytes match",
+    "Nested CRLF extraction returns bounded sections in JSON and retained text",
+    "Missing status is exit0 with not_found count",
+    "Missing extraction is exit3",
+    "Unsupported replace is exit2",
+    "Original input bytes remain unchanged"
+  ],
+  "limits": [
+    "replace, insert-before and set-field remain unimplemented.",
+    "Observed COMPLETE is not a document quality or readiness verdict.",
+    "Retained fence-only and HTML-comment TODO behavior is documented and tested.",
+    "Bash-only comparisons are explicitly skipped on Windows; portable assertions remain applicable.",
+    "No cross-platform CI or native consumer claim follows from these local tests."
+  ],
+  "fileHashes": {
+    "toolkit/src/md-section.ts": "7f4aaf3c5ebaa008cec583258a81836165f1647fbc93cbfd9d5c78135a5c07e8",
+    "studio/scripts/md-section.mjs": "7a7df646f7212ddeca1dfbce867aa3482613ae881fc5309916e9a06096cf4adb",
+    "toolkit/test/md-section.test.mjs": "1eeddbcb7194f807738b1867380db57043a1730aba04218ce7f0e131c968b2b8",
+    "studio-tests/helpers/md-section-codex.md": "89cd919e397e405cbd52129572e51dac5574734802f89d0fb4319cbc4262048d",
+    "toolkit/test/packed-smoke.mjs": "3745651281ec37d6ba23412f452de9666abac14d42bdd2457d285c32bb8b9661"
+  },
+  "logs": {
+    "game-studio-md-section-build.log": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28",
+    "game-studio-md-section-typecheck.log": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b",
+    "game-studio-md-section-lint.log": "59b6212da13b7dbe3349261c34198ef85f22699ce44ebfa65a1c88828caa43b6",
+    "game-studio-md-section-tests24.log": "3495b0580fdbeddb5d001f1d41e6cf0ba9cd0b286150a22cf1f882eb1f73af6e",
+    "game-studio-md-section-tests26.log": "b57d6c8784ebbbb26b8b0dbdb0bd35b26a4f91edb30285f003ae9e38a0e4a85c",
+    "game-studio-md-section-pack.log": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+  }
+}

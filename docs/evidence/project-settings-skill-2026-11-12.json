@@ -1,0 +1,240 @@
+{
+  "date": "2026-11-12",
+  "scope": "S037 project settings and S050 legacy request routing; partial migration acceptance",
+  "configurationFix": "ae644e5",
+  "initialSkill": "4396a01",
+  "runtime": "Node.js 24.22.2, macOS ARM64",
+  "initialEvaluation": {
+    "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-JdycTx",
+    "commands": 31,
+    "commandExitCodes": {
+      "0": 28,
+      "2": 3
+    },
+    "cases": {
+      "inspect": {
+        "changedFiles": [],
+        "newTransactionBackups": 0
+      },
+      "shared": {
+        "changedFiles": [
+          "project.yaml"
+        ],
+        "newTransactionBackups": 2
+      },
+      "personal": {
+        "changedFiles": [
+          "project.local.yaml"
+        ],
+        "newTransactionBackups": 1
+      },
+      "refused": {
+        "changedFiles": [],
+        "newTransactionBackups": 0
+      },
+      "reserved": {
+        "changedFiles": [
+          "project.local.yaml",
+          "project.yaml"
+        ],
+        "newTransactionBackups": 2
+      }
+    },
+    "artifacts": [
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-JdycTx/cases.json",
+        "sha256": "36eac9f682b4e228a592be6e46d859a3cc2f17637fa1a51652855d6e1aa15ebf"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-JdycTx/evaluation.json",
+        "sha256": "8a129ad159bd35204a8474f5566207aa641616d60bc87afae8800d6b2ddad154"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-JdycTx/evaluation.md",
+        "sha256": "34507bde073d277524e6de2b7f2f4472efc10d675026c79872d7acc83b90367b"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-JdycTx/commands.jsonl",
+        "sha256": "c732b4a830a09bce515aea524292a85a6987ad1a0f21d95c6fccad64dad288b1"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-JdycTx/verified-results.json",
+        "sha256": "d5a600d4e7f00fe726f5ac913e9b4c33285e22527a991ecbd57a4fcc6714f282"
+      }
+    ]
+  },
+  "initialEvaluationNotes": [
+    "Supplied installed Skill evaluation; not native discovery.",
+    "An initial unfiltered manifest read exposed before hashes, not expected outcomes.",
+    "Shared override value was specifically read after application; clarified before-apply read in Skill.",
+    "Null shared value was described as shadowed in one table; clarified unset wording."
+  ],
+  "regression": {
+    "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-LN1SKK",
+    "commands": 17,
+    "commandExitCodes": {
+      "0": 17
+    },
+    "cases": {
+      "shared": {
+        "changedFiles": [
+          "project.yaml"
+        ],
+        "newTransactionBackups": 2
+      },
+      "reserved": {
+        "changedFiles": [
+          "project.local.yaml",
+          "project.yaml"
+        ],
+        "newTransactionBackups": 2
+      }
+    },
+    "artifacts": [
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-LN1SKK/cases.json",
+        "sha256": "6430b3068199f96e0f86b144aa3bab6111712c3ac900d76dffa6682a7674c73a"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-LN1SKK/evaluation.json",
+        "sha256": "c8e8c20c7d0d6e720d6f2544891d878425c538dfcfa8631c5f2441b71f6f4ba3"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-LN1SKK/evaluation.md",
+        "sha256": "091b739e7f55c9684e62a4f50c2ca56e42bc6c82139c21340c3cdd8861abfdde"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-LN1SKK/commands.jsonl",
+        "sha256": "666047215386507fb7e7dd653e7a8184b5db991de8b94653015ded1ef73ec4b9"
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-LN1SKK/verified-results-shared-reserved.json",
+        "sha256": "34a4feeee544dcf4af3571cd3cdac4062547273fdb8d3c646363d0ecfd5f8048"
+      }
+    ]
+  },
+  "regressionNotes": [
+    "Follow-up regression, not a fresh blind evaluation.",
+    "Reviewed command order and before-write explanation: effective solo read before shared write.",
+    "Reserved local value correctly says no shared value set."
+  ],
+  "verifierNegativeControl": {
+    "status": "rejected",
+    "exitCode": 1,
+    "reason": "unexpected new file unrequested.txt",
+    "artifact": {
+      "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/settings-verifier-negative-qy6bvgah/verification.log",
+      "sha256": "012e4e7cf6cee12d365a1368b03ca654e6f6e8bbe3c2bdea359e24bce83fc7d8"
+    }
+  },
+  "nativeCLI": {
+    "version": "0.162.0",
+    "prompt": "Show the effective game project settings and explain where the review mode comes from. Do not change files.",
+    "sandbox": "read-only",
+    "project": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-JdycTx/inspect game 测试",
+    "discovery": {
+      "root": true,
+      "nonGitNestedDirectory": false
+    },
+    "exitCode": 0,
+    "actualSkillRead": true,
+    "installedQuerySucceeded": true,
+    "reviewMode": {
+      "value": "solo",
+      "source": "project.local.yaml"
+    },
+    "filesystem": {
+      "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-settings-skill-JdycTx/verified-results-inspect.json",
+      "sha256": "ed28741772f95dbe8f51fe1e34fe0b687deca3c80b680b019a8ca6461d6eaa75"
+    },
+    "commands": [
+      {
+        "command": "/bin/zsh -lc 'cat .agents/skills/game-studio-project-settings/SKILL.md'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'cat project.yaml'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'node .game-studio/run.cjs --help'",
+        "exitCode": 3
+      },
+      {
+        "command": "/bin/zsh -lc \"command -v -a node node24 node25 node26; node --version; ls /opt/homebrew/opt /usr/local/bin /Users/tori/.nvm/versions/node /Users/tori/.local/share/mise/installs/node 2>/dev/null; sed -n '1,180p' .game-studio/run.cjs\"",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc '/opt/homebrew/opt/node@24/bin/node .game-studio/run.cjs --help'",
+        "exitCode": 134
+      },
+      {
+        "command": "/bin/zsh -lc '/opt/homebrew/opt/node@24/bin/node .game-studio/run.cjs config get --json'",
+        "exitCode": 134
+      },
+      {
+        "command": "/bin/zsh -lc \"ls -l /opt/homebrew/opt/node*/bin/node; ls /opt/homebrew/Cellar/node*; which -a node; rg --files --hidden -g '*local*' -g '*config*' -g '*project*' -g '*configuration*' -g '\"'!**/node_modules/**'\"' .\"",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc \"rg -n 'UNSUPPORTED_NODE|review_mode|locallyOverridable|projectValue|rigor:|annotations' .game-studio/node_modules/@t-x-r/game-studio/dist .game-studio/node_modules/@t-x-r/game-studio/studio/docs/configuration.md\"",
+        "exitCode": 2
+      },
+      {
+        "command": "/bin/zsh -lc \"cat project.local.yaml; rg --files production -g '*review*'; sed -n '1,180p' .game-studio/node_modules/@t-x-r/game-studio/dist/config.js\"",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs --help'",
+        "exitCode": 0
+      },
+      {
+        "command": "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get --json'",
+        "exitCode": 0
+      }
+    ],
+    "notes": [
+      "Natural-language request did not name the Skill.",
+      "Default Node was unsupported; Homebrew Node failed to load a library. Host found the existing isolated Node 24 and queried successfully. No system installation changed.",
+      "This fixture used the initial installed Skill; later edits only clarify write ordering and unset shared values."
+    ],
+    "artifacts": [
+      {
+        "path": "/private/tmp/game-studio-settings-native-prompt.json",
+        "sha256": "5465b823a4e6d2deb8c39f51e80c169ee4822adf6315140fea9e9dffd2cdfac4"
+      },
+      {
+        "path": "/private/tmp/game-studio-settings-native-root-prompt.json",
+        "sha256": "cf0d2029fbc4b41f30267808cdce0031d5886a7ab96a767cde5a1662df5bdf85"
+      },
+      {
+        "path": "/private/tmp/game-studio-settings-native-events.jsonl",
+        "sha256": "e98a366ff6ee36c338c66eae705cc5ff4959d22cf8844bf203a32c8334c004df"
+      },
+      {
+        "path": "/private/tmp/game-studio-settings-native-final.txt",
+        "sha256": "7d7fe4fa4d73690e5a7c83b08a834bcd2dca4360614295287a193f7f0391666b"
+      },
+      {
+        "path": "/private/tmp/game-studio-settings-native-stderr.txt",
+        "sha256": "e26abc0d9d0a68b362faea2e928b3ce37ebe691790a2287b96ed5d13e459e4f1"
+      }
+    ]
+  },
+  "localChecks": {
+    "build": "passed",
+    "typecheck": "passed",
+    "tests": 128,
+    "failed": 0,
+    "skipped": 0,
+    "pack": "passed",
+    "skillMetadata": "passed"
+  },
+  "remaining": [
+    "Native CLI mutation and Git-root subdirectory discovery scenarios",
+    "Codex desktop discovery and behavior",
+    "Advice cancellation, malformed/missing workspace and conflict behavior in actual Skill runs",
+    "Complete S037/S050 behavior inventory and full migration gates",
+    "New public installation archive; existing alpha remains unchanged"
+  ]
+}

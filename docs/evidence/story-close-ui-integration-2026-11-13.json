@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "S059 story-done eight-phase content and A040 UI Programmer role integration. Native behavior, engine execution and desktop acceptance remain pending.",
+  "review": {
+    "root": "Compared complete Skill and role candidates against retained source, linked references, source test contracts and actual shared CLI interfaces. No blocking finding.",
+    "storyDoneIndependent": "Separate reviewer checked all eight source phases, references and actual config/engine/registry/md-section/checkpoint interfaces. No blocking finding; exact mutation preflight, CRLF preservation, partial-sync recovery and exclusion of unrelated staged changes require native acceptance.",
+    "uiProgrammerIndependent": "Separate reviewer checked six duties, all UI principles, design ownership, engine-version safety and five source cases. No blocking finding. Clarified that the role does not directly depend on legacy runtime resources while config compatibility can still observe legacy preferences."
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "fullSuitePerNode": {
+      "pass": 287,
+      "fail": 0,
+      "skip": 0
+    },
+    "node": [
+      "24.22.2",
+      "26.13.1"
+    ],
+    "platform": "macOS ARM64",
+    "installedArchive": "PASS",
+    "installedArchiveChecks": [
+      "UI role installed bytes equal canonical TOML",
+      "All four story-done Skill/reference files installed with exact bytes and no extra/missing files",
+      "Pinned read-only Markdown observer installed and exercised",
+      "Restore and detach remain passing"
+    ]
+  },
+  "catalog": {
+    "skillsPartial": 16,
+    "rolesPartial": 11,
+    "verified": 0
+  },
+  "limits": [
+    "No new Skill or role native acceptance follows from static checks or package installation.",
+    "All story-done behavioral matrix items and UI role engine cases remain open.",
+    "No npm publication or full-migration release is implied."
+  ],
+  "fileHashes": {
+    ".agents/skills/game-studio-story-done/SKILL.md": "96cc8ea29844c2c1cb4acbd1052148b683bfe80b504618560ee2e03404ae39c7",
+    ".agents/skills/game-studio-story-done/references/review-gates.md": "d10f0b1179bd55190a80b81184700140b7097da839fa845409542bbe3251a08c",
+    ".agents/skills/game-studio-story-done/references/sprint-next.md": "f9b98a991c2bf51ea68fe63e3fd2b80426b68c935c845071af701c9bd496393f",
+    ".agents/skills/game-studio-story-done/references/tech-debt-row.md": "b650b9f564e8f399ae2aa948782dcaa8772e39dd08219eac1355ae4b934b9738",
+    "studio-tests/skills/readiness/story-done-codex.md": "1f1d779426fe813c104c2bde19e7c9844d6c62d18cd811a9b2531f79200c8fd7",
+    ".codex/agents/game-studio-ui-programmer.toml": "4b0d20be98016eaf0cb5888f5b3af9c77c34044e3357401ccc07086b71ab0290",
+    "studio-tests/roles/ui-programmer-codex.md": "ae1e619f1fe292cb3632fe000462259874370239cef9e64e5f831292594a748d",
+    "studio-tests/catalog.yaml": "b638ed241c013b65598efa60f0d4baa1d08f5c85a1b1a64d0b1d7e12c62be382",
+    "toolkit/test/packed-smoke.mjs": "be60974652dcff4143b010ffede74f27ba5fea1a5771509056822722e0f4ab6a"
+  },
+  "logs": {
+    "game-studio-close-ui-build.log": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28",
+    "game-studio-close-ui-typecheck.log": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b",
+    "game-studio-close-ui-lint.log": "b95046b2809e1f0c6970a758de470d299e0d1c8cdf5e22775dd998a733386ec8",
+    "game-studio-close-ui-tests24.log": "aa7054abac17d960fea95de4d8e8c6d6b889deb1949acafd21464cf1809f611e",
+    "game-studio-close-ui-tests26.log": "070f193c1d1588d5add363ff7192ba5f64e4df5be5f2832ecfdb91a1a04bdd9b",
+    "game-studio-close-ui-pack.log": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+  },
+  "ci": {
+    "head": "2c7d8816ae00518bf898abb236d0c0642eeb1813",
+    "url": "https://github.com/T-X-R/codex-game-studio/actions/runs/43261542303",
+    "conclusion": "success",
+    "jobs": [
+      "ubuntu Node24",
+      "ubuntu Node26",
+      "Windows Node24",
+      "macOS Node24",
+      "browser and packed Web growth"
+    ],
+    "scope": "Integrated closure/UI content before the later readiness protocol instruction corrections."
+  }
+}

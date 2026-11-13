@@ -27,6 +27,14 @@ onboarding setup, prototype scaffolding/import, static script checks, localhost
 preview, deterministic Chromium replay and static Web export. The starter is a
 skeleton for Codex to implement, not an automatically finished game.
 
+The current source additionally implements `config set KEY VALUE`, with `--local`
+and `--dry-run`, and `config get --system NAME`. These additions are not present
+in the published `0.1.0-alpha.0` download. Configuration writes preserve comments,
+reject conflicting changes and synchronize `production/stage.txt` for stage
+edits. See the bundled `studio/docs/configuration.md` via `resource path` for
+value syntax, local overrides and the distinction between recorded settings and
+implemented enforcement.
+
 Full upstream workflow/role migration, automatic hooks, engine build adapters,
 upgrade and live Codex desktop validation remain incomplete. See the source
 repository's README and `docs/implementation-status.md` before relying on an

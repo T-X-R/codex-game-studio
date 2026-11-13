@@ -1,0 +1,268 @@
+{
+  "date": "2026-11-12",
+  "status": "scoped-pass",
+  "scope": "Independent reconciliation of next-step read-only runs and architecture same-session revision. Both migrated Skills remain partial.",
+  "evidenceHashes": {
+    "docs/evidence/next-step-skill-2026-11-12.json": "6771839785419b5e72480fedc03f9ba3231f949ef467c915c0b5b01bb6d7efb7",
+    "docs/evidence/create-architecture-skill-2026-11-12.json": "174996bef8e6535b1d79cdbe320953fa8c69d805d24da1f2dada9f709e77f7d0"
+  },
+  "nextStep": {
+    "actualRuns": 43,
+    "outcomes": {
+      "FAIL": 4,
+      "PASS": 39
+    },
+    "definedLabels": 40,
+    "alias": "source-08-built and source-10-built are byte-equivalent fixture data with one actual session, explicitly mapped. Alias digest uses Python json.dumps(sort_keys=True), default ASCII/space formatting and UTF-8 without newline.",
+    "rootReconciliation": "All raw evidence and parent traces match; every actual regular workspace file independently rehashed, no changed or extra files.",
+    "independentBehaviorReview": "A separate agent reviewed original commands/finals and retained-source contracts for all-complete failure/correction, grown-feature, incomplete growth and unavailable helper; no blocking finding. Author manual review covers all defined cases.",
+    "runs": [
+      {
+        "runId": "game-studio-next-step-JEvYVv",
+        "status": "FAIL",
+        "preservedFiles": 530
+      },
+      {
+        "runId": "game-studio-next-step-LKkfZw",
+        "status": "FAIL",
+        "preservedFiles": 530
+      },
+      {
+        "runId": "game-studio-next-step-w5SR6s",
+        "status": "PASS",
+        "preservedFiles": 532
+      },
+      {
+        "runId": "game-studio-next-step-dND9j4",
+        "status": "FAIL",
+        "preservedFiles": 532
+      },
+      {
+        "runId": "game-studio-next-step-9GAEe7",
+        "status": "PASS",
+        "preservedFiles": 532
+      },
+      {
+        "runId": "game-studio-next-step-zAthuL",
+        "status": "PASS",
+        "preservedFiles": 537
+      },
+      {
+        "runId": "game-studio-next-step-0ZrZQU",
+        "status": "PASS",
+        "preservedFiles": 527
+      },
+      {
+        "runId": "game-studio-next-step-aOEqGx",
+        "status": "PASS",
+        "preservedFiles": 529
+      },
+      {
+        "runId": "game-studio-next-step-lawFVv",
+        "status": "PASS",
+        "preservedFiles": 527
+      },
+      {
+        "runId": "game-studio-next-step-FdV3rD",
+        "status": "PASS",
+        "preservedFiles": 532
+      },
+      {
+        "runId": "game-studio-next-step-J7nSxA",
+        "status": "PASS",
+        "preservedFiles": 535
+      },
+      {
+        "runId": "game-studio-next-step-lP7RoM",
+        "status": "PASS",
+        "preservedFiles": 535
+      },
+      {
+        "runId": "game-studio-next-step-5qEySv",
+        "status": "PASS",
+        "preservedFiles": 537
+      },
+      {
+        "runId": "game-studio-next-step-XxadWt",
+        "status": "PASS",
+        "preservedFiles": 537
+      },
+      {
+        "runId": "game-studio-next-step-zx49Lq",
+        "status": "PASS",
+        "preservedFiles": 545
+      },
+      {
+        "runId": "game-studio-next-step-2qm0qN",
+        "status": "PASS",
+        "preservedFiles": 536
+      },
+      {
+        "runId": "game-studio-next-step-diIejR",
+        "status": "PASS",
+        "preservedFiles": 534
+      },
+      {
+        "runId": "game-studio-next-step-rhmOug",
+        "status": "PASS",
+        "preservedFiles": 545
+      },
+      {
+        "runId": "game-studio-next-step-XJwYvq",
+        "status": "PASS",
+        "preservedFiles": 535
+      },
+      {
+        "runId": "game-studio-next-step-zG70nx",
+        "status": "PASS",
+        "preservedFiles": 536
+      },
+      {
+        "runId": "game-studio-next-step-eLBgc6",
+        "status": "PASS",
+        "preservedFiles": 539
+      },
+      {
+        "runId": "game-studio-next-step-YeeAbD",
+        "status": "PASS",
+        "preservedFiles": 538
+      },
+      {
+        "runId": "game-studio-next-step-y1URQg",
+        "status": "PASS",
+        "preservedFiles": 540
+      },
+      {
+        "runId": "game-studio-next-step-l5AaLG",
+        "status": "PASS",
+        "preservedFiles": 541
+      },
+      {
+        "runId": "game-studio-next-step-1H8GeG",
+        "status": "FAIL",
+        "preservedFiles": 540
+      },
+      {
+        "runId": "game-studio-next-step-29TMIB",
+        "status": "PASS",
+        "preservedFiles": 538
+      },
+      {
+        "runId": "game-studio-next-step-KJpt9i",
+        "status": "PASS",
+        "preservedFiles": 540
+      },
+      {
+        "runId": "game-studio-next-step-uT4Xhv",
+        "status": "PASS",
+        "preservedFiles": 540
+      },
+      {
+        "runId": "game-studio-next-step-0wQZj1",
+        "status": "PASS",
+        "preservedFiles": 540
+      },
+      {
+        "runId": "game-studio-next-step-esszel",
+        "status": "PASS",
+        "preservedFiles": 540
+      },
+      {
+        "runId": "game-studio-next-step-udQct9",
+        "status": "PASS",
+        "preservedFiles": 537
+      },
+      {
+        "runId": "game-studio-next-step-kon4MU",
+        "status": "PASS",
+        "preservedFiles": 536
+      },
+      {
+        "runId": "game-studio-next-step-zMlgFW",
+        "status": "PASS",
+        "preservedFiles": 536
+      },
+      {
+        "runId": "game-studio-next-step-S3o5yF",
+        "status": "PASS",
+        "preservedFiles": 536
+      },
+      {
+        "runId": "game-studio-next-step-a9caXd",
+        "status": "PASS",
+        "preservedFiles": 543
+      },
+      {
+        "runId": "game-studio-next-step-3fzIrZ",
+        "status": "PASS",
+        "preservedFiles": 543
+      },
+      {
+        "runId": "game-studio-next-step-v9wHue",
+        "status": "PASS",
+        "preservedFiles": 543
+      },
+      {
+        "runId": "game-studio-next-step-7LWFyr",
+        "status": "PASS",
+        "preservedFiles": 545
+      },
+      {
+        "runId": "game-studio-next-step-aTRroD",
+        "status": "PASS",
+        "preservedFiles": 545
+      },
+      {
+        "runId": "game-studio-next-step-iiNAr2",
+        "status": "PASS",
+        "preservedFiles": 535
+      },
+      {
+        "runId": "game-studio-next-step-DFHZd1",
+        "status": "PASS",
+        "preservedFiles": 538
+      },
+      {
+        "runId": "game-studio-next-step-glwc14",
+        "status": "PASS",
+        "preservedFiles": 542
+      },
+      {
+        "runId": "game-studio-next-step-yDiS0I",
+        "status": "PASS",
+        "preservedFiles": 539
+      }
+    ]
+  },
+  "architectureRevision": {
+    "runId": "game-studio-architecture-revision-IO3fZL",
+    "sourceRunId": "game-studio-create-architecture-4v2ZjE",
+    "originalFullOutcome": "FAIL retained, along with three earlier failed generation attempts",
+    "revisionOutcome": "PASS limited to authorized revision branch",
+    "oldFiles": 578,
+    "newFiles": 588,
+    "preservedOriginalFiles": 576,
+    "changed": [
+      "production/session-state/active.md",
+      "docs/architecture/architecture.md"
+    ],
+    "addedTransactions": 5,
+    "rootReconciliation": "Original after equals immutable revision before and every frozen regular file; live after matches all current files. Source evidence, original trace prefix, resumed trace, current trace and both child snapshots all match recorded hashes.",
+    "independentBehaviorReview": "Separate agent verified five event/backup transactions, checkpoint managed-region preservation, two real typed reviewers dispatched before wait, inherited settings, actual reads and the same reviewed v2 hash. Both original defects corrected;20 IDs and5 unselected chapters preserved.",
+    "reviewVerdicts": [
+      "CONCERNS",
+      "CONCERNS"
+    ],
+    "remainingConcerns": [
+      "Invariant ADR missing",
+      "Display contract unresolved",
+      "Browser targets and runtime evidence unresolved"
+    ],
+    "historyBoundary": "Frozen workspace is a regular-file historical snapshot, with symlink targets separately manifested; not an independently runnable environment image."
+  },
+  "limits": [
+    "No desktop, engine, browser, human play or downstream workflow acceptance inferred.",
+    "Same-session correction does not replace failed full-generation outcomes or accept reviewer concerns.",
+    "Next-step source fixtures span recorded resource versions; these checks do not claim every scenario ran against the final package."
+  ]
+}

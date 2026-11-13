@@ -1,0 +1,35 @@
+name: Automated Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Run Web Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+@WEB_TOOLCHAIN_NOTE@      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+@WEB_PM_STEP@@WEB_BROWSER_STEP@      - name: Install locked dependencies
+        run: @WEB_INSTALL@
+
+@WEB_BUILD_STEP@      - name: Run Tests
+        run: @WEB_TEST@
+
+      - name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: test-results
+          path: test-results/
+          if-no-files-found: ignore

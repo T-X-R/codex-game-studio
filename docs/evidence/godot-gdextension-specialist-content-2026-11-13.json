@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A014 complete native extension authoring role, source-mapped acceptance and exact installed/restored package bytes; native and compiler/runtime matrix pending.",
+  "files": {
+    ".codex/agents/game-studio-godot-gdextension-specialist.toml": "55e7585463cd0bf56a399f9c1f8395633cf0a429dc4888478618ffbce4d709f5",
+    "studio-tests/roles/godot-gdextension-specialist-codex.md": "2e1151f0254f3f74b32effe2e3a7f847691b2de9f85c9f4001b052c42e677e53",
+    "studio-tests/catalog.yaml": "63e76af02e1c7c55264d5422f237b9e507d6b6cd73bf02702297c0cd0132c41b",
+    "toolkit/test/packed-smoke.mjs": "f8b994628e69972ba8159047c734239975dffd662cfa0e3a2fce82438ddf92e9"
+  },
+  "source": {
+    ".claude/agents/godot-gdextension-specialist.md": "2a3a0ff569cc24a7716985387601f1e6e51f93acfefb0ad06a249f0c8b90ca46",
+    "studio-tests/agents/engine/godot/godot-gdextension-specialist.md": "dbe150464e0fdc67b761c3936c1c9a6c2e6f45a2b213b2cb502b87a314edd265",
+    "tasks/migration-inventory.md": "2ae200488965b9f3ab3b9236e7e4447b69ded5f67560466b9b0513d604776daa",
+    "tasks/plan.md": "2cd77fe42e2d07086516cb9c7e398a670e332580b6d15cd020f7cebda8a8fd11",
+    "docs/engine-reference/godot/VERSION.md": "ca3522430fd4e93d2d786f1d9292c5debb264208fc2067092e1cf6eafe44897f",
+    "docs/engine-reference/godot/breaking-changes.md": "6d566ed89500235f1935aef48ddf66bb7677e16d0f98ea4de2a977e21eeafdca",
+    "docs/engine-reference/godot/deprecated-apis.md": "1a66684256189c9e11900a9ce1e948a9ad84459dcaaa26ef76bc775499832f98"
+  },
+  "reviews": {
+    "candidateManifest": {
+      "path": "/private/tmp/game-studio-godot-gdextension-specialist-p6dq0zjm/manifest.json",
+      "sha256": "f1113be3c8374e2cf3a663d3cf53d31d4ea8cdc138133065188ea03b8360c0f7"
+    },
+    "sourceMapping": {
+      "path": "/private/tmp/game-studio-godot-gdextension-specialist-p6dq0zjm/source-mapping.md",
+      "sha256": "eda0b1556d34065106f3fb6e95f36966e8e9645b5f6814c2f6c02ce20832800a"
+    },
+    "independent": {
+      "path": "/private/tmp/game-studio-a014-independent-oazm_gbv/review.md",
+      "sha256": "206ac8d619fa69576b90d9f17c9694fdbfb8847cc0bba1db6d2dbe39b5096174"
+    },
+    "independentManifest": {
+      "path": "/private/tmp/game-studio-a014-independent-oazm_gbv/manifest.json",
+      "sha256": "ba29bfff07a47230cb1629f568d5641eed228a764e3ba7bcab543c1ffd3f29a4"
+    },
+    "root": {
+      "path": "/private/tmp/game-studio-a014-root-review.md",
+      "sha256": "6e54d5bdf95fdaa8fe31eb77fcb0b20c540fc999fbcdad1a0865d58d069c0328"
+    }
+  },
+  "sourceCorrections": [
+    {
+      "claim": "Binding release, target API and editor runtime are distinct; current independent bindings versioning does not authorize dependency upgrades.",
+      "source": "https://github.com/godotengine/godot-cpp#versioning"
+    },
+    {
+      "claim": "compatibility_minimum describes actual oldest supported target, not automatically build editor; library selection and entry symbol require real outputs.",
+      "source": "https://docs.godotengine.org/en/stable/engine_details/engine_api/gdextension/gdextension_file.html"
+    },
+    {
+      "claim": "Forward compatibility is within actual binding ranges, retaining the historical Godot4.0 ABI exception.",
+      "source": "https://docs.godotengine.org/en/stable/tutorials/scripting/cpp/gdextension_cpp_example.html"
+    },
+    {
+      "claim": "Rust Gd<Node> is manually managed; reference-counted and node lifetimes differ.",
+      "source": "https://godot-rust.github.io/docs/gdext/master/godot/obj/struct.Gd.html#memory-management"
+    },
+    {
+      "claim": "Thread-safe transfer does not make arbitrary scene/resource work safe; active scene access remains restricted.",
+      "source": "https://docs.godotengine.org/en/stable/tutorials/performance/thread_safe_apis.html"
+    },
+    {
+      "claim": "Original Quaternion zero-to-identity4.6 claim conflicts with tagged C++4.5 header. Keep investigation and expose conflict instead of requiring false answer.",
+      "source": "https://raw.githubusercontent.com/godotengine/godot-cpp/godot-4.5-stable/include/godot_cpp/variant/quaternion.hpp",
+      "headerSha256": "a064efe84f98fda74c22c8e1c0695331d85200c0984595478cb9c8f96cb54634"
+    }
+  ],
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS",
+    "node24Content": 38,
+    "node26Content": 38,
+    "pack": "PASS; exact global and restored role bytes",
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-a014-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      {
+        "path": "/private/tmp/game-studio-a014-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      {
+        "path": "/private/tmp/game-studio-a014-content.log",
+        "sha256": "3cfa0e4018b1cb17c158fedd4f675b47387d17ee219718d95d71978eb3d8263a"
+      },
+      {
+        "path": "/private/tmp/game-studio-a014-content24.log",
+        "sha256": "288e7447281d917a50b46618d999641206324aea889eddde0134ab8e5b5105c7"
+      },
+      {
+        "path": "/private/tmp/game-studio-a014-content26.log",
+        "sha256": "babd1062fc871294da6dd488f6ab006ccfabeb7f5181060f4cf9682aa433f4b9"
+      },
+      {
+        "path": "/private/tmp/game-studio-a014-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      }
+    ]
+  },
+  "catalog": {
+    "skills": {
+      "partial": 18,
+      "pending": 57
+    },
+    "roles": {
+      "partial": 21,
+      "pending": 28
+    },
+    "verified": 0
+  },
+  "pending": [
+    "Five original native cases",
+    "Real C++ and Rust compilation/linking/load/call/lifetime/reload",
+    "Every agreed target platform and actual SDK",
+    "Measured native benefit, desktop host and full source behavior"
+  ]
+}

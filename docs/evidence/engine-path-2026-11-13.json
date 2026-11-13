@@ -1,0 +1,185 @@
+{
+  "date": "2026-11-13",
+  "scope": "S051 configured executable foundation; full Skill migration remains pending",
+  "status": "PASS_SCOPED",
+  "contract": [
+    "config set and engine setup accept literal optional engine.path; setup synchronizes Engine Path in the preference document.",
+    "engine_values and engine inspect expose the configured path and source; unset stays unset.",
+    "verify selects explicit executable, then configured path, then godot only for absent/null. Invalid types, blank values, NUL, CR or LF do not trigger fallback.",
+    "Dry-run executes nothing; no shell/tilde expansion or commands rewriting."
+  ],
+  "sources": {
+    "toolkit/src/config-derived.ts": "683a225a550ae4e8fc082957207cedb47f01dd516355b3cbf562585c3c21458b",
+    "toolkit/src/config-write.ts": "c98213c866e38d2cbe904e19dcd36c28d6ac95d3c0fa9da90364342236288c76",
+    "toolkit/src/engine-setup.ts": "15eb8db634007ace2083aa09ab1b443a0cdf79bcf80dcf59b4a0e6486ea57aa1",
+    "toolkit/src/engine-verify.ts": "8f33c36a7bf08a9e02289594cfbc05a11b669092a717cbe76eca37754fdd5f8a",
+    "toolkit/src/game-commands.ts": "23e2bad882924099598e7c6bf9f07aa49a7be8f0ca81dc6f23c3218cab9cfb0d",
+    "toolkit/test/engine-path.test.mjs": "a218f256124da671da2750e261e3a586eb63312c5ad8c9a5aa839b949384bf2a",
+    "toolkit/test/engine-path-observation.test.mjs": "ae72cdd118cad204e75cc5e6127a82e618d36c273e773f05771740956e011d97",
+    "toolkit/test/packed-smoke.mjs": "fa10b8f90ffd6397ba7e06dbbb798161dd31ca759f6056169403ca9c87ef26d8"
+  },
+  "originalCandidate": {
+    "directory": "/private/tmp/game-studio-engine-path-sn3qnzsb",
+    "patchSha256": "62d6623f959efe7185d3d206f8eb752aebbd23a709fbf9a42aea9fd2444d5710",
+    "tests": "9 original-base failures; corrected isolated Node24/26 related suite49PASS each. Intermediate fixture CLI-argument and TypeScript errors retained as excerpts; intermediate full logs were overwritten and are not claimed retained."
+  },
+  "independentReviewAndCorrection": {
+    "directory": "/private/tmp/engine-path-independent.77uqts6z/observation-candidate",
+    "patchSha256": "a11f6c0bb00b4c981462000bbf384bd09df1f72219da4d364e8f9951c9836594",
+    "result": "Root found missing grouped observation. Two added tests fail on original candidate, pass after one-line derived-dependency addition; isolated related suite51PASS each Node24/26."
+  },
+  "sharedChecks": {
+    "build": {
+      "path": "/private/tmp/game-studio-engine-path-build.log",
+      "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28",
+      "exitCode": 0
+    },
+    "typecheck": {
+      "path": "/private/tmp/game-studio-engine-path-typecheck.log",
+      "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b",
+      "exitCode": 0
+    },
+    "lint": {
+      "path": "/private/tmp/game-studio-engine-path-lint.log",
+      "sha256": "7747b9ca37f5e28dc44a5feba5528ae2ac94362ad05996ab093071e1dc9d000d",
+      "exitCode": 0
+    },
+    "tests24": {
+      "path": "/private/tmp/game-studio-engine-path-tests24.log",
+      "sha256": "65d77ccdc1e30d2846549277a43cfa14ec16fe68c3801a55787ba268d47aee61",
+      "exitCode": 0
+    },
+    "tests26": {
+      "path": "/private/tmp/game-studio-engine-path-tests26.log",
+      "sha256": "aa887c19a344fd2ddebb6e1102db8c74543df1987b8725666325da65d5780765",
+      "exitCode": 0
+    },
+    "pack": {
+      "path": "/private/tmp/game-studio-engine-path-pack.log",
+      "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38",
+      "exitCode": 0
+    }
+  },
+  "testCounts": {
+    "node24": {
+      "pass": 375,
+      "fail": 0,
+      "skipped": 0
+    },
+    "node26": {
+      "pass": 375,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "installedArchive": "Actual global CLI and restored local launcher: set/read provenance, configured and overridden dry-run executable, setup mirror preservation, null fallback. Packed smoke passed.",
+  "liveEditor": {
+    "directory": "/private/tmp/game-studio-engine-path-live-u4tok71l",
+    "executionSha256": "4d07bf22f73a4b02913dc98ec467c61a3cae34fab0f39fda5199b6a7a363c0ee",
+    "dryRunSha256": "2106c01589ec2a244c5db50392fb33a98ddfd1e8b13b8dda5da45b5e68a45445",
+    "dryRunNoEvidenceCreated": true,
+    "actualReportSha256": "1334d7bb4c7acbcb63215c18d99fceba3e2c6dc7edf3ca4afae8a5f23bcef355",
+    "report": {
+      "project": "/private/tmp/game-studio-engine-path-live-u4tok71l/Godot path \u6d4b\u8bd5",
+      "engine": "Godot",
+      "declaredVersion": "4.7.2",
+      "actualVersion": "4.7.2.stable.official.ed1daf0bf",
+      "command": {
+        "executable": "/Users/tori/Desktop/Project/Games/Shield-Dodge/.tools/Godot.app/Contents/MacOS/Godot",
+        "args": [
+          "--headless",
+          "--path",
+          "/private/tmp/game-studio-engine-path-live-u4tok71l/Godot path \u6d4b\u8bd5",
+          "--import"
+        ]
+      },
+      "timeoutMs": 120000,
+      "output": "evidence/path-import",
+      "durationMs": 3019,
+      "status": "ok",
+      "exitCode": 0,
+      "reason": null,
+      "warnings": [],
+      "checks": [
+        {
+          "phase": "version",
+          "args": [
+            "--version"
+          ],
+          "processExitCode": 0,
+          "signal": null,
+          "errorDetected": false
+        },
+        {
+          "phase": "help",
+          "args": [
+            "--help"
+          ],
+          "processExitCode": 0,
+          "signal": null,
+          "errorDetected": false
+        },
+        {
+          "phase": "import-1",
+          "args": [
+            "--headless",
+            "--path",
+            "/private/tmp/game-studio-engine-path-live-u4tok71l/Godot path \u6d4b\u8bd5",
+            "--import"
+          ],
+          "processExitCode": 0,
+          "signal": null,
+          "errorDetected": false
+        }
+      ],
+      "judgment": "Editor import only; builds, test coverage, main-scene execution and human play acceptance are not assessed.",
+      "artifacts": {
+        "project": "/private/tmp/game-studio-engine-path-live-u4tok71l/Godot path \u6d4b\u8bd5",
+        "directory": "evidence/path-import",
+        "files": [
+          {
+            "path": "evidence/path-import/version.stdout.log",
+            "bytes": 32,
+            "sha256": "edff16c1721dd4ae989cadf29a01f574ae8d51b118221f664725bd6980bbba5d"
+          },
+          {
+            "path": "evidence/path-import/version.stderr.log",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "evidence/path-import/help.stdout.log",
+            "bytes": 15405,
+            "sha256": "acbe9a35e39f6ccfe18d7ca6911faeb2f41b64d23d0252a5aa61f635f21402a3"
+          },
+          {
+            "path": "evidence/path-import/help.stderr.log",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "evidence/path-import/import-1.stdout.log",
+            "bytes": 1071,
+            "sha256": "4c15ecaf151c17c14702b6536789197585313754765fa5ab2b24a9bf697cec4f"
+          },
+          {
+            "path": "evidence/path-import/import-1.stderr.log",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "evidence/path-import/report.json",
+            "bytes": 1368,
+            "sha256": "bc4444f2d740cfcc8dfae5b4b67b8df3bc27e167fcb70070981c58a4433734b8"
+          }
+        ]
+      }
+    },
+    "scope": "Actual built CLI on macOS ARM64, no invocation override; configured path used for real Godot4.7.2 version/help/import. This live run was not from the separately installed archive."
+  },
+  "remaining": [
+    "Full S051 setup workflow, Web detection/scaffolding and coherence/reference helpers.",
+    "Real Windows/Linux editor invocation, Unity/Unreal, full game build/play and desktop-specific workflow acceptance.",
+    "Exact-head CI after this commit remains separate from local results."
+  ]
+}

@@ -15,11 +15,112 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
-The initial alpha implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Three project Skill entry points exist, but their full S-row behavioral migration remains open. All role rows remain open.
+2026-11-13: A014 GDExtension content is independently reviewed and installed with
+complete C++/Rust duties; build/typecheck, 38 content tests per Node24/26 and actual
+package checks pass. Catalog: 18 partial Skills/57 pending, 21 partial roles/28
+pending, none verified. A016 six native fixtures and exact existing-file edit scope
+pass 532 full tests per Node version; native tests run in a frozen copy. A015
+rationale retries pass type-review and abstract-version output contracts but retain
+the conditional native-owner handoff failure. New typed and abstract code have
+separate actual engine passes. Async functionality passes but cleanup fails; the
+source-rule correction is integrated, with fresh generation/runtime required.
+Latest completed seven-job CI at a3a7310 predates these additions.
+
+2026-11-13: Shader A016 and C# A013 content integrations pass independent review,
+build/typecheck, 38 content checks per Node24/26 and actual package checks each.
+Catalog: 18 partial Skills/57 pending, 20 partial roles/29 pending, zero verified.
+A017 four same-input retries close the selected initial failures without deleting
+them; latest six selected cases have scoped passes. A015 five initial native cases
+retain two scoped passes and three output-contract omissions; rationale retries
+and actual engine checks are in progress. Seven CI jobs at8b1b6d3 pass, predating
+these latest role additions. Full parent checkpoints remain open.
+
+2026-11-13: A015 GDScript role and five original native scenario definitions are
+integrated as partial, with independent review, exact installed/restored role
+checks and 529 passing tests on each Node 24/26. Native execution is in progress;
+engine and desktop branches remain open. Catalog: 18 partial Skills/57 pending,
+18 partial roles/31 pending, zero fully verified. A017 six native scenarios retain
+four selected failures and two scoped passes; fixes require same-input retries.
+All seven CI jobs at e20aab2 pass, including the restored Windows scaffold tests;
+63 existing Windows skips remain explicit. That CI predates A015 integration.
+
+S074 test setup and the installed four-engine scaffold are integrated as partial.
+Independent review findings, source differences and root's placeholder failure
+remain recorded in [content evidence](../docs/evidence/test-setup-content-2026-11-13.json).
+Node24/26 each pass 524 tests; 39 additional content checks per version and actual
+global/restored Skill/helper/template checks pass. All five original native
+workflows remain open. Catalog: 18 partial Skills/57 pending, 17 partial roles/32
+pending, zero fully verified. Seven CI jobs at 94c1351 pass, including actual
+Linux/Windows Godot; this later test-setup integration needs its own CI result.
+
+Godot specialist A017 is integrated as partial with independent source review,
+exact installed/restored role checks and 496 passing tests on each Node24/26.
+Its complete native matrix and four subordinate specialists remain open. Catalog:
+17 partial Skills/58 pending, 17 partial roles/32 pending, zero fully verified.
+Seven-job CI at 94c1351 passes, including Linux/Windows actual-Godot checks.
+See [role evidence](../docs/evidence/godot-specialist-content-2026-11-13.json).
+
+2026-11-13: S051 initial selection and configured-engine identification have two
+root-audited native read-only scoped passes on 0c3f343; full cases remain pending.
+All five CI jobs for that content head pass. The source-derived Godot parse
+resource now has real 4.7.2 source/installed comparisons, exact package-byte
+checks and 496 full tests per Node 24/26. No game, .NET or full workflow acceptance
+is inferred. Test setup/helper and Godot specialist migration continue separately.
+
+2026-11-13: S051 full content and source-mapped acceptance specification are
+installed and independently reviewed. Content/Skill checks and global/restored
+archive byte checks pass; all 11 original native cases plus broader branches
+remain pending. Catalog now has 17 partial Skills and 58 pending, still zero
+fully verified. Reference/coherence foundation CI passes all five jobs at
+01b4afd; this later content change needs its own CI.
+
+2026-11-13: S051 reference/coherence foundations are integrated: all 53 historical
+reference files, project-owned initial copy and stable AGENTS pointer, plus
+source-derived consistency observations. Node 24/26 each pass 496 tests and clean
+global/restored package checks pass for all four engine trees. A real Godot
+version-only probe preserves project files. Full Skill/native/refresh/upgrade
+acceptance and parent tasks remain open. The preceding Windows fixture repair
+passes all five CI jobs at 09ff4e2; new foundations need their own exact-head CI.
+
+2026-11-13: S051 foundations now include typed platform/performance/testing setup
+and rich-mirror preservation, four source-preserving Web starters, and direct
+page screenshot/console capture. See the three current evidence records linked
+from implementation-status.md. Node 24/26 each pass 447 tests; actual global and
+restored archives create all four starters. Real starter builds and selected
+unit/browser cases pass. Full S051, reference copy/refresh/upgrade, native host
+workflows and all parent checkpoints remain open; no migration row is promoted.
+
+The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Seven project Skill entry points and nine roles (Game Designer, Lead Programmer, Gameplay Programmer, two QA roles, Creative Director, Art Director, Technical Director and Producer) exist, but their full behavioral migration rows remain open.
+
+2026-11-12: configuration reads now cover named-system workflow overrides and
+legacy engine preferences (`8bf457f`). `config set` adds validated project/local
+writes, comment/quote/line-ending preservation and stage synchronization
+(`c6a7365`); transaction backups are private on POSIX (`1356b97`). Build,
+typecheck and 47 tests pass locally; packed-install coverage includes writes
+through the pinned runtime. T04/T22 and S037 remain open until the remaining
+derived helpers and live workflow evidence are complete. Existing alpha CI
+passed all five jobs at `92242ed`. Configuration changes at `32d5195` also passed
+all five jobs in run `43137793165` on the development branch; no new archive is published.
+The configuration reader also preserves legacy boolean `testing.strict` fallback
+after explicit per-type overrides; derived gate/engine helper parity is still open.
+
+Further 2026-11-12 slices: checkpoint CLI persistence/recovery (`e19aac9`),
+gate/review/engine/performance summaries (`92ab7f3`), engine root validation
+(`942451a`), configured test/smoke/build execution with logs (`ed3e03b`) and engine
+inspection (`cbe931b`) pass build, typecheck, 74 local tests and packed-install
+verification. These do not close T18's live hook/compaction acceptance or T23's
+native editor execution requirements. Native CI initially exposed Windows
+command quoting and ERRORLEVEL defects; fixes and the input-method/specialist
+summaries now pass all five jobs at `bbcb238` in run `43142741958`. Local build,
+typecheck, 79 tests and packed-install checks pass. Source additions remain
+unreleased; full host and workflow acceptance is still open.
 
 ## M0 Compatibility and contracts
 
 - [ ] T01 Establish Codex integration evidence
+  - 2026-11-12 evidence: the earlier role probe did not prove project config loading; command-line trust overrides left the project layer disabled. A revised temporary-profile fixture verifies config loading before running. Its positive CLI session selected `agent_type: game-studio-probe`, spawned an independent child with that role and received the hidden marker; the role-absent control did not spawn or return the marker. Both profiles were removed. Sanitized parent/child evidence is in `docs/evidence/cli-role-selection-2026-11-12.json`. Desktop, subdirectory, actual write denial and hook acceptance remain open.
+  - Further evidence: after the owner's explicit authorization, two fixture hooks were reviewed/trusted through native `/hooks`. CLI startup context loaded, an allowed patch completed, and a denied patch rejected before changing its target. The separate untrusted fixture executed no hooks. See `docs/evidence/cli-hook-gate-2026-11-12.json` and `toolkit/test/host-hook-probe.mjs`. Offline contract coverage brings the local suite to 81 passing tests; build/typecheck/packed install pass. This closes only the tested startup/single-file patch behavior, not T01 or the production T16 adapter.
+  - Additional CLI evidence: the same two unchanged Hooks, reviewed natively under the owner's existing authorization, pass startup and multi-file patch tests from root and subdirectory. Mixed allowed/blocked patches leave both files unchanged. The runner preserves the reviewed profile across requested cases because native trust hashes live there; earlier trust-reset controls are not treated as host failures. See `docs/evidence/cli-hook-multifile-2026-11-12.json`. Desktop, subdirectory roles, shell interception, sandbox boundaries and other lifecycle/failure cases remain open.
   - Module: `codex-integration`. Dependencies: none.
   - Verify custom-agent TOML, project Skill discovery, Hook trust, patch payload and real block behavior in desktop and CLI. Include launch from a subdirectory and desktop PATH differences.
   - Acceptance: exact client versions, positive/negative transcripts and filesystem observations recorded; unsupported behavior listed without a silent fallback.
@@ -112,6 +213,9 @@ The initial alpha implements deterministic install and Web slices while C0 host 
   - Likely files: `toolkit/src/check.ts`, `toolkit/src/package.ts`, `toolkit/test/check.test.ts`, `toolkit/test/package.test.ts`. Scope: M.
 
 - [ ] T14 Migrate the core user journey
+  - 2026-11-12 S054 smoke slice: installed smoke Skill and three references preserve engine result interpretation, coverage, manual/platform observations and QA policy. CLI supports explicit 900000/1800000 ms budgets and one-run command adjustments without config edits. Seven isolated Node-runner/feedback scenarios and one same-agent platform-table regression passed file/result verification; simulated feedback is not human play acceptance. Build/typecheck, 130 tests and packed install pass. Evidence: `docs/evidence/smoke-skill-2026-11-12.json`. Full engine/host and remaining behavior matrix stay open.
+  - 2026-11-12 S037 settings slice: installed Skill and advisory reference, CLI read annotations for reserved/overridden values, and preserved source-derived behavior mapping. Five isolated behavior cases and two post-clarification regressions passed independent file/result checks. A natural-language CLI 0.162.0 read discovered and used the installed Skill from the game root; a non-Git nested launch did not discover it. See `docs/evidence/project-settings-skill-2026-11-12.json`. Local build/typecheck, 128 tests and packed install pass. Native writes, desktop, cancellation and unavailable/conflicting Skill scenarios remain open.
+  - 2026-11-12 S040 growth supplement: the installed prototype Skill now routes selected/resumed growth to a focused reference; packed attachment includes the reference and shared TypeScript resources. Independent behavior evaluation plus a separate result verifier completed a scoring/pause fixture without changing its prototype or brief constraints. See `studio-tests/skills/utility/prototype-growth.md` and `docs/evidence/web-growth-skill-2026-11-12.json`. Native CLI/desktop journeys and the other prototype scenarios remain open.
   - Module: `codex-integration`. Dependencies: T13.
   - Work queue: the individual Skill rows for `start`, `prototype`, `next-step`, `project-settings`, `smoke-check`; execute each in bounded slices.
   - Acceptance: natural-language request reaches a brief, built game and evidence; subsequent change preserves agreed requirements; guided behavior avoids per-file approval loops.
@@ -119,6 +223,10 @@ The initial alpha implements deterministic install and Web slices while C0 host 
   - Likely files per slice: one Skill body, up to three references, its behavior spec. Scope: M per slice; this parent closes only after all child rows pass.
 
 - [ ] T15 Grow a prototype and configure an engine
+  - 2026-11-12 semantic conversion fixture: strict TypeScript, existing JSON/live configuration, actual extracted rule tests (5), Chrome integration (3), smoke (1), normal/single-file builds, mutation red/green and independent injected-type-error checks passed. Same-seed state/screenshot equality and original bytes survived. The evaluation found a missing-hook capture false positive; `f389fd5` fixes the verdict and `a047f73` adds packed regression. This is one supplied-Skill fixture, not proof for all game/import/tuning/starter/host/human-play gates.
+  - 2026-11-12 copy slice: `prototype grow <name> --stage copy` creates the pinned Web toolchain and JavaScript entry with recoverable binary transactions, source guards and conflict refusal. The packed-runtime live fixture proves same-seed input/scoring states and screenshots match after `npm ci`, normal build and single-file build; original bytes survive, tuning is excluded from production, and empty game tests fail. See `docs/evidence/web-growth-copy-2026-11-12.json`. Local build/typecheck, 126 tests and packed install pass. CI now repeats live growth. TypeScript/data conversion, richer import/script/asset cases, meaningful game tests, final records, alternative starters and human play remain open.
+  - 2026-11-12 growth prerequisite slice: `prototype grow-check` inspects the engine, source entry, existing code/toolchain files, Git code changes (including renames and ignored files), grown tags and dirty briefs without writes. Corrupt/unavailable Git is not assessed; no-Git workspaces have an explicit backup warning. Eight new real-filesystem/Git/CLI tests bring the suite to 115, and packed dispatch verifies eligibility plus conflict refusal. See `docs/prototype-growth.md`. Copy, TypeScript conversion, build/test tooling, replay equivalence, alternative starters and human play remain open.
+  - 2026-11-12 configuration slice: grouped settings (`2054c77`) and `engine setup` (`8df646e`) atomically update explicit engine/version/language/paths plus selected specialist/naming/command fields and `docs/technical-preferences.md`. Missing directories remain pending; invalid paths and concurrent edits are refused. Build/typecheck and 93 local tests pass. Packed-install coverage verifies dry-run, apply, no-op, pinned runtime dispatch and preference retention after detach. See `docs/engine-configuration.md`. This does not close prototype growth, engine scaffolding, S051 or live editor acceptance.
   - Module: `game-operations`. Dependencies: T14.
   - Acceptance: Web growth preserves the game's behavior and establishes build/test scripts without overwriting toolkit or existing game configuration; engine setup records explicit paths/version.
   - Verification: before/after seeded run, configuration preservation, build/test discovery, and one Web starter fixture per advertised option.
@@ -143,12 +251,14 @@ The initial alpha implements deterministic install and Web slices while C0 host 
   - Likely files per slice: one validator, its adapter binding, one fixture, one test, inventory evidence. Scope: M per row.
 
 - [ ] T18 Implement checkpoint persistence and recovery
+  - Implemented CLI slice: bounded show, expected-hash save, legacy narrative preservation, immutable event deduplication, stale-writer rejection and interrupted transaction recovery. Unit and packed subprocess tests pass; actual Stop/compaction integration and host restart evidence remain open.
   - Module: `project-state`. Dependencies: T04, T16.
   - Acceptance: state save is atomic with concurrency detection; repeated Stop events do not duplicate work; recovery checks files rather than assuming surviving processes.
   - Verification: crash/interruption, two attempted writers, stale hash, restart and compaction scenarios; concise context output.
   - Likely files: `toolkit/src/checkpoint.ts`, `toolkit/src/events.ts`, `toolkit/test/checkpoint.test.ts`, `studio/docs/recovery.md`. Scope: M.
 
 - [ ] T19 Validate role delegation and guided collaboration
+  - 2026-11-12 sequential slice: four actual native children pass approved design to implementation, independent QA and read-only LP review in one fresh packed project. Programmer tests pass 17; a separate QA child adds seven and runs all 24; the lead returns APPROVE for pure logic. Six maintainer behavior groups pass; an isolated exact-affordability mutation makes eight programmer and four QA tests fail. All 332 original regular files survive, with 17 authorized additions. Traces prove selected roles, instruction isolation, inherited settings, completion-before-next-spawn and coordinator-only delegation. Evidence retains a mandatory-close fixture failure, a cancelled output-path conflict, and the completed native run's overly strict report nesting assertion; corrected postconditions pass against the same retained artifacts. See [evidence](../docs/evidence/role-handoff-2026-11-12.json) and [behavior spec](../studio-tests/roles/sequential-handoff-codex.md). Parallel writes, shared-checkpoint conflicts, unavailable-role behavior, adversarial permission checks, desktop and full role matrices remain open.
   - Module: `codex-integration`. Dependencies: T01, T18; core role rows for designer, programmer and QA complete.
   - Acceptance: coordinator delegates with explicit scope, aggregates findings and handles blocked roles; independent review is performed by a separate agent; parent permissions remain effective.
   - Verification: parallel read-only tasks, sequential dependency, disjoint writes and shared-checkpoint conflict; unknown task/role returns a clear failure.
@@ -160,6 +270,12 @@ The initial alpha implements deterministic install and Web slices while C0 host 
 ## M4 Complete content and engine migration
 
 - [ ] T20 Replace the content validator and test catalog rules
+  - 2026-11-12 installed-project slice: `check --kind content` uses the pinned runtime to inspect actual project Skill/role instructions and references, identifies missing expected entries, separates local Markdown paths from bundled resource calls, and lists unrelated namespaces as unassessed. Invalid content returns exit 5; missing/empty package baselines cannot pass. Build/typecheck/content lint, 167 tests and a fresh packed positive/mutation/restoration check pass. See [evidence](../docs/evidence/project-content-check-2026-11-12.json). This supplies a runtime validator for future workflow migration, not native discovery or completed `skill-test` behavior.
+  - 2026-11-12 source-inventory slice: default `lint:content` now reconciles the existing inventory tables with all 18 Hook files, 54 script/resources and 14 rules, plus the 15 actual retained Hook registrations and three unregistered files. Same-count omission/duplication, missing/nonregular sources, empty dispositions, changed matchers, unknown/dynamic/duplicate registrations and malformed settings fail explicitly. Build/typecheck, 159 tests and packed installation pass; complete-declaration mode still correctly fails on unfinished workflow/role/alias rows. See [evidence](../docs/evidence/source-inventory-2026-11-12.json). This checks retained input coverage only; replacement behavior and host/journey gates remain open.
+  - Inventory CI follow-up: run `43190208145` passed Windows source lint but failed two LF-only negative-fixture mutations. Explicit CRLF variants reproduced both failures locally; corrected mutation regexes and an actual-change assertion now cover LF/CRLF on every platform. The unchanged validator and 162 local tests pass. Failed-run evidence is retained in the source-inventory record.
+  - 2026-11-12 rubric slice: `studio-tests/quality-rubric.md` preserves all 15 categories and 57 metric identities while adapting host mechanics and guided authorization. The maintainer README, Codex AGENTS instructions and both spec templates separate instruction review from observed behavior, retain source-case mapping, and require native/negative/mode evidence. Manual semantic review plus source/current metric identity and local-link checks pass; no live behavior is inferred from this documentation change. Individual source specs, remaining legacy consumers and rule/hook/helper inventory coverage still require migration.
+  - 2026-11-12 command-example slice: explicit inline/fenced invocations are checked against actual command metadata for leaves, options, positional counts and schema targets. Negative fixtures cover entrypoints, role bodies, nested references and an installed archive; the archive is restored before continuing smoke checks. Build/typecheck/content lint, 153 tests and packed installation pass. See [evidence](../docs/evidence/command-examples-2026-11-12.json). Handler values, prose/abbreviated commands and native behavior still require review; no migration row is promoted.
+  - 2026-11-12 foundation: `lint:content` parses canonical Skill YAML and role TOML, checks names/types/entrypoints, recursive local references, literal bundled resource paths, symlinks and active legacy runtime syntax. Catalog v3 preserves all 75 workflow/49 role source contracts plus three explicit alias mappings, records Codex targets and partial/pending states, and rejects omitted sources, untracked targets and unsupported verified declarations. `--complete` correctly fails while migration is open; static success always retains `behaviorVerified: false`. Tests include malformed metadata, missing references/roles/specs/evidence, duplicate names and alias conflicts; packed verification runs the installed validator and rejects an intentionally removed resource before restoring it. See [validation contract](../docs/content-validation.md). Command-example checking, rule/hook/helper inventory cross-checks, Codex rubric/legacy-consumer replacement and dependent host/journey gates remain open; this does not close T20 or any migration row.
   - Module: `verification`. Dependencies: T02, T05, C2.
   - Acceptance: validate Codex metadata, names, resources and inventory coverage; retire Claude-only linter requirements; aliases remain explicitly accounted for.
   - Verification: invalid frontmatter, missing resource, duplicate name, omitted role, stale command example and residual Claude runtime fixtures.
@@ -172,6 +288,11 @@ The initial alpha implements deterministic install and Web slices while C0 host 
   - Likely files: specified by each S/A row contract below. Scope: S/M per row, not one bulk task.
 
 - [ ] T22 Migrate shared helpers and scoped rules
+  - 2026-11-13 Markdown reader: `list`, `status` and `extract` preserve read-only source observations, including documented parser quirks. Forty-four helper checks include 228 actual Bash comparisons; Node 24/26 each pass 287 integrated tests, and the actual installed resource is exercised. `replace`, `insert-before` and `set-field` remain unimplemented. See [contract](../studio-tests/helpers/md-section-codex.md) and [evidence](../docs/evidence/md-section-2026-11-13.json).
+  - 2026-11-13 Markdown writers: `replace`, `insert-before` and `set-field` now preserve source transformations with explicit dry-run and scoped atomic writes. The suite includes 54 real Bash writer comparisons plus retained reader checks; build/typecheck/content/package and 362 tests per Node 24/26 pass. Installed archive tests exercise each writer and failure/nonmutation boundaries. Hardlink, invalid UTF-8, permission, mixed-EOL, no-op and stale-file cases are retained. [Writer evidence](../docs/evidence/md-section-writers-2026-11-13.json) separates local/helper acceptance from pending CI/native-consuming workflows.
+  - 2026-11-12 registry slice: a portable, read-only bundled helper supports list/get/refs/slice/validate/compare and all eight next-ID kinds using parsed YAML, explicit missing/layout states and exact source/reference locations. Ten reader/command tests and installed-package execution pass; the integrated suite has 198 passes, including receipt tests. `validate`/`compare` findings remain observations, never domain approval. See [contract and limits](../docs/registry-observations.md). Broader source parity and consuming-workflow acceptance remain open.
+  - 2026-11-12 artifact follow-up: `3b6b61a` preserves the complete catalog as a packaged Codex resource; `c6e3c7e` adds `check --kind artifacts [--phase <id> | --path <id>]`. Ten legacy/new project fixtures match 540 step observations across 49 phase steps and five minimal-path steps. A real unreadable-file control reports UNKNOWN and exit three without dropping phase rows. Catalog parity, seven CLI/helper tests, build/typecheck/content validation, 184 full-suite tests and installed-runtime inspection pass. See [artifact contract](../docs/artifact-check.md). Workflow consumers and remaining helper/rule migrations remain open.
+  - 2026-11-12 deterministic gate prerequisites: `d7da380` ports GDD section/placeholder observations as `check --kind gdd`; eight legacy/new fixtures match. `26ac61f` ports ADR dependency extraction, cycle membership, transitive blocking and dependency-first ordering as `check --kind adr-deps`; a real upstream comparison matches the cycle/blocked/independent fixture. Both use project-relative safe paths, preserve input files, distinguish empty input as not assessed and leave verdicts to workflows. Nine new CLI tests bring the suite to 176 passes; build/typecheck/content validation and packed-runtime positive/empty checks pass. The first full GDD run encountered the sandbox's localhost-listen denial; the authorized rerun passed all 171 tests before the ADR additions. See [GDD contract](../docs/gdd-structure.md) and [ADR contract](../docs/adr-dependencies.md). Artifact-catalog checking, workflow consumers, remaining helpers and scoped rules remain open.
   - Modules: `project-state`, `game-operations`, `codex-integration`. Dependencies: T20.
   - Work queue: each of 54 shared-script/resource rows and 14 scoped-rule rows in the inventory; complete reused items after their T11–T18 implementation is verified.
   - Acceptance per helper: preserved observations/side effects, correct package/project roots, declared platform dependencies and no active Claude coupling. Acceptance per rule: correct scope and no unrelated global trigger.
@@ -179,6 +300,10 @@ The initial alpha implements deterministic install and Web slices while C0 host 
   - Likely files per helper slice: source/resource, consumer, contract fixture, test, source mapping. Per rule slice: rule, applicability index, behavior fixture. Scope: S/M.
 
 - [ ] T23 Validate engine-specific operations
+  - 2026-11-12 Godot slice: `engine scaffold` preserves existing files and derives only an absent Godot 4.x project from explicit choices; `engine verify` checks installed version/capability and interprets import logs. Build/typecheck, 106 local tests and packed-install checks pass. A real macOS ARM64 Godot 4.7.2 fixture verifies packed setup/scaffold/import, GDScript smoke, nonzero failure, version mismatch and zero-exit corrupt-asset rejection. See `docs/evidence/godot-import-2026-11-12.json`. Export/build, C#, other OS/editor execution and full S051 behavior remain open.
+  - Follow-up `2780583`: the real corrupt-asset fixture reproduced a zero-exit false positive in configured Godot smoke commands. Shared error interpretation now rejects it while retaining process exit 0. A fresh installed-runtime run and 107 unit/integration tests pass; evidence retains both the failing pre-fix observation and corrected result. This does not close the parent engine gate.
+  - GdUnit follow-up `6f22e7d`: a real 4.7.2/6.2.2 suite exposed a false command failure from the explicitly configured port-zero debugger pair. Only the two exact diagnostics in that GdUnit test context are now expected; raw logs, script/parse errors and other engine failures remain intact. Fresh packed execution passes 12 assertions; an injected parse error returns process 105/CLI 5. Independent formula and orphan controls return 100/101 and restore to 12 passes/zero orphans. See [Godot QA evidence](../docs/evidence/qa-godot-2026-11-12.json). Native sandbox editor/user-data/certificate errors remain open and are not suppressed.
+  - Implemented shared slice: engine-specific root inspection and configured OS-aware command execution with failure/unavailable/timeout evidence. Tests exercise actual Node/npm processes; they do not certify Godot, Unity or Unreal editor/license/build execution. Engine setup remains open.
   - Module: `game-operations`. Dependencies: T15, T22 relevant helpers.
   - Work queue: separate Web, Godot, Unity and Unreal slices; further split build and test adapters if more than five files are needed.
   - Acceptance per engine: preserve configured roots/version and command semantics; missing editor/license/tests cannot pass; evidence names the actual environment.
@@ -235,42 +360,55 @@ Each S-row is an individual task owned by `codex-integration`.
 - Record the tested client, scenario, artifact and result before checking a row. The inventory contains each row's exact source/spec paths.
 
 - [ ] S001 Migrate `adopt` to `game-studio-adopt`. Evidence: pending.
-- [ ] S002 Migrate `architecture-decision` to `game-studio-architecture-decision`. Evidence: pending.
-- [ ] S003 Migrate `architecture-review` to `game-studio-architecture-review`. Evidence: pending.
+- [ ] S002 Migrate `architecture-decision` to `game-studio-architecture-decision`. Partial: author/retrofit/accept Skill, references and complete ADR template; [12 reviewed native cases](../docs/evidence/architecture-decision-skill-2026-11-12.json), retaining the first Layer failure and recovered temporary-file ownership risk. Actual Web expert/TD sequence, authorized Status-only changes and precise story effects verified. Full native/engine/desktop acceptance remains pending in [the Codex matrix](../studio-tests/skills/authoring/architecture-decision-codex.md).
+- [ ] S003 Migrate `architecture-review` to `game-studio-architecture-review`. Partial: six review modes, stable requirement IDs, engine lenses and structural traceability; build/content lint, 198 regression tests and installed archive pass. Native acceptance is in progress in [the Codex matrix](../studio-tests/skills/review/architecture-review-codex.md); no behavioral pass declared yet.
 - [ ] S004 Migrate `art-bible` to `game-studio-art-bible`. Evidence: pending.
 - [ ] S005 Migrate `asset-audit` to `game-studio-asset-audit`. Evidence: pending.
 - [ ] S006 Migrate `asset-spec` to `game-studio-asset-spec`. Evidence: pending.
 - [ ] S007 Migrate `balance-check` to `game-studio-balance-check`. Evidence: pending.
-- [ ] S008 Migrate `brainstorm` to `game-studio-brainstorm`. Evidence: pending.
+- [ ] S008 Migrate `brainstorm` to `game-studio-brainstorm`. Evidence: partial — [native CLI scenarios and preserved failure](../docs/evidence/brainstorm-skill-2026-11-12.json), plus [four native director reviews and missing-role regression](../docs/evidence/brainstorm-directors-2026-11-12.json); interactive choices, resume, other modes, remaining gate-verdict paths and desktop remain open.
+  - Slices B1–B4 now have templates, gates, entrypoint/references and selected native evidence. Keep S008 open until its complete trigger, tier, mode, gate, resume and host matrix is verified. Missing director roles are explicit unavailable dependencies, not solo reviews counted as director evidence.
 - [ ] S009 Migrate `bug-report` to `game-studio-bug-report`. Evidence: pending.
 - [ ] S010 Migrate `bug-triage` to `game-studio-bug-triage`. Evidence: pending.
 - [ ] S011 Retire alias `changelog`; route users to `game-studio-write-changelog`. Evidence: pending.
 - [ ] S012 Migrate `code-review` to `game-studio-code-review`. Evidence: pending.
 - [ ] S013 Migrate `consistency-check` to `game-studio-consistency-check`. Evidence: pending.
 - [ ] S014 Migrate `content-audit` to `game-studio-content-audit`. Evidence: pending.
-- [ ] S015 Migrate `create-architecture` to `game-studio-create-architecture`. Evidence: pending.
+- [ ] S015 Migrate `create-architecture` to `game-studio-create-architecture`. Partial: source baseline, tiered architecture and native TD/LP reviews. [Native evidence](../docs/evidence/create-architecture-skill-2026-11-12.json) retains four failed full-generation attempts and selected other passes; the same-session revision branch passes with two real CONCERNS reviews, no acceptance. [Independent historical/current-byte audit](../docs/evidence/navigation-revision-integration-2026-11-12.json) verifies continuity and permitted changes. The broader [Codex matrix](../studio-tests/skills/authoring/create-architecture-codex.md) and desktop remain open.
 - [ ] S016 Migrate `create-control-manifest` to `game-studio-create-control-manifest`. Evidence: pending.
 - [ ] S017 Migrate `create-epics` to `game-studio-create-epics`. Evidence: pending.
 - [ ] S018 Migrate `create-stories` to `game-studio-create-stories`. Evidence: pending.
 - [ ] S019 Migrate `cut` to `game-studio-cut`. Evidence: pending.
 - [ ] S020 Migrate `day-one-patch` to `game-studio-day-one-patch`. Evidence: pending.
-- [ ] S021 Migrate `design-review` to `game-studio-design-review`. Evidence: pending.
-- [ ] S022 Migrate `design-system` to `game-studio-design-system`. Evidence: pending.
+- [ ] S021 Migrate `design-review` to `game-studio-design-review`. Partial: Skill, references and byte-sensitive receipt helper; [14 selected cases plus real review-to-reuse](../docs/evidence/design-review-skill-2026-11-12.json) verified across 17 native runs, retaining two initial scope-estimate failures. Four helper tests cover latest-entry receipt isolation. Actual specialist overlap, subsequent senior synthesis, missing-coverage refusal, exact tracking writes and identical-input scope correction verified. [Full Codex matrix](../studio-tests/skills/review/design-review-codex.md), complete domain panels and desktop remain open.
+- [ ] S022 Migrate `design-system` to `game-studio-design-system`. Partial: full sectional workflow, local lenses and GDD template/guide; [10 reviewed native cases](../docs/evidence/design-system-skill-2026-11-12.json) preserve the initial cross-reference ownership-label failure and corrected same-input run. Exact Designed status, existing content/index/registry ownership, incremental checkpoint chains and no-spawn self-review verified. Full source/native/desktop acceptance remains open in [the Codex matrix](../studio-tests/skills/authoring/design-system-codex.md).
 - [ ] S023 Migrate `dev-story` to `game-studio-dev-story`. Evidence: pending.
 - [ ] S024 Migrate `estimate` to `game-studio-estimate`. Evidence: pending.
-- [ ] S025 Migrate `gate-check` to `game-studio-gate-check`. Evidence: pending.
+- [ ] S025 Migrate `gate-check` to `game-studio-gate-check`. Evidence: partial — canonical Skill, six orchestration references, all six phase definitions and [13 reviewed native scenarios](../docs/evidence/gate-check-skill-2026-11-12.json); the complete native matrix remains open.
+  - Deterministic prerequisites now exist: `check --kind artifacts`, `check --kind gdd`, `check --kind adr-deps`; see T22. This does not close the Skill row.
+  - [x] G1 Port Systems Design, Technical Setup and Pre-Production gate references (three files); retain workflow/QA/per-system criteria and declared evidence gaps. `4df86fb`: shared resources in `studio/docs/phase-gates`, actual engine inspection and ADR JSON observations replace Claude-only instructions; packed bytes verified.
+  - [x] G2 Port Production, Polish and Release gate references (three files); retain smoke authenticity, performance policy, review and release requirements. All six resources retain 115 checklist items and all three tier definitions; literal CLI examples validate and installed archive bytes match. These are criteria resources, not completed host/workflow acceptance.
+  - [x] G3 Port workflow-tier, deterministic-check and assessment references (three files); use pinned CLI observations and actual native director results. `1d69b28`: explicit workflow/QA reductions, effective system overrides, unknown evidence and native 0/1/2/4-role panel requirements.
+  - [x] G4 Port verdict, stage-update and next-step references (three files); preserve failed/unassessed stage invariants and use transactional config writes within actual authorization. `1d69b28`: required unknowns remain blocking beneath a concern headline; concrete prior stage authorization is reused; future/unavailable workflows are not represented as installed.
+  - [x] G5 Add the Codex Skill entry point, behavioral contract and catalog mapping; validate packaged references and instructions. `1d69b28` / `e49f0ea`: entry point, six references, six gate resources and two player-experience templates pass installed byte checks; catalog remains partial.
+  - [ ] G6 Verify positive/negative triggers, tier/QA combinations, missing or placeholder evidence, real director execution, verdict precedence, authorized stage changes and rejected advancement in isolated native host scenarios. Keep unrun desktop and broader workflow cases open.
+    - Native CLI fixtures verify 0/1/2/4-reviewer panels, actual director findings, missing-role reporting, target confirmation, negative triggering, unknown evidence, accepted-risk boundaries and three authorized stage transactions. All existing regular files outside the two stage files in those three cases are preserved. The evidence retains an initial backup assertion error, a contradictory test input and the stale five-role integration guide; corrected fresh runs are recorded. This does not close the later-phase, full QA/override, interactive/recovery or desktop matrix.
 - [ ] S026 Retire alias `help`; route users to `game-studio-next-step`. Evidence: pending.
 - [ ] S027 Migrate `hotfix` to `game-studio-hotfix`. Evidence: pending.
 - [ ] S028 Migrate `launch-checklist` to `game-studio-launch-checklist`. Evidence: pending.
 - [ ] S029 Migrate `localize` to `game-studio-localize`. Evidence: pending.
-- [ ] S030 Migrate `map-systems` to `game-studio-map-systems`. Evidence: pending.
+- [ ] S030 Migrate `map-systems` to `game-studio-map-systems`. Evidence: partial — canonical Skill, fixed template and [eight reviewed native cases](../docs/evidence/map-systems-skill-2026-11-12.json), with four prior attempts retained; full source/Codex and desktop matrices remain open.
+  - [x] M1 Port the fixed-column systems-index template and verify its installed archive bytes. All sections and both table schemas are retained; only workflow/role names are namespaced. Build and packed install verification pass.
+  - [x] M2 Implement the Codex entry point, phased director review and index/checkpoint/handoff references; preserve existing-index progress and guided authorization. Native evidence exposed checkpoint identity annotations and ambiguous gate-resource wording; both are corrected with fresh same-input runs.
+  - [ ] M3 Validate natural triggering, missing context, new/resumed indexes, lean/solo/full reviews, fixed table contracts, explicit next-system routing and authorized checkpoint effects in isolated native fixtures. Preserve untested interactive, adverse-review and desktop cases as open.
+    - Eight selected CLI cases pass manual artifact/trace review: new solo, resume, missing source, read-only next, voluntary minimal, full sequential director reviews, one-run solo override and negative trigger. Checkpoint saves retain one event/backup transaction and exact observed identity fields. Build/typecheck, 184 regression tests and corrected packed install pass. Missing roles, adverse outcomes, interactive modes, density/cycles, recovery conflicts and desktop remain open.
 - [ ] S031 Migrate `milestone-review` to `game-studio-milestone-review`. Evidence: pending.
-- [ ] S032 Migrate `next-step` to `game-studio-next-step`. Evidence: pending.
+- [ ] S032 Migrate `next-step` to `game-studio-next-step`. Partial: complete source routes, installed capability checks, pinned artifact/story observations and 40 native scenarios defined. [43 native sessions](../docs/evidence/next-step-skill-2026-11-12.json) retain 39 scoped passes and four initial failures; all 40 defined labels have selected passes, with two identical labels sharing one actual session. [Independent reconciliation](../docs/evidence/navigation-revision-integration-2026-11-12.json) verifies all regular bytes/raw hashes; broader source variants and both-host acceptance remain open. See [Codex specification](../studio-tests/skills/utility/next-step-codex.md).
 - [ ] S033 Migrate `onboard` to `game-studio-onboard`. Evidence: pending.
 - [ ] S034 Migrate `patch-notes` to `game-studio-patch-notes`. Evidence: pending.
 - [ ] S035 Migrate `perf-profile` to `game-studio-perf-profile`. Evidence: pending.
 - [ ] S036 Migrate `playtest-report` to `game-studio-playtest-report`. Evidence: pending.
-- [ ] S037 Migrate `project-settings` to `game-studio-project-settings`. Evidence: pending.
+- [ ] S037 Migrate `project-settings` to `game-studio-project-settings`. Evidence: partial; installed Skill, five supplied-Skill cases, two regressions and native CLI read in `docs/evidence/project-settings-skill-2026-11-12.json`. Remaining cases in `studio-tests/skills/utility/project-settings-codex.md`.
 - [ ] S038 Migrate `project-stage-detect` to `game-studio-project-stage-detect`. Evidence: pending.
 - [ ] S039 Migrate `propagate-design-change` to `game-studio-propagate-design-change`. Evidence: pending.
 - [ ] S040 Migrate `prototype` to `game-studio-prototype`. Evidence: pending.
@@ -283,17 +421,18 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S047 Migrate `review-all-gdds` to `game-studio-review-all-gdds`. Evidence: pending.
 - [ ] S048 Migrate `scope-check` to `game-studio-scope-check`. Evidence: pending.
 - [ ] S049 Migrate `security-audit` to `game-studio-security-audit`. Evidence: pending.
-- [ ] S050 Retire alias `settings`; route users to `game-studio-project-settings`. Evidence: pending.
-- [ ] S051 Migrate `setup-engine` to `game-studio-setup-engine`. Evidence: pending.
+- [ ] S050 Retire alias `settings`; route users to `game-studio-project-settings`. Evidence: supplied-Skill personal-settings request routes correctly; native alias selection remains pending.
+- [ ] S051 Migrate `setup-engine` to `game-studio-setup-engine`. Skill migration remains pending. [Existing-Web unknown-version CLI foundation](../docs/evidence/web-unknown-version-2026-11-13.json) now records explicit null without fake pins; original rejection reproduced, 364 tests per Node 24/26 and actual installed-package checks pass. [Configured editor path foundation](../docs/evidence/engine-path-2026-11-13.json) adds setup/mirror/inspection/verification with 375 tests per Node24/26, installed-package checks and actual Godot4.7.2 import. [Portable Web detection](../docs/evidence/web-detection-2026-11-13.json) now preserves the full observation contract with declared/resolved version provenance, 46 source comparisons and installed-resource checks. Full workflow, remaining helpers, editor/host behavior and source-matrix acceptance remain open.
 - [ ] S052 Migrate `skill-improve` to `game-studio-skill-improve`. Evidence: pending.
 - [ ] S053 Migrate `skill-test` to `game-studio-skill-test`. Evidence: pending.
-- [ ] S054 Migrate `smoke-check` to `game-studio-smoke-check`. Evidence: pending.
+- [ ] S054 Migrate `smoke-check` to `game-studio-smoke-check`. Evidence: partial; installed Skill, seven supplied-Skill scenarios, platform-table regression and native CLI zero-test rerun with prior-evidence preservation in `docs/evidence/smoke-skill-2026-11-12.json`. Remaining matrix: `studio-tests/skills/utility/smoke-check-codex.md`.
 - [ ] S055 Migrate `soak-test` to `game-studio-soak-test`. Evidence: pending.
 - [ ] S056 Migrate `sprint-plan` to `game-studio-sprint-plan`. Evidence: pending.
-- [ ] S057 Migrate `sprint-status` to `game-studio-sprint-status`. Evidence: pending.
+- [ ] S057 Migrate `sprint-status` to `game-studio-sprint-status`. Partial: read-only minimal/sprint routes and source boundary rules. [33 native runs](../docs/evidence/sprint-status-skill-2026-11-12.json) retain 26 scoped passes and seven original/intermediate failures; all 26 defined scenarios have selected passes after same-input corrections. Desktop, subdirectory, unavailable-runtime and broader source variants remain open. See [Codex specification](../studio-tests/skills/sprint/sprint-status-codex.md).
 - [ ] S058 Migrate `start` to `game-studio-start`. Evidence: pending.
-- [ ] S059 Migrate `story-done` to `game-studio-story-done`. Evidence: pending.
-- [ ] S060 Migrate `story-readiness` to `game-studio-story-readiness`. Evidence: pending.
+- [ ] S059 Migrate `story-done` to `game-studio-story-done`. Partial: eight phases and three conditional references preserve criteria/evidence, native reviews, authorized exact record closure, scope/commit boundaries and checkpoint recovery. [Five native runs](../docs/evidence/story-done-skill-2026-11-13.json) cover four selected cases with four scoped passes and one retained unsupported-system failure; a same-input retry uses project workflow correctly. Actual criterion markers, five authorized closure records, explicit risk acceptance, unchanged source/evidence/staged work and checkpoint hashes are verified. Six checker regression/negative controls and 293 tests on each Node 24/26 pass. Remaining native variants and desktop scenarios in the [Codex specification](../studio-tests/skills/readiness/story-done-codex.md) stay open.
+- [ ] S060 Migrate `story-readiness` to `game-studio-story-readiness`. Partial: complete six-phase/six-group source mapping, pinned observers and true per-story QA routing. The [44-run selected matrix](../docs/evidence/story-readiness-final-matrix-2026-11-13.json) covers all 39 defined labels with 33 latest scoped PASS and six NOT ASSESSED, retaining five historical FAIL. Same-input repairs restore story-owned Engine Notes, scope announcement before facts and the one-story-only footer. Actual QA selection, inherited context and findings are observable; exact encrypted dispatch fields and latest multi-story internal verdict-before-dispatch timing remain unknown. Earlier domain passes retain their protocol limits. Broader variants, interactive follow-up/desktop and final-archive acceptance remain open. Build/typecheck/content, 293 tests per Node 24/26 and installed-package checks pass locally.
+  - [Protocol follow-up](../docs/evidence/story-readiness-protocol-2026-11-13.json) retains two failures and two further cross-tier domain passes. Scope announcement timing was not fully covered by earlier scoped successes. Two explicit source requirements are clarified; both original-input native retries pass, and the remaining matrix stays open.
 - [ ] S061 Migrate `team-audio` to `game-studio-team-audio`. Evidence: pending.
 - [ ] S062 Migrate `team-combat` to `game-studio-team-combat`. Evidence: pending.
 - [ ] S063 Migrate `team-level` to `game-studio-team-level`. Evidence: pending.
@@ -307,7 +446,7 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S071 Migrate `test-evidence-review` to `game-studio-test-evidence-review`. Evidence: pending.
 - [ ] S072 Migrate `test-flakiness` to `game-studio-test-flakiness`. Evidence: pending.
 - [ ] S073 Migrate `test-helpers` to `game-studio-test-helpers`. Evidence: pending.
-- [ ] S074 Migrate `test-setup` to `game-studio-test-setup`. Evidence: pending.
+- [ ] S074 Migrate `test-setup` to `game-studio-test-setup`. Partial: all six phases, four engine references, source cases and portable missing-only helper are installed; [content and archive evidence](../docs/evidence/test-setup-content-2026-11-13.json) retains initial failures and independent corrections. Original five native cases, engine suites, CI and desktop branches remain open in [the Codex matrix](../studio-tests/skills/utility/test-setup-codex.md).
 - [ ] S075 Migrate `ux-design` to `game-studio-ux-design`. Evidence: pending.
 - [ ] S076 Migrate `ux-review` to `game-studio-ux-review`. Evidence: pending.
 - [ ] S077 Migrate `vertical-slice` to `game-studio-vertical-slice`. Evidence: pending.
@@ -323,53 +462,53 @@ Each A-row is an individual task owned by `codex-integration`.
 - Verification: TOML/content validation and one actual delegated task using the linked behavior spec. Check role identity, write boundaries, meaningful output and parent aggregation.
 - Record evidence before checking a row. Schema conversion alone is insufficient.
 
-- [ ] A001 Migrate `accessibility-specialist` to `game-studio-accessibility-specialist`. Evidence: pending.
+- [ ] A001 Migrate `accessibility-specialist` to `game-studio-accessibility-specialist`. Partial: [source/content and installed-byte review](../docs/evidence/accessibility-specialist-content-2026-11-13.json) covers all six responsibilities, five domain baselines and eight audit checks, separating studio thresholds, WCAG applicability, severity and gate status. Build/typecheck/content/packed checks and 293 tests per Node 24/26 pass. [Seven initial native cases and one retry](../docs/evidence/accessibility-specialist-native-2026-11-13.json) retain two original failures; ownership correction passes the same-input flow retry (latest six selected PASS, one gate-attribution FAIL). Root rehashed 3,970 initial files plus 567 retry originals. [The gate-basis retry](../docs/evidence/accessibility-specialist-gate-retry-2026-11-13.json) now passes with 569 originals preserved and only the authorized audit added. Latest seven selected scenarios pass across recorded revisions; both historical failures remain. Full behavior, runtime/assistive-technology evidence, desktop and final archive acceptance remain open.
 - [ ] A002 Migrate `ai-programmer` to `game-studio-ai-programmer`. Evidence: pending.
-- [ ] A003 Migrate `analytics-engineer` to `game-studio-analytics-engineer`. Evidence: pending.
-- [ ] A004 Migrate `art-director` to `game-studio-art-director`. Evidence: pending.
-- [ ] A005 Migrate `audio-director` to `game-studio-audio-director`. Evidence: pending.
+- [ ] A003 Migrate `analytics-engineer` to `game-studio-analytics-engineer`. Partial: [independent source/content review and installed-byte checks](../docs/evidence/analytics-engineer-content-2026-11-13.json) preserve all six original scenarios, telemetry/funnels/experiments/dashboard/privacy/insight responsibilities and explicitly assigned non-game pipeline work. Guided scope, stable player assignment, naming conflicts and design/code ownership are retained. Build/content/packed checks pass. [Six original native scenarios](../docs/evidence/analytics-engineer-native-2026-11-13.json) record five scoped passes and one naming-difference disclosure failure; the [unchanged-input retry](../docs/evidence/analytics-engineer-retry-2026-11-13.json) now passes with 574 originals preserved and actual role/archive/trace checks. Latest six selected source cases pass across revisions; original failure remains. Actual pipeline/dashboard evidence, continuation/denial, desktop and final acceptance remain open.
+- [ ] A004 Migrate `art-director` to `game-studio-art-director`. Evidence: partial — native role, four gate resources and selected live cases; full source matrix, image review and desktop remain open. See [director evidence](../docs/evidence/director-roles-2026-11-12.json).
+- [ ] A005 Migrate `audio-director` to `game-studio-audio-director`. Partial: [independent content review and installed-package evidence](../docs/evidence/audio-economy-content-2026-11-13.json) record source-reviewed audio responsibilities, pillar/target assessments, asset specifications and technical-owner handoffs; all five raw source cases are registered. Build/typecheck/content/pack and 362 tests per Node 24/26 pass. [Five native scenarios](../docs/evidence/audio-director-native-2026-11-13.json) record four selected passes and one confirmed UX-review ownership failure; its [same-input retry](../docs/evidence/audio-director-retry-2026-11-13.json) passes the scoped ownership boundary, preserving the original failure. Actual choice/persistence/denial/coordination, desktop and complete source acceptance remain open.
 - [ ] A006 Migrate `community-manager` to `game-studio-community-manager`. Evidence: pending.
-- [ ] A007 Migrate `creative-director` to `game-studio-creative-director`. Evidence: pending.
+- [ ] A007 Migrate `creative-director` to `game-studio-creative-director`. Evidence: partial — native role, six gate resources and selected live cases; full source matrix, conflicts, writes and desktop remain open. See [director evidence](../docs/evidence/director-roles-2026-11-12.json).
 - [ ] A008 Migrate `devops-engineer` to `game-studio-devops-engineer`. Evidence: pending.
-- [ ] A009 Migrate `economy-designer` to `game-studio-economy-designer`. Evidence: pending.
+- [ ] A009 Migrate `economy-designer` to `game-studio-economy-designer`. Partial: [independent content review and installed-package evidence](../docs/evidence/audio-economy-content-2026-11-13.json) record source-reviewed registry, reward, finite-flow, progression and economy-health responsibilities; all five raw source cases are registered. Build/typecheck/content/pack and 362 tests per Node 24/26 pass. [Five native scenarios](../docs/evidence/economy-designer-native-2026-11-13.json) record three scoped passes, chest discovery only and one incremental-persistence failure. Its [same-input retry](../docs/evidence/economy-designer-retry-2026-11-13.json) fixes skeleton-first and six individual section writes but still batches two closing sections; persistence remains FAIL. Actual choice/resume/denial/coordination, desktop and complete source acceptance remain open.
 - [ ] A010 Migrate `engine-programmer` to `game-studio-engine-programmer`. Evidence: pending.
-- [ ] A011 Migrate `game-designer` to `game-studio-game-designer`. Evidence: pending.
-- [ ] A012 Migrate `gameplay-programmer` to `game-studio-gameplay-programmer`. Evidence: pending.
-- [ ] A013 Migrate `godot-csharp-specialist` to `game-studio-godot-csharp-specialist`. Evidence: pending.
-- [ ] A014 Migrate `godot-gdextension-specialist` to `game-studio-godot-gdextension-specialist`. Evidence: pending.
-- [ ] A015 Migrate `godot-gdscript-specialist` to `game-studio-godot-gdscript-specialist`. Evidence: pending.
-- [ ] A016 Migrate `godot-shader-specialist` to `game-studio-godot-shader-specialist`. Evidence: pending.
-- [ ] A017 Migrate `godot-specialist` to `game-studio-godot-specialist`. Evidence: pending.
-- [ ] A018 Migrate `lead-programmer` to `game-studio-lead-programmer`. Evidence: pending.
+- [ ] A011 Migrate `game-designer` to `game-studio-game-designer`. Partial: canonical role/methods resource and packed install/detach pass. Four native CLI cases exercise full/standard/minimal authoring and read-only specialist review. The role preserves approved rules, writes only the requested tier's document, flags the capacity/reset conflict without silently changing it, returns pillar tensions and formula/lore ownership, and claims no play acceptance. All 325 existing regular files in each initial fixture and 329 in the later minimal fixture remain unchanged; no checkpoint side writes. See [behavior spec](../studio-tests/roles/game-designer-codex.md) and [evidence](../docs/evidence/game-designer-2026-11-12.json). Existing-brief edits, open initial choices, economy/progression depth, broader specialist collaboration, desktop and final validator remain open. The T19 sequential fixture additionally proves actual brief-to-programmer hand-off.
+- [ ] A012 Migrate `gameplay-programmer` to `game-studio-gameplay-programmer`. Partial: canonical role and packed install/detach pass. Native standard/minimal fixtures implement the approved pure combo module with external tuning, events, transition tables and real retained red/green runs; 22/23 authored tests pass respectively. Each implementation passes seven independent contract groups and three checker controls. In isolated copies, changing inclusive window comparisons to exclusive makes the original authored suites fail 10/9 tests, preserving original source. The read-only boundary case respects the Accepted ADR, UI/threading ownership, unverified engine API and missing design coefficients. See [behavior spec](../studio-tests/roles/gameplay-programmer-codex.md) and [evidence](../docs/evidence/gameplay-programmer-2026-11-12.json). Existing-source fixes, broader cross-role behavior, real engine/browser integration, desktop and final validator remain open. The T19 sequential fixture additionally proves independent native QA and lead review of its actual implementation.
+- [ ] A013 Migrate `godot-csharp-specialist` to `game-studio-godot-csharp-specialist`. Partial: complete C# authoring, exports/signals/async/threading, project/dependency and performance responsibilities plus original five cases; [independent content and installed-package evidence](../docs/evidence/godot-csharp-specialist-content-2026-11-13.json). Build/typecheck, 38 content checks per Node24/26 and global/restored exact bytes pass. Native cases, actual .NET build/runtime, target exports and desktop remain pending.
+- [ ] A014 Migrate `godot-gdextension-specialist` to `game-studio-godot-gdextension-specialist`. Partial: [complete source content and installed-package evidence](../docs/evidence/godot-gdextension-specialist-content-2026-11-13.json) preserve C++/Rust implementation, registration, ownership, ABI, platform and measured performance duties. Independent review, 38 content checks per Node24/26 and exact global/restored role checks pass. Original five native scenarios, actual C++/Rust compilation/linking/load/call/lifetime/reload, desktop and target-platform matrix remain open.
+- [ ] A015 Migrate `godot-gdscript-specialist` to `game-studio-godot-gdscript-specialist`. Partial: complete source authoring responsibilities, scene/resource/UID protections and five original cases are mapped; [content and actual archive evidence](../docs/evidence/godot-gdscript-specialist-content-2026-11-13.json). [Native fixture integration](../docs/evidence/godot-gdscript-fixtures-2026-11-13.json) passes 529 tests per Node 24/26; actual native cases are in progress. Compiler/runtime branches, scene integration, profiling and desktop acceptance remain open.
+- [ ] A016 Migrate `godot-shader-specialist` to `game-studio-godot-shader-specialist`. Partial: complete shader/VisualShader/particle/compositor authoring and all source budgets/cases; [independent content and installed-package evidence](../docs/evidence/godot-shader-specialist-content-2026-11-13.json). Build/typecheck, 38 content checks per Node24/26 and global/restored exact bytes pass. Native, actual renderer/material/scene, GPU timing, visual and desktop acceptance remain pending.
+- [ ] A017 Migrate `godot-specialist` to `game-studio-godot-specialist`. Partial: complete independently reviewed source-role responsibilities and five original cases plus Unity variant; [installed/restored content evidence](../docs/evidence/godot-specialist-content-2026-11-13.json). [Six actual native cases](../docs/evidence/godot-specialist-native-2026-11-13.json) verify typed identity and inherited settings, retaining four selected failures and two scoped passes. Foreign-concept routing, authoring handoff, conditional language escalation and scratch scope need same-input corrective retries. Subordinate delegation and engine/desktop matrix remain open in [the Codex specification](../studio-tests/roles/godot-specialist-codex.md).
+- [ ] A018 Migrate `lead-programmer` to `game-studio-lead-programmer`. Partial: canonical role and two LP gates pass metadata/packed checks. Native code review returns APPROVE for sound combat, REJECT for armor addition, NOT ASSESSED for omitted GDD and CONCERNS for explicitly nonexistent GDD. Three real maintainer Node tests and an independent faulty-candidate run support the observations without being attributed to the native agent. A read-only feasibility task quantifies budgets/estimates, proposes unapproved alternatives and preserves creative versus technical ownership. Review preserves 338 original regular files and adds only its report; feasibility preserves 328 and adds none. A preparation reporter mismatch was corrected before native execution. See [behavior spec](../studio-tests/roles/lead-programmer-codex.md) and [evidence](../docs/evidence/lead-programmer-2026-11-12.json). Architecture/refactoring writes, broader specialist hand-offs, engine API validation, desktop and final validator remain open. The T19 sequential fixture additionally proves read-only review of a separately authored native implementation and QA suite.
 - [ ] A019 Migrate `level-designer` to `game-studio-level-designer`. Evidence: pending.
 - [ ] A020 Migrate `live-ops-designer` to `game-studio-live-ops-designer`. Evidence: pending.
 - [ ] A021 Migrate `localization-lead` to `game-studio-localization-lead`. Evidence: pending.
 - [ ] A022 Migrate `narrative-director` to `game-studio-narrative-director`. Evidence: pending.
 - [ ] A023 Migrate `network-programmer` to `game-studio-network-programmer`. Evidence: pending.
 - [ ] A024 Migrate `performance-analyst` to `game-studio-performance-analyst`. Evidence: pending.
-- [ ] A025 Migrate `producer` to `game-studio-producer`. Evidence: pending.
+- [ ] A025 Migrate `producer` to `game-studio-producer`. Evidence: partial — native role, five gate resources and selected live cases; full source matrix, planning writes and desktop remain open. See [director evidence](../docs/evidence/director-roles-2026-11-12.json).
 - [ ] A026 Migrate `prototyper` to `game-studio-prototyper`. Evidence: pending.
-- [ ] A027 Migrate `qa-lead` to `game-studio-qa-lead`. Evidence: pending.
-- [ ] A028 Migrate `qa-tester` to `game-studio-qa-tester`. Evidence: pending.
+- [ ] A027 Migrate `qa-lead` to `game-studio-qa-lead`. Partial: canonical role and two portable QL gate definitions pass TOML parsing, packed installation/resource resolution and detach. Native CLI readiness and minimal-policy scenarios preserve all 321 existing files per fixture; read-only work creates no artifact, while an authorized plan adds only its named report. Readiness initially confused missing GDD input with a story defect; a definition/role correction and identical-input native rerun restore NOT ASSESSED. Standard coverage correctly rejects zero-test PASS, distinguishes advisory Config evidence, triages reported data loss and refuses release, but initially misroutes test-harness ownership; its corrected native rerun assigns the actual QA tester and preserves all 327 original files, adding only the named report. See [behavior spec](../studio-tests/roles/qa-lead-codex.md) and [five-run evidence including both failures](../docs/evidence/qa-lead-2026-11-12.json). Desktop, nested collaboration, remaining matrix and final validator acceptance remain open.
+- [ ] A028 Migrate `qa-tester` to `game-studio-qa-tester`. Partial: canonical TOML and packed install/detach pass; native CLI selected the real role, inherited model/permissions, rejected zero-test PASS, reported the static score defect and returned nine unexecuted test cases plus pending decisions. All 322 pre-existing files were unchanged; only two authorized Markdown reports were added. See [behavior spec](../studio-tests/roles/qa-tester-codex.md) and [initial evidence](../docs/evidence/qa-role-2026-11-12.json). Additional [workflow evidence](../docs/evidence/qa-role-workflows-2026-11-12.json) verifies read-only output with no changes, targeted save regression/edge cases, explicit gate policy, unavailable-lead/S1 escalation and no release approval. A first regression run invented an extra UI sign-off gate; the role was corrected and a fresh run with identical inputs returned 11 unexecuted cases without extra approval gates, preserving all 321 existing files. [Godot evidence](../docs/evidence/qa-godot-2026-11-12.json) now verifies actual role-authored GdUnit tests, 12 passing assertions/zero orphans, honest engine-error reporting and independent failure/cleanup controls; all 836 original files were preserved. Clean native engine execution, Unity/Unreal scaffolds and the final validator remain open.
 - [ ] A029 Migrate `release-manager` to `game-studio-release-manager`. Evidence: pending.
 - [ ] A030 Migrate `security-engineer` to `game-studio-security-engineer`. Evidence: pending.
 - [ ] A031 Migrate `sound-designer` to `game-studio-sound-designer`. Evidence: pending.
-- [ ] A032 Migrate `systems-designer` to `game-studio-systems-designer`. Evidence: pending.
+- [ ] A032 Migrate `systems-designer` to `game-studio-systems-designer`. Partial: native role and complete formula/interaction/tuning methods; [17 recorded native scenarios](../docs/evidence/systems-designer-role-2026-11-12.json) include 15 scoped passes and two retained initial failures, plus [independent file/trace reconciliation](../docs/evidence/systems-designer-integration-2026-11-12.json). Static and installed-package checks pass; missing-resource/denial, desktop/subdirectory, concurrent-write and remaining domain acceptance stay open.
 - [ ] A033 Migrate `technical-artist` to `game-studio-technical-artist`. Evidence: pending.
-- [ ] A034 Migrate `technical-director` to `game-studio-technical-director`. Evidence: pending.
+- [ ] A034 Migrate `technical-director` to `game-studio-technical-director`. Evidence: partial — native role, eight gate resources and selected live cases; full source matrix, engine API validation, ADR acceptance writes and desktop remain open. See [director evidence](../docs/evidence/director-roles-2026-11-12.json).
 - [ ] A035 Migrate `tools-programmer` to `game-studio-tools-programmer`. Evidence: pending.
 - [ ] A036 Migrate `ue-blueprint-specialist` to `game-studio-ue-blueprint-specialist`. Evidence: pending.
 - [ ] A037 Migrate `ue-gas-specialist` to `game-studio-ue-gas-specialist`. Evidence: pending.
 - [ ] A038 Migrate `ue-replication-specialist` to `game-studio-ue-replication-specialist`. Evidence: pending.
 - [ ] A039 Migrate `ue-umg-specialist` to `game-studio-ue-umg-specialist`. Evidence: pending.
-- [ ] A040 Migrate `ui-programmer` to `game-studio-ui-programmer`. Evidence: pending.
+- [ ] A040 Migrate `ui-programmer` to `game-studio-ui-programmer`. Partial: complete source responsibilities mapped; installed bytes and [flow-design ownership redirect](../docs/evidence/ui-programmer-role-2026-11-13.json) pass selected checks. [Inventory and same-session bounce](../docs/evidence/ui-programmer-interactions-2026-11-13.json) have actual Godot 4.7.2 rendering, bindings, input and animation evidence with frozen/current file and trace continuity. Default gamepad confirmation remains FAIL from the existing input map; bounce has unapproved focus/interruption choices and an overstated parent import summary. No original failure is erased by later screenshots. [Original Godot 4.6 evidence](../docs/evidence/ui-programmer-godot46-2026-11-13.json) now verifies the actual 4.6.1 Control/ScrollContainer core, retaining the full-fixture gamepad failure (29/30 assertions); root reconciled 100 frozen artifacts, 640 files and the engine binary. [Empty-slot continuation](../docs/evidence/ui-programmer-empty-2026-11-13.json) proves the actual question and clearing after the supplied answer, preserving 568 originals and both trace prefixes. Full fixture FAIL retains missing gamepad input, transient root export writes and unanswered initial state questions. [Configured-input native evidence](../docs/evidence/ui-programmer-configured-input-2026-11-13.json) passes the selected inventory core, 49/49 final checks, cold focus and keyboard/gamepad observation; full fixture still FAILS transient root export scope. Root verified 674 frozen artifacts, 645 current files and 570 preserved originals. Broader input/accessibility/performance and desktop/final-archive behavior in the [Codex specification](../studio-tests/roles/ui-programmer-codex.md) remain open.
 - [ ] A041 Migrate `unity-addressables-specialist` to `game-studio-unity-addressables-specialist`. Evidence: pending.
 - [ ] A042 Migrate `unity-dots-specialist` to `game-studio-unity-dots-specialist`. Evidence: pending.
 - [ ] A043 Migrate `unity-shader-specialist` to `game-studio-unity-shader-specialist`. Evidence: pending.
 - [ ] A044 Migrate `unity-specialist` to `game-studio-unity-specialist`. Evidence: pending.
 - [ ] A045 Migrate `unity-ui-specialist` to `game-studio-unity-ui-specialist`. Evidence: pending.
 - [ ] A046 Migrate `unreal-specialist` to `game-studio-unreal-specialist`. Evidence: pending.
-- [ ] A047 Migrate `ux-designer` to `game-studio-ux-designer`. Evidence: pending.
+- [ ] A047 Migrate `ux-designer` to `game-studio-ux-designer`. Partial: all six responsibilities, seven accessibility checks, research-driven choices, flow-step purposes and ownership boundaries mapped into native TOML. [Content/install validation](../docs/evidence/ux-designer-content-2026-11-13.json) and 293 tests per Node 24/26 pass. [Six native runs](../docs/evidence/ux-designer-native-2026-11-13.json) retain two selected passes and four contract failures. Approved specification writes and implementation hand-off pass; flow preservation/research/timing constraints pass domain subchecks, while premature dependent drafting and end-of-analysis decision presentation need correction. Root rehashed 3,383 actual files and reviewed all six child finals. [Four same-input retries](../docs/evidence/ux-designer-reruns-2026-11-13.json) and a minimal decision/order correction add two selected passes; discovery no longer drafts dependent flow, while discovery/timing still fail final-choice ordering. Root independently checked 2,255 additional regular files and actual archive differences. Latest six scenarios: four selected passes, two failures. Actual owner-choice continuation, specialist coordination, analytics/ux-design dependencies and desktop remain open.
 - [ ] A048 Migrate `world-builder` to `game-studio-world-builder`. Evidence: pending.
 - [ ] A049 Migrate `writer` to `game-studio-writer`. Evidence: pending.
 

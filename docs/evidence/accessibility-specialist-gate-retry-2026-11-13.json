@@ -1,0 +1,166 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A001 same-input authorized-audit gate-attribution retry; selected fixture PASS, not complete role acceptance.",
+  "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-RsLsg9",
+  "nativeExitCode": 0,
+  "wrapperExitCode": 3,
+  "roleSha256": "a3a8943d96e40f84c1fb4d5f696dc778089fdfd01ed0db37171afa7db6f6b46c",
+  "archive": {
+    "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-RsLsg9/t-x-r-game-studio-0.1.0-alpha.0.tgz",
+    "sha256": "99e067d5e3802233d1efe3070de0aa730e3a9f0d4e84089761da6532f05e11b3"
+  },
+  "sameNativePromptAndRawInputs": true,
+  "sourceInputHashes": {
+    "design/game-brief.md": "39a018253df76a818669bd38369ed6fb715506b3a2f5507d622f87c998829d40",
+    "design/ux/accessibility-requirements.md": "f2cdc2ac7758abb8ae0cb8018f7b639e5eeb000298e1244d72b96813cb57976c",
+    "docs/owner-notes.md": "5da9f3fc97f4aa9c3fbb9c582bb5779f642c125ccb678e4d911b348cf3607c27",
+    "src/ui/inventory.ts": "b3a43a8c9e8644ee56773c4fb33f43ba12bf7c1a7156739a853604d3f22710e5",
+    "src/ui/palette.json": "9d50d6223680e4d3047e7bf2ae9820ca999092ebc62070b905b671d4f0fff2c9",
+    "design/ux/player-hud.md": "c8937231f886babea5e71b81b6e66357c1e7a7f1d9eeb380f4fc15536aa066c9"
+  },
+  "preservedOriginalRegularFiles": 569,
+  "actualRegularFilesChecked": 570,
+  "onlyAddedFile": {
+    "path": "production/qa/accessibility/player-hud-audit-2026-11-13.md",
+    "sha256": "4c5e01a3a42ac7bf50bdf672adf1015aa0c37e33708b0867772d3cdd88e4c791",
+    "frozen": "/private/tmp/accessibility-native-audit/RsLsg9/audit.md"
+  },
+  "rawHashes": {
+    "fixture.json": "65e002baa6bbded5c376e57cccaf1642bd49980c7a28559a077c71aa512302a1",
+    "before.json": "61c9a0aca49171fae262a5c59b8d1a3a185a6ecde9761d6899db7cf01029fee9",
+    "report.json": "59c876f91002d9e3b5a70531755ecbb62ef2ecae76f62427a7cba65f6b7bb409",
+    "events.jsonl": "806d28991a070f0c3af3297c3f79c8f846a15c75c0926220ee1a7f960c518a7f",
+    "stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+    "final.txt": "c18c26cd83a0e160b290d5e9f87aca141275d904d7ae14554dbf85a3aaf8d664",
+    "prompt-input.json": "df9c35a8b30d6fbee759f7df94a358cac666a2fe68c2884df7a4b6e6cdfb665b"
+  },
+  "traces": [
+    {
+      "kind": "parent",
+      "id": "01a1d290-3c90-7632-abb9-15616bb8f892",
+      "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T09-40-30-01a1d290-3c90-7632-abb9-15616bb8f892.jsonl",
+      "frozen": "/private/tmp/accessibility-native-audit/RsLsg9/rollout-2026-11-13T09-40-30-01a1d290-3c90-7632-abb9-15616bb8f892.jsonl",
+      "sha256": "d19971d2dd35f09d3e5737dffd65f6877dd74910fe0da831edec8cf7878721e0",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        }
+      ],
+      "callNames": [
+        "spawn_agent",
+        "wait_agent",
+        "wait_agent",
+        "wait_agent",
+        "wait_agent",
+        "wait_agent",
+        "wait_agent",
+        "wait_agent",
+        "send_message",
+        "wait_agent",
+        "wait_agent",
+        "send_message",
+        "wait_agent",
+        "wait_agent",
+        "wait_agent"
+      ],
+      "finalSha256": "c18c26cd83a0e160b290d5e9f87aca141275d904d7ae14554dbf85a3aaf8d664"
+    },
+    {
+      "kind": "child",
+      "id": "01a1d290-6fcb-7732-86c5-d3ac56a6caa7",
+      "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T09-40-43-01a1d290-6fcb-7732-86c5-d3ac56a6caa7.jsonl",
+      "frozen": "/private/tmp/accessibility-native-audit/RsLsg9/rollout-2026-11-13T09-40-43-01a1d290-6fcb-7732-86c5-d3ac56a6caa7.jsonl",
+      "sha256": "90158b4d85044da27fbe4846ac4049f90cb1c9c9bea499268f4e8ebe11a65a00",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        },
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        }
+      ],
+      "callNames": [
+        "exec",
+        "exec",
+        "exec",
+        "exec",
+        "exec",
+        "exec",
+        "send_message",
+        "exec",
+        "exec",
+        "send_message",
+        "exec"
+      ],
+      "finalSha256": "9b3c57b7694eaa3daf8e50dfacf7777abdc21f40a0c6714874eee461e2b8a9a1"
+    }
+  ],
+  "archiveChanges": [
+    {
+      "path": "package/dist/md-section.js",
+      "old": "ad3ea3fb3af5ada8e3ad2a48840a9ec9315bb3dcfc0415a39450a1c668cd5c8a",
+      "new": "63f6de4ff940e43472f018467539a9fa97c32912ebf1a6df9232481a74b996a0"
+    },
+    {
+      "path": "package/resources/.codex/agents/game-studio-accessibility-specialist.toml",
+      "old": "d8db6c59a40b7148781bcf060fa8b8e5511b3d58225013a0569c61494aa39fbb",
+      "new": "a3a8943d96e40f84c1fb4d5f696dc778089fdfd01ed0db37171afa7db6f6b46c"
+    },
+    {
+      "path": "package/resources/.codex/agents/game-studio-analytics-engineer.toml",
+      "old": null,
+      "new": "dec935c6e2548321c7b0628491a2929e76cea3b600025894908408d1df20fa4c"
+    },
+    {
+      "path": "package/resources/studio/scripts/md-section.mjs",
+      "old": "7a7df646f7212ddeca1dfbce867aa3482613ae881fc5309916e9a06096cf4adb",
+      "new": "8d0d48fd03c85657ed4841797a05895c5ad771cea9975555d3021d9ef1ff22a9"
+    }
+  ],
+  "rootSemanticReview": {
+    "result": "PASS_selected_fixture",
+    "gateCorrection": "H06 retains the definite studio scaling gap as ADVISORY; H07 separately marks SC1.4.4 NOT ASSESSED because host/resize/clipping evidence is missing. It no longer promotes a mixed-basis row to a proven normative blocker.",
+    "retainedSupportedBlockers": "Supplied ordinary-text/gauge contrast, color-only allegiance and critical Oxygen visual-only design remain blocking on their stated bases. Runtime conformance remains explicitly unassessed.",
+    "scope": "Read complete actual audit and public executable calls; only the authorized report is created with exclusive-create and read back. No original files changed or downstream roles/builds/installs executed.",
+    "baseline": "All 569 pre-existing regular files independently rehashed; parent coordinates only and actual child role developer instructions match."
+  },
+  "aggregateSelectedHistory": {
+    "runs": 9,
+    "PASS": 7,
+    "retainedFAIL": 2,
+    "latestPerScenarioPASS": 7,
+    "latestPerScenarioFAIL": 0
+  },
+  "limitations": [
+    "Previous failures remain in original native evidence; scoped passes do not close A001.",
+    "Other scenarios were tested against earlier role hashes; this retry does not rerun every role behavior on the latest archive.",
+    "Archive also changes Markdown writer payload and adds Analytics role; all actual member changes are listed rather than claiming only the target role changed.",
+    "No symlink baseline, actual assistive-technology/device/runtime, legal/platform certification or desktop acceptance is inferred.",
+    "Opaque collaboration payloads remain opaque; no full parent developer-text inheritance claim."
+  ]
+}

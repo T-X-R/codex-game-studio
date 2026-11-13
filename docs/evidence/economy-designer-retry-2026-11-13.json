@@ -1,0 +1,84 @@
+{
+  "scope": "A009 original Gold case same-input first retry only",
+  "verdict": "FAIL_REMAINING_FINAL_SECTION_BATCH",
+  "originalAttempt": {
+    "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-pegE54",
+    "candidate": "/private/tmp/game-studio-economy-native.xjmd2klo",
+    "verdict": "FAIL_INCREMENTAL_AUTHORING_SCOPED",
+    "retained": true
+  },
+  "retryRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-trOAs2",
+  "parent": "01a1d2c3-fed4-76c3-acea-1be079fa670e",
+  "child": "01a1d2c4-2bf3-7402-8197-35e89c0cffaf",
+  "sameInput": {
+    "requestSha256": "382fe5a2bb6ddd736585dca631df5045442ec69fb228a2f595fceca1bcf42c14",
+    "requestIdentical": true,
+    "fixtureModuleIdentical": true,
+    "rawInputBytesIdentical": true
+  },
+  "passedSubclaims": [
+    "Actual first Add saves title plus all8final headings with empty bodies; it is not merely announced skeleton-first.",
+    "Sections1through6 are actually persisted in6 separate subsequent tool calls, each completed before the next.",
+    "Final sourceCase5 numerical content, proposals/owner-choice distinction, resource health uncertainty and no monetization/approval remain correct. Independently rechecked existing baseline and three25percent/600rate alternative calculations; same numerical alternatives as prior independent-check file.",
+    "573preexisting regular files preserved, exactlyone authorizednewdoc. No registry/checkpoint/runtime tuning writes, tests/simulation/install/query/build/delegation/commit.",
+    "Actual one typed Economy Designer, exact b2f295e5 role text in developer row3, gpt-6.1-sol/high/on-request/workspace-write inherited; parentnoexec."
+  ],
+  "remainingFailure": {
+    "contract": "Then complete and save one section before starting the next.",
+    "actual": "2026-11-13T02:43:07.811Z single actual-patch-08 update adds both Section7 Delivery and registry hand-off and Section8 Remaining owner decisions body text; no separate persistence boundary exists between these two newly authored sections.",
+    "evidence": [
+      "runs/economy-gold-analysis/actual-patch-08.txt",
+      "runs/economy-gold-analysis/actual-writes.json",
+      "runs/economy-gold-analysis/write-tool-results.json"
+    ],
+    "scope": "Final closing sections still batched. Does not invalidate skeleton-first or earlier per-section improvements; no false fullPASS."
+  },
+  "otherObservations": [
+    "Ninthpatch is later author read-through correction clarifying finite/repeatable faucet and affected-category discount capacity; final conditional math is correct, draft patches retained.",
+    "Optional economy-designer.md resource lookup failed RESOURCE_MISSING and was disclosed; complete actual native role present; no installation or genericrole substituted.",
+    "Private opaque internal collaboration messages retained unmodified and not decrypted; task-output and exec operations reviewed."
+  ],
+  "configInheritance": {
+    "parentConfigMarkerPresent": true,
+    "childConfigMarkerPresent": false
+  },
+  "archive": "archive-diff.json lists actual8changed packagefiles versus old245fc package; not a single-role package experiment.",
+  "runtime": {
+    "nativeExit": 0,
+    "wrapperExit": 3,
+    "hostReportRetained": "not_assessed",
+    "roleSha256": "b2f295e5bc8ebba71691f850a42515d5c6a726d9cf653f4b8454ba4c15f8a46f",
+    "archiveSha256": "70c6f20735bfc5b6069c5aa1499c1aea94c1e3d49c42f77b4871e2e00bbe8b5f"
+  },
+  "limits": "No automatic source change or second retry. Existing-document preservation authoring variants, real owner continuation, registry transactions, whole-role matrix, live economy/player/desktop proof remain pending.",
+  "date": "2026-11-13",
+  "status": "partial",
+  "rootReview": {
+    "frozenArtifacts": 40,
+    "preservedOriginalFiles": 573,
+    "actualFiles": 574,
+    "sameRawInputsRequestLiveTracesFullRoleActualTarDifferences": "PASS",
+    "semantics": "Root read actual patch08 and source incremental contract, confirming two closing sections added in one write. Complete native trace and arithmetic independently reviewed by design_review_migration; improvements are retained separately from remaining failure."
+  },
+  "candidate": {
+    "directory": "/private/tmp/game-studio-economy-gold-retry.hsiy065c",
+    "manifestSha256": "9f48bdd814a8cd4098199140bdf2dda6bbbe2d436e4883911022cd624fb39165",
+    "reviewSha256": "ad2bee53743e36ff70b6d033a3933618d08102a79c7584136c81970dbe06b09f"
+  },
+  "archiveDifference": {
+    "oldArchiveSha256": "245fc32c7bedef210e1ea9141dcca85b25fa75ead9339faa5b2edffcdfd4a447",
+    "newArchiveSha256": "70c6f20735bfc5b6069c5aa1499c1aea94c1e3d49c42f77b4871e2e00bbe8b5f",
+    "added": [],
+    "removed": [],
+    "changed": [
+      "package/dist/config-derived.js",
+      "package/dist/config-write.js",
+      "package/dist/engine-setup.js",
+      "package/dist/engine-verify.js",
+      "package/dist/game-commands.js",
+      "package/resources/.codex/agents/game-studio-audio-director.toml",
+      "package/resources/.codex/agents/game-studio-economy-designer.toml",
+      "package/resources/.codex/agents/game-studio-ui-programmer.toml"
+    ]
+  }
+}

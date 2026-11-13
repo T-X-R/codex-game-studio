@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-13",
+  "status": "implemented; same-input native and engine acceptance pending",
+  "scope": "A015 concrete conditional native owner/task and ordinary in-component cleanup ownership; no fixture or old artifact changes.",
+  "files": {
+    ".codex/agents/game-studio-godot-gdscript-specialist.toml": "f3a1b3511f5549a0b315d29c77d0282d4b758ec2bda81113e89c6ebdd101b3e2",
+    "studio-tests/roles/godot-gdscript-specialist-codex.md": "799727c31f3b7b617346e51bc68ec2691dfc00c14bb98f344a37f45f865972e6"
+  },
+  "candidate": {
+    "path": "/private/tmp/game-studio-a015-handoff-revision-72rf7hyk/manifest.json",
+    "sha256": "0e77bfa3da1ec2e8183c259060f9872c001605a72d51bef4528d69868fc0d539"
+  },
+  "patch": {
+    "path": "/private/tmp/game-studio-a015-handoff-revision-72rf7hyk/candidate.patch",
+    "sha256": "03c0efd7ec2ee7acf57d199fb58f7d3e84e9202910a1cee806e36fd737a433bf"
+  },
+  "rootReview": {
+    "path": "/private/tmp/game-studio-a015-handoff-root-review.md",
+    "sha256": "8691cbdc425383f4e5b1ccce76237b11051b1df12619471a075034babb3ae348"
+  },
+  "basis": {
+    "nativeFailure": "godot-gdscript-rationale-retries-2026-11-13.json",
+    "runtimeFailure": "godot-gdscript-engine-2026-11-13.json"
+  },
+  "changes": [
+    "Consolidate performance guidance: route an actually measured remaining hot path to the named GDExtension specialist for boundary/integration-cost assessment; an early conditional explanation is not native adoption or a claimed invocation.",
+    "Clarify that short-lived internal cleanup ownership within the approved component/interface is an ordinary implementation choice; it needs no pre-existing named owner or renewed approval. New public/global/persistent design still goes through caller unless authorized.",
+    "Preserve exactly-once terminal collection, accepted/owned FAILED versus INVALID/rejected, typed nonblocking operations and no reliance on a freed requester."
+  ],
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS",
+    "node24Content": 38,
+    "node26Content": 38,
+    "pack": "PASS",
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-a015-handoff-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-handoff-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-handoff-content.log",
+        "sha256": "3cfa0e4018b1cb17c158fedd4f675b47387d17ee219718d95d71978eb3d8263a"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-handoff-content24.log",
+        "sha256": "9a49e5de63c15bffa13e4ecad4e3acd68f0e4520fa29981735870606e178695a"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-handoff-content26.log",
+        "sha256": "781b9ca6841078cad7b2b35130346ee4faf12d9ed1ddf6e3ee82cbe6e7e70bbd"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-handoff-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      }
+    ]
+  },
+  "pending": [
+    "Typed-loop same-input conditional-handoff retry",
+    "Async same-input generation and real failure/cancellation cleanup",
+    "Whole-role/native-host/engine-platform coverage"
+  ],
+  "claimsNotMade": [
+    "No old output failure is changed to PASS.",
+    "No corrected role runtime or performance result is established by content tests."
+  ]
+}

@@ -1,4 +1,8 @@
-version: 2
+# Codex migration catalog. Names/specs identify retained upstream contracts.
+# target and migration_state describe Codex artifacts; blank historical result fields are not passes.
+# Static validation never certifies behavior; verified declarations require explicit Codex evidence.
+
+version: 3
 last_updated: ""
 skills:
   # Critical — the phase gate, the design and architecture reviews, story readiness and done
@@ -12,6 +16,8 @@ skills:
     last_category_result: ""
     priority: critical
     category: gate
+    target: .agents/skills/game-studio-gate-check/SKILL.md
+    migration_state: partial
 
   - name: design-review
     spec: studio-tests/skills/review/design-review.md
@@ -23,6 +29,9 @@ skills:
     last_category_result: ""
     priority: critical
     category: review
+    target: .agents/skills/game-studio-design-review/SKILL.md
+    migration_state: partial
+    codex_spec: studio-tests/skills/review/design-review-codex.md
 
   - name: story-readiness
     spec: studio-tests/skills/readiness/story-readiness.md
@@ -34,6 +43,9 @@ skills:
     last_category_result: ""
     priority: critical
     category: readiness
+    target: .agents/skills/game-studio-story-readiness/SKILL.md
+    migration_state: partial
+    codex_spec: studio-tests/skills/readiness/story-readiness-codex.md
 
   - name: story-done
     spec: studio-tests/skills/readiness/story-done.md
@@ -45,6 +57,9 @@ skills:
     last_category_result: ""
     priority: critical
     category: readiness
+    target: .agents/skills/game-studio-story-done/SKILL.md
+    migration_state: partial
+    codex_spec: studio-tests/skills/readiness/story-done-codex.md
 
   - name: review-all-gdds
     spec: studio-tests/skills/review/review-all-gdds.md
@@ -56,6 +71,8 @@ skills:
     last_category_result: ""
     priority: critical
     category: review
+    target: .agents/skills/game-studio-review-all-gdds/SKILL.md
+    migration_state: pending
 
   - name: architecture-review
     spec: studio-tests/skills/review/architecture-review.md
@@ -67,6 +84,9 @@ skills:
     last_category_result: ""
     priority: critical
     category: review
+    target: .agents/skills/game-studio-architecture-review/SKILL.md
+    migration_state: partial
+    codex_spec: studio-tests/skills/review/architecture-review-codex.md
 
   # High — pipeline-critical skills
   - name: create-epics
@@ -79,6 +99,8 @@ skills:
     last_category_result: ""
     priority: high
     category: pipeline
+    target: .agents/skills/game-studio-create-epics/SKILL.md
+    migration_state: pending
 
   - name: create-stories
     spec: studio-tests/skills/pipeline/create-stories.md
@@ -90,6 +112,8 @@ skills:
     last_category_result: ""
     priority: high
     category: pipeline
+    target: .agents/skills/game-studio-create-stories/SKILL.md
+    migration_state: pending
 
   - name: dev-story
     spec: studio-tests/skills/pipeline/dev-story.md
@@ -101,6 +125,8 @@ skills:
     last_category_result: ""
     priority: high
     category: pipeline
+    target: .agents/skills/game-studio-dev-story/SKILL.md
+    migration_state: pending
 
   - name: create-control-manifest
     spec: studio-tests/skills/pipeline/create-control-manifest.md
@@ -112,6 +138,8 @@ skills:
     last_category_result: ""
     priority: high
     category: pipeline
+    target: .agents/skills/game-studio-create-control-manifest/SKILL.md
+    migration_state: pending
 
   - name: propagate-design-change
     spec: studio-tests/skills/pipeline/propagate-design-change.md
@@ -123,6 +151,8 @@ skills:
     last_category_result: ""
     priority: high
     category: pipeline
+    target: .agents/skills/game-studio-propagate-design-change/SKILL.md
+    migration_state: pending
 
   - name: architecture-decision
     spec: studio-tests/skills/authoring/architecture-decision.md
@@ -134,6 +164,9 @@ skills:
     last_category_result: ""
     priority: high
     category: authoring
+    target: .agents/skills/game-studio-architecture-decision/SKILL.md
+    migration_state: partial
+    codex_spec: studio-tests/skills/authoring/architecture-decision-codex.md
 
   - name: map-systems
     spec: studio-tests/skills/pipeline/map-systems.md
@@ -145,6 +178,8 @@ skills:
     last_category_result: ""
     priority: high
     category: pipeline
+    target: .agents/skills/game-studio-map-systems/SKILL.md
+    migration_state: partial
 
   - name: vertical-slice
     spec: studio-tests/skills/pipeline/vertical-slice.md
@@ -156,6 +191,8 @@ skills:
     last_category_result: ""
     priority: high
     category: pipeline
+    target: .agents/skills/game-studio-vertical-slice/SKILL.md
+    migration_state: pending
 
   - name: design-system
     spec: studio-tests/skills/authoring/design-system.md
@@ -167,6 +204,9 @@ skills:
     last_category_result: ""
     priority: high
     category: authoring
+    target: .agents/skills/game-studio-design-system/SKILL.md
+    migration_state: partial
+    codex_spec: studio-tests/skills/authoring/design-system-codex.md
 
   - name: consistency-check
     spec: studio-tests/skills/analysis/consistency-check.md
@@ -178,6 +218,8 @@ skills:
     last_category_result: ""
     priority: high
     category: analysis
+    target: .agents/skills/game-studio-consistency-check/SKILL.md
+    migration_state: pending
 
   # Medium — sprint planning and status, and the team skills
   - name: sprint-plan
@@ -190,6 +232,8 @@ skills:
     last_category_result: ""
     priority: medium
     category: sprint
+    target: .agents/skills/game-studio-sprint-plan/SKILL.md
+    migration_state: pending
 
   - name: sprint-status
     spec: studio-tests/skills/sprint/sprint-status.md
@@ -201,6 +245,9 @@ skills:
     last_category_result: ""
     priority: medium
     category: sprint
+    target: .agents/skills/game-studio-sprint-status/SKILL.md
+    migration_state: partial
+    codex_spec: studio-tests/skills/sprint/sprint-status-codex.md
 
   - name: team-ui
     spec: studio-tests/skills/team/team-ui.md
@@ -212,6 +259,8 @@ skills:
     last_category_result: ""
     priority: medium
     category: team
+    target: .agents/skills/game-studio-team-ui/SKILL.md
+    migration_state: pending
 
   - name: team-combat
     spec: studio-tests/skills/team/team-combat.md
@@ -223,6 +272,8 @@ skills:
     last_category_result: ""
     priority: medium
     category: team
+    target: .agents/skills/game-studio-team-combat/SKILL.md
+    migration_state: pending
 
   - name: team-narrative
     spec: studio-tests/skills/team/team-narrative.md
@@ -234,6 +285,8 @@ skills:
     last_category_result: ""
     priority: medium
     category: team
+    target: .agents/skills/game-studio-team-narrative/SKILL.md
+    migration_state: pending
 
   - name: team-audio
     spec: studio-tests/skills/team/team-audio.md
@@ -245,6 +298,8 @@ skills:
     last_category_result: ""
     priority: medium
     category: team
+    target: .agents/skills/game-studio-team-audio/SKILL.md
+    migration_state: pending
 
   - name: team-level
     spec: studio-tests/skills/team/team-level.md
@@ -256,6 +311,8 @@ skills:
     last_category_result: ""
     priority: medium
     category: team
+    target: .agents/skills/game-studio-team-level/SKILL.md
+    migration_state: pending
 
   - name: team-polish
     spec: studio-tests/skills/team/team-polish.md
@@ -267,6 +324,8 @@ skills:
     last_category_result: ""
     priority: medium
     category: team
+    target: .agents/skills/game-studio-team-polish/SKILL.md
+    migration_state: pending
 
   - name: team-release
     spec: studio-tests/skills/team/team-release.md
@@ -278,6 +337,8 @@ skills:
     last_category_result: ""
     priority: medium
     category: team
+    target: .agents/skills/game-studio-team-release/SKILL.md
+    migration_state: pending
 
   - name: team-live-ops
     spec: studio-tests/skills/team/team-live-ops.md
@@ -289,6 +350,8 @@ skills:
     last_category_result: ""
     priority: medium
     category: team
+    target: .agents/skills/game-studio-team-live-ops/SKILL.md
+    migration_state: pending
 
   - name: team-qa
     spec: studio-tests/skills/team/team-qa.md
@@ -300,6 +363,8 @@ skills:
     last_category_result: ""
     priority: medium
     category: team
+    target: .agents/skills/game-studio-team-qa/SKILL.md
+    migration_state: pending
 
   # Medium, then low — skill testing first, then authoring, analysis, sprint reporting and utility skills
   - name: skill-test
@@ -312,6 +377,8 @@ skills:
     last_category_result: ""
     priority: medium
     category: utility
+    target: .agents/skills/game-studio-skill-test/SKILL.md
+    migration_state: pending
 
   - name: skill-improve
     spec: studio-tests/skills/utility/skill-improve.md
@@ -323,6 +390,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-skill-improve/SKILL.md
+    migration_state: pending
 
   - name: start
     spec: studio-tests/skills/utility/start.md
@@ -334,6 +403,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-start/SKILL.md
+    migration_state: partial
 
   - name: next-step
     spec: studio-tests/skills/utility/next-step.md
@@ -345,6 +416,9 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-next-step/SKILL.md
+    migration_state: partial
+    codex_spec: studio-tests/skills/utility/next-step-codex.md
 
   - name: brainstorm
     spec: studio-tests/skills/utility/brainstorm.md
@@ -356,6 +430,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-brainstorm/SKILL.md
+    migration_state: partial
 
   - name: project-stage-detect
     spec: studio-tests/skills/utility/project-stage-detect.md
@@ -367,6 +443,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-project-stage-detect/SKILL.md
+    migration_state: pending
 
   - name: setup-engine
     spec: studio-tests/skills/utility/setup-engine.md
@@ -378,6 +456,9 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-setup-engine/SKILL.md
+    migration_state: partial
+    codex_spec: studio-tests/skills/utility/setup-engine-codex.md
 
   - name: quick-design
     spec: studio-tests/skills/authoring/quick-design.md
@@ -389,6 +470,8 @@ skills:
     last_category_result: ""
     priority: low
     category: authoring
+    target: .agents/skills/game-studio-quick-design/SKILL.md
+    migration_state: pending
 
   - name: ux-design
     spec: studio-tests/skills/authoring/ux-design.md
@@ -400,6 +483,8 @@ skills:
     last_category_result: ""
     priority: low
     category: authoring
+    target: .agents/skills/game-studio-ux-design/SKILL.md
+    migration_state: pending
 
   - name: ux-review
     spec: studio-tests/skills/authoring/ux-review.md
@@ -411,6 +496,8 @@ skills:
     last_category_result: ""
     priority: low
     category: authoring
+    target: .agents/skills/game-studio-ux-review/SKILL.md
+    migration_state: pending
 
   - name: art-bible
     spec: studio-tests/skills/authoring/art-bible.md
@@ -422,6 +509,8 @@ skills:
     last_category_result: ""
     priority: low
     category: authoring
+    target: .agents/skills/game-studio-art-bible/SKILL.md
+    migration_state: pending
 
   - name: create-architecture
     spec: studio-tests/skills/authoring/create-architecture.md
@@ -433,6 +522,9 @@ skills:
     last_category_result: ""
     priority: low
     category: authoring
+    target: .agents/skills/game-studio-create-architecture/SKILL.md
+    migration_state: partial
+    codex_spec: studio-tests/skills/authoring/create-architecture-codex.md
 
   - name: code-review
     spec: studio-tests/skills/analysis/code-review.md
@@ -444,6 +536,8 @@ skills:
     last_category_result: ""
     priority: low
     category: analysis
+    target: .agents/skills/game-studio-code-review/SKILL.md
+    migration_state: pending
 
   - name: balance-check
     spec: studio-tests/skills/analysis/balance-check.md
@@ -455,6 +549,8 @@ skills:
     last_category_result: ""
     priority: low
     category: analysis
+    target: .agents/skills/game-studio-balance-check/SKILL.md
+    migration_state: pending
 
   - name: asset-audit
     spec: studio-tests/skills/analysis/asset-audit.md
@@ -466,6 +562,8 @@ skills:
     last_category_result: ""
     priority: low
     category: analysis
+    target: .agents/skills/game-studio-asset-audit/SKILL.md
+    migration_state: pending
 
   - name: content-audit
     spec: studio-tests/skills/analysis/content-audit.md
@@ -477,6 +575,8 @@ skills:
     last_category_result: ""
     priority: low
     category: analysis
+    target: .agents/skills/game-studio-content-audit/SKILL.md
+    migration_state: pending
 
   - name: tech-debt
     spec: studio-tests/skills/analysis/tech-debt.md
@@ -488,6 +588,8 @@ skills:
     last_category_result: ""
     priority: low
     category: analysis
+    target: .agents/skills/game-studio-tech-debt/SKILL.md
+    migration_state: pending
 
   - name: scope-check
     spec: studio-tests/skills/analysis/scope-check.md
@@ -499,6 +601,8 @@ skills:
     last_category_result: ""
     priority: low
     category: analysis
+    target: .agents/skills/game-studio-scope-check/SKILL.md
+    migration_state: pending
 
   - name: estimate
     spec: studio-tests/skills/analysis/estimate.md
@@ -510,6 +614,8 @@ skills:
     last_category_result: ""
     priority: low
     category: analysis
+    target: .agents/skills/game-studio-estimate/SKILL.md
+    migration_state: pending
 
   - name: perf-profile
     spec: studio-tests/skills/analysis/perf-profile.md
@@ -521,6 +627,8 @@ skills:
     last_category_result: ""
     priority: low
     category: analysis
+    target: .agents/skills/game-studio-perf-profile/SKILL.md
+    migration_state: pending
 
   - name: security-audit
     spec: studio-tests/skills/analysis/security-audit.md
@@ -532,6 +640,8 @@ skills:
     last_category_result: ""
     priority: low
     category: analysis
+    target: .agents/skills/game-studio-security-audit/SKILL.md
+    migration_state: pending
 
   - name: test-evidence-review
     spec: studio-tests/skills/analysis/test-evidence-review.md
@@ -543,6 +653,8 @@ skills:
     last_category_result: ""
     priority: low
     category: analysis
+    target: .agents/skills/game-studio-test-evidence-review/SKILL.md
+    migration_state: pending
 
   - name: test-flakiness
     spec: studio-tests/skills/analysis/test-flakiness.md
@@ -554,6 +666,8 @@ skills:
     last_category_result: ""
     priority: low
     category: analysis
+    target: .agents/skills/game-studio-test-flakiness/SKILL.md
+    migration_state: pending
 
   - name: reverse-document
     spec: studio-tests/skills/utility/reverse-document.md
@@ -565,6 +679,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-reverse-document/SKILL.md
+    migration_state: pending
 
   - name: bug-report
     spec: studio-tests/skills/utility/bug-report.md
@@ -576,6 +692,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-bug-report/SKILL.md
+    migration_state: pending
 
   - name: hotfix
     spec: studio-tests/skills/utility/hotfix.md
@@ -587,6 +705,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-hotfix/SKILL.md
+    migration_state: pending
 
   - name: prototype
     spec: studio-tests/skills/utility/prototype.md
@@ -598,6 +718,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-prototype/SKILL.md
+    migration_state: partial
 
   - name: cut
     spec: studio-tests/skills/utility/cut.md
@@ -609,6 +731,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-cut/SKILL.md
+    migration_state: pending
 
   - name: playtest-report
     spec: studio-tests/skills/utility/playtest-report.md
@@ -620,6 +744,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-playtest-report/SKILL.md
+    migration_state: pending
 
   - name: milestone-review
     spec: studio-tests/skills/sprint/milestone-review.md
@@ -631,6 +757,8 @@ skills:
     last_category_result: ""
     priority: low
     category: sprint
+    target: .agents/skills/game-studio-milestone-review/SKILL.md
+    migration_state: pending
 
   - name: retrospective
     spec: studio-tests/skills/sprint/retrospective.md
@@ -642,6 +770,8 @@ skills:
     last_category_result: ""
     priority: low
     category: sprint
+    target: .agents/skills/game-studio-retrospective/SKILL.md
+    migration_state: pending
 
   - name: write-changelog
     spec: studio-tests/skills/sprint/write-changelog.md
@@ -653,6 +783,8 @@ skills:
     last_category_result: ""
     priority: low
     category: sprint
+    target: .agents/skills/game-studio-write-changelog/SKILL.md
+    migration_state: pending
 
   - name: patch-notes
     spec: studio-tests/skills/sprint/patch-notes.md
@@ -664,6 +796,8 @@ skills:
     last_category_result: ""
     priority: low
     category: sprint
+    target: .agents/skills/game-studio-patch-notes/SKILL.md
+    migration_state: pending
 
   - name: onboard
     spec: studio-tests/skills/utility/onboard.md
@@ -675,6 +809,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-onboard/SKILL.md
+    migration_state: pending
 
   - name: localize
     spec: studio-tests/skills/utility/localize.md
@@ -686,6 +822,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-localize/SKILL.md
+    migration_state: pending
 
   - name: launch-checklist
     spec: studio-tests/skills/utility/launch-checklist.md
@@ -697,6 +835,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-launch-checklist/SKILL.md
+    migration_state: pending
 
   - name: release-checklist
     spec: studio-tests/skills/utility/release-checklist.md
@@ -708,6 +848,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-release-checklist/SKILL.md
+    migration_state: pending
 
   - name: adopt
     spec: studio-tests/skills/utility/adopt.md
@@ -719,6 +861,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-adopt/SKILL.md
+    migration_state: pending
 
   - name: smoke-check
     spec: studio-tests/skills/utility/smoke-check.md
@@ -730,6 +874,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-smoke-check/SKILL.md
+    migration_state: partial
 
   - name: soak-test
     spec: studio-tests/skills/utility/soak-test.md
@@ -741,6 +887,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-soak-test/SKILL.md
+    migration_state: pending
 
   - name: test-setup
     spec: studio-tests/skills/utility/test-setup.md
@@ -752,6 +900,9 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-test-setup/SKILL.md
+    migration_state: partial
+    codex_spec: studio-tests/skills/utility/test-setup-codex.md
 
   - name: test-helpers
     spec: studio-tests/skills/utility/test-helpers.md
@@ -763,6 +914,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-test-helpers/SKILL.md
+    migration_state: pending
 
   - name: regression-suite
     spec: studio-tests/skills/utility/regression-suite.md
@@ -774,6 +927,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-regression-suite/SKILL.md
+    migration_state: pending
 
   - name: qa-plan
     spec: studio-tests/skills/utility/qa-plan.md
@@ -785,6 +940,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-qa-plan/SKILL.md
+    migration_state: pending
 
   - name: bug-triage
     spec: studio-tests/skills/utility/bug-triage.md
@@ -796,6 +953,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-bug-triage/SKILL.md
+    migration_state: pending
 
   - name: asset-spec
     spec: studio-tests/skills/utility/asset-spec.md
@@ -807,6 +966,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-asset-spec/SKILL.md
+    migration_state: pending
 
   - name: day-one-patch
     spec: studio-tests/skills/utility/day-one-patch.md
@@ -818,6 +979,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-day-one-patch/SKILL.md
+    migration_state: pending
 
   - name: project-settings
     spec: studio-tests/skills/utility/project-settings.md
@@ -829,6 +992,8 @@ skills:
     last_category_result: ""
     priority: low
     category: utility
+    target: .agents/skills/game-studio-project-settings/SKILL.md
+    migration_state: partial
 
 agents:
   # Tier 1 Directors
@@ -839,6 +1004,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: director
+    target: .codex/agents/game-studio-creative-director.toml
+    migration_state: partial
 
   - name: technical-director
     spec: studio-tests/agents/directors/technical-director.md
@@ -847,6 +1014,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: director
+    target: .codex/agents/game-studio-technical-director.toml
+    migration_state: partial
 
   - name: producer
     spec: studio-tests/agents/directors/producer.md
@@ -855,6 +1024,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: director
+    target: .codex/agents/game-studio-producer.toml
+    migration_state: partial
 
   - name: art-director
     spec: studio-tests/agents/directors/art-director.md
@@ -863,6 +1034,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: director
+    target: .codex/agents/game-studio-art-director.toml
+    migration_state: partial
 
   # Tier 2 Leads
   - name: lead-programmer
@@ -872,6 +1045,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: lead
+    target: .codex/agents/game-studio-lead-programmer.toml
+    migration_state: partial
 
   - name: qa-lead
     spec: studio-tests/agents/leads/qa-lead.md
@@ -880,6 +1055,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: lead
+    target: .codex/agents/game-studio-qa-lead.toml
+    migration_state: partial
 
   - name: narrative-director
     spec: studio-tests/agents/leads/narrative-director.md
@@ -888,6 +1065,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: lead
+    target: .codex/agents/game-studio-narrative-director.toml
+    migration_state: pending
 
   - name: audio-director
     spec: studio-tests/agents/leads/audio-director.md
@@ -896,6 +1075,9 @@ agents:
     last_category: ""
     last_category_result: ""
     category: lead
+    target: .codex/agents/game-studio-audio-director.toml
+    migration_state: partial
+    codex_spec: studio-tests/roles/audio-director-codex.md
 
   - name: game-designer
     spec: studio-tests/agents/leads/game-designer.md
@@ -904,6 +1086,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: lead
+    target: .codex/agents/game-studio-game-designer.toml
+    migration_state: partial
 
   - name: systems-designer
     spec: studio-tests/agents/leads/systems-designer.md
@@ -912,6 +1096,9 @@ agents:
     last_category: ""
     last_category_result: ""
     category: lead
+    target: .codex/agents/game-studio-systems-designer.toml
+    migration_state: partial
+    codex_spec: studio-tests/roles/systems-designer-codex.md
 
   - name: level-designer
     spec: studio-tests/agents/leads/level-designer.md
@@ -920,6 +1107,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: lead
+    target: .codex/agents/game-studio-level-designer.toml
+    migration_state: pending
 
   # Core Specialists
   - name: gameplay-programmer
@@ -929,6 +1118,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-gameplay-programmer.toml
+    migration_state: partial
 
   - name: ai-programmer
     spec: studio-tests/agents/specialists/ai-programmer.md
@@ -937,6 +1128,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-ai-programmer.toml
+    migration_state: pending
 
   - name: technical-artist
     spec: studio-tests/agents/specialists/technical-artist.md
@@ -945,6 +1138,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-technical-artist.toml
+    migration_state: pending
 
   - name: sound-designer
     spec: studio-tests/agents/specialists/sound-designer.md
@@ -953,6 +1148,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-sound-designer.toml
+    migration_state: pending
 
   - name: engine-programmer
     spec: studio-tests/agents/specialists/engine-programmer.md
@@ -961,6 +1158,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-engine-programmer.toml
+    migration_state: pending
 
   - name: tools-programmer
     spec: studio-tests/agents/specialists/tools-programmer.md
@@ -969,6 +1168,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-tools-programmer.toml
+    migration_state: pending
 
   - name: network-programmer
     spec: studio-tests/agents/specialists/network-programmer.md
@@ -977,6 +1178,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-network-programmer.toml
+    migration_state: pending
 
   - name: security-engineer
     spec: studio-tests/agents/qa/security-engineer.md
@@ -985,6 +1188,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-security-engineer.toml
+    migration_state: pending
 
   - name: accessibility-specialist
     spec: studio-tests/agents/qa/accessibility-specialist.md
@@ -993,6 +1198,9 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-accessibility-specialist.toml
+    migration_state: partial
+    codex_spec: studio-tests/roles/accessibility-specialist-codex.md
 
   - name: ux-designer
     spec: studio-tests/agents/specialists/ux-designer.md
@@ -1001,6 +1209,9 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-ux-designer.toml
+    migration_state: partial
+    codex_spec: studio-tests/roles/ux-designer-codex.md
 
   - name: ui-programmer
     spec: studio-tests/agents/specialists/ui-programmer.md
@@ -1009,6 +1220,9 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-ui-programmer.toml
+    migration_state: partial
+    codex_spec: studio-tests/roles/ui-programmer-codex.md
 
   - name: performance-analyst
     spec: studio-tests/agents/specialists/performance-analyst.md
@@ -1017,6 +1231,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-performance-analyst.toml
+    migration_state: pending
 
   # Engine Specialists — Godot
   - name: godot-specialist
@@ -1026,6 +1242,9 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-godot-specialist.toml
+    migration_state: partial
+    codex_spec: studio-tests/roles/godot-specialist-codex.md
 
   - name: godot-gdscript-specialist
     spec: studio-tests/agents/engine/godot/godot-gdscript-specialist.md
@@ -1034,6 +1253,9 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-godot-gdscript-specialist.toml
+    migration_state: partial
+    codex_spec: studio-tests/roles/godot-gdscript-specialist-codex.md
 
   - name: godot-csharp-specialist
     spec: studio-tests/agents/engine/godot/godot-csharp-specialist.md
@@ -1042,6 +1264,9 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-godot-csharp-specialist.toml
+    migration_state: partial
+    codex_spec: studio-tests/roles/godot-csharp-specialist-codex.md
 
   - name: godot-shader-specialist
     spec: studio-tests/agents/engine/godot/godot-shader-specialist.md
@@ -1050,6 +1275,9 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-godot-shader-specialist.toml
+    migration_state: partial
+    codex_spec: studio-tests/roles/godot-shader-specialist-codex.md
 
   - name: godot-gdextension-specialist
     spec: studio-tests/agents/engine/godot/godot-gdextension-specialist.md
@@ -1058,6 +1286,9 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-godot-gdextension-specialist.toml
+    migration_state: partial
+    codex_spec: studio-tests/roles/godot-gdextension-specialist-codex.md
 
   # Engine Specialists — Unity
   - name: unity-specialist
@@ -1067,6 +1298,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-unity-specialist.toml
+    migration_state: pending
 
   - name: unity-ui-specialist
     spec: studio-tests/agents/engine/unity/unity-ui-specialist.md
@@ -1075,6 +1308,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-unity-ui-specialist.toml
+    migration_state: pending
 
   - name: unity-shader-specialist
     spec: studio-tests/agents/engine/unity/unity-shader-specialist.md
@@ -1083,6 +1318,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-unity-shader-specialist.toml
+    migration_state: pending
 
   - name: unity-dots-specialist
     spec: studio-tests/agents/engine/unity/unity-dots-specialist.md
@@ -1091,6 +1328,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-unity-dots-specialist.toml
+    migration_state: pending
 
   - name: unity-addressables-specialist
     spec: studio-tests/agents/engine/unity/unity-addressables-specialist.md
@@ -1099,6 +1338,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-unity-addressables-specialist.toml
+    migration_state: pending
 
   # Engine Specialists — Unreal
   - name: unreal-specialist
@@ -1108,6 +1349,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-unreal-specialist.toml
+    migration_state: pending
 
   - name: ue-blueprint-specialist
     spec: studio-tests/agents/engine/unreal/ue-blueprint-specialist.md
@@ -1116,6 +1359,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-ue-blueprint-specialist.toml
+    migration_state: pending
 
   - name: ue-gas-specialist
     spec: studio-tests/agents/engine/unreal/ue-gas-specialist.md
@@ -1124,6 +1369,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-ue-gas-specialist.toml
+    migration_state: pending
 
   - name: ue-umg-specialist
     spec: studio-tests/agents/engine/unreal/ue-umg-specialist.md
@@ -1132,6 +1379,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-ue-umg-specialist.toml
+    migration_state: pending
 
   - name: ue-replication-specialist
     spec: studio-tests/agents/engine/unreal/ue-replication-specialist.md
@@ -1140,6 +1389,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: engine
+    target: .codex/agents/game-studio-ue-replication-specialist.toml
+    migration_state: pending
 
   # Operations
   - name: devops-engineer
@@ -1149,6 +1400,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: operations
+    target: .codex/agents/game-studio-devops-engineer.toml
+    migration_state: pending
 
   - name: release-manager
     spec: studio-tests/agents/operations/release-manager.md
@@ -1157,6 +1410,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: operations
+    target: .codex/agents/game-studio-release-manager.toml
+    migration_state: pending
 
   - name: live-ops-designer
     spec: studio-tests/agents/operations/live-ops-designer.md
@@ -1165,6 +1420,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: operations
+    target: .codex/agents/game-studio-live-ops-designer.toml
+    migration_state: pending
 
   - name: community-manager
     spec: studio-tests/agents/operations/community-manager.md
@@ -1173,6 +1430,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: operations
+    target: .codex/agents/game-studio-community-manager.toml
+    migration_state: pending
 
   - name: analytics-engineer
     spec: studio-tests/agents/operations/analytics-engineer.md
@@ -1181,6 +1440,9 @@ agents:
     last_category: ""
     last_category_result: ""
     category: operations
+    target: .codex/agents/game-studio-analytics-engineer.toml
+    migration_state: partial
+    codex_spec: studio-tests/roles/analytics-engineer-codex.md
 
   - name: economy-designer
     spec: studio-tests/agents/operations/economy-designer.md
@@ -1189,6 +1451,9 @@ agents:
     last_category: ""
     last_category_result: ""
     category: operations
+    target: .codex/agents/game-studio-economy-designer.toml
+    migration_state: partial
+    codex_spec: studio-tests/roles/economy-designer-codex.md
 
   - name: localization-lead
     spec: studio-tests/agents/operations/localization-lead.md
@@ -1197,6 +1462,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: operations
+    target: .codex/agents/game-studio-localization-lead.toml
+    migration_state: pending
 
   # QA & Creative
   - name: qa-tester
@@ -1206,6 +1473,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: qa
+    target: .codex/agents/game-studio-qa-tester.toml
+    migration_state: partial
 
   - name: prototyper
     spec: studio-tests/agents/specialists/prototyper.md
@@ -1214,6 +1483,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-prototyper.toml
+    migration_state: pending
 
   - name: writer
     spec: studio-tests/agents/specialists/writer.md
@@ -1222,6 +1493,8 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-writer.toml
+    migration_state: pending
 
   - name: world-builder
     spec: studio-tests/agents/specialists/world-builder.md
@@ -1230,3 +1503,16 @@ agents:
     last_category: ""
     last_category_result: ""
     category: specialist
+    target: .codex/agents/game-studio-world-builder.toml
+    migration_state: pending
+target_platform: codex
+aliases:
+  - name: changelog
+    replacement: write-changelog
+    migration_state: pending
+  - name: help
+    replacement: next-step
+    migration_state: pending
+  - name: settings
+    replacement: project-settings
+    migration_state: pending

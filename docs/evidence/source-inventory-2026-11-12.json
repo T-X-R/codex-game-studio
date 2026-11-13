@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-12",
+  "implementationCommit": "09a6306889b28b9fbc1519bae57c5e230e2f0dd3",
+  "scope": "T20 retained rule, Hook and shared-script source reconciliation",
+  "environment": {
+    "node": "24.22.2",
+    "os": "macOS ARM64"
+  },
+  "sourceInspection": {
+    "status": "valid",
+    "counts": {
+      "hooks": 18,
+      "scripts": 54,
+      "rules": 14
+    },
+    "registeredHooks": 15,
+    "sourceCoverageComplete": true,
+    "behaviorVerified": false,
+    "issues": []
+  },
+  "completeDeclarationCheck": {
+    "exitCode": 1,
+    "catalogIssues": [
+      {
+        "path": "studio-tests/catalog.yaml",
+        "code": "MIGRATION_INCOMPLETE",
+        "message": "Every workflow, role and alias needs a verified declaration with evidence before the complete catalog gate can pass"
+      }
+    ]
+  },
+  "validation": {
+    "build": "passed",
+    "typecheck": "passed",
+    "tests": {
+      "passed": 159,
+      "failed": 0,
+      "skipped": 0
+    },
+    "packedInstall": "passed"
+  },
+  "negativeCoverage": [
+    "same-count duplicate and omitted source",
+    "missing source and undeclared addition",
+    "empty disposition columns",
+    "changed Hook matcher",
+    "unexpected registered helper and unknown Hook",
+    "duplicate registration with unchanged unique-file count",
+    "dynamic Hook path",
+    "malformed settings and missing inventory/tree",
+    "directory in place of source file"
+  ],
+  "limitations": [
+    "Source identity and registration reconciliation only; no Codex Hook was executed or trusted.",
+    "Disposition text is checked for presence, not semantic truth.",
+    "No rule/helper/Hook behavioral migration is declared complete.",
+    "Workflow/role/alias complete declarations still fail as expected; no release completion is inferred."
+  ],
+  "sha256": {
+    "toolkit/src/content-inventory.ts": "c1b342e5b15cc9c289ff8740d79f34e56607ead41c28708385670c9ff6dfa3fe",
+    "toolkit/test/content-inventory.test.mjs": "48f907e2ad1eda7d9090e07fbcc4ea6583a2c60e3a7b68ad997aecaef8c82da9",
+    "toolkit/scripts/lint-content.mjs": "863afb22fd4137459bf3ca97a754af4076129f986f1be0eefa8a50d32cfda848",
+    "tasks/migration-inventory.md": "3dab33d1dc190bef13ab9bfc9474cb10096877377fe0c20e73fc3cb37ad8ef74",
+    ".claude/settings.json": "3ab03c78bdc1d1e2c26567f5af640157b2691c5014a46e4bd19573057d2026ff"
+  },
+  "crlfFixtureCorrection": {
+    "failedCiRun": "https://github.com/T-X-R/codex-game-studio/actions/runs/43190208145",
+    "failedPlatform": "windows-latest / Node 24",
+    "observations": {
+      "sourceLint": "passed",
+      "testsPassed": 157,
+      "testsFailed": 2,
+      "testsSkipped": 0
+    },
+    "cause": "Two negative-fixture mutation regexes assumed LF. On CRLF one row lookup returned null and one intended mutation changed nothing.",
+    "reproduction": "Explicit CRLF variants reproduce both failures locally before changing the regexes.",
+    "correction": "Handle CRLF in both mutation regexes, assert that every negative mutation changes its input, and test LF plus CRLF on every platform. Production validator unchanged.",
+    "localValidation": {
+      "testsPassed": 162,
+      "testsFailed": 0,
+      "testsSkipped": 0
+    },
+    "correctedTestSha256": "45577de1bc36ae983cf99a9cd964f1cab1db683dd6ba50caa0eb498e9b989e34"
+  }
+}

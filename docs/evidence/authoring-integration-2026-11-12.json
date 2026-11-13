@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-12",
+  "status": "partial",
+  "scope": "Selected native authoring/review integration; not complete migration or desktop acceptance",
+  "summary": {
+    "nativeRuns": 41,
+    "reviewedPass": 37,
+    "retainedInitialFail": 4,
+    "localTests": 198,
+    "localTestFailures": 0,
+    "localTestsSkipped": 0
+  },
+  "workflows": [
+    {
+      "workflow": "architecture-decision",
+      "runs": 13,
+      "reviewedPass": 12,
+      "retainedInitialFail": 1,
+      "nativeChildrenReconciled": 8,
+      "evidence": "docs/evidence/architecture-decision-skill-2026-11-12.json",
+      "evidenceSha256": "7996c056cfbbb3b0df34f26a8851187797a69671b9e9cac27d6d2a37ecfbc875"
+    },
+    {
+      "workflow": "design-review",
+      "runs": 17,
+      "reviewedPass": 15,
+      "retainedInitialFail": 2,
+      "nativeChildrenReconciled": 3,
+      "evidence": "docs/evidence/design-review-skill-2026-11-12.json",
+      "evidenceSha256": "b91129d4d3a269024be272ccd6c85ca28dc88204f13183c339db82e05d978bed"
+    },
+    {
+      "workflow": "design-system",
+      "runs": 11,
+      "reviewedPass": 10,
+      "retainedInitialFail": 1,
+      "nativeChildrenReconciled": 0,
+      "evidence": "docs/evidence/design-system-skill-2026-11-12.json",
+      "evidenceSha256": "4efe555eaba677ebb77546eee1a6d9373eb2d423b7d5483699bfd8ab90121911"
+    }
+  ],
+  "independentRootAudit": {
+    "checks": [
+      "Recomputed each supplied raw artifact hash and parent trace hash.",
+      "Compared before/after snapshots with reported changed/added/preserved file sets.",
+      "Recomputed every actual final workspace file hash, including the same workspace used by the real review-reuse follow-up.",
+      "Reconciled actual child session metadata with declared roles and compared parent/child model, effort, approval and sandbox contexts.",
+      "Checked every design-system parent has no spawn call or child thread."
+    ],
+    "reportPath": "/private/tmp/game-studio-authoring-independent-audit.json",
+    "reportSha256": "f6f2fff007f8d28a5aefd7040b60bc164cfaac7f8039cabb758f2653426aa714",
+    "scopeLimit": "Per-case semantic judgments, exact domain tables, review order, checkpoint chains and initial failures are detailed in the linked workflow evidence. No broad acceptance is inferred from hashes alone."
+  },
+  "finalLocalValidation": {
+    "build": {
+      "path": "/private/tmp/game-studio-authoring-final-build.log",
+      "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+    },
+    "typecheck": {
+      "path": "/private/tmp/game-studio-authoring-final-typecheck.log",
+      "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+    },
+    "lint": {
+      "path": "/private/tmp/game-studio-authoring-final-lint.log",
+      "sha256": "a9753b9ec2491946747c7ca198f489f27d03e0d0dafe649391fe98ca9e970a28"
+    },
+    "pack": {
+      "path": "/private/tmp/game-studio-authoring-final-pack.log",
+      "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+    },
+    "tests": {
+      "path": "/private/tmp/game-studio-authoring-final-tests.log",
+      "sha256": "0c2b91da09020727cdce0d509cea51ca30ece57e04c3e91498fef27fba7b1a89"
+    }
+  },
+  "ci": {
+    "commit": "5900327abffcb4ee50c52a47f178f8c6c78d25a9",
+    "url": "https://github.com/T-X-R/codex-game-studio/actions/runs/43222750127",
+    "status": "All five jobs passed; later evidence-only updates, fixture refinements and the explicitly recorded EOF cleanup receive a subsequent CI run."
+  },
+  "limits": [
+    "These are scoped behavior PASS results, including correctly refusing unsafe or incomplete work; they are not all domain approval verdicts.",
+    "All three workflow catalog rows remain partial. Full engine/specialist matrices, interactive branches, recovery faults and native desktop evidence remain open.",
+    "Synthetic owner decisions and historical review fixtures are labeled in per-workflow evidence; a separate real native review-to-reuse case is linked.",
+    "No new stable release, main-branch merge or npm publication occurred."
+  ]
+}

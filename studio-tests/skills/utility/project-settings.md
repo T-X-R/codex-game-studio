@@ -1,5 +1,8 @@
 # Skill Test Spec: /project-settings
 
+The preserved upstream cases below document source behavior. Codex adaptations
+and executable behavior expectations are in [project-settings-codex.md](project-settings-codex.md).
+
 ## Skill Summary
 
 `/project-settings` shows and changes project configuration. It has four forms:

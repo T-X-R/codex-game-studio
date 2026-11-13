@@ -1,0 +1,402 @@
+{
+  "date": "2026-11-13",
+  "status": "PASS_SCOPED",
+  "integration": {
+    "logs": {
+      "build": {
+        "path": "/private/tmp/game-studio-setup-web-integrated-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      "typecheck": {
+        "path": "/private/tmp/game-studio-setup-web-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      "content": {
+        "path": "/private/tmp/game-studio-setup-web-content.log",
+        "sha256": "7747b9ca37f5e28dc44a5feba5528ae2ac94362ad05996ab093071e1dc9d000d"
+      },
+      "tests24": {
+        "path": "/private/tmp/game-studio-setup-web-test24-authorized.log",
+        "sha256": "8b96b372231686e7e37eabcabd7a9c4d6075874fe655a8d384050cb68658da1b"
+      },
+      "tests26": {
+        "path": "/private/tmp/game-studio-setup-web-test26-authorized.log",
+        "sha256": "931505ed14d6becdb7f6686d7f8b23690e15d7b235ce054adef259b6b4e73c5a"
+      },
+      "pack": {
+        "path": "/private/tmp/game-studio-setup-web-pack-final.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      },
+      "browser": {
+        "path": "/private/tmp/game-studio-page-shot-browser.log",
+        "sha256": "1339ae3837a22168e18d10ed84fcf7b93a7cbcbfd9702dff7940cf4d07915837"
+      }
+    },
+    "fullTests": {
+      "node24": 447,
+      "node26": 447,
+      "fail": 0,
+      "skip": 0
+    },
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS",
+    "installedPackage": "PASS",
+    "initialSandboxFailures": [
+      {
+        "path": "/private/tmp/game-studio-setup-web-test24.log",
+        "sha256": "d482c9d30318e9345fbd4dd6021a97658106ca49609a4d641c5cf4539b390f69"
+      },
+      {
+        "path": "/private/tmp/game-studio-setup-web-test26.log",
+        "sha256": "65fef13733956f7e1842aa25e688904a55fa6d40d5bcd8fb21ab670bd5a1e0da"
+      }
+    ],
+    "failureExplanation": "Both initial suites passed 446/447; preview could not bind 127.0.0.1 (EPERM). Identical full suites in the authorized environment pass 447/447. No test or product change was made for this environment failure.",
+    "scope": "Integrated worktree containing engine settings/mirror, Web starters and plain page capture. Exact-head cross-platform CI remains separate."
+  },
+  "fullMigrationComplete": false,
+  "S051": "pending",
+  "scope": "Four source-preserving Web starters on the existing engine scaffold command",
+  "canonicalFiles": {
+    "toolkit/src/web-scaffold.ts": "4d0fc1abc7f954fb2f026a26da428881aded5d179676fa986697034f9cc8d1b6",
+    "toolkit/src/engine-scaffold.ts": "5b268b8f577951eb26c00c25ee827aba065960089aeaaacac1a1182608fcd6e8",
+    "toolkit/src/game-commands.ts": "01ea22b928fa7b7ad86144086d8b7b26f004394ec89d14e7618d435339e7b285",
+    "toolkit/test/web-scaffold.test.mjs": "30a64710797f6305163e6061c6439787a3f0cef388df86eb26d083ef2e8949fd",
+    "studio-tests/helpers/web-scaffold-codex.md": "de69f4afe2f2cceec0ef893b4fff10deb66800cdefa860e7b9fec37c4c427ffc",
+    "studio/templates/web-setup/.gitignore.tmpl": "2b5082a65fb1b6875852f3a98664c1c315a6440250d42eb4a5b975b818ee402e",
+    "studio/templates/web-setup/assets/provenance.yaml": "b460afa58a7bb8947e8b102ec89568316d1f3e60df54cdf4d3f8a2d9c122b08c",
+    "studio/templates/web-setup/data/config.json": "fd7b6b06497ebcb9541bcbaf289b4de13d78fed3cac9cbdce8de23c0dff7280b",
+    "studio/templates/web-setup/index.html": "d92f5fdbf1281e15aa7d6a0b3bf8553e02f689c3309589e695ad901240bfcc0d",
+    "studio/templates/web-setup/src/game/rules.ts": "c3eb0e09403d4bd68e1ae17adb6fe15b08fec6d7580baf429a6b0d276dacbe36",
+    "studio/templates/web-setup/src/main.ts": "6cc57ae3a090f09f11b937ec3895a4fedd723b5e40b6e6f7101c799331814b37",
+    "studio/templates/web-setup/tests/integration/boot.spec.ts.tmpl": "c66cab7b7834661fefcde44213261f702cdfbaccdf86d687eef8b230efc26b50",
+    "studio/templates/web-setup/tests/unit/rules.test.ts.tmpl": "39d436b22946a598912a3d67f3235dbd9e3fe79f69f41e819d7ad3d263517862",
+    "studio/templates/web-starters/phaser/package-lock.json": "e62c23ff152af047d642ec383f143ef7c7848cb15f7753ff53bdf607e5e036ab",
+    "studio/templates/web-starters/phaser/package.json": "972b28f5cfeecfb3904f7b015d5bb6353a63d0aa707aa345ab41c6518cd0533e",
+    "studio/templates/web-starters/phaser/src/main.ts": "d6fd67e37df5ff97b91b7251045f6eb823af56d0fcd17fc2d5e81734c2bd8487",
+    "studio/templates/web-starters/pixi/package-lock.json": "c8133b59d14481f0d4d7cfba07d9567baf889ca4d68fe3072863f950e29f44ac",
+    "studio/templates/web-starters/pixi/package.json": "e2340a0255b96ad48886fde8eef4396f2fb6357191bbc58fe0557d28b58e5636",
+    "studio/templates/web-starters/pixi/src/main.ts": "1952c9113a086809e9024595e1fb7700f3cf600a56426fbd5593b08cdb578a37",
+    "studio/templates/web-starters/three/package-lock.json": "82ecdaf9ceeacbe03b817af2164d226464b6cdb33cacc06ac893e3f09fca9565",
+    "studio/templates/web-starters/three/package.json": "7e8c7e4b630692f4c6be9570e6e9abf611c39a16f00efdab5df96cd3fda9af18",
+    "studio/templates/web-starters/three/src/main.ts": "1941dbfe076c83e9da9368e042ad040e6e00107e0a9bf9bec044327dfd51da1f"
+  },
+  "candidateManifest": {
+    "path": "/private/tmp/game-studio-web-scaffold-u7aqqc8w/manifest.json",
+    "sha256": "6b90c9e0d23152a28c461c2284dc4a9e1d70e2e0a47b6bde746083f3701a150b"
+  },
+  "independentReview": {
+    "path": "/private/tmp/game-studio-web-scaffold-review-_p8bxa45/review.md",
+    "sha256": "78d2466b372086643d53ea76bd70554ef174061ffcffebcfb0883f3a8d2ef019"
+  },
+  "correctiveOverlay": {
+    "path": "/private/tmp/game-studio-web-scaffold-review-_p8bxa45/overlay.patch",
+    "sha256": "d25dff3c631ff55631a30f6affa1f3b73d735e6a62195d09142b85f362f6ddd5"
+  },
+  "retainedFailures": [
+    "Original actual npm archive omitted .gitignore; all four starters failed. Renamed canonical resource to .gitignore.tmpl, preserving installed target and bytes.",
+    "A BOM-prefixed existing ignore rule was wrongly duplicated; comparison now excludes only the initial BOM, retaining output bytes."
+  ],
+  "actualRuns": {
+    "path": "/private/tmp/game-studio-web-starter-runs-b9fmxacs/evidence-candidate.json",
+    "sha256": "130774eeffc3daa8dbfe0234bf634c4d71d7da573fff3bb784418e15f9940f2b"
+  },
+  "actualRunManifest": {
+    "path": "/private/tmp/game-studio-web-starter-runs-b9fmxacs/evidence-manifest.json",
+    "sha256": "339dea43b2b6f834278c08ebf8ced8f242c0a4bf55298233bbadb85abe5143b4"
+  },
+  "runtime": {
+    "node": "24.22.2",
+    "browser": {
+      "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "version": "157.0.8103.51"
+    }
+  },
+  "results": [
+    {
+      "starter": "none",
+      "scaffoldExit": 0,
+      "installAttempts": [
+        {
+          "mode": "offline",
+          "exit": 0,
+          "reason": null,
+          "log": "none-install-offline.log"
+        }
+      ],
+      "build": {
+        "exit": 0,
+        "log": "none-build.log",
+        "warning": null
+      },
+      "unit": {
+        "exit": 0,
+        "tests": 3,
+        "passed": 3,
+        "log": "none-unit.log"
+      },
+      "browser": {
+        "exit": 0,
+        "report": "none-browser-report.json",
+        "stats": {
+          "startTime": "2026-11-13T03:05:28.231Z",
+          "duration": 7441.266,
+          "expected": 2,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "tests": [
+          {
+            "title": "boots to the title screen with no errors @boot",
+            "outcome": "expected",
+            "results": [
+              {
+                "status": "passed",
+                "duration": 871,
+                "errors": []
+              }
+            ]
+          },
+          {
+            "title": "a scripted run moves the square, and the same seed repeats it exactly",
+            "outcome": "expected",
+            "results": [
+              {
+                "status": "passed",
+                "duration": 355,
+                "errors": []
+              }
+            ]
+          }
+        ],
+        "isolatedProfiles": [
+          "/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/playwright_chromiumdev_profile-WtnWzm"
+        ]
+      }
+    },
+    {
+      "starter": "three",
+      "scaffoldExit": 0,
+      "installAttempts": [
+        {
+          "mode": "offline",
+          "exit": 1,
+          "reason": "ENOTCACHED",
+          "log": "three-install-offline.log"
+        },
+        {
+          "mode": "normal npm ci",
+          "exit": 0,
+          "log": "three-install-online.log"
+        }
+      ],
+      "build": {
+        "exit": 0,
+        "log": "three-build.log",
+        "warning": "source bundle exceeds 500kB warning threshold"
+      },
+      "unit": {
+        "exit": 0,
+        "tests": 3,
+        "passed": 3,
+        "log": "three-unit.log"
+      },
+      "browser": {
+        "exit": 0,
+        "report": "three-browser-report.json",
+        "stats": {
+          "startTime": "2026-11-13T03:05:28.317Z",
+          "duration": 8558.267,
+          "expected": 2,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "tests": [
+          {
+            "title": "boots to the title screen with no errors @boot",
+            "outcome": "expected",
+            "results": [
+              {
+                "status": "passed",
+                "duration": 1231,
+                "errors": []
+              }
+            ]
+          },
+          {
+            "title": "a scripted run moves the square, and the same seed repeats it exactly",
+            "outcome": "expected",
+            "results": [
+              {
+                "status": "passed",
+                "duration": 1195,
+                "errors": []
+              }
+            ]
+          }
+        ],
+        "isolatedProfiles": [
+          "/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/playwright_chromiumdev_profile-3WdxJ9"
+        ]
+      }
+    },
+    {
+      "starter": "phaser",
+      "scaffoldExit": 0,
+      "installAttempts": [
+        {
+          "mode": "offline",
+          "exit": 1,
+          "reason": "ENOTCACHED",
+          "log": "phaser-install-offline.log"
+        },
+        {
+          "mode": "normal npm ci",
+          "exit": 0,
+          "log": "phaser-install-online.log"
+        }
+      ],
+      "build": {
+        "exit": 0,
+        "log": "phaser-build.log",
+        "warning": "source bundle exceeds 500kB warning threshold"
+      },
+      "unit": {
+        "exit": 0,
+        "tests": 3,
+        "passed": 3,
+        "log": "phaser-unit.log"
+      },
+      "browser": {
+        "exit": 0,
+        "report": "phaser-browser-report.json",
+        "stats": {
+          "startTime": "2026-11-13T03:06:01.201Z",
+          "duration": 1726.7,
+          "expected": 2,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "tests": [
+          {
+            "title": "boots to the title screen with no errors @boot",
+            "outcome": "expected",
+            "results": [
+              {
+                "status": "passed",
+                "duration": 446,
+                "errors": []
+              }
+            ]
+          },
+          {
+            "title": "a scripted run moves the square, and the same seed repeats it exactly",
+            "outcome": "expected",
+            "results": [
+              {
+                "status": "passed",
+                "duration": 406,
+                "errors": []
+              }
+            ]
+          }
+        ],
+        "isolatedProfiles": [
+          "/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/playwright_chromiumdev_profile-IilNb2"
+        ]
+      }
+    },
+    {
+      "starter": "pixi",
+      "scaffoldExit": 0,
+      "installAttempts": [
+        {
+          "mode": "offline",
+          "exit": 1,
+          "reason": "ENOTCACHED",
+          "log": "pixi-install-offline.log"
+        },
+        {
+          "mode": "normal npm ci",
+          "exit": 0,
+          "log": "pixi-install-online.log"
+        }
+      ],
+      "build": {
+        "exit": 0,
+        "log": "pixi-build.log",
+        "warning": null
+      },
+      "unit": {
+        "exit": 0,
+        "tests": 3,
+        "passed": 3,
+        "log": "pixi-unit.log"
+      },
+      "browser": {
+        "exit": 0,
+        "report": "pixi-browser-report.json",
+        "stats": {
+          "startTime": "2026-11-13T03:06:04.588Z",
+          "duration": 1313.205,
+          "expected": 2,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "tests": [
+          {
+            "title": "boots to the title screen with no errors @boot",
+            "outcome": "expected",
+            "results": [
+              {
+                "status": "passed",
+                "duration": 445,
+                "errors": []
+              }
+            ]
+          },
+          {
+            "title": "a scripted run moves the square, and the same seed repeats it exactly",
+            "outcome": "expected",
+            "results": [
+              {
+                "status": "passed",
+                "duration": 428,
+                "errors": []
+              }
+            ]
+          }
+        ],
+        "isolatedProfiles": [
+          "/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/playwright_chromiumdev_profile-JtMi2E"
+        ]
+      }
+    }
+  ],
+  "observations": "All four selected title/play frames were reviewed by the worker. Root independently viewed both original Pixi frames. The original missing-square assertion is contradicted by the original PNG, 1024 cyan pixels, expected position and direct root viewing. Text completeness/visual quality remains unassessed.",
+  "pixiCorrection": {
+    "path": "/private/tmp/game-studio-pixi-diagnosis-jiew6aiu/correction.json",
+    "sha256": "f1504aa4aab8635904c2c6fea76223c75893dc4e1def9ab06601c051702b8ae2"
+  },
+  "pixiTextBoundary": {
+    "path": "/private/tmp/game-studio-pixi-text-boundary-2026-11-13.json",
+    "sha256": "7b90c3e81c8fb349f533e9119f1e9e9f6fbb5c2bc8b2baff7e59fa2a8c369669"
+  },
+  "rootReconciliation": {
+    "originalArtifacts": 123,
+    "pixiDiagnosticArtifacts": 37,
+    "independentRepairArtifacts": 48,
+    "actions": "Rehashed manifests and every referenced frozen artifact; checked 17 copied canonical resources against their source mapping; checked all four original file snapshots and actual installed direct package versions. Original failure and correction bytes retained."
+  },
+  "installedCheck": "Actual clean global npm install and restored project runtime each dry-run/create all four starters (eight projects); verify .gitignore resource closure, manifest/lock bytes, title escaping, no install, unchanged project config, and second-run refusal.",
+  "limits": [
+    "No human play, audio/listening, full visual/text quality or physical-device acceptance.",
+    "Original offline cache misses and optional fsevents lifecycle warnings are retained. No auto-trust, lock regeneration or npm publication.",
+    "Full S051 Skill, references, roles, desktop and wider platform matrices remain open."
+  ]
+}

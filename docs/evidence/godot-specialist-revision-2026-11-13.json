@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "Minimal instruction correction for four recorded A017 native failures; same-input behavioral retries are in progress, not yet passed.",
+  "role": {
+    "path": ".codex/agents/game-studio-godot-specialist.toml",
+    "sha256": "cf01cf13ecc8640fc9aacc326d8781c63517954040d7f0da7c3d1bb32236120d"
+  },
+  "changes": [
+    "Branch on actual project engine rather than foreign terminology.",
+    "Apply existing write scope to validation scratch; use in-memory observations if no scratch destination is authorized.",
+    "Include conditional native-extension escalation and platform cost in CPU-heavy language selection without adopting it.",
+    "Name the matching language author and task even when implementation is blocked or the subrole is unavailable."
+  ],
+  "sourceMapping": {
+    "path": "/private/tmp/game-studio-a017-minimal-revision-mp40z2zw/source-mapping.md",
+    "sha256": "a432faecd1417f5ab1db9784fea1a326def53c980687dcf1f7ba0375cf37a1e6"
+  },
+  "independentReview": {
+    "path": "/private/tmp/game-studio-a017-revision-review-zz3ze556/review.md",
+    "sha256": "4faa3d4a5181a1a3bffff595930f833c4ef0c47c61f05640442af82402076de2"
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "node24Content": {
+      "tests": 38,
+      "pass": 38,
+      "fail": 0,
+      "skip": 0
+    },
+    "node26Content": {
+      "tests": 38,
+      "pass": 38,
+      "fail": 0,
+      "skip": 0
+    },
+    "actualPackage": "PASS: global/restored bytes and detach",
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-a017-revision-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      {
+        "path": "/private/tmp/game-studio-a017-revision-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      {
+        "path": "/private/tmp/game-studio-a017-revision-content.log",
+        "sha256": "9dfeaab1539d51d91f036d3bf3c6141e6736bf755e98858387b956849dfacaf1"
+      },
+      {
+        "path": "/private/tmp/game-studio-a017-revision-content-all24.log",
+        "sha256": "814413c80e462dadfc512829a47aa19473f1adbd56b42fdfa4ad2a503262a057"
+      },
+      {
+        "path": "/private/tmp/game-studio-a017-revision-content-all26.log",
+        "sha256": "3673478b36955c6261a02086d3ae734b292d059a456ef12b0933f89d8d7c88a7"
+      },
+      {
+        "path": "/private/tmp/game-studio-a017-revision-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      }
+    ]
+  },
+  "controlledRetry": {
+    "root": "/private/tmp/game-studio-a017-retry-a9e2hr9e",
+    "freeze": {
+      "path": "/private/tmp/game-studio-a017-retry-a9e2hr9e/freeze.json",
+      "sha256": "0aaf4fa5488a473b2abb2c57f87e5c8a1118452cd59b0234c1c137cd010c784d"
+    },
+    "rootVerifiedFiles": 1722,
+    "rootComparedArchiveMembers": 326,
+    "onlyChangedArchiveMember": "package/resources/.codex/agents/game-studio-godot-specialist.toml",
+    "fixturesHostAndReferences": "byte-identical to initial frozen run",
+    "subroles": "Original four unavailable Godot subroles remain absent; new A015 is deliberately excluded from the control runtime."
+  },
+  "limits": [
+    "Original four failures and two scoped passes remain recorded without alteration.",
+    "No special Jolt warning is added for an existing GodotPhysics3D project without a joint or migration. Conditional Jolt coverage remains pending.",
+    "Successful compilation of toolkit content is not proof of native reasoning, engine behavior or complete role acceptance."
+  ]
+}

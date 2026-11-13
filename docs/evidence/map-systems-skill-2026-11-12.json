@@ -1,0 +1,444 @@
+{
+  "date": "2026-11-12",
+  "status": "partial",
+  "scope": "Selected native map-systems behavior; not complete S030, all director outcomes or desktop acceptance",
+  "implementationCommits": [
+    "091f262",
+    "9d323cc",
+    "6592b9c"
+  ],
+  "correctionCommits": [
+    "c1a5ec4",
+    "2df3263"
+  ],
+  "environment": {
+    "codex": "0.162.0",
+    "node": "24.22.2",
+    "platform": "macOS ARM64"
+  },
+  "method": "Fresh packed install and Unicode workspace per scenario. Raw prompts contain synthetic project decisions, not expected verdicts. Native parent/child tool traces and actual artifacts manually reviewed; independent regular-file hashes, schemas, identities, dependency order, original input retention and checkpoint CLI readback checked. Wrapper exit 3 means pending semantic review, not automatic PASS.",
+  "syntheticProjectInputs": true,
+  "cases": [
+    {
+      "scenario": "new-solo",
+      "status": "PASS",
+      "scopeOfPass": "Four approved runtime owners; later milestones retained as extensions; exact schemas, counts and acyclic dependency order; all three gates explicitly skipped in solo; no GDD, stage change or risk acceptance.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-map-systems-EAncvj",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cfa6-50b9-7763-943d-cca0413a871a",
+      "parentTraceSha256": "5fab559801918edda217b5ee5497cff170613f820a8db822002ec497673bae5b",
+      "fixtureSha256": "7b7e1a09e7b9fa76f540071b90142dbe05ac69cf829417fd5949f06c7bc28bae",
+      "eventsSha256": "068f34199897a4047f4fc66b20dfa9976f1c35ea4eecf62933e895962a02c16d",
+      "finalSha256": "50c335b54e3a0a953baffb4a58b7a0bfd27b1a6e3a83193edd75096e59880ce9",
+      "beforeSha256": "d53a35ee6d7abd25a24bcc558ecc2b082050158d2a39e7a35252ad215334ee50",
+      "afterSha256": "a32695f018664b4ceb7bf0377af047b6a44adcbf3d9116cc3cd44710b477fb05",
+      "indexSha256": "aa6261e03ea43807b564a6a4a37a6879905ddb5b7a40e8aa9f3c68b8868ce937",
+      "packageIntegrity": "sha512-zkMI955XGCjpq5lv4xIA0gxdLnpMh+figI0fWh4cZWTcUcrVRaI1WvBwpV8tNvioC2HuLV6ZjWn5xYwiYWSf4g==",
+      "preservedRegularFiles": 427,
+      "changed": [],
+      "added": [
+        "production/session-state/active.md",
+        "production/session-logs/events/d45a6d08140712d7480dc2ae534e3337ab12e80e1179e9e74a0d4f2b50ea979b.json",
+        "design/gdd/systems-index.md",
+        ".game-studio/backups/4397688c-bb55-4899-8e8f-0b6065d0e2de.json"
+      ],
+      "outsideScope": [],
+      "checkpointIdentityFieldsMatchObservedValues": true,
+      "nativeRoleCount": 0,
+      "resourceVariant": "original-gate-wording",
+      "recoveryVariant": "exact-identity-fields"
+    },
+    {
+      "scenario": "resume",
+      "status": "PASS",
+      "scopeOfPass": "Only the authorized Sound Cues row is added. Existing four rows are identical, existing GDDs unchanged, owner notes retained, checkpoint text outside its owned markers is byte-identical, ongoing Validation work and unresolved invalid-seal wording retained.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-map-systems-dR2tNY",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cfa0-ee6c-7fc1-99c9-6ca41a7b7ad4",
+      "parentTraceSha256": "df8065f79cb56f7df90de9a123379edcd85bd3b038639bdc8e15c547f566ca09",
+      "fixtureSha256": "c8006b7775784e94b3c6b20494148f593f3666a7bbe55e0febb9f8d0c0c4b4a3",
+      "eventsSha256": "7e574782f92c7841ab363204f344b900b1e18c22c34cc3643b4bf3e6de7e2707",
+      "finalSha256": "f4edec958212626a72be926010c23cf18e259f51fe14669b02f868ffd8c3bb19",
+      "beforeSha256": "b3c11e73e6c8230ad356a8b574c4ab523318e43234ee39b3ebd2e60c7132318c",
+      "afterSha256": "313bbd8e152ac85551858e9e14c8d1ad1ecabc53ebb03cefbf8f2e263a17b584",
+      "indexSha256": "1fe140b8c8fe59bcdaa6a50a841aa8469ccc3bf9d63554c7e7b38a39187fd069",
+      "packageIntegrity": "sha512-V+Tzt29aX9l0tiRNKqsvGgIbbO4engmCiYiLg4AZk6/WD4QBkrytUmrT67tQCgQclhlYd+s4DxNydOC2YoDjfQ==",
+      "preservedRegularFiles": 429,
+      "changed": [
+        "production/session-state/active.md",
+        "design/gdd/systems-index.md"
+      ],
+      "added": [
+        "production/session-logs/events/c418134ab9c7aecf2b2a32c42aa3ff03e7bad12b8e3cb91ddbc58afe4923c619.json",
+        ".game-studio/backups/edc166e6-fbd3-4fa4-8596-ec9816a9ba66.json"
+      ],
+      "outsideScope": [],
+      "checkpointIdentityFieldsMatchObservedValues": true,
+      "nativeRoleCount": 0,
+      "resourceVariant": "original-gate-wording",
+      "recoveryVariant": "original"
+    },
+    {
+      "scenario": "missing",
+      "status": "PASS",
+      "scopeOfPass": "Neither concept nor brief exists. Native Skill requests the source and recommends brainstorm without enumeration, director calls or writes.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-map-systems-hVo2fB",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cfa0-f2c5-7632-a2de-ea677e7c3df7",
+      "parentTraceSha256": "e6d4adddcbeb46b1f1821b4ad301e9c2adc75868840e91f4fa72d46fddb80b41",
+      "fixtureSha256": "f8b6ac208dbf3235bce4ee447e09091b6d606d0d6797123575e9daa867265598",
+      "eventsSha256": "b5e64af3eda29ebf41583f1484c6807b9e2b7a417cabe09a912af16593414e38",
+      "finalSha256": "78c70c84b3a6d6002d368f4aceecbf31b0c530d881a4bd5787b6cc891c23b4bf",
+      "beforeSha256": "234f5221b152a410ce60bfcc0535fa8e275a581ffe8158e22d29202c1132f193",
+      "afterSha256": "234f5221b152a410ce60bfcc0535fa8e275a581ffe8158e22d29202c1132f193",
+      "indexSha256": null,
+      "packageIntegrity": "sha512-V+Tzt29aX9l0tiRNKqsvGgIbbO4engmCiYiLg4AZk6/WD4QBkrytUmrT67tQCgQclhlYd+s4DxNydOC2YoDjfQ==",
+      "preservedRegularFiles": 426,
+      "changed": [],
+      "added": [],
+      "outsideScope": [],
+      "checkpointIdentityFieldsMatchObservedValues": null,
+      "nativeRoleCount": 0,
+      "resourceVariant": "original-gate-wording",
+      "recoveryVariant": "original"
+    },
+    {
+      "scenario": "next",
+      "status": "PASS",
+      "scopeOfPass": "Read-only selection resumes Validation, already In Design; identifies approved Content prerequisite, existing draft and unresolved invalid-seal wording; no remap or fake unavailable design-system invocation.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-map-systems-fWou5R",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cfa4-9d4d-70e0-bb41-4b0a359554a1",
+      "parentTraceSha256": "f3f33940edb3f131998246cf9997e9978e4c47f580c5d98d3c510ef4b482d4c3",
+      "fixtureSha256": "53e6c9e12d5c2156346c4dd0c0c925da135611619db1cdafe548e756234c1d96",
+      "eventsSha256": "4bf369b5137e46bd542d1d3852faeb74102a6cbff73cb087c161bafbfc0893ad",
+      "finalSha256": "3aa33d246eae21c3ccc3b8debb7ec1f2ede0c3c1d9b849700543575260098e87",
+      "beforeSha256": "3ffc87c8f081081f124b575676bdf6ba39bf1a32a04b3bfa88823c900093a081",
+      "afterSha256": "3ffc87c8f081081f124b575676bdf6ba39bf1a32a04b3bfa88823c900093a081",
+      "indexSha256": "8d0cc8f5f61ca5a004a1753d2b580e270d45d9a29965df0ec7b47a5c5e35cdb4",
+      "packageIntegrity": "sha512-V+Tzt29aX9l0tiRNKqsvGgIbbO4engmCiYiLg4AZk6/WD4QBkrytUmrT67tQCgQclhlYd+s4DxNydOC2YoDjfQ==",
+      "preservedRegularFiles": 430,
+      "changed": [],
+      "added": [],
+      "outsideScope": [],
+      "checkpointIdentityFieldsMatchObservedValues": null,
+      "nativeRoleCount": 0,
+      "resourceVariant": "original-gate-wording",
+      "recoveryVariant": "original"
+    },
+    {
+      "scenario": "minimal",
+      "status": "PASS",
+      "scopeOfPass": "Voluntary map preserves the brief and minimal workflow; four direct responsibilities, exact schemas, no full concept/formal pillars invented, all lean gate skips explicit.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-map-systems-cnlA5r",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cfaa-5fec-7950-bf4b-7af037d85f76",
+      "parentTraceSha256": "a73217c6743c1a64e59534c5a794f3e0552ae412d276caaee77fd59b158f7e8f",
+      "fixtureSha256": "5b80a1b005043772ef05fa1b58a7446eb9bed8a79171e180553c7b95df0eb7b0",
+      "eventsSha256": "95042e573412b63dfb63c26b6385d7d259ad1024f18765a142b7d23a1a52641d",
+      "finalSha256": "75dca823e021636595055d01b6771b96b5c263fababfa27a51bb4c387d7d94bf",
+      "beforeSha256": "0e09296d5546cf79ae2d0537d8822839feb52faecddd983bde27738cf1cca98d",
+      "afterSha256": "70afa52f7fbc8546bfa3a6e9e9da0b07ab7863c70efeedeac64449651cdf1634",
+      "indexSha256": "42bd39c5747decb2891e93e7d36e09e489a95fbcce14966faac1713bb0fd0735",
+      "packageIntegrity": "sha512-zkMI955XGCjpq5lv4xIA0gxdLnpMh+figI0fWh4cZWTcUcrVRaI1WvBwpV8tNvioC2HuLV6ZjWn5xYwiYWSf4g==",
+      "preservedRegularFiles": 427,
+      "changed": [],
+      "added": [
+        "production/session-state/active.md",
+        "production/session-logs/events/67b9315636d85f78f004d3a5fbb5af77a83b5f0dea1f6ccd149a4f406eaa958a.json",
+        "design/gdd/systems-index.md",
+        ".game-studio/backups/f45f5dd3-66e1-4bc7-a946-631baa76dc1d.json"
+      ],
+      "outsideScope": [],
+      "checkpointIdentityFieldsMatchObservedValues": true,
+      "nativeRoleCount": 0,
+      "resourceVariant": "original-gate-wording",
+      "recoveryVariant": "exact-identity-fields"
+    },
+    {
+      "scenario": "full-review",
+      "status": "PASS",
+      "scopeOfPass": "Three actual native director roles run sequentially. The Creative Director reads the written index. Seven planning entries distinguish four runtime owners from three agreed extensions. Actual APPROVE/REALISTIC/APPROVE results retain unknown implementation/player evidence and unaccepted advisory cuts without scope or risk-acceptance changes.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-map-systems-ndLNyQ",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cfb3-89bf-7021-a7a9-891181ff04dd",
+      "parentTraceSha256": "8bcc9115a2d5a2c6d1e62cb28c578a4a575302a4f0c7a71cc58a7f3c142689b4",
+      "fixtureSha256": "d4ba886293de6b42d249a8925df7d5fbfc7a3e7ee2a4d907b639d9affc5c8416",
+      "eventsSha256": "85dc7c0479c738f0cc9a529d2348f0b486cc5b6079ae23d1758fd0a749902754",
+      "finalSha256": "c405f93981bc6755a9c55b11e8a8a08aeaa4b65a56146ca6fb77069924d14931",
+      "beforeSha256": "da7cec9edaae8f5a9677100d51b00d8a79417652a8698fc21aebd9a901c7f7f4",
+      "afterSha256": "a7c27a4040c50e4ba67b2c86c669c944cadceacc75d21609a12b56dbcde2da7c",
+      "indexSha256": "a518920dec9af0260b6317e7d9e7958578c99722146900e2906996eb382549fe",
+      "packageIntegrity": "sha512-AQMr5Iam+tDB2JHqFjyk4+OXSZnzVnGUH/XYV7I44rXgWn194gsiM8OLLb1s/smAyPw6opvot8C4oOCrIj/xpw==",
+      "preservedRegularFiles": 427,
+      "changed": [],
+      "added": [
+        "production/session-state/active.md",
+        "production/session-logs/events/e0d9e1258651d850787744d24a65266c91ae4aa8c85bb60f65157ed656c02dba.json",
+        "design/gdd/systems-index.md",
+        ".game-studio/backups/8afb29cd-19e4-42c3-b1a8-bf39bf055d43.json"
+      ],
+      "outsideScope": [],
+      "checkpointIdentityFieldsMatchObservedValues": true,
+      "nativeRoleCount": 3,
+      "resourceVariant": "corrected-gate-path",
+      "recoveryVariant": "exact-identity-fields"
+    },
+    {
+      "scenario": "solo-override",
+      "status": "PASS",
+      "scopeOfPass": "Stored full mode remains byte-identical. Current-run solo skips all three gates explicitly; five rows retain approved boundaries and later milestones; no actual director invocation.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-map-systems-5AdNLT",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cfa7-e7d1-7670-b2fb-d87b7011339e",
+      "parentTraceSha256": "38dda921beaed3d6664dd1fc3a5136bbc20ccb4709ee063f1d049741c9169182",
+      "fixtureSha256": "5397d5d8cf0b4eab7a85f7c5fcc1e5aa09f4c38dd6601426e1c0974359c04016",
+      "eventsSha256": "1b7277f7197adcae7a24464bf65fa049267c2bc37a33c1fc699812c94abcf9e9",
+      "finalSha256": "c1a3f5a11574660ebb2a0985b3359d85636253be2690045c9690d8a2b47e65ef",
+      "beforeSha256": "177158bb68354af4e39e7982380391e5d095b224f44aa218489e52a92e8c04ea",
+      "afterSha256": "89b6a6394f7d1eef6ce803ee52704e661486305882e40c3cd405583fa1fb16e9",
+      "indexSha256": "216b31cb2d003a878b66303ce68330003ba2fd86eb325be263b1b609fbf0c32c",
+      "packageIntegrity": "sha512-zkMI955XGCjpq5lv4xIA0gxdLnpMh+figI0fWh4cZWTcUcrVRaI1WvBwpV8tNvioC2HuLV6ZjWn5xYwiYWSf4g==",
+      "preservedRegularFiles": 427,
+      "changed": [],
+      "added": [
+        "production/session-state/active.md",
+        "production/session-logs/events/7eab74e5c6fc0bc37638b1347117f5c271f686ab2933a8beef2945a9243c2fd3.json",
+        "design/gdd/systems-index.md",
+        ".game-studio/backups/ec1d667d-ca06-4caf-ac71-63ac4260a9d8.json"
+      ],
+      "outsideScope": [],
+      "checkpointIdentityFieldsMatchObservedValues": true,
+      "nativeRoleCount": 0,
+      "resourceVariant": "original-gate-wording",
+      "recoveryVariant": "exact-identity-fields"
+    },
+    {
+      "scenario": "negative",
+      "status": "PASS",
+      "scopeOfPass": "Ordinary score subtraction explanation does not load the mapping Skill, invoke directors, write files or begin planning.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-map-systems-tOQ0DH",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cfa8-d3f0-7a70-8d3f-00d652812908",
+      "parentTraceSha256": "084da4eed0a05b1a978eee377cd0ee2ce90cc133e64974a05d2ecfbe4b37f61b",
+      "fixtureSha256": "36a97e9e0d1436b22d0ea3d8c8a117ae64f8a905ce9c909dbdce892403d28de7",
+      "eventsSha256": "2f613dfc0c6c8d7921492063e68934d3fbff1cd7f087b589ed1da0ce36264607",
+      "finalSha256": "960483aca56f2efe15d16826f075ccc3fed44056adb6db77c573a67bef97ce2b",
+      "beforeSha256": "ce5023763c8b49bb2c83823d7a6e9ace5435dc9f18f7ee5197a4bd9a261f9d44",
+      "afterSha256": "ce5023763c8b49bb2c83823d7a6e9ace5435dc9f18f7ee5197a4bd9a261f9d44",
+      "indexSha256": null,
+      "packageIntegrity": "sha512-zkMI955XGCjpq5lv4xIA0gxdLnpMh+figI0fWh4cZWTcUcrVRaI1WvBwpV8tNvioC2HuLV6ZjWn5xYwiYWSf4g==",
+      "preservedRegularFiles": 427,
+      "changed": [],
+      "added": [],
+      "outsideScope": [],
+      "checkpointIdentityFieldsMatchObservedValues": null,
+      "nativeRoleCount": 0,
+      "resourceVariant": "original-gate-wording",
+      "recoveryVariant": "exact-identity-fields"
+    }
+  ],
+  "fullReview": {
+    "children": [
+      {
+        "role": "game-studio-technical-director",
+        "threadId": "01a1cfb4-aa9e-7b02-80a7-e097f151469d",
+        "traceSha256": "30c93a8bcbee54ec0b4b0a5308d3c3c0892bc6b4b1859ae5342b2d2256027729",
+        "contextInherited": true,
+        "gateRead": "studio/docs/director-gates/td-system-boundary.md",
+        "verdict": "TD-SYSTEM-BOUNDARY: APPROVE",
+        "verdictTime": "2026-11-12T12:21:54.564Z",
+        "nonexistentRoleResourceRequested": false
+      },
+      {
+        "role": "game-studio-producer",
+        "threadId": "01a1cfb5-6c91-7321-b913-527148a8fd3e",
+        "traceSha256": "1d3916d99930622729a13d3810d2dcc2bc09bd8996a27eaf8cf54df082c846b7",
+        "contextInherited": true,
+        "gateRead": "studio/docs/director-gates/pr-scope.md",
+        "verdict": "PR-SCOPE: REALISTIC",
+        "verdictTime": "2026-11-12T12:22:51.018Z",
+        "nonexistentRoleResourceRequested": false
+      },
+      {
+        "role": "game-studio-creative-director",
+        "threadId": "01a1cfb7-480a-7102-8780-502b6040d172",
+        "traceSha256": "6be5b9efd4d0a47b6ce085f828826f3459e15de33392c08ff8ae27bb9dc5c33e",
+        "contextInherited": true,
+        "gateRead": "studio/docs/director-gates/cd-systems.md",
+        "verdict": "CD-SYSTEMS: APPROVE",
+        "verdictTime": "2026-11-12T12:24:51.458Z",
+        "nonexistentRoleResourceRequested": false
+      }
+    ],
+    "phaseOrder": [
+      {
+        "event": "TD spawn",
+        "time": "2026-11-12T12:21:26.259Z"
+      },
+      {
+        "event": "TD APPROVE",
+        "time": "2026-11-12T12:21:54.564Z"
+      },
+      {
+        "event": "Producer spawn",
+        "time": "2026-11-12T12:22:15.914Z"
+      },
+      {
+        "event": "Producer REALISTIC",
+        "time": "2026-11-12T12:22:51.018Z"
+      },
+      {
+        "event": "Index written",
+        "time": "2026-11-12T12:24:05.592Z"
+      },
+      {
+        "event": "CD spawn",
+        "time": "2026-11-12T12:24:17.643Z"
+      },
+      {
+        "event": "CD APPROVE after reading index",
+        "time": "2026-11-12T12:24:51.458Z"
+      }
+    ],
+    "roleWrites": "No child file mutation; coordinator owns index and final checkpoint."
+  },
+  "initialAttempts": [
+    {
+      "scenario": "new-solo",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-map-systems-0NTsRO",
+      "parentThreadId": "01a1cfa0-f133-7401-90eb-491697a70314",
+      "parentTraceSha256": "00b77bfd005dc39888162d14e392332afa5160bf16587e1a2dd3847d986e067a",
+      "fixtureSha256": "af04a7692bffd63052ab80c5384795f33ca7a56ba6a69679ec2104693440c761",
+      "eventsSha256": "1480c909b0e75ac24e9c4fa5b68b61be60944433eb84fcbfe440aef10dd75f53",
+      "packageIntegrity": "sha512-V+Tzt29aX9l0tiRNKqsvGgIbbO4engmCiYiLg4AZk6/WD4QBkrytUmrT67tQCgQclhlYd+s4DxNydOC2YoDjfQ==",
+      "nativeExitCode": 0,
+      "outsideScope": [],
+      "checkpointIdentityFieldsMatchObservedValues": false,
+      "findings": [
+        "Branch and Stage annotations did not match exact observed values; CLI falsely reported a branch mismatch. Recovery guidance corrected in c1a5ec4, then identical-input fresh runs and CLI readback passed."
+      ]
+    },
+    {
+      "scenario": "minimal",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-map-systems-yhMohA",
+      "parentThreadId": "01a1cfa4-91cd-7891-9aa7-4c6ab7855d03",
+      "parentTraceSha256": "4c25fb624ab012f31206ff8fbca83d125b2954d85fab929375a47a506066fcc4",
+      "fixtureSha256": "8970144f13d7e66e218a839e16aed97300f29ebee6021f1f3bcd4da9bfdf49d5",
+      "eventsSha256": "beac0657ce5365ec05d5c6bdae5bdc177df11d5fba35d495fa7f7ee579db5d16",
+      "packageIntegrity": "sha512-V+Tzt29aX9l0tiRNKqsvGgIbbO4engmCiYiLg4AZk6/WD4QBkrytUmrT67tQCgQclhlYd+s4DxNydOC2YoDjfQ==",
+      "nativeExitCode": 0,
+      "outsideScope": [],
+      "checkpointIdentityFieldsMatchObservedValues": false,
+      "findings": [
+        "Branch and Stage annotations did not match exact observed values; CLI falsely reported a branch mismatch. Recovery guidance corrected in c1a5ec4, then identical-input fresh runs and CLI readback passed."
+      ]
+    },
+    {
+      "scenario": "full-review",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-map-systems-KO8q3M",
+      "parentThreadId": "01a1cfa2-5cf3-7440-8848-5f49b2e3cd85",
+      "parentTraceSha256": "e5ec3e4fd3b51b48727a3c0e59997a36c185362628c4ff5d528bda4e27c75afd",
+      "fixtureSha256": "2c7e4d2d9df426bf35b20560e41599ba46ab22f23f7903acb7567af7245d23a3",
+      "eventsSha256": "a92747ab1f62cdc21237042b26508c2b1eac44a85d071566d68d0a9aa1feb895",
+      "packageIntegrity": "sha512-V+Tzt29aX9l0tiRNKqsvGgIbbO4engmCiYiLg4AZk6/WD4QBkrytUmrT67tQCgQclhlYd+s4DxNydOC2YoDjfQ==",
+      "nativeExitCode": 0,
+      "outsideScope": [],
+      "checkpointIdentityFieldsMatchObservedValues": false,
+      "findings": [
+        "Branch and Stage annotations did not match exact observed values; CLI falsely reported a branch mismatch. Recovery guidance corrected in c1a5ec4, then identical-input fresh runs and CLI readback passed.",
+        "Ambiguous packaged-definition wording caused a nonexistent role-document lookup. The coordinator recovered in-run by reading the actual TOML and gate, and TD changed NOT ASSESSED to APPROVE. Wording corrected in 2df3263; fresh full-review run used exact gate resources without this lookup."
+      ]
+    },
+    {
+      "scenario": "full-review",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-map-systems-8u1UT6",
+      "parentThreadId": "01a1cfaa-5f07-7092-83a7-101d7634cbed",
+      "parentTraceSha256": "a3ba051a98a310e7d09dff2f6e4321f28b88e44598fe1dcb408c27a2fb46ef51",
+      "fixtureSha256": "30e023d39d466cb8a16bb116fd5119bf42c0efc746672e2c90118c04ac97273f",
+      "eventsSha256": "f95ca4d8d7be70c3525f392196cb0326d93ae384b94cdaa933f9e7b5358dacfc",
+      "packageIntegrity": "sha512-zkMI955XGCjpq5lv4xIA0gxdLnpMh+figI0fWh4cZWTcUcrVRaI1WvBwpV8tNvioC2HuLV6ZjWn5xYwiYWSf4g==",
+      "nativeExitCode": 0,
+      "outsideScope": [],
+      "checkpointIdentityFieldsMatchObservedValues": true,
+      "findings": [
+        "Ambiguous packaged-definition wording caused a nonexistent role-document lookup. The coordinator recovered in-run by reading the actual TOML and gate, and TD changed NOT ASSESSED to APPROVE. Wording corrected in 2df3263; fresh full-review run used exact gate resources without this lookup."
+      ]
+    }
+  ],
+  "installedResourceHashes": {
+    ".agents/skills/game-studio-map-systems/SKILL.md": "109323235a6cbfb51d5b440ef3f34cd07090106499330ab606dc52478e98c67b",
+    ".agents/skills/game-studio-map-systems/references/reviews.md": "ff5700332b53c0d1e028e1b4f3801c0aa7ad390f5f53f11088aff7c2f1301c3e",
+    ".agents/skills/game-studio-map-systems/references/index-and-handoff.md": "12dd6b381b5102eb5fd7dd9173f5649073b0f3666c1351bda26d2468e9f15586",
+    ".codex/agents/game-studio-technical-director.toml": "0355ec5539b8fa9ba463be612c94e1dcd985874b98cc5bb8c1f0316c3fd6e6bd",
+    ".codex/agents/game-studio-producer.toml": "bd05d4e2a1489c7a50898252d559e4c21bd66d476fe5ec82d3d9e761eb669ff6",
+    ".codex/agents/game-studio-creative-director.toml": "6c8f2bbc9c3214223c3a76973e64341752cbf1e2dec9cb595271d3a2b91aeb40",
+    "studio/templates/systems-index.md": "7573e73225f52cfcad45b3a96ff7a04bda47d31179738d4d44c7d19eee488d5d",
+    "studio/docs/integration.md": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+    "studio/docs/recovery.md": "95795ad772c8d05b2ffd8357b388e55b62dacaf0fc93f411833c4fa66822475b",
+    "studio/docs/director-gates/td-system-boundary.md": "4b6cead9059b62c77b2fbb3b78ca8db1228418253ec96f5bb2e3c18afc7c3ee5",
+    "studio/docs/director-gates/pr-scope.md": "94ad64f8bf7fbc410e99c40f10943505b078441ee323ce8e9137429dc63b0abb",
+    "studio/docs/director-gates/cd-systems.md": "2cc8b0e06c541b5a736b8dbfa1d0ee49bfa4e9b5c5b281feee2ec8736d4b5626"
+  },
+  "olderResourceHashes": {
+    "reviews.md": "0c6c322740169236e8bbcfb7b2027755243ee3278e158090c681db4481a92d76",
+    "recovery.md": "81328206a54e0ffa576d4be73b7a8c28d490703107cf76ee16a14ed75c1d1f3a"
+  },
+  "checkpointVerification": {
+    "writeScenarios": 5,
+    "perScenario": "Exactly one immutable checkpoint.saved event and one transaction backup; event previous/current hashes match snapshots, backup paths and before/after bytes match the active checkpoint and event. No leftover draft.",
+    "readback": "Fresh corrected write cases have exact Branch/Stage values; resume validly omits them. Original three annotated checkpoints remain failing controls. Latest full run executes assertions in the harness; earlier runs checked independently afterward.",
+    "scopeLimit": "Conflict, interruption and concurrent modification behavior were not exercised in these mapping scenarios."
+  },
+  "localValidation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "regressionTests": {
+      "passed": 184,
+      "failed": 0,
+      "skipped": 0
+    },
+    "contentValidation": "PASS, 8 partial Skills and 9 partial roles at map-systems slice",
+    "packedInstall": "PASS after both guidance corrections",
+    "syntax": "PASS for mapping fixture runner",
+    "independentChecks": "All twelve retained runs checked for original input preservation and schema/order. Eight latest scenarios have reviewed scoped PASS; four prior attempts retained separately.",
+    "logs": {
+      "build": {
+        "path": "/private/tmp/game-studio-map-final-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      "typecheck": {
+        "path": "/private/tmp/game-studio-map-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      "regression": {
+        "path": "/private/tmp/game-studio-map-regression.log",
+        "sha256": "a9bb4649cc95934e4a0a342f4b6eb0e95f18aed5e061c92d7d732c03abea4c77"
+      },
+      "pack": {
+        "path": "/private/tmp/game-studio-map-final-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      },
+      "independent": {
+        "path": "/private/tmp/game-studio-map-independent-checks.log",
+        "sha256": "177702c67a4c0b7ac919d1ec1a985dd95c4b33d057bf9f238d5a63426437a0a3"
+      }
+    }
+  },
+  "limitations": [
+    "Seven non-full latest cases used the earlier review wording; the exact-path correction was verified in a fresh full-review case, not retroactively attributed to other packages.",
+    "Host regular-file snapshots exclude .git and symlinks. Native summaries used different enumeration scopes (44, 429 or 445 files); evidence uses independent 426-430 counts and unchanged hashes.",
+    "Read-only success shows observed restraint, not an adversarial sandbox-denial test.",
+    "Mapping may express approved later milestones as extensions or separate planning rows; neither means new runtime ownership or completed system designs.",
+    "Missing roles, adverse review outcomes, accepted creative concerns, interactive collaborative/autonomous decisions, density variants, cyclic mappings, ambiguous/all-complete routing and recovery conflicts remain open.",
+    "Desktop, broader host/platform coverage and the complete source/Codex matrices remain open. No real player acceptance, native engine behavior, stable release or complete migration is claimed."
+  ]
+}

@@ -1,0 +1,1347 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A040 inventory and same-session bounce implementation under Godot4.7.2; original failures retained",
+  "candidateSources": [
+    {
+      "path": "/private/tmp/ui-role-initial-audit-23plzown/candidate.json",
+      "sha256": "512934cb7f111617f21ceb4107abc978e57527a47fe230d0c46eca934551dbac"
+    },
+    {
+      "path": "/private/tmp/ui-inventory-observation-candidate.json",
+      "sha256": "a2d3ef932f7f365bb3f221a5f6e30c4c7960883d31d9d8a5310d8e3a78dbb92d"
+    },
+    {
+      "path": "/private/tmp/ui-bounce-native-candidate.json",
+      "sha256": "c86e0d6da72a0550be7aef30e6911ee44c66fb5295b4688356159b9bf6b4880c"
+    }
+  ],
+  "review": {
+    "nativeFullTraceAndImages": "design_system_migration",
+    "root": "Independently rehashed raw evidence, frozen/current regular files and current symlinks, retained parent/child trace prefixes and appended frozen traces. Read actual final/import log and inspected inventory initial image. Detailed full-image and Tween semantic audit remains attributed to the delegated maintainer.",
+    "frozenSymlinks": "The host freezes regular files only. Original/current symlink snapshots agree; symlink preservation is not claimed from nonexistent frozen links."
+  },
+  "rootVerification": [
+    {
+      "chain": "inventory to independent observation",
+      "frozenRegularFiles": 607,
+      "currentRegularFiles": 617,
+      "beforeAfterLink": "PASS"
+    },
+    {
+      "chain": "question to same-session implementation to observation",
+      "frozenQuestionRegularFiles": 564,
+      "frozenImplementationRegularFiles": 643,
+      "currentRegularFiles": 654,
+      "beforeAfterLinks": "PASS"
+    }
+  ],
+  "initialRoleAudit": [
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-aWMnU6",
+      "allAfterHashesVerified": 607,
+      "originalFilesPreserved": 564,
+      "traces": [
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-58-36-01a1d0b2-6b10-78a1-8d0d-24335f5c1cb8.jsonl",
+          "frozen": "/private/tmp/ui-role-initial-audit-23plzown/aWMnU6/rollout-2026-11-13T00-58-36-01a1d0b2-6b10-78a1-8d0d-24335f5c1cb8.jsonl",
+          "sha256": "3294e8111a694cea3973d86c61c4b22417a88a16fb7f085e954f9a668f8f0272",
+          "bytes": 950969,
+          "role": "game-studio-ui-programmer",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "calls": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "send_message",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec"
+          ]
+        },
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T00-58-23-01a1d0b2-3864-7392-a635-ec6d930f4a90.jsonl",
+          "frozen": "/private/tmp/ui-role-initial-audit-23plzown/aWMnU6/rollout-2026-11-13T00-58-23-01a1d0b2-3864-7392-a635-ec6d930f4a90.jsonl",
+          "sha256": "d017344fcf5876766b03b4f676e3b28e55d9e14dfc325921066d90b4e733592e",
+          "bytes": 336824,
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "calls": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-3PWe8A",
+      "allAfterHashesVerified": 564,
+      "originalFilesPreserved": 564,
+      "traces": [
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-04-12-01a1d0b7-8ea0-70a1-8caf-d1429d3b6052.jsonl",
+          "frozen": "/private/tmp/ui-role-initial-audit-23plzown/3PWe8A/rollout-2026-11-13T01-04-12-01a1d0b7-8ea0-70a1-8caf-d1429d3b6052.jsonl",
+          "sha256": "ba67ce00337aee7e76de741027878630960aeb8db6365a7e3e8102e83a96a3b0",
+          "bytes": 238556,
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "calls": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        {
+          "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-04-23-01a1d0b7-b76f-7a71-be50-75de97b93d10.jsonl",
+          "frozen": "/private/tmp/ui-role-initial-audit-23plzown/3PWe8A/rollout-2026-11-13T01-04-23-01a1d0b7-b76f-7a71-be50-75de97b93d10.jsonl",
+          "sha256": "85298bb660511d148022f45de61e9fe357cf622244a474695fba25e4887fe6b1",
+          "bytes": 405123,
+          "role": "game-studio-ui-programmer",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "network_access": false,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "calls": [
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        }
+      ],
+      "status": "PASS_question_phase_only"
+    }
+  ],
+  "inventoryObservation": {
+    "sourceRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-aWMnU6",
+    "observationRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-observation-kDJH2M",
+    "engine": {
+      "build": "official",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (official)",
+      "timestamp": 0
+    },
+    "display": "macOS",
+    "status": "FAIL",
+    "reason": "Gamepad accept produces no selection command; the missing configured binding is preserved rather than hardcoded or silently changed.",
+    "rendering": "PASS_selected_screen_and_five_states",
+    "observations": [
+      {
+        "interaction": "initial",
+        "commands": [],
+        "focus": [
+          "Slot0"
+        ],
+        "details": [
+          ""
+        ],
+        "screenshot": "res://production/qa/evidence/observer-4ebe254c-529f-4e5f-b3a4-033ef9ae7ce0/initial.png",
+        "capture_error": 0
+      },
+      {
+        "interaction": "pointer-over-first-slot",
+        "commands": [],
+        "focus": [
+          "Slot0"
+        ],
+        "details": [
+          ""
+        ],
+        "screenshot": "res://production/qa/evidence/observer-4ebe254c-529f-4e5f-b3a4-033ef9ae7ce0/pointer-over-first-slot.png",
+        "capture_error": 0
+      },
+      {
+        "interaction": "first-slot-mouse-activation",
+        "commands": [
+          0
+        ],
+        "focus": [
+          "Slot0"
+        ],
+        "details": [
+          "Potion x2"
+        ],
+        "screenshot": "res://production/qa/evidence/observer-4ebe254c-529f-4e5f-b3a4-033ef9ae7ce0/first-slot-mouse-activation.png",
+        "capture_error": 0
+      },
+      {
+        "interaction": "game-side-quantity-change",
+        "commands": [
+          0
+        ],
+        "focus": [
+          "Slot0"
+        ],
+        "details": [
+          "Potion x7"
+        ],
+        "screenshot": "res://production/qa/evidence/observer-4ebe254c-529f-4e5f-b3a4-033ef9ae7ce0/game-side-quantity-change.png",
+        "capture_error": 0
+      },
+      {
+        "interaction": "keyboard-right-and-accept",
+        "commands": [
+          0,
+          1
+        ],
+        "focus": [
+          "Slot1"
+        ],
+        "details": [
+          "Key x1"
+        ],
+        "screenshot": "res://production/qa/evidence/observer-4ebe254c-529f-4e5f-b3a4-033ef9ae7ce0/keyboard-right-and-accept.png",
+        "capture_error": 0
+      },
+      {
+        "interaction": "before-gamepad-navigation",
+        "commands": null,
+        "focus": [
+          "Slot0"
+        ],
+        "details": [
+          "Key x1"
+        ],
+        "screenshot": null,
+        "capture_error": null
+      },
+      {
+        "interaction": "gamepad-right-focus-before-confirm",
+        "commands": [
+          0,
+          1
+        ],
+        "focus": [
+          "Slot1"
+        ],
+        "details": [
+          "Key x1"
+        ],
+        "screenshot": "res://production/qa/evidence/observer-4ebe254c-529f-4e5f-b3a4-033ef9ae7ce0/gamepad-right-focus-before-confirm.png",
+        "capture_error": 0
+      },
+      {
+        "interaction": "gamepad-accept",
+        "commands": [
+          0,
+          1
+        ],
+        "focus": [
+          "Slot1"
+        ],
+        "details": [
+          "Key x1"
+        ],
+        "screenshot": "res://production/qa/evidence/observer-4ebe254c-529f-4e5f-b3a4-033ef9ae7ce0/gamepad-accept.png",
+        "capture_error": 0
+      },
+      {
+        "interaction": "empty-slot-activation",
+        "commands": [
+          0,
+          1,
+          2
+        ],
+        "focus": [
+          "Slot2"
+        ],
+        "details": [
+          ""
+        ],
+        "screenshot": "res://production/qa/evidence/observer-4ebe254c-529f-4e5f-b3a4-033ef9ae7ce0/empty-slot-activation.png",
+        "capture_error": 0
+      },
+      {
+        "interaction": "locked-slot-click",
+        "commands": [
+          0,
+          1,
+          2
+        ],
+        "focus": [
+          "Slot3"
+        ],
+        "details": [
+          ""
+        ],
+        "screenshot": "res://production/qa/evidence/observer-4ebe254c-529f-4e5f-b3a4-033ef9ae7ce0/locked-slot-click.png",
+        "capture_error": 0
+      }
+    ],
+    "allNinePngOpenedByMaintainer": true,
+    "originalNativeScreenshotStatus": "NOT_ASSESSED; independent observation adds retained render evidence without rewriting native result",
+    "sameSourceAfterToObservationBefore": true,
+    "frozenBeforeFilesVerified": 607,
+    "currentAfterFilesVerified": 617,
+    "changed": [],
+    "outsideObservation": [],
+    "rawHashes": {
+      "execution.json": "2ff2572a29d6416a5a08a1f1b857567e9c6333a3cd194efb4e446c16bea3a577",
+      "before.json": "dabbbdac041a7fd93025a0dba9dd1dfd5bc654d5d9d2dafb57908f12b28665e5",
+      "after.json": "193f6751d0cf581340d26612e9b3b09677d730197f356d277be0986ad44ea394",
+      "report.json": "48625006d6a6ea1d611766cef9333ab185583b57c8f4db4dbe6c322888208ddc"
+    },
+    "limitations": [
+      "Injected Godot input events are not physical-device or human-play evidence.",
+      "Inspect screenshots, controls and game command records against the design; no semantic PASS is assigned.",
+      "Inspect animation samples against supplied values; screen reader, remapping, RTL and measured performance require additional observation."
+    ],
+    "wholeRole": "partial"
+  },
+  "bounceContinuation": {
+    "schema": "maintainer-private-review-candidate",
+    "sourceQuestionRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-3PWe8A",
+    "resumeRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn",
+    "independentObservationRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-observation-XcijfH",
+    "status": "FAIL_full_fixture",
+    "wholeRole": "partial",
+    "sourceCase3": {
+      "questionPhase": "PASS: actual unresolved feel values returned to UX owner; no writes or engine execution",
+      "sameSessionOwnerAnswer": "PASS: exact approved fixture continuation, same actual parent and native child, no replacement",
+      "approvedBounceValues": "PASS_selected: real Tween 0.04/0.08/0.14/0.20s custom_step checks, source matches supplied scale/time/easing, actual 60FPS UI grows then settles",
+      "skipAndReducedMotion": "PASS_selected_runtime: real nonzero-scale Tween is advanced then synchronously reset; rendered preference-on frames remain1. Independent observer pre-cancel samples alone do not prove active cancellation.",
+      "designBoundary": "FAIL_unresolved_owner_choices: initial question explicitly requested repeat/interruption and initial focus decisions; owner continuation did not provide them, implementation silently chooses restart-after-skip and Slot0 initial focus. No approval or later disclosure found."
+    },
+    "failures": [
+      {
+        "kind": "required_input",
+        "detail": "Default JOY_BUTTON_A adds no command to [0,1]; ui_accept lacks gamepad binding. Real runtime31/32 and both rendered observations agree. Runtime remap passes but does not fix default settings."
+      },
+      {
+        "kind": "reporting",
+        "detail": "Parent final says compiled/imported successfully although import.log contains certificate, ObjectDB user directory and editor-settings errors. Child result retains these environment errors. Record process0/no observed parse error separately; no clean engine PASS."
+      }
+    ],
+    "unavailableOrUnassessed": [
+      "Physical-device and human acceptance",
+      "Screen-reader speech/OS accessibility",
+      "Measured performance",
+      "Original source Godot4.6 compile/render (actual is4.7.2)",
+      "Independent default observer full animation cycle:240frame cap stopped at120ms; native60FPS366ms evidence supplies separate fullcycle observation",
+      "Independent observer before skip/reduced snapshots show scale1; those snapshots cannot prove nonzero active-animation cancellation",
+      "Native child did not call view_image; screenshots were opened independently by maintainer"
+    ],
+    "protection": {
+      "sourceQuestionBeforeEqualsAfterEqualsResumeBefore": true,
+      "resumeAfterEqualsObservationBefore": true,
+      "resumeBeforeFrozenFilesVerified": 564,
+      "resumeAfterFrozenFilesVerified": 643,
+      "observationLiveFilesVerified": 654,
+      "originalSourcesUnchanged": true,
+      "resumeOutsideScope": [],
+      "observationChanged": [],
+      "observationOutsideScope": [],
+      "originalEvidenceHashChainsVerified": true
+    },
+    "traces": [
+      {
+        "kind": "parent",
+        "id": "01a1d0b7-8ea0-70a1-8caf-d1429d3b6052",
+        "originalPath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-04-12-01a1d0b7-8ea0-70a1-8caf-d1429d3b6052.jsonl",
+        "prefixBytes": 238556,
+        "prefixSha256": "ba67ce00337aee7e76de741027878630960aeb8db6365a7e3e8102e83a96a3b0",
+        "frozenAfterPath": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/parent-after.jsonl",
+        "afterSha256": "22906deb61d30ac2492a92608b01e2ddfd63018ef0ed6da992307c9c025610a4",
+        "samePrefix": true,
+        "appendedContexts": [
+          {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          }
+        ],
+        "appendedCallNames": [
+          "followup_task",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "send_message",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "send_message",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent",
+          "wait_agent"
+        ],
+        "fullRoleInstructionsPresent": false,
+        "interpretation": "Original prefix hash refers to the frozen historical prefix; the live same session has legitimately appended."
+      },
+      {
+        "kind": "child",
+        "id": "01a1d0b7-b76f-7a71-be50-75de97b93d10",
+        "originalPath": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-04-23-01a1d0b7-b76f-7a71-be50-75de97b93d10.jsonl",
+        "prefixBytes": 405123,
+        "prefixSha256": "85298bb660511d148022f45de61e9fe357cf622244a474695fba25e4887fe6b1",
+        "frozenAfterPath": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/child-after.jsonl",
+        "afterSha256": "57e31d16e225e1a5e5e218113b77a0f3b85802fcd4891f81c6b2b645b4cc7fb7",
+        "samePrefix": true,
+        "appendedContexts": [
+          {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          }
+        ],
+        "appendedCallNames": [
+          "send_message",
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "send_message",
+          "exec",
+          "exec",
+          "exec",
+          "send_message",
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "send_message",
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "send_message",
+          "exec",
+          "exec",
+          "exec",
+          "exec",
+          "send_message",
+          "exec"
+        ],
+        "fullRoleInstructionsPresent": true,
+        "interpretation": "Original prefix hash refers to the frozen historical prefix; the live same session has legitimately appended."
+      }
+    ],
+    "runtimeResult": {
+      "status": "FAIL: default gamepad accept mapping is absent",
+      "engine": {
+        "build": "official",
+        "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+        "hex": 263938,
+        "major": 4,
+        "minor": 7,
+        "patch": 2,
+        "status": "stable",
+        "string": "4.7.2-stable (official)",
+        "timestamp": 0
+      },
+      "source_files": [
+        "src/ui/inventory_screen.gd",
+        "src/ui/inventory_screen.tscn"
+      ],
+      "new_test_files": [
+        "tests/ui_inventory_checks.gd"
+      ],
+      "generated_sidecars": [
+        "src/ui/inventory_screen.gd.uid",
+        "src/inventory_model.gd.uid",
+        "tests/ui_inventory_observer.gd.uid"
+      ],
+      "runtime_checks": {
+        "total": 32,
+        "passed": 31,
+        "failed": 1,
+        "evidence": "production/qa/evidence/inventory-ui-20261113-implementation/checks-final.json"
+      },
+      "rendered_observation_checks": {
+        "mouse_activation_command": true,
+        "selected_quantity_updates": true,
+        "keyboard_selection_command": true,
+        "gamepad_direction_focus": true,
+        "default_gamepad_accept_command": false,
+        "empty_clears_details": true,
+        "locked_sends_no_command": true,
+        "all_screenshots_saved": true,
+        "rendered_bounce_grows_then_settles": true
+      },
+      "rendered_bounce": {
+        "samples": 22,
+        "maximum_observed_scale": 1.059959,
+        "last_observed_scale": 1.0
+      },
+      "rendered_observations": "production/qa/evidence/inventory-ui-20261113-rendered-final/observations.json",
+      "screenshot_count": 10,
+      "protected_files_unchanged": {
+        "project.godot": true,
+        "project.yaml": true,
+        "src/inventory_model.gd": true,
+        "i18n/en.po": true,
+        "tests/ui_inventory_observer.gd": true,
+        "design/ux/inventory-flow.md": true
+      },
+      "execution": [
+        {
+          "check": "headless import",
+          "exit_code": 0,
+          "log": "production/qa/evidence/inventory-ui-20261113-implementation/import.log"
+        },
+        {
+          "check": "initial sandboxed native rendering",
+          "exit_code": -6,
+          "log": "production/qa/evidence/inventory-ui-20261113-implementation/observer.log"
+        },
+        {
+          "check": "native observer outside display sandbox",
+          "exit_code": 0,
+          "log": "production/qa/evidence/inventory-ui-20261113-implementation/observer-display.log"
+        },
+        {
+          "check": "final native observer at 60fps",
+          "exit_code": 0,
+          "log": "production/qa/evidence/inventory-ui-20261113-implementation/observer-final.log"
+        },
+        {
+          "check": "final focused checks",
+          "exit_code": 1,
+          "log": "production/qa/evidence/inventory-ui-20261113-implementation/checks-final.log"
+        }
+      ],
+      "unresolved_owner_decision": "Lead/input owner must supply an authorized gamepad binding for the existing remappable ui_accept action. The current action contains only Enter, keypad Enter and Space. No project settings or runtime input initialization were changed by the screen. A temporary test mapping confirms mapped gamepad acceptance works.",
+      "limitations": [
+        "Physical mouse/keyboard/gamepad and human acceptance NOT ASSESSED; engine input was injected.",
+        "Screen-reader speech/OS accessibility behavior NOT ASSESSED; localized accessible names and polite Details live region are present.",
+        "No project text-scale/colorblind preferences service exists; the screen follows inherited theme text sizing and retains semantic Empty/Locked labels with the approved palette.",
+        "Performance NOT ASSESSED.",
+        "Engine import emitted sandbox-related user-data/editor-settings and system-certificate errors; retained logs distinguish them from source/test failures.",
+        "Installed API declarations were exported offline; their prose descriptions are empty. No post-cutoff behavior is claimed solely from memory.",
+        "The maintainer observer remains unchanged and retains its own not_assessed status. Skip/reduced-motion behavior during active motion was asserted deterministically by the new suite; observer start-frame captures can precede queued synthetic input."
+      ]
+    },
+    "observations": [
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-3PWe8A/UI game 测试/production/qa/evidence/inventory-ui-20261113-rendered-final/observations.json",
+        "sha256": "fbd77825da4dc3ccd61189c6366ad387e1597301b097f9da8bc8fa41417b0a78",
+        "engine": {
+          "build": "official",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (official)",
+          "timestamp": 0
+        },
+        "display": "macOS",
+        "allTenPngOpenedByMaintainer": true,
+        "pngHashes": {
+          "keyboard-right-and-accept.png": "5359f2bcafcf3aca5d16b2204f3ccad99bdd41f0de36528ca65a085bf4801ee8",
+          "gamepad-right-focus-before-confirm.png": "b34dc0e237db66c395922e4a872b4c94045f3991e60289474f5b20f293b1e2f4",
+          "empty-slot-activation.png": "38fdadb511b40e7a1b808a0507553cd1d6317cd220676f486551f78f3541a6d2",
+          "reduced-motion-selection.png": "23284b68671f4e4fb531a01ae085d870b11ad79e0f63e80218228b9aefeb590f",
+          "pointer-over-first-slot.png": "c072fafdf0b1a0702ddc28a0d1c2c6b3a06cc0823320f6959d096efd841d42f8",
+          "first-slot-mouse-activation.png": "3538783ab23b19c86a074fc7f99be5a0f027e1a4832d75e641f54b5df7c934c4",
+          "initial.png": "c1b51977261dd2c3e4f383490e0ea863e4bc9f1cc979a41da0b1b83623c429e6",
+          "game-side-quantity-change.png": "06e1029ffda6761e137f76cd42e2b41a1f4501632c1ccd56fbacc946eb4557be",
+          "gamepad-accept.png": "4817c56591ac234f3192186c3e595f9913677a9d1f0d3597f281a4b8ec74ab30",
+          "locked-slot-click.png": "29c11f54d9f5cb76efa5a412bd20ebbcd457bd31b447fc27a223fedaa1d952b3"
+        },
+        "observations": [
+          {
+            "interaction": "initial",
+            "commands": [],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "pointer-over-first-slot",
+            "commands": [],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "first-slot-mouse-activation",
+            "commands": [
+              0
+            ],
+            "scales": {
+              "Slot0": "(1.056971, 1.056971)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "game-side-quantity-change",
+            "commands": [
+              0
+            ],
+            "scales": {
+              "Slot0": "(1.05934, 1.05934)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "keyboard-right-and-accept",
+            "commands": [
+              0,
+              1
+            ],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.058107, 1.058107)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot1"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "before-gamepad-navigation",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.058107, 1.058107)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "gamepad-right-focus-before-confirm",
+            "commands": [
+              0,
+              1
+            ],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.029164, 1.029164)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot1"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "gamepad-accept",
+            "commands": [
+              0,
+              1
+            ],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot1"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "empty-slot-activation",
+            "commands": [
+              0,
+              1,
+              2
+            ],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.058333, 1.058333)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot2"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "locked-slot-click",
+            "commands": [
+              0,
+              1,
+              2
+            ],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot3"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "selection-animation-start",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot3"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "selection-animation-frames",
+            "frames": 22,
+            "spanMs": 366,
+            "min": 1.0,
+            "max": 1.059959,
+            "last": 1.0
+          },
+          {
+            "interaction": "before-skip-animation",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot1"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "immediately-after-skip-animation",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot1"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "post-skip-frames",
+            "frames": 22,
+            "spanMs": 363,
+            "min": 1.0,
+            "max": 1.0,
+            "last": 1.0
+          },
+          {
+            "interaction": "before-enabling-reduced-motion",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "immediately-after-enabling-reduced-motion",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "reduced-motion-during-active-animation",
+            "frames": 22,
+            "spanMs": 364,
+            "min": 1.0,
+            "max": 1.0,
+            "last": 1.0
+          },
+          {
+            "interaction": "reduced-motion-selection-start",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "reduced-motion-selection-frames",
+            "frames": 21,
+            "spanMs": 351,
+            "min": 1.0,
+            "max": 1.0,
+            "last": 1.0
+          },
+          {
+            "interaction": "reduced-motion-selection",
+            "commands": [
+              0,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot1"
+            ],
+            "capture_error": 0
+          }
+        ]
+      },
+      {
+        "path": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-3PWe8A/UI game 测试/production/qa/evidence/observer-5c930eaf-4f83-4240-b60d-e46f26dc73cf/observations.json",
+        "sha256": "7ff9e7e45f1b3b0ee5de5eada9bd3fe198966197900953c4baa8e3e76d5937b2",
+        "engine": {
+          "build": "official",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (official)",
+          "timestamp": 0
+        },
+        "display": "macOS",
+        "allTenPngOpenedByMaintainer": true,
+        "pngHashes": {
+          "keyboard-right-and-accept.png": "d0b7e06a217b4787e3eae87d231bebd761ada017e3298835282fb2eb274b357e",
+          "gamepad-right-focus-before-confirm.png": "35dc67df80e4d499035a5b67374eadeb040436b3eefb172e7ac484cc4295e320",
+          "empty-slot-activation.png": "5de3b9aa168700211014b6e18d03ec47bb926951666a63c91ec3f601a0ee55bb",
+          "reduced-motion-selection.png": "23284b68671f4e4fb531a01ae085d870b11ad79e0f63e80218228b9aefeb590f",
+          "pointer-over-first-slot.png": "c072fafdf0b1a0702ddc28a0d1c2c6b3a06cc0823320f6959d096efd841d42f8",
+          "first-slot-mouse-activation.png": "06054bff18453c245ac27582634282036880b8b48b055bfcbc24b1b82b4ef164",
+          "initial.png": "c1b51977261dd2c3e4f383490e0ea863e4bc9f1cc979a41da0b1b83623c429e6",
+          "game-side-quantity-change.png": "a60135cf3c594a868451196d1f83e8f8fb92c0de18ba40c82e231e25003a2f10",
+          "gamepad-accept.png": "d3d90e44f39c130f341397b1224d4abb9d0243de3efba975ed42faca53659439",
+          "locked-slot-click.png": "8e4a18dd4361d35a1f8e9c2c48191582f8944b0f7d74b8cf85b7de14ef581aed"
+        },
+        "observations": [
+          {
+            "interaction": "initial",
+            "commands": [],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "pointer-over-first-slot",
+            "commands": [],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "first-slot-mouse-activation",
+            "commands": [
+              0
+            ],
+            "scales": {
+              "Slot0": "(1.00969, 1.00969)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "game-side-quantity-change",
+            "commands": [
+              0
+            ],
+            "scales": {
+              "Slot0": "(1.016148, 1.016148)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "keyboard-right-and-accept",
+            "commands": [
+              0,
+              1
+            ],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.004642, 1.004642)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot1"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "before-gamepad-navigation",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.004642, 1.004642)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "gamepad-right-focus-before-confirm",
+            "commands": [
+              0,
+              1
+            ],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.016899, 1.016899)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot1"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "gamepad-accept",
+            "commands": [
+              0,
+              1
+            ],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.027593, 1.027593)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot1"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "empty-slot-activation",
+            "commands": [
+              0,
+              1,
+              2
+            ],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.006281, 1.006281)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot2"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "locked-slot-click",
+            "commands": [
+              0,
+              1,
+              2
+            ],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0198, 1.0198)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot3"
+            ],
+            "capture_error": 0
+          },
+          {
+            "interaction": "selection-animation-start",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.021487, 1.021487)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot3"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "selection-animation-frames",
+            "frames": 240,
+            "spanMs": 120,
+            "min": 1.0,
+            "max": 1.06,
+            "last": 1.054775
+          },
+          {
+            "interaction": "before-skip-animation",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot1"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "immediately-after-skip-animation",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot1"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "post-skip-frames",
+            "frames": 240,
+            "spanMs": 105,
+            "min": 1.0,
+            "max": 1.0,
+            "last": 1.0
+          },
+          {
+            "interaction": "before-enabling-reduced-motion",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "immediately-after-enabling-reduced-motion",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "reduced-motion-during-active-animation",
+            "frames": 240,
+            "spanMs": 104,
+            "min": 1.0,
+            "max": 1.0,
+            "last": 1.0
+          },
+          {
+            "interaction": "reduced-motion-selection-start",
+            "commands": null,
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot0"
+            ],
+            "capture_error": null
+          },
+          {
+            "interaction": "reduced-motion-selection-frames",
+            "frames": 240,
+            "spanMs": 116,
+            "min": 1.0,
+            "max": 1.0,
+            "last": 1.0
+          },
+          {
+            "interaction": "reduced-motion-selection",
+            "commands": [
+              0,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "scales": {
+              "Slot0": "(1.0, 1.0)",
+              "Slot1": "(1.0, 1.0)",
+              "Slot2": "(1.0, 1.0)",
+              "Slot3": "(1.0, 1.0)"
+            },
+            "focus": [
+              "Slot1"
+            ],
+            "capture_error": 0
+          }
+        ]
+      }
+    ],
+    "rawHashes": {
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/before.json": "0775b31405366f93c16b04cecdce523e7a21a2546943ad97c6f053b79df8ee62",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/continuity.json": "115c51830ca9c3d7b02abbee423e3599add59b1ffb07668506b1bbb325be0325",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/fixture.json": "7adbcae7c252ce65bf59f84d7eb80507826fccf30c3728958299146abe486c6a",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/child-prefix.jsonl": "85298bb660511d148022f45de61e9fe357cf622244a474695fba25e4887fe6b1",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/report.json": "d1cd8fd76202e160bea2ce7d2f758c1fdd9b5ed6fd799de935705d472d4a4921",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/child-after.jsonl": "57e31d16e225e1a5e5e218113b77a0f3b85802fcd4891f81c6b2b645b4cc7fb7",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/final.txt": "e82e9a5019a23b784ea4039b0a5ac8aba5bac053f9a9fd04d265db9bf00ffe1a",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/after.json": "af2a298e1052e29d35c5c91a8589536682fc022d71716d0b0dfc087ee98c702c",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/events.jsonl": "53ebf6c93c736e72fa19597e0ca502e3e6a8e123775b94e29b78f61371912d4b",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/engine-preflight.json": "33463c85c8e3c9b739cd0540c4603f4d6cd6be8d3dc00040d417b5d7a957a47a",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/parent-after.jsonl": "22906deb61d30ac2492a92608b01e2ddfd63018ef0ed6da992307c9c025610a4",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/prompt-input.json": "d08307527e0604c7fd7db7cb1b78e027f4ddc5504c3d08a4c162e4c39f7364ad",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-KMt5Fn/parent-prefix.jsonl": "ba67ce00337aee7e76de741027878630960aeb8db6365a7e3e8102e83a96a3b0",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-observation-XcijfH/before.json": "af2a298e1052e29d35c5c91a8589536682fc022d71716d0b0dfc087ee98c702c",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-observation-XcijfH/report.json": "96463083e3d688b108f3fb3daeaf6353a86624563128d5350596c95ec21ac41f",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-observation-XcijfH/after.json": "7683177bfdb8f774855d710774483994e6ebff57fb63560e87df101c7cf59158",
+      "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-observation-XcijfH/execution.json": "bc52f0dafbd807adde86327c65a1a6dded1174d9892a2fe25d0088f1cdac6f79"
+    },
+    "priorInventoryAudit": "/private/tmp/ui-inventory-observation-candidate.json",
+    "noSharedEditsBuildPack": true
+  },
+  "interpretation": [
+    "The default gamepad binding failure belongs to pre-existing input configuration; correct owner hand-off and preservation do not make the required input test pass.",
+    "Selected bounce feel/skip/motion behavior has actual runtime evidence, but unanswered repeat/interruption/initial-focus choices remain a design-boundary failure.",
+    "Parent overstated clean import; actual child logs retain environment errors. Native zero is not clean engine acceptance.",
+    "Independent pre-cancel scale1 samples do not prove active-animation cancellation; separate real Tween and60FPS evidence has its own scope.",
+    "Godot4.7.2 does not replace original4.6; physical input devices, screen-reader behavior, human acceptance and performance remain unassessed."
+  ],
+  "remaining": [
+    "Empty-slot clarification/continuation",
+    "Original Godot4.6 case",
+    "Input configuration ownership and unresolved bounce decisions",
+    "Other source responsibilities, desktop and final archive acceptance"
+  ]
+}

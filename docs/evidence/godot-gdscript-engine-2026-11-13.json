@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-13",
+  "status": "partial; async cleanup FAIL",
+  "scope": "Actual generated GDScript artifacts, real Godot 4.7.2 and 4.6.1; distinct from native role-output acceptance.",
+  "evidence": [
+    {
+      "path": "/private/tmp/game-studio-a015-engine-hapm70jr/manifest.json",
+      "sha256": "93da0630a0bb26f0084775e9b9733d02101e4258d60a0daac5d9767f58479e2a"
+    },
+    {
+      "path": "/private/tmp/game-studio-a015-engine-hapm70jr/review.md",
+      "sha256": "2a5b3a1b9bb4e15fca3295c041b9eff1b5f9c13cf760bbf99f8ffbc2384cb9ea"
+    },
+    {
+      "path": "/private/tmp/game-studio-a015-typed-retry-4cjcqjat/manifest.json",
+      "sha256": "1ed72d232c53ce91a907e74c91f6159854962bcb69a411831f5615c0d7635c06"
+    },
+    {
+      "path": "/private/tmp/game-studio-a015-typed-retry-4cjcqjat/review.md",
+      "sha256": "4a2a9fe8b33c67ce7e7aab35ee88e2cc510c337641c425dc39ea7da4630f0ac5"
+    },
+    {
+      "path": "/private/tmp/game-studio-a015-async-audit-fkyu3d04/manifest.json",
+      "sha256": "4ec5e9cebc09f5f6ba737c008c9487c640a0e644e91a2a26f00df9378d95d817"
+    },
+    {
+      "path": "/private/tmp/game-studio-a015-async-audit-fkyu3d04/review.md",
+      "sha256": "7d90e0b23cce0e3780497f88a8c43efc24c6094a846e355775124c30103564dc"
+    }
+  ],
+  "rootReview": {
+    "hashesVerified": {
+      "originalEngine": 556,
+      "newTypedEngine": 129,
+      "independentAsyncAudit": 47
+    },
+    "inspected": [
+      "Actual commands, runtime structured observations and stderr for async, abstract and new typed artifact",
+      "Original and new artifact identities, separate actual engine versions, same-input/same-harness comparison",
+      "Fixed-version ResourceLoader user reference acquisition and terminal collection implementation",
+      "Independent API-only valid/missing paired baselines and cancelled-request diagnostics"
+    ]
+  },
+  "results": {
+    "originalTyped": {
+      "sha256": "3f98883a6faf2e4007aed1c91707bbb2d5ac3e2056b150a18906b0a25d59a20a",
+      "status": "selected PASS",
+      "engine": "4.7.2",
+      "physicsFrames": 6,
+      "calls": 6000
+    },
+    "newTyped": {
+      "sha256": "c0a4d0f4f4c81096486f135d7a31bbb652ae5ccbd1060d5f2e7a3909c095fc50",
+      "status": "selected PASS, separately executed",
+      "engine": "4.7.2",
+      "physicsFrames": 6,
+      "calls": 6000,
+      "difference": "Disables processing at empty ready; registration re-enables. Actual tested path enters empty then registers.",
+      "unassessed": [
+        "performance",
+        "prepopulated-before-ready branch",
+        "full game/export"
+      ]
+    },
+    "originalAbstract": {
+      "sha256": "cd934dc9c0476cbe5cf9813eb09b38bb589462408b5c552141341f4d3960f0c4",
+      "status": "selected PASS",
+      "engine": "4.6.1",
+      "checks": 5,
+      "baseInstantiated": false
+    },
+    "originalAsync": {
+      "sha256": "b9a24667efdfa4a07a6e0b685da42749383e781ccd360a828b71981551d9b114",
+      "functionalChecks": 10,
+      "functionalFailures": 0,
+      "cleanup": "FAIL: five RefCounted residues",
+      "pendingFramesObserved": 74,
+      "notes": "Missing/malformed/wrong-type diagnostics retained. Freed loader and destination suppress late spawn, but owned requests remain uncollected."
+    }
+  },
+  "controls": {
+    "typed": "Doubled delta fails seven checks; real exit 1. Earlier bare executable SIGKILL is retained as environment failure, not a meaningful control.",
+    "abstract": "Missing abstract implementation fails compilation, exit 1.",
+    "async": "No-parenting variant fails four assertions, exit 1.",
+    "apiOnlyBaseline": "Valid LOADED and missing FAILED each retain one RefCounted without terminal get; corresponding terminal get variants leave no residue. Missing resource errors remain."
+  },
+  "limitations": [
+    "Engine-side cleanup suspect is supported, not proven through a patched-engine experiment.",
+    "No role is fully verified. Original output failures remain separate.",
+    "New abstract retry artifact is not covered by the old artifact engine result.",
+    "No GPU, measured frame budget, arbitrary races or human gameplay acceptance."
+  ]
+}

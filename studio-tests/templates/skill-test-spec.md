@@ -1,166 +1,89 @@
-# Skill Test Spec: /[skill-name]
+# Codex Skill specification: game-studio-[name]
 
-## Skill Summary
+## Source and scope
 
-[One paragraph describing what this skill does, what inputs it takes, and what outputs it produces.]
+- Catalog identity/category: [source name and category]
+- Retained domain contract: [catalog spec path]
+- Canonical target and references: [catalog target plus reference paths]
+- Domain outcomes preserved: [all source requirements and case mappings]
+- Adapted mechanics: [source requirement -> Codex behavior -> evidence needed]
+- Unresolved requirements: [explicit open items; none silently waived]
 
----
+## Instruction/static review
 
-## Static Assertions (Structural)
+- [ ] Canonical metadata, names, local resources and explicit commands pass `lint:content`.
+- [ ] Trigger description distinguishes this workflow from neighboring workflows.
+- [ ] Domain outcomes, missing-input behavior, verdict vocabulary and next step are explicit.
+- [ ] Guidance follows the effective automation policy; guided mode reuses authorization.
+- [ ] Referenced native roles/commands are installed, or their absence is handled explicitly.
+- [ ] Applicable category metrics from `quality-rubric.md` have separate instruction results.
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+These checks do not prove live behavior. Read all references; do not infer a pass
+from an entrypoint or a renamed source file.
 
-- [ ] Frontmatter has all required fields (`name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`)
-- [ ] 2+ phase headings found
-- [ ] Contains the skill's verdict keywords — any that `/skill-test static` Check 3 accepts (gate or review verdicts, go/no-go verdicts, or a severity scale), plus `NOT ASSESSED` when anything depends on the verdict; none needed when the skill outputs an artifact rather than a judgement
-- [ ] If `allowed-tools` includes Write/Edit: `"May I write"` language present
-- [ ] Next-step handoff section present at end
+## Fixture and evidence contract
 
----
+Record host/client version, OS, Node/runtime/package versions, installed content
+hashes, project and local settings with provenance, source file hashes, supplied
+inputs, allowed writes, selected native capabilities and expected artifacts.
+Default: minimal rigor, guided automation, no local override; name case-specific
+changes. Preserve explicitly required source-mode scenarios as mapped variants.
 
-## Director Gate Checks
+For each case record: expected assertions, actual transcript/trace and commands,
+process exits/logs, changed/preserved files, result (PASS / FAIL / PARTIAL /
+NOT ASSESSED), limitations, evidence path and next action. Record an inapplicable
+assertion with its reason instead of treating it as passed. Test CLI and desktop
+separately; a supplied-Skill simulation does not prove natural discovery.
 
-[Describe which director gates this skill triggers (if any), and under what review mode conditions.]
+## Required case families
 
-- **Full mode**: [gates triggered — e.g., CD-PHASE-GATE, TD-PHASE-GATE, PR-PHASE-GATE, AD-PHASE-GATE]
-- **Lean mode**: [phase gates only — for `/gate-check`, the panel `modes.workflow` sets (PR only at `minimal`, TD + PR at `standard`, all four at `full`); other skills skip their non-phase gates, each noted `[GATE-ID] skipped — Lean mode`]
-- **Solo mode**: [no gates — skill runs without director review; each skip is noted, e.g. `[GATE-ID] skipped — Solo mode`]
-- **N/A**: [if this skill never triggers gates, explain why]
+### 1. Happy path and trigger boundaries
 
----
+Use an in-scope natural-language request. Observe native discovery and use of the
+installed Skill, expected domain artifact and verification. Run an unrelated or
+neighboring request as a negative trigger control; the Skill must not take over.
+Name additional source-specific happy-path cases that remain required.
 
-## Fixture Defaults
+### 2. Failure or blocked dependency
 
-Every case's `project.yaml` sets `modes.rigor: minimal` and
-`modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
-Fixture defaults.
+Provide missing or invalid input. Assert the missing dependency is named, dependent
+work stops, and no unauthorized writes occur. Distinguish unavailable capability
+from an actual failed test. Demonstrate recovery after the dependency is resolved.
 
----
+### 3. Mode variants
 
-## Test Cases
+Exercise relevant rigor, workflow, review and automation modes independently.
+Assert differences in artifacts, gate selection and interaction. Guided mode
+continues ordinary authorized writes; consequential unresolved decisions still
+return to the user. Explicit collaborative choices retain their intended cadence.
 
-### Case 1: Happy Path — [brief name]
+### 4. Edge case and preservation
 
-**Fixture** (assumed project state):
-- [file/condition 1]
-- [file/condition 2]
+Use the source spec's edge cases plus resumed/existing artifacts and conflicting
+user edits where relevant. Compare actual outputs and preserved file bytes.
+Cancellation or interruption must not silently discard prior work.
 
-**Expected behavior**:
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
+### 5. Director gate or delegation
 
-**Assertions**:
-- [ ] [Assertion 1]
-- [ ] [Assertion 2]
-- [ ] [Assertion 3]
+Record full/lean/solo behavior using resolved review settings. Full invokes the
+required gates; lean retains applicable phase gates at workflow panel width;
+solo omits directors with a stated reason. Observe native role selection and
+actual verdicts. A failed or NOT ASSESSED gate cannot become a silent approval.
+If no gates are applicable, state why. For team workflows also test dependency
+ordering, disjoint writers, failed/unavailable children and shared checkpoints.
 
-**Case Verdict**: PASS / FAIL / PARTIAL / NOT ASSESSED
+### 6. Could not assess
 
----
+Supply an unreadable, absent or placeholder-only required input, or an unavailable
+check capability. Assert NOT ASSESSED with the missing observation identified.
+An observed failure alongside missing evidence must still be surfaced as failure.
 
-### Case 2: Failure / Blocked — [brief name]
+## Completion evidence
 
-**Fixture**:
-- [missing or invalid condition]
-
-**Expected behavior**:
-1. [Skill detects the problem]
-2. [Skill reports FAIL/BLOCKED]
-3. [Skill does NOT proceed]
-
-**Assertions**:
-- [ ] Skill stops before producing the artifact and reports BLOCKED or NOT ASSESSED, naming the missing input
-- [ ] Correct error/block message displayed
-- [ ] No files written without user approval
-
-**Case Verdict**: PASS / FAIL / PARTIAL / NOT ASSESSED
-
----
-
-### Case 3: Mode Variant — [brief name]
-
-**Fixture**:
-- [standard project state]
-- [specific mode or flag set]
-
-**Expected behavior**:
-1. [Behavior differs from happy path because of mode]
-
-**Assertions**:
-- [ ] [Mode-specific assertion]
-- [ ] [Output differs correctly from Case 1]
-
-**Case Verdict**: PASS / FAIL / PARTIAL / NOT ASSESSED
-
----
-
-### Case 4: Edge Case — [brief name]
-
-**Fixture**:
-- [unusual or boundary condition]
-
-**Expected behavior**:
-1. [Skill handles gracefully]
-
-**Assertions**:
-- [ ] [Edge case handled without crash or silent failure]
-- [ ] [Correct output or message]
-
-**Case Verdict**: PASS / FAIL / PARTIAL / NOT ASSESSED
-
----
-
-### Case 5: Director Gate — [brief name]
-
-**Fixture**:
-- [project state that triggers a gate check]
-- Review mode: [full | lean | solo]
-
-**Expected behavior**:
-1. [Gate fires / does not fire based on mode]
-2. [Correct director agents spawned or skipped]
-
-**Assertions**:
-- [ ] In full mode: [specific gates spawn]
-- [ ] In lean mode: [phase gates only, at the width `modes.workflow` sets — or each gate skipped with `[GATE-ID] skipped — Lean mode`]
-- [ ] In solo mode: no director gates spawn, and the output names each skip
-- [ ] Skill does not auto-advance past a CONCERNS, FAIL or NOT ASSESSED verdict
-
-**Case Verdict**: PASS / FAIL / PARTIAL / NOT ASSESSED
-
----
-
-### Case 6: Could Not Assess — [brief name]
-
-**Fixture**:
-- [an input the skill needs is missing, unreadable, empty or placeholder-only — or a check it must run cannot run]
-
-**Expected behavior**:
-1. [Skill detects that part of its scope could not be evaluated]
-2. [Skill reports NOT ASSESSED, naming what it could not assess and why]
-3. [Skill does NOT resolve the unknown to a pass]
-
-**Assertions**:
-- [ ] Verdict is NOT ASSESSED — never the pass value — and names the missing or unreadable input
-- [ ] A failure found alongside it still takes the failure verdict (NOT ASSESSED ranks above the pass value, below the failure values)
-- [ ] The check that could not run is named in the output, not silently omitted
-
-**Case Verdict**: PASS / FAIL / PARTIAL / NOT ASSESSED
-
----
-
-## Protocol Compliance
-
-- [ ] Uses `"May I write"` before any file writes (or is read-only and skips this)
-- [ ] Presents findings/draft to user before requesting approval
-- [ ] Ends with a recommended next step or follow-up action
-- [ ] Does not auto-create files without user approval
-
----
-
-## Coverage Notes
-
-[Any gaps in coverage, known edge cases not tested, or conditions that would require
-a live skill run to verify.]
+Map every retained source case and applicable rubric metric to an observed result;
+add source-specific cases beyond these families. Keep instruction, host runtime,
+engine/browser and human observations separate. Human play/sign-off is required
+where the source/plan requires it and cannot be inferred from screenshots or replay.
+Keep open cases explicit. Only complete the catalog/task row after the whole
+required matrix passes and its evidence has been independently assessed where
+required. Do not derive completion from the number of passing cases.

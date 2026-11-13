@@ -1,0 +1,1659 @@
+{
+  "date": "2026-11-12",
+  "status": "partial",
+  "scope": "Fourteen selected CLI scenarios plus a real approval-to-reuse follow-up; not complete S021 source-matrix, native desktop, all-specialist review or write-conflict acceptance.",
+  "environment": {
+    "codex": "0.162.0",
+    "node": "24.22.2",
+    "platform": "macOS ARM64"
+  },
+  "method": "Fresh packed/restored Unicode-path project and native session per fixture. Installed-byte checks, actual complete reports/tool calls/native role traces and artifacts manually reviewed; independent snapshot/stamp checks. Native exit 0 / wrapper exit 3 is not itself PASS. Real-reuse alone preserves the preceding actual workspace without reinstallation. Trace bodies and hidden reasoning are not embedded.",
+  "summary": {
+    "totalNativeRuns": 17,
+    "latestSelectedCases": 15,
+    "latestSelectedPass": 15,
+    "retainedFirstAttemptFailures": 2,
+    "maximumConcurrentParentRuns": 3,
+    "fullMissingRoleNativeChildren": 3
+  },
+  "resourceVariants": {
+    "initial": {
+      ".agents/skills/game-studio-design-review/SKILL.md": "346f82f3b8d2e1e704b01c2295513b776ff9dd2ff4ae96558794595f54d81c84",
+      ".agents/skills/game-studio-design-review/scripts/review-receipts.mjs": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+      ".agents/skills/game-studio-design-review/references/freshness-and-inputs.md": "28d5aac7eb131f97d0bc76b8ca83a32dca446181c65ba8801c01d990d5f73b87",
+      ".agents/skills/game-studio-design-review/references/assessment-and-output.md": "e0283352cfb9cc14b3da1a9a8e8027ef95a96a90623294d731169adf3224ea1b",
+      ".agents/skills/game-studio-design-review/references/specialists.md": "02f0b799269b89a68885535d822810e811dc40222043583d7b6896b92f1b50d7",
+      ".agents/skills/game-studio-design-review/references/follow-up-and-records.md": "399c6b0a09ee79901cf243c96757f0c011da1f440dee704ae2c908830ba1a451",
+      ".codex/agents/game-studio-game-designer.toml": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5",
+      ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+      ".codex/agents/game-studio-creative-director.toml": "6c8f2bbc9c3214223c3a76973e64341752cbf1e2dec9cb595271d3a2b91aeb40"
+    },
+    "scope_corrected": {
+      ".agents/skills/game-studio-design-review/SKILL.md": "346f82f3b8d2e1e704b01c2295513b776ff9dd2ff4ae96558794595f54d81c84",
+      ".agents/skills/game-studio-design-review/scripts/review-receipts.mjs": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+      ".agents/skills/game-studio-design-review/references/freshness-and-inputs.md": "28d5aac7eb131f97d0bc76b8ca83a32dca446181c65ba8801c01d990d5f73b87",
+      ".agents/skills/game-studio-design-review/references/assessment-and-output.md": "cfc66767963b5353ab2aba81c8bf3fba045ef45d46655403efdbecc2249ddeef",
+      ".agents/skills/game-studio-design-review/references/specialists.md": "02f0b799269b89a68885535d822810e811dc40222043583d7b6896b92f1b50d7",
+      ".agents/skills/game-studio-design-review/references/follow-up-and-records.md": "399c6b0a09ee79901cf243c96757f0c011da1f440dee704ae2c908830ba1a451",
+      ".codex/agents/game-studio-game-designer.toml": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5",
+      ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+      ".codex/agents/game-studio-creative-director.toml": "6c8f2bbc9c3214223c3a76973e64341752cbf1e2dec9cb595271d3a2b91aeb40"
+    }
+  },
+  "fixtureVersions": {
+    "initialSha256": "0e9a0d927c94ba2d87963c8661aee3626db54bb985e8493b3e03ed527551998d",
+    "currentSha256": "87567082bc1ac5b509c8006e2cc91487494d48737e61ab7679c975b64d8198bf",
+    "sameInputRegression": [
+      "receipt-gap",
+      "complete-records"
+    ],
+    "sameInputRegressionComparison": "Original scenario objects including input bytes and request deep-equal saved initial fixture. Runtime installation differs only by documented resource snapshot; request node-path suffix unchanged.",
+    "changes": [
+      "Separate complete-records-clear variant resolves invalid-input object versus no-result ambiguity; original complete-records and receipt-gap untouched.",
+      "Before first execution, reuse/deeper-review/context-changed synthetic historical inputs were clarified and historical Scope M corrected; complete receipt includes actual policy/integration inputs. context-changed preserves the registry contradiction.",
+      "Synthetic prior reviews are declared fixture setup, not evidence of a real human/native review. The real-review-reuse case instead consumes EB2GLw native output."
+    ],
+    "actualOriginalAndRerunRequestsByteIdentical": true
+  },
+  "corrections": [
+    {
+      "issue": "Scope S assigned despite two formulas",
+      "firstAttempts": [
+        "game-studio-design-review-EUpQpg",
+        "game-studio-design-review-AGj479"
+      ],
+      "fix": "Generic source-contract clarification: count all formulas/dependencies/systems/new ADRs before scope; S requires every condition including zero formulas. Preserve rough heuristic, not a delivery estimate.",
+      "sameInputReruns": [
+        "game-studio-design-review-qXM1UO",
+        "game-studio-design-review-up2D6G"
+      ],
+      "result": "Both now M with explicit two-formula counts; ambiguous original contract remains a real revision finding."
+    },
+    {
+      "issue": "Earlier entry stamps could fill a newer deeper verdict missing its own evidence",
+      "fix": "Only latest Review entry supplies comparison stamps; older observed paths remain NEW/GONE, never approval identity.",
+      "unitProof": "Four receipt tests pass, including newer metadata missing target/all stamps; native receipt-gap refuses mixed-entry approval."
+    }
+  ],
+  "cases": [
+    {
+      "scenario": "complete-records",
+      "runId": "game-studio-design-review-EUpQpg",
+      "status": "FAIL",
+      "scopeOfResult": "First attempt: complete review and authorized tracking were accurate, but Scope S contradicted two explicitly counted formulas. Original invalid-input ambiguity was treated as advisory.",
+      "verdict": "APPROVED",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "initial",
+      "parentThreadId": "01a1cfc7-3007-7442-ae90-7836e0ba0c5b",
+      "parentTraceFile": "rollout-2026-11-12T20-41-40-01a1cfc7-3007-7442-ae90-7836e0ba0c5b.jsonl",
+      "parentTraceSha256": "fee8e15b20b015af407e6386d4eebf7e81e2f45f66ae3652ab64cb0e09c9d9a6",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": false,
+      "packageIntegrity": "sha512-tO/HPntJCFtFpznZ40jtiescXY7RevsTfBt7CbHPOh4b1RgSBWZZDHIyn2sDFFzmroR0n1RImy86ivfEuNkZew==",
+      "evidenceHashes": {
+        "fixture.json": "3625d749a6b739e27bb951bc00a1c89e51a7e1e4bbf34828772b14da106f1005",
+        "events.jsonl": "fe8789e1609f0e7a5814645631bd2a2f4b8aabeb456de0548702dd162461acd9",
+        "final.txt": "4a4b49cb1cbde6ec15cc6fe18408419f1678df2fd873f47fa0c873d1fe916d45",
+        "before.json": "0916dda6eff0d83282052f5d6ec64b2881b9108b8915fe60e37a4b89cf7dbc5d",
+        "after.json": "78be0b211ad8bcfa733428cb7ebe0bf87bed6bdfc24aff41156ea00673e7e366",
+        "prompt-input.json": "d076a8a507afb86715311f4a294b5c63d469cd7c1968c7a197751325c3718ee5"
+      },
+      "preservedFiles": 480,
+      "changed": [
+        "design/gdd/systems-index.md"
+      ],
+      "added": [
+        "design/gdd/reviews/resolve-hit-review-log.md"
+      ],
+      "artifactHashes": {
+        "design/gdd/systems-index.md": {
+          "before": "fe45f85c63a643788af0a5205fe2fb53e0d9e70c81923535b6c1aa152b559684",
+          "after": "d9e0bab6d317d3f6a0badc1e0033fbcecfac9d986b29a2144a4241dc6e5d7680"
+        },
+        "design/gdd/reviews/resolve-hit-review-log.md": {
+          "before": null,
+          "after": "fbc33b7b49e9fffdf9803c83de2d6832fb9360bd84026f3edb9ddd54ee5e2e8d"
+        }
+      },
+      "observed": {
+        "commandCount": 20,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 33,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: NONE",
+              "NEW: design/gdd/resolve-hit.md",
+              "NEW: .agents/skills/game-studio-design-review/SKILL.md",
+              "NEW: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "NEW: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "NEW: .agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+              "NEW: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "NEW: project.yaml",
+              "NEW: AGENTS.md",
+              "NEW: .codex/config.toml",
+              "NEW: design/gdd/game-concept.md",
+              "NEW: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md"
+            ]
+          },
+          {
+            "eventIndex": 47,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: design/gdd/reviews/resolve-hit-review-log.md",
+              "UNCHANGED: design/gdd/resolve-hit.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/SKILL.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "UNCHANGED: project.yaml",
+              "UNCHANGED: AGENTS.md",
+              "UNCHANGED: .codex/config.toml",
+              "UNCHANGED: design/gdd/game-concept.md",
+              "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "exactSingleIndexStatusChange": true,
+        "stamps": [
+          {
+            "path": "design/gdd/resolve-hit.md",
+            "sha256": "7ab872282abdbdf10a6dd16ce8770645fb61afdb332b0f8aa386478c6d566b32",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/SKILL.md",
+            "sha256": "346f82f3b8d2e1e704b01c2295513b776ff9dd2ff4ae96558794595f54d81c84",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+            "sha256": "28d5aac7eb131f97d0bc76b8ca83a32dca446181c65ba8801c01d990d5f73b87",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/references/assessment-and-output.md",
+            "sha256": "e0283352cfb9cc14b3da1a9a8e8027ef95a96a90623294d731169adf3224ea1b",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+            "sha256": "399c6b0a09ee79901cf243c96757f0c011da1f440dee704ae2c908830ba1a451",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+            "sha256": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+            "matches": "current_bytes"
+          },
+          {
+            "path": "project.yaml",
+            "sha256": "c1baea25616c480792e963d50518c5e6b910f3ea94c6335cd66b7d5c82c0e5e1",
+            "matches": "current_bytes"
+          },
+          {
+            "path": "AGENTS.md",
+            "sha256": "6afea7ce5281c8c50455eff8b0ab3cfadd22fa691aff5b6d0d1a644f8e6567a5",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".codex/config.toml",
+            "sha256": "eaf2eb2ebb1bad183b6d9cdf0bb0e943010c038a83b460563281ccde470a9596",
+            "matches": "current_bytes"
+          },
+          {
+            "path": "design/gdd/game-concept.md",
+            "sha256": "f88b5c9aaa3fe29f46ea0fcae7acd3511c6c391dc069375786e4e024812f8c58",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md",
+            "sha256": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+            "matches": "current_bytes"
+          }
+        ],
+        "independentReceiptReadback": [
+          "RECEIPT: design/gdd/reviews/resolve-hit-review-log.md",
+          "UNCHANGED: design/gdd/resolve-hit.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/SKILL.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+          "UNCHANGED: project.yaml",
+          "UNCHANGED: AGENTS.md",
+          "UNCHANGED: .codex/config.toml",
+          "UNCHANGED: design/gdd/game-concept.md",
+          "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md"
+        ],
+        "reportBeforeWrite": {
+          "reportEventIndex": 37,
+          "writeEventIndex": 43
+        }
+      }
+    },
+    {
+      "scenario": "registry-conflict",
+      "runId": "game-studio-design-review-ulKQPC",
+      "status": "PASS",
+      "scopeOfResult": "Standard 6/6; whole-document registry variant conflict health 20 versus 12 found at line 24, seven matching lines. NEEDS REVISION, M; missing owning GDD and separate invalid-input conflict disclosed.",
+      "verdict": "NEEDS REVISION",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "initial",
+      "parentThreadId": "01a1cfc7-1d6f-7403-9460-997be69619ba",
+      "parentTraceFile": "rollout-2026-11-12T20-41-35-01a1cfc7-1d6f-7403-9460-997be69619ba.jsonl",
+      "parentTraceSha256": "a4dbba18201334be62b9d9a4275a80cea18b9789c868fc527a3bc2b46b392397",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": false,
+      "packageIntegrity": "sha512-tO/HPntJCFtFpznZ40jtiescXY7RevsTfBt7CbHPOh4b1RgSBWZZDHIyn2sDFFzmroR0n1RImy86ivfEuNkZew==",
+      "evidenceHashes": {
+        "fixture.json": "e7fc6ceb54fec47b05e47f4b4377959f674e9f7f0b44cee8119324815f2efea6",
+        "events.jsonl": "43dc331f96f5b045e3561fe63bfdeb381644b4e7bca2d696f0ab0d89c84a70f9",
+        "final.txt": "6dffe04c05c8833b8d2f20f1cb5e6a218ce2eaaf6151c43fbd5d6e508dc80336",
+        "before.json": "0453e48b4a2e913395f5ecbbf49f37735ce00c5a4fb492dab4c8b0f7d493e41d",
+        "after.json": "0453e48b4a2e913395f5ecbbf49f37735ce00c5a4fb492dab4c8b0f7d493e41d",
+        "prompt-input.json": "d3dd87cd9dced4a6b9219a952d7041cd6dfd485247546aae6913f3a76269231a"
+      },
+      "preservedFiles": 481,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 13,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 27,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: NONE",
+              "NEW: design/gdd/resolve-hit.md",
+              "NEW: .agents/skills/game-studio-design-review/SKILL.md",
+              "NEW: design/registry/entities.yaml",
+              "NEW: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "NEW: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "NEW: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "NEW: project.yaml",
+              "NEW: AGENTS.md",
+              "NEW: design/gdd/game-concept.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "receipt-gap",
+      "runId": "game-studio-design-review-AGj479",
+      "status": "FAIL",
+      "scopeOfResult": "First attempt: latest-entry missing target hash correctly prevented approval reuse and triggered whole review. Scope S nevertheless violated two-formula eligibility.",
+      "verdict": "NEEDS REVISION",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "initial",
+      "parentThreadId": "01a1cfc7-2857-75a1-8316-832d265825cd",
+      "parentTraceFile": "rollout-2026-11-12T20-41-38-01a1cfc7-2857-75a1-8316-832d265825cd.jsonl",
+      "parentTraceSha256": "4378af92d35084a9e991a69d0e1c789d1f13c159ba22aad9f8be4ed48da979cf",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": true,
+      "packageIntegrity": "sha512-tO/HPntJCFtFpznZ40jtiescXY7RevsTfBt7CbHPOh4b1RgSBWZZDHIyn2sDFFzmroR0n1RImy86ivfEuNkZew==",
+      "evidenceHashes": {
+        "fixture.json": "2d6dc8f88b8c4969d308458d0ffd21b8f5ff8b12002bc1115b2deb452ef0a094",
+        "events.jsonl": "8a2d8cc396a017737e46d833f2fded12457d04cd162a2ca390fc4b55ce0c7075",
+        "final.txt": "ad3b2c208ef1119a22f7f21649b47626ed069352c5c966a4e0fa46447c67695b",
+        "before.json": "1c26e07635f6ca65ef8fd69264e6340787c072a98c155131bce5852d54297d13",
+        "after.json": "1c26e07635f6ca65ef8fd69264e6340787c072a98c155131bce5852d54297d13",
+        "prompt-input.json": "f8815bb72d88de1ce08d26693f30bd60e90c99c9af05da25c90c759387d32b54"
+      },
+      "preservedFiles": 481,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 18,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 40,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: design/gdd/reviews/resolve-hit-review-log.md",
+              "NEW: design/gdd/resolve-hit.md",
+              "NEW: .agents/skills/game-studio-design-review/SKILL.md",
+              "NEW: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "NEW: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "NEW: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "NEW: AGENTS.md",
+              "NEW: project.yaml",
+              "NEW: production/stage.txt",
+              "UNCHANGED: design/gdd/game-concept.md",
+              "NEW: .agents/skills/game-studio-design-review/references/specialists.md",
+              "NEW: .agents/skills/game-studio-design-review/references/follow-up-and-records.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "incomplete",
+      "runId": "game-studio-design-review-jPcbL1",
+      "status": "PASS",
+      "scopeOfResult": "Full 4/8; named four missing required sections and negative-damage counterexample. NEEDS REVISION, M; solo/read-only isolation.",
+      "verdict": "NEEDS REVISION",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "initial",
+      "parentThreadId": "01a1cfc9-9ff3-7fc2-812b-0eacacd1750c",
+      "parentTraceFile": "rollout-2026-11-12T20-44-19-01a1cfc9-9ff3-7fc2-812b-0eacacd1750c.jsonl",
+      "parentTraceSha256": "041abb99876fd781841d19b226630e5838d06f375ba8677be775db86575e3acd",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": false,
+      "packageIntegrity": "sha512-tO/HPntJCFtFpznZ40jtiescXY7RevsTfBt7CbHPOh4b1RgSBWZZDHIyn2sDFFzmroR0n1RImy86ivfEuNkZew==",
+      "evidenceHashes": {
+        "fixture.json": "c37a9e2d6ef2f000134abe4f89f035a7a00b37191670685f0ec996c66caaafdd",
+        "events.jsonl": "4b8ddcddc98b9adc3bb4115510fda6f69c827c37d58c3b08642788f2aba9312e",
+        "final.txt": "2945b59c1eac56648383e8f6ded7f11191a81bf140848b81d5f02beb7c7c3447",
+        "before.json": "44d1723c4878245662cbdf23b180bf522398cb9ce61961fa628406896958b054",
+        "after.json": "44d1723c4878245662cbdf23b180bf522398cb9ce61961fa628406896958b054",
+        "prompt-input.json": "172564ae272605fb0a1a5e11725a55076d71e3ff5c22ad51573015da691f77ff"
+      },
+      "preservedFiles": 480,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 13,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 30,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: NONE",
+              "NEW: design/gdd/resolve-hit.md",
+              "NEW: .agents/skills/game-studio-design-review/SKILL.md",
+              "NEW: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "NEW: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "NEW: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "NEW: project.yaml",
+              "NEW: AGENTS.md",
+              "NEW: design/gdd/game-concept.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "numeric-standard",
+      "runId": "game-studio-design-review-gQj4en",
+      "status": "PASS",
+      "scopeOfResult": "Legacy --depth lean renamed and overrides stored full; misleading UI category does not hide numeric Formulas requirement. Standard 5/6, both vague criteria quoted; real concept mismatch and dependencies produce MAJOR REVISION NEEDED, provisional M.",
+      "verdict": "MAJOR REVISION NEEDED",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "initial",
+      "parentThreadId": "01a1cfc9-bab0-7b41-b82d-b00b537f311b",
+      "parentTraceFile": "rollout-2026-11-12T20-44-31-01a1cfc9-bab0-7b41-b82d-b00b537f311b.jsonl",
+      "parentTraceSha256": "656108610b2923b70b58f922568f4a4eb2fa02675d9c7db14ed218fa9fae40a5",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": false,
+      "packageIntegrity": "sha512-tO/HPntJCFtFpznZ40jtiescXY7RevsTfBt7CbHPOh4b1RgSBWZZDHIyn2sDFFzmroR0n1RImy86ivfEuNkZew==",
+      "evidenceHashes": {
+        "fixture.json": "8a459ea33f9b256e4e8ae2bfeec23bfb23c6f81ca2b96e4dccc9b1ab9c9924dd",
+        "events.jsonl": "b05e59d1a9bdb522dbb792da2e3cdf634d4c391cb9d1885705587d7f09484ab7",
+        "final.txt": "80c506d31cc61b4d40039db91591a061a2c921b911dcdf302cbc3588481177e0",
+        "before.json": "066848118a5af76944cfe34cf74449757e2b361952a1a5986be932b3f3e68575",
+        "after.json": "066848118a5af76944cfe34cf74449757e2b361952a1a5986be932b3f3e68575",
+        "prompt-input.json": "06bc1557362c31c303c4a5d026789ce183f94f2a0b280758b146f873bc4f3fa5"
+      },
+      "preservedFiles": 480,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 12,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 26,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: NONE",
+              "NEW: design/gdd/resolve-hit.md",
+              "NEW: .agents/skills/game-studio-design-review/SKILL.md",
+              "NEW: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "NEW: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "NEW: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "NEW: project.yaml",
+              "NEW: AGENTS.md",
+              "NEW: design/gdd/game-concept.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "receipt-gap",
+      "runId": "game-studio-design-review-up2D6G",
+      "status": "PASS",
+      "scopeOfResult": "Same original target and request: latest-entry target/policy hashes are NEW, old approval not reused; full 8/8 content review finds ambiguous invalid-input contract. Two formulas, zero dependencies, one system, no new ADR: M, S ineligible.",
+      "verdict": "NEEDS REVISION",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "scope_corrected",
+      "parentThreadId": "01a1cfd2-183a-7862-9ebb-94c10c4027ae",
+      "parentTraceFile": "rollout-2026-11-12T20-53-34-01a1cfd2-183a-7862-9ebb-94c10c4027ae.jsonl",
+      "parentTraceSha256": "5f3960ef47001b46f2de8c2e739e6f33b621dfba812011036f82ca1179732c56",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": true,
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "evidenceHashes": {
+        "fixture.json": "fc09d1cdf60efc48fe99668779a6a3d367f267951b13cc501ff9e20aa063761d",
+        "events.jsonl": "63b67d0645fd82c327ed8c9aa207edd6b4732afa2c8e82127b686f2904c3e5f3",
+        "final.txt": "f021449ec284b863469a52eda68555bab9955db80e1c5a97f6b0307ac04edd66",
+        "before.json": "19ef88a729d7f8a15a91e090cb3707a62149f56590cfa2c7593dfa12af4e1607",
+        "after.json": "19ef88a729d7f8a15a91e090cb3707a62149f56590cfa2c7593dfa12af4e1607",
+        "prompt-input.json": "a25699f4b4bdb3a30a03928a735ae19d38330bcb59323eb190bbba6f59e6e9da"
+      },
+      "preservedFiles": 481,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 20,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 40,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: design/gdd/reviews/resolve-hit-review-log.md",
+              "NEW: design/gdd/resolve-hit.md",
+              "NEW: .agents/skills/game-studio-design-review/SKILL.md",
+              "NEW: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "NEW: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "NEW: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "NEW: AGENTS.md",
+              "NEW: project.yaml",
+              "NEW: production/stage.txt",
+              "UNCHANGED: design/gdd/game-concept.md",
+              "NEW: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md",
+              "NEW: .agents/skills/game-studio-design-review/references/specialists.md",
+              "NEW: .agents/skills/game-studio-design-review/references/follow-up-and-records.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "complete-records-clear",
+      "runId": "game-studio-design-review-EB2GLw",
+      "status": "PASS",
+      "scopeOfResult": "Separate clarified invalid-input variant: substantive full 8/8 lean approval, M with explicit counts; full report precedes exact authorized index status and eleven reproducible receipt stamps.",
+      "verdict": "APPROVED",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "scope_corrected",
+      "parentThreadId": "01a1cfd2-183a-7d02-8fff-6fad2479fc2f",
+      "parentTraceFile": "rollout-2026-11-12T20-53-34-01a1cfd2-183a-7d02-8fff-6fad2479fc2f.jsonl",
+      "parentTraceSha256": "2c0f64ac18aadf0ec7935194aff9902c05d1fcb772e805227d90cc08fdb6f26c",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": false,
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "evidenceHashes": {
+        "fixture.json": "ad03a802f48cbcab00abbcf304e965ed6d1837e088fbdf6293e7191dd69b6244",
+        "events.jsonl": "cabb50d68fbe950613b50a6acc089c3caf9eea31a579d8df055878df4d43aa6e",
+        "final.txt": "5785350aa8f81753bd7683ffbfa00bc76903de9258155fadfac073f1b7a63901",
+        "before.json": "27dc644afcc1b72de978e75074597026c3c8079b3d7281d370aabcce83a3247f",
+        "after.json": "b4f10e5a51cef5649af2580d48a6080166a0621829eb00460f3aaa2799663bcd",
+        "prompt-input.json": "0ae6ed2bfa5614937687b4afcf7a31b2cc460c207db1dfd511d2d94a28120757"
+      },
+      "preservedFiles": 480,
+      "changed": [
+        "design/gdd/systems-index.md"
+      ],
+      "added": [
+        "design/gdd/reviews/resolve-hit-review-log.md"
+      ],
+      "artifactHashes": {
+        "design/gdd/systems-index.md": {
+          "before": "fe45f85c63a643788af0a5205fe2fb53e0d9e70c81923535b6c1aa152b559684",
+          "after": "d9e0bab6d317d3f6a0badc1e0033fbcecfac9d986b29a2144a4241dc6e5d7680"
+        },
+        "design/gdd/reviews/resolve-hit-review-log.md": {
+          "before": null,
+          "after": "a48d53c134c7a4d390ef386351904eb0dd484b7c9100b6dd90985955e4180446"
+        }
+      },
+      "observed": {
+        "commandCount": 21,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 36,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: NONE",
+              "NEW: design/gdd/resolve-hit.md",
+              "NEW: .agents/skills/game-studio-design-review/SKILL.md",
+              "NEW: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "NEW: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "NEW: .agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+              "NEW: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "NEW: project.yaml",
+              "NEW: AGENTS.md",
+              "NEW: design/gdd/game-concept.md",
+              "NEW: design/gdd/systems-index.md",
+              "NEW: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md"
+            ]
+          },
+          {
+            "eventIndex": 45,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: design/gdd/reviews/resolve-hit-review-log.md",
+              "UNCHANGED: design/gdd/resolve-hit.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/SKILL.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "UNCHANGED: project.yaml",
+              "UNCHANGED: AGENTS.md",
+              "UNCHANGED: design/gdd/game-concept.md",
+              "UNCHANGED: design/gdd/systems-index.md",
+              "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "exactSingleIndexStatusChange": true,
+        "stamps": [
+          {
+            "path": "design/gdd/resolve-hit.md",
+            "sha256": "9d453c51a487b296920de7c55b5b88e05ed8306ad8e1839a981d507dda567ced",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/SKILL.md",
+            "sha256": "346f82f3b8d2e1e704b01c2295513b776ff9dd2ff4ae96558794595f54d81c84",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+            "sha256": "28d5aac7eb131f97d0bc76b8ca83a32dca446181c65ba8801c01d990d5f73b87",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/references/assessment-and-output.md",
+            "sha256": "cfc66767963b5353ab2aba81c8bf3fba045ef45d46655403efdbecc2249ddeef",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+            "sha256": "399c6b0a09ee79901cf243c96757f0c011da1f440dee704ae2c908830ba1a451",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+            "sha256": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+            "matches": "current_bytes"
+          },
+          {
+            "path": "project.yaml",
+            "sha256": "c1baea25616c480792e963d50518c5e6b910f3ea94c6335cd66b7d5c82c0e5e1",
+            "matches": "current_bytes"
+          },
+          {
+            "path": "AGENTS.md",
+            "sha256": "6afea7ce5281c8c50455eff8b0ab3cfadd22fa691aff5b6d0d1a644f8e6567a5",
+            "matches": "current_bytes"
+          },
+          {
+            "path": "design/gdd/game-concept.md",
+            "sha256": "f88b5c9aaa3fe29f46ea0fcae7acd3511c6c391dc069375786e4e024812f8c58",
+            "matches": "current_bytes"
+          },
+          {
+            "path": "design/gdd/systems-index.md",
+            "sha256": "d9e0bab6d317d3f6a0badc1e0033fbcecfac9d986b29a2144a4241dc6e5d7680",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md",
+            "sha256": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+            "matches": "current_bytes"
+          }
+        ],
+        "independentReceiptReadback": [
+          "RECEIPT: design/gdd/reviews/resolve-hit-review-log.md",
+          "UNCHANGED: design/gdd/resolve-hit.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/SKILL.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+          "UNCHANGED: project.yaml",
+          "UNCHANGED: AGENTS.md",
+          "UNCHANGED: design/gdd/game-concept.md",
+          "UNCHANGED: design/gdd/systems-index.md",
+          "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md"
+        ],
+        "reportBeforeWrite": {
+          "reportEventIndex": 41,
+          "writeEventIndex": 43
+        }
+      }
+    },
+    {
+      "scenario": "complete-records",
+      "runId": "game-studio-design-review-qXM1UO",
+      "status": "PASS",
+      "scopeOfResult": "Same original target and request as first attempt: localized invalid-input contradiction blocks approval; M correctly follows two formulas. Full report precedes exact Needs Revision status and evidence entry.",
+      "verdict": "NEEDS REVISION",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "scope_corrected",
+      "parentThreadId": "01a1cfd2-1a08-7940-ae6f-096dfa0e9c38",
+      "parentTraceFile": "rollout-2026-11-12T20-53-35-01a1cfd2-1a08-7940-ae6f-096dfa0e9c38.jsonl",
+      "parentTraceSha256": "a18e50f80cc0965b99506f21bdcfa6a1185d171b4a43a4bb1cbf1f60d47fb216",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": false,
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "evidenceHashes": {
+        "fixture.json": "4a00710328a33bea9ece5fca6345b72ae02b7dfb24d979db30f14818f4818383",
+        "events.jsonl": "68ed35c3fef61ef6abf4ee8264b972e129de7dc757eba9669169c6ba2f68a53d",
+        "final.txt": "20ff493acd537fed11ad39422f5a945daab0d402d515be01f209cfa2eecb3147",
+        "before.json": "47cc344321830c27f4d5e54b0bbbcb07b76028bd5adb6d1422abc7232fe90c22",
+        "after.json": "7739d578275c799ef151c60956519c50d8b14b2ae5935d2ad495d343d7e25dee",
+        "prompt-input.json": "c215939db159b02d17a8d6415bc5c8ed4ada5d8f76305a60045ead103b1b7041"
+      },
+      "preservedFiles": 480,
+      "changed": [
+        "design/gdd/systems-index.md"
+      ],
+      "added": [
+        "design/gdd/reviews/resolve-hit-review-log.md"
+      ],
+      "artifactHashes": {
+        "design/gdd/systems-index.md": {
+          "before": "fe45f85c63a643788af0a5205fe2fb53e0d9e70c81923535b6c1aa152b559684",
+          "after": "3d889c38ee5f9600611f8b374da28bef73258111d0f073540805284712de8404"
+        },
+        "design/gdd/reviews/resolve-hit-review-log.md": {
+          "before": null,
+          "after": "d6b5845195d8c43887949d8823647ed9b7d2e2dda4e8b4bbfe6fea36a278fb25"
+        }
+      },
+      "observed": {
+        "commandCount": 18,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 28,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: NONE",
+              "NEW: design/gdd/resolve-hit.md",
+              "NEW: .agents/skills/game-studio-design-review/SKILL.md",
+              "NEW: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "NEW: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "NEW: .agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+              "NEW: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "NEW: project.yaml",
+              "NEW: AGENTS.md",
+              "NEW: design/gdd/game-concept.md",
+              "NEW: design/gdd/systems-index.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "exactSingleIndexStatusChange": true,
+        "stamps": [
+          {
+            "path": "design/gdd/resolve-hit.md",
+            "sha256": "7ab872282abdbdf10a6dd16ce8770645fb61afdb332b0f8aa386478c6d566b32",
+            "matches": "current_bytes"
+          },
+          {
+            "path": "design/gdd/game-concept.md",
+            "sha256": "f88b5c9aaa3fe29f46ea0fcae7acd3511c6c391dc069375786e4e024812f8c58",
+            "matches": "current_bytes"
+          },
+          {
+            "path": "project.yaml",
+            "sha256": "c1baea25616c480792e963d50518c5e6b910f3ea94c6335cd66b7d5c82c0e5e1",
+            "matches": "current_bytes"
+          },
+          {
+            "path": "AGENTS.md",
+            "sha256": "6afea7ce5281c8c50455eff8b0ab3cfadd22fa691aff5b6d0d1a644f8e6567a5",
+            "matches": "current_bytes"
+          },
+          {
+            "path": "design/gdd/systems-index.md",
+            "sha256": "fe45f85c63a643788af0a5205fe2fb53e0d9e70c81923535b6c1aa152b559684",
+            "matches": "reviewed_before_tracking_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/SKILL.md",
+            "sha256": "346f82f3b8d2e1e704b01c2295513b776ff9dd2ff4ae96558794595f54d81c84",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+            "sha256": "28d5aac7eb131f97d0bc76b8ca83a32dca446181c65ba8801c01d990d5f73b87",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/references/assessment-and-output.md",
+            "sha256": "cfc66767963b5353ab2aba81c8bf3fba045ef45d46655403efdbecc2249ddeef",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+            "sha256": "399c6b0a09ee79901cf243c96757f0c011da1f440dee704ae2c908830ba1a451",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+            "sha256": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+            "matches": "current_bytes"
+          },
+          {
+            "path": ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md",
+            "sha256": "e4c502016c7b6ec32387cc6bf0fe155dad0bde515f9fc134f041156af79e7928",
+            "matches": "current_bytes"
+          }
+        ],
+        "independentReceiptReadback": [
+          "RECEIPT: design/gdd/reviews/resolve-hit-review-log.md",
+          "UNCHANGED: design/gdd/resolve-hit.md",
+          "UNCHANGED: design/gdd/game-concept.md",
+          "UNCHANGED: project.yaml",
+          "UNCHANGED: AGENTS.md",
+          "CHANGED: design/gdd/systems-index.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/SKILL.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+          "UNCHANGED: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+          "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md"
+        ],
+        "reportBeforeWrite": {
+          "reportEventIndex": 33,
+          "writeEventIndex": 37
+        }
+      }
+    },
+    {
+      "scenario": "missing",
+      "runId": "game-studio-design-review-j8YqI6",
+      "status": "PASS",
+      "scopeOfResult": "Missing target: actual ASSESSMENT_INCOMPLETE, NOT ASSESSED, no invented section review, scope estimate or tracking; named available design-system producer without executing it.",
+      "verdict": "NOT ASSESSED",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "scope_corrected",
+      "parentThreadId": "01a1cfd3-e129-7c91-9e5c-e3bb6106b31f",
+      "parentTraceFile": "rollout-2026-11-12T20-55-31-01a1cfd3-e129-7c91-9e5c-e3bb6106b31f.jsonl",
+      "parentTraceSha256": "c914d29ab8474d41afcc26589933686a143360e45670248924d115b4091ea471",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": false,
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "evidenceHashes": {
+        "fixture.json": "1fd70af66bb8cdf4a99f0784b0997e84897cad8ff4dce32f421394298aee58cb",
+        "events.jsonl": "96a5d1085fd1782d007cbbada9a899199fdc9f8e1ae1764f74a80c8686fa039d",
+        "final.txt": "44d0af97b3c63a0d4bd0837f0eac88dcfa86a03a46cda4dae23fd85f25367e5b",
+        "before.json": "f857e81d7f1ea5e66f9ed2e05bc3229f85645af6645cef5a5685955ffc16f999",
+        "after.json": "f857e81d7f1ea5e66f9ed2e05bc3229f85645af6645cef5a5685955ffc16f999",
+        "prompt-input.json": "e6d6ecc92320a02689e99e9177076e7fdcde05500470738396452034d73bc10a"
+      },
+      "preservedFiles": 478,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 11,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": []
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "minimal",
+      "runId": "game-studio-design-review-J1md4F",
+      "status": "PASS",
+      "scopeOfResult": "Voluntary minimal 0/0 required; missing sections advisory. Placeholder intent has no assessable rules, so NOT ASSESSED rather than approval or forced full GDD; no invented S.",
+      "verdict": "NOT ASSESSED",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "scope_corrected",
+      "parentThreadId": "01a1cfd5-6a66-7c33-93b7-a2442ceb33db",
+      "parentTraceFile": "rollout-2026-11-12T20-57-12-01a1cfd5-6a66-7c33-93b7-a2442ceb33db.jsonl",
+      "parentTraceSha256": "c6100ee180be9491a2422ac6b3a2d18fe94098d97f4212da7d87fabb81ebd968",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": false,
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "evidenceHashes": {
+        "fixture.json": "fa683a6f0ba3e93fc5b861495c02d27a3357b1bd2632173d0cba33efc8fa4ab0",
+        "events.jsonl": "54e7e3ac3ba5185e3697d1e471fdea71d6051e6411b7656ebffed6d94bc13793",
+        "final.txt": "943f7a1c3e5bd8dc7806106238c0adda6d0b05e10bbcb2628ac9e73d85698265",
+        "before.json": "2f5222dc20dfc22d9ba6f521234fbfb0675de7359bdace1cc6ff13f84ed74406",
+        "after.json": "2f5222dc20dfc22d9ba6f521234fbfb0675de7359bdace1cc6ff13f84ed74406",
+        "prompt-input.json": "59f9c3896274ec08d546aa95c0f65553b145cd7a356fef94431e761aa3bb715b"
+      },
+      "preservedFiles": 480,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 13,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 29,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: NONE",
+              "NEW: design/gdd/resolve-hit.md",
+              "NEW: .agents/skills/game-studio-design-review/SKILL.md",
+              "NEW: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "NEW: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "NEW: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "NEW: project.yaml",
+              "NEW: AGENTS.md",
+              "NEW: design/game-brief.md",
+              "NEW: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "system-override",
+      "runId": "game-studio-design-review-rRBNby",
+      "status": "PASS",
+      "scopeOfResult": "Actual resolve-hit override selects full despite project minimal, source project.yaml:17. Missing four of eight sections and negative-damage defect block approval; M for one implicit formula.",
+      "verdict": "NEEDS REVISION",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "scope_corrected",
+      "parentThreadId": "01a1cfd5-6aa8-7b70-ad88-1ca7a5a0b706",
+      "parentTraceFile": "rollout-2026-11-12T20-57-12-01a1cfd5-6aa8-7b70-ad88-1ca7a5a0b706.jsonl",
+      "parentTraceSha256": "fd96b7bb1c871da71738f5ebf365ba9e6b18488ac11e78fe743412b641f2524f",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": false,
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "evidenceHashes": {
+        "fixture.json": "c6b1b255c8a22d429ea820fe3b91928d4bb7f22ad2ff05e5f39f7b3a02f464b1",
+        "events.jsonl": "19589187a68a5aef4c23bec60942a0ec9dd9d354eafa83c076e05c3fe8781fbb",
+        "final.txt": "5e63ab37f70a4d56f9cd4aee492bb6f3caf3e0ea2a3e155a9d9a1acee417b409",
+        "before.json": "b113816fcc9114310b2aa332809cb1946676b41d832e5dde002c877751ecc41a",
+        "after.json": "b113816fcc9114310b2aa332809cb1946676b41d832e5dde002c877751ecc41a",
+        "prompt-input.json": "c4caa510ae43515c33c06689ba26cfa37eb57a725fcadf6a538ffdcd360b490a"
+      },
+      "preservedFiles": 480,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 15,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 27,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: NONE",
+              "NEW: design/gdd/resolve-hit.md",
+              "NEW: .agents/skills/game-studio-design-review/SKILL.md",
+              "NEW: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "NEW: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "NEW: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "NEW: project.yaml",
+              "NEW: AGENTS.md",
+              "NEW: design/gdd/game-concept.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "negative",
+      "runId": "game-studio-design-review-24sdK5",
+      "status": "PASS",
+      "scopeOfResult": "Source-code negative trigger: only toolkit help and src/score.js read; explains subtraction, no Skill review/delegation/tracking.",
+      "verdict": "not_applicable",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "scope_corrected",
+      "parentThreadId": "01a1cfd5-72e4-7b03-bbe6-9f4a834cc630",
+      "parentTraceFile": "rollout-2026-11-12T20-57-14-01a1cfd5-72e4-7b03-bbe6-9f4a834cc630.jsonl",
+      "parentTraceSha256": "e6f442022132583718e958942d1b6bbddd63dfb5b40c6d307993c03cba378c9b",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": false,
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "evidenceHashes": {
+        "fixture.json": "1d093b8f300621fc0359029d9c87da1c19f8ad3089486ce1ad8b842c7dc0f93a",
+        "events.jsonl": "6c70f59cb34430308f8d1433a7dec9602856c222f5f80c57a1360bcc2ce76672",
+        "final.txt": "b78408e1de6ee0d2d76e2736223f33e6d0cccc9e93f0938ddb22e05a84eba7d7",
+        "before.json": "05018ea7ee74a9187fd7b9374259c6b669da2cd7a7804c93b54fe259a9471d8d",
+        "after.json": "05018ea7ee74a9187fd7b9374259c6b669da2cd7a7804c93b54fe259a9471d8d",
+        "prompt-input.json": "d09b57549e335c0304aeed3b0b8615e8e3beb9a6a0b6a9cb28b64079aee39508"
+      },
+      "preservedFiles": 481,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 2,
+        "skillRead": false,
+        "structureCheck": false,
+        "receiptChecks": []
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "reuse",
+      "runId": "game-studio-design-review-AtlZMh",
+      "status": "PASS",
+      "scopeOfResult": "Synthetic prior lean/full receipt: all stamped inputs UNCHANGED, adequate coverage explicitly reused; M retained, no claim new specialists ran.",
+      "verdict": "APPROVED",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "scope_corrected",
+      "parentThreadId": "01a1cfd7-71ae-7a33-8f1c-f76ebaa6b0c4",
+      "parentTraceFile": "rollout-2026-11-12T20-59-30-01a1cfd7-71ae-7a33-8f1c-f76ebaa6b0c4.jsonl",
+      "parentTraceSha256": "c23ae99bc4a9ac48a474df1d07a33fe8bce646894a29320d970db85b54ea3efb",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": true,
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "evidenceHashes": {
+        "fixture.json": "8454bd4d7a2bf15be37f65239c4a96e17f4d3869d095b3c29c9b46227d249bb3",
+        "events.jsonl": "d1c8f25b3d9746c0bd9f46548077cc980ff718f900243087840ffaa45d50e694",
+        "final.txt": "6debbcc3dc2281f995bd1421ec64dfd918b0ab05de92562a853a792b352ecdc5",
+        "before.json": "709897b4b0549479caf7648870d575007f6091c36d0ce00362d18a02dcf4407e",
+        "after.json": "709897b4b0549479caf7648870d575007f6091c36d0ce00362d18a02dcf4407e",
+        "prompt-input.json": "ed50f62e92b4dd58a2def4887c772ee5c9eeabae6b560d6140252050a08c9dd3"
+      },
+      "preservedFiles": 481,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 14,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 29,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: design/gdd/reviews/resolve-hit-review-log.md",
+              "UNCHANGED: design/gdd/resolve-hit.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/SKILL.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/specialists.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+              "UNCHANGED: AGENTS.md",
+              "UNCHANGED: project.yaml",
+              "UNCHANGED: production/stage.txt",
+              "UNCHANGED: .codex/config.toml",
+              "UNCHANGED: design/gdd/game-concept.md",
+              "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "deeper-review",
+      "runId": "game-studio-design-review-nujLe8",
+      "status": "PASS",
+      "scopeOfResult": "Synthetic prior solo/standard receipt remains byte-identical but is too shallow for lean/full. Whole GDD reassessed 8/8, M; no metadata-only approval upgrade.",
+      "verdict": "APPROVED",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "scope_corrected",
+      "parentThreadId": "01a1cfd7-9462-7621-9f09-edc8b0645e6c",
+      "parentTraceFile": "rollout-2026-11-12T20-59-36-01a1cfd7-9462-7621-9f09-edc8b0645e6c.jsonl",
+      "parentTraceSha256": "a6788e2509868a9877806b0802a5ea4878b2c9533e92e60d3e0900662e1ece0e",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": true,
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "evidenceHashes": {
+        "fixture.json": "54ea7d11cbff2f1dbe8e2e40b48090f3fab40e95f3953d5430df047b48cf6e37",
+        "events.jsonl": "41fddfe2c2bd18ec799961a05bb3040e58fd3abfc84fa145f9f11490da12e31f",
+        "final.txt": "3f9dd861f7a9d979b9067d752a009e45d03148fb533231fcfd2d0bfd0ee17595",
+        "before.json": "b6ce1de8dc15c3056053716926b8f2b9fdb2f4ec4c932d12ad1099d5a1bb9200",
+        "after.json": "b6ce1de8dc15c3056053716926b8f2b9fdb2f4ec4c932d12ad1099d5a1bb9200",
+        "prompt-input.json": "a7b6837e7a753cdedfa3b9ed9b10dc87c15f017f38ea623525988a7d3724de69"
+      },
+      "preservedFiles": 481,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 12,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 28,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: design/gdd/reviews/resolve-hit-review-log.md",
+              "UNCHANGED: design/gdd/resolve-hit.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/SKILL.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/specialists.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+              "UNCHANGED: AGENTS.md",
+              "UNCHANGED: project.yaml",
+              "UNCHANGED: production/stage.txt",
+              "UNCHANGED: design/gdd/game-concept.md",
+              "UNCHANGED: .codex/config.toml",
+              "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "full-missing-role",
+      "runId": "game-studio-design-review-n9acKm",
+      "status": "PASS",
+      "scopeOfResult": "Actual QA and Lead Programmer reviews overlap; Creative Director starts after both finish. Two required roles missing, senior and parent NOT ASSESSED despite no known blockers; no proxy specialist.",
+      "verdict": "NOT ASSESSED",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "scope_corrected",
+      "parentThreadId": "01a1cfd7-9462-78c2-954d-d063501cfde0",
+      "parentTraceFile": "rollout-2026-11-12T20-59-37-01a1cfd7-9462-78c2-954d-d063501cfde0.jsonl",
+      "parentTraceSha256": "b13486d11b9abc09141f01ae22db07bbb04b6e029c2a727da9f18facbd30bc96",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [
+        {
+          "threadId": "01a1cfd8-4c59-7713-b498-b326c7ef5fe2",
+          "role": "game-studio-qa-lead",
+          "traceFile": "rollout-2026-11-12T21-00-21-01a1cfd8-4c59-7713-b498-b326c7ef5fe2.jsonl",
+          "traceSha256": "991170419971813728d815cefe7f5b608b9bbc09a864a1fbd35d97595cf8384d",
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approvalPolicy": "on-request",
+            "sandbox": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:01:24.816Z"
+        },
+        {
+          "threadId": "01a1cfd8-6db9-74c0-be9e-1c6ba28104cb",
+          "role": "game-studio-lead-programmer",
+          "traceFile": "rollout-2026-11-12T21-00-30-01a1cfd8-6db9-74c0-be9e-1c6ba28104cb.jsonl",
+          "traceSha256": "c28ade3a9dcdcc17717f7632b2272034fccb8dba448db17087c32a7bbd1b5848",
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approvalPolicy": "on-request",
+            "sandbox": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:01:34.537Z"
+        },
+        {
+          "threadId": "01a1cfd9-cb49-7371-a4e7-545329e386a2",
+          "role": "game-studio-creative-director",
+          "traceFile": "rollout-2026-11-12T21-01-59-01a1cfd9-cb49-7371-a4e7-545329e386a2.jsonl",
+          "traceSha256": "9b2bc9f9218034dd45deee486960a9211d93dbfa0634fe1a80da1addbc8acbf6",
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approvalPolicy": "on-request",
+            "sandbox": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:02:30.242Z"
+        }
+      ],
+      "syntheticPriorReview": false,
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "evidenceHashes": {
+        "fixture.json": "cd761e5b0d50920980a506aedbed00e69876256a5e813af4248eb42209cb3353",
+        "events.jsonl": "125313f96a998668c6c33116ef93ceecbbce545927d27ef78f3be3d3defc37e6",
+        "final.txt": "0eac3ca85982e0067ee17d0abbc5fe673637e23887a50ee7d86868c34767375a",
+        "before.json": "4213f9c64c83b43064dcdb59d88f7e5aa43029f843a776715b1620020ea52453",
+        "after.json": "4213f9c64c83b43064dcdb59d88f7e5aa43029f843a776715b1620020ea52453",
+        "prompt-input.json": "c4280ed0a0339414c0b02b58dee8b66070a55db7945dea0ed5df323f65c36fa3"
+      },
+      "preservedFiles": 479,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 22,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 42,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: NONE",
+              "NEW: design/gdd/resolve-hit.md",
+              "NEW: .agents/skills/game-studio-design-review/SKILL.md",
+              "NEW: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "NEW: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "NEW: .agents/skills/game-studio-design-review/references/specialists.md",
+              "NEW: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "NEW: project.yaml",
+              "NEW: AGENTS.md",
+              "NEW: .codex/config.toml",
+              "NEW: design/gdd/game-concept.md",
+              "NEW: .codex/agents/game-studio-qa-lead.toml",
+              "NEW: .codex/agents/game-studio-lead-programmer.toml",
+              "NEW: .codex/agents/game-studio-creative-director.toml"
+            ]
+          }
+        ],
+        "roleSpawns": [
+          {
+            "at": "2026-11-12T13:00:21.446Z",
+            "role": "game-studio-qa-lead",
+            "task": "qa_review"
+          },
+          {
+            "at": "2026-11-12T13:00:29.996Z",
+            "role": "game-studio-lead-programmer",
+            "task": "web_review"
+          },
+          {
+            "at": "2026-11-12T13:01:59.478Z",
+            "role": "game-studio-creative-director",
+            "task": "senior_review"
+          }
+        ],
+        "parallelSpecialistsThenSeniorVerified": true,
+        "availableRoleGaps": [
+          "game-studio-game-designer (intentionally removed after installed-byte verification)",
+          "game-studio-systems-designer (not yet migrated)"
+        ],
+        "formulaExecution": {
+          "role": "game-studio-lead-programmer",
+          "at": "2026-11-12T13:00:59.311Z",
+          "runtime": "Node v24.22.2",
+          "boundaryPairs": 36,
+          "mismatches": 0,
+          "reference": "BigInt exact arithmetic",
+          "scope": "Direct formulas only; no implemented game, browser or performance test"
+        }
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "context-changed",
+      "runId": "game-studio-design-review-3rXXAU",
+      "status": "PASS",
+      "scopeOfResult": "Target unchanged but registry health changed 20 to 12; actual receipt CHANGED and whole-document search find stale example at line 24. Complete review after conflict, correct R=9/L=3, NEEDS REVISION, M.",
+      "verdict": "NEEDS REVISION",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "scope_corrected",
+      "parentThreadId": "01a1cfd9-081c-7c42-b205-43c97f5c0d46",
+      "parentTraceFile": "rollout-2026-11-12T21-01-09-01a1cfd9-081c-7c42-b205-43c97f5c0d46.jsonl",
+      "parentTraceSha256": "dea1b97d09daaef96e4062656dd237622d565275fb8a927907515e1042c6cb34",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": true,
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "evidenceHashes": {
+        "fixture.json": "d96af3e253f2202908e18dda7c71afaba80f07d9b1e61fc7ac7c0118560f8624",
+        "events.jsonl": "c0c76685a9c22ea1a5402cd2183e976d0664c12f0147d251ed5cac09640e64ee",
+        "final.txt": "8ab1d69b00ff0aee25568677e82f4df132b48ee26beb08d7bb6fa1e6d357829e",
+        "before.json": "6fbb55a8995735323045bc68ec1af26abb09f00e0ee220eb9da058fbed2dc9a2",
+        "after.json": "6fbb55a8995735323045bc68ec1af26abb09f00e0ee220eb9da058fbed2dc9a2",
+        "prompt-input.json": "22ad9356f2048d69c534f21f10d799e63368e05356233dec51faf3fb9217f3ac"
+      },
+      "preservedFiles": 482,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 21,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 37,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: design/gdd/reviews/resolve-hit-review-log.md",
+              "UNCHANGED: design/gdd/resolve-hit.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/SKILL.md",
+              "CHANGED: design/registry/entities.yaml",
+              "UNCHANGED: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "UNCHANGED: AGENTS.md",
+              "UNCHANGED: project.yaml",
+              "UNCHANGED: production/stage.txt",
+              "UNCHANGED: design/gdd/game-concept.md",
+              "UNCHANGED: .codex/config.toml",
+              "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/specialists.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/follow-up-and-records.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "originalInputBytesPreserved": true,
+        "entireWorkspaceByteIdentical": true
+      }
+    },
+    {
+      "scenario": "real-review-reuse",
+      "runId": "game-studio-design-review-real-reuse-QHR8fJ",
+      "status": "PASS",
+      "scopeOfResult": "Fresh native session reuses actual EB2GLw approval and eleven unchanged evidence stamps in the identical workspace, without reinstall, policy edits, new receipt or tracking changes.",
+      "verdict": "APPROVED",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "resourceVariant": "scope_corrected",
+      "parentThreadId": "01a1cfd9-0ddc-77a0-8edb-ada048d33a2d",
+      "parentTraceFile": "rollout-2026-11-12T21-01-11-01a1cfd9-0ddc-77a0-8edb-ada048d33a2d.jsonl",
+      "parentTraceSha256": "d7d3eb41815ae66275b55514b42713ff9719dfd318b761c717db410ad0bfa53c",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approvalPolicy": "on-request",
+        "sandbox": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "children": [],
+      "syntheticPriorReview": false,
+      "packageIntegrity": "sha512-DEQgZV1dbjFShIDMKf4B/Rf1sHlG3rjbvL0eQWfhFrycDEQZIKFmP1dV/mFFJWseoFnHU96xIbKQxjJ1VryknQ==",
+      "evidenceHashes": {
+        "fixture.json": "2385481e1a9ea5c20047ad822a7052bfe57ab91ea5db4b25f315a300fda84794",
+        "events.jsonl": "f2af2b94f8e6f765a221606c6d55248d3d017f91f7cfe95a99c871f6c1578520",
+        "final.txt": "4065cb993f2a30ebb6f3cbcf1f6bea456d9ef08e2f961c34d36f0c1cc71c8940",
+        "before.json": "b4f10e5a51cef5649af2580d48a6080166a0621829eb00460f3aaa2799663bcd",
+        "after.json": "b4f10e5a51cef5649af2580d48a6080166a0621829eb00460f3aaa2799663bcd",
+        "prompt-input.json": "062a050361ed98e13be620c9f8f2a31425095f64b69ed7282d7a58eaa12d1baf"
+      },
+      "preservedFiles": 482,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "observed": {
+        "commandCount": 12,
+        "skillRead": true,
+        "structureCheck": true,
+        "receiptChecks": [
+          {
+            "eventIndex": 27,
+            "exitCode": 0,
+            "lines": [
+              "RECEIPT: design/gdd/reviews/resolve-hit-review-log.md",
+              "UNCHANGED: design/gdd/resolve-hit.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/SKILL.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/assessment-and-output.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+              "UNCHANGED: .agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+              "UNCHANGED: project.yaml",
+              "UNCHANGED: AGENTS.md",
+              "UNCHANGED: design/gdd/game-concept.md",
+              "UNCHANGED: design/gdd/systems-index.md",
+              "UNCHANGED: .game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md"
+            ]
+          }
+        ]
+      },
+      "independentFileCheck": {
+        "snapshotMatchesReportedChanges": true,
+        "gameGddPolicyStageCheckpointUnchanged": true,
+        "entireWorkspaceByteIdentical": true
+      },
+      "realReviewOrigin": {
+        "runId": "game-studio-design-review-EB2GLw",
+        "parentThreadId": "01a1cfd2-183a-7d02-8fff-6fad2479fc2f",
+        "originalAfterSha256": "b4f10e5a51cef5649af2580d48a6080166a0621829eb00460f3aaa2799663bcd",
+        "entireOriginAfterEqualsFollowupBefore": true,
+        "independentProfile": true,
+        "reinstalled": false,
+        "policyChanged": false,
+        "receiptRewritten": false,
+        "runnerSha256": "8e226cbeefed8d0ead697c171722e1023d13ad1cdd4bc11eb09a38b204d3485f"
+      }
+    }
+  ],
+  "knownLimits": [
+    "All native parents used workspace-write with offline network policy; read-only behavior is observed file preservation, not OS write denial.",
+    "Registry-conflict, incomplete and numeric-standard were run on the initial resource snapshot; their valid scoped evidence is retained, not represented as reruns on the corrected snapshot.",
+    "Initial complete-records treats ambiguous input wording as advisory while later same-input review blocks it; scope fix proof does not claim a deterministic verdict change for ambiguous natural language.",
+    "Revised original complete-records receipt honestly stamps reviewed pre-tracking index bytes: ten stamps match current files, index stamp matches original bytes and reads CHANGED after authorized status write. Clarified approval stamps reassessed post-tracking index and supports actual reuse.",
+    "Receipt helper proves whole-file identity only. Existing source section-hash variants remain unmigrated in the broader helper inventory.",
+    "A successful isolated review is neither game implementation/test/play acceptance nor permission to write other artifacts."
+  ],
+  "openMatrix": [
+    "Full specialist panel with every required domain role available, domain routing beyond the Web rule, adverse senior verdict and conflicting specialist findings.",
+    "Native desktop discovery, execution from project subdirectories, unavailable senior and actual tool denial.",
+    "Both --review and --depth precedence, collaborative/autonomous interaction, native question UI and dynamic closing choices.",
+    "Empty/unreadable targets, nonnumeric standard, explicit tuning overrides, additional placeholder and dependency/registry fallback variations.",
+    "Unchanged failed prior verdict, changed Skill/helper/policy/target, malformed/missing metadata and new/deleted contextual files end-to-end (some deterministic helper cases are unit-tested only).",
+    "Authorized GDD revisions followed by fresh independent review; prior log append preservation; concurrent index/log/GDD changes, refused writes, missing index, interrupted append."
+  ],
+  "sanitization": "Local evidence directories are identified by basename under the system temp directory; native traces by filename under the dated Codex sessions directory. No credentials, encrypted prompts or hidden reasoning are included.",
+  "deterministicValidation": {
+    "receiptUnitTests": {
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "command": "node --test toolkit/test/design-review-receipts.test.mjs"
+    },
+    "hostAndFixtureSyntax": "passed",
+    "evidenceJsonAndSanitization": "passed",
+    "ownedFilesDiffWhitespace": "passed",
+    "sharedBuildRerunByThisAgent": false
+  },
+  "maintainerFileHashes": {
+    "toolkit/test/design-review-host.mjs": "9eff4935667f650fbfcff7b36f68b600091e7259472c3a8573c0b9818f6917da",
+    "toolkit/test/fixtures/design-review-cases.mjs": "87567082bc1ac5b509c8006e2cc91487494d48737e61ab7679c975b64d8198bf",
+    "toolkit/test/design-review-receipts.test.mjs": "a0142d5ebf04fbafb28336447eb128d6013c1523837b02c0345a53ddd5d32c3f",
+    "studio-tests/skills/review/design-review-codex.md": "173c853f56e4a0e0fa75e6ee43bbb650a614f262979ac0e7e7fdb7849a052800"
+  }
+}

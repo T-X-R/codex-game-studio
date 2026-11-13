@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "Source-derived four-engine test-scaffold resource and complete S074 Skill content; helper execution and package checks only, original native workflows remain pending.",
+  "source": {
+    ".claude/scripts/test-scaffold.sh": "18545e527fafde3cfed097b1cd7bca92823efdc0338f05428113659cd48a4235",
+    ".claude/skills/test-setup/SKILL.md": "ef6ccb22b9ff8e61a3469ee7c7967e2a0cc1acad07a0f53b2f2fc5bb50727fca",
+    "studio-tests/skills/utility/test-setup.md": "ddce6599715744630c9fba6d457cde60613c5261e1fff131c51194793752e0ff"
+  },
+  "integratedFiles": {
+    "studio/scripts/test-scaffold.mjs": "f1718f2d4912967d40252a0e6f7e710b1eae4c0a5bbc6d4f9ffaabfdb5bd32e3",
+    "studio/templates/test-scaffold/asmdef_edit.json": "78b61cc4547568d5f991095cb89f20dccdb4eec8d5e2678f414d12a668d63727",
+    "studio/templates/test-scaffold/asmdef_play.json": "008472c72a5319f76ec39147eaeb1eaf7f6a38f69948cfc099807607d34d7119",
+    "studio/templates/test-scaffold/ci_godot.yml": "a7165ff6c22e2aa3440985f8ce2ceca756c1ce9fabf1ad4e61d6a67748111f8d",
+    "studio/templates/test-scaffold/ci_unity.yml": "af12317493da80d8d5036b45123268b62b5145e7d978e5a78659ce4cc2b17614",
+    "studio/templates/test-scaffold/ci_unreal.yml": "e486fdc3e9a16eb0bd5d5eca3661f6d0120b7bbe9b12aab2bd28d3cb6ddbb79b",
+    "studio/templates/test-scaffold/ci_web.yml": "8559f805cdac98185df661ef3791731856da928d720e0a5fea6a184a16fda1d1",
+    "studio/templates/test-scaffold/godot-placeholder.txt": "5e1c92e7be5698d48901500255153bfd4b87f8d9b69227ce83c8eeb0cf61c61a",
+    "studio/templates/test-scaffold/readme_godot.md": "3964b0396d129a1a5769b6a1d2e79b186ae940ba18b9b05ad8b9303624491bd5",
+    "studio/templates/test-scaffold/readme_unity.md": "638d29754dcba471d4f6dc5006a00220ea1f90c8976b8504dd9b3bc557a88b61",
+    "studio/templates/test-scaffold/readme_unreal.md": "30ef14c00bbf1f3bfad882e79be12b162e8eac4cce6e7e74c6cadce3e6aa0729",
+    "studio/templates/test-scaffold/readme_web.md": "0b790cf7d704072ced0499c00a164de630f928d31c6e25572bdbbadee07dba93",
+    "studio/templates/test-scaffold/smoke.md": "b6267c46c9e46fd7f6139ad45846d250a62a366ae8f7b3d2cb30484d6374f077",
+    "studio/templates/test-scaffold/unreal_tests_readme.md": "396b0574a37c4caad0e844e5fab1cc87b360e8c3dd2782c2c246b71ba33d333d",
+    "studio-tests/helpers/test-scaffold-codex.md": "dca97a5ee9e6b35b8aa8f147d31e84988dd4a64b1dd1eed71dcfabd7b83895d5",
+    "toolkit/src/config.ts": "7175f9f0dcdca33a37c29a82a363e367161c7ca8fc167725f23dd86c01ae989f",
+    "toolkit/src/legacy-config.ts": "1d4e075e1f378e9659cff7be672a2a8c5a95bdd74fc186f9f68c11febdf44120",
+    "toolkit/src/test-scaffold.ts": "3ce8c91afd3f19c545fdc574cb7fca983c1b6c29a86508d943f8bfb87b8e155c",
+    "toolkit/test/engine-alias-read.test.mjs": "9eb3a7f5b40793e60ef32ff128406073af3262adb99a1c993ce9e49cac539d9d",
+    "toolkit/test/test-scaffold.test.mjs": "c384bd3eaae374d045a9cf63d14455d8192bd8847d2c9e798b65ee0b5f87a4ad",
+    ".agents/skills/game-studio-test-setup/SKILL.md": "bd07bf7b375b33c5eca3ad794bf8f2637528ce40845f2cd671d96140f9cc2499",
+    ".agents/skills/game-studio-test-setup/references/ci.md": "66d3c34d5fb70d03900a6eccdec6421426f5604981031abc96a469f63dfdb6ec",
+    ".agents/skills/game-studio-test-setup/references/godot.md": "f429cac9d8af57d52b5def5dc16943698852b95da1343fb5edfeafed9054041f",
+    ".agents/skills/game-studio-test-setup/references/setup-and-summary.md": "8f244f061a1840df23a3e357b04b9cee2e7c18b3fc0fb303bc37c026f3731740",
+    ".agents/skills/game-studio-test-setup/references/unity.md": "56a88bfec055e84f80b60a9b889f2054d802adcf1e6698e52b8e4b0851ac1dda",
+    ".agents/skills/game-studio-test-setup/references/unreal.md": "84526840c8bfbed6b0a8ed8c10fb43c37e59346e83ee593c98b8c6aedbafebbb",
+    ".agents/skills/game-studio-test-setup/references/web.md": "846cb0f58eb64059b4125b4619196cc87645267d86bfd7767637e564f1cca464",
+    "studio-tests/skills/utility/test-setup-codex.md": "53c551b93fe57af98cdf7c954c4859bddfd054e66e812bbe9b6a2d858b7ec94d",
+    "toolkit/test/packed-smoke.mjs": "433ec761b6ff9eb0d520ad359b4809fd65119d416fd9f16212a29be921e0c627",
+    "studio-tests/catalog.yaml": "e31dfce18c7c2ea43aeee06aefe083408c3b76afdcb0a9591ada73a066435c5c"
+  },
+  "review": {
+    "reports": [
+      {
+        "path": "/private/tmp/game-studio-s074-independent-_nraw9ow/review.md",
+        "sha256": "2e7174ee9985cd615050cef119bc38829337dc044e57e6a2537f475cb7fd8550"
+      },
+      {
+        "path": "/private/tmp/game-studio-s074-content-recheck-wcyupahc/review.md",
+        "sha256": "b4f2e91081674a7dc9bb124d8ffa35306119f1a50aabcc4921c5e226feac535d"
+      },
+      {
+        "path": "/private/tmp/game-studio-s074-recheck-eripor59/review.md",
+        "sha256": "a75a051de47adeca7727815933fec73a98a1387b0d982e5846ea9ab552e9da71"
+      }
+    ],
+    "independentArtifactManifest": {
+      "path": "/private/tmp/game-studio-s074-recheck-eripor59/manifest.json",
+      "sha256": "f46a0dbf05f3047ca55a1b5e6948148ec1574dd24f47b30621e4831a20867915",
+      "rootVerifiedEntries": 406
+    },
+    "closedFindings": [
+      "Unreal README .uproject uses actual project basename, independently of module/editor target/filter.",
+      "Empty/null primary uses effective preferences; exact UE5 read alias normalizes with warning/raw provenance; invalid values and cross-engine conflicts still refuse, new writes still canonical only.",
+      "Declared Web Node/package-manager constraints are explicit UNRESOLVED needs and generated comments; no inferred runtime compatibility."
+    ],
+    "rootChanges": [
+      {
+        "file": "studio/templates/test-scaffold/readme_web.md",
+        "reviewedCandidateSha256": "68ff2fd80beabb2ce1064a0b7adf95e2a68a5188f106b7b45a981c273dddcc23",
+        "integratedSha256": "0b790cf7d704072ced0499c00a164de630f928d31c6e25572bdbbadee07dba93"
+      },
+      {
+        "file": "toolkit/src/test-scaffold.ts",
+        "reviewedCandidateSha256": "7b93ef33ac678b7468ddfdcc25cfa79494c9678a4b81e72c1a8363b5d4895328",
+        "integratedSha256": "3ce8c91afd3f19c545fdc574cb7fca983c1b6c29a86508d943f8bfb87b8e155c"
+      },
+      {
+        "file": "toolkit/test/test-scaffold.test.mjs",
+        "reviewedCandidateSha256": "f6f492479548612f1f8ae52cf9c8b5db7de4d2000ef88d3d52b33682773b5f81",
+        "integratedSha256": "c384bd3eaae374d045a9cf63d14455d8192bd8847d2c9e798b65ee0b5f87a4ad"
+      }
+    ],
+    "rootChangesRationale": [
+      "Generated Web README now limits TypeScript naming examples to the compatible starter and treats only install/test as mandatory; independently reviewed.",
+      "Root reproduced missing source-specific Godot placeholder purpose (1 failing test), then restored Unit/Integration lines including the actual custom root example; independently reviewed.",
+      "Packed smoke requires actual file counts and a helper-created README before owner replacement, preventing empty-list vacuous passes; Unreal missing compiler/project prerequisites remain asserted."
+    ],
+    "earlierBashComparison": {
+      "path": "/private/tmp/game-studio-test-scaffold-n6m2_zm6/bash-comparison-frozen/summary.json",
+      "sha256": "8acc521cf68f36058acd10231f08fae2bca32b7f73ac37277463987bbc539cab",
+      "scope": "16 actual source/candidate path-state pairs on the earlier frozen candidate, with only two approved Godot placeholder path normalizations. Preserved output differences and source symlink escape failure. Not claimed rerun on this revision."
+    }
+  },
+  "validation": {
+    "build": "PASS; includes final TypeScript compile",
+    "typecheck": "PASS; final edits also compiled by build",
+    "contentLint": "PASS; behaviorVerified false",
+    "skillMetadata": "PASS quick_validate",
+    "fullNode24": {
+      "pass": 524,
+      "fail": 0,
+      "skip": 0
+    },
+    "fullNode26": {
+      "pass": 524,
+      "fail": 0,
+      "skip": 0
+    },
+    "afterSkillContent": {
+      "node24Pass": 39,
+      "node26Pass": 39,
+      "fail": 0,
+      "skip": 0
+    },
+    "installedPackage": "PASS: actual npm archive/install/restore; both runtimes resolve exact helper and 13 template resources, perform each engine preview/create/repeat, preserve owner README CRLF/config; global project and restored runtime contain exact seven Skill files.",
+    "logs": {
+      "build": {
+        "path": "/private/tmp/game-studio-s074-content-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      "typecheck": {
+        "path": "/private/tmp/game-studio-scaffold-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      "contentLint": {
+        "path": "/private/tmp/game-studio-s074-content-lint.log",
+        "sha256": "8f58a17994eac7d79652dcf940f227a3ed35242596012bd002c27f967755792e"
+      },
+      "node24": {
+        "path": "/private/tmp/game-studio-scaffold-final24.log",
+        "sha256": "b74ae6ab502673f54a3de20dde3f495ebe67c0d5b25308a7f632343df02d4074"
+      },
+      "node26": {
+        "path": "/private/tmp/game-studio-scaffold-final26.log",
+        "sha256": "a2840b05570c6fb399016077804353f3be222654af32ffe1afa04916f5ea7a14"
+      },
+      "contentNode24": {
+        "path": "/private/tmp/game-studio-s074-content-tests24.log",
+        "sha256": "836bdd204f2492e6ae5f0eb2a0aad5c62b4466c643eae5aee17266f473c79734"
+      },
+      "contentNode26": {
+        "path": "/private/tmp/game-studio-s074-content-tests26.log",
+        "sha256": "3df1f8541b9ecb3229b07e3214ef5148659858f77407c94c7d885f614a5cbe4d"
+      },
+      "package": {
+        "path": "/private/tmp/game-studio-s074-content-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      },
+      "rootPlaceholderRed": {
+        "path": "/private/tmp/game-studio-scaffold-placeholder-red.log",
+        "sha256": "4a32940c8e1cb2a0920b0fa476292bfba3f8f1c7f6bc58d057345769c02a2a4e"
+      }
+    }
+  },
+  "catalogCounts": {
+    "skills": {
+      "partial": 18,
+      "pending": 57
+    },
+    "agents": {
+      "partial": 17,
+      "pending": 32
+    },
+    "aliases": {
+      "pending": 3
+    }
+  },
+  "limits": [
+    "All five original test-setup native scenarios and broader host/engine branches remain pending.",
+    "Generated CI and test assemblies are infrastructure, not evidence of real tests, dependencies, engine compilation, browser execution or remote branch enforcement.",
+    "Per-file exclusive creation preserves existing leaves; no whole-batch rollback or hostile concurrent directory replacement guarantee.",
+    "Full engine/compiler/license/runner requirements remain explicit needs; no dependency/browser install occurred in scaffold tests.",
+    "Current local checks are macOS; Windows/Linux CI for this integration must be observed separately."
+  ]
+}

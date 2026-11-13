@@ -1,5 +1,7 @@
 # Skill Test Spec: /prototype
 
+Codex migration supplement: [authorized Web growth and conversion](prototype-growth.md).
+
 ## Skill Summary
 
 `/prototype [what to make] [--path html|engine|paper] [--review full|lean|solo]

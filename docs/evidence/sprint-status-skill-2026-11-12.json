@@ -1,0 +1,2183 @@
+{
+  "date": "2026-11-12",
+  "status": "partial",
+  "scope": "Selected sprint-status CLI scenarios; neither full S057 nor desktop acceptance.",
+  "environment": {
+    "node": "24.22.2",
+    "codex": "0.162.0",
+    "platform": "macOS ARM64"
+  },
+  "source": {
+    ".claude/skills/sprint-status/SKILL.md": "ec4dc5f397dd52fbba01da9e3d24fab2e3382a85914a179b5a5f3b7e6a076b80",
+    "studio-tests/skills/sprint/sprint-status.md": "7e47f97434e5785b548adca9bdb07413b8434196042c980ee9826192565c031b",
+    ".claude/skills/sprint-plan/SKILL.md": "5f13a36181c02c5d10c55eca5ca8b89da794e3291fe1f726637200da7cf459c3"
+  },
+  "cases": [
+    {
+      "scenario": "source-03-no-sprint",
+      "runId": "game-studio-sprint-status-XJsgPo",
+      "status": "PASS",
+      "scopeOfResult": "Source-03 explicit standard workflow with absent sprint directory reports no sprint files and one create-plan recommendation. Two exact settings queries; no minimal helper or invented progress. Plain-language outcome only, not downstream capability acceptance.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d068-6e17-70e1-8961-5fa06148146b",
+      "parentTraceSha256": "af2b8275a69de0c0567cc3a2ae9083cf0b5e234174130d49e772f2bfc92d18f8",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-HsZONMlAPBtaEJIYaBJkbfRZNSc1kDlamXnlKIndT5V1fWd0DFoe9qauBrPIZ6dC8ADvPoMrUKjGI//cVyYxaA==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 535,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json'",
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 0,
+      "rawHashes": {
+        "fixture.json": "e2688e1cdc28e08fe2ebf04bd15428aa019c0a40c7ea30cff8cc83b603115a0c",
+        "report.json": "40cd28c7fe98170dd38f4816eab0da2cd3753087e2b1ec71e14e769ab70dd0e8",
+        "before.json": "8b9dbd950c490a4f02e40dbefb06e404fa4bd1d942b416f335a9e10cc83c71c8",
+        "after.json": "8b9dbd950c490a4f02e40dbefb06e404fa4bd1d942b416f335a9e10cc83c71c8",
+        "events.jsonl": "d1c887234c348002fa3272d858f3b42915fa7bb790b347c79d481943bfaba689",
+        "final.txt": "452537acc8406bdc96f12cd0a512f5229b1bea718a62b577c888de1f6f387c92",
+        "prompt-input.json": "a29ef30957c63e8fd10eb1b736a2736e1d4a56ea2b5f4b799163ee973b7914c8"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
+      "scenario": "source-07-blocked",
+      "runId": "game-studio-sprint-status-UUgbxp",
+      "status": "PASS",
+      "scopeOfResult": "Source-07 uses one helper, counts Complete and Done as 2/4, retains Blocked and Draft as unfinished with no runnable Next. One recommendation resolves the real animation blocker; ten-line read-only report, no gates or implementation.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d068-6e17-7940-a030-05c149b03798",
+      "parentTraceSha256": "f72b6018592baccb08b93d878b0ead8c032879e1b512827198361dd8e7a4a18d",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-HsZONMlAPBtaEJIYaBJkbfRZNSc1kDlamXnlKIndT5V1fWd0DFoe9qauBrPIZ6dC8ADvPoMrUKjGI//cVyYxaA==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 540,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json'",
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 1,
+      "rawHashes": {
+        "fixture.json": "a68fb6c722383048e78c40c5426c40643b86c63b87133b2278bf7930a8718152",
+        "report.json": "d03b99bad2c874cb0c47299b2ff0951783788bbbfe57bcfdf0d704ff08f2b540",
+        "before.json": "575ddc41d0baa597b634aaaad83f98121763bdb8b9fbd0f2f8731520579b6f25",
+        "after.json": "575ddc41d0baa597b634aaaad83f98121763bdb8b9fbd0f2f8731520579b6f25",
+        "events.jsonl": "4e4589e391f15759638fb8bcb3d93d4814a6614322e8c3a8c0e8792154aa0435",
+        "final.txt": "c06b3a8c6b48001af02e49dd219d050a1f88e6cd2db8b58d98a40bae4b1ce2ba",
+        "prompt-input.json": "7df5877217519b4188abac751a41d790b9c5894aa7aeaf18c6aa77d0b48ca6fd"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
+      "scenario": "source-04-stale",
+      "runId": "game-studio-sprint-status-QGilDK",
+      "status": "PASS",
+      "scopeOfResult": "Same-input source-04 rerun restores table-before-burndown ordering, keeps six-day stale work in Attention Needed, and correctly reports no Must Haves qualifying under the late-window rule. Four rows, 2/4 complete and 5 of 10 days remain correct.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d057-00da-7493-83bd-91d8fa7d6c7b",
+      "parentTraceSha256": "4aa6b76f78d86e83b41e5f8a11186fbfd47a10b58f1c5d2304ca2f3e4f80fd97",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-6F2dVbvBDa1+xfJatTpSoyi8VMC88vGHVKUgxDW+P1oEJ9rB9yiOhv8iyJ0LlA102RUqqMu5wanuCT5NRtbHOg==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 541,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc 'pwd; cat .agents/skills/game-studio-sprint-status/SKILL.md; cat .agents/skills/game-studio-sprint-status/references/sprint.md; /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json; /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "rawHashes": {
+        "fixture.json": "a8d4d43d8308c398cb4b187ebc7429fd0032eadcf41c30d3bb80546fd6be381d",
+        "report.json": "c2b43418409c597aa98c7d13fa38dafa2a95c95318666532b1bdbe9f4a5d5282",
+        "before.json": "9863dbec5ea6585c5e8c541ea29a53e5f8c5cff137a23565e54244f81878297d",
+        "after.json": "9863dbec5ea6585c5e8c541ea29a53e5f8c5cff137a23565e54244f81878297d",
+        "events.jsonl": "891feb088dca19e27ab4365fa4f9954abe054b7d0ab2f957d309c43edc2397a1",
+        "final.txt": "ff47f3e65fbca9b2716c5d687f0c906d9c15f4b0b802dc0ea7bf701a5a8e99d0",
+        "prompt-input.json": "e46d0a618346318ff1602804633bb367e5927cf2131894d254f713f01a635899"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
+      "scenario": "source-02-complete",
+      "runId": "game-studio-sprint-status-Ebzgzw",
+      "status": "PASS",
+      "scopeOfResult": "Source-02 reports all five entries complete, nonempty three-Must-Have completion flag, 100 percent versus 50 percent time and On Track, no timestamp concerns or late-window risk. No action is appropriate because both Should Haves are already complete; this does not cover a remaining Should Have backlog.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d056-f279-7e31-8770-74bdff1b39de",
+      "parentTraceSha256": "872ab95e2fd23fe809e8f8fc62cf92f417961db8f7ca7be1e16a9bf3c280091d",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-6F2dVbvBDa1+xfJatTpSoyi8VMC88vGHVKUgxDW+P1oEJ9rB9yiOhv8iyJ0LlA102RUqqMu5wanuCT5NRtbHOg==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 542,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'",
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json'"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 0,
+      "rawHashes": {
+        "fixture.json": "471e13412f522d52366ea581d90be8b0e85be79d181fc7e6f571c5c5451db747",
+        "report.json": "da9d46bb06b50f765606d03df97dc1e7a73fbabdc4b706a9133c74abbf08720f",
+        "before.json": "8e193781fefd2ccf61d1eacd48cf45d638fecd13a2b433f98bccce33f3bae8ff",
+        "after.json": "8e193781fefd2ccf61d1eacd48cf45d638fecd13a2b433f98bccce33f3bae8ff",
+        "events.jsonl": "dc3a1d784168d042698a00c8414603d509f7c5fa06057a53f82d1d4703083dce",
+        "final.txt": "30231889f6570d932640766756cb8f816eaba6f2d9ef5c8ae8ded7a49a6a58bb",
+        "prompt-input.json": "2593ddeda76da72b061a0fefdd8f293c49b2f17ce8d66a18779973de961b0e55"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
+      "scenario": "source-01-mixed",
+      "runId": "game-studio-sprint-status-5rp3sd",
+      "status": "PASS",
+      "scopeOfResult": "Same-input source-01 rerun includes 7 of 20 days and preserves all core percentage, status, flag and single-recommendation observations.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d04d-e138-7503-a8d5-2dd8f94c6ecb",
+      "parentTraceSha256": "f273a6a0ddef6976d296cc7fec36fc3ca95afcfeba701dcd1b1b445e76ed88d5",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-rpFhYCMRiyUT8TGU1ueOiPhWQ2xo5UrqPq7Yfri+ZJEJ4aQrrZEe1xbgC9Avf+eK2CQR9xxM8Lcpf22zbdTSLA==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "48b5b666a74706fa56e1d2c0f95566ed544d4d2cafb78bca0d97bd67f175c2ce",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 541,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'",
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json'"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "rawHashes": {
+        "fixture.json": "13030fd1b6a0825052dc9e88924b55b517b7e613ec40c47918e106cb1a749635",
+        "report.json": "727a41fda37d066cf9b89af4cf4df6a62115a3c26bd099e174cd5742de56c518",
+        "before.json": "7c77757acd384025c84aaf1fb15f24ab16fe0dcd40ccc6470e3a02df6ad607a4",
+        "after.json": "7c77757acd384025c84aaf1fb15f24ab16fe0dcd40ccc6470e3a02df6ad607a4",
+        "events.jsonl": "9784bf537075e24792c02528ed3d015ce9478d020e79eeb8b244388979f7d72c",
+        "final.txt": "b7c064ff21c6396f7e0e2e9dea3fe9d2359e95cd95dfb60141f506fcae7fab40",
+        "prompt-input.json": "f839c4b8ffc6a8a3bd6c570c58bf0aa7a801209ede6f9a60041aa4aa398798b6"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
+      "scenario": "source-04-stale",
+      "runId": "game-studio-sprint-status-VUejkK",
+      "status": "FAIL",
+      "scopeOfResult": "Stale math and source-04 core risk escalation are correct: ages 6 and 3, 2/4 complete and 50 percent time, one timestamp search and no writes. Output contracts fail: pre-table burndown summary and stale IN PROGRESS story incorrectly placed in the narrower blocked/not-started Must-Haves at Risk section at 50 percent remaining.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d04d-e18f-7c42-8bfe-f129c3c1a737",
+      "parentTraceSha256": "04bd436978213f12a72b0cb3714dcb706544b79ade06abf715c2d46e9c2d607d",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-rpFhYCMRiyUT8TGU1ueOiPhWQ2xo5UrqPq7Yfri+ZJEJ4aQrrZEe1xbgC9Avf+eK2CQR9xxM8Lcpf22zbdTSLA==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "48b5b666a74706fa56e1d2c0f95566ed544d4d2cafb78bca0d97bd67f175c2ce",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 539,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'",
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json'"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "rawHashes": {
+        "fixture.json": "e751d519b6298fdd448e7ddcba2c2f9f0e761629696dc6d6d58c79bfa8c195e4",
+        "report.json": "7229cb64118dd9d737d1d0aa4d9f73bca13f200bb97b623f5de5463919865e43",
+        "before.json": "87a6fbd34e9f79f0340c00c86cab33d236393901c298294986be0ac527a9b188",
+        "after.json": "87a6fbd34e9f79f0340c00c86cab33d236393901c298294986be0ac527a9b188",
+        "events.jsonl": "1094799808c0da115240333d2d259caba71fdbb027d24cdd818c4f2bbc3286c7",
+        "final.txt": "dd670b506f10932b1e3cf406b27e896bc665100f4d984835bf851245635adce3",
+        "prompt-input.json": "88501cbf440ac00a25a6907f58a258bdf63c30f4b27927b08b261c5bd86d9fb5"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
+      "scenario": "source-01-mixed",
+      "runId": "game-studio-sprint-status-uV11Fc",
+      "status": "FAIL",
+      "scopeOfResult": "Core source-01 observations correct: six entries, 3/6 = 50%, 65% consumed, 15pp behind, At Risk and critical blocked Must Have at 35% remaining; one date search, no stale work, single honest replan recommendation. Source Phase 5 total sprint days were not explicitly displayed. This is a presentation-contract failure, not a reported arithmetic failure.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d047-46a7-7752-b9b3-540a59ecf5bd",
+      "parentTraceSha256": "195bb66a5ec99d88e3366620a07937d0572ff0c2214ca38cf18d7ba484e08fcf",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-m8AhiSxCAy+IX4nPNIKcuj8r3Ypx8yVMMSHzypyLrdNf8sEBuOPp0S4qLqjaNof+iUY9KuNZFUYho9yszsVnzQ==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "58147754a452dfa80d02c06eafae16637efe3e0b16201d80c6d96a15228d36e7",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 541,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'",
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json'"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "rawHashes": {
+        "fixture.json": "1b68c11be310d08792dd85334f0cdf54b56f3979591e3cc512d61649b379a99b",
+        "report.json": "e32501aeddcd1a71bfc1e0526514e31c5f81bf38461d5235bd89f9d809340b53",
+        "before.json": "e3813a68d4d07ad23f41fa6b6688e1c70e70d5e18a0ac9e1df415fb7b5a67afe",
+        "after.json": "e3813a68d4d07ad23f41fa6b6688e1c70e70d5e18a0ac9e1df415fb7b5a67afe",
+        "events.jsonl": "bb39195959ede1d8a0dd17144a17c8ae04d43c53afd254202fa1f2fd743ce23d",
+        "final.txt": "5d76f7d75f0bb4980b736b918bd94982a639b47dafe54685676e63b386a513b7",
+        "prompt-input.json": "6b9fe1e4db5dbf0cc0162e532dec8eb4a9cdc7ec7e3f88a46ccfa7d1f097773e"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
+      "scenario": "source-06-minimal",
+      "runId": "game-studio-sprint-status-k36YoZ",
+      "status": "PASS",
+      "scopeOfResult": "Default minimal source-06 route: one shared story observation, 1/4 complete, In Review story 003 precedes In Progress 002 and Ready 004, explicit missing story-done capability; 13-line read-only output, no burndown or gate.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d047-4098-7191-a3c5-78540ec52270",
+      "parentTraceSha256": "de48c5812bd4c7dc904d30414b8c661b6f9e90e8813afe801367c814a3804d91",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-m8AhiSxCAy+IX4nPNIKcuj8r3Ypx8yVMMSHzypyLrdNf8sEBuOPp0S4qLqjaNof+iUY9KuNZFUYho9yszsVnzQ==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "58147754a452dfa80d02c06eafae16637efe3e0b16201d80c6d96a15228d36e7",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 538,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "configQueries": [
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.workflow --json'",
+        "/bin/zsh -lc '/private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node .game-studio/run.cjs config get modes.story_granularity --json'"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 1,
+      "rawHashes": {
+        "fixture.json": "51b42274beb01c828e1ed3bb888a8c73e005fc528247809311aa5a1d006054a4",
+        "report.json": "282b31ee6d27b7694327068e3ad92252118156bd8006ef7146c570553057d8ac",
+        "before.json": "d569d6dd37f1c86fc150e7faa42a88ee7b122890c13a67c159fe273eb255f998",
+        "after.json": "d569d6dd37f1c86fc150e7faa42a88ee7b122890c13a67c159fe273eb255f998",
+        "events.jsonl": "1d19fe272aecc44cf332377075a1eff469cf6c523c66bf2e30dd9d17643cb82d",
+        "final.txt": "364e7603ba546a9c185a2ade948cd67f4a4fce98956083d5099b590f645f1b27",
+        "prompt-input.json": "f78daaf2c19dc70ae9ad1134e5763e8baf735764af133b4d51a49556770167bd"
+      },
+      "independentReview": "Separate migration agent reread actual commands/finals against source and recomputed all current file bytes; dispositions agree with root audit."
+    },
+    {
+      "scenario": "must-haves-complete",
+      "runId": "game-studio-sprint-status-R70gI6",
+      "status": "FAIL",
+      "scopeOfResult": "Correct nonempty 3/3 Must Have completion flag, 3/5=60% sprint completion, five actual rows, 5of10 remaining/50% consumed and OnTrack, one Should Have next action with no sprint/test acceptance. Output-contract FAIL: required separate Burndown and Must-Haves at Risk sections merged into one paragraph. Root independently confirmed this boundary; bold styling and Next action synonym are not separate defects. All files preserved; no writes/agents/gates/tests.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d073-febf-78a0-9cd4-a701cf44a123",
+      "traceFile": "rollout-2026-11-12T23-50-25-01a1d073-febf-78a0-9cd4-a701cf44a123.jsonl",
+      "parentTraceSha256": "e39897d88199bb3b02118224a8e5f6249f92bb1ed01eb9eb7524cb7261e5d61d",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 544,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "fa750c4252b9a027877d8d2fcac23c9a29b881404e84072ecb12879b250a404f",
+        "report.json": "45efd02d52868ddbcce0228d8432c1379dcfb4bd58dd710292d8c9f5f0eb0a0c",
+        "events.jsonl": "1173fb3f6bc10d121f9eb259c285f2ec5a24315b4a342e08c4c90fb6f5e5a13a",
+        "final.txt": "5428777d6dbc03b80b46bac7d5caf4363f7331994ca0ce7686c5246366b13205",
+        "before.json": "35c237f0f3ccba7305516b542686611a42d669e3e0e4644d2caf1324690100cc",
+        "after.json": "35c237f0f3ccba7305516b542686611a42d669e3e0e4644d2caf1324690100cc"
+      },
+      "failureKind": "output-contract",
+      "functionalRoute": "PASS",
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "source-05-no-gates",
+      "runId": "game-studio-sprint-status-CLYOeQ",
+      "status": "PASS",
+      "scopeOfResult": "Selected full-review-mode snapshot: actual scoped workflow and grain config only; four authoritative rows, 2/4 complete, 5 of10 days remaining/50% consumed, zero gap OnTrack; two recent one-day stamps via one cross-story query. No review-mode lookup, gates, tests, writes, prompts or agents. Recorded completion not acceptance.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d073-efcd-7360-9640-47b9d9ddd16b",
+      "traceFile": "rollout-2026-11-12T23-50-21-01a1d073-efcd-7360-9640-47b9d9ddd16b.jsonl",
+      "parentTraceSha256": "c2705dacfa71d352bf1f6a40643cc0c6509a5472f8ac786ab9ba1e43b2a0c597",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 543,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "98545ea35b69d6590df3b4f66c678f357ae6ea85b59cce01165528b93d192ca1",
+        "report.json": "aff8c4d3db66cd5d4e029e966d1588eec8ff7d022f30916be63636d463976d43",
+        "events.jsonl": "a057cda537a4b438853b1b43c4cbe9292ae2ad41dd891ecdfb36fbc366ab634d",
+        "final.txt": "3d3523b5c072a0dcf1a3f104dbe16014b04a8663c80dfed36887aa47fcda710a",
+        "before.json": "c5ad2f155b83781f1a6901a0f49bbd3a369b1b8232ac13a59ca78bf65528d7af",
+        "after.json": "c5ad2f155b83781f1a6901a0f49bbd3a369b1b8232ac13a59ca78bf65528d7af"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "minimal-complete",
+      "runId": "game-studio-sprint-status-lJHozN",
+      "status": "PASS",
+      "scopeOfResult": "Positive2/2 helper completion, no unfinished rows; under15lines, all three possible next directions retained as alternatives, no sprint/burndown or accepted-quality claim.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d075-5a70-7dc0-9a2e-900847b3990e",
+      "traceFile": "rollout-2026-11-12T23-51-54-01a1d075-5a70-7dc0-9a2e-900847b3990e.jsonl",
+      "parentTraceSha256": "b5f8de0086207f5f01ad1ee7895e0fa3d80be01dcf0c4624377fbaeda1d54cd3",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 540,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "fcefd6a972823c87c23d54937aa346318e565daf0bee8b60e904e5c995832387",
+        "report.json": "03a9cb691ecd341411b97965e0c11aabe6604c2beb3b8ea464263b448ab2df30",
+        "events.jsonl": "77a99b122ca66878a29fcb0ea225ae0868331e01afae6d9f5416bc7d1f75b453",
+        "final.txt": "4056c5658c485cbce5ed32f5327d35627412d5d03036982e9f03ac529f45c323",
+        "before.json": "813a0f820cf4a7c7ff216c026c18c894fd7ed4fa27868087a5519b12975974d2",
+        "after.json": "813a0f820cf4a7c7ff216c026c18c894fd7ed4fa27868087a5519b12975974d2"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 1,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "minimal-empty",
+      "runId": "game-studio-sprint-status-UOhyzL",
+      "status": "PASS",
+      "scopeOfResult": "Actual missing sprint directory and single helper0/0 become No stories yet, intended brief-to-stories next outcome with unavailable capability explicit; under15lines, no false all-complete or sprint mandate.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d075-6010-7890-aa5b-3411e26e597a",
+      "traceFile": "rollout-2026-11-12T23-51-55-01a1d075-6010-7890-aa5b-3411e26e597a.jsonl",
+      "parentTraceSha256": "2d10964333d797711490e3508a34188ce0899aed0a51ea20acc12bc482fcb42b",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 538,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "e8867a35e8333ffbbbb3c33e3fbe7565251cd598b69833e63b710a6bdfbec4ae",
+        "report.json": "637c6bafe3b78007f6b255fa44a0ced4e08917deba5389efb69b06569e1c3b15",
+        "events.jsonl": "7fb13a6e67c8785af48af4ea4c7908eba94a3d15cbaa4ee748a5901c23125e6f",
+        "final.txt": "d08fb291be9827f3582b2f9c385e378e453f542286b44f512dc8a05dbc30484c",
+        "before.json": "904d701dd5be778177ddf45bcb8e076a48331900e43b452190457549c7ff00a2",
+        "after.json": "904d701dd5be778177ddf45bcb8e076a48331900e43b452190457549c7ff00a2"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 1,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "minimal-unknown",
+      "runId": "game-studio-sprint-status-Fy6Elw",
+      "status": "PASS",
+      "scopeOfResult": "One actual helper returns0/2 with Draft and NO_STATUS; both named accurately, no runnable Next or false all-done. Selected titles read without reranking; one action prepares first Draft and agrees Ready, under15lines. No sprint/burndown, writes/tests/roles.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d076-21ca-70f1-b8e5-5d3325b6ecb2",
+      "traceFile": "rollout-2026-11-12T23-52-45-01a1d076-21ca-70f1-b8e5-5d3325b6ecb2.jsonl",
+      "parentTraceSha256": "3a4c4fcb4f5f05696f5617ecacbe73782a5fc7474850c7b6cd4499bd93a3f2e8",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 540,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "5584c6a73c74b9d0ad329d40833239f6930d41de590e77a512c23502d0e99db9",
+        "report.json": "6ded2783a3e6fb1472cc25025f46236b707467e0ebfce556fa61864b576d9d74",
+        "events.jsonl": "4cd81144d691476c9ff17f42cb55abbefdfbc75bca6b05973fca63cc0feea36c",
+        "final.txt": "ad5b973a55bad1188cb2dcd184d704dc6b7e5155fb54d00eb77b48872fad6d2e",
+        "before.json": "c9531caead46ecbf1ea67d96fcd68addd713d06856bcdb212b9ee53bb9b9536e",
+        "after.json": "c9531caead46ecbf1ea67d96fcd68addd713d06856bcdb212b9ee53bb9b9536e"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 1,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "helper-unavailable",
+      "runId": "game-studio-sprint-status-PKN8qb",
+      "status": "PASS",
+      "scopeOfResult": "Actual RESOURCE_MISSING for intentionally removed story helper after real no-sprint observation; counts/blockers/next remain unassessed, not0/0 or all-done. One restore-helper next action, no fallback Status scan, no helper invocation/recommendation execution/writes.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d076-69a7-7af2-843b-9fb0191827aa",
+      "traceFile": "rollout-2026-11-12T23-53-03-01a1d076-69a7-7af2-843b-9fb0191827aa.jsonl",
+      "parentTraceSha256": "bb3fbd5ac509350f909f1048a4efab22b4091b42ee981d2544d3774178e6afe4",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 538,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "d062cd962b2000901d28d583756b3b254ec0a42ed6872eff3237579ecedca1ce",
+        "report.json": "39f1f4547a57acbdf8339c371987d86435f33e183f8fc84b2d15aa43aa569b27",
+        "events.jsonl": "2e4f949ab5214055a5392f32da3f2638366b12786e928302cfe189c023985abd",
+        "final.txt": "2439eeda05e3ff7275adf12bd188ad30fc9e03a4bd5c97ba05b75f54fe86573a",
+        "before.json": "be3ab21899061d0cdc9ecf34c963555401e80aed5fe5341630fde36a14e93d1a",
+        "after.json": "be3ab21899061d0cdc9ecf34c963555401e80aed5fe5341630fde36a14e93d1a"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 0,
+      "helperResourceMissing": true,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "no-dates",
+      "runId": "game-studio-sprint-status-wpCMhJ",
+      "status": "PASS",
+      "scopeOfResult": "Authoritative2rows1/2 complete, missing dates retain unknown schedule and Must Have time flag, one actual wrapped-date search identifies own8-day stale In Progress without upgrading unknown burndown. Separate table/Attention/Burndown/Must Have/Recommendation sections and one status-check action; no false test/play acceptance.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d076-f1f1-7e50-bf14-988f956b53ce",
+      "traceFile": "rollout-2026-11-12T23-53-38-01a1d076-f1f1-7e50-bf14-988f956b53ce.jsonl",
+      "parentTraceSha256": "9ffc4cbae53775d3a2d9a8389ac1d20b60eba447919d16f07be3f8131cdb4b3d",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 541,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "e60cf4f38acd04ffb0ca2201817f3cdfeac90af5763a22c1bcf602c93adf055b",
+        "report.json": "2b6a900a3d882359740c5bcfa34c2bae2a9bfec5a8d2f14643e16b3f8333b6c5",
+        "events.jsonl": "a1ae5a5397779c9264f4dc65e4ff892f0ab910a0246878bed4a3b7029400ac35",
+        "final.txt": "06d1354e6b503028bf4dfbdcf8fed0a26e0ab9a72af90e109c8113ddf3bbadc5",
+        "before.json": "47f49067a74a52192865ffd0faf5b098c711d3cdde70958ae63acfd42da0dc0e",
+        "after.json": "47f49067a74a52192865ffd0faf5b098c711d3cdde70958ae63acfd42da0dc0e"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "zero-interval",
+      "runId": "game-studio-sprint-status-ZHvGKj",
+      "status": "PASS",
+      "scopeOfResult": "Same-day start/end retains zero interval and unknown consumed/burndown without division by zero;1/1completion and nonempty all Must Have flag kept distinct from schedule/quality. Complete source sections, one confirm-dates recommendation; actual sole-file/mTime/YAML/path observations, no writes/tests/gates/children.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d077-6a19-7553-95b2-c133158d644e",
+      "traceFile": "rollout-2026-11-12T23-54-09-01a1d077-6a19-7553-95b2-c133158d644e.jsonl",
+      "parentTraceSha256": "c2d3626377388092060d107c48d1b9c67c30dfc4cb9f90325deea300a2c2c1f6",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 540,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "9133606db0b36bb6a7cc85a2ab3768f8874e5c678516bcbb839dcb15c4ad5748",
+        "report.json": "c888b283b54bff8ef988e8717e7febc5c1415e5f47ba3216387fa19414119da9",
+        "events.jsonl": "12115b69fc1d14d5318ed0bb6b8f7f1748f8b0f25eecc55f09b208c161171de4",
+        "final.txt": "dd5952e6556278c97593ff8a7640719ff13c6987a9dcf9436ad48212d913aac7",
+        "before.json": "a82fd17944571564b29a13e36bd9d5e824a283f75fd055ac429b38b8a32eeb60",
+        "after.json": "a82fd17944571564b29a13e36bd9d5e824a283f75fd055ac429b38b8a32eeb60"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "timestamp-boundaries",
+      "runId": "game-studio-sprint-status-CtMEc9",
+      "status": "PASS",
+      "scopeOfResult": "Seven actual YAML entries,1/7=14.3%,9of10 remaining/10% consumed. One timestamp query accepts all4labels: exactly4days not stale,5/9days own-age stale, missing/inline/future dates unknown. AtRisk escalation from two stale In Progress without changing status;90%remaining no Must Have criticalflag. Separate findings/verdict/risk/recommendation blocks and one progress-check action.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d078-2794-7213-b37a-680f38c4d839",
+      "traceFile": "rollout-2026-11-12T23-54-57-01a1d078-2794-7213-b37a-680f38c4d839.jsonl",
+      "parentTraceSha256": "7418a4aadb78968cc59a5fcac52975225959ad796ae1cce2bc5f3155ba5e62e5",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 545,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "1bc57de18ff1ce60f5e512f303402d2db4cd774fb43f66c8e160dc221be27730",
+        "report.json": "549776e48c7c932307bc2cfce2611a0c6fde373d4c9a86fcf928802476df6d07",
+        "events.jsonl": "ad602bbca745fa5197538de8b630c1898849322bea3629289a649fd2d2f60897",
+        "final.txt": "f1f07255b45fab5c133dca990ffe581f0f0128e2d1f71ff99bdd7b98e1c37913",
+        "before.json": "aa4fc4681ac7ffd170a7d8f148d13483e14bf8c9b279936497c4d8170fa187bd",
+        "after.json": "aa4fc4681ac7ffd170a7d8f148d13483e14bf8c9b279936497c4d8170fa187bd"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "gap-ten-and-forty-percent",
+      "runId": "game-studio-sprint-status-r5H00e",
+      "status": "PASS",
+      "scopeOfResult": "Four actual YAML entries2/4=50%,4of10remaining/60%consumed. Exactly10pointgap is OnTrack; exactly40%remaining excludes criticalMust Have flag despite unstarted step3. No In Progress means no timestamp query; one begin-step3 recommendation, all source sections preserved.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d078-9770-7932-9dc8-092889da490a",
+      "traceFile": "rollout-2026-11-12T23-55-26-01a1d078-9770-7932-9dc8-092889da490a.jsonl",
+      "parentTraceSha256": "ecc1eabea7a392a1390a2556549e813ed7d494db977b5272a9f6860ffea87570",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 543,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "f23866512c523805369a6b33cfb2f8e2a8459c26a9e1f6824f5d3d0bccd2fba6",
+        "report.json": "b92a117e41830cdf14204228e3c6f8b0e3b5ffec6073706238b77be8d2c19ac6",
+        "events.jsonl": "c2887edf89ed37a3aa8fc2af0db40896e43535f731637f9431427c584d08a293",
+        "final.txt": "db06224c359021dbea9885bfe87c9aff5443e9bac7f5a32dae1d2091816ef1ff",
+        "before.json": "bb171d85a788eb5330a3d9b434ecb5b7e0f2574192a995d262e8082efd41a85a",
+        "after.json": "bb171d85a788eb5330a3d9b434ecb5b7e0f2574192a995d262e8082efd41a85a"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "gap-twenty-five",
+      "runId": "game-studio-sprint-status-gtwTE6",
+      "status": "PASS",
+      "scopeOfResult": "Exact25ppgap(75%consumed/50%complete)AtRisk notBehind;5of20daysremaining25% triggers unstartedMust Have step3flag. Fourcomplete rows and distinctverdict/risk, one replan recommendation with actual missing planning capability disclosed. Extra existing Markdown reads did not override authoritative YAML; single timestamp query despite no In Progress is observed, not needed.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d079-c699-71a2-90dc-a6a2f7420a5b",
+      "traceFile": "rollout-2026-11-12T23-56-44-01a1d079-c699-71a2-90dc-a6a2f7420a5b.jsonl",
+      "parentTraceSha256": "d6e4564bfa61a220af87c5dfc4dcf6391514dd919930d4126f7a5266c45db6e7",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 543,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "ec7abfddf30d7c6335583ae45036d4ac9a2da1841d438f6d4ee7baa08cb75dbc",
+        "report.json": "b81d1a414ad2fd117b3c7cac620b441060e26a43a5300fe457388e0b466f752d",
+        "events.jsonl": "37b3b54e86d5b8ca9bb77428eb91199fdb4440ca10a786dc9165f71d4f4952d0",
+        "final.txt": "b1cc1bbb8091c39f8527bfa4000ea02013abe1a615f9c05e8fa1616db407f4a6",
+        "before.json": "37d9dcb118bc6e0ca231ec56a19f7eac130acbfa5c8ab0c2a62373a9a227b95b",
+        "after.json": "37d9dcb118bc6e0ca231ec56a19f7eac130acbfa5c8ab0c2a62373a9a227b95b"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "behind-stale",
+      "runId": "game-studio-sprint-status-JKDUOY",
+      "status": "FAIL",
+      "scopeOfResult": "FourYAMLrows1/4=25%,2of10remaining/80%consumed gives55ppBehind; one7day stale In Progress remains stale In Progress and cannot lowerBehind. Only notstartedMust Have step3incriticalrisk at20%remaining; all own-age findings retained in separateAttention block, one replan action, unavailableplanning skill explicit. Overall FAIL: source requires Attention Needed table; a separate prose block retains all facts but does not satisfy that output contract. Root independently confirmed same strict presentation boundary as R70gI6. No retry or source change.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d079-bddd-7a53-80c3-00d9499b9e87",
+      "traceFile": "rollout-2026-11-12T23-56-41-01a1d079-bddd-7a53-80c3-00d9499b9e87.jsonl",
+      "parentTraceSha256": "937333eae6b8670c2d2aaa05a5ead0daff70b97aa119e573cf39c60015d6df5c",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 543,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "0737bc84eb4ff6a19c9fb32da092bd9eb692aef61a308666a449251d4c61d408",
+        "report.json": "eba479ab2bb62b01400089b0b8a843cbcf5c538d2c8265578f5a14a937ab4a0f",
+        "events.jsonl": "f55e470526e873f73915a8a150fc8d4760ac509e7e36b46a5d2ac16f48bf6850",
+        "final.txt": "292e58e23d7e9729d630cadeacd14925e516b12c68ea9fc5189c5bed8f1412cb",
+        "before.json": "53c4f67f01728d1f6c53ff4b859c7f981661ef905f96c5fd2fdb34b83414617f",
+        "after.json": "53c4f67f01728d1f6c53ff4b859c7f981661ef905f96c5fd2fdb34b83414617f"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "failureKind": "output-contract",
+      "functionalRoute": "PASS",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "markdown-fallback",
+      "runId": "game-studio-sprint-status-CzKy09",
+      "status": "PASS",
+      "scopeOfResult": "Actual absentYAML permits Markdown fallback:4entries1done/1IP/1missing/1inlineNotStarted, ownersunknown retained. 7of20remaining35%,65%-25%=40ppBehind; critical and missing flags above table; onewrappeddate query shows recentIP notstale; explicit fallbackwarning and one replanning action rather than separate readiness/update tasks.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d07b-85b6-7e83-a392-7f3ec8ebc57b",
+      "traceFile": "rollout-2026-11-12T23-58-38-01a1d07b-85b6-7e83-a392-7f3ec8ebc57b.jsonl",
+      "parentTraceSha256": "034c2de0d7eb488c917ea5da7ec070559ea675f2a6bad0f81c74ad858da04fd4",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 540,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "fba142b23f6de608f1a7af19315c433b64aef8a1a33365e6e55577ebddb0efaa",
+        "report.json": "1a419b0d00a89e8726dba0faaf6d6684f114ba25e7c06c5d10bda5c8fec982d4",
+        "events.jsonl": "2908777878f45a575e3a23c573f329bc9d06d63bcf919afb801ed8f7fafc34ee",
+        "final.txt": "b5cad47ce90d697d05195993baaf803f105d8f16e533dbe2e589fbacf5098713",
+        "before.json": "9f7ff2838fcc9dfc9d4620bf656c2aaaf857c76d7ed09f5f0265434df414940d",
+        "after.json": "9f7ff2838fcc9dfc9d4620bf656c2aaaf857c76d7ed09f5f0265434df414940d"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "full-table",
+      "runId": "game-studio-sprint-status-XVla1b",
+      "status": "PASS",
+      "scopeOfResult": "All52 actual plan/YAML entries preserved in output table despite line budget, paths/status/owner/priority complete.52/52=100%,7of20remaining65%consumed,OnTrack,nonempty3/3Must Have flag, no stale/Attention, separate source sections and no action needed. Numeric rows1..52 independently asserted.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d07b-9138-7361-a693-c2a12409aca1",
+      "traceFile": "rollout-2026-11-12T23-58-41-01a1d07b-9138-7361-a693-c2a12409aca1.jsonl",
+      "parentTraceSha256": "45b564b30c21246580b58e2d5a1ca6690a0c57a5d8f4668e04584c83aee34bf0",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 591,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "4cd335e2941c0b96c4135083dd55819d8696b95644cbab78a6595bd169fb6076",
+        "report.json": "f3f139b3f90d2f37dc46b613468e182308c1e1df75721eb37655337f9bd53cf4",
+        "events.jsonl": "bc6e9f5f463e067682be810919971cc27d8c78ce7daf385d9a27776205cb6bf9",
+        "final.txt": "2fdacf5eca29cd1c9dbb6d0ffbf4fa862bbaafe22777a867b62ee4432ce22288",
+        "before.json": "6d2519d3361e21f20aa340f330f49f423e5087043cee32c34e72b06631c277a8",
+        "after.json": "6d2519d3361e21f20aa340f330f49f423e5087043cee32c34e72b06631c277a8"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "explicit-number",
+      "runId": "game-studio-sprint-status-IrVaiH",
+      "status": "PASS",
+      "scopeOfResult": "Explicit3selects actual unpadded sprint-3.md rather than other sprint-009; reads matching authoritative YAML.2rows1/2=50%,5of10remaining50%consumed,OnTrack,own1-day timestampnotstale; source sections and table complete, no action needed.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d07d-995c-77c2-a1dd-d55edc13c5b8",
+      "traceFile": "rollout-2026-11-13T00-00-54-01a1d07d-995c-77c2-a1dd-d55edc13c5b8.jsonl",
+      "parentTraceSha256": "27a7cd2347391417e4502401318de100ed1553a2a5d13fc65c93e476997bf00d",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 542,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5883220fb4608974aba4b37c87b613164d5a323b50de196cc26c65b28ce9bbe5",
+      "rawHashes": {
+        "fixture.json": "947281e023a384265e3d8e91cf0718b7fd7cb2d1bc78b345878f7873f491f7e5",
+        "report.json": "f043feb9c06767b128884122400893a8a9ca2a57dfe31c36c363fa856eae0b18",
+        "events.jsonl": "841d26f2f0e7a2c628b2bcaeb112e30d507082ba61811149b96906d3cc4dd212",
+        "final.txt": "45351eae67a87fd64ecaaaccb7fab41f8e784f0855a1e0232f234e4d4b960412",
+        "before.json": "84a592a917fe29b608750f066bc01b1446bb6dfe7651cdd866e830e3d4a9372b",
+        "after.json": "84a592a917fe29b608750f066bc01b1446bb6dfe7651cdd866e830e3d4a9372b"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "mtime-current",
+      "runId": "game-studio-sprint-status-4w7V9q",
+      "status": "PASS",
+      "scopeOfResult": "Actual stat of both sprint files selects newer004 instead of larger099 (fixturemtime retained).MatchingYAML6rows3/6=50%,7of20remaining35%,65%consumed,15ppAtRisk; blockedMust Have with actualADR blocker criticalflag, recentIP noAttention, one replan action.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d07d-990e-7313-80ab-8884cf3f8da0",
+      "traceFile": "rollout-2026-11-13T00-00-54-01a1d07d-990e-7313-80ab-8884cf3f8da0.jsonl",
+      "parentTraceSha256": "90056afe9f6fe066c1fc709dd9a1ddbbd8aab0c36526edeba3026c42b5f837bd",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 546,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "a52a2263df8e9de31de113d985a09270d9539dc8f98e2c74f79256a461e62ced",
+        "report.json": "63daeb4c210847a27c281f3aff2ca3e440563e9b05ed440fa8328c82268d259d",
+        "events.jsonl": "120a1552d8934f31d98de67084072c855e8ffdaa8f53f79d1dfdefd5457ef707",
+        "final.txt": "53bf1843d8a72eb7a9546836708cda74c1c4a4a1df7e91fd6a3b1df30ea73b1c",
+        "before.json": "1599ca11b895343181db9261b8c4b7f03d7a471a176ed89d568c2b061ee2ca8f",
+        "after.json": "1599ca11b895343181db9261b8c4b7f03d7a471a176ed89d568c2b061ee2ca8f"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "malformed-yaml",
+      "runId": "game-studio-sprint-status-tYcU8e",
+      "status": "PASS",
+      "scopeOfResult": "Actual invalid authoritative YAML preserved as unavailable; six plan rows remain with unknown statuses/owners/blockers, no Markdown-status fallback. Known20day dates/65%time do not certify completion/burndown or criticalflag; one repairYAML recommendation, source table/sections retained.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d07e-de0d-7620-aab2-e18b3c20e5ea",
+      "traceFile": "rollout-2026-11-13T00-02-17-01a1d07e-de0d-7620-aab2-e18b3c20e5ea.jsonl",
+      "parentTraceSha256": "767adb415d8d434a3f3dfd2c4c654acd0b2392844e4dcf394a58eef66c58a6b8",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 545,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "d08c3e8f4f7bb63cd7aa20da27f9d14627f560fc308c02c6745df72575441b8c",
+        "report.json": "a35c8689fd09dea79d0a75b116ca5df2f8b714dccf59da90839da0b0043d8515",
+        "events.jsonl": "74cf21ace69be20a657238196dea0adcd05627a48f4c1b8dec2af6e1808b0605",
+        "final.txt": "e67812fcae22322bfa9f110993c68e4bfde182809de3c74cf83aec38bfc1a976",
+        "before.json": "4e80646938c0a8dad15bae3e6705c2dcd432f7d81786e528b728a7e6d8eaf92b",
+        "after.json": "4e80646938c0a8dad15bae3e6705c2dcd432f7d81786e528b728a7e6d8eaf92b"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "mismatched-yaml",
+      "runId": "game-studio-sprint-status-2HX08O",
+      "status": "FAIL",
+      "scopeOfResult": "Functional authority/selection PASS: explicit sprint3 keeps actual unpadded plan and two rows; YAML sprint4 rejected, no foreign statuses or Markdown fallback.5of10remaining50%known while progress/burndown unknown; one reconcile-record recommendation. Output-contract FAIL: Progress is below table and required Progress/Attention/Burndown/Must-Haves at Risk blocks collapsed into one paragraph instead of source structure. Retain original terminal result; no retry.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d07e-d563-7ba2-9987-bab58804b5cb",
+      "traceFile": "rollout-2026-11-13T00-02-15-01a1d07e-d563-7ba2-9987-bab58804b5cb.jsonl",
+      "parentTraceSha256": "a5b8dc6687f408b74e3014527f8d744b8c675f97c8d39dfd895dd58ec907d33a",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 542,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5883220fb4608974aba4b37c87b613164d5a323b50de196cc26c65b28ce9bbe5",
+      "rawHashes": {
+        "fixture.json": "3f8cd3d10049383ac12e0243154cc51c55d5394e0254edefcd59fa7f8532bfdf",
+        "report.json": "f2a773350763e1a035f96b2ca639f2defe2bd075715dba7439f5a645178034ce",
+        "events.jsonl": "cacce3067d86b4bcecb8701de3b814d4df0e3a805c6a958f6a1e5f5833077f8b",
+        "final.txt": "bf684740debaf040cd7d4575d3d9e37472c2ccb9464b5d4d4bdace1bc3624f42",
+        "before.json": "3bcdac9a9a70fa286dd24360080e8da426964e6504fd82249981265172881449",
+        "after.json": "3bcdac9a9a70fa286dd24360080e8da426964e6504fd82249981265172881449"
+      },
+      "failureKind": "output-contract",
+      "functionalRoute": "PASS",
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 0,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "yaml-conflict-and-unknown",
+      "runId": "game-studio-sprint-status-u2Hsiy",
+      "status": "PASS",
+      "scopeOfResult": "Authoritative YAML wins over conflicting Markdown: four rows retain In Progress, Complete, In Review and unknown parked. Exactly 1/4 complete; 7 of 20 days remain and 65% consumed gives a 40-point Behind gap. One recent timestamp search, no false critical flag from unfinished review, unknown state remains explicit. Distinct source sections and one review-outcome recommendation.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d080-125d-7af3-a1bb-4581f5ba68e3",
+      "traceFile": "rollout-2026-11-13T00-03-36-01a1d080-125d-7af3-a1bb-4581f5ba68e3.jsonl",
+      "parentTraceSha256": "0902d6d3c5186a8473c1523126654292879666b8483d11aa13622fcf48e769d5",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 543,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "bf366291aea7210e3815f02c8cd8ad6da39fd6d583969b3d0cc0f778d83f1917",
+        "report.json": "b90ec21f4680b4c9b0f32eea95538eaced16d3aee9d56e5f101125fc5d72f87d",
+        "events.jsonl": "5afbb2cdab729de4806e327288332692bc705fc60edbc882b48e59e341efe9a0",
+        "final.txt": "d58c6b5c8548d377c3b7650193e811083650d2dd3881ef1decb9cfd07532fac7",
+        "before.json": "1960904d42f626ec0108d48cee82b08b9bcf6129cbbfdad55e8fea449a8bf396",
+        "after.json": "1960904d42f626ec0108d48cee82b08b9bcf6129cbbfdad55e8fea449a8bf396"
+      },
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "missing-files",
+      "runId": "game-studio-sprint-status-rlUCfP",
+      "status": "FAIL",
+      "scopeOfResult": "Functional PASS: two missing referenced paths do not override authoritative In Progress/Blocked statuses; three rows, 1/3 complete, 7 of 20 days remaining, 35% time remaining and 31.7-point Behind gap. Missing-file and critical flags retained; missing timestamp remains unknown, one replan recommendation. Overall output-contract FAIL: Attention Needed uses prose instead of required table, matching the root-confirmed JKDUOY boundary. No retry.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d080-1438-7ce1-9e11-3b107a0003ee",
+      "traceFile": "rollout-2026-11-13T00-03-37-01a1d080-1438-7ce1-9e11-3b107a0003ee.jsonl",
+      "parentTraceSha256": "1ef8a388ee4eb13704951a1c64c6b8a9919492102b68bbcc713293b4c0a54294",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-JksRTlqDVmwCisll1wICijsa3Uk/Q0oxY7ysKMZOLz12vZlilkaAAYrv5TNd/9fW25HKQ2D3Gq72uOfTmgyV4Q==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "73d9ab301e946f5691638cdcd8032bb4e4adffd1f3ad4c2120705ab9805a4473",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 540,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "9d844822ed6a19556e60a5178b8941d458c8ea978b6ede1e1c97d173b7e590fa",
+        "report.json": "74266278018d9138380dd15c5ebe34bf49c02f44b9dbaa99ad94bc674bc715e5",
+        "events.jsonl": "844fbc67975c198559668bf8cd7948a2a03d791ede0cdf39eee211d0d0107aa0",
+        "final.txt": "f9c54eb68013214fa1a6edc827a80e45c8929441e360aa24c98fc81d1c1050e8",
+        "before.json": "97194204b8105b7926be34e85c8aedd5420df2fc4d9a2e819bbe043892ba5c13",
+        "after.json": "97194204b8105b7926be34e85c8aedd5420df2fc4d9a2e819bbe043892ba5c13"
+      },
+      "failureKind": "output-contract",
+      "functionalRoute": "PASS",
+      "configQueries": [
+        "modes.workflow",
+        "modes.story_granularity"
+      ],
+      "timestampSearches": 1,
+      "storyHelperRuns": 0,
+      "independentReview": "Author manually reviewed commands/final and source contract; root independently inspected four report-shape failures and rehashed all evidence/workspace files. Other semantic conclusions remain attributed to the author review.",
+      "temporaryTrustProfileRemoved": true,
+      "rootReconciliation": "Every actual regular file, raw evidence and parent trace rehashed; matches before/after and recorded values."
+    },
+    {
+      "scenario": "must-haves-complete",
+      "runId": "game-studio-sprint-status-gV1zDT",
+      "status": "FAIL",
+      "scopeOfResult": "Manual acceptance of this exact native scenario under the recorded package; not whole-Skill verification.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d089-c521-7a53-9ee7-090cbcb3bb46",
+      "traceFile": "rollout-2026-11-13T00-14-12-01a1d089-c521-7a53-9ee7-090cbcb3bb46.jsonl",
+      "parentTraceSha256": "d380949ed84e230a8c8beb7ecb4ce1c6a94c80cdcdbf4ea5066416042e43b526",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-EF79jUUKTONaNFSZvhgn0TphNerhldVTc6LZmNHUGXyTfvVJy4vdFPs6N4XOwBbnUntfLn60q+RinZ7bGTtLlA==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "9dde2bf3cc815a5780422fbfb23b551394a268713b9aaa48c16d64b97a57bd74",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 552,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "f31b46773f806504a406f34f4f10eb764cd85eae947d899e40833c4020ee6033",
+        "report.json": "a0111e2c5ef236ac1eef4709bdc7d929f69ea2399e43eb94084d1a53d29ff892",
+        "events.jsonl": "4f8c63b361c42a4721142d3e96c80d1e0fba0b94b7538667f1e43f0c50ad6255",
+        "final.txt": "7dc3c2a0df7a0f5b2915d1c76c7d6c17742e06d3636c145fd376466ca84f4201",
+        "before.json": "97d8f8acaefcf98cc097cb43879784fec75fc9dddedee30c10fe91d941c3a55e",
+        "after.json": "97d8f8acaefcf98cc097cb43879784fec75fc9dddedee30c10fe91d941c3a55e"
+      },
+      "manualAcceptance": {
+        "scopedConfiguration": "PASS: actual commands query only modes.workflow and modes.story_granularity; no review_mode query.",
+        "authority": "PASS: selected sprint and YAML evidence determine report; no Markdown status override.",
+        "reportStructure": "PASS: Progress table, Burndown, Must-Haves at Risk and Recommendation are separate; Attention Needed is a table when applicable.",
+        "readOnly": "PASS: actual calls contain no project mutation, native child, downstream action, test or gate; all regular project file bytes independently match before and after.",
+        "qualityBoundary": "PASS: no test/play or implementation acceptance claimed.",
+        "selectionAndDates": "PASS: sprint004 only/latest; 2026-11-12, Nov7\u201317, 5 of10 days remaining, 50% consumed.",
+        "progress": "PASS: all5 rows, 3 complete Must Haves,2 not-started Should Haves,60% complete, all files exist.",
+        "burndown": "PASS: On Track, ahead by10 percentage points; no stale IP or critical flag.",
+        "completionFlag": "PASS: 3/3 Must Haves complete without calling entire sprint complete.",
+        "optionalShouldHaveNote": "FAIL: no mention that remaining Should Have work may be pulled; source Phase5 On Track reason and Phase6 completion flag require this note. The no-action Recommendation is itself permitted; no specific story must be assigned or executed.",
+        "priorPresentationDefect": "PASS: required sections now distinct."
+      },
+      "failureKind": "source-output-omission",
+      "inputComparison": {
+        "sourceRun": "game-studio-sprint-status-R70gI6",
+        "asOf": "2026-11-12",
+        "request": "Use $game-studio-sprint-status to tell me how the sprint is going as of 2026-11-12. Keep this read-only and offline. Node is available at /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node.",
+        "requestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+        "rawProjectInputHashes": {
+          "project.yaml": "947757643a66b2492ec96fc6aa0af97d652bbc50bc69fbff7ac8bdf9aa719b72",
+          "production/sprints/sprint-004.md": "366a31fc83a09d37edf1c18115ad96e81987bf0619f30784cd12032182c43b68",
+          "production/sprint-status.yaml": "b0907cf7501e532471829cad13b272afe0e1f283e12532237ec03213fc8c3ef0",
+          "production/epics/core/story-001.md": "3daf5d3c0068ed8cd2b34211d55b6114ee25aaca28c7e9a4ea7fb3a10551fda7",
+          "production/epics/core/story-002.md": "6af69df3b3a8885da9a1eac886159915dacdd1b0eea46ef7120263d232dcaa22",
+          "production/epics/core/story-003.md": "3a73332938f54b46d4024ca3f08441a1aa7eff37e3938d8bd42bf8e021f087ac",
+          "production/epics/core/story-004.md": "1dface54a756de67a0b729a6f3682a4f84bcbd8dbf2356700e9eb85ffd94ef78",
+          "production/epics/core/story-005.md": "cea8565112fecc4c798de8ad3a9aec3303390fcb5bb5e1906c6f39f1d774d1cb"
+        },
+        "sameUserRequest": true,
+        "sameRawProjectInputs": true,
+        "sourceFixtureSha256": "fa750c4252b9a027877d8d2fcac23c9a29b881404e84072ecb12879b250a404f",
+        "freshRun": "game-studio-sprint-status-gV1zDT",
+        "freshFixtureSha256": "f31b46773f806504a406f34f4f10eb764cd85eae947d899e40833c4020ee6033",
+        "freshRequestExactlyMatchesOriginal": true,
+        "freshRawInputFilesExactlyMatchOriginal": true,
+        "rawProjectInputs": {
+          "project.yaml": "engine:\n  name: Web\n",
+          "production/sprints/sprint-004.md": "# Sprint 4\nGoal: Complete the parcel round\nStart: 2026-11-07\nEnd: 2026-11-17\n\n| Story / Task | Priority | Owner | Estimate |\n|---|---|---|---|\n| [Parcel step 1](production/epics/core/story-001.md) | must-have |  | 1 day |\n| [Parcel step 2](production/epics/core/story-002.md) | must-have |  | 1 day |\n| [Parcel step 3](production/epics/core/story-003.md) | must-have |  | 1 day |\n| [Parcel step 4](production/epics/core/story-004.md) | should-have |  | 1 day |\n| [Parcel step 5](production/epics/core/story-005.md) | should-have |  | 1 day |\n",
+          "production/sprint-status.yaml": "sprint: 4\ngoal: Complete the parcel round\nstart: '2026-11-07'\nend: '2026-11-17'\nstories:\n  - id: '1-1'\n    name: \"Parcel step 1\"\n    file: \"production/epics/core/story-001.md\"\n    priority: must-have\n    status: done\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-2'\n    name: \"Parcel step 2\"\n    file: \"production/epics/core/story-002.md\"\n    priority: must-have\n    status: done\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-3'\n    name: \"Parcel step 3\"\n    file: \"production/epics/core/story-003.md\"\n    priority: must-have\n    status: done\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-4'\n    name: \"Parcel step 4\"\n    file: \"production/epics/core/story-004.md\"\n    priority: should-have\n    status: backlog\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-5'\n    name: \"Parcel step 5\"\n    file: \"production/epics/core/story-005.md\"\n    priority: should-have\n    status: backlog\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n",
+          "production/epics/core/story-001.md": "# Parcel step 1\nStatus: Complete\n> **Last Updated**: 2026-11-11\n",
+          "production/epics/core/story-002.md": "# Parcel step 2\nStatus: Complete\n> **Last Updated**: 2026-11-11\n",
+          "production/epics/core/story-003.md": "# Parcel step 3\nStatus: Complete\n> **Last Updated**: 2026-11-11\n",
+          "production/epics/core/story-004.md": "# Parcel step 4\nStatus: Not Started\n> **Last Updated**: 2026-11-11\n",
+          "production/epics/core/story-005.md": "# Parcel step 5\nStatus: Not Started\n> **Last Updated**: 2026-11-11\n"
+        },
+        "freshAsOfExactlyMatchesOriginal": true,
+        "intentionalChangedInputs": "Installed managed Skill/runtime resources and isolated config marker/paths; user request and project-owned fixture bytes unchanged."
+      },
+      "previousRun": {
+        "runId": "game-studio-sprint-status-R70gI6",
+        "status": "FAIL",
+        "rawHashes": {
+          "fixture.json": "fa750c4252b9a027877d8d2fcac23c9a29b881404e84072ecb12879b250a404f",
+          "report.json": "45efd02d52868ddbcce0228d8432c1379dcfb4bd58dd710292d8c9f5f0eb0a0c",
+          "events.jsonl": "1173fb3f6bc10d121f9eb259c285f2ec5a24315b4a342e08c4c90fb6f5e5a13a",
+          "final.txt": "5428777d6dbc03b80b46bac7d5caf4363f7331994ca0ce7686c5246366b13205",
+          "before.json": "35c237f0f3ccba7305516b542686611a42d669e3e0e4644d2caf1324690100cc",
+          "after.json": "35c237f0f3ccba7305516b542686611a42d669e3e0e4644d2caf1324690100cc"
+        },
+        "preservedUnchanged": true
+      },
+      "trustProfileRemoved": true,
+      "rootReconciliation": "All actual regular files, raw evidence and parent traces rehashed; unchanged workspace. Root reread the preserved report-shape failures and final optional-pull report; author manually reviewed complete commands/results for each rerun."
+    },
+    {
+      "scenario": "behind-stale",
+      "runId": "game-studio-sprint-status-hawrvJ",
+      "status": "PASS",
+      "scopeOfResult": "Manual acceptance of this exact native scenario under the recorded package; not whole-Skill verification.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d089-ca26-7b43-bfa0-55232f96afab",
+      "traceFile": "rollout-2026-11-13T00-14-13-01a1d089-ca26-7b43-bfa0-55232f96afab.jsonl",
+      "parentTraceSha256": "51d5ea1a44d84beee731da00d10996f53d7c4d441a1db8b1b5d2e66463da806c",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-EF79jUUKTONaNFSZvhgn0TphNerhldVTc6LZmNHUGXyTfvVJy4vdFPs6N4XOwBbnUntfLn60q+RinZ7bGTtLlA==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "9dde2bf3cc815a5780422fbfb23b551394a268713b9aaa48c16d64b97a57bd74",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 551,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "839cc1681fe217a66075281aaea29ac043caebb9f2c45f789f83a436d6e43f43",
+        "report.json": "c2eb6034af305cfd7840b2424d5935bdc49c8cad897d59d59945cc29f5cae95a",
+        "events.jsonl": "ee60a7205a347ca3264d59da3bcb6cecc334c6d1a49480427c76576067af16a8",
+        "final.txt": "3791c3af2169af62aabf9bc680301bc85fd9bb335c611b84f836d2cf33de1f8c",
+        "before.json": "2020bbe9d608732540e0b3e1b9a490f8dec2280621ed3a489820bd9e5db0be91",
+        "after.json": "2020bbe9d608732540e0b3e1b9a490f8dec2280621ed3a489820bd9e5db0be91"
+      },
+      "manualAcceptance": {
+        "scopedConfiguration": "PASS: actual commands query only modes.workflow and modes.story_granularity; no review_mode query.",
+        "authority": "PASS: selected sprint and YAML evidence determine report; no Markdown status override.",
+        "reportStructure": "PASS: Progress table, Burndown, Must-Haves at Risk and Recommendation are separate; Attention Needed is a table when applicable.",
+        "readOnly": "PASS: actual calls contain no project mutation, native child, downstream action, test or gate; all regular project file bytes independently match before and after.",
+        "qualityBoundary": "PASS: no test/play or implementation acceptance claimed.",
+        "selectionAndDates": "PASS: actual mtime selection sprint004, Nov4\u201314,2of10 remaining/80% consumed.",
+        "progress": "PASS:4 rows;1done,1IP,2notstarted;25% complete.",
+        "staleness": "PASS: one cross-set wrapped-label rg finds step2 Nov5; age7; preserves IP and Attention table; Behind not lowered.",
+        "burndownAndCritical": "PASS:55pp Behind; only notstarted MustHave step3 critical with20% remaining.",
+        "recommendation": "PASS: one replan recommendation, no execution; honestly observes sprint-planning unavailable.",
+        "readEfficiencyObservation": "One batched cat reads all4 short story files before the single required cross-set timestamp rg. Redundant read is recorded; no per-story separate query or YAML override occurred.",
+        "priorPresentationDefect": "PASS: Attention Needed uses required table."
+      },
+      "failureKind": null,
+      "inputComparison": {
+        "sourceRun": "game-studio-sprint-status-JKDUOY",
+        "asOf": "2026-11-12",
+        "request": "Use $game-studio-sprint-status to tell me how the sprint is going as of 2026-11-12. Keep this read-only and offline. Node is available at /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node.",
+        "requestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+        "rawProjectInputHashes": {
+          "project.yaml": "947757643a66b2492ec96fc6aa0af97d652bbc50bc69fbff7ac8bdf9aa719b72",
+          "production/sprints/sprint-004.md": "b231be81d602bf76629d6baae975566a43a4c03bfc991a569f99c679dd89088e",
+          "production/sprint-status.yaml": "45721bec118d8676fea44d9733b79ae27643c2d47802f9301427091357cb304e",
+          "production/epics/core/story-001.md": "3daf5d3c0068ed8cd2b34211d55b6114ee25aaca28c7e9a4ea7fb3a10551fda7",
+          "production/epics/core/story-002.md": "eb1137f3bc442bf3fa9656f11c8fbfb8837c5dff59afb72426462fef67ef3fe8",
+          "production/epics/core/story-003.md": "0784482339c753ddf49609db26625cae452ad3d521dc10a7d1990f9450ee8a52",
+          "production/epics/core/story-004.md": "1dface54a756de67a0b729a6f3682a4f84bcbd8dbf2356700e9eb85ffd94ef78"
+        },
+        "sameUserRequest": true,
+        "sameRawProjectInputs": true,
+        "sourceFixtureSha256": "0737bc84eb4ff6a19c9fb32da092bd9eb692aef61a308666a449251d4c61d408",
+        "freshRun": "game-studio-sprint-status-hawrvJ",
+        "freshFixtureSha256": "839cc1681fe217a66075281aaea29ac043caebb9f2c45f789f83a436d6e43f43",
+        "freshRequestExactlyMatchesOriginal": true,
+        "freshRawInputFilesExactlyMatchOriginal": true,
+        "rawProjectInputs": {
+          "project.yaml": "engine:\n  name: Web\n",
+          "production/sprints/sprint-004.md": "# Sprint 4\nGoal: Complete the parcel round\nStart: 2026-11-04\nEnd: 2026-11-14\n\n| Story / Task | Priority | Owner | Estimate |\n|---|---|---|---|\n| [Parcel step 1](production/epics/core/story-001.md) | must-have |  | 1 day |\n| [Parcel step 2](production/epics/core/story-002.md) | must-have |  | 1 day |\n| [Parcel step 3](production/epics/core/story-003.md) | must-have |  | 1 day |\n| [Parcel step 4](production/epics/core/story-004.md) | should-have |  | 1 day |\n",
+          "production/sprint-status.yaml": "sprint: 4\ngoal: Complete the parcel round\nstart: '2026-11-04'\nend: '2026-11-14'\nstories:\n  - id: '1-1'\n    name: \"Parcel step 1\"\n    file: \"production/epics/core/story-001.md\"\n    priority: must-have\n    status: done\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-2'\n    name: \"Parcel step 2\"\n    file: \"production/epics/core/story-002.md\"\n    priority: must-have\n    status: in-progress\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-3'\n    name: \"Parcel step 3\"\n    file: \"production/epics/core/story-003.md\"\n    priority: must-have\n    status: backlog\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-4'\n    name: \"Parcel step 4\"\n    file: \"production/epics/core/story-004.md\"\n    priority: should-have\n    status: backlog\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n",
+          "production/epics/core/story-001.md": "# Parcel step 1\nStatus: Complete\n> **Last Updated**: 2026-11-11\n",
+          "production/epics/core/story-002.md": "# Parcel step 2\nStatus: In Progress\n> **Last Updated**: 2026-11-05\n",
+          "production/epics/core/story-003.md": "# Parcel step 3\nStatus: Not Started\n> **Last Updated**: 2026-11-11\n",
+          "production/epics/core/story-004.md": "# Parcel step 4\nStatus: Not Started\n> **Last Updated**: 2026-11-11\n"
+        },
+        "freshAsOfExactlyMatchesOriginal": true,
+        "intentionalChangedInputs": "Installed managed Skill/runtime resources and isolated config marker/paths; user request and project-owned fixture bytes unchanged."
+      },
+      "previousRun": {
+        "runId": "game-studio-sprint-status-JKDUOY",
+        "status": "FAIL",
+        "rawHashes": {
+          "fixture.json": "0737bc84eb4ff6a19c9fb32da092bd9eb692aef61a308666a449251d4c61d408",
+          "report.json": "eba479ab2bb62b01400089b0b8a843cbcf5c538d2c8265578f5a14a937ab4a0f",
+          "events.jsonl": "f55e470526e873f73915a8a150fc8d4760ac509e7e36b46a5d2ac16f48bf6850",
+          "final.txt": "292e58e23d7e9729d630cadeacd14925e516b12c68ea9fc5189c5bed8f1412cb",
+          "before.json": "53c4f67f01728d1f6c53ff4b859c7f981661ef905f96c5fd2fdb34b83414617f",
+          "after.json": "53c4f67f01728d1f6c53ff4b859c7f981661ef905f96c5fd2fdb34b83414617f"
+        },
+        "preservedUnchanged": true
+      },
+      "trustProfileRemoved": true,
+      "rootReconciliation": "All actual regular files, raw evidence and parent traces rehashed; unchanged workspace. Root reread the preserved report-shape failures and final optional-pull report; author manually reviewed complete commands/results for each rerun."
+    },
+    {
+      "scenario": "mismatched-yaml",
+      "runId": "game-studio-sprint-status-t7X4Xw",
+      "status": "PASS",
+      "scopeOfResult": "Manual acceptance of this exact native scenario under the recorded package; not whole-Skill verification.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d08c-63e6-7c83-aac5-d50c791be8db",
+      "traceFile": "rollout-2026-11-13T00-17-03-01a1d08c-63e6-7c83-aac5-d50c791be8db.jsonl",
+      "parentTraceSha256": "a1b85f5a0cd4fe4c67ea112826d98b4b14e137ffbed82bf6342a4f50b21287ca",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-EF79jUUKTONaNFSZvhgn0TphNerhldVTc6LZmNHUGXyTfvVJy4vdFPs6N4XOwBbnUntfLn60q+RinZ7bGTtLlA==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "9dde2bf3cc815a5780422fbfb23b551394a268713b9aaa48c16d64b97a57bd74",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 550,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5883220fb4608974aba4b37c87b613164d5a323b50de196cc26c65b28ce9bbe5",
+      "rawHashes": {
+        "fixture.json": "bf1881ae693b9b01cd38d86df0ae20fba9bbdf32f87dea2c81f2ff0871de724d",
+        "report.json": "579fb2ad0e55531a5bbf17504ad6d5715889108a6c6fbcb0abc8e8fa68263d3a",
+        "events.jsonl": "28f289b4c972d1e35f7755df35e788cf1026f5f97c38571c65b74674327ab2ca",
+        "final.txt": "2cd7888a113a1fec83099f1790ca5fff25b164e29a2d4602fb4b44513fc65f4f",
+        "before.json": "df7c4f6dc871f82647ff9523e688e396fb29700a34d40d29ffaa50fafd618b8d",
+        "after.json": "df7c4f6dc871f82647ff9523e688e396fb29700a34d40d29ffaa50fafd618b8d"
+      },
+      "manualAcceptance": {
+        "scopedConfiguration": "PASS: actual commands query only modes.workflow and modes.story_granularity; no review_mode query.",
+        "authority": "PASS: selected sprint and YAML evidence determine report; no Markdown status override.",
+        "reportStructure": "PASS: Progress table, Burndown, Must-Haves at Risk and Recommendation are separate; Attention Needed is a table when applicable.",
+        "readOnly": "PASS: actual calls contain no project mutation, native child, downstream action, test or gate; all regular project file bytes independently match before and after.",
+        "qualityBoundary": "PASS: no test/play or implementation acceptance claimed.",
+        "selectionAndDates": "PASS: explicit sprint3 selects unpadded sprint-3, not newer/other sprint9; Nov7\u201317,5of10/50%.",
+        "authorityAndUnknowns": "PASS: YAML describes sprint4; rejects it for selected sprint3 and does not fall back to Markdown.2plan entries and all statuses/blockers/completion counts unknown; owner unavailable in plan.",
+        "filesAndTable": "PASS: both referenced paths actually checked and exist; both rows retained.",
+        "burndownAndRisk": "PASS: burndown unknown from unavailable completion; critical threshold unmet at50% remaining, no false OnTrack.",
+        "recommendation": "PASS: one reconciliation recommendation without write.",
+        "priorPresentationDefect": "PASS: Progress precedes table and required sections are separate."
+      },
+      "failureKind": null,
+      "inputComparison": {
+        "sourceRun": "game-studio-sprint-status-2HX08O",
+        "asOf": "2026-11-12",
+        "request": "Use $game-studio-sprint-status for sprint 3 as of 2026-11-12. Read-only, offline. Node is available at /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node.",
+        "requestSha256": "5883220fb4608974aba4b37c87b613164d5a323b50de196cc26c65b28ce9bbe5",
+        "rawProjectInputHashes": {
+          "project.yaml": "947757643a66b2492ec96fc6aa0af97d652bbc50bc69fbff7ac8bdf9aa719b72",
+          "production/sprint-status.yaml": "69edf5d54944e6e573068ab5014d22996da5666e80cacae501d70d20547534c8",
+          "production/epics/core/story-001.md": "3daf5d3c0068ed8cd2b34211d55b6114ee25aaca28c7e9a4ea7fb3a10551fda7",
+          "production/epics/core/story-002.md": "9f5961c7a5acf7a9c2ae73e10bc705917866bd6a686a274f9a57de9120769954",
+          "production/sprints/sprint-3.md": "f5db85d7d29e3b72df5e8e169bc41fa658704000a368e8b09a21e8467a337c10",
+          "production/sprints/sprint-009.md": "92608d10a1735647aafcb46b7fcc53352c666bd947ebe3a0fa23580216f44646"
+        },
+        "sameUserRequest": true,
+        "sameRawProjectInputs": true,
+        "sourceFixtureSha256": "3f8cd3d10049383ac12e0243154cc51c55d5394e0254edefcd59fa7f8532bfdf",
+        "freshRun": "game-studio-sprint-status-t7X4Xw",
+        "freshFixtureSha256": "bf1881ae693b9b01cd38d86df0ae20fba9bbdf32f87dea2c81f2ff0871de724d",
+        "freshRequestExactlyMatchesOriginal": true,
+        "freshRawInputFilesExactlyMatchOriginal": true,
+        "rawProjectInputs": {
+          "project.yaml": "engine:\n  name: Web\n",
+          "production/sprint-status.yaml": "sprint: 4\ngoal: Complete the parcel round\nstart: '2026-10-30'\nend: '2026-11-19'\nstories:\n  - id: '1-1'\n    name: \"Parcel step 1\"\n    file: \"production/epics/core/story-001.md\"\n    priority: must-have\n    status: done\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-2'\n    name: \"Parcel step 2\"\n    file: \"production/epics/core/story-002.md\"\n    priority: must-have\n    status: done\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-3'\n    name: \"Parcel step 3\"\n    file: \"production/epics/core/story-003.md\"\n    priority: must-have\n    status: blocked\n    owner: \"Tess\"\n    blocker: \"Waiting on physics ADR acceptance\"\n    estimate_days: 1\n  - id: '1-4'\n    name: \"Parcel step 4\"\n    file: \"production/epics/core/story-004.md\"\n    priority: should-have\n    status: done\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-5'\n    name: \"Parcel step 5\"\n    file: \"production/epics/core/story-005.md\"\n    priority: should-have\n    status: in-progress\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-6'\n    name: \"Parcel step 6\"\n    file: \"production/epics/core/story-006.md\"\n    priority: should-have\n    status: in-progress\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n",
+          "production/epics/core/story-001.md": "# Parcel step 1\nStatus: Complete\n> **Last Updated**: 2026-11-11\n",
+          "production/epics/core/story-002.md": "# Parcel step 2\nStatus: In Progress\n> **Last Updated**: 2026-11-11\n",
+          "production/sprints/sprint-3.md": "# Sprint 3\nGoal: Complete the parcel round\nStart: 2026-11-07\nEnd: 2026-11-17\n\n| Story / Task | Priority | Owner | Estimate |\n|---|---|---|---|\n| [Parcel step 1](production/epics/core/story-001.md) | must-have |  | 1 day |\n| [Parcel step 2](production/epics/core/story-002.md) | must-have |  | 1 day |\n",
+          "production/sprints/sprint-009.md": "# Sprint 9\nGoal: A different sprint\n"
+        },
+        "freshAsOfExactlyMatchesOriginal": true,
+        "intentionalChangedInputs": "Installed managed Skill/runtime resources and isolated config marker/paths; user request and project-owned fixture bytes unchanged."
+      },
+      "previousRun": {
+        "runId": "game-studio-sprint-status-2HX08O",
+        "status": "FAIL",
+        "rawHashes": {
+          "fixture.json": "3f8cd3d10049383ac12e0243154cc51c55d5394e0254edefcd59fa7f8532bfdf",
+          "report.json": "f2a773350763e1a035f96b2ca639f2defe2bd075715dba7439f5a645178034ce",
+          "events.jsonl": "cacce3067d86b4bcecb8701de3b814d4df0e3a805c6a958f6a1e5f5833077f8b",
+          "final.txt": "bf684740debaf040cd7d4575d3d9e37472c2ccb9464b5d4d4bdace1bc3624f42",
+          "before.json": "3bcdac9a9a70fa286dd24360080e8da426964e6504fd82249981265172881449",
+          "after.json": "3bcdac9a9a70fa286dd24360080e8da426964e6504fd82249981265172881449"
+        },
+        "preservedUnchanged": true
+      },
+      "trustProfileRemoved": true,
+      "rootReconciliation": "All actual regular files, raw evidence and parent traces rehashed; unchanged workspace. Root reread the preserved report-shape failures and final optional-pull report; author manually reviewed complete commands/results for each rerun."
+    },
+    {
+      "scenario": "missing-files",
+      "runId": "game-studio-sprint-status-2Yw613",
+      "status": "PASS",
+      "scopeOfResult": "Manual acceptance of this exact native scenario under the recorded package; not whole-Skill verification.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d08c-6896-7cf3-b668-e8010e6d1ade",
+      "traceFile": "rollout-2026-11-13T00-17-05-01a1d08c-6896-7cf3-b668-e8010e6d1ade.jsonl",
+      "parentTraceSha256": "c6062065ead765ccb4dce93c0b88d97dd5d82576a62ddf03d5418351ceeb1665",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-EF79jUUKTONaNFSZvhgn0TphNerhldVTc6LZmNHUGXyTfvVJy4vdFPs6N4XOwBbnUntfLn60q+RinZ7bGTtLlA==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "9dde2bf3cc815a5780422fbfb23b551394a268713b9aaa48c16d64b97a57bd74",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "fa494d4e3c8ac48d9513ee7fd7f26efa4f46d82ed86badbc53de07d46d0ac537",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 548,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "f34c1a33ae25d33265185763f49ded4f31a4efcdf50afce3d5f915b64742c608",
+        "report.json": "78c0a10d35759d5a746e486e2ea7e8e5244a0e77c21af502158f56d77195c259",
+        "events.jsonl": "5b622cb11ecea2e2ddc5c9fd6d38e85e76f995d57797fc545804cb7e415f2ff1",
+        "final.txt": "bba173ca355747c8fa3977422ce21ae8662d8ca77b69405432fd5acd5814a916",
+        "before.json": "a5ad88a0e3c36757d9a42fdbade7b7682cd58d71c11bef10dc3fbb893b5dcc5d",
+        "after.json": "a5ad88a0e3c36757d9a42fdbade7b7682cd58d71c11bef10dc3fbb893b5dcc5d"
+      },
+      "manualAcceptance": {
+        "scopedConfiguration": "PASS: actual commands query only modes.workflow and modes.story_granularity; no review_mode query.",
+        "authority": "PASS: selected sprint and YAML evidence determine report; no Markdown status override.",
+        "reportStructure": "PASS: Progress table, Burndown, Must-Haves at Risk and Recommendation are separate; Attention Needed is a table when applicable.",
+        "readOnly": "PASS: actual calls contain no project mutation, native child, downstream action, test or gate; all regular project file bytes independently match before and after.",
+        "qualityBoundary": "PASS: no test/play or implementation acceptance claimed.",
+        "selectionAndDates": "PASS: actual mtime sprint004; Oct30\u2013Nov19,7of20/65% consumed.",
+        "progressAndAuthority": "PASS:3rows,1complete1IP1blocked,33.3%; missing step2/3 do not override YAML statuses; step3 actual blocker preserved.",
+        "filesAndTimestamp": "PASS: actual existence checks find2missing; one wrapped-label rg across set; missing IP date stays unknown in Attention table, not invented stale.",
+        "burndownAndCritical": "PASS:31.7pp Behind; only blocked MustHave step3 critical with35% remaining.",
+        "recommendation": "PASS: one replan around blocker, no additional assigned readiness action or execution.",
+        "priorPresentationDefect": "PASS: Attention Needed uses table."
+      },
+      "failureKind": null,
+      "inputComparison": {
+        "sourceRun": "game-studio-sprint-status-rlUCfP",
+        "asOf": "2026-11-12",
+        "request": "Use $game-studio-sprint-status to tell me how the sprint is going as of 2026-11-12. Keep this read-only and offline. Node is available at /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node.",
+        "requestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+        "rawProjectInputHashes": {
+          "project.yaml": "947757643a66b2492ec96fc6aa0af97d652bbc50bc69fbff7ac8bdf9aa719b72",
+          "production/sprints/sprint-004.md": "196f66ba5ce6f56717c097787ae96fda642583a0822e397d5c6c23fbffb50ba4",
+          "production/sprint-status.yaml": "5657bbe5e459750c69ac7cec77d06c1ce265c642404cb43de76b221bebb5bc40",
+          "production/epics/core/story-001.md": "3daf5d3c0068ed8cd2b34211d55b6114ee25aaca28c7e9a4ea7fb3a10551fda7"
+        },
+        "sameUserRequest": true,
+        "sameRawProjectInputs": true,
+        "sourceFixtureSha256": "9d844822ed6a19556e60a5178b8941d458c8ea978b6ede1e1c97d173b7e590fa",
+        "freshRun": "game-studio-sprint-status-2Yw613",
+        "freshFixtureSha256": "f34c1a33ae25d33265185763f49ded4f31a4efcdf50afce3d5f915b64742c608",
+        "freshRequestExactlyMatchesOriginal": true,
+        "freshRawInputFilesExactlyMatchOriginal": true,
+        "rawProjectInputs": {
+          "project.yaml": "engine:\n  name: Web\n",
+          "production/sprints/sprint-004.md": "# Sprint 4\nGoal: Complete the parcel round\nStart: 2026-10-30\nEnd: 2026-11-19\n\n| Story / Task | Priority | Owner | Estimate |\n|---|---|---|---|\n| [Parcel step 1](production/epics/core/story-001.md) | must-have |  | 1 day |\n| [Parcel step 2](production/epics/core/story-002.md) | must-have |  | 1 day |\n| [Parcel step 3](production/epics/core/story-003.md) | must-have |  | 1 day |\n",
+          "production/sprint-status.yaml": "sprint: 4\ngoal: Complete the parcel round\nstart: '2026-10-30'\nend: '2026-11-19'\nstories:\n  - id: '1-1'\n    name: \"Parcel step 1\"\n    file: \"production/epics/core/story-001.md\"\n    priority: must-have\n    status: done\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-2'\n    name: \"Parcel step 2\"\n    file: \"production/epics/core/story-002.md\"\n    priority: must-have\n    status: in-progress\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-3'\n    name: \"Parcel step 3\"\n    file: \"production/epics/core/story-003.md\"\n    priority: must-have\n    status: blocked\n    owner: \"Tess\"\n    blocker: \"Waiting for source files\"\n    estimate_days: 1\n",
+          "production/epics/core/story-001.md": "# Parcel step 1\nStatus: Complete\n> **Last Updated**: 2026-11-11\n"
+        },
+        "freshAsOfExactlyMatchesOriginal": true,
+        "intentionalChangedInputs": "Installed managed Skill/runtime resources and isolated config marker/paths; user request and project-owned fixture bytes unchanged."
+      },
+      "previousRun": {
+        "runId": "game-studio-sprint-status-rlUCfP",
+        "status": "FAIL",
+        "rawHashes": {
+          "fixture.json": "9d844822ed6a19556e60a5178b8941d458c8ea978b6ede1e1c97d173b7e590fa",
+          "report.json": "74266278018d9138380dd15c5ebe34bf49c02f44b9dbaa99ad94bc674bc715e5",
+          "events.jsonl": "844fbc67975c198559668bf8cd7948a2a03d791ede0cdf39eee211d0d0107aa0",
+          "final.txt": "f9c54eb68013214fa1a6edc827a80e45c8929441e360aa24c98fc81d1c1050e8",
+          "before.json": "97194204b8105b7926be34e85c8aedd5420df2fc4d9a2e819bbe043892ba5c13",
+          "after.json": "97194204b8105b7926be34e85c8aedd5420df2fc4d9a2e819bbe043892ba5c13"
+        },
+        "preservedUnchanged": true
+      },
+      "trustProfileRemoved": true,
+      "rootReconciliation": "All actual regular files, raw evidence and parent traces rehashed; unchanged workspace. Root reread the preserved report-shape failures and final optional-pull report; author manually reviewed complete commands/results for each rerun."
+    },
+    {
+      "scenario": "must-haves-complete",
+      "runId": "game-studio-sprint-status-uj9WSn",
+      "status": "PASS",
+      "scopeOfResult": "Manual acceptance of the exact must-haves-complete native scenario after restoration of the source optional-work note; not whole-Skill verification.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "threadId": "01a1d08e-fef9-72f3-bc76-a33b4bb42d42",
+      "traceFile": "rollout-2026-11-13T00-19-54-01a1d08e-fef9-72f3-bc76-a33b4bb42d42.jsonl",
+      "parentTraceSha256": "4d63edeb30caa445649d4317d404d4d678b0bea36a9dfeac879c6c13a60e42c4",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "packageIntegrity": "sha512-INmut3XeXD5MZlafv5LHeT6aQ+JZbLmzMWGJ355uZFq3xPPsUuxqKhwSJnZ3bvpcSrml1SAPaAucuUcXoXA9cw==",
+      "installedHashes": {
+        ".agents/skills/game-studio-sprint-status/SKILL.md": "9dde2bf3cc815a5780422fbfb23b551394a268713b9aaa48c16d64b97a57bd74",
+        ".agents/skills/game-studio-sprint-status/references/build-order.md": "d17f7aa090775230fe18d0a9e4353da6c0e0a56d5d923aa77af8ae5d8b50c74f",
+        ".agents/skills/game-studio-sprint-status/references/sprint.md": "cfd04420e7ce078f41664c004ce0f71dbe3ad968d134c2109c2117f29e3fd399",
+        "studio/scripts/story-status.mjs": "191c4d0de11a6094f624cbdeca06bc64e0a409a2236006a737eb1d1e0a3511d3",
+        "dist/story-status.js": "813948e0ae75b4d3d952fa3ff4a105116373e969677560ea2ace6bb91d9d5faa",
+        "dist/config.js": "8855d712e5e17f36de3c1027759980757ec1010e077c08badf5fa9404decf7fa",
+        "dist/files.js": "fe56135714c357afc48d33bf04216921e7c72b21cbb1bd4414af1e794cf388f0"
+      },
+      "preservedFiles": 552,
+      "changed": [],
+      "added": [],
+      "actualFileBytesIndependentlyVerified": true,
+      "nativeChildren": [],
+      "asOf": "2026-11-12",
+      "actualUserRequestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+      "rawHashes": {
+        "fixture.json": "3bc100e930dccad362f5bd8573da594331f717d89f7d3094d6aae4607d678d01",
+        "report.json": "a890b7c0dbc1d88c83f9d58f6a8f77de358d347644cbf2058b4b94cfac95a9d4",
+        "events.jsonl": "b84da01d18e6c98372fa12555e9296c77448cbb7f1bade0a3e2631ed79f4deca",
+        "final.txt": "d2d445343d4b571b0eabf9b2dd3be6418d8c324b3423cc4470ff1392390ba862",
+        "before.json": "5e1b9daba3375a01477f1ee5e53e4dd9440cdab516e3a6c84c343baedc87b319",
+        "after.json": "5e1b9daba3375a01477f1ee5e53e4dd9440cdab516e3a6c84c343baedc87b319"
+      },
+      "inputComparison": {
+        "sourceRun": "game-studio-sprint-status-R70gI6",
+        "asOf": "2026-11-12",
+        "request": "Use $game-studio-sprint-status to tell me how the sprint is going as of 2026-11-12. Keep this read-only and offline. Node is available at /private/tmp/game-studio-tools/node-v24.22.2-darwin-arm64/bin/node.",
+        "requestSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65",
+        "rawProjectInputHashes": {
+          "project.yaml": "947757643a66b2492ec96fc6aa0af97d652bbc50bc69fbff7ac8bdf9aa719b72",
+          "production/sprints/sprint-004.md": "366a31fc83a09d37edf1c18115ad96e81987bf0619f30784cd12032182c43b68",
+          "production/sprint-status.yaml": "b0907cf7501e532471829cad13b272afe0e1f283e12532237ec03213fc8c3ef0",
+          "production/epics/core/story-001.md": "3daf5d3c0068ed8cd2b34211d55b6114ee25aaca28c7e9a4ea7fb3a10551fda7",
+          "production/epics/core/story-002.md": "6af69df3b3a8885da9a1eac886159915dacdd1b0eea46ef7120263d232dcaa22",
+          "production/epics/core/story-003.md": "3a73332938f54b46d4024ca3f08441a1aa7eff37e3938d8bd42bf8e021f087ac",
+          "production/epics/core/story-004.md": "1dface54a756de67a0b729a6f3682a4f84bcbd8dbf2356700e9eb85ffd94ef78",
+          "production/epics/core/story-005.md": "cea8565112fecc4c798de8ad3a9aec3303390fcb5bb5e1906c6f39f1d774d1cb"
+        },
+        "sameUserRequest": true,
+        "sameRawProjectInputs": true,
+        "sourceFixtureSha256": "fa750c4252b9a027877d8d2fcac23c9a29b881404e84072ecb12879b250a404f",
+        "freshRun": "game-studio-sprint-status-uj9WSn",
+        "freshFixtureSha256": "3bc100e930dccad362f5bd8573da594331f717d89f7d3094d6aae4607d678d01",
+        "freshRequestExactlyMatchesOriginal": true,
+        "freshRawInputFilesExactlyMatchOriginal": true,
+        "rawProjectInputs": {
+          "project.yaml": "engine:\n  name: Web\n",
+          "production/sprints/sprint-004.md": "# Sprint 4\nGoal: Complete the parcel round\nStart: 2026-11-07\nEnd: 2026-11-17\n\n| Story / Task | Priority | Owner | Estimate |\n|---|---|---|---|\n| [Parcel step 1](production/epics/core/story-001.md) | must-have |  | 1 day |\n| [Parcel step 2](production/epics/core/story-002.md) | must-have |  | 1 day |\n| [Parcel step 3](production/epics/core/story-003.md) | must-have |  | 1 day |\n| [Parcel step 4](production/epics/core/story-004.md) | should-have |  | 1 day |\n| [Parcel step 5](production/epics/core/story-005.md) | should-have |  | 1 day |\n",
+          "production/sprint-status.yaml": "sprint: 4\ngoal: Complete the parcel round\nstart: '2026-11-07'\nend: '2026-11-17'\nstories:\n  - id: '1-1'\n    name: \"Parcel step 1\"\n    file: \"production/epics/core/story-001.md\"\n    priority: must-have\n    status: done\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-2'\n    name: \"Parcel step 2\"\n    file: \"production/epics/core/story-002.md\"\n    priority: must-have\n    status: done\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-3'\n    name: \"Parcel step 3\"\n    file: \"production/epics/core/story-003.md\"\n    priority: must-have\n    status: done\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-4'\n    name: \"Parcel step 4\"\n    file: \"production/epics/core/story-004.md\"\n    priority: should-have\n    status: backlog\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n  - id: '1-5'\n    name: \"Parcel step 5\"\n    file: \"production/epics/core/story-005.md\"\n    priority: should-have\n    status: backlog\n    owner: \"Tess\"\n    blocker: \"\"\n    estimate_days: 1\n",
+          "production/epics/core/story-001.md": "# Parcel step 1\nStatus: Complete\n> **Last Updated**: 2026-11-11\n",
+          "production/epics/core/story-002.md": "# Parcel step 2\nStatus: Complete\n> **Last Updated**: 2026-11-11\n",
+          "production/epics/core/story-003.md": "# Parcel step 3\nStatus: Complete\n> **Last Updated**: 2026-11-11\n",
+          "production/epics/core/story-004.md": "# Parcel step 4\nStatus: Not Started\n> **Last Updated**: 2026-11-11\n",
+          "production/epics/core/story-005.md": "# Parcel step 5\nStatus: Not Started\n> **Last Updated**: 2026-11-11\n"
+        },
+        "freshAsOfExactlyMatchesOriginal": true,
+        "intentionalChangedInputs": "Installed managed Skill/runtime resources and isolated config marker/paths; user request and project-owned fixture bytes unchanged."
+      },
+      "previousFailures": [
+        {
+          "runId": "game-studio-sprint-status-gV1zDT",
+          "status": "FAIL",
+          "rawHashes": {
+            "fixture.json": "f31b46773f806504a406f34f4f10eb764cd85eae947d899e40833c4020ee6033",
+            "report.json": "a0111e2c5ef236ac1eef4709bdc7d929f69ea2399e43eb94084d1a53d29ff892",
+            "events.jsonl": "4f8c63b361c42a4721142d3e96c80d1e0fba0b94b7538667f1e43f0c50ad6255",
+            "final.txt": "7dc3c2a0df7a0f5b2915d1c76c7d6c17742e06d3636c145fd376466ca84f4201",
+            "before.json": "97d8f8acaefcf98cc097cb43879784fec75fc9dddedee30c10fe91d941c3a55e",
+            "after.json": "97d8f8acaefcf98cc097cb43879784fec75fc9dddedee30c10fe91d941c3a55e"
+          },
+          "preservedUnchanged": true
+        },
+        {
+          "runId": "game-studio-sprint-status-R70gI6",
+          "status": "FAIL",
+          "rawHashes": {
+            "fixture.json": "fa750c4252b9a027877d8d2fcac23c9a29b881404e84072ecb12879b250a404f",
+            "report.json": "45efd02d52868ddbcce0228d8432c1379dcfb4bd58dd710292d8c9f5f0eb0a0c",
+            "events.jsonl": "1173fb3f6bc10d121f9eb259c285f2ec5a24315b4a342e08c4c90fb6f5e5a13a",
+            "final.txt": "5428777d6dbc03b80b46bac7d5caf4363f7331994ca0ce7686c5246366b13205",
+            "before.json": "35c237f0f3ccba7305516b542686611a42d669e3e0e4644d2caf1324690100cc",
+            "after.json": "35c237f0f3ccba7305516b542686611a42d669e3e0e4644d2caf1324690100cc"
+          },
+          "preservedUnchanged": true
+        }
+      ],
+      "trustProfileRemoved": true,
+      "manualAcceptance": {
+        "configuration": "PASS: only modes.workflow/story_granularity queries; no review_mode query.",
+        "selection": "PASS: actual stat reads establish sprint004 as latest/only; explicit as-of2026-11-12 retained.",
+        "authorityAndRows": "PASS: authoritative sprint-status YAML; all5rows and owners/priorities preserved,3complete2notstarted. Actual path listing establishes5existingfiles.",
+        "datesAndProgress": "PASS: Nov7\u201317,5of10remaining/50%consumed;3/5=60%, gap -10pp OnTrack.",
+        "completionAndOptionalWork": "PASS:3/3 Must Haves complete; Burndown expressly names steps4/5 as eligible optional Should Have work, without assigning them or calling whole sprint complete.",
+        "reportShape": "PASS: separate Progress/table/Burndown/Must-Haves atRisk/Recommendation; no in-progress work means Attention omission appropriate; None at risk.",
+        "recommendation": "PASS: single legal no-action recommendation; optional work remains an observation.",
+        "qualityAndActions": "PASS: no tests/play/implementation acceptance, no child/gate/downstream/write commands;552regularfiles independently unchanged.",
+        "nativeBoundary": "macOS CodexCLI0.162.0 native exit0 and wrapper3 manually reviewed; process terminated, trust profile removed."
+      },
+      "rootReconciliation": "All actual regular files, raw evidence and parent traces rehashed; unchanged workspace. Root reread the preserved report-shape failures and final optional-pull report; author manually reviewed complete commands/results for each rerun."
+    }
+  ],
+  "definedScenarios": 26,
+  "remainingMatrix": "All26 defined scenarios have a selected scoped pass across recorded versions; all33 runs and7 failures retained. Desktop, subdirectory, unavailable runtime and broader source variants remain open. This does not certify every input against the newest archive.",
+  "validation": {
+    "build": "PASS",
+    "contentLint": "PASS",
+    "relevantTests": 34,
+    "fullRegression": {
+      "pass": 210,
+      "fail": 0,
+      "skip": 0
+    },
+    "installedArchive": "PASS"
+  },
+  "limits": [
+    "Read-only behavior is observed preservation with workspace-write permissions, not OS-enforced write denial.",
+    "Natural prompts include an explicit recorded as-of date, no expected verdict or route. No real game execution or human play inferred.",
+    "Source Phase 5 total-day display was omitted in initial run; the formatting instruction was corrected and original inputs preserved for fresh-session rerun.",
+    "Desktop, missing-runtime and project-subdirectory behavior remain open.",
+    "New20 scenarios use the explicitly recorded2026-11-12 as-of date; some executions crossed local midnight. No current-date substitution was made."
+  ],
+  "sanitization": "No credentials, local home paths, encrypted prompts or hidden reasoning. Only public runtime policy and raw evidence hashes retained.",
+  "sameInputReruns": [
+    {
+      "initialRunId": "game-studio-sprint-status-uV11Fc",
+      "rerunId": "game-studio-sprint-status-5rp3sd",
+      "identicalOwnerInputHashes": {
+        "project.yaml": "947757643a66b2492ec96fc6aa0af97d652bbc50bc69fbff7ac8bdf9aa719b72",
+        "production/sprint-status.yaml": "69edf5d54944e6e573068ab5014d22996da5666e80cacae501d70d20547534c8",
+        "production/sprints/sprint-004.md": "22ae8e3d3913d1b17d5b8c1c638c8bb6992eacbc8a457e2c698f0f144e7d2b37",
+        "production/epics/core/story-001.md": "3daf5d3c0068ed8cd2b34211d55b6114ee25aaca28c7e9a4ea7fb3a10551fda7",
+        "production/epics/core/story-002.md": "6af69df3b3a8885da9a1eac886159915dacdd1b0eea46ef7120263d232dcaa22",
+        "production/epics/core/story-003.md": "1f67897ee1608791272238c2a1947b9b838c5a205c7604e162b76774dc561fc6",
+        "production/epics/core/story-004.md": "c4a17766caf055b46757f0c54da9afd29bbbc6d760c2df2044a700356fc01017",
+        "production/epics/core/story-005.md": "3939315ca397fe31dd2ff236afc6b8eb59d9b48431cb6749c76c0d7887afe991",
+        "production/epics/core/story-006.md": "60f9be9ebba3c426de43fe871d85dcde026f25fd6c574ce8618813065c9d8e43"
+      },
+      "identicalPromptSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65"
+    },
+    {
+      "initialRunId": "game-studio-sprint-status-VUejkK",
+      "rerunId": "game-studio-sprint-status-QGilDK",
+      "identicalOwnerInputHashes": {
+        "project.yaml": "947757643a66b2492ec96fc6aa0af97d652bbc50bc69fbff7ac8bdf9aa719b72",
+        "production/sprint-status.yaml": "30aaf2741f2167b840c6c530ac2276627786035949a68c72b67db8d95a0ad4a3",
+        "production/sprints/sprint-004.md": "a2c22706c313170f36efec78689b95d39d887ecab65037eb256e9a5bf4963fb6",
+        "production/epics/core/story-001.md": "3daf5d3c0068ed8cd2b34211d55b6114ee25aaca28c7e9a4ea7fb3a10551fda7",
+        "production/epics/core/story-002.md": "6af69df3b3a8885da9a1eac886159915dacdd1b0eea46ef7120263d232dcaa22",
+        "production/epics/core/story-003.md": "5140e731226993d391a1a8a72c12470b9fded805bfb1bbc5a82a19fc004a44a1",
+        "production/epics/core/story-004.md": "e8d9e40a1b55e2be95f98b996176d52c55cdba1b1d1584238eb21c6b975e51b7"
+      },
+      "identicalPromptSha256": "5a1fdda72114abb8bcaac7013c6617eaa0d1c484aa3888953c1c75a98b2deb65"
+    }
+  ],
+  "matrixSummary": {
+    "actualRuns": 33,
+    "outcomes": {
+      "PASS": 26,
+      "FAIL": 7
+    },
+    "definedScenariosExecuted": 26,
+    "scenariosWithSelectedPass": 26,
+    "failureHistory": "Seven initial/intermediate failures retained. Four report-shape failures corrected by source-format priority clarification; optional Should Have note restored after its separate omission remained visible."
+  },
+  "postRunCorrections": [
+    "Required sprint sections/tables outrank soft line target; minimal under15-line branch remains separate.",
+    "Restore source Phase5 On Track note of eligible optional Should Have work; no-action Recommendation is valid and no work is executed."
+  ],
+  "updated": "2026-11-13"
+}

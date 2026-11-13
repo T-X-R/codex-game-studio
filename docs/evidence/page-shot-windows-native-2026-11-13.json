@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-13",
+  "scope": "Windows browser-discovery fixture final child isolation",
+  "status": "NATIVE_WINDOWS_PASS",
+  "head": "09ff4e23256cb3c7f6ab92df0cb339e841429e19",
+  "ci": "https://github.com/T-X-R/codex-game-studio/actions/runs/43361842754",
+  "windowsJob": 131676937344,
+  "log": {
+    "path": "/private/tmp/game-studio-09ff4e2-windows-ci.log",
+    "sha256": "948684e510efed15f73d82499dc67a78693fdee888f38de3c5d362024b539435"
+  },
+  "diagnostics": {
+    "node": "v24.22.2",
+    "uv": "1.52.1",
+    "arch": "x64",
+    "browserEnvironmentPresence": {
+      "parent": {
+        "PATH": true,
+        "PLAYWRIGHT_BROWSERS_PATH": true,
+        "GAME_STUDIO_BROWSER": false,
+        "PROGRAMFILES": false,
+        "PROGRAMFILES(X86)": false,
+        "LOCALAPPDATA": false
+      },
+      "before": {
+        "PATH": true,
+        "PLAYWRIGHT_BROWSERS_PATH": true,
+        "GAME_STUDIO_BROWSER": false,
+        "PROGRAMFILES": true,
+        "PROGRAMFILES(X86)": false,
+        "LOCALAPPDATA": false
+      },
+      "after": {
+        "PATH": true,
+        "PLAYWRIGHT_BROWSERS_PATH": true,
+        "GAME_STUDIO_BROWSER": false,
+        "PROGRAMFILES": false,
+        "PROGRAMFILES(X86)": false,
+        "LOCALAPPDATA": false
+      },
+      "afterImport": {
+        "PATH": true,
+        "PLAYWRIGHT_BROWSERS_PATH": true,
+        "GAME_STUDIO_BROWSER": false,
+        "PROGRAMFILES": false,
+        "PROGRAMFILES(X86)": false,
+        "LOCALAPPDATA": false
+      }
+    }
+  },
+  "tests": {
+    "pass": 337,
+    "fail": 0,
+    "skip": 56,
+    "note": "POSIX source-comparison cases skipped; these are not Windows passes."
+  },
+  "packedInstall": "PASS",
+  "finding": "ProgramFiles is absent from the supplied parent environment but present at child entry on the actual Windows runner. Child clearing removes it, module import does not restore it, and the original PATH-only discovery assertion passes. The exact runtime/OS component restoring the key is not established.",
+  "productBehaviorChanged": false,
+  "originalAssertionPreserved": true,
+  "priorFailuresRetained": [
+    "docs/evidence/page-shot-windows-fixture-2026-11-13.json",
+    "docs/evidence/page-shot-child-environment-2026-11-13.json"
+  ],
+  "limits": [
+    "This result covers 09ff4e2 only; later source changes require their own CI.",
+    "The full run subsequently completed successfully: Linux Node 24/26, macOS, Windows and browser jobs all passed."
+  ]
+}

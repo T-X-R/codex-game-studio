@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A015 original five native scenarios: real typed role and source artifacts; engine execution was not part of these runs.",
+  "roleSha256": "0a3c590dfaffe6fb17c0136c8dfeb5dbd73d2b8dc5108ca5c1b6cf599ddda9e2",
+  "results": [
+    {
+      "scenario": "gdscript-type-review",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-V30xg7",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "semantic": {
+        "status": "FAIL",
+        "functionalTypeReview": "PASS",
+        "missingAnnotationsFound": 8,
+        "originalCaseOutputOmission": "No explanation of static typing performance or tooling benefits in child commentary/final or parent final. Core fixes and already-typed controls correct.",
+        "fileProtection": "PASS",
+        "versionLimits": "Retains unknown installed version and explicitly marks 4.6 warning-setting documentation applicability to 4.7 unverified.",
+        "execution": "No native engine/game/test operations observed; read-only rg missing tests exit 2 reported.",
+        "remainingRuntime": "NOT ASSESSED"
+      }
+    },
+    {
+      "scenario": "gdscript-shader-redirect",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-rFXlnd",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "semantic": {
+        "status": "PASS",
+        "scope": "Selected original shader redirect case only",
+        "findings": "Explicit actual shader-owner handoff, no shader or pseudo-shader body, preserves unresolved visual decisions and zero files changed. Offers only future GDScript integration; no claimed specialist execution.",
+        "runtime": "NOT ASSESSED"
+      }
+    },
+    {
+      "scenario": "gdscript-async-room-load",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-aMc8GE",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "semantic": {
+        "status": "PASS",
+        "scope": "Selected original source-authoring/static behavior contract; runtime not assessed",
+        "sourceReview": [
+          "Actual typed RoomLoader API and typed signals match settled interface.",
+          "Checks start error; failed/invalid status never retrieve or instantiate.",
+          "In-progress loop yields process_frame; retrieves PackedScene only after LOADED.",
+          "Explicit is_instance_valid(self) after await; destination/session lifetime checked before spawn, one-shot listener and cleanup.",
+          "One authorized file only, no existing file changes, no engine/test execution observed."
+        ],
+        "limitations": [
+          "No actual success/error/cancellation runtime observed.",
+          "No installed editor capture, parse/compile or integration result.",
+          "No claim background resource work itself is cancelled."
+        ],
+        "errorsPreserved": [
+          "Read-only search nonexistent bundled directory exit 2; actual path subsequently used.",
+          "git diff --no-index newfile exit 1 is expected diff result.",
+          "Host model refresh timeout and memory rate-limit network error; no workaround."
+        ]
+      }
+    },
+    {
+      "scenario": "gdscript-typed-entity-loop",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-deKqUS",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "semantic": {
+        "status": "FAIL",
+        "functionalRefactor": "PASS",
+        "sourceAuthoring": "Actual Array[CargoMarker] replacement with explicit loop/parameter/return types; append and insertion-order same-delta semantics preserved; exclusive new-file creation.",
+        "sourceOutputOmission": "Child commentary/final supplies no explanation of typed compiler paths/untyped compiler optimization limitation required by original Case 4 and Codex acceptance. Conditional profiling-to-GDExtension next step is also not given; no unsupported migration is recommended.",
+        "scope": "All originals unchanged; only specified new replacement added. Not integrated into scenes.",
+        "runtime": "No engine/test/profiler execution; no speedup or compilation claimed."
+      }
+    },
+    {
+      "scenario": "gdscript-abstract-enemy-46",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-u3GT0j",
+      "nativeExit": 0,
+      "wrapperExit": 3,
+      "semantic": {
+        "status": "FAIL",
+        "functionalSourceAuthoring": "PASS",
+        "versionEvidence": "Actual project pin 4.6, four reference reads and official version-specific source verified. Unknown installed gap retained; no compile/run claim.",
+        "sourceOutputOmission": "Original Case 5 explicitly requires output explaining @abstract introduced in 4.5 confirmed against project 4.4-to-4.5 table. Neither child commentary/final nor artifact states that introduction/version-history attribution. It instead cites correct 4.6 syntax documentation. This is an output-coverage omission, not demonstrated code/API defect.",
+        "scope": "One exact new source plus missing parent directory; all originals intact; exclusive wx creation.",
+        "runtime": "No engine/test executed. Actual 4.6 parsing or concrete-subclass check NOT ASSESSED."
+      }
+    }
+  ],
+  "summary": {
+    "selectedPass": 2,
+    "selectedFail": 3,
+    "reason": "Core type findings and authored source are present; three outputs omit required rationale, conditional handoff or documented feature introduction. These are not claimed algorithm/compiler failures."
+  },
+  "review": {
+    "path": "/private/tmp/game-studio-a015-native-review-0qzzt5rz/review.md",
+    "sha256": "f8e457627e4cd16f4e7dc79c75c119cbc734f49908adc961e7e1ae0c646508e6"
+  },
+  "manifest": {
+    "path": "/private/tmp/game-studio-a015-native-review-0qzzt5rz/manifest.json",
+    "sha256": "d704a581a9a0cfb5eb53f42c27e1dec30e1ba74bdfb93c10cec15e01add1f839"
+  },
+  "rootAudit": {
+    "path": "/private/tmp/game-studio-a015-original-a017-retry-root-audit.json",
+    "sha256": "ebe95db75d05c30df72229eeafe9eb8ac1a871253447700743185b463252f8fa"
+  },
+  "rootFrozenFilesRehashed": 228,
+  "actualHost": {
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "approval": "on-request",
+    "sandbox": "workspace-write",
+    "fullRoleInjectionAndTypedSelection": "Observed in all five parent/child trace pairs",
+    "policyOverride": false,
+    "newHookTrust": false
+  },
+  "limits": [
+    "All project originals preserved; only exactly authorized source files/directories added.",
+    "Native exit zero and wrapper three require manual semantic review, not automatic PASS.",
+    "Runtime warnings, model-refresh timeout and analytics transport warnings remain in raw evidence; no host-error-free claim.",
+    "Async engine behavior, typed-loop measurements, scene integration and real Godot 4.6 compilation remain separate checks.",
+    "Same-input retries for the three omissions are in progress; original failures remain unchanged.",
+    "Complete-role, desktop and target-platform acceptance remain open."
+  ]
+}

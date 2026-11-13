@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "All three Markdown writer commands plus retained reader regression and actual installed archive; native consuming workflows and cross-platform CI remain separate.",
+  "candidate": {
+    "path": "/private/tmp/game-studio-md-writer-impl-nug1l_5i",
+    "manifestSha256": "1186ce5f5707b572b83e93d2650026fdc8d766c625882d073057447a669471b9"
+  },
+  "sourceReview": "architecture_decision_migration audited complete Bash behavior and 25 source/filesystem probes; root reviewed candidate implementation, wrapper, differential/negative tests and exact source/base hashes.",
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "node24": {
+      "pass": 362,
+      "fail": 0,
+      "skip": 0
+    },
+    "node26": {
+      "pass": 362,
+      "fail": 0,
+      "skip": 0
+    },
+    "packedInstall": "PASS: actual pinned resource, replace stdin, insert-before TSV, set-field literal flag value, dry-run, no-op, missing-heading nonmutation and unchanged reader contracts",
+    "writerBashComparisons": 54,
+    "separateWriterBashComparisons": 20,
+    "retainedReaderBashComparisons": 228
+  },
+  "sourceHashes": {
+    "toolkit/src/md-section.ts": "1a8da883aca9f44706d285ed03a905c09452ebb66d9fd4074fa2d6b3428da980",
+    "studio/scripts/md-section.mjs": "8d0d48fd03c85657ed4841797a05895c5ad771cea9975555d3021d9ef1ff22a9",
+    "toolkit/test/md-section.test.mjs": "192283d962f4bbb7921e52e4c901142dfe5fc5472f183c475677de43fa7f251a",
+    "toolkit/test/md-section-writer.test.mjs": "d9d854ba91d750e6854c805929deea859d13c54f7506bcf2f03dba281987e8ab",
+    "studio-tests/helpers/md-section-codex.md": "70f0dcfb89d48d99208f1bfe747805295f47a2882cc866fab5cde2749d3fca6e",
+    "toolkit/test/packed-smoke.mjs": "5157e20fa4af54ce046755354725b39806b0cb84dfc030f29d5d278977e1747b"
+  },
+  "logs": {
+    "build": {
+      "path": "/private/tmp/game-studio-md-writer-build.log",
+      "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+    },
+    "typecheck": {
+      "path": "/private/tmp/game-studio-md-writer-typecheck.log",
+      "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+    },
+    "lint": {
+      "path": "/private/tmp/game-studio-md-writer-lint.log",
+      "sha256": "4dd81431e049bb4f27647136301100f6eb3ea8f2c14f11b46d960be17df3ffcd"
+    },
+    "tests24": {
+      "path": "/private/tmp/game-studio-md-writer-tests24.log",
+      "sha256": "174cf14428ad241d18b8729be071d3f250ed2fa06e3e6fa3ea764a5e22fe3ce3"
+    },
+    "tests26": {
+      "path": "/private/tmp/game-studio-md-writer-tests26.log",
+      "sha256": "54b6d0ea23d926a4592261531b275e512fc023984d615cf867373083af67abb9"
+    },
+    "pack": {
+      "path": "/private/tmp/game-studio-md-writer-pack.log",
+      "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+    }
+  },
+  "scopeAndSafety": [
+    "Project-relative existing file only; reject symlinks, real hardlink changes and invalid UTF-8 writes.",
+    "Preserve documented Bash transformations, mixed EOL and no-op bytes/mode/inode/mtime.",
+    "Actual write-permission check; owned exclusive temporary file, ordinary mode preservation, snapshot recheck, atomic replacement.",
+    "Side-effect-free dry-run reports applied false and never grants workflow authorization.",
+    "No global atomicWrite or installer transaction changes."
+  ],
+  "limits": [
+    "Atomic replacement changes inode; no ACL/xattr/ownership/special-mode preservation claim.",
+    "Snapshot rechecks are not hostile-race-proof compare-and-swap.",
+    "macOS permission branches actually exercised; Windows and Linux CI for this code pending.",
+    "No native consuming Skill result is inferred from helper tests."
+  ]
+}

@@ -1,0 +1,136 @@
+# Canonical content validation
+
+In an attached game with its runtime restored, run:
+
+```sh
+node .game-studio/run.cjs check --kind content --json
+```
+
+This read-only check inspects the game's actual `game-studio` / `game-studio-*`
+Skill and role entrypoints, including edited instructions and nested references.
+It also reports entrypoints expected by the running package but missing from the
+game. Other namespace entries are listed under `unassessedFiles`; they are not
+subjected to this toolkit's canonical metadata profile. Global onboarding is
+outside this project check. No command, Hook or referenced script is executed.
+
+Literal `resource path studio/...` references resolve in the running package's
+resource bundle. Ordinary Markdown links resolve relative to their referring
+file in its actual filesystem root, including links inside bundled documents;
+missing project files never silently fall back to same-named package files.
+`checkedSources` and each issue's `root` identify those locations. `checkedFiles`
+retains the deduplicated relative paths for existing consumers.
+
+The common CLI result has scope `project-content`, status `ok`/exit 0 for valid
+static content or `failed`/exit 5 with `CHECK_FAILED` for observed defects.
+Invalid arguments use exit 2. Runtime availability and project discovery keep
+their existing diagnostic exits. `behaviorVerified` remains false. This does not
+audit the maintainer source catalog, all packaged assets, global Skills, native
+discovery, gameplay or human acceptance. Existing prototype syntax checks remain
+`check <path>` (or explicitly `check <path> --kind prototype`).
+
+After `npm --prefix toolkit run build`, run
+`npm --prefix toolkit run lint:content`. To inspect an extracted canonical
+resource tree, append `-- --root <directory> --bundle-only`. Inspection is read-only; exit 0
+means the implemented static checks found no errors, 1 means content errors,
+and 2 means invalid invocation or an inspection failure. JSON includes each
+affected path and issue, observed counts and `behaviorVerified: false`.
+
+This replaces the test-local metadata assertions with a reusable validator for
+the current Codex content. Default inspection also checks catalog version 3
+against all 78 retained Skill inputs (75 primary workflows and three aliases)
+and 49 retained role inputs. Every primary row has its intended Codex target and
+`migration_state`: `pending`, `partial` or `verified`. Existing partial targets
+cannot disappear unnoticed; new canonical entries cannot bypass the catalog.
+The original names, domain specs and historical result fields are preserved;
+blank historical fields do not count as passing evidence. Aliases retain the
+approved replacement and must not create duplicate active Skill entrypoints.
+
+Default source inspection also reconciles the existing tables in
+`tasks/migration-inventory.md` with all 18 retained Hook files, 54 script/resource
+files and 14 scoped rules. It rejects omitted/duplicate rows, missing or
+nonregular source files, undeclared additions and empty disposition columns.
+The tables remain the single inventory for those sources. Literal registrations
+in the retained `.claude/settings.json` are inspected as data: the 15 registered
+Hook files must match each table row's event/matcher; the three unregistered
+helpers remain unregistered. Missing, duplicated, unknown or dynamically
+constructed registrations are errors. No Hook is executed, installed or trusted.
+
+JSON reports this under `inventory`, including `sourceCoverageComplete`. That
+field means only that the source tables and retained files/registrations reconcile;
+it does not mean any of their Codex replacements are implemented or accepted.
+Table disposition text still needs semantic review. `--bundle-only` leaves both
+source catalog and inventory NOT ASSESSED because retained inputs are not packaged.
+`--complete` still checks workflow/role/alias declarations, not behavioral
+completion of the rule/Hook/helper queues or the full release.
+
+`--complete` additionally requires every row and alias to declare `verified`,
+with readable `codex_spec` and evidence files under `docs/evidence/`. It currently
+fails because the migration remains incomplete. `declaredComplete` describes
+those declarations and file presence only, never the truth of behavioral claims.
+Evidence still needs semantic review against the complete approved requirements.
+`--bundle-only` explicitly leaves catalog inspection NOT ASSESSED and cannot be
+combined with `--complete`; source inputs/catalog are not distributed at runtime.
+
+The [Codex behavior rubric](../studio-tests/quality-rubric.md) now separates
+instruction review from observed behavior and preserves the original 15 categories
+and 57 metric identities. The maintainer guide and spec templates use Codex
+mechanics and guided authorization. This is not the final T20 gate yet:
+individual spec migration and remaining
+legacy consumer replacement are open. The old linter and upstream behavioral
+specs remain migration inputs. Shared rules/helpers and host behavior are
+separately gated by the plan.
+
+Checks include required nonempty Skill/onboarding/role trees, readable entrypoints,
+YAML/TOML parsing, duplicate keys/names, nonempty instructions, local reference
+existence and containment, and symlink rejection. Inline Markdown links (including
+angle-bracket paths) and reference definitions are checked recursively; remote
+links are not fetched and heading anchors are not validated. Generated/dynamic
+references and escaped Markdown delimiters are not interpreted as a full Markdown
+renderer would and still need review.
+Literal `resource path studio/...` references resolve in the same bundle. Missing
+resources name the referring file. Nested Skill guidance is inspected even when
+it is not linked from the entrypoint. No command or referenced script is executed.
+
+Explicit command examples in inline code spans and fenced blocks are checked
+against the runtime's command registry: command leaves, option names/types,
+positional counts and `schema` targets. This includes recursively visited shared
+documents and nested Skill guidance. Examples start with `game-studio` or
+`node .game-studio/run.cjs`; a launcher name alone is a reference. Optional `$`
+prompts, backslash line continuations, quotes, comments, `--key=value` and simple
+`<placeholder>` values are supported. Invalid examples report their content path
+and line (relative to the parsed body for entrypoints/role instructions).
+
+This is a static argument check, not a shell or runtime simulation. It does not
+validate handler-specific required options, enum/configuration values, filesystem
+state, permissions or runtime availability. Placeholders, including `[KEY]`, are
+checked as supplied arguments; omitted optional variants still need review.
+Shell operators and active command substitution in explicit examples are rejected
+as unsupported, never executed. Prose, abbreviated commands, multiline inline
+spans, environment expansion, other launchers and examples embedded in scripts
+remain outside this syntax check and need review. Document runnable examples as
+separate explicit invocations so they receive this check.
+
+The canonical migration profile currently permits Skill `name`, `description`
+and optional `metadata`; roles contain `name`, `description` and
+`developer_instructions`. Names match their file/folder and use the `game-studio`
+namespace. These are project conventions, not claims that Codex only supports
+these fields. In particular, the toolkit's canonical roles intentionally inherit
+model and permissions instead of carrying model pins or ineffective sandbox
+settings. Changes to this profile need matching validation and host evidence.
+
+The official [Skill format](https://learn.chatgpt.com/docs/build-skills) requires
+name and description; the official
+[custom-agent documentation](https://learn.chatgpt.com/docs/agent-configuration/subagents)
+defines TOML roles and inherited permissions. TOML is parsed by pinned
+`smol-toml` 1.9.1 (BSD-3-Clause, no transitive dependencies). Parser acceptance
+does not prove that a specific Codex host supports every TOML syntax or feature.
+
+Active Skill guidance and role instructions must not refer to `.claude/`,
+`CLAUDE_SKILL_DIR`, `$ARGUMENTS` or `AskUserQuestion`. Upstream attribution remains
+allowed. Shared migration documentation can describe historical input paths,
+such as importing old technical preferences; it is not subjected to that blanket
+runtime-token prohibition. Shared-document semantics still require review.
+
+No static result establishes Skill discovery, correct triggering, role selection,
+permission enforcement, gameplay behavior, human acceptance or migration completion.
+Each workflow still needs the live evidence specified in `tasks/todo.md`.

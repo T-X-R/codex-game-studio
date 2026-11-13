@@ -1,0 +1,63 @@
+{
+  "recordedAt": "2026-11-12",
+  "client": "codex-cli 0.162.0",
+  "platform": "macOS ARM64",
+  "model": "gpt-6.1-sol",
+  "scope": "SessionStart and multi-file apply_patch allow/deny from project root and subdirectory",
+  "authorization": "Reused the owner's approval for the exact same two isolated fixture Hooks; neither definition nor script changed",
+  "trust": {
+    "reviewSessionId": "01a1cdd7-8f4a-7852-b701-77001b457824",
+    "mechanism": "Native /hooks individual review and trust; no direct trusted_hash writes",
+    "before": { "installed": 2, "active": 0, "needsReview": 2 },
+    "after": { "installed": 2, "active": 2, "needsReview": 0 },
+    "storageObserved": "hooks.state entries with trusted_hash in the named user profile TOML",
+    "sameProfileRetainedBetweenCases": true,
+    "profileSha256": "8a8c48ccf5433a348ff8709e8cd973de9763d7ca652fe3f4d68e1c32df641436",
+    "profileRemovedAfterFinalCase": true
+  },
+  "root": {
+    "threadId": "01a1cdd9-ad7d-7f52-b9ec-10898de136bc",
+    "traceSha256": "9b33fc27dc5a7a6522bd65ac9a6367272a487883cc18d63405e21168db3ff1c2",
+    "projectConfigMarkerInDeveloperContext": true,
+    "startupMarkerInDeveloperContext": true,
+    "hookEventNames": ["SessionStart", "PreToolUse", "PreToolUse"],
+    "patchCalls": 2,
+    "filesPerPatch": [2, 2],
+    "allowedPatchFilesAfter": ["changed\n", "changed\n"],
+    "deniedPatchFilesAfter": ["original\n", "original\n"],
+    "nativeRejectionObserved": true,
+    "partialWrites": false,
+    "retriesOrAlternateWrites": 0
+  },
+  "subdirectory": {
+    "threadId": "01a1cdda-7772-7723-8466-7a37649e645a",
+    "traceSha256": "d2c1d4677b4b01170a9884d0557dd95a6a23fcb55fa33f465f17b3f281001e29",
+    "projectConfigMarkerInDeveloperContext": true,
+    "startupMarkerInDeveloperContext": true,
+    "hookEventNames": ["SessionStart", "PreToolUse", "PreToolUse"],
+    "allHookPayloadsReportSubdirectoryCwd": true,
+    "patchCalls": 2,
+    "filesPerPatch": [2, 2],
+    "allowedPatchFilesAfter": ["changed\n", "changed\n"],
+    "deniedPatchFilesAfter": ["original\n", "original\n"],
+    "nativeRejectionObserved": true,
+    "partialWrites": false,
+    "retriesOrAlternateWrites": 0
+  },
+  "execution": "tools.apply_patch nested inside functions.exec; PreToolUse receives the complete multi-file patch in tool_input.command",
+  "trustResetControls": {
+    "cause": "The original test removed its profile. Recreating only project trust omitted Hook trusted_hash entries. Both root and subdirectory then ran zero Hooks; these were not trusted host compatibility failures.",
+    "rootThreadId": "01a1cdd5-91f3-7301-b8a9-a0273ccb8fb2",
+    "rootTraceSha256": "c256ecf344be7a5a90ea6c12c3093c39573e10c430763f046d9c07a921429d69",
+    "subdirectoryThreadId": "01a1cdd4-41ef-7620-8eb2-875128cbdb54",
+    "subdirectoryTraceSha256": "919ac1a6246a60fadd25ef417e9ea89ccb851a135f94edcf0475f8f4fe87e6c3",
+    "allFourFilesChangedInEachControl": true,
+    "hookEventsInEachControl": 0,
+    "freshFilesUsedForReviewedCases": true
+  },
+  "fixtureScriptSha256": "aa87f999010df9c4518a871cdf8dd396bb66a62c94e92a8ac784c3d5cbcf917c",
+  "fixtureHooksSha256": "69a54ee75d7ac98b0d3142aaf87fa1efbc1b3e64d8cb474fe046f75b04b504af",
+  "fixtureFilesUnchanged": true,
+  "result": "passed_for_stated_scope",
+  "remaining": ["desktop host", "shell interception", "sandbox permission boundaries", "malformed and failed Hooks", "other lifecycle events", "production validators and runtime adapter"]
+}

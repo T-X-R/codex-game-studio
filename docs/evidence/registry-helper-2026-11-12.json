@@ -1,0 +1,321 @@
+{
+  "date": "2026-11-12",
+  "status": "partial",
+  "scope": "Selected source registry helper parity; no semantic design approval or complete source-layout equivalence",
+  "root": "/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-registry-parity-3UFMn3",
+  "sourceSha256": "4b698b1af5ec413da992a459dba2cdb71b505e50fbb1972c80b4e8f33105959e",
+  "cases": [
+    {
+      "command": [
+        "list"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "07f023b80636a5999721f785c997ed7ff0b754629b2e0a9467722e4ff6d71e9c",
+      "portableOutputSha256": "0676b85f83fc6f77a0948946f93678ab116be9209aab2f7ea8d1b93c959f9424"
+    },
+    {
+      "command": [
+        "list",
+        "entities"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "8715235228166c4519f8996f2b47ec1b0206f625c85eacdccd81b89b3d8b9161",
+      "portableOutputSha256": "20b901628ede71c0e695e1ee73358c779741e0b95b1d3fafc30ef9238cf165cd"
+    },
+    {
+      "command": [
+        "list",
+        "--system",
+        "combat"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "cb6fe7a115cc486df9716f7f61414366a9a5513ce2ec20122dfa26df9c0ff5c1",
+      "portableOutputSha256": "3ea132428f1537a13eae31086e9987068436ff43fe76880095b9bc3d24107d66"
+    },
+    {
+      "command": [
+        "get",
+        "health",
+        "round"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "731c2c35acacbb2fbc886d20e534edd2721dc81dd0383b3dc752629b745689e0",
+      "portableOutputSha256": "b809587e8c6a0f5aa7d8c30d39118850e0aa164016d5986703d10ce9a74928cb"
+    },
+    {
+      "command": [
+        "refs",
+        "health"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "2afb3bf1649a3e1ff4880451e04d18830d643ade1d26a31f27b07981d8994a9e",
+      "portableOutputSha256": "95b0ca25781c96cbdac18508a8edce15087174e819e8e12d29321d700438b396"
+    },
+    {
+      "command": [
+        "refs",
+        "TR-combat-001"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "b38f2941e9243168454e2e50dcc4f687e4d95e3cca9af81f531392206f01cc22",
+      "portableOutputSha256": "c49775dd64860275a00745eefcbe2599021788da33c945fa7261d6044705fa9d"
+    },
+    {
+      "command": [
+        "refs",
+        "design/gdd/combat.md"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "a6a8cce17195c081f72a52ffc086fd549aaeaf391dfbb3fbfd4677ad689c9a23",
+      "portableOutputSha256": "60c7651c82af3bbd2a53aed386be5972872860e91d89c1e984e90f013e5ac124"
+    },
+    {
+      "command": [
+        "slice",
+        "design/gdd/combat.md"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "7a306adf9e2752899aeea740550df8ef80afe9abff2b2f9c0652663701508d37",
+      "portableOutputSha256": "0c0879d112d8dcd36369ad93e601b160b0e4f560da68cebd2e0319f2a535427b"
+    },
+    {
+      "command": [
+        "validate"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "e160feaeed8d08c4d18b95e69bbcc979de4f98c8ed33a228a3004ea0a2a49533",
+      "portableOutputSha256": "aad422d309f5cb48f383034ce446f46734452ca73b130f84640b1ceb731e239d"
+    },
+    {
+      "command": [
+        "next-id",
+        "tr",
+        "combat"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "58c64daed95b3d3e53e16c61e0ed53b35f521f5e322f13a1728381e19f560090",
+      "portableOutputSha256": "a78e8fbcf3037ac74999ee2a26af0c5074b6028444d0cf06b14135841dec0698"
+    },
+    {
+      "command": [
+        "next-id",
+        "tr",
+        "unused"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "e14bc3e0d62f9f431278b112032e040d6a335060ef7a6dfa65d469a0489f6329",
+      "portableOutputSha256": "ea93f55eff5eef9633935fa47406b9fd0402930ff811d75419a7181a7e5a1382"
+    },
+    {
+      "command": [
+        "compare",
+        "entities",
+        "old.yaml",
+        "new.yaml"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "4c6389fb19fa2cd062be03e9cd0e7ff85149ce34e7cfeab00238c88de29eca33",
+      "portableOutputSha256": "14942f34420c482085f46a8ae07b30fdeef5bd4e10887ca40d4e2595c2b5b66c"
+    },
+    {
+      "command": [
+        "compare",
+        "entities",
+        "old.yaml",
+        "absent.yaml"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "c5afe35345a05ddf47276721a689efa13a2c534d5cdf00f00ee18df7b2d1e41a",
+      "portableOutputSha256": "21af5ce221e5ff19f79329ee4b8a81934c5eeac9e242a77b1b72e1eb36bfa719"
+    },
+    {
+      "command": [
+        "compare",
+        "entities",
+        "absent.yaml",
+        "new.yaml"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "c9adc8929958f6fb6dcda8e6fc654201732c84301bfb55c06ebde2ae85952fd5",
+      "portableOutputSha256": "65d69ba41f91913b88ddd0131113310d79933bcb0c2af1b4a722cca018dc2d5c"
+    },
+    {
+      "command": [
+        "validate"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "f55ded26765ae40c94bb84bcdb1cf7852a5c0a2fb9a196852ac36a9060d43367",
+      "portableOutputSha256": "1ab05ba012fa16059a2e281821dc984c6e528d6ba42d4688933606ca5dab4c30"
+    },
+    {
+      "command": [
+        "list",
+        "entities"
+      ],
+      "sourceExitCode": 4,
+      "portableExitCode": 4,
+      "status": "PASS",
+      "sourceOutputSha256": "ce1d82688d0cd7ff1fb4554c3c10223121aa1b06de1e8cc7f1b5008fafbea00f",
+      "portableOutputSha256": "61dddb470e7bc072a32d35d770e686109be8747e1a905268f6cb517cdf44d5d2"
+    },
+    {
+      "command": [
+        "validate"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "777a6792d283c1fa4fcadcffd1f5348521f22426af557a40e3b321f82da91144",
+      "portableOutputSha256": "e78e97e80ae4257226539bb515157f60a0ba127aa6aa1bd2a8a30c381c0ce7ad"
+    },
+    {
+      "command": [
+        "next-id",
+        "adr"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "0245c16090b8420d1f19801d9d53e33183ab12d05d687154e8f5faf9fdba62c8",
+      "portableOutputSha256": "130264a472c0dd8ba849e034319c9a78b79bfc51b96919ff6b7da2b12eb61cd4"
+    },
+    {
+      "command": [
+        "next-id",
+        "bug"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "a495852d8d9d3c882b2aee7b11c0857d3f0c0026057526ec80df78639faa5939",
+      "portableOutputSha256": "1fb67a36a4243cc5aacd586a99aae63966af393ea6c150b91135263f7d5eed6b"
+    },
+    {
+      "command": [
+        "next-id",
+        "asset"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "6e1d45424bda3404ee8a62f1e38a560de04831a1065507630dff57dcc52b9cb8",
+      "portableOutputSha256": "7096c7b199bca2c5982bffab6c697a123e112f0d369b652348153714c8876e22"
+    },
+    {
+      "command": [
+        "next-id",
+        "td"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "ec21666079445d719758e7e9772370d2f23f276850bdf22d3836e3c4e4e5dc56",
+      "portableOutputSha256": "2974021f947c43faf6db58eac7457a904f486becb2e4ba3853637c9ec182c765"
+    },
+    {
+      "command": [
+        "next-id",
+        "story",
+        "combat"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "6c79296f7988f6d6406ce041c5aaad9ce465048660aa9b6e1c840f89e3afc40e",
+      "portableOutputSha256": "02a8121a863d72db25ffccc94598e0d7fa63b08790ee1d3a2b96e7342ef04f63"
+    },
+    {
+      "command": [
+        "next-id",
+        "sprint"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "64e2fb44c1ea7ad644f4b3cbe699b213ed242836448801504bb97a21bc1c88b9",
+      "portableOutputSha256": "f38deb6233af99a07f225f774727919e7fbb6dad7a9b4fc0ba2a50e8c6d880e3"
+    },
+    {
+      "command": [
+        "next-id",
+        "season"
+      ],
+      "sourceExitCode": 0,
+      "portableExitCode": 0,
+      "status": "PASS",
+      "sourceOutputSha256": "4bc6e9bb6ac2af54ba8f6d5d6162966632425aa4e34872c74bf4b442a8f36a61",
+      "portableOutputSha256": "21cb633cfbe37644ab521276d14629eff598c0cfef8712e7f648d68d0e855f48"
+    }
+  ],
+  "implementationCommits": [
+    "e3cdde4",
+    "c1abca2"
+  ],
+  "environment": {
+    "node": "24.22.2",
+    "platform": "macOS ARM64",
+    "upstreamOracle": "retained Bash registry.sh"
+  },
+  "runner": "toolkit/test/registry-parity.mjs",
+  "runnerSha256": "5307c8e38d86349ab077229aebeb90b4d2ab4c4a50f2c4cd4a493c07d703942f",
+  "portableSources": {
+    "toolkit/src/registry-reader.ts": "c63f67055cd64d13505ea6265f4a33d5aebbeb285e4dee3cdaf830c98cfaac6c",
+    "toolkit/src/registry.ts": "e5bb593d8498606d64247569af7238127ef563f2e0775c9e62b18ee0b9c3f80a",
+    "studio/scripts/registry.mjs": "ed1a9bc2157f857ea7aa756765359c5e1a2e8647d053b996c3ef115a677f85b4"
+  },
+  "validation": {
+    "readerAndCommandTests": 10,
+    "integratedLocalTests": 198,
+    "failures": 0,
+    "skipped": 0,
+    "packedInstall": "Resolved resource executes using installed runtime dependencies, including missing/read registry states and deprecated TR-ID numbering.",
+    "ci": {
+      "commit": "c1abca231ae8639bc667d2f5ee64d2fd71077112",
+      "url": "https://github.com/T-X-R/codex-game-studio/actions/runs/43221501896",
+      "result": "All five jobs passed; source Bash parity is local macOS evidence, not a Windows parity claim."
+    },
+    "integrationCi": {
+      "commit": "5900327abffcb4ee50c52a47f178f8c6c78d25a9",
+      "url": "https://github.com/T-X-R/codex-game-studio/actions/runs/43222750127",
+      "result": "All five jobs passed with authoring/review content and installed-resource assertions."
+    }
+  },
+  "limitations": [
+    "Selected normalized observations match the retained helper; this is not complete lexical equivalence or workflow approval.",
+    "YAML parser accepts valid nested YAML; malformed/ambiguous registry structure withholds entries. The original AWK lexer has different syntax limits.",
+    "Unsafe or symbolic-link references are refused explicitly, rather than permitting arbitrary paths from registry content.",
+    "Source Bash parity was not run on Windows; portable unit and package checks ran in cross-platform CI.",
+    "Registry validate/compare exit zero only means observations collected; missing registries and diagnostic rows still require interpretation.",
+    "All consumers, concurrency/permission faults and full source-helper matrix remain open under T22."
+  ]
+}

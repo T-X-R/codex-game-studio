@@ -1,5 +1,36 @@
 # Changelog
 
+## Unreleased
+
+- Add tiered master-architecture authoring, architecture coverage/traceability
+  review and a native Systems Designer role. Build and archive checks pass;
+  native behavior acceptance is in progress.
+- Share read-only review receipts through the project's pinned runtime, retaining
+  the design-review script entry point and tracking referenced specialist methods.
+- Add Codex systems mapping, sectional GDD authoring, independent design review
+  and architecture-decision workflows. Preserve existing design progress,
+  explicit decision ownership and separate authorization for accepting an ADR.
+  These additions have selected CLI evidence; complete workflow/desktop
+  acceptance remains open in the migration plan.
+- Keep review receipts tied to the files actually covered by the latest review;
+  older file hashes cannot establish deeper review coverage for a newer entry.
+- Provide portable registry queries, reference observations, validation,
+  before/after comparison and ID numbering without shell dependencies or
+  automatic registry writes. Observations do not constitute design approval.
+- Resolve workflow depth for a named system and import legacy engine preferences
+  without overriding explicit project settings.
+- Add `config set` with validated project/local writes, dry-run effects,
+  comment/quote preservation and synchronized stage records. Conflicting edits
+  and destructive YAML shape changes fail before applying a stale plan.
+- Restrict new transaction journals and backups to owner-only POSIX permissions;
+  Windows continues to inherit the workspace ACLs.
+- Save and show recoverable checkpoints with stale-write protection, preserved
+  narrative, immutable event deduplication and current Git observations.
+- Expose workflow gate/review summaries and engine-specific directory inspection
+  without silently falling back from invalid or ambiguous roots.
+- Run configured test/smoke/build commands with OS-aware selection, bounded
+  execution and saved reports/logs; unavailable capabilities remain not assessed.
+
 ## Codex Game Studio 0.1.0-alpha.0 — 2026-11-11
 
 Initial executable CLI-and-Skills adaptation: protected project attachment and

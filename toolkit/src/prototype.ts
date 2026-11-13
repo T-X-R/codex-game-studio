@@ -7,7 +7,7 @@ import { exists } from './project.js';
 import { StudioError } from './contract.js';
 
 type Files = Record<string, Buffer>;
-function prototypeName(name: string) {
+export function prototypeName(name: string) {
   if (!/^[a-z0-9][a-z0-9-]{0,39}$/.test(name)) throw new StudioError('INVALID_ARGUMENT', 'Prototype name must contain 1–40 lowercase letters, digits or hyphens, starting with a letter or digit');
   return `prototypes/${name}`;
 }

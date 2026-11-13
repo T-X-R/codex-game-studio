@@ -11,13 +11,17 @@ Codex runtime. Do not mechanically substitute Claude tool/model names and claim
 behavioral equivalence.
 
 Use Node.js 24–26. Run `npm --prefix toolkit ci --ignore-scripts`, then `build`,
-`typecheck`, `test` and `test:pack` through `npm --prefix toolkit run <script>`.
+`typecheck`, `lint:content`, `test` and `test:pack` through `npm --prefix toolkit run <script>`.
 Browser changes also require `test:browser` with an installed Chromium-family
 browser. Record actual platform/client versions and unavailable checks.
 
 Test observable behavior: preserve user code and configuration, reject collisions,
 exercise dry runs and failures, and verify a real installed archive. A metadata
 validator cannot prove host Skill discovery, role selection, hook trust or enforcement.
+Maintain the source identities, targets and migration states in
+`studio-tests/catalog.yaml`; an added file is `partial` until its full behavior
+has evidence. See [content validation](docs/content-validation.md) for the
+static and complete-declaration checks. Neither substitutes for live acceptance.
 
 Skills need concise `name` and `description` metadata and focused triggers.
 Follow guided execution within the user's approved scope. Resource references must

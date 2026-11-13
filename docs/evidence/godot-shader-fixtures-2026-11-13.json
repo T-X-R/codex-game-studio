@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A016 five original requests plus genuine-compute variant; host checks for explicitly authorized existing-file edits. Native/renderer results not inferred.",
+  "files": {
+    "toolkit/test/fixtures/godot-shader-rendering-input.json": "424b4f5ffae30e4dfe9efea0730e8393106bc0f68939d6b6afdec04c85dd1907",
+    "toolkit/test/fixtures/godot-shader-specialist-cases.mjs": "5d59360214e741b8db2826b330625dcdbaef8feff6b3bdc02ced82ff817a8974",
+    "toolkit/test/qa-role-host.mjs": "042699f0c13e95d63a1ea7289da796e3714e3309d0a561055cd70647e1c2ea8f",
+    "toolkit/test/qa-role-host-harness.test.mjs": "77238b755cd81ac6a9a188acd3282e8a52b89d7a95dbc7aa39214e2fe4965377"
+  },
+  "candidate": {
+    "path": "/private/tmp/game-studio-shader-fixtures-x8nh_lhs/manifest.json",
+    "sha256": "5fd2256308e58ea85b9e46cba7693634ba59bc8323c1cd88a83c7a4cbb89c7a0"
+  },
+  "review": {
+    "path": "/private/tmp/game-studio-a016-fixture-root-review.md",
+    "sha256": "b8646c85752b8ad9cdd3492639c068249436f43bf063aef910c3276de6d845eb"
+  },
+  "validation": {
+    "focused": {
+      "node24": 8,
+      "node26": 8,
+      "fail": 0,
+      "skip": 0,
+      "kind": "offline stub groups; 35 scenarios, not native role results"
+    },
+    "full": {
+      "node24": 532,
+      "node26": 532,
+      "fail": 0,
+      "skip": 0
+    },
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS",
+    "pack": "PASS",
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-a016-harness24.log",
+        "sha256": "3deaecb85a640ed6260ebef1cc5f2f3e9ec897f5e622b89669de98994706292a"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-harness26.log",
+        "sha256": "04f113eb0e2f8b3b5843d780809ff42d9986a98ad9b9b6c0017e2ef1f95d930f"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-full24-stable.log",
+        "sha256": "7476bfeace1ba1aa7284e8f22d53ff3e3450dfe05db98536a55bec72dc012bd9"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-full26-stable.log",
+        "sha256": "311d6850876a5e8907eafd0ac861746167a9dddd6f372df9f13f682e30f3e593"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-fixture-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-fixture-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-fixture-content.log",
+        "sha256": "ec5882ff3f418037a76fec844fceef64801bfc4547cbc4fc97508b672d3bb061"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-fixture-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      }
+    ]
+  },
+  "initialValidationFailure": {
+    "reason": "Root mistakenly overlapped shared resource rebuilding with both full regression readers. build.mjs removes and recopy resources; the two runs observed absent or partial resources. After build/pack completed, unchanged full suites passed against the stable tree. No product change or relaxed assertion was used.",
+    "node24": {
+      "pass": 518,
+      "fail": 14
+    },
+    "node26": {
+      "pass": 516,
+      "fail": 16
+    },
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-a016-full24.log",
+        "sha256": "4043061d209ede84c4ae4fc3fe73cb0a3389d65c8eff97f9a41d3cb127ebc558"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-full26.log",
+        "sha256": "51406387223ed21dc3068fd27034de7674343e172a2e05cd2ce3e4edb4caece3"
+      }
+    ]
+  },
+  "scopeRules": [
+    "Original requests preserved; true compute intent is separate from material dissolve.",
+    "Water changes the existing shader and creates a far shader/material; scene consumers and unknown LOD selection stay unchanged.",
+    "Only writable inherited-policy fixtures opt into explicit regular-file edits; defaults/read-only remain protected. Deletion/type replacement/unrelated writes/missing required edits fail.",
+    "Native settings/trust remain inherited; no editor/GPU execution or fabricated acceptance.",
+    "Actual shader compile/render, visual behavior, target GPU measurement, glow tuning and scene integration remain open."
+  ]
+}

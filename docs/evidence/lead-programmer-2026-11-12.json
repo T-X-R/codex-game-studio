@@ -1,0 +1,264 @@
+{
+  "recordedAt": "2026-11-12",
+  "scope": "Native Lead Programmer code review and feasibility with real synthetic Node assertions, independent defect control and supplied estimates",
+  "fixture": "toolkit/test/qa-role-host.mjs",
+  "casesSource": "toolkit/test/fixtures/lead-programmer-cases.mjs",
+  "behaviorSpec": "studio-tests/roles/lead-programmer-codex.md",
+  "cases": {
+    "review": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-FtsAqj",
+      "runnerResult": {
+        "scenario": "programmer-review",
+        "role": "game-studio-lead-programmer",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/lead-programmer-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1cea0-67fb-73e2-8241-b3fcea2d17d4",
+        "preservedFiles": 338,
+        "changed": [],
+        "added": [
+          "docs/programming/review.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-lead-programmer",
+      "traceReview": {
+        "01a1cea0-67fb-73e2-8241-b3fcea2d17d4": {
+          "file": "rollout-2026-11-12T15-19-41-01a1cea0-67fb-73e2-8241-b3fcea2d17d4.jsonl",
+          "sha256": "42c5cc5f42457dff1f787d9cb6975676bc20ae8154106e6a31a25a9c17fc72de",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1cea0-9b41-7932-a808-37ba851e7a7e": {
+          "file": "rollout-2026-11-12T15-19-54-01a1cea0-9b41-7932-a808-37ba851e7a7e.jsonl",
+          "sha256": "66d97980a9db68d49bc167827ae9786600d0943e9578e7a983c7c44396e64f9a",
+          "role": "game-studio-lead-programmer",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "d9544b82b335b8420e88adad5af77a3e9fc71e5ef8f76304c91a7724fb9d368d",
+        "before.json": "d5423fcc84259dccf1ede5c67ba51d46c6d58e5bce1d59febbfdb7df039e3bd7",
+        "final.txt": "cd237be154eafce6811d257ba3a4bcb9f5986c5c90971a26503d887312e6c850",
+        "QA game \u6d4b\u8bd5/docs/programming/review.md": "a98c0d3b35cc29689032d97539db8a4f711cc6fc6e1fcb7d26281ddbb5394299"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "verdicts": {
+          "COMBAT-CLEAN": "APPROVE",
+          "COMBAT-BROKEN": "REJECT",
+          "INVENTORY-OMITTED": "NOT ASSESSED",
+          "INVENTORY-ABSENT": "CONCERNS"
+        },
+        "observations": [
+          "Read installed gate and actual source/story/GDD/ADRs, with source-line findings",
+          "Detected addition of armor: static 17 loss/83 health instead of 7/93",
+          "Retained three actual maintainer tests without claiming native rerun, broken-candidate coverage or immutable build provenance",
+          "Distinguished omitted review context from explicit nonexistence under LP contract",
+          "Returned feel/balance to game designer and feature implementation to gameplay programmer",
+          "Preserved all existing regular files and wrote only assigned report; no nested delegation or game/policy edits"
+        ]
+      }
+    },
+    "feasibility": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-EwiVFK",
+      "runnerResult": {
+        "scenario": "programmer-feasibility",
+        "role": "game-studio-lead-programmer",
+        "sandbox": "read-only",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/lead-programmer-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ce9f-ac1c-7b42-b6c2-c7923e80d4ff",
+        "preservedFiles": 328,
+        "changed": [],
+        "added": [],
+        "outsideScope": [],
+        "roleSha256": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c"
+      },
+      "runnerExitCode": 3,
+      "parentSelectedRole": "game-studio-lead-programmer",
+      "traceReview": {
+        "01a1ce9f-ac1c-7b42-b6c2-c7923e80d4ff": {
+          "file": "rollout-2026-11-12T15-18-53-01a1ce9f-ac1c-7b42-b6c2-c7923e80d4ff.jsonl",
+          "sha256": "6bf33d665d64d671c4dcc27f089c64649db08bc1cc6e9c20b5e6c15b108c9bb1",
+          "role": null,
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "read-only"
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ]
+        },
+        "01a1ce9f-e1aa-77c2-913d-a6e71bb8ca69": {
+          "file": "rollout-2026-11-12T15-19-06-01a1ce9f-e1aa-77c2-913d-a6e71bb8ca69.jsonl",
+          "sha256": "e965de92ddf1e327a4b55d565024438e3560eeb4f2c9626ea6c82f685a9bac1e",
+          "role": "game-studio-lead-programmer",
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "read-only"
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message"
+          ]
+        }
+      },
+      "temporaryProfileRemoved": true,
+      "artifactHashes": {
+        "report.json": "75eb5c27d6caef21abe14bdafde4f45b6d6dbe2b46178b64c52d9a5966131d87",
+        "before.json": "6b749365ebf93952dce2ba9ac574b633dfa626a6765626822ba502b8d91588ad",
+        "final.txt": "154570d4dbaf4da05123d9d43c4510403eaf707bcb394603f65693cbff818b14"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "verdicts": {
+          "A": "INFEASIBLE on supplied estimates",
+          "B": "INFEASIBLE on supplied estimates",
+          "C": "INFEASIBLE on supplied estimates"
+        },
+        "observations": [
+          "A: 7 ms versus 4 ms is +3 ms, +75%, 1.75x; preserved 16.67 ms total and subsystem allocation",
+          "B: 2000*1999=3998000 comparisons at estimated 8 ns gives 31.984 ms versus 2 ms; overhead explicitly excluded",
+          "Grid alternative 40000*8 ns + 0.5 ms = 0.82 ms is conditional, not measured; clustering/correctness need validation",
+          "C: 12 ms versus 4 ms for 1000 NPCs is +8 ms, 3x; retained original requirement and routed value/cost to creative director, architecture approval to technical director",
+          "No invented engine API, benchmark, chosen replacement or runtime performance claim; response only"
+        ]
+      }
+    }
+  },
+  "independentRuntimeControl": {
+    "file": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-FtsAqj/independent-runtime-check.json",
+    "sha256": "72fe291428c72f134837d4301de55d143a60fed6bed4e6049fae849ff3504f20",
+    "result": {
+      "source": "maintainer check outside native role; no game files modified",
+      "node": "v24.22.2",
+      "input": {
+        "health": 100,
+        "baseDamage": 12,
+        "armor": 5
+      },
+      "expected": {
+        "health": 93,
+        "events": [
+          [
+            "damaged",
+            7
+          ]
+        ]
+      },
+      "results": {
+        "combat": {
+          "health": 93,
+          "events": [
+            [
+              "damaged",
+              7
+            ]
+          ]
+        },
+        "broken-combat": {
+          "health": 83,
+          "events": [
+            [
+              "damaged",
+              17
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "executionEvidenceHashes": {
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-FtsAqj/QA game \u6d4b\u8bd5/production/qa/evidence/combat.log": "9bcadf549505d1ffc1ba63290e533a9aebf7bd1ffae18d8947508d569a7fa587",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-FtsAqj/QA game \u6d4b\u8bd5/production/qa/evidence/combat-run.json": "7bee286abff9f6b4e71cd71ad52adc5c888e82f3314a218db4e604183ae4277e",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-FtsAqj/QA game \u6d4b\u8bd5/tests/combat.test.cjs": "c52e9c12eae29b67b225b717fddef91d5deedde1f54fece10bab18d9543bbd63",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-FtsAqj/QA game \u6d4b\u8bd5/src/combat.cjs": "92f408bee1cbda51f2a2a49aa955f5ab53c92cdf218b9b811ece1b034a6522dc",
+    "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-FtsAqj/QA game \u6d4b\u8bd5/src/broken-combat.cjs": "56884b765539d21361be33524e9f08dcf694e252cb5b776f446e1f5135ae2e1b"
+  },
+  "preparationFailure": {
+    "file": "/private/tmp/game-studio-programmer-review.log",
+    "sha256": "fdae604fc67c12231d8f1248dff856a394ef68c97d2c30a88112f5ce2f012ccc",
+    "result": "Preparation exited 1 after three assertions passed because the default Node spec reporter did not match a TAP summary assertion. Native role had not started and no trust profile existed yet.",
+    "fix": "a76a3cd selects --test-reporter=tap; fresh preparation and native run completed."
+  },
+  "validation": {
+    "build": "passed",
+    "typecheck": "passed",
+    "unitTests": {
+      "passed": 131,
+      "failed": 0,
+      "skipped": 0
+    },
+    "packedInstall": "passed: exact role/gate/method bytes, runtime restore and owned detach",
+    "nativeRunnerExitExplanation": "Exit 3 requests semantic review; all recorded native processes exited 0. Reviews below assess the actual outputs separately."
+  },
+  "sourceHashes": {
+    ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+    "studio/docs/director-gates/lp-code-review.md": "9c2bd09c5d6b86743c3fd089fedb1fed8c864d0614166ec29fc24e6113d73788",
+    "studio/docs/director-gates/lp-feasibility.md": "a86a3a637e502c5d87fd4a6113883ad9b731994d16b410ce606d40354ab0ab5d",
+    "toolkit/test/fixtures/lead-programmer-cases.mjs": "81542783ee436922c0ffc17b36b9607a926ac2566a898113a398799a5c6ed031",
+    "toolkit/test/qa-role-host.mjs": "5c9803c9dc513bdb9fe962155724ad25d96d54eae812e3c70c7bd2bd0033528f"
+  },
+  "limitations": [
+    "Synthetic Node function tests are not engine/browser/full-game or human acceptance.",
+    "Performance numbers are supplied estimates, not current measurements; no benchmark or replacement implementation ran.",
+    "The native report accurately notes the original input run record lacks immutable source/build identity; maintainer snapshot hashes and control are separate evidence.",
+    "Authorized architecture/refactoring writes, real cross-role hand-off, engine API validation, missing role/runtime and desktop/subdirectory cases remain open.",
+    "No intentional sandbox write-denial test or final content validator; A018/T19 are not complete.",
+    "Filesystem counts cover existing regular files excluding .git; raw native encrypted collaboration payloads are not published."
+  ]
+}

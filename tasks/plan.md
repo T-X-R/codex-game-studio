@@ -27,11 +27,11 @@ This proposal covers product requirements, architecture, command contracts, inst
 
 ### Proposed defaults
 
-The owner authorized implementation according to this plan on 2026-11-11. Use the technical defaults below; keep unresolved publishing account/name details explicit. The GitHub owner is confirmed as `T-X-R`.
+The owner authorized implementation according to this plan on 2026-11-11. Use the technical defaults below. The GitHub owner is `T-X-R`, repository is `codex-game-studio`, and archive package identity is `@t-x-r/game-studio`. Distribution is GitHub source and installation archives; npm registry publication is deferred.
 
 | Decision | Proposal | Reason and alternative |
 | --- | --- | --- |
-| Product identity | `Codex Game Studio`; command `game-studio`; scoped npm package `@<owner>/game-studio` | Clear purpose. GitHub owner is T-X-R; npm registry publication is deferred. The scoped package identity is used inside downloadable archives. |
+| Product identity | `Codex Game Studio`; command `game-studio`; archive package `@t-x-r/game-studio` | Confirmed user-owned identity; no npm registry publication. |
 | Implementation | TypeScript, Node.js 24 LTS minimum; test Node.js 24 and 26 | Fits the existing JavaScript browser driver and Web templates. Go offers standalone binaries but adds another language without removing browser/engine dependencies. |
 | Package structure | One npm package, one repository, no service or daemon | Keeps release and dependency management small. |
 | Installation | Explicit CLI install followed by explicit Codex Skill setup | Avoids silently changing Agent configuration during npm installation. |
@@ -64,10 +64,10 @@ The product is a game development toolkit used by Codex, not a separate model cl
 
 ### Proposed setup flow
 
-The following uses placeholders; the npm package does not exist yet.
+Install the archive downloaded from the user-owned GitHub release. `<version>` denotes the selected release; check its compatibility record before installing.
 
 ```bash
-npm install -g @<owner>/game-studio
+npm install -g /absolute/path/to/t-x-r-game-studio-<version>.tgz
 game-studio skills setup --scope user --target codex --dry-run
 game-studio skills setup --scope user --target codex
 ```
@@ -79,6 +79,7 @@ For manual setup:
 ```bash
 game-studio init ./my-game --engine web --dry-run
 game-studio init ./my-game --engine web
+game-studio restore --project ./my-game --archive /absolute/path/to/t-x-r-game-studio-<version>.tgz
 game-studio doctor --project ./my-game --json
 codex --cd ./my-game
 ```
@@ -88,6 +89,7 @@ For an existing project:
 ```bash
 game-studio attach --project ./existing-game --dry-run
 game-studio attach --project ./existing-game
+game-studio restore --project ./existing-game --archive /absolute/path/to/t-x-r-game-studio-<version>.tgz
 ```
 
 `init` creates a new workspace; `attach` integrates an existing one without relocating game code. A cloned framework template uses `attach` with the recognized template content as its input. Both routes produce the same managed integration. Neither silently commits, changes remotes, or publishes anything.
@@ -210,7 +212,9 @@ The table defines command families. Each leaf will have one argument schema, eff
 | `resource path <id>` | Resolve a known bundled reference/template for Codex to read | Read |
 | `prototype scaffold`, `prototype import` | Create a prototype skeleton or copy an existing game | Project write |
 | `prototype grow`, `prototype tune` | Apply the selected growth scaffold or tuning support | Project write |
+| `prototype grow-check` | Inspect growth prerequisites and Git changes; eligibility is not gameplay verification | Read-only |
 | `engine setup`, `engine inspect` | Configure or inspect an engine and its paths | Project write / read |
+| `engine scaffold`, `engine verify` | Generate a supported missing engine project; explicitly run an installed engine check | Project write / process |
 | `preview` | Run a local foreground preview process | Process/local network |
 | `check` | Run selected deterministic validators | Read by default; evidence write when requested |
 | `test` | Run configured tests with bounded execution and preserved logs | Process/evidence write |
@@ -461,13 +465,13 @@ No calendar deadline is assumed. The dominant uncertainties are Hook semantics a
 
 Preserve upstream Git history and the MIT notice identifying Donchitos. Add an English attribution statement explaining the Codex adaptation and its divergence. Use a separate version sequence for the new toolkit and record upstream baseline `1.3.0 / abc0de7`; do not imply the new CLI is an upstream release. [Upstream repository](https://github.com/Donchitos/Claude-Code-Game-Studios)
 
-Before release, decide the actual GitHub owner/name, npm scope, and whether the GitHub repository is an independent derived repository or a GitHub fork. The recommended result is an independently named repository with retained history and an `upstream` remote. The eventual `origin` belongs to the user. No remotes change during this planning task.
+The confirmed repository is `T-X-R/codex-game-studio`, an independently named derived repository with retained history and an `upstream` remote. `origin` points to the user-owned repository. The archive package identity is `@t-x-r/game-studio`; this does not require or assert ownership of an npm registry account.
 
-The first distribution channel is npm plus a GitHub release/archive. Package compilation must include the canonical resource bundle, roles and Skills. Test the packed archive rather than relying only on the source checkout. A user must be able to install and work without cloning this repository. The repository-template route must also work from a clean copy.
+The first distribution channel is GitHub source plus a release installation archive. npm is the local package installer, not a publication channel for this scope. Package compilation must include the canonical resource bundle, roles and Skills. Test the packed archive rather than relying only on the source checkout. A user must be able to install and work without cloning this repository. The repository-template route must also work from a clean copy.
 
 README leads with installation, opening Codex, and natural-language examples. Follow with template use, existing-project attachment, supported clients/platforms, hook trust, modes, upgrades, attribution, and troubleshooting. Update stale upstream links and maintainer metadata deliberately. Keep the tool's technical implementation details out of the first game-creation conversation.
 
-Build artifacts, changelog, checksums, package contents and release notes are prepared before the publication step. GitHub repository creation/push and public npm publication occur only in a later authorized implementation/release task. Do not publish a placeholder package to reserve a name during planning.
+Build artifacts, changelog, checksums, package contents and release notes are prepared before publication. The owner has authorized GitHub creation/push and archive delivery. The initial alpha publication does not close the full-migration release gates. Do not publish to npm without a later explicit change to the agreed distribution scope.
 
 Optional later work: a thin Codex plugin package built from the same content. It must not fork Skills or replace tested CLI contracts. Current plugin distribution and hook restrictions require a separate compatibility assessment. [Official plugin packaging documentation](https://developers.openai.com/plugins/build/plugins)
 
@@ -494,12 +498,12 @@ Always preserve user work, report evidence accurately, and keep the active user 
 
 | Decision | Proposed answer | Needed by |
 | --- | --- | --- |
-| Final product/repository/package identity | Codex Game Studio / `codex-game-studio` / user-owned npm scope | Branding and publication; working names suffice for contract exploration |
-| Node/TypeScript approach | Accept the proposed single-package implementation | M1 implementation |
-| Global onboarding plus local full bundle | Accept this default; avoid globally registering all workflows | M1 installation |
+| Final product/repository/package identity | Resolved: Codex Game Studio / `T-X-R/codex-game-studio` / `@t-x-r/game-studio` archive | No further identity approval needed |
+| Node/TypeScript approach | Approved single-package implementation | M1 implementation |
+| Global onboarding plus local full bundle | Approved default; avoid globally registering all workflows | M1 installation |
 | Platform priority | macOS/Linux beta, native Windows core by stable | Porting and release scope |
 | Native engine evidence | Determine installed/licensed engines and available test machines | M4/M5 runtime claims |
-| Publishing accounts and repository relationship | User-owned named repository retaining history; npm ownership to confirm | M5 external publication |
+| Publishing accounts and repository relationship | Resolved: user-owned independent repository retaining history; GitHub/archive only | M5 external publication; npm excluded |
 
 The established requirements in section 1 do not need to be asked again. Unresolved choices above do not prevent reviewing this complete proposal; they prevent silently treating a proposed technical default as an approved implementation decision.
 

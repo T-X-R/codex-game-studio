@@ -1,0 +1,1763 @@
+{
+  "date": "2026-11-12",
+  "status": "partial",
+  "scope": "Selected independent Systems Designer native cases and full design-review integration; not all A032/S021, engine simulation or desktop acceptance.",
+  "environment": {
+    "codex": "0.162.0",
+    "node": "24.22.2",
+    "platform": "macOS ARM64"
+  },
+  "method": "Fresh packed/restored Unicode-path projects; actual typed native role selection, child-only complete instructions, inherited model/effort/permissions, actual final/math/tool review and independent file snapshots. Native 0 / wrapper 3 is pending manual semantics, not automatic PASS.",
+  "cases": [
+    {
+      "scenario": "formula-range",
+      "runId": "game-studio-systems-designer-3HEpqO",
+      "status": "PASS",
+      "scopeOfResult": "Original formula case: complete expression/input/constants/result table, bounded unclamped -15..300 with exact extrema, worked fractional example, all eight corners, valid zero and invalid zero-attack separated. Three owner options without selecting a negative-result policy. Actual typed child, no writes or arithmetic execution.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cff8-5810-7952-a1f6-c76bd092cda4",
+      "parentTraceFile": "rollout-2026-11-12T21-35-21-01a1cff8-5810-7952-a1f6-c76bd092cda4.jsonl",
+      "parentTraceSha256": "6c1a6ec565476229e5b0c838b153084b6f915e0836cedb9f4805aee4ae3daa5d",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T13:35:36.017Z",
+          "role": "game-studio-systems-designer",
+          "task": "damage_formula_review"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1cff8-9067-7a42-9d4b-93beccd197bc",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T21-35-36-01a1cff8-9067-7a42-9d4b-93beccd197bc.jsonl",
+          "traceSha256": "326e7111dd41b5738ec050628069f515cb69100f5751c02b7efff8dddcd33c70",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:38:35.540Z",
+          "finalSha256": "32ad8438be5894bd2f1a2cf08d60becce682e2eef25ae80a5f7a82aaede490b7"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-Q+uKw3+twrxV6kKOretdMV7PypKSK4nddNwU5SBUM5DJFjxwnO8/J+M75+CFuYQIJe6rbaHBdu3kBtTDupeHYA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "26a625de0136304e5b46ed7f5400a4f38e75d7ac0e33a847c96e5920106b404b",
+        "report.json": "b5713add6c2276370fd0eb337d4224aa2fa013ea5d1f0ba0cb103c33de849d17",
+        "events.jsonl": "b73842faf3bbcf1287469aa6b13855dc10e8269bb2bbbff395db64980efe583b",
+        "final.txt": "a28fb674bae200e05b71484eb425d626d06d512a8a2c3995b60064612a5a85cf",
+        "prompt-input.json": "ec6204e40e1b4f7747af3a0e763695f4f8b289b792dd5ad67a339cd35595ae3e",
+        "before.json": "e5e6849f32fb3a93a910d5319a5f7d42d0107a7ac92eaf5cacc2bef5e8439dca",
+        "after.json": "e5e6849f32fb3a93a910d5319a5f7d42d0107a7ac92eaf5cacc2bef5e8439dca"
+      },
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "adversarial-boundaries",
+      "runId": "game-studio-systems-designer-Gqakfe",
+      "status": "PASS",
+      "scopeOfResult": "Original adversarial case: both formulas, exact finite ranges 0.0004..2500 and 0.004..25000, extrema and worked examples; supplied integer level domains respected. Squared-ratio spread, relative-versus-absolute progression and missing handling/AC identified; revision approaches remain owner options. Findings only, no workflow verdict or fake execution.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cffc-239d-7483-ac9f-ba1c090a6d86",
+      "parentTraceFile": "rollout-2026-11-12T21-39-30-01a1cffc-239d-7483-ac9f-ba1c090a6d86.jsonl",
+      "parentTraceSha256": "ef4b30cf405ff923cc6374f57817e59282bb2a4211193ca52336eb29c56b2a44",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T13:39:43.340Z",
+          "role": "game-studio-systems-designer",
+          "task": "systems_review"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1cffc-568d-7702-ad95-535b8e809270",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T21-39-43-01a1cffc-568d-7702-ad95-535b8e809270.jsonl",
+          "traceSha256": "48a53f2da6c120f5923c9a4e0c21cc7b03df633aee6167b7d1e831b2c4927e10",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:42:00.810Z",
+          "finalSha256": "8061e2c44abfe5fad2be83f7160c55fd7b2812c9fec61ec04cc43104fac654f3"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-Q+uKw3+twrxV6kKOretdMV7PypKSK4nddNwU5SBUM5DJFjxwnO8/J+M75+CFuYQIJe6rbaHBdu3kBtTDupeHYA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "fa5bedb18436abd87c385d5556338df598b4337d3847de85549fd3f2dda81d51",
+        "report.json": "257a1ebc006ae930ed4d901a6b4d074bb66596d1589c702cd304940f1165127b",
+        "events.jsonl": "469bd431c7f679dcba84617168a6f39a4eb425dcc7dcf3b1e1cc2b6d5efd6e11",
+        "final.txt": "500b7ce8e57e5b80da333cb9f3ecaccb9ba1ec5058a93d8457e1a63613ae5b92",
+        "prompt-input.json": "666435e2ba33b6b0c6a6610c5a0868d08a01e9f19d538b6be5e404dd9db1736f",
+        "before.json": "902d04f58af066ef00ece57a9d719b13cc86214ae551cad7f7480c44bbd325f5",
+        "after.json": "902d04f58af066ef00ece57a9d719b13cc86214ae551cad7f7480c44bbd325f5"
+      },
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "full-review-records",
+      "runId": "game-studio-systems-designer-HriuM2",
+      "status": "PASS",
+      "scopeOfResult": "Fresh full design-review positive chain: four real independent typed specialists overlap, senior Creative Director starts after all finish; full 8/8 APPROVED and Scope M. Complete report precedes exact authorized target Status-cell update and first log entry. All 26 current-byte stamps independently match, including shared receipt implementation, wrapper, five native role definitions, both actually read role methods and runtime pin/launcher. No game/GDD/policy/checkpoint writes; math analysis only.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cff8-60a4-7c61-80ce-24ce802ac611",
+      "parentTraceFile": "rollout-2026-11-12T21-35-23-01a1cff8-60a4-7c61-80ce-24ce802ac611.jsonl",
+      "parentTraceSha256": "8a005b51d30131b81d9e50e42be6474cd7d8d461744fca259d26aab5f4c5cb9e",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T13:36:16.709Z",
+          "role": "game-studio-game-designer",
+          "task": "game_design_review"
+        },
+        {
+          "at": "2026-11-12T13:36:24.875Z",
+          "role": "game-studio-systems-designer",
+          "task": "systems_review"
+        },
+        {
+          "at": "2026-11-12T13:36:31.928Z",
+          "role": "game-studio-qa-lead",
+          "task": "qa_review"
+        },
+        {
+          "at": "2026-11-12T13:36:41.550Z",
+          "role": "game-studio-lead-programmer",
+          "task": "technical_review"
+        },
+        {
+          "at": "2026-11-12T13:38:17.156Z",
+          "role": "game-studio-creative-director",
+          "task": "senior_synthesis"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1cff9-905c-7f72-ab7b-0321ae0f4deb",
+          "role": "game-studio-lead-programmer",
+          "traceFile": "rollout-2026-11-12T21-36-41-01a1cff9-905c-7f72-ab7b-0321ae0f4deb.jsonl",
+          "traceSha256": "c7097418918ce8e09ad7d1b1c38ecdc6c6e362cf7db7da79fa8ef585a6bfdbb1",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:37:29.925Z",
+          "finalSha256": "ddd1bc4a641aeb2b5ac7f47b2043eecc183edf8798ebb7c4652b47fbf55ab3c7"
+        },
+        {
+          "threadId": "01a1cff9-2f4e-7d82-8d86-9e2b306be60c",
+          "role": "game-studio-game-designer",
+          "traceFile": "rollout-2026-11-12T21-36-16-01a1cff9-2f4e-7d82-8d86-9e2b306be60c.jsonl",
+          "traceSha256": "0f418e283ecc736cfdc165502a44233d740279937ce1ea4162530d75349dc00e",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:37:10.276Z",
+          "finalSha256": "f943830b1977f70d1c9446ac1d6be4ac15bc9068537dbff12614330cae8d0055"
+        },
+        {
+          "threadId": "01a1cff9-6abe-71f3-a503-396c3c961490",
+          "role": "game-studio-qa-lead",
+          "traceFile": "rollout-2026-11-12T21-36-31-01a1cff9-6abe-71f3-a503-396c3c961490.jsonl",
+          "traceSha256": "2d9eae3cbc75a66e378b0d284f58dee400c7ed4046e6ca8acff7d7dff2799b26",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:37:33.092Z",
+          "finalSha256": "be8149b3999f480f8cff35f398409ec613225e583a50b72d2e71799388ff1e80"
+        },
+        {
+          "threadId": "01a1cff9-4f37-7c33-9c5b-9fe51b344093",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T21-36-24-01a1cff9-4f37-7c33-9c5b-9fe51b344093.jsonl",
+          "traceSha256": "cef19d44f4d64073eeb8a120a91f759c4bb2cca9442daf06b67d79a90481ace2",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:37:59.693Z",
+          "finalSha256": "5d8aa6eda70c8a661117486d566efd0f73c833cbdd7f0ce9899bcfb416664bdc"
+        },
+        {
+          "threadId": "01a1cffb-05d7-7113-a3f9-2b6697f60aaf",
+          "role": "game-studio-creative-director",
+          "traceFile": "rollout-2026-11-12T21-38-17-01a1cffb-05d7-7113-a3f9-2b6697f60aaf.jsonl",
+          "traceSha256": "bd73ddc47164703dcf9a0b3bcd2490c14b286683fc832d9569aabe7a49ab3c39",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:38:55.314Z",
+          "finalSha256": "c8cd724277d3402790baca9641c906972d1dc685fba14e5a0eaf36648d44efe1"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": true,
+      "packageIntegrity": "sha512-Q+uKw3+twrxV6kKOretdMV7PypKSK4nddNwU5SBUM5DJFjxwnO8/J+M75+CFuYQIJe6rbaHBdu3kBtTDupeHYA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-game-designer.toml": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5",
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        ".codex/agents/game-studio-creative-director.toml": "6c8f2bbc9c3214223c3a76973e64341752cbf1e2dec9cb595271d3a2b91aeb40",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14",
+        "studio/scripts/review-receipts.mjs": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+        ".agents/skills/game-studio-design-review/SKILL.md": "346f82f3b8d2e1e704b01c2295513b776ff9dd2ff4ae96558794595f54d81c84",
+        ".agents/skills/game-studio-design-review/references/freshness-and-inputs.md": "cf995229dae465e158737c21621725f2c3cd142147e1ac0821102a972598e5a6",
+        ".agents/skills/game-studio-design-review/references/assessment-and-output.md": "cfc66767963b5353ab2aba81c8bf3fba045ef45d46655403efdbecc2249ddeef",
+        ".agents/skills/game-studio-design-review/references/specialists.md": "638b8b075194e646c697e356eded3094f70c588d8f613ed60a2c3938b9621ad1",
+        ".agents/skills/game-studio-design-review/references/follow-up-and-records.md": "d96c4a8c0aa1df56da4a951f0e83507fdd9bc8de4ce150d7cfaab00dc3d5a969",
+        ".agents/skills/game-studio-design-review/scripts/review-receipts.mjs": "a0ff6c578b9ec0fe773e1919036663731a3ddae1bc90c2abf12cf7ba4170e60a"
+      },
+      "evidenceHashes": {
+        "fixture.json": "fd1721466dd858107c276cf6fde54d777c998f11a602dd734c7b277b3a002a77",
+        "report.json": "63b642d8f77e8945147250bae629f6934f226adefc833aa5b78d3d7d14cf365e",
+        "events.jsonl": "b0d43bdb2ccee063a706846fc46b6c2d3d73dc45c37d6d7b96b84916deea4cd7",
+        "final.txt": "4c109f5f53dd8c4b28a6256e68d424bee1c83f1d5c922b045c2b4f5b0cb5d6d0",
+        "prompt-input.json": "2982f7cdbfb8b2a8edfb66926c6828cbcd97254aaf20912fbffc59af98f1c7a5",
+        "before.json": "afc3de6cf73a61ae8b630e971f05fda24c54317af1727c700e4287ce266d6767",
+        "after.json": "4ba0901d033018ce7a0b398c540c26bd2a58564a2a53d76f03d92337e345bef4"
+      },
+      "preservedFiles": 521,
+      "changed": [
+        "design/gdd/systems-index.md"
+      ],
+      "added": [
+        "design/gdd/reviews/resolve-hit-review-log.md"
+      ],
+      "artifactHashes": {
+        "design/gdd/systems-index.md": {
+          "before": "3fbfef4b50d849465f58c462c96d5a2cadc63dbe57ffcfdb3aec1350b1e655c0",
+          "after": "7023315cd77bf7250ce27c125c0bbf6fac9b8f02186b82c958183f957e0675da"
+        },
+        "design/gdd/reviews/resolve-hit-review-log.md": {
+          "before": null,
+          "after": "06c5b10b8f3573f39a8f6f26e7bf9c23a2dfe4bcb321bc550f73bb65311dd47e"
+        }
+      },
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": false,
+        "exactTargetStatusOnly": true,
+        "allReceiptStampsMatchCurrentBytes": 26,
+        "receiptPaths": [
+          "design/gdd/resolve-hit.md",
+          "design/gdd/game-concept.md",
+          "design/gdd/systems-index.md",
+          "docs/owner-note.md",
+          "AGENTS.md",
+          "project.yaml",
+          "production/stage.txt",
+          ".codex/config.toml",
+          ".agents/skills/game-studio-design-review/SKILL.md",
+          ".agents/skills/game-studio-design-review/references/freshness-and-inputs.md",
+          ".agents/skills/game-studio-design-review/references/assessment-and-output.md",
+          ".agents/skills/game-studio-design-review/references/specialists.md",
+          ".agents/skills/game-studio-design-review/references/follow-up-and-records.md",
+          ".agents/skills/game-studio-design-review/scripts/review-receipts.mjs",
+          ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/scripts/review-receipts.mjs",
+          ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/integration.md",
+          ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/configuration.md",
+          ".codex/agents/game-studio-game-designer.toml",
+          ".codex/agents/game-studio-systems-designer.toml",
+          ".codex/agents/game-studio-qa-lead.toml",
+          ".codex/agents/game-studio-lead-programmer.toml",
+          ".codex/agents/game-studio-creative-director.toml",
+          ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/roles/game-designer.md",
+          ".game-studio/node_modules/@t-x-r/game-studio/resources/studio/docs/roles/systems-designer.md",
+          ".game-studio/package.json",
+          ".game-studio/run.cjs"
+        ],
+        "reportBeforeFirstWrite": {
+          "reportEventIndex": 60,
+          "firstWriteEventIndex": 66
+        }
+      }
+    },
+    {
+      "scenario": "complexity-conflict",
+      "runId": "game-studio-systems-designer-OXceCG",
+      "status": "PASS",
+      "scopeOfResult": "Original complexity conflict: both two- and six-variable proposals remain visible with concrete elemental/equipment trade-offs. Recommendation is explicitly not a ruling; unresolved experience/complexity goes to Creative Director, then Game Designer intent and Systems Designer formalization. No formula invented, extra consultation claimed, verdict or file write.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cfff-8fb6-7950-ac44-03665d47094f",
+      "parentTraceFile": "rollout-2026-11-12T21-43-14-01a1cfff-8fb6-7950-ac44-03665d47094f.jsonl",
+      "parentTraceSha256": "eeafec4359f81f16f302863b1979d2890359dfb5b4438aa3c19ccd138f4634f3",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T13:43:29.546Z",
+          "role": "game-studio-systems-designer",
+          "task": "complexity_tradeoff"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1cfff-ca15-7181-a2b3-4717c13af0fb",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T21-43-29-01a1cfff-ca15-7181-a2b3-4717c13af0fb.jsonl",
+          "traceSha256": "e190a0eca12b8e70df1c030645a94deed5f859dbba43c2d0d3b425b4250d460d",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:44:46.440Z",
+          "finalSha256": "d1f651dce2cae6b1209a7e40f54ab1926efc33ca72ed029ef38090b312288fcc"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-Q+uKw3+twrxV6kKOretdMV7PypKSK4nddNwU5SBUM5DJFjxwnO8/J+M75+CFuYQIJe6rbaHBdu3kBtTDupeHYA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "17731514d0b10a0d3ea5716c84d507ae0062ccbe7dad82fa5198bc4222c07505",
+        "report.json": "9143fa8f12273634107297940c7a5c454ea79907715a7d1242619c214a2ab5e3",
+        "events.jsonl": "f8b01e0285c8b3d50856b4a9ecc21b7bf035ba26391a9435295da7cf674b53ff",
+        "final.txt": "c713d74cc2be4669568e9584f0ed47b6b13441e8da596d0f0f7a27dee6a6807a",
+        "prompt-input.json": "60684543e76b6ff990358fecc60f0fdfd99d0e5b0c03a12800177ccbd6caa2fd",
+        "before.json": "30395a236c55f4ed3728ff0b0a5ee84481db1aa3c5414025e57c2472362df917",
+        "after.json": "30395a236c55f4ed3728ff0b0a5ee84481db1aa3c5414025e57c2472362df917"
+      },
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "context-ttk",
+      "runId": "game-studio-systems-designer-k58Vhc",
+      "status": "PASS",
+      "scopeOfResult": "Original supplied-context TTK case: complete damage/DPS/continuous-TTK/discrete-hit/elapsed-time formulas with input/result tables, ranges/extrema and worked reference. Correct 80 damage and 12.5 seconds versus 8..12; conditional 13 hits and t0+12 do not replace continuous target. All corners and coefficient alternatives quantified, missing event timing/owner choices explicit, no invented execution or files.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1cffe-1821-7350-949d-6b1aa5520478",
+      "parentTraceFile": "rollout-2026-11-12T21-41-43-01a1cffe-1821-7350-949d-6b1aa5520478.jsonl",
+      "parentTraceSha256": "ca4813df5104e8f7adbcef3bccafd0b2363d89ff4b15c8d80c85750fda5ade3f",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T13:41:55.710Z",
+          "role": "game-studio-systems-designer",
+          "task": "ttk_assessment"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1cffe-5b8c-7253-bb73-e66b2418066b",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T21-41-55-01a1cffe-5b8c-7253-bb73-e66b2418066b.jsonl",
+          "traceSha256": "d973cd8292bd1d2e86028de3e4594667fc08550684e354cdbdd4b7ba66143871",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:45:03.465Z",
+          "finalSha256": "d15722ec4614467897d2b5e8822f7ee8eb2d076b9c8871e57c689b2eafc0df8f"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-Q+uKw3+twrxV6kKOretdMV7PypKSK4nddNwU5SBUM5DJFjxwnO8/J+M75+CFuYQIJe6rbaHBdu3kBtTDupeHYA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "b698ab11b2f9e0d11574e99eea0f5b0328976e40c2ac1431b286ab59e95ddaee",
+        "report.json": "cef8268a1bb781c0ca2b2bc46e3bb43ce7f89e15ab5600d04733c8d36f6a230f",
+        "events.jsonl": "746934c3cf794e5a4a36b13f04ccb1cdd4539610593339d5f32874df5c150db9",
+        "final.txt": "29f1fca2917dee9b5affa0c14439bf96dd883d17607f87c5ed0d030be13a001e",
+        "prompt-input.json": "789b8677ceac9a9370ad1c11d7228cf3b28b4f7e1dbac4797371212294397a66",
+        "before.json": "f5bbe2d965d29c3ff1ec55ab000855e6b8c31901ee751048008794e85b2c4816",
+        "after.json": "f5bbe2d965d29c3ff1ec55ab000855e6b8c31901ee751048008794e85b2c4816"
+      },
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "narrative-boundary",
+      "runId": "game-studio-systems-designer-BvQ9Pb",
+      "status": "PASS",
+      "scopeOfResult": "Original narrative-boundary case: no dialogue/lore/quest-script content; returns narrative script to writer/director and executable work to programming after agreement. Offers bounded reward-policy alternatives without selecting rates or a scarcity target, identifies missing sources/sinks and unavailable economy specialist, no proxy consultation or files.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1d001-a70e-74c0-a941-65d4898d3f54",
+      "parentTraceFile": "rollout-2026-11-12T21-45-31-01a1d001-a70e-74c0-a941-65d4898d3f54.jsonl",
+      "parentTraceSha256": "255d354eabc56adfdf97a51f11b87bff566d3e1f79e138ce89c7f698a312dfe6",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T13:45:42.273Z",
+          "role": "game-studio-systems-designer",
+          "task": "quest_systems_review"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1d001-d096-7062-ae13-00acfad19462",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T21-45-42-01a1d001-d096-7062-ae13-00acfad19462.jsonl",
+          "traceSha256": "6030f6083017365bfb8f3c35108a7948251ea7cd8a8a2fd7432a5854352db413",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:46:47.550Z",
+          "finalSha256": "e249490cee77b53e845f75f8fa74ca32c0018e73a80c9fb612e2393f3efbf866"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-Q+uKw3+twrxV6kKOretdMV7PypKSK4nddNwU5SBUM5DJFjxwnO8/J+M75+CFuYQIJe6rbaHBdu3kBtTDupeHYA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "67889f40d3ab3798f1327ccbdd923daef213056f4048f0131efe228a741f9157",
+        "report.json": "9b064bae4f1de18b653e056c6470a538cb50d4a2e77a54d95bbf9835237007ed",
+        "events.jsonl": "e8be5e4735a5e6e83658c83969a974135afda4d108b20bc8bf0aa72c34f3f127",
+        "final.txt": "c8f382815b8895e415cbb20c650ebadc94d04f87e9b0a4ef11bad76f64f64b07",
+        "prompt-input.json": "b2f56545ecafe19a0a33b97b81951aa7666b1c8484991c75456a0527c6ebb222",
+        "before.json": "cb095e490a82645c77725194d67927280bb96092cdf1687cb52958721b7378cc",
+        "after.json": "cb095e490a82645c77725194d67927280bb96092cdf1687cb52958721b7378cc"
+      },
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "progression",
+      "runId": "game-studio-systems-designer-T9a5mn",
+      "status": "FAIL",
+      "scopeOfResult": "First progression attempt: symbol definitions, per-transition/cumulative formulas and qualitative early/late pacing are sound, but requested numeric extrema, worked results and cap totals were deliberately left unevaluated. Child states it interpreted the fixture arithmetic restriction as forbidding evaluation. No 4500/17100 XP or 3.75/14.25-hour output; numerical contract not fulfilled. Original fixture and failure retained; suspected request ambiguity, not evidence that the role completed this case.",
+      "failureCategory": "ambiguous-fixture",
+      "notEvidenceOfRoleMathematicalError": true,
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1d002-21f9-77d3-b693-c25370487e35",
+      "parentTraceFile": "rollout-2026-11-12T21-46-03-01a1d002-21f9-77d3-b693-c25370487e35.jsonl",
+      "parentTraceSha256": "caa06a5e1309b24b6a6f637749bdd98f31839fda816b2156c65cbb3c9273c2b9",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T13:46:15.368Z",
+          "role": "game-studio-systems-designer",
+          "task": "progression_curve_review"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1d002-51d0-7773-8f37-4ec8e5b8a656",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T21-46-15-01a1d002-51d0-7773-8f37-4ec8e5b8a656.jsonl",
+          "traceSha256": "f7f781e295086a306b5bb07743f884d326de491367b5bb0d659283b0f69c317b",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:49:08.556Z",
+          "finalSha256": "770351b12fc783ab68c7efed1a76e395a174cd6e7aa820ee4f62224f23eaf4e1"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-Q+uKw3+twrxV6kKOretdMV7PypKSK4nddNwU5SBUM5DJFjxwnO8/J+M75+CFuYQIJe6rbaHBdu3kBtTDupeHYA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "30c2a4f6ed5d087f374733563c0530e9e34f6ef1e9ad986ced0435f21e0d536f",
+        "report.json": "b46044da0ab5dc8a82713c3504133ba9afa6640d55e1da1c2f33e72845445a6b",
+        "events.jsonl": "31ea52432d6c4c9c86940fec8050a221bb07a06f0bb624d67e7cd38b315630e5",
+        "final.txt": "f27eee50e9645801fe156e4b5b4d6c62d0ec6553a5ccfc5d5fb9a3faa4d5f5d7",
+        "prompt-input.json": "f806944521efed3a5ccdd7106136ffbb04c7fc77ee5a4462aa15f0d3a9c546b1",
+        "before.json": "1a34c10b25a629d83b3222b938ece29eea8f79dc45a96cbe3c32b2faf86bdb4d",
+        "after.json": "1a34c10b25a629d83b3222b938ece29eea8f79dc45a96cbe3c32b2faf86bdb4d"
+      },
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "progression-manual",
+      "runId": "game-studio-systems-designer-tA7FAU",
+      "status": "PASS",
+      "scopeOfResult": "Clarified progression request, same raw GDD and unchanged role/methods: complete eight-formula table, bounds/extrema and evaluated examples; all levels 1..10 compared. Correct totals 4500/17100 XP, 225/855 minutes (3.75/14.25 hours), first transition faster but late progression slower, no invented pacing target. Hand calculations only and all files preserved. This resolves fixture wording, not an identical-prompt or product-code correction.",
+      "clarifiedFromRun": "game-studio-systems-designer-T9a5mn",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1d009-71a5-7b13-95f5-29671f9110a4",
+      "parentTraceFile": "rollout-2026-11-12T21-54-02-01a1d009-71a5-7b13-95f5-29671f9110a4.jsonl",
+      "parentTraceSha256": "774d6fba547a8ed7e2c99cf2d9f2e3e5dd41fd5b48dd8fb3e01ac8b25e5f12a6",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T13:54:15.922Z",
+          "role": "game-studio-systems-designer",
+          "task": "progression_curve_review"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1d009-a6fd-7192-803d-7f6508cb722b",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T21-54-15-01a1d009-a6fd-7192-803d-7f6508cb722b.jsonl",
+          "traceSha256": "b78a44202d86c126453c34695e9d2f1fc8f16182940864d43798f4112a142848",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:57:20.015Z",
+          "finalSha256": "c0413cf38bf4064ae41f0c933fba2a879adf00596b2973f4abaae3616386179c"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-I41cWcVugx+IJkJDoZ+UAA2L7aVUJI8GFOkY3UQl3lE6jcCQWfYdnpEWKdDiRD4BqKnuu9chmYcTmHX5FsWLpA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "a3a89cd9aa96e0fdf5296989274c8ee0fb4bce8024d360a47f14a48622e95a91",
+        "report.json": "6ab7857740371c85f1647a2c59e2e59b7cb6aae866ee159b93e477c2a080294c",
+        "events.jsonl": "62ba156f758cd4420a37a5292d77108744e836effb30015dac57a286cac6d26f",
+        "final.txt": "653c7664fe31e5be4e5c13d689bab9c584b78f004a60b180b0577cfaec9e5642",
+        "prompt-input.json": "4e7d836aab4ea6ed5297fa77b524997ef2b8af3c384d4b6b47778431e51bf49e",
+        "before.json": "abdfac8781416855a69ee58b1e1c696e9f04102c88f687f0981b3e7112259d29",
+        "after.json": "abdfac8781416855a69ee58b1e1c696e9f04102c88f687f0981b3e7112259d29"
+      },
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "full-review",
+      "runId": "game-studio-systems-designer-MNCt7l",
+      "status": "FAIL",
+      "failureCategory": "fixture-domain-ambiguity",
+      "scopeOfResult": "Readonly workflow returned APPROVED after Game Designer, Systems Designer and QA plus Creative Director, but did not select the installed Lead Programmer. Thus the fixture expectation of four domain roles plus senior is not demonstrated. Math, six ACs, Scope M and all 521 file preservation are locally valid. Source routing requires engine-specific patterns/APIs; this GDD contains safe-integer bounds without explicit JavaScript/API wording, so whether the omission is domain ambiguity or a workflow defect remains unresolved. No rationale for omitting LP was given in visible commentary. Do not call this case a five-role PASS.",
+      "notEvidenceOfMathematicalOrWriteScopeFailure": true,
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1d009-79e7-7741-9ee5-6571e734d066",
+      "parentTraceFile": "rollout-2026-11-12T21-54-04-01a1d009-79e7-7741-9ee5-6571e734d066.jsonl",
+      "parentTraceSha256": "e7bb91b766fefe5c8204437b7d3a96c62053d503acdcf584efa41fc70f82a241",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T13:54:58.405Z",
+          "role": "game-studio-game-designer",
+          "task": "game_design_review"
+        },
+        {
+          "at": "2026-11-12T13:55:07.361Z",
+          "role": "game-studio-systems-designer",
+          "task": "systems_review"
+        },
+        {
+          "at": "2026-11-12T13:55:16.724Z",
+          "role": "game-studio-qa-lead",
+          "task": "qa_review"
+        },
+        {
+          "at": "2026-11-12T13:56:58.456Z",
+          "role": "game-studio-creative-director",
+          "task": "senior_synthesis"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1d00a-9479-73f3-82c2-735fd2499814",
+          "role": "game-studio-qa-lead",
+          "traceFile": "rollout-2026-11-12T21-55-16-01a1d00a-9479-73f3-82c2-735fd2499814.jsonl",
+          "traceSha256": "6146fb085e2c9d00508fb80187bb511173ab771df02dcf039305051964f5e016",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:56:35.277Z",
+          "finalSha256": "9035ee1b9a6a15a70d835cc8ff9c999b8d9d122e0200abd83bc4eaeaab7e5bde"
+        },
+        {
+          "threadId": "01a1d00a-6fe6-7c73-b948-b39f2527381c",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T21-55-07-01a1d00a-6fe6-7c73-b948-b39f2527381c.jsonl",
+          "traceSha256": "996134e7a3382d027d86322cf11a17c6913b85e1b8a30f65f71160ef6a33ae3a",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:56:20.844Z",
+          "finalSha256": "832204df1c831eb8b55c7662ef8ecbd5de124d3464c7024eab9380f34ad49beb"
+        },
+        {
+          "threadId": "01a1d00a-4cf5-7dd1-8e2a-9b323de3faa9",
+          "role": "game-studio-game-designer",
+          "traceFile": "rollout-2026-11-12T21-54-58-01a1d00a-4cf5-7dd1-8e2a-9b323de3faa9.jsonl",
+          "traceSha256": "3bbd84fb155023fd27f1ced625e0de3e5daee21afee12b4bbbb9abdad6661bd1",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:55:43.226Z",
+          "finalSha256": "7821ba653ebcdb7bf6da4d09b7252b153cc7131120c2e53b931445fe6a3fe032"
+        },
+        {
+          "threadId": "01a1d00c-21ed-7773-b323-21eca2926e7f",
+          "role": "game-studio-creative-director",
+          "traceFile": "rollout-2026-11-12T21-56-58-01a1d00c-21ed-7773-b323-21eca2926e7f.jsonl",
+          "traceSha256": "3b847d221040037fc2309e532dc1a203ff1d25da807c5931d23909dbb6024ce0",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T13:57:24.603Z",
+          "finalSha256": "4c9a2cb0a556b1e0f28ea4efefecdcf44a759d4faf4005065fd8b1b69da30de0"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": true,
+      "packageIntegrity": "sha512-I41cWcVugx+IJkJDoZ+UAA2L7aVUJI8GFOkY3UQl3lE6jcCQWfYdnpEWKdDiRD4BqKnuu9chmYcTmHX5FsWLpA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-game-designer.toml": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5",
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        ".codex/agents/game-studio-creative-director.toml": "6c8f2bbc9c3214223c3a76973e64341752cbf1e2dec9cb595271d3a2b91aeb40",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14",
+        "studio/scripts/review-receipts.mjs": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+        ".agents/skills/game-studio-design-review/SKILL.md": "346f82f3b8d2e1e704b01c2295513b776ff9dd2ff4ae96558794595f54d81c84",
+        ".agents/skills/game-studio-design-review/references/freshness-and-inputs.md": "cf995229dae465e158737c21621725f2c3cd142147e1ac0821102a972598e5a6",
+        ".agents/skills/game-studio-design-review/references/assessment-and-output.md": "cfc66767963b5353ab2aba81c8bf3fba045ef45d46655403efdbecc2249ddeef",
+        ".agents/skills/game-studio-design-review/references/specialists.md": "638b8b075194e646c697e356eded3094f70c588d8f613ed60a2c3938b9621ad1",
+        ".agents/skills/game-studio-design-review/references/follow-up-and-records.md": "d96c4a8c0aa1df56da4a951f0e83507fdd9bc8de4ce150d7cfaab00dc3d5a969",
+        ".agents/skills/game-studio-design-review/scripts/review-receipts.mjs": "a0ff6c578b9ec0fe773e1919036663731a3ddae1bc90c2abf12cf7ba4170e60a"
+      },
+      "evidenceHashes": {
+        "fixture.json": "bc71d5314b2e2fb627774fdcf1b5f98a0efb37df54a46aca2937c37df15d2365",
+        "report.json": "9210847bda78cdf6079ace036d4f7fb4ade7478d09bb9370e17b60eb6aad007a",
+        "events.jsonl": "489cd5f83b7678abd57aba29b8b39b794b5e2b2721182afa54940f66f16a32d7",
+        "final.txt": "40e950645110f77d14cc835adb735169720a2b1a8324238b91bb0b08fe106079",
+        "prompt-input.json": "d5ee79ce228ee9cdea064a5d90bef725b6baf703216ea86c738a2f15c983bb2e",
+        "before.json": "967b715e0d4dac85e308a5bf2178c44e292cc2f44a762ec85265fccf41904308",
+        "after.json": "967b715e0d4dac85e308a5bf2178c44e292cc2f44a762ec85265fccf41904308"
+      },
+      "preservedFiles": 521,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "economy",
+      "runId": "game-studio-systems-designer-LBevnw",
+      "status": "PASS",
+      "scopeOfResult": "Economy math: complete expenditure/wallet/affordability/post-shop-change formulas and tables; finite 600-coin upgrade sink, conditional earliest purchases at completed sessions 1/3/5 (20/60/100 minutes), 600 surplus by session 10 without cosmetics. Unknown voluntary demand is not guaranteed stability; actual spending assumptions and bounded versus unbounded output domains are explicit. Owner policy choices stay open, no fake economy-specialist review, writes or execution.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1d00d-1ea1-7222-8829-5c307e342744",
+      "parentTraceFile": "rollout-2026-11-12T21-58-03-01a1d00d-1ea1-7222-8829-5c307e342744.jsonl",
+      "parentTraceSha256": "678e80e7de2335ea808b782caeb955b09f0a9cba3e5638d14af2409c4fc1b71b",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T13:58:13.810Z",
+          "role": "game-studio-systems-designer",
+          "task": "supply_analysis"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1d00d-483c-7473-8ee1-6c2bfd88297a",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T21-58-13-01a1d00d-483c-7473-8ee1-6c2bfd88297a.jsonl",
+          "traceSha256": "343566ffa27154e373e371d37365e04dd80dea73a657dc8acbe898df06231cf9",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T14:02:16.808Z",
+          "finalSha256": "554d9d3b06257ecfbb65e89923db88a5e18a6a4963847037d8e11720d63b6045"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-I41cWcVugx+IJkJDoZ+UAA2L7aVUJI8GFOkY3UQl3lE6jcCQWfYdnpEWKdDiRD4BqKnuu9chmYcTmHX5FsWLpA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "e394b4930f3c00ea13be33db18f3ab69cea40cc012b6ac0a7bad0a3d908885bc",
+        "report.json": "579826625da10a81b42fe5997c824afb217943d573865fc274b174f0f3d91989",
+        "events.jsonl": "7948f9f3858fd9e95b40569afdd687eab3de974204bf296cb38e3ad0234b7e8a",
+        "final.txt": "58dabfe9ede1f6ab421bc4adc0b53a76288efd55be0fc890b92092a88baa7e1c",
+        "prompt-input.json": "32a083c549b6555b96dfe630108f32ebdfb94ae39529f6500b3f0d8faa6a24db",
+        "before.json": "b5ec6150b1fdae9efe1a5c3b22076f91b2ee35ebcc0bccb7c9d0f359e1dd9786",
+        "after.json": "b5ec6150b1fdae9efe1a5c3b22076f91b2ee35ebcc0bccb7c9d0f359e1dd9786"
+      },
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "interactions",
+      "runId": "game-studio-systems-designer-4NMDkg",
+      "status": "PASS",
+      "scopeOfResult": "Interaction review supplies complete directed pairs plus 24 ordinary set/application cells, Stone immunity overlay, six simultaneous pair classes and all six distinct-status triple orders. Explicit timer interpretation, conditional reapplication behavior, infimum versus attainable bounds, growing Chill/Burn sequences, asymmetry and expiry ties are separated from settled rules. Numerical examples are hand-derived; no priority, cap or proven gameplay exploit invented; all files preserved. Cells with unresolved Burn side effects remain conditional rather than an implemented outcome.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1d00d-fe3b-7111-a17d-c8cd39bfec3a",
+      "parentTraceFile": "rollout-2026-11-12T21-59-00-01a1d00d-fe3b-7111-a17d-c8cd39bfec3a.jsonl",
+      "parentTraceSha256": "8e0b7f870b839288a172d7409a986f877b118ecd78026e64f726c54f1e6f9439",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T13:59:12.474Z",
+          "role": "game-studio-systems-designer",
+          "task": "status_rules_review"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1d00e-2d69-7483-bdd8-4d7017f5b9cc",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T21-59-12-01a1d00e-2d69-7483-bdd8-4d7017f5b9cc.jsonl",
+          "traceSha256": "4b01e59c923d978049809ae60666226c065deb9b904fb3dc9bb43949da6e9e48",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T14:04:08.738Z",
+          "finalSha256": "ce72ea41f09bf19d47769c1d1dda6bc69f2b5e3c7c8bdf5e6f613648ae169714"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-I41cWcVugx+IJkJDoZ+UAA2L7aVUJI8GFOkY3UQl3lE6jcCQWfYdnpEWKdDiRD4BqKnuu9chmYcTmHX5FsWLpA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "96383d03d684687ffebe617d9ba843ea371f6670176a86e3f89718aad9896e81",
+        "report.json": "c8a6930737199123e7a09ebf3732012731a71bb7a053913859ba45be596cea74",
+        "events.jsonl": "78e4557233f961e961d456c03c20e06192246d144eb64195e318e6984fbbcb15",
+        "final.txt": "3f78733bafe69d954c3fb65f5d1dfa0e6bffbd48c8dac379b76342a7e7463e3b",
+        "prompt-input.json": "c018661ef38c7102f709b322e9d8a05b0285f69467b914daa7771ebee507aacf",
+        "before.json": "ffe58e3845eb375d5d8d90c2dd19dea295cad5a7a8044866296858d76f6892f6",
+        "after.json": "ffe58e3845eb375d5d8d90c2dd19dea295cad5a7a8044866296858d76f6892f6"
+      },
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "full-review-web",
+      "runId": "game-studio-systems-designer-P61LtQ",
+      "status": "PASS",
+      "scopeOfResult": "Explicit ECMAScript Number/Number.isSafeInteger readonly variant selects all four actual domain roles including Lead Programmer, then actual Creative Director. Complete formula ranges/corners and six ACs assessed, 8/8 APPROVED, Scope M, no files changed. Nonblocking Game Designer versus QA difference about future human comprehension is source-tagged and retained by senior/main rather than flattened into fake consensus. Actual runtime behavior and human acceptance remain untested.",
+      "clarifiedFromRun": "game-studio-systems-designer-MNCt7l",
+      "clarification": "Same readonly request, new explicit engine/API paragraph; not an identical-GDD rerun and not a role/routing change.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1d012-016b-7270-b343-4d03ed51177f",
+      "parentTraceFile": "rollout-2026-11-12T22-03-23-01a1d012-016b-7270-b343-4d03ed51177f.jsonl",
+      "parentTraceSha256": "92644ae71aa3282882e8c63e3d732560102a6f90609bd1c40d4ae44fe95a0d06",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T14:04:12.739Z",
+          "role": "game-studio-game-designer",
+          "task": "game_review"
+        },
+        {
+          "at": "2026-11-12T14:04:20.995Z",
+          "role": "game-studio-systems-designer",
+          "task": "systems_review"
+        },
+        {
+          "at": "2026-11-12T14:04:29.695Z",
+          "role": "game-studio-qa-lead",
+          "task": "qa_review"
+        },
+        {
+          "at": "2026-11-12T14:04:39.619Z",
+          "role": "game-studio-lead-programmer",
+          "task": "web_review"
+        },
+        {
+          "at": "2026-11-12T14:06:31.351Z",
+          "role": "game-studio-creative-director",
+          "task": "senior_synthesis"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1d012-e28e-7e90-bc48-ef2fedce4299",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T22-04-21-01a1d012-e28e-7e90-bc48-ef2fedce4299.jsonl",
+          "traceSha256": "c89254cbf33fcdaf2824dbe891b45c7cc3b1b186528c46b38864535a8864d492",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T14:05:47.171Z",
+          "finalSha256": "eb968ef0c94e44c2865cc601dfeffe8cf009c8c3447ec5e84840ec9957ac05a8"
+        },
+        {
+          "threadId": "01a1d013-2b48-7580-8401-8f308ed2fd19",
+          "role": "game-studio-lead-programmer",
+          "traceFile": "rollout-2026-11-12T22-04-39-01a1d013-2b48-7580-8401-8f308ed2fd19.jsonl",
+          "traceSha256": "6796864a8ff189f9ea8d5914fdfa92d10a65fcbaaea01f242b9d3f19d8f48efc",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T14:06:02.024Z",
+          "finalSha256": "a1fe368db58edd093c88f0b6de9f9ea94038aa02459835169b459038d0ae613a"
+        },
+        {
+          "threadId": "01a1d014-dfcf-7ca0-96fc-cc037a9bc2e8",
+          "role": "game-studio-creative-director",
+          "traceFile": "rollout-2026-11-12T22-06-31-01a1d014-dfcf-7ca0-96fc-cc037a9bc2e8.jsonl",
+          "traceSha256": "fd665f1a2683dd285b6e835fd6ceb5e72ad3043fc5fc86ac2b32dd4555fd2d4b",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T14:07:04.136Z",
+          "finalSha256": "dfde2a556fdbd1c537324b1e56a34b5142f686581a23bd73079b3c985dbbfa38"
+        },
+        {
+          "threadId": "01a1d012-c248-7a03-8319-b753ec206f14",
+          "role": "game-studio-game-designer",
+          "traceFile": "rollout-2026-11-12T22-04-12-01a1d012-c248-7a03-8319-b753ec206f14.jsonl",
+          "traceSha256": "77d4c84415936977def5f037508ed92f15290bf2b610ab50c577cacc5a7ef971",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T14:05:17.892Z",
+          "finalSha256": "f81e2da0a5acefc5c4ea7e74aa47a07519ce3f5c1d440a892c6399310bf26bfc"
+        },
+        {
+          "threadId": "01a1d013-048d-7f60-8d47-c7f840f6d48c",
+          "role": "game-studio-qa-lead",
+          "traceFile": "rollout-2026-11-12T22-04-29-01a1d013-048d-7f60-8d47-c7f840f6d48c.jsonl",
+          "traceSha256": "0f9fea0ca130dfa34a663702f799df222ef95baa893af27b5a351aa89bf684eb",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T14:06:05.777Z",
+          "finalSha256": "9d9409e77451852d1e8b66360d57b86b872da0b31e29940fa6505a40b299923f"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": true,
+      "packageIntegrity": "sha512-I41cWcVugx+IJkJDoZ+UAA2L7aVUJI8GFOkY3UQl3lE6jcCQWfYdnpEWKdDiRD4BqKnuu9chmYcTmHX5FsWLpA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-game-designer.toml": "5359dba2c5742502a9003180bd06f9ab29ad189d60f8c6df7823dbd9d523b7b5",
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        ".codex/agents/game-studio-qa-lead.toml": "1a939c1aa8c1c46779f85ad387aedb13306def4fff7442e4db5ddcc9b1031194",
+        ".codex/agents/game-studio-lead-programmer.toml": "5655c3a15a2646ffdfe452db29b78f2d326815b1b45b00d7c3ccc3c6cf14e97c",
+        ".codex/agents/game-studio-creative-director.toml": "6c8f2bbc9c3214223c3a76973e64341752cbf1e2dec9cb595271d3a2b91aeb40",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14",
+        "studio/scripts/review-receipts.mjs": "c8da9db8c1dbe0a44b36d06dc4c4e40f4508d916134b6ae33c053e33d0aca975",
+        ".agents/skills/game-studio-design-review/SKILL.md": "346f82f3b8d2e1e704b01c2295513b776ff9dd2ff4ae96558794595f54d81c84",
+        ".agents/skills/game-studio-design-review/references/freshness-and-inputs.md": "cf995229dae465e158737c21621725f2c3cd142147e1ac0821102a972598e5a6",
+        ".agents/skills/game-studio-design-review/references/assessment-and-output.md": "cfc66767963b5353ab2aba81c8bf3fba045ef45d46655403efdbecc2249ddeef",
+        ".agents/skills/game-studio-design-review/references/specialists.md": "638b8b075194e646c697e356eded3094f70c588d8f613ed60a2c3938b9621ad1",
+        ".agents/skills/game-studio-design-review/references/follow-up-and-records.md": "d96c4a8c0aa1df56da4a951f0e83507fdd9bc8de4ce150d7cfaab00dc3d5a969",
+        ".agents/skills/game-studio-design-review/scripts/review-receipts.mjs": "a0ff6c578b9ec0fe773e1919036663731a3ddae1bc90c2abf12cf7ba4170e60a"
+      },
+      "evidenceHashes": {
+        "fixture.json": "3bdedf65081f1a21f7225b932b659d2e418decb5e3a80852e28e66884885b0b7",
+        "report.json": "65fefb62cf310c67c98ccf7e1718b2e5111ba2cf4f0ed9fda61576ecdf67044d",
+        "events.jsonl": "9a7b4a5cddfe1233ad15da13b197dfa96c259a6d7fc543cb5d5c830600c9e958",
+        "final.txt": "b097a102202180946f04ae0b684f7fa3c18629679af9cf1f579a9836cf80fbb9",
+        "prompt-input.json": "5d631187855eec3747248d904f0f0833f4ae2e96e2fb97c659bc0cbc326eb0f5",
+        "before.json": "e821717e29e6306c4313260d9df7558be98715339efdbe856e1768e029751ef3",
+        "after.json": "e821717e29e6306c4313260d9df7558be98715339efdbe856e1768e029751ef3"
+      },
+      "preservedFiles": 521,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "registry-consistency",
+      "runId": "game-studio-systems-designer-pnmVLy",
+      "status": "PASS",
+      "scopeOfResult": "Registry-first review reads full owner/reference entries and actual Mining/Market GDDs. Finds 6 versus 4 shared price and 0.9 versus 0.75 resistance conflict, separately reports missing resistance owner. Complete draft/baseline/excess formulas with all five batch results and bounded ranges; no silent override, invented catalyst potency or registry write. New shared catalyst ownership/consumer decisions and unavailable profitability inputs remain explicit.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1d013-6f66-7592-917c-782cd5a72cc4",
+      "parentTraceFile": "rollout-2026-11-12T22-04-57-01a1d013-6f66-7592-917c-782cd5a72cc4.jsonl",
+      "parentTraceSha256": "4e35b147fab234e0de8d1319a40e6173387b53ab242209138c42e289622647f6",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T14:05:08.148Z",
+          "role": "game-studio-systems-designer",
+          "task": "crafting_formula_review"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1d013-9abd-7cd1-9fef-da455ba3992a",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T22-05-08-01a1d013-9abd-7cd1-9fef-da455ba3992a.jsonl",
+          "traceSha256": "13e0fbcd1bd9c8a1366b964d508470ae7426c9e63c8dc6efb046104b7cb08f17",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T14:08:28.996Z",
+          "finalSha256": "164bbfb47c084ec353ed5ece0c714cbbae41ad6268edeff55aee84b2d9fdc6b1"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-I41cWcVugx+IJkJDoZ+UAA2L7aVUJI8GFOkY3UQl3lE6jcCQWfYdnpEWKdDiRD4BqKnuu9chmYcTmHX5FsWLpA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "2b591cc48931e89763b352d87053aaac1a5927a5109056c1836926399042b511",
+        "report.json": "433f3cac2ad7465170dabe77f1cd5c3bbd1a51a44e1ebfa991dfe0ab2517ee2a",
+        "events.jsonl": "6e1637cc47ca4f6b7431547ee10c77161ebcc49cb31f8d81e8b083738296c56c",
+        "final.txt": "6495bade1855f44322bd8e73ad24e683da8fc80e38c3bcd4d9cee7568f738bb9",
+        "prompt-input.json": "2a7dabf14344f899fdebe6e551c37616242da5bb2a52dd73682c5b7a2f464f5a",
+        "before.json": "c3a75f3cbc3dc5139b132657dee00008d7c65175b8a8cad74d228cc1383a3730",
+        "after.json": "c3a75f3cbc3dc5139b132657dee00008d7c65175b8a8cad74d228cc1383a3730"
+      },
+      "preservedFiles": 523,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "cross-system",
+      "runId": "game-studio-systems-designer-ckiWz0",
+      "status": "PASS",
+      "scopeOfResult": "Cross-system review proves +1 shard per repeatable cycle and unbounded attainable stock without claiming infinite production in finite time. Complete transformation/order tables, repeat formula and exact damage range 0..200; independent integer and upper-bound incompatibilities with Combat, compatible half-step powers 0..75 and examples fully evaluated. Missing registry/lifecycle/ownership remains explicit; conditional owner options do not silently change contracts. All files preserved and no additional specialists claimed.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1d016-e75a-7302-969d-34650f3ce191",
+      "parentTraceFile": "rollout-2026-11-12T22-08-47-01a1d016-e75a-7302-969d-34650f3ce191.jsonl",
+      "parentTraceSha256": "a774db7b6f85ab7af08d15a2b3ad385c0ce6645212179a8bdbf43bdb74f7e847",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T14:09:00.136Z",
+          "role": "game-studio-systems-designer",
+          "task": "systems_integration_review"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1d017-24f1-7a50-9ddf-4f28f854c357",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T22-09-00-01a1d017-24f1-7a50-9ddf-4f28f854c357.jsonl",
+          "traceSha256": "f312b81d219c4289e76e575c7c34f4fe609ee68696bf2ae3d086f00363c6c316",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T14:12:56.541Z",
+          "finalSha256": "7d4ff654802979c1d22c59c835ed9dc7cd41fce793c406693f4288dd4faa636e"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-I41cWcVugx+IJkJDoZ+UAA2L7aVUJI8GFOkY3UQl3lE6jcCQWfYdnpEWKdDiRD4BqKnuu9chmYcTmHX5FsWLpA==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "ade0d372988ec7dd55473b396ca25c1c005e888f31a57e885f6dfe43466779a0",
+        "report.json": "32370bd08586a594d5fb187192d5022890b9cc3bdd1a67436fe593c10b9af2e5",
+        "events.jsonl": "c13793e16c4d8e1a23d82d4b39ad4af7fafd94f785817b40da0ebacf5a606bc6",
+        "final.txt": "9fbbd18a42536caf2ecfd31ab553b083c1f084a581baec651d0a4ba78d9a376d",
+        "prompt-input.json": "a4501e76ab2a95b5bfa5b61943a3d4c6f2c3ac601812b1e52a0cfa8597ca5e4c",
+        "before.json": "891977233f0618a3247479917b4cc14c4377ed9339b3a568401c0eea22958148",
+        "after.json": "891977233f0618a3247479917b4cc14c4377ed9339b3a568401c0eea22958148"
+      },
+      "preservedFiles": 521,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "authorized-doc",
+      "runId": "game-studio-systems-designer-UMLqbH",
+      "status": "PASS",
+      "scopeOfResult": "Actual typed Systems Designer appends the complete approved Damage Formula section only to the authorized notes. Exact 102-byte prefix and all other 520 files preserved. Formula/result/intermediate/constants table, full 0..100 integer output and -100..100 intermediate bounds, all corners and interior threshold examples, units and signed-subtraction risk are correct. No mechanics or invalid-input policy invented, no redundant approval question/checkpoint. Actual two patches refine only the newly appended section; read/hash commands, no arithmetic program or simulation.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1d01e-0bb2-70b0-8b41-a9a520dcad9f",
+      "parentTraceFile": "rollout-2026-11-12T22-16-32-01a1d01e-0bb2-70b0-8b41-a9a520dcad9f.jsonl",
+      "parentTraceSha256": "2a42ba0b50ef4d74f585ffffaae76e2efbf1b7783f2d38a4461334b6fbc83598",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T14:16:44.091Z",
+          "role": "game-studio-systems-designer",
+          "task": "damage_formula"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1d01e-3947-76a0-8e16-7b22a9e720c4",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T22-16-44-01a1d01e-3947-76a0-8e16-7b22a9e720c4.jsonl",
+          "traceSha256": "2c9152c19ab96fd0b5760be70c45cbcb378e4bd89955534d863e61cfd8820c6e",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T14:19:39.279Z",
+          "finalSha256": "64411b82f52f4a9aa557fa9c05b76a243d40b597202ec67b3d28edb45b7f8140"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-wS0zp8GGr/Ky8TG9FBiGOZnheO0ob5d1vjTTW6dvn2eCyalJeuocmYATs/CnePvJQvIFuE+L3WJ1vVhUv7N1Cw==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "d355cd57256cdc102ec40af1c6af17ddd3f018970b9b5f639c6a00cb2bcf43db",
+        "report.json": "18ed439d764ed0141f9021e87ac7a013f1854f6b42b0a83786cb956a72bc3988",
+        "events.jsonl": "cb50e66e2522e08673bfd8f1c0e1bdee1ff0fd4157c0d84fc06333a59d0f4c9f",
+        "final.txt": "cb821acb6279defa851ace2997dc1332c8463714305069802f135887235883eb",
+        "prompt-input.json": "b3e6573f50d45a9e0a4191718dfc705c40d521dbf0d61dcbf29e2838c8c12e57",
+        "before.json": "5d0545f767e9341ddf977727eb00be434ff4567fc1258b92ac9604baa0e28a66",
+        "after.json": "840443e77e107c57dd9fad3d6177db7bde8df26df722f0321e8bbbbb10396b94"
+      },
+      "preservedFiles": 520,
+      "changed": [
+        "docs/math-notes.md"
+      ],
+      "added": [],
+      "artifactHashes": {
+        "docs/math-notes.md": {
+          "before": "45523e95275aa386b4bcbb18630a64565348837f94db7e50c1441d8990b8a613",
+          "after": "b5785c613c6b416b26d851933997e2563f5ab9d1b2b7fff7e709e70d8db0e76f"
+        }
+      },
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": false,
+        "exactExistingPrefixPreservedWithAppend": true
+      }
+    },
+    {
+      "scenario": "tuning-simulation",
+      "runId": "game-studio-systems-designer-zFB9Si",
+      "status": "PASS",
+      "scopeOfResult": "Complete recovery, horizon-limited saturation-time and suppressed-potential formulas with shared input/result table, exact extrema and evaluated examples. Initial-full and zero-rate guards prevent division-by-zero; finite 60-second observation is not conflated with eventual recovery. Knobs versus caller inputs, capacity/rate/initial-health coupling, saturation and live-retuning gaps are explicit. Six deterministic proposed trajectories have correct hand predictions and observation/stopping metrics, no selected gameplay thresholds or fabricated execution. Actual commands are read/config/resource operations only; all files preserved.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1d01e-0bb2-7040-b02e-c6eff5446d6a",
+      "parentTraceFile": "rollout-2026-11-12T22-16-32-01a1d01e-0bb2-7040-b02e-c6eff5446d6a.jsonl",
+      "parentTraceSha256": "61a3b65a36510b7cc80dfb8ec91b802d9265ffd5899643fb27c6c37de9e4ff63",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T14:16:50.200Z",
+          "role": "game-studio-systems-designer",
+          "task": "recovery_tuning_review"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1d01e-5120-7770-a9da-00a255ee2fa6",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T22-16-50-01a1d01e-5120-7770-a9da-00a255ee2fa6.jsonl",
+          "traceSha256": "09ec2f7b1168f8d44bf7ad9b2eba7d12224a8da8bfe9e79374fb5df20cb684f0",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T14:21:25.744Z",
+          "finalSha256": "0cb893f11b1fc26d18eaeca8db7821a83ea8d3539d0fe1d0dc3b348c73f732c4"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-wS0zp8GGr/Ky8TG9FBiGOZnheO0ob5d1vjTTW6dvn2eCyalJeuocmYATs/CnePvJQvIFuE+L3WJ1vVhUv7N1Cw==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "2de620de4e5398a3914e795711107aa75fa71c8c3bd44c50799e29941c9906eb",
+        "report.json": "c06bfb6cf2ef6c00e84fac776e24bdfac1c48f43e89e77452d22dd4eaf091b60",
+        "events.jsonl": "05bd3a32f718336ea2707001207c5cca4c1b9779571d78ab0f5ba3c35b8421fc",
+        "final.txt": "e342cbdbbe4f7311ea7f7fa4446610de38a90a4ff393ee07c23fdddbe5054bfa",
+        "prompt-input.json": "84ce7c9aa41b30ce0d8390fa13fa9c3879bb300d68b93b8c0b087a6ca99cfd59",
+        "before.json": "ad9a2ed68dff5ff4844a6427f814995b36cde425b7965d0f7f3f930467ad2278",
+        "after.json": "ad9a2ed68dff5ff4844a6427f814995b36cde425b7965d0f7f3f930467ad2278"
+      },
+      "preservedFiles": 520,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    },
+    {
+      "scenario": "missing-domain",
+      "runId": "game-studio-systems-designer-P9C3PM",
+      "status": "PASS",
+      "scopeOfResult": "Missing-domain review preserves unknown input/output types, ranges, units and owners. Conditional ordinary-real singularity, signs, near-zero denominators, correlated inputs and illustrative numerical examples are explicitly hypothetical, not adopted game domains. Missing bounds are not labelled inherently unbounded gameplay. Consequential intent/input/consumer/invalid-evaluation/ownership questions remain with owners, no selected fallback or fabricated specialist verdict. Actual commands only read/config/resource; all 522 files preserved.",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "parentThreadId": "01a1d022-7167-7542-9bbf-f5eb9b8d3429",
+      "parentTraceFile": "rollout-2026-11-12T22-21-20-01a1d022-7167-7542-9bbf-f5eb9b8d3429.jsonl",
+      "parentTraceSha256": "817a3e13a7be949aa2033e4a7932d45d866cae738f5263219c23e753aa9c850a",
+      "runtime": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "workspace-write",
+          "network_access": false,
+          "exclude_tmpdir_env_var": false,
+          "exclude_slash_tmp": false
+        }
+      },
+      "spawns": [
+        {
+          "at": "2026-11-12T14:21:32.253Z",
+          "role": "game-studio-systems-designer",
+          "task": "ratio_assessment"
+        }
+      ],
+      "children": [
+        {
+          "threadId": "01a1d022-9ee2-7fb1-bc03-c6e46f5db8e4",
+          "role": "game-studio-systems-designer",
+          "traceFile": "rollout-2026-11-12T22-21-32-01a1d022-9ee2-7fb1-bc03-c6e46f5db8e4.jsonl",
+          "traceSha256": "f73447a4d936ea3d65f702a34ff5fdd274caf279abc39defdcb371cdd9a40f0e",
+          "actualFullRoleInstructionsInjected": true,
+          "runtime": {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          },
+          "finalAt": "2026-11-12T14:23:24.099Z",
+          "finalSha256": "9f0fb9e0c413d722b2d87aea4353517df63ab37c1f1e1537ed7d91b9858edf1e"
+        }
+      ],
+      "noFurtherNativeDelegationVerified": true,
+      "parallelDomainReviewsThenSeniorVerified": null,
+      "packageIntegrity": "sha512-wy1CnRlp/AAW0szn27hPlB3jWSJB7D1KLMA+5ceEpcP2HxACJ88AZ82wHwytRvjYkcLhc6vaniq6j9mOQ66wWw==",
+      "installedHashes": {
+        ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+        "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14"
+      },
+      "evidenceHashes": {
+        "fixture.json": "36915e0e3dbf6009479c8f6897787a69b51fc50dcf96cf7a6a22ba99e675565a",
+        "report.json": "c59fefdeb036170d8e25260e4b49355fae892272c129a1e4d12ae05f7d193705",
+        "events.jsonl": "c4ffa205459202d00ee799579e8f88cb6f63e94d0af22c879bf7106e52e3aa37",
+        "final.txt": "40c7dbb70d7b9b43b2a0c5f729ff2a4d98efa0a1451f73877617fc697d12dc9c",
+        "prompt-input.json": "eff355fb1831213f3db0d7a7f48cd7b886860ba7d3979f2031b83cfec0087ddd",
+        "before.json": "21dccfaf72b3340d46e743f8b01ea2f71e692540224f5178bc84f5f3015351b9",
+        "after.json": "21dccfaf72b3340d46e743f8b01ea2f71e692540224f5178bc84f5f3015351b9"
+      },
+      "preservedFiles": 522,
+      "changed": [],
+      "added": [],
+      "artifactHashes": {},
+      "independentFileCheck": {
+        "reportedScopeMatchesIndependentSnapshotDiff": true,
+        "readOnlyAllFilesPreserved": true
+      }
+    }
+  ],
+  "fixtureInputs": "Synthetic project/owner inputs; evaluator expected findings remain outside native prompts.",
+  "limits": [
+    "All cases use workspace-write; read-only behavior is observed file preservation rather than OS denial.",
+    "Numeric output is manual analytical substitution unless explicitly recorded otherwise; no game implementation, arithmetic program, simulation or human play acceptance is inferred.",
+    "All 17 defined scenarios have a recorded disposition; this selected suite does not prove complete domain/host coverage. Unavailable-resource/tool denial, subdirectory/desktop, concurrent writes and additional economy/interaction variants remain open."
+  ],
+  "maintainerFileHashes": {
+    ".codex/agents/game-studio-systems-designer.toml": "1626cce6a36a39d7241d8020f01dabf61cda200fd8a85dfded6c10f03fad86d7",
+    "studio/docs/roles/systems-designer.md": "3f203faf14652aded14156ba531db45a22af2208f9a1d02a8e9a86dc9307cc14",
+    "studio-tests/roles/systems-designer-codex.md": "5e28ab471868abdb74f590aad516b7e2736217e85f245e3128de934f023ea45b",
+    "toolkit/test/systems-designer-host.mjs": "ddc3d3a64b69d57a384b183baaf409d0f86687a21755fc858d1e78ef937fd826",
+    "toolkit/test/fixtures/systems-designer-cases.mjs": "6f306319ac6487d29cf0f4cf120db5a9dc1a8391e6de2fc0f7f66ec53f263984"
+  },
+  "sanitization": "Run directories and native trace filenames only; no local home paths, encrypted task messages, credentials or hidden reasoning.",
+  "fixtureVersions": {
+    "initialSha256": "86b729f3231093897cac39a1a20ca924a0e335357c86c976288fa08f84fa6983",
+    "manualClarificationSha256": "1a927da9a0bd3df4e67d0a297c280fc3353e152fd1d7a28e0facaa35dec9f951",
+    "currentSha256": "6f306319ac6487d29cf0f4cf120db5a9dc1a8391e6de2fc0f7f66ec53f263984",
+    "preservedCompletedRequestSha256": {
+      "formula-range": "42428cb2df76ee06f8e74a2df2c7e34279b74341624577b66c0ce0239fe28d25",
+      "adversarial-boundaries": "ace60dd3fc5894485ea98a9ec29a93f52d82116f5d1be5ece015fc5e790902d4",
+      "context-ttk": "a66d9ca06ce664c20ef9e73dd06eb814d24b19c7a23edd9beb6d4dae0c1d7a60",
+      "complexity-conflict": "48433c0ca1d422e5262f494f484d126b55e2e499d11abd6cb38c4a82f35cef14",
+      "narrative-boundary": "16aab51bca9f5aa726afe56c86a3ff042c657a88800270954029af7e194684d6",
+      "full-review-records": "a0c00d57eba6eecdc52994551a14d02a708cd077b00994a713581ea4763ec375",
+      "progression": "8fa56a77e99221096d90c0d2f1b657f4336b293dce147e7b0e516046553c2146"
+    },
+    "clarification": "Initial progression FAIL retained: arithmetic-execution wording was interpreted as prohibiting hand evaluation. progression-manual keeps GDD bytes but permits/requires hand-derived numeric results and forbids arithmetic programs/simulation. Only unrun request boundaries were similarly clarified; original five source cases, full record and original progression objects remain byte-identical. Role/method resources unchanged.",
+    "actualInputComparisons": {
+      "progression": {
+        "originalRun": "game-studio-systems-designer-T9a5mn",
+        "clarifiedRun": "game-studio-systems-designer-tA7FAU",
+        "sameGddBytes": true,
+        "gddSha256": "6f633af2cc072fded53adb31275322c01a8f0a6010a97c02d11f9fe8395e1e6e",
+        "originalRequestSha256": "ed6c4b67566d1029b34cc0b62b0a0e78ffc66cd3c6eee912f06de4992c7d6fcf",
+        "clarifiedRequestSha256": "023fbb845f0b9dea7fc70c4c73dcb589a6f2a3ebbc868aa70ba6495ff52cf585",
+        "sameRequest": false
+      },
+      "explicitWeb": {
+        "originalRun": "game-studio-systems-designer-MNCt7l",
+        "clarifiedRun": "game-studio-systems-designer-P61LtQ",
+        "sameRequest": true,
+        "requestSha256": "b8c6a57c5f74911c9acf56613b72b1ad06ff5b9ae4eb5d21e6e1f5f58aab1785",
+        "onlyGddChange": "One explicit ECMAScript Number/Number.isSafeInteger, no-coercion/BigInt-input paragraph added under Detailed Design.",
+        "originalGddSha256": "e966e4a6bdff2fadfa5ca6865a7d185e5cd3f4e12ad15272ae1c6f5522d626d9",
+        "clarifiedGddSha256": "71b1f39b983b95e7ab0c6ec66a734ffb74cf88bd801ec12a01a8ab7732219f34",
+        "sameGddBytes": false,
+        "noRoleOrRoutingChange": true
+      }
+    }
+  },
+  "actualCommandAudit": {
+    "completedForAllRecordedRuns": true,
+    "method": "Manual inspection of actual parent and child tool calls and final artifacts, not self-reported execution claims.",
+    "observed": "Read-only filesystem/config/resource/artifact/receipt/hash inspection; authorized full-review records and authorized-doc patches only.",
+    "noArithmeticProgramsSimulationsGameBuildsTestsNetworkInstallsPolicyChangesCheckpointsCommitsOrFurtherChildDelegationObserved": true
+  },
+  "summary": {
+    "definedScenarios": 17,
+    "adjudicatedScenarios": 17,
+    "pass": 15,
+    "retainedInitialFailures": 2,
+    "remainingScenarios": 0,
+    "doesNotClaimCompleteDomainOrHostCoverage": true
+  },
+  "actualReviewReuse": {
+    "supportingEvidence": "docs/evidence/shared-review-receipts-2026-11-12.json",
+    "status": "PASS",
+    "runBy": "root",
+    "independentlyRecheckedBy": "systems-designer migration reviewer",
+    "runId": "game-studio-design-review-reuse-pRDtjO",
+    "sourceRunId": "game-studio-systems-designer-HriuM2",
+    "sourceThreadId": "01a1cff8-60a4-7c61-80ce-24ce802ac611",
+    "parentThreadId": "01a1cffe-ca30-7661-8b81-09e738b559e8",
+    "nativeExitCode": 0,
+    "wrapperExitCode": 3,
+    "runtime": {
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "approval_policy": "on-request",
+      "sandbox_policy": {
+        "type": "workspace-write",
+        "network_access": false,
+        "exclude_tmpdir_env_var": false,
+        "exclude_slash_tmp": false
+      }
+    },
+    "parentTraceFile": "rollout-2026-11-12T21-42-24-01a1cffe-ca30-7661-8b81-09e738b559e8.jsonl",
+    "parentTraceSha256": "508f96a71a1ed79cc0c31c1b1969de39bdf98fc6ba6964ce3b1ad3159c41e3da",
+    "preservedFiles": 523,
+    "changed": [],
+    "added": [],
+    "newSpecialistCalls": 0,
+    "sameOriginAfterAndFollowupBefore": true,
+    "actualReceiptUnchangedCount": 26,
+    "scopeOfResult": "Fresh native session explicitly reuses prior full/full APPROVED with adequate real specialist coverage, including shared receipt implementation and both role methods; no new specialists, reinstall, synthetic receipt or tracking writes.",
+    "evidenceHashes": {
+      "fixture.json": "839f8d459154561d29f9784d575185e28425b7e532ed5cf855fbeab3a1fd97e1",
+      "report.json": "1a0d4cdd05736be6b8dbe366fe6d6a973901a52317c0e2004fe9b5171a1cf2b8",
+      "events.jsonl": "994662a51e2d5b478418cdf755b6d66ba865b537e4e0ccef63296a6305dbcbb5",
+      "final.txt": "3f41b8e5be383db7aedc05c1f70b09f6936771516b96d785d080f687bb41c058",
+      "before.json": "4ba0901d033018ce7a0b398c540c26bd2a58564a2a53d76f03d92337e345bef4",
+      "after.json": "4ba0901d033018ce7a0b398c540c26bd2a58564a2a53d76f03d92337e345bef4"
+    }
+  }
+}

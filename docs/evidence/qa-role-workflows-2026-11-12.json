@@ -1,0 +1,363 @@
+{
+  "recordedAt": "2026-11-12",
+  "scope": "Native QA role read-only and targeted save-regression behavior; synthetic inputs, no game execution or human acceptance",
+  "fixture": "toolkit/test/qa-role-host.mjs",
+  "casesSource": "toolkit/test/fixtures/qa-role-cases.mjs",
+  "behaviorSpec": "studio-tests/roles/qa-tester-codex.md",
+  "roleSha256": "96d33762c19d3780f2b5666f42589d854a14c3f9e4e84c24f772ca4a6488c3c0",
+  "cases": {
+    "readonly": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-0356zw",
+      "runnerResult": {
+        "scenario": "readonly",
+        "sandbox": "read-only",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/qa-tester-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ce57-bf7b-73f1-9c0d-0b907afb00d5",
+        "preservedFiles": 322,
+        "changed": [],
+        "added": [],
+        "outsideScope": [],
+        "roleSha256": "547b3d03abec5c1b235aab67640725947ae278f842c13147bd424a906f332387"
+      },
+      "runnerExitCode": 3,
+      "traceReview": {
+        "01a1ce57-bf7b-73f1-9c0d-0b907afb00d5": {
+          "file": "rollout-2026-11-12T14-00-22-01a1ce57-bf7b-73f1-9c0d-0b907afb00d5.jsonl",
+          "sha256": "a995ed11199ee815cb8e2047ff6a9d423663d68b8c4886bdd53e2dcbdcb7e69a",
+          "role": null,
+          "source": "exec",
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "read-only"
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent"
+          ],
+          "selectedRole": "game-studio-qa-tester"
+        },
+        "01a1ce58-1c8c-7fe0-9e9a-418073a630fd": {
+          "file": "rollout-2026-11-12T14-00-43-01a1ce58-1c8c-7fe0-9e9a-418073a630fd.jsonl",
+          "sha256": "6ee3168a8409f20c9b5d90a43856f8993ba03da4808421d5049ce8bcbe8aadfa",
+          "role": "game-studio-qa-tester",
+          "source": {
+            "subagent": {
+              "thread_spawn": {
+                "parent_thread_id": "01a1ce57-bf7b-73f1-9c0d-0b907afb00d5",
+                "depth": 1,
+                "agent_path": "/root/score_qa_audit",
+                "agent_nickname": "Poincare",
+                "agent_role": "game-studio-qa-tester"
+              }
+            }
+          },
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "read-only"
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec"
+          ]
+        }
+      },
+      "artifactHashes": {
+        "report.json": "2accd99a2061d3ba59f2d5fa7838c64128add9036ef0c3e95683edd3910d14c5",
+        "before.json": "68d89d644b3b6265ea5f5a21b147293d4ce73d8f8a61a9fc909dc096f25ff9c7",
+        "final.txt": "e408ff69e155fea486d477cb7912a0a5c2488086fc80f8d71a5bb37e661b39ca"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "readOnlyOutput": "response only; five proposed unexecuted cases",
+        "unsupportedPassRejected": true,
+        "sourceMismatchReportedWithoutRuntimeClaim": true,
+        "pendingCriteriaReturned": true,
+        "parentAggregatedFindings": true,
+        "existingFilesUnchanged": 322,
+        "newFiles": 0,
+        "sandboxDenialAttempted": false
+      }
+    },
+    "regression": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-o5Wonj",
+      "runnerResult": {
+        "scenario": "regression",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/qa-tester-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ce5b-e9d7-7222-bea8-fe271758989f",
+        "preservedFiles": 321,
+        "changed": [],
+        "added": [
+          "production/qa/regression.md",
+          "production/qa/bugs/BUG-0021.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "547b3d03abec5c1b235aab67640725947ae278f842c13147bd424a906f332387"
+      },
+      "runnerExitCode": 3,
+      "traceReview": {
+        "01a1ce5b-e9d7-7222-bea8-fe271758989f": {
+          "file": "rollout-2026-11-12T14-04-57-01a1ce5b-e9d7-7222-bea8-fe271758989f.jsonl",
+          "sha256": "4e7d90d91d4d8b1ba3cd44e8afdcaff985d52432a6b2fc6623d8a0941bcf2e01",
+          "role": null,
+          "source": "exec",
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent"
+          ],
+          "selectedRole": "game-studio-qa-tester"
+        },
+        "01a1ce5c-4315-7a02-ad0f-7b8b3c8ed497": {
+          "file": "rollout-2026-11-12T14-05-15-01a1ce5c-4315-7a02-ad0f-7b8b3c8ed497.jsonl",
+          "sha256": "140b433563321ccc2bfcac42889c7589f7e2743a78f0e315b6c925cf4a54b1c4",
+          "role": "game-studio-qa-tester",
+          "source": {
+            "subagent": {
+              "thread_spawn": {
+                "parent_thread_id": "01a1ce5b-e9d7-7222-bea8-fe271758989f",
+                "depth": 1,
+                "agent_path": "/root/save_regression_review",
+                "agent_nickname": "Laplace",
+                "agent_role": "game-studio-qa-tester"
+              }
+            }
+          },
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "send_message"
+          ]
+        }
+      },
+      "artifactHashes": {
+        "report.json": "b2f9032a9b58d666e31b014655c3b8dd25468cc4729d58592b463195d0765043",
+        "before.json": "e118294010e7b7c239701781b4a8ce43e312779af6e26ec05fae3c5b9061175b",
+        "final.txt": "c3a468a7f053157e40a8d29b5bbb963d2c68a796b0e357d0efdde9da77e898e7",
+        "QA game \u6d4b\u8bd5/production/qa/regression.md": "d5e8c3f1f59e50e935e8f57dd5fe53f5080f95c0a8466949ad9658a70c94d32c",
+        "QA game \u6d4b\u8bd5/production/qa/bugs/BUG-0021.md": "e6856fcd0a2e20add4f81a3e86c29969c0e7a9e37b5fcb5db2beab14372dc520"
+      },
+      "semanticReview": {
+        "result": "failed_additional_ui_approval_gate",
+        "passedBehaviors": [
+          "Targeted ten-case save checklist; excludes combat/audio",
+          "Overwrite, old-format, corrupt/unreadable and Resume/HUD coverage",
+          "Integration advisory and config blocking from actual settings",
+          "Source defect distinguished from simulated reported loss",
+          "Suspected S1 and priority pending QA lead ruling; no invented S2 downgrade",
+          "No release approval or closure; existing BUG-0020 remains Open",
+          "321 existing files unchanged; only regression.md and BUG-0021.md added"
+        ],
+        "failure": "SAVE-R09 and SAVE-R10 require named lead sign-off for plain UI despite only Visual/Feel requiring it in the role evidence table. The project and user supplied no additional UI approval gate.",
+        "correction": "Clarify that evidence routes do not import approval gates from other story types."
+      }
+    },
+    "regressionCorrected": {
+      "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-UMQMqZ",
+      "runnerResult": {
+        "scenario": "regression",
+        "sandbox": "workspace-write",
+        "status": "not_assessed",
+        "reason": "Review native parent/child trace and semantic output against studio-tests/roles/qa-tester-codex.md.",
+        "client": "codex-cli 0.162.0",
+        "exitCode": 0,
+        "threadId": "01a1ce61-ba30-7030-90f1-f754a1ace657",
+        "preservedFiles": 321,
+        "changed": [],
+        "added": [
+          "production/qa/regression.md",
+          "production/qa/bugs/BUG-0021.md"
+        ],
+        "outsideScope": [],
+        "roleSha256": "96d33762c19d3780f2b5666f42589d854a14c3f9e4e84c24f772ca4a6488c3c0"
+      },
+      "runnerExitCode": 3,
+      "traceReview": {
+        "01a1ce61-ba30-7030-90f1-f754a1ace657": {
+          "file": "rollout-2026-11-12T14-11-13-01a1ce61-ba30-7030-90f1-f754a1ace657.jsonl",
+          "sha256": "7802fbab5ab1a37dcfca390b846b59f35e7731e301e8937a1dadd4850bb631f6",
+          "role": null,
+          "source": "exec",
+          "fullRoleInstructionsPresent": false,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "spawn_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "send_message",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent",
+            "wait_agent"
+          ],
+          "selectedRole": "game-studio-qa-tester"
+        },
+        "01a1ce61-f36b-7221-8b1b-87c82c5f0d8f": {
+          "file": "rollout-2026-11-12T14-11-28-01a1ce61-f36b-7221-8b1b-87c82c5f0d8f.jsonl",
+          "sha256": "7944b6d8ea098c2b39b3d8f3e386fdddc5ed4d18a1b45e1a4cf05ba195ee82ed",
+          "role": "game-studio-qa-tester",
+          "source": {
+            "subagent": {
+              "thread_spawn": {
+                "parent_thread_id": "01a1ce61-ba30-7030-90f1-f754a1ace657",
+                "depth": 1,
+                "agent_path": "/root/save_regression_review",
+                "agent_nickname": "Faraday",
+                "agent_role": "game-studio-qa-tester"
+              }
+            }
+          },
+          "fullRoleInstructionsPresent": true,
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "sandbox": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          },
+          "toolNames": [
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "exec",
+            "send_message",
+            "exec",
+            "send_message",
+            "exec"
+          ]
+        }
+      },
+      "artifactHashes": {
+        "report.json": "80ad7461308388c0c4c7339d918355f30252cf55744afeb91d0abddb0410c577",
+        "before.json": "eb7917ff892a4112bd81b53cb8bcdb0b5a6dead741e495a14ce774f4a0da216d",
+        "final.txt": "7f088937e8149f425ea3be5c83eb897bdc6778287037a940af57b845239c5b39",
+        "QA game \u6d4b\u8bd5/production/qa/regression.md": "634cd681b5de122783b9f4de81df88903e266800e149ffda29abe1348852b936",
+        "QA game \u6d4b\u8bd5/production/qa/bugs/BUG-0021.md": "839486b45f3664c85facf969e08f6505e8fe4f20349d5b2821999f3e3b8f0de9"
+      },
+      "semanticReview": {
+        "result": "passed_for_stated_scope",
+        "testCases": 11,
+        "executedGameTests": 0,
+        "targetedScope": "Save mapping, overwrite/failure, corrupt/unreadable/missing files and actual Resume/HUD consumers; unrelated combat/audio excluded",
+        "policy": "Integration advisory and config/smoke blocking from project.yaml; no inferred PASS or release authority",
+        "evidenceRoutes": "Consumer behavior stays under the explicitly declared Integration story; no extra UI/Visual sign-off imported",
+        "severity": "Suspected S1 pending QA lead ruling, no invented downgrade; no release approval or closure",
+        "sourceAndReportedEvidence": "Source-backed unlink-before-parse defect distinguished from synthetic loss allegation and actual reproduction",
+        "existingFilesUnchanged": 321,
+        "newFiles": [
+          "production/qa/regression.md",
+          "production/qa/bugs/BUG-0021.md"
+        ],
+        "parentAggregatedFindings": true
+      },
+      "sameScenarioInputsAsFailingRun": [
+        "project.yaml",
+        "docs/save.md",
+        "src/save.cjs",
+        "tests/save.test.cjs",
+        "production/qa/bugs/BUG-0020.md",
+        "production/qa/release-note.md"
+      ]
+    }
+  },
+  "fixCommit": "da842b5",
+  "fixtureCommit": "d14c3cd",
+  "temporaryProfilesRemaining": [],
+  "localValidation": {
+    "node": "24.22.2",
+    "build": "passed",
+    "typecheck": "passed",
+    "tests": {
+      "passed": 130,
+      "failed": 0,
+      "skipped": 0
+    },
+    "packedInstallRestoreDetach": "passed",
+    "toml": "Python 3.11 tomllib: three supported fields only; native strict-config accepted"
+  },
+  "interpretation": "Each runner intentionally exits 3 pending manual semantic and trace review. All native processes exited 0. The initial regression result is a behavioral failure, preserved here; the corrected fresh-session run passed the stated scope. No game suite or actual player acceptance occurred.",
+  "remaining": [
+    "A028 engine-specific automated test scaffolds and actual engine runner evidence",
+    "A028 final content validator",
+    "T19 multi-role coordination and conflict cases",
+    "Desktop custom role acceptance",
+    "Actual forbidden-write sandbox denial",
+    "Full migration and new release archive"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A001 canonical native role, source fidelity, seven raw native fixtures and installed archive bytes; native outcomes pending",
+  "sourceHashes": {
+    ".claude/agents/accessibility-specialist.md": "cdeb167e35c909c23e556d13a0e9b9e17bbb9f2d8681b12722a55595f2ef67ee",
+    "studio-tests/agents/qa/accessibility-specialist.md": "2638f33bcca880a745537758512f2a2b869c605d82467f6662cf5f08c29bd850",
+    ".codex/agents/game-studio-accessibility-specialist.toml": "d8db6c59a40b7148781bcf060fa8b8e5511b3d58225013a0569c61494aa39fbb",
+    "studio-tests/roles/accessibility-specialist-codex.md": "6c702835d3bfcd64af7bd6491cbe30a017142201333d0da4d21b345bb14b10ae",
+    "toolkit/test/fixtures/accessibility-cases.mjs": "de3a5152bc2ac27c0d4a3122511a49e36a80b2b3a3abaee24851cad9bd3441d3",
+    "toolkit/test/qa-role-host.mjs": "bfe241ce75bb66d7f5bcd2a722f8e72ee86251d318fb5071a02f890dc19a5331",
+    "toolkit/test/packed-smoke.mjs": "bac7382c5fcc8ad098679d43940202c8e3a295c3c80b5ec4b60b61c798a8d6c5"
+  },
+  "review": {
+    "candidateAuthorAndPrimaryStandardsCheck": "architecture_decision_migration",
+    "independentSourceAndFixtureReviewer": "root",
+    "result": "No blocking source-fidelity findings; all six source responsibility groups, five domain baselines, eight audit checks, five original cases, severity/gate separation and missing-evidence behavior reviewed.",
+    "adaptation": "Guided scope reuses actual authorization; no per-file reapproval. Codex inherits model/effort/permissions; no fictitious source allowlist/maxTurns enforcement.",
+    "standards": "Retained studio thresholds are distinguished from normative WCAG applicability and default versus committed target. Official W3C/XAG references and source hashes are recorded in the acceptance specification; no legal or platform certification claim."
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS",
+    "packedInstallExactRoleBytesAndDetach": "PASS",
+    "node24": {
+      "pass": 293,
+      "fail": 0,
+      "skip": 0
+    },
+    "node26": {
+      "pass": 293,
+      "fail": 0,
+      "skip": 0
+    },
+    "native": "PENDING",
+    "desktop": "PENDING"
+  },
+  "fixtures": {
+    "count": 7,
+    "readOnly": 6,
+    "singleAuthorizedNewAudit": 1,
+    "originalInputNature": "Synthetic design specifications; supplied ratios and values are not measured render or assistive-technology results."
+  },
+  "catalog": {
+    "partialSkills": 16,
+    "partialRoles": 13,
+    "verified": 0
+  },
+  "logs": {
+    "build": {
+      "path": "/private/tmp/game-studio-accessibility-build.log",
+      "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+    },
+    "typecheck": {
+      "path": "/private/tmp/game-studio-accessibility-typecheck.log",
+      "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+    },
+    "lint": {
+      "path": "/private/tmp/game-studio-accessibility-lint.log",
+      "sha256": "4dd81431e049bb4f27647136301100f6eb3ea8f2c14f11b46d960be17df3ffcd"
+    },
+    "tests24": {
+      "path": "/private/tmp/game-studio-accessibility-tests24.log",
+      "sha256": "f6d07ca33ab2122559954d98e9582fb0d24342bd4771cf9f04d8298ba927c148"
+    },
+    "tests26": {
+      "path": "/private/tmp/game-studio-accessibility-tests26.log",
+      "sha256": "25b7f4c40677c4fa81e3c97cfddeee3b5c9bbb83c5474d1437023cc1ea336e2e"
+    },
+    "pack": {
+      "path": "/private/tmp/game-studio-accessibility-pack.log",
+      "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+    }
+  },
+  "limits": [
+    "All native checks, actual assistive-technology/runtime evidence and platform certification remain separate from this content slice.",
+    "A missing build or screenshot does not erase independently supported design-spec findings; it still precludes claims of implementation conformance.",
+    "Missing Audio Director, Sound Designer and Localization Lead remain honest hand-offs, not claimed consultation."
+  ]
+}

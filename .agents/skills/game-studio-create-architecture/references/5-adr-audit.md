@@ -1,0 +1,72 @@
+# $game-studio-create-architecture — Phase 5: ADR Audit and Traceability Check
+
+> Part of `$game-studio-create-architecture`. `SKILL.md` names when to read this file; the settings it
+> resolved and the rules under its later headings still apply here.
+
+## Phase 5: ADR Audit + Traceability Check
+
+Review all existing ADRs from Phase 0c against both the architecture built in
+Phases 1-4 AND the Technical Requirements Baseline from Phase 0b.
+
+### ADR Quality Check
+
+For each ADR:
+- [ ] Does it have an Engine Compatibility section?
+- [ ] Is the engine version recorded?
+- [ ] Are post-cutoff APIs flagged?
+- [ ] Does it have a "GDD Requirements Addressed" section?
+- [ ] Does it conflict with the layer/ownership decisions made in this session?
+- [ ] Is it still valid for the pinned engine version?
+
+| ADR | Engine Compat | Version | GDD Linkage | Conflicts | Valid |
+|-----|--------------|---------|-------------|-----------|-------|
+| ADR-0001: [title] | ✅/❌ | ✅/❌ | ✅/❌ | None/[conflict] | ✅/⚠️ |
+
+### Traceability Coverage Check
+
+Map every requirement from the Technical Requirements Baseline to existing ADRs.
+For each requirement, check if any ADR's "GDD Requirements Addressed" section
+or decision text covers it. Judge the meaning of the decision, not identical
+keywords: every substantive obligation in a combined requirement needs explicit
+support or support necessarily implied by that decision. If only some obligations
+are supported, mark the row **Partial**, name the unsupported obligations and carry
+them into the gaps below. Write the actual supported and unsupported obligations
+before assigning the status: none supported is **GAP**, some supported is
+**Partial**, and all supported is **Covered**. Retain support from shared decisions
+and necessary implications; an unsupported remainder does not erase that support.
+A citation alone does not establish coverage. Use only the actual existing ADR's
+Decision or GDD Requirements Addressed text as support. The GDD obligation and a
+new master-architecture choice are not evidence that an existing ADR records it.
+List a new master choice separately as proposed architectural support, retaining
+the formal ADR gap. Related uncovered obligations may share one appropriate
+decision record; do not require a separate ADR for each exclusion.
+
+| Req ID | Requirement | ADR Coverage | Status |
+|--------|-------------|--------------|--------|
+| TR-combat-001 | Hitbox detection per-frame | ADR-0003 | ✅ |
+| TR-combat-002 | Combo state machine | — | ❌ GAP |
+
+Count: X covered, Y gaps. For each gap, it becomes a **Required New ADR**.
+
+### Required New ADRs
+
+List all decisions made during this architecture session (Phases 1-4) that do
+not yet have a corresponding ADR, PLUS all uncovered Technical Requirements.
+Group by layer — Foundation first:
+
+**Foundation Layer (must create before any coding):**
+- `$game-studio-architecture-decision [title]` → covers: TR-[id], TR-[id]
+
+**Core Layer:**
+- `$game-studio-architecture-decision [title]` → covers: TR-[id]
+
+---
+
+Proposed ADRs may describe coverage but are not Accepted implementation authority.
+Read actual compatibility/linkage/decision sections for this audit; the earlier
+header inventory alone cannot prove coverage. Unreadable evidence stays UNKNOWN,
+not a clean checkmark. At standard, require critical Foundation decisions and list the other deferred
+gaps without dropping requirements from the denominator. An explicit project
+constraint or blocker remains visible; this tier does not waive it. A
+focused ADR audit uses the saved architecture and current source baseline; it does
+not authorize replacing other chapters or accepting/rewriting ADRs.

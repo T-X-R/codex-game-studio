@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "Four unchanged-input retries close the four recorded A017 selected-contract failures. Original failures are retained; full role acceptance remains open.",
+  "results": {
+    "godot-specialist-signals-guide": {
+      "status": "SCOPED_PASS"
+    },
+    "godot-specialist-foreign-concepts": {
+      "status": "SCOPED_PASS"
+    },
+    "godot-specialist-abstract-version-gap": {
+      "status": "SCOPED_PASS"
+    },
+    "godot-specialist-language-hot-path": {
+      "status": "SCOPED_PASS"
+    }
+  },
+  "roleSha256": "cf01cf13ecc8640fc9aacc326d8781c63517954040d7f0da7c3d1bb32236120d",
+  "review": {
+    "path": "/private/tmp/game-studio-a017-retry-evidence-mmypkfch/review.md",
+    "sha256": "7201290fe084925604c496b79807d08389f0528498f60edb9aec7489562a69aa"
+  },
+  "manifest": {
+    "path": "/private/tmp/game-studio-a017-retry-evidence-mmypkfch/manifest.json",
+    "sha256": "4a4021aaa6b4c236e6bf7d0c06d6c753c31468fdcc0c2f13bb3477d3c15d9198"
+  },
+  "manualVerdicts": {
+    "path": "/private/tmp/game-studio-a017-retry-evidence-mmypkfch/manual-verdicts.json",
+    "sha256": "7ee1a667565ad369d6a34d1113a6a010bd0f72ac106880101c0d74418fb4b75b"
+  },
+  "rootAudit": {
+    "path": "/private/tmp/game-studio-a015-original-a017-retry-root-audit.json",
+    "sha256": "ebe95db75d05c30df72229eeafe9eb8ac1a871253447700743185b463252f8fa"
+  },
+  "rootFrozenFilesRehashed": 84,
+  "control": {
+    "runtimeMembersCompared": 326,
+    "onlyChangedMember": "package/resources/.codex/agents/game-studio-godot-specialist.toml",
+    "fullRequestsAndParentPrompts": "Identical to original runs",
+    "inputFiles": 51,
+    "subroles": "Original missing Godot language subroles remain absent",
+    "policy": "Actual model/effort/approval/sandbox inherited; no new Hook trust or host overrides"
+  },
+  "rootAdjudication": [
+    "Signals guide uses in-memory verification and writes only its authorized guide/directory; named language handoff now included.",
+    "Foreign terms map to configured Godot first. Future standalone-example clarification does not block that delivered mapping or reopen the established project engine.",
+    "Abstract snippets are explicitly response-only syntax demonstrations with unresolved real class ownership; they are not authored project classes. Actual GDScript author handoff and unknown installed-version limitation are now explicit. This does not prove implementation/delegation.",
+    "Hot-path analysis now explains conditional native-extension escalation and per-platform/integration cost without adopting it or claiming benchmark gains."
+  ],
+  "limits": [
+    "Existing-backend physics and explicit-Unity scoped passes are retained from the original run, not rerun or generalized.",
+    "All four original failure records remain unchanged.",
+    "No engine/benchmark, actual subordinate delegation, owner continuation, desktop, export or whole-role acceptance is established.",
+    "Read-only missing-resource/PATH probes and model-refresh warnings remain recorded; no successful editor lookup is inferred from failed probes.",
+    "Snapshots cover project entries, not the global filesystem; actual public calls were also reviewed."
+  ]
+}

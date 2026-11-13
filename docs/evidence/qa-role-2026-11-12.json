@@ -1,0 +1,148 @@
+{
+  "recordedAt": "2026-11-12",
+  "scope": "Packed QA role, native CLI delegation, static evidence audit and scoped Markdown writes only",
+  "roleSourceCommit": "97d324a",
+  "roleSha256": "547b3d03abec5c1b235aab67640725947ae278f842c13147bd424a906f332387",
+  "officialContract": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+  "fixture": "toolkit/test/qa-role-host.mjs",
+  "behaviorSpec": "studio-tests/roles/qa-tester-codex.md",
+  "localEvidenceDirectory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-82zn86",
+  "runnerResult": {
+    "status": "not_assessed",
+    "reason": "Review native parent/child trace and semantic output against studio-tests/roles/qa-tester-codex.md.",
+    "client": "codex-cli 0.162.0",
+    "exitCode": 0,
+    "threadId": "01a1ce48-d6a5-7971-8314-7ad6ebf5d423",
+    "preservedFiles": 322,
+    "changed": [],
+    "added": [
+      "production/qa/audit.md",
+      "production/qa/bugs/BUG-0008.md"
+    ],
+    "outsideScope": [],
+    "roleSha256": "547b3d03abec5c1b235aab67640725947ae278f842c13147bd424a906f332387"
+  },
+  "runnerExitCode": 3,
+  "reviewedResult": "passed_for_stated_scope",
+  "reviewExplanation": "Runner intentionally leaves semantic and trace acceptance unassessed (exit 3). Maintainer inspected full audit, bug report and parent/child traces; native process exited 0. This does not close A028 or T19.",
+  "traceReview": {
+    "01a1ce48-d6a5-7971-8314-7ad6ebf5d423": {
+      "sha256": "ba90389a6ac3fc4716f46007096cd7060003c20361326f594dbda8903755d333",
+      "role": null,
+      "source": "exec",
+      "fullRoleInstructionsPresent": false,
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "sandbox": {
+        "type": "workspace-write",
+        "network_access": false,
+        "exclude_tmpdir_env_var": false,
+        "exclude_slash_tmp": false
+      },
+      "approvalPolicy": "on-request",
+      "toolNames": [
+        "spawn_agent",
+        "wait_agent",
+        "wait_agent",
+        "wait_agent",
+        "wait_agent",
+        "wait_agent",
+        "send_message",
+        "wait_agent",
+        "wait_agent",
+        "wait_agent",
+        "wait_agent"
+      ],
+      "selectedRole": "game-studio-qa-tester"
+    },
+    "01a1ce49-0036-7690-8e15-71b9cc983df4": {
+      "sha256": "9a0a6736b6da85f5fab047f920c01cc15a4f639db6d3ed724d344ef0653cba05",
+      "role": "game-studio-qa-tester",
+      "source": {
+        "subagent": {
+          "thread_spawn": {
+            "parent_thread_id": "01a1ce48-d6a5-7971-8314-7ad6ebf5d423",
+            "depth": 1,
+            "agent_path": "/root/score_qa_audit",
+            "agent_nickname": "McClintock",
+            "agent_role": "game-studio-qa-tester"
+          }
+        }
+      },
+      "fullRoleInstructionsPresent": true,
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "sandbox": {
+        "type": "workspace-write",
+        "network_access": false,
+        "exclude_tmpdir_env_var": false,
+        "exclude_slash_tmp": false
+      },
+      "approvalPolicy": "on-request",
+      "toolNames": [
+        "exec",
+        "exec",
+        "exec",
+        "exec",
+        "exec",
+        "send_message",
+        "exec",
+        "send_message",
+        "exec"
+      ]
+    }
+  },
+  "contentReview": {
+    "zeroTestPassRejected": true,
+    "staticMismatchSeparatedFromRuntimeReproduction": true,
+    "testCases": 9,
+    "executedGameTests": 0,
+    "plannedCasesExplicitlyUnexecuted": true,
+    "subjectiveCriteriaEscalatedWithAlternatives": true,
+    "bugId": "BUG-0008",
+    "severity": "S3-Medium",
+    "priority": "Pending",
+    "legacyBugPreserved": true,
+    "parentAggregatedFindingsAndDecisions": true,
+    "humanPlay": "not_assessed"
+  },
+  "preservation": {
+    "existingFiles": 322,
+    "changed": [],
+    "added": [
+      "production/qa/audit.md",
+      "production/qa/bugs/BUG-0008.md"
+    ],
+    "outsideScope": [],
+    "temporaryProfileRemoved": true,
+    "hooksConfiguredOrTrusted": false,
+    "globalBaseConfigurationEdited": false
+  },
+  "artifactHashes": {
+    "report.json": "b6b2fa8832f68f929a0cb23a42d848395b0c6ca74fa3c1a1d19104ce91ccddf1",
+    "before.json": "b09cc3496457cf0a07c3a6fa7690c74bcf9eae56baba9a3afcbc3a9f4125cb79",
+    "final.txt": "8d5c87cbe770e0735143cd197fa4614870ea378fb21c5cea9474ef4b114cb139",
+    "QA game \u6d4b\u8bd5/production/qa/audit.md": "23d5948ef8e33df82031f300610dbac201fe7a575472d40cf5543b454add1af0",
+    "QA game \u6d4b\u8bd5/production/qa/bugs/BUG-0008.md": "d1daffb64853a41e32054fd37cf4ae9c81bf695f218dfced07f9681f5bc9adf4"
+  },
+  "localValidation": {
+    "node": "24.22.2",
+    "build": "passed",
+    "typecheck": "passed",
+    "tests": {
+      "passed": 130,
+      "failed": 0,
+      "skipped": 0
+    },
+    "pack": "passed, exact role installation, no project config write, role removed by detach",
+    "toml": "Python 3.11 tomllib parsed exactly name, description and developer_instructions; native strict-config accepted"
+  },
+  "remaining": [
+    "A028 engine-specific scaffold and actual runner behavior",
+    "A028 save, targeted regression, S1 escalation, read-only and policy-override cases",
+    "T19 other core roles, dependencies, disjoint writes and shared-state conflicts",
+    "Desktop native custom-role acceptance",
+    "Enforced sandbox denial: unchanged files demonstrate observed compliance, not attempted-write rejection",
+    "Full migration and new release archive"
+  ]
+}
