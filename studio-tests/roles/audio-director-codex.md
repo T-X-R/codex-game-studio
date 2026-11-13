@@ -6,9 +6,13 @@ spec: `studio-tests/agents/leads/audio-director.md`. Targets:
 `.codex/agents/game-studio-audio-director.toml` and
 `studio-tests/roles/audio-director-codex.md`.
 
-Status: content candidate. **All native behavior PENDING**. No fixture, model,
-audio playback/measurement, engine integration, host permission or desktop run is
-claimed by this two-file slice. There is no assigned audio director gate.
+Status: partial. [Five original CLI scenarios](../../docs/evidence/audio-director-native-2026-11-13.json)
+record four selected passes and one UX-review ownership failure. Root reconciled
+96 frozen artifacts, 2,862 unchanged original regular files, inputs, archives and
+actual role traces. The ownership correction has a separate same-input retry in
+progress. Document persistence, actual technical arbitration, audio playback/
+measurement, engine integration and desktop remain unassessed. There is no audio
+director gate.
 
 ## Source review and Codex translation
 

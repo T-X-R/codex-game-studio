@@ -1,0 +1,448 @@
+{
+  "migrationRow": "A005",
+  "role": "game-studio-audio-director",
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "Original five raw CLI scenarios, each run once. Four selected consulting/review checks pass; settings ownership case fails. All original outcomes retained.",
+  "summary": {
+    "runs": 5,
+    "selectedPASS": 4,
+    "FAIL": 1,
+    "pendingReview": 0
+  },
+  "actualRoleSha256": "f48faead7727e5d840729af73291eae48eea12516bed2cdf62bbab4d6fbf4d5d",
+  "archiveSha256": "245fc32c7bedef210e1ea9141dcca85b25fa75ead9339faa5b2edffcdfd4a447",
+  "remainingAcceptance": [
+    "The observed source Case 2 ownership failure is unresolved in these original runs. A later role revision/retry must preserve this failure and use its own exact hashes.",
+    "All five assignments were read-only. Authorized skeleton/section persistence, existing-document updates, denied writes, compaction continuation and checkpoint concurrency are not tested.",
+    "Occlusion case verifies correct independent technical-owner handoff, not an actual specialist arbitration or settled numeric audible contract.",
+    "No real audio production, playback/listening, LUFS/peak measurement, audibility/mix/masking, adaptive implementation, browser codec/streaming/memory/performance, engine or hardware testing occurred.",
+    "Dedicated full mix/event/adaptive coverage, middleware approvals and implementation strategy, detailed Sound Designer delegation, localization timing and real creative-choice continuation remain pending.",
+    "CLI behavior does not establish desktop compatibility or complete A005/T19 migration acceptance.",
+    "The initial snapshot covers regular files excluding .git, not an original symlink inventory. Final links match the two expected package binaries.",
+    "Runtime model/effort/approval/sandbox match parent/child; the parent QA_CONFIG developer marker is present only in the parent, replaced by the typed-role developer in the child. No assertion that all parent custom instructions survive role override."
+  ],
+  "runs": [
+    {
+      "id": "RYDg2G",
+      "scenario": "audio-director-exploration-spec",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-RYDg2G",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "semanticReview": {
+        "status": "PASS",
+        "scope": "selected approved-direction conversation draft; no document persistence tested",
+        "findings": [
+          "Three proposed named stems follow the source convention; shared format, 48 kHz sample rate, per-file LUFS/peak/size targets and duration are explicit.",
+          "Density-driven sparse organic/melancholic layering is tied to lived-in world, and preserved existing Web Audio/gameplay density input. Inventory and numerical targets remain proposals, not owner-approved implementation facts.",
+          "128 kbit/s times 180 seconds / 8 = 2.88 decimal MB per file; three 3.2 MB caps total 9.6 MB, leaving 10.4 MB of the 20 MB initial allocation. 180*48000*2*3 = 51,840,000 bytes for a 24-bit stereo PCM master. These are planning calculations, not actual encoded sizes or loudness measurements.",
+          "Current browser support, listening, audibility, measured LUFS/peaks, decoded-memory/streaming and actual audio production remain unassessed. No middleware choice or audio/code production."
+        ]
+      },
+      "preservedOriginalFiles": 573,
+      "traces": [
+        {
+          "kind": "child",
+          "id": "01a1d2a6-47d4-7cb3-b2c0-61a440953bc0",
+          "sha256": "d64d63bea1b5cb81ea1527699a52ae71d926d117a4b0d10d70c86ff439aaf5b2",
+          "role": "game-studio-audio-director",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "parent",
+          "id": "01a1d2a6-1f1d-7851-8bbc-63f4e2fa3265",
+          "sha256": "0f117ca56300197a55c27b496a06de7c2609743090ed13e23ca66ffbc0060573",
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        }
+      ],
+      "publicCallAudit": {
+        "parentOnlyScheduling": true,
+        "actualChildOnlyAssignedTypedRole": true,
+        "childNestedDelegation": false,
+        "actualCommandsReviewed": true,
+        "operations": "Read-only file inspection and installed runtime config/resource/check observations only. No native write, game/audio execution, download, installation, middleware mutation, commit or publication.",
+        "opaqueCommunicationLimitation": "Encrypted internal dispatch/send-message contents retained opaque. Full parent custom developer text inheritance is not claimed."
+      },
+      "developerContextObservation": {
+        "child": {
+          "developerPath": "/private/tmp/audio-director-native-audit-lgov95l8/RYDg2G/child-developer.txt",
+          "sha256": "a31cbdaa1d20e96bd8b8025de41c329ffb7ba874c2460b788d6d7cafeb75acb5",
+          "projectDeveloperMarkerPresent": false
+        },
+        "parent": {
+          "developerPath": "/private/tmp/audio-director-native-audit-lgov95l8/RYDg2G/parent-developer.txt",
+          "sha256": "645e05fad5ecf985dac35561d04ac7985517ec1e1db2787580e0f9fb1c9a12e4",
+          "projectDeveloperMarkerPresent": true
+        },
+        "interpretation": "Exact typed-role developer instructions are verified separately from model/effort/approval/sandbox inheritance. Parent custom developer marker presence is observed, not assumed."
+      }
+    },
+    {
+      "id": "qt41UV",
+      "scenario": "audio-director-settings-flow",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-qt41UV",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "semanticReview": {
+        "status": "FAIL",
+        "scope": "source Case 2 UX-review ownership boundary",
+        "rootIndependentAdjudication": "Root read complete child final and original Case 2 and confirmed FAIL. No correction/retry is included in this original-five evidence.",
+        "findings": [
+          "The child correctly names UX ownership, retains four mix buses and distinguishes audibility from untested supplied documents. All file/role/runtime-scope checks pass independently.",
+          "It nevertheless produces Advanced navigation is ambiguous and exit path needs clarification as specific flow-review findings, asking whether basic controls can bypass Advanced and how Resume/return navigation works.",
+          "Those findings evaluate UX architecture beyond the source contract to contribute only mix-derived audio requirements, even though no binding UI design is selected and no file is changed. The absence of binding decisions does not cure this ownership failure."
+        ]
+      },
+      "preservedOriginalFiles": 573,
+      "traces": [
+        {
+          "kind": "child",
+          "id": "01a1d2a6-3e93-7481-a111-c7092370e2a7",
+          "sha256": "10b19d850a074067b963686dd8f4cd63cc09f42879d3b651fa8b18b80c09fb3d",
+          "role": "game-studio-audio-director",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "parent",
+          "id": "01a1d2a6-1241-7732-bb5a-e1c14abf2bb8",
+          "sha256": "3e6d56c0c78c1a2ee80db4e0148c8cafe9e5911224ebece6a73fbf7798b8eac5",
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        }
+      ],
+      "publicCallAudit": {
+        "parentOnlyScheduling": true,
+        "actualChildOnlyAssignedTypedRole": true,
+        "childNestedDelegation": false,
+        "actualCommandsReviewed": true,
+        "operations": "Read-only file inspection and installed runtime config/resource/check observations only. No native write, game/audio execution, download, installation, middleware mutation, commit or publication.",
+        "opaqueCommunicationLimitation": "Encrypted internal dispatch/send-message contents retained opaque. Full parent custom developer text inheritance is not claimed."
+      },
+      "developerContextObservation": {
+        "child": {
+          "developerPath": "/private/tmp/audio-director-native-audit-lgov95l8/qt41UV/child-developer.txt",
+          "sha256": "a31cbdaa1d20e96bd8b8025de41c329ffb7ba874c2460b788d6d7cafeb75acb5",
+          "projectDeveloperMarkerPresent": false
+        },
+        "parent": {
+          "developerPath": "/private/tmp/audio-director-native-audit-lgov95l8/qt41UV/parent-developer.txt",
+          "sha256": "e3a9e5743c94c1b5791b444ebd863fbfae982e8fe6aa07d6e1e1d752fd01e339",
+          "projectDeveloperMarkerPresent": true
+        },
+        "interpretation": "Exact typed-role developer instructions are verified separately from model/effort/approval/sandbox inheritance. Parent custom developer marker presence is observed, not assumed."
+      }
+    },
+    {
+      "id": "h2xnzv",
+      "scenario": "audio-director-boss-review",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-h2xnzv",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "semanticReview": {
+        "status": "PASS",
+        "scope": "selected boss cue adversarial audio review",
+        "findings": [
+          "Specific combined upbeat/major-tonality/fast/bright orchestral direction is compared with Dread, Inevitability and Tragic sacrifice; unchanged music through sacrifice is identified as a concrete direction conflict.",
+          "Provides two actionable orchestral revision directions and a recommendation without rewriting the narrative or choosing gameplay states. Contextual emotional assessment is not presented as a universal musical law.",
+          "Returns specialist findings, not an Audio/AD gate or overall APPROVED/NEEDS REVISION verdict. Actual listening, LUFS, masking and playback remain unassessed.",
+          "Read-only GDD structure observation is explicitly not a semantic pass; minimal required-section count is not turned into eight mandatory failures."
+        ]
+      },
+      "preservedOriginalFiles": 572,
+      "traces": [
+        {
+          "kind": "parent",
+          "id": "01a1d2ab-f927-7ee3-9686-bfe68d1ba250",
+          "sha256": "8fead87e5797fb9da4d8f28de2efa1f6062fe39b49e083e6fa52237464fd5175",
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "child",
+          "id": "01a1d2ac-2ec6-7e83-9c56-feeac080abca",
+          "sha256": "98b69e721c458c555f53a07aebc09c26603c02b7751b69e09421e64892284f87",
+          "role": "game-studio-audio-director",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        }
+      ],
+      "publicCallAudit": {
+        "parentOnlyScheduling": true,
+        "actualChildOnlyAssignedTypedRole": true,
+        "childNestedDelegation": false,
+        "actualCommandsReviewed": true,
+        "operations": "Read-only file inspection and installed runtime config/resource/check observations only. No native write, game/audio execution, download, installation, middleware mutation, commit or publication.",
+        "opaqueCommunicationLimitation": "Encrypted internal dispatch/send-message contents retained opaque. Full parent custom developer text inheritance is not claimed."
+      },
+      "developerContextObservation": {
+        "parent": {
+          "developerPath": "/private/tmp/audio-director-native-audit-lgov95l8/h2xnzv/parent-developer.txt",
+          "sha256": "0ed4dc2518960084509b9dec16d4fcb898c929784f94e8fe7c9caa5a5233ea6a",
+          "projectDeveloperMarkerPresent": true
+        },
+        "child": {
+          "developerPath": "/private/tmp/audio-director-native-audit-lgov95l8/h2xnzv/child-developer.txt",
+          "sha256": "a31cbdaa1d20e96bd8b8025de41c329ffb7ba874c2460b788d6d7cafeb75acb5",
+          "projectDeveloperMarkerPresent": false
+        },
+        "interpretation": "Exact typed-role developer instructions are verified separately from model/effort/approval/sandbox inheritance. Parent custom developer marker presence is observed, not assumed."
+      }
+    },
+    {
+      "id": "4iHzj1",
+      "scenario": "audio-director-occlusion-conflict",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-4iHzj1",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "semanticReview": {
+        "status": "PASS",
+        "scope": "selected initial occlusion consultation and independent technical-owner handoff only",
+        "findings": [
+          "Keeps the agreed obstacle-muffling objective; supplies clear/blocked/engage/recover/boundary-crossing and critical-cue observable requirements, with clear versus subtle muffling options for actual owner choice.",
+          "Attenuation magnitude, precise timing and source eligibility are explicitly unresolved in the raw material and remain unresolved rather than being falsely approved. This is not evidence of a settled numeric audible contract.",
+          "Implementation choice goes to independent Lead Programmer or Technical Director, not either disputant. It does not choose raycast versus zones, switch middleware or invent profiling data.",
+          "Actual LP/TD consultation/arbitration, prototyping, performance or listening did not happen; the request forbids further delegation. No claim of those capabilities passing."
+        ]
+      },
+      "preservedOriginalFiles": 572,
+      "traces": [
+        {
+          "kind": "child",
+          "id": "01a1d2ac-33ca-7c90-9bf7-28e4b7637c0d",
+          "sha256": "0aeae0f9a96c24490e8686f0c40129a9bc6f5057fbe3310c36af50168596473b",
+          "role": "game-studio-audio-director",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "parent",
+          "id": "01a1d2ab-f797-7c92-9605-0f75f9fff2ea",
+          "sha256": "3853283cf74f58dddaeba32fbffc5d4adbad96df819d5bf53f8abd3b05d62852",
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        }
+      ],
+      "publicCallAudit": {
+        "parentOnlyScheduling": true,
+        "actualChildOnlyAssignedTypedRole": true,
+        "childNestedDelegation": false,
+        "actualCommandsReviewed": true,
+        "operations": "Read-only file inspection and installed runtime config/resource/check observations only. No native write, game/audio execution, download, installation, middleware mutation, commit or publication.",
+        "opaqueCommunicationLimitation": "Encrypted internal dispatch/send-message contents retained opaque. Full parent custom developer text inheritance is not claimed."
+      },
+      "developerContextObservation": {
+        "child": {
+          "developerPath": "/private/tmp/audio-director-native-audit-lgov95l8/4iHzj1/child-developer.txt",
+          "sha256": "a31cbdaa1d20e96bd8b8025de41c329ffb7ba874c2460b788d6d7cafeb75acb5",
+          "projectDeveloperMarkerPresent": false
+        },
+        "parent": {
+          "developerPath": "/private/tmp/audio-director-native-audit-lgov95l8/4iHzj1/parent-developer.txt",
+          "sha256": "49a0b37af38b22028aa6552da56e9fbb071689befda4dae11de9b157bb1d0e35",
+          "projectDeveloperMarkerPresent": true
+        },
+        "interpretation": "Exact typed-role developer instructions are verified separately from model/effort/approval/sandbox inheritance. Parent custom developer marker presence is observed, not assumed."
+      }
+    },
+    {
+      "id": "jNVfAS",
+      "scenario": "audio-director-three-pillars",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-jNVfAS",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "semanticReview": {
+        "status": "PASS",
+        "scope": "selected three-pillar ambient-spec review",
+        "findings": [
+          "Explicit contribution/gap assessment names emergent stories, meaningful sacrifice and lived-in world; static biome entry does not express action/event interaction, lasting loss or historical change in this ambience category.",
+          "Offers state-aware variants, adaptive layers or retained static scope as owner choices with trade-offs; no new gameplay or narrative states are invented.",
+          "Separates ambience gaps from a whole-game pillar failure; no audio supplied or auditioned, no measurements or technical validation claimed.",
+          "The optional guessed studio/docs/roles/audio-director.md lookup was unavailable and honestly disclosed. The actual complete assigned role developer instructions were verified; no such resource is required by the canonical role."
+        ]
+      },
+      "preservedOriginalFiles": 572,
+      "traces": [
+        {
+          "kind": "parent",
+          "id": "01a1d2ae-32c0-7662-8c1b-72fd7c0dc586",
+          "sha256": "8c67ecf2c679f00bf4fd4c0aab882e0eaa479610130976100da7b5ff739e3424",
+          "role": null,
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "child",
+          "id": "01a1d2ae-6b1c-7842-81ae-b626f5c292ed",
+          "sha256": "669092812a786216447eed31f132049a9253b67d3c7af392274a8f754630bfb8",
+          "role": "game-studio-audio-director",
+          "contexts": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            },
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "on-request",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ]
+        }
+      ],
+      "publicCallAudit": {
+        "parentOnlyScheduling": true,
+        "actualChildOnlyAssignedTypedRole": true,
+        "childNestedDelegation": false,
+        "actualCommandsReviewed": true,
+        "operations": "Read-only file inspection and installed runtime config/resource/check observations only. No native write, game/audio execution, download, installation, middleware mutation, commit or publication.",
+        "opaqueCommunicationLimitation": "Encrypted internal dispatch/send-message contents retained opaque. Full parent custom developer text inheritance is not claimed."
+      },
+      "developerContextObservation": {
+        "parent": {
+          "developerPath": "/private/tmp/audio-director-native-audit-lgov95l8/jNVfAS/parent-developer.txt",
+          "sha256": "7c4bb25e014f1eec239350125ac549de96e80e1390a75dc5fd1b0dfe44107f1c",
+          "projectDeveloperMarkerPresent": true
+        },
+        "child": {
+          "developerPath": "/private/tmp/audio-director-native-audit-lgov95l8/jNVfAS/child-developer.txt",
+          "sha256": "a31cbdaa1d20e96bd8b8025de41c329ffb7ba874c2460b788d6d7cafeb75acb5",
+          "projectDeveloperMarkerPresent": false
+        },
+        "interpretation": "Exact typed-role developer instructions are verified separately from model/effort/approval/sandbox inheritance. Parent custom developer marker presence is observed, not assumed."
+      }
+    }
+  ],
+  "candidate": {
+    "directory": "/private/tmp/audio-director-native-audit-lgov95l8",
+    "sha256": "825bfb30476a2df6cd2fde0cea8d0161ca4e779505eb58a8b461d8a6f1aff986",
+    "manifestSha256": "8052ac6dd36d701646cf08a3b9ced013846033c25632fe81098eca038fce14d3"
+  },
+  "rootVerification": {
+    "candidateArtifactsChecked": 96,
+    "actualRegularFilesChecked": 2862,
+    "rawInputsActualArchivesLiveTracesFullRole": "PASS byte reconciliation; not a standalone semantic verdict",
+    "semantics": "Root independently read complete Case2 final and original source and confirmed ownership FAIL; all five full public traces/finals reviewed by design_system_migration."
+  },
+  "correction": {
+    "status": "Implemented; unchanged-input retry in progress separately",
+    "roleSha256": "a2ffb1c6fb8ac16f1696b6338b5f1d91465a8b10c56ae0b0c99f93d50afe22ae",
+    "scope": "Establish review ownership first; contribute audio requirements without assessing another discipline through findings or clarification questions."
+  }
+}
