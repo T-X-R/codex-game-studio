@@ -15,6 +15,13 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
+2026-11-13: S051 initial selection and configured-engine identification have two
+root-audited native read-only scoped passes on 0c3f343; full cases remain pending.
+All five CI jobs for that content head pass. The source-derived Godot parse
+resource now has real 4.7.2 source/installed comparisons, exact package-byte
+checks and 496 full tests per Node 24/26. No game, .NET or full workflow acceptance
+is inferred. Test setup/helper and Godot specialist migration continue separately.
+
 2026-11-13: S051 full content and source-mapped acceptance specification are
 installed and independently reviewed. Content/Skill checks and global/restored
 archive byte checks pass; all 11 original native cases plus broader branches

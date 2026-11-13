@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-13",
+  "scope": "Install upstream Godot script-loading checker without changing its executable GDScript",
+  "status": "PASS_SCOPED",
+  "source": {
+    "path": ".claude/scripts/godot-parse-check.gd",
+    "sha256": "c009f12256161f64d0eaf031ddbcf177dec4b02eb8ff469ab7e6d12632705c5e"
+  },
+  "executableBodyUnchanged": true,
+  "canonicalFiles": {
+    "studio/scripts/godot-parse-check.gd": "e9130c02a832fcbacb5292ecc8cf04ae18d9b747460f2a36fc75ab395deec629",
+    "toolkit/test/godot-parse-smoke.mjs": "9998903587cc7dcb3ebac304f3c7563b1d1bf8467f782546713ae29a6082f882",
+    "studio-tests/helpers/godot-parse-check-codex.md": "785765ed1d3d23aa6b646dabf4aea300d6c4ce8028f437224855cbf7d5a2f474",
+    ".agents/skills/game-studio-setup-engine/references/commands.md": "13d614d86aaa499f95b83d7852a669eebe217199b502e7cc003c5a04765b8b8e",
+    "studio/engine-reference/godot/current-best-practices.md": "0874366bde08ac833107809fe81894b4b2fef4c8f2390ec17e626ab24cbea47a"
+  },
+  "reviews": [
+    {
+      "path": "/private/tmp/game-studio-parse-independent-6cf889wu/review.json",
+      "sha256": "d97cfd10b87ae2b7abf9f43c2d6ff8deeacc203a11b4d3849d682ccf4aeaeb82"
+    },
+    {
+      "path": "/private/tmp/game-studio-parse-addendum-qk3inoie/addendum.json",
+      "sha256": "55e1434cb07848b313cf11e10e271dc0b8d4d6905499cc19c57ec7329b857163"
+    }
+  ],
+  "actualEngine": {
+    "version": "4.7.2.stable.official.ed1daf0bf",
+    "host": "macOS arm64",
+    "builtResourceReport": {
+      "path": "/private/tmp/game-studio-parse-live-20261113-a/report.json",
+      "sha256": "2e9bf3737caee13360e1a2f3962a32f09610452f99d7788a111cc6ef922aa166"
+    },
+    "installedResourceReport": {
+      "path": "/private/tmp/game-studio-parse-installed-20261113-a/report.json",
+      "sha256": "38d37594572b396e0fac36477aaf62a3c76b95969bf517d43976f27d8bd0aeaf"
+    },
+    "sourceAndInstalledCasesEach": 5,
+    "cases": [
+      "valid autoload and class-name references",
+      "syntax error",
+      "missing script",
+      "mixed error then valid script",
+      "no arguments"
+    ],
+    "expectedExitCodes": [
+      0,
+      1,
+      1,
+      1,
+      2
+    ],
+    "protectedSourceFiles": 5,
+    "wholeTreePreservationClaimed": false
+  },
+  "actualPackage": {
+    "installation": {
+      "path": "/private/tmp/game studio parse package gfs1tmgi/installation.json",
+      "sha256": "72b38e55181461edf3d2e9d5a5866ed690e9e28ea20b6f405c6b45e304d2b978"
+    },
+    "archiveSha256": "21d931eda093feb418ad3bc82cfc3b6f8814cfa4a430fc7a5024f790bc3e4726",
+    "helperSha256": "e9130c02a832fcbacb5292ecc8cf04ae18d9b747460f2a36fc75ab395deec629",
+    "resourceResolver": {
+      "path": "/private/tmp/game studio parse package gfs1tmgi/resolve.stdout",
+      "sha256": "a34e8ec3453e14918a1ff33b7292a86b9399262a67cbfd82e291076ed868664c"
+    },
+    "helperAndGamePathsContainSpaces": true,
+    "globalInstalledResourceExecuted": true,
+    "restoredResourceBytesChecked": true,
+    "restoredEngineExecution": false
+  },
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS",
+    "pack": "PASS",
+    "fullTests": {
+      "node24": {
+        "pass": 496,
+        "fail": 0,
+        "skip": 0
+      },
+      "node26": {
+        "pass": 496,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    "logs": {
+      "build-final": {
+        "path": "/private/tmp/game-studio-parse-build-final.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      "typecheck": {
+        "path": "/private/tmp/game-studio-parse-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      "content": {
+        "path": "/private/tmp/game-studio-parse-content.log",
+        "sha256": "c1e8f0d4d41e21c0c003c76b68522d9bba5501f464ec6b73e593e22c7e93ad0f"
+      },
+      "pack": {
+        "path": "/private/tmp/game-studio-parse-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      },
+      "full24": {
+        "path": "/private/tmp/game-studio-parse-full24.log",
+        "sha256": "f8db0156770984d4f890582eb4a4417312cd8c1c2fe03859256c7f941363699e"
+      },
+      "full26": {
+        "path": "/private/tmp/game-studio-parse-full26.log",
+        "sha256": "d54a6cf22700724868cc5a1696ff44b0ebb483543d26373c09fd9d26ddc0aaed"
+      }
+    }
+  },
+  "limits": [
+    "Starts the project and its autoloads; loading may execute script initialization. Not a pure parser or security sandbox.",
+    "All supplied scripts loading does not prove all autoloads succeeded, whole-game behavior, test suite coverage or exports.",
+    "No C#/.NET, other Godot releases/OS, crash/timeout/failing-autoload/non-Script resource fixture acceptance is claimed.",
+    "Full setup-engine/dev-story native workflow remains pending.",
+    "Historical engine-reference verification dates were preserved; installed-path instructions are not new engine-fact research.",
+    "This addition needs its own exact-head CI."
+  ]
+}

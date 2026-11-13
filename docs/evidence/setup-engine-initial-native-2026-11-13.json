@@ -1,0 +1,182 @@
+{
+  "date": "2026-11-13",
+  "scope": "S051 initial selection and configured-engine identification in real Codex CLI",
+  "status": "PASS_TWO_INITIAL_SCOPES_FULL_CASES_PENDING",
+  "frozenHead": "0c3f343d52b8eb06c8404d69fae397adb8e1ee83",
+  "archiveSha256": "8d163970b7fbccf437ad1686d50979f2e83406816886c93d3a923c325d27f4f1",
+  "candidate": {
+    "manifest": {
+      "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/manifest-sha256.json",
+      "sha256": "1a5dc4e600a04482d41e7ab37719a100333f49c4f1c79c1e80215fad20cbd991"
+    },
+    "report": {
+      "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/evidence.json",
+      "sha256": "01ab544fa103219ef825a0401a82948c85ed365bfa0a7295af35886c623bc630"
+    }
+  },
+  "rootAudit": {
+    "record": {
+      "path": "/private/tmp/game-studio-s051-root-audit.json",
+      "sha256": "4bb42d2696f87252dcf7c7243651bc3cd4e024dd7160ce1316592fe84514d65f"
+    },
+    "script": {
+      "path": "/private/tmp/game-studio-s051-root-audit.py",
+      "sha256": "710f9c0c5f22dc76c01c73954353cbdaa3bff5752cd19f5396cd2263ada9f69b"
+    },
+    "log": {
+      "path": "/private/tmp/game-studio-s051-root-audit.log",
+      "sha256": "036e56627bd62febf794bfb53917b25435ab77eaff5c1e630dca92c6b2cdee1d"
+    },
+    "verified": {
+      "manifestFilesVerified": 2570,
+      "runs": [
+        {
+          "case": "source-10-guided-initial",
+          "fileEntries": 676,
+          "beforeTarRegularFiles": 674,
+          "actualArchiveFiles": 302,
+          "noAddedOrChangedProjectEntries": true,
+          "requestSha256": "28e0c4404f0128808633b83fe5a78d217cc31a677a4d3304ada096332642e1d8"
+        },
+        {
+          "case": "source-11-configured-initial",
+          "fileEntries": 676,
+          "beforeTarRegularFiles": 674,
+          "actualArchiveFiles": 302,
+          "noAddedOrChangedProjectEntries": true,
+          "requestSha256": "28e0c4404f0128808633b83fe5a78d217cc31a677a4d3304ada096332642e1d8"
+        }
+      ],
+      "limits": [
+        "Read-only fixtures do not establish behavior when writes are permitted",
+        "Initial selection/identification scopes only; full cases and actual answers remain pending"
+      ]
+    },
+    "readerCorrections": "Root first assumed every manifest value was a file hash and omitted the before.tar workspace prefix; corrected the audit reader after inspecting actual schema. Original audit errors remain in the local first/tar-prefix logs; no fixture/native record was changed."
+  },
+  "cases": [
+    {
+      "sourceCase": 10,
+      "variant": "base initial selection only",
+      "scopeResult": "PASS",
+      "fullCase": "PENDING",
+      "nativeThread": "01a1d31a-1d18-70b0-91b4-5c3cab7b73b6",
+      "actualSettings": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "read-only"
+        },
+        "collaboration_mode": {
+          "mode": "default",
+          "settings": {
+            "model": "gpt-6.1-sol",
+            "reasoning_effort": "high",
+            "developer_instructions": null
+          }
+        }
+      },
+      "request": {
+        "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/source-10-guided-initial/request.txt",
+        "sha256": "28e0c4404f0128808633b83fe5a78d217cc31a677a4d3304ada096332642e1d8"
+      },
+      "originalInput": {
+        "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/source-10-guided-initial/original-request.txt",
+        "sha256": "098fee2b085db5d23e6c1a23f8bafdea708276db4198793f072bfd25ca579a32"
+      },
+      "final": {
+        "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/source-10-guided-initial/final.txt",
+        "sha256": "f8e58a4398980af507498d3529a28e14ed39885d82bae99a32d5f3344ebaa647"
+      },
+      "trace": {
+        "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/source-10-guided-initial/native-session.jsonl",
+        "sha256": "41e206e1a69ce77de4d62465c7f0ebcb370deb72acce84e9cbb1a85c25ad08be"
+      },
+      "actualCommands": {
+        "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/source-10-guided-initial/completed-commands.json",
+        "sha256": "9a7ad47906ec90f02b53dec39b798ed983904d5c4de07973659fd21b91659f0f"
+      },
+      "questionEvidence": {
+        "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/source-10-guided-initial/question-observation.json",
+        "sha256": "51e7127db6014d67437b46fc06fd0d28324aa0ffa69346d5891d8dd759b9e3af"
+      },
+      "findings": [
+        "Actual installed Skill and selection reference read; config and marker/brief absence inspected.",
+        "Editor-fit explanation precedes actual async question. Web (Recommended) is first, followed by Godot, Unity, Unreal Engine 5 and Help me choose.",
+        "Async request returns accepted:true without an answer; native final explicitly waits and does not select or configure an engine."
+      ],
+      "projectEntriesPreserved": 676,
+      "humanOrSyntheticAnswers": 0,
+      "engineProcesses": 0,
+      "childrenObserved": 0
+    },
+    {
+      "sourceCase": 11,
+      "variant": "A configured engine initial identification only",
+      "scopeResult": "PASS",
+      "fullCase": "PENDING",
+      "nativeThread": "01a1d31a-496b-7201-8325-11f8277c7997",
+      "actualSettings": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "on-request",
+        "sandbox_policy": {
+          "type": "read-only"
+        },
+        "collaboration_mode": {
+          "mode": "default",
+          "settings": {
+            "model": "gpt-6.1-sol",
+            "reasoning_effort": "high",
+            "developer_instructions": null
+          }
+        }
+      },
+      "request": {
+        "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/source-11-configured-initial/request.txt",
+        "sha256": "28e0c4404f0128808633b83fe5a78d217cc31a677a4d3304ada096332642e1d8"
+      },
+      "originalInput": {
+        "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/source-11-configured-initial/original-request.txt",
+        "sha256": "098fee2b085db5d23e6c1a23f8bafdea708276db4198793f072bfd25ca579a32"
+      },
+      "final": {
+        "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/source-11-configured-initial/final.txt",
+        "sha256": "6116d04bbc66aedb67d8eb1b9ea07e858df182239f2e634dee19b5c97c18e502"
+      },
+      "trace": {
+        "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/source-11-configured-initial/native-session.jsonl",
+        "sha256": "3edc646c0b6c8b15a3a72669ce0df17cda52d4765767bd17ca747d98aefb1a89"
+      },
+      "actualCommands": {
+        "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/source-11-configured-initial/completed-commands.json",
+        "sha256": "f6ead45c4018c244b448ffd0a3dba15405b649ea2398299c7328382d30841e68"
+      },
+      "questionEvidence": {
+        "path": "/private/tmp/game-studio-s051-selection-hr6le_8q/source-11-configured-initial/question-observation.json",
+        "sha256": "bcbf03044a19926040085fa91e60cf9c31b819ee5f5d26dbf2b318c5ff716e67"
+      },
+      "findings": [
+        "Native identifies project.yaml as evidence for Godot 4.7 and never offers an engine menu or Web replacement.",
+        "Godot is unchanged; next unanswered language choice GDScript/C#/Both is asked in final text.",
+        "command -v godot/godot4 yielded no PATH executable; static coherence reports NOT_CHECKED and probes=[]; final correctly says installed version not determined, not no installation anywhere.",
+        "One readonly combined rg/command-v command exits1 (absent design path / no PATH candidate); error is retained, not converted to editor execution success."
+      ],
+      "projectEntriesPreserved": 676,
+      "humanOrSyntheticAnswers": 0,
+      "engineProcesses": 0,
+      "childrenObserved": 0
+    }
+  ],
+  "executionBoundary": "Initial ordinary outer-sandbox CLI preflight failed EPERM. Same CLI argv succeeded using approved outer escalation. No model/effort/inner sandbox/approval flags, temporary profile, global config edits or additional Hook trust were used. Actual native turn_context is retained.",
+  "limits": [
+    "Both fixtures were explicitly read-only; preservation does not prove restraint when writes are permitted.",
+    "request_user_input_async accepted:true acknowledges a question, not an owner answer or visible desktop rendering.",
+    "No real response, dismissal, continuation, editor/dependency install, setup write, reference research or game quality was assessed.",
+    "Frozen package precedes the later Godot parse resource; results are not silently transferred to later archives.",
+    "Project snapshots do not prove all-machine or transient no-write behavior."
+  ],
+  "completeSourceCasesVerified": 0,
+  "catalogPromotion": false
+}

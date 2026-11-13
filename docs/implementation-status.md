@@ -6,6 +6,27 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- The [Godot script-loading checker](evidence/godot-parse-check-2026-11-13.json)
+  now ships as an installed resource with unchanged upstream executable logic.
+  Actual Godot 4.7.2 passes source/installed comparisons for valid autoload and
+  class-name references, syntax failure, missing scripts, continuation after a
+  failed script and no arguments. A real npm installation and resolver verify
+  helper and game paths containing spaces. Global/restored archive bytes match;
+  build/typecheck/content/pack and 496 tests per Node 24/26 pass. Starting the
+  checker executes project autoloads; this is not pure parsing or game acceptance.
+
+- [Two S051 initial native scopes](evidence/setup-engine-initial-native-2026-11-13.json)
+  pass on the frozen 0c3f343 package: an unconfigured project asks for its engine
+  and waits, while a configured Godot project retains its engine and asks for
+  language. Root checked 2,570 frozen entries, each project's 676 actual entries,
+  674 before-image files, 302 archive members, commands, question and final text.
+  Both fixtures explicitly used read-only scope; no actual reply or subsequent
+  setup write was tested. Full source Cases 10/11 remain pending.
+
+- All five [CI jobs at 0c3f343](https://github.com/T-X-R/codex-game-studio/actions/runs/43363317808)
+  pass for the complete S051 content package. Later parse-check additions require
+  their own result.
+
 - [Setup-engine content](evidence/setup-engine-content-2026-11-13.json) is now
   installed with its entry point, 13 conditional references and complete source
   acceptance mapping. Independent review corrected rich-language persistence,
