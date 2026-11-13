@@ -34,8 +34,11 @@ Telemetry and funnels
 - Default event convention is [category].[action].[detail], with source examples
   game.level.started, game.level.completed, ui.menu.settings_opened,
   economy.currency.spent and progression.milestone.reached. Preserve an established
-  project convention when it governs, explicitly explaining the difference. If
-  precedence is unresolved, ask; never silently mix dot and snake_case names.
+  project convention when it governs. Before proposing event names, state any
+  mismatch between that convention and the default above, then identify which
+  convention governs and why. Merely repeating the project's convention does not
+  disclose the mismatch. If precedence is unresolved, ask; never silently mix
+  dot and snake_case names.
 - For tutorial tracking cover step start, completion and abandonment on a known
   mid-step exit, with purposes, properties and exact triggers. Distinguish an
   observed exit from inferred drop-off; do not claim a client always emits an exit

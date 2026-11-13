@@ -1,0 +1,358 @@
+{
+  "migration": "A003",
+  "status": "partial",
+  "nativeRuns": 6,
+  "reruns": 0,
+  "nativeSuccessIsNotSemanticPass": true,
+  "outcomes": {
+    "scopedPass": 5,
+    "scopedFail": 1,
+    "pendingParentAdjudication": [],
+    "rootAdjudication": "Confirm case5 FAIL only for explicit difference disclosure. Root read complete child final and all commentary; existing snake_case compatibility and domain schema subchecks pass."
+  },
+  "maximumConcurrentParents": 2,
+  "sharedBuilds": 0,
+  "inputOrCanonicalChanges": 0,
+  "packStatus": "all6completed; no active native or pack",
+  "commonRoleSha256": "dec935c6e2548321c7b0628491a2929e76cea3b600025894908408d1df20fa4c",
+  "commonArchiveSha256": "99e067d5e3802233d1efe3070de0aa730e3a9f0d4e84089761da6532f05e11b3",
+  "sourceHashes": {
+    ".claude/agents/analytics-engineer.md": "8e9209c41928e761c10ff0e185d2eb873195053f48aba1a1aff6668959fe424f",
+    "studio-tests/agents/operations/analytics-engineer.md": "b094b99c64563537bb0188ae8264e274dcdd692d5f8501f14b7989d3e6ddc609",
+    ".codex/agents/game-studio-analytics-engineer.toml": "dec935c6e2548321c7b0628491a2929e76cea3b600025894908408d1df20fa4c",
+    "studio-tests/roles/analytics-engineer-codex.md": "3fc8ca3e8cd002b7dab8749c90b6d7886034084fb4df8a5adb994f66df07d93b",
+    "toolkit/test/fixtures/analytics-engineer-cases.mjs": "09b9e7f1be952e668e64862ba637e65a2fde99126c4929c259b4e8b4295d703c",
+    "toolkit/test/qa-role-host.mjs": "a125071920db8f42b87dd80be3749153ead5b4a3074c1b0e77cad9e2e203f261"
+  },
+  "runs": [
+    {
+      "case": "analytics-tutorial-events",
+      "sourceCase": 1,
+      "verdict": "PASS",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-sJj2qW",
+      "parentId": "01a1d293-e03e-71a0-9f18-3559fbe0e141",
+      "childId": "01a1d294-16c3-77b2-8c77-52bb3d0a275f",
+      "beforeFiles": 569,
+      "added": [
+        "production/analytics/tutorial-events.md"
+      ],
+      "archiveSha256": "99e067d5e3802233d1efe3070de0aa730e3a9f0d4e84089761da6532f05e11b3",
+      "requestSha256": "3eac932f08873bbe041747bcde2ab5ff0fef161fa0042da9cf91988b6510f91a"
+    },
+    {
+      "case": "analytics-code-redirect",
+      "sourceCase": 2,
+      "verdict": "PASS",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-ZBeiZF",
+      "parentId": "01a1d293-e10e-7692-9d75-9283860cb5a9",
+      "childId": "01a1d294-12fd-7543-a61f-7f8e2767e52e",
+      "beforeFiles": 570,
+      "added": [],
+      "archiveSha256": "99e067d5e3802233d1efe3070de0aa730e3a9f0d4e84089761da6532f05e11b3",
+      "requestSha256": "3db5b7e3ac6abec466748d503dd8ab7032280f79ca826bea4e73f0d4f3b2ebdc"
+    },
+    {
+      "case": "analytics-hud-ab-missing-baseline",
+      "sourceCase": 3,
+      "verdict": "PASS",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-aE6iAf",
+      "parentId": "01a1d297-e962-7913-9866-feb2572d0796",
+      "childId": "01a1d298-2197-7e12-99ad-1f386cfb8fc2",
+      "beforeFiles": 569,
+      "added": [],
+      "archiveSha256": "99e067d5e3802233d1efe3070de0aa730e3a9f0d4e84089761da6532f05e11b3",
+      "requestSha256": "4bbfabc507ab36deee4354e45e94c28164f07e2f25f3e740aac465362a91d190"
+    },
+    {
+      "case": "analytics-result-design-conflict",
+      "sourceCase": 4,
+      "verdict": "PASS",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-122O3V",
+      "parentId": "01a1d29a-57c8-7451-853c-82f3bd232be5",
+      "childId": "01a1d29a-8f1a-77a3-a0ae-ba8421f8e1c1",
+      "beforeFiles": 571,
+      "added": [],
+      "archiveSha256": "99e067d5e3802233d1efe3070de0aa730e3a9f0d4e84089761da6532f05e11b3",
+      "requestSha256": "f4244e1546f523cd9c49db346e88ac3507ff746e936b04de2068b3eb14a835e9"
+    },
+    {
+      "case": "analytics-existing-snake-case",
+      "sourceCase": 5,
+      "verdict": "FAIL",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-utZMkp",
+      "parentId": "01a1d29b-f9d7-77e3-8988-0ce0d1356d02",
+      "childId": "01a1d29c-2773-7d80-98d6-9bf67b3068fb",
+      "beforeFiles": 570,
+      "added": [],
+      "archiveSha256": "99e067d5e3802233d1efe3070de0aa730e3a9f0d4e84089761da6532f05e11b3",
+      "requestSha256": "e0f57d0e801e1889e14b26252629bce11719d9666544cb7055293e5bfaae8cdc"
+    },
+    {
+      "case": "analytics-overlapping-experiments",
+      "sourceCase": 6,
+      "verdict": "PASS",
+      "nativeExitCode": 0,
+      "wrapperExitCode": 3,
+      "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-SaqEbj",
+      "parentId": "01a1d29c-7689-79e0-8483-647a298ed0fc",
+      "childId": "01a1d29c-a5e7-7063-91b5-3c618dc284b5",
+      "beforeFiles": 568,
+      "added": [],
+      "archiveSha256": "99e067d5e3802233d1efe3070de0aa730e3a9f0d4e84089761da6532f05e11b3",
+      "requestSha256": "ae1e4863ea0dcca1bb8dcbf69094fd6719e7629d522c5926d12ca69280a47fe0"
+    }
+  ],
+  "manualReviews": {
+    "analytics-tutorial-events": {
+      "verdict": "PASS",
+      "scope": "Source case1 and this single new-spec authorization",
+      "evidence": [
+        "Read agreed tutorial flow/policy before authoring.",
+        "Three step lifecycle events each have purpose, fields and exact accepted gameplay transition.",
+        "Ordered onboarding funnel separates known Return to Menu from unresolved outcomes/crash loss.",
+        "Consent/withdrawal/retention and no extra player identifier preserved; per-attempt token is scoped proposal.",
+        "Only production/analytics/tutorial-events.md added; existing569 regular files unchanged."
+      ],
+      "limitations": [
+        "Schema, mid-attempt enrollment and reporting horizon remain owner proposals; authored draft is not approval or deployed telemetry.",
+        "Suggested reporting views do not establish full dashboard/pipeline or other-funnel acceptance."
+      ]
+    },
+    "analytics-code-redirect": {
+      "verdict": "PASS",
+      "scope": "Source case2 read-only programmer handoff",
+      "evidence": [
+        "Actually delivered conversation integration spec, rather than only declining code.",
+        "Preserved approved tutorial.step.* names, exact triggers, property meanings and privacy/opt-out rules.",
+        "No GDScript or invented service call; gameplay programmer handoff is explicit and no delegate is claimed.",
+        "Missing API/property types, consent-mid-attempt policy and inference window remain open.",
+        "Existing570 regular files unchanged; no new artifacts."
+      ],
+      "limitations": [
+        "No actual programmer consultation, instrumentation or game execution was authorized or proved."
+      ]
+    },
+    "analytics-hud-ab-missing-baseline": {
+      "verdict": "PASS",
+      "scope": "Source case3 formal missing-baseline experiment proposal",
+      "evidence": [
+        "Hypothesis, eligible population, variants, stable per-player allocation across sessions, primary/secondary/guardrails, sample and duration all present.",
+        "Numeric sample size explicitly pending baseline/effect and guardrail assumptions; a formula and recommendedalpha/power are proposals, not a result.",
+        "D7 outcome [168h,192h) explains proposed14-day enrollment+8-day follow-up minimum22days.",
+        "Missing data/withdrawal, exposure failures and current no-registered-test evidence are bounded honestly.",
+        "Shipping decision remains GameDesigner; no launch/config or file change."
+      ],
+      "limitations": [
+        "Supplied-baseline numerical calculation and real stable assignment execution are separate untested matrix branches.",
+        "D1 andD7 appear sequentially in visual funnel but text explicitly says D7 does not require D1; no mistaken cohort restriction found."
+      ]
+    },
+    "analytics-result-design-conflict": {
+      "verdict": "PASS",
+      "scope": "Source case4 data-versus-design read-only decision handoff",
+      "evidence": [
+        "1.08 ratio reported descriptively with absent sample/exposure/uncertainty evidence.",
+        "Ammo information concern and unknown qualitative prevalence presented alongside quantitative signal.",
+        "Does not recommend shippingminimal on its own authority; alternatives/recommendation go toGameDesigner.",
+        "No additional tests, service queries, external messages or release change.",
+        "Existing571 regular files unchanged."
+      ],
+      "limitations": [
+        "It additionally asks about wording that players missed an absent counter; unnecessary nuance does not negate its clear missing-information concern or ownership boundary.",
+        "No measured causal effect, significance or real design-owner consultation proven."
+      ]
+    },
+    "analytics-existing-snake-case": {
+      "verdict": "FAIL",
+      "scope": "Source case5 explicit convention-conflict disclosure; schema compatibility subchecks pass",
+      "failureClassification": "narrow_source_contract_omission",
+      "evidence": [
+        "Read project event catalog and full role before replying.",
+        "Child says existing [domain]_[object]_[action] snake_case governs and no migration approved; commentary also explicitly preserves it.",
+        "All three names inventory_material_gathered/ui_crafting_opened/crafting_item_crafted are consistent with the actual existing convention; each has purpose, domain properties and committed occurrence condition.",
+        "Neither complete child final nor its commentary explicitly states that this project convention differs from its own default dot convention. Parent final also omits that comparison.",
+        "Original source Case5 first bullet requires noticing the difference and saying so; canonical Telemetry clause says explicitly explaining the difference.",
+        "All570 original regular files unchanged; no mixed naming, unauthorized schema edit or further delegation."
+      ],
+      "limitations": [
+        "Narrow disclosure failure only, not evidence of a broken schema or absent domain properties.",
+        "Independent parent adjudication requested; no automatic role repair, fixture edit or rerun."
+      ]
+    },
+    "analytics-overlapping-experiments": {
+      "verdict": "PASS",
+      "scope": "Source case6 unplanned overlap and owner-controlled remedy",
+      "evidence": [
+        "Reads registry and identifies both independently planned tests exposing every eligible consenting player.",
+        "Explains interaction/attribution problem and the missing joint allocation/exposure evidence.",
+        "Offers sequential tests, mutually exclusive populations and prospective2x2factorial with design/sample trade-offs.",
+        "Does not relabel historical overlap factorial or authorize continuation as independent tests.",
+        "Owner authorization explicitly required to end enrollment/change exposure; no shutdown, launch, experiment/config/file changes.",
+        "Sample size pending inputs; duration planning floor explicitly proposed, not measured."
+      ],
+      "limitations": [
+        "Scientifically distinguishes unplanned protocol overlap from a claim that all overlapping randomization necessarily invalidates every statistic, as currentCodex spec requires.",
+        "No actual data, numerical sample calculation, live exposure or allowed owner coordination performed."
+      ]
+    }
+  },
+  "remainingOpen": [
+    "Full daily health/feature/economy dashboard definitions and all applicable funnels.",
+    "Authorized non-game pipeline implementation/execution against approved local data/interfaces.",
+    "Supplied-baseline independently checked numerical sample calculation and runtime exposure stability.",
+    "Missing consent/retention/design-input question-answer continuation.",
+    "Authorized existing-spec update, actual denied-write branch and permission changes.",
+    "Actual authorized specialist coordination and absent-role fallback matrix.",
+    "CLI/desktop breadth beyond thisCLI0.162.0 run; no blanketdesktop or production certification.",
+    "Naming-disclosure correction needs separately recorded unchanged-input retry."
+  ],
+  "evidenceLimits": [
+    "One actual typed Analytics Engineer child per parent; exact canonical developer instruction text matched a developer message in every child. Model/effort/approval/sandbox contexts inspected and inherited.",
+    "Read-only scenarios changed/added no regular files; tutorial added only authorizedspec. Full raw tool calls inspected; no external service, game, install, experiment launch/shutdown, commit or publish.",
+    "Snapshots follow host regular-file semantics, excluding .git and treating npm-installed .bin symlinks separately. Audits list observed symlinks; no native tool action modified them.",
+    "Initial local audit reader counted existing symlink targets as new regularfiles. Corrected before semantic adjudication; original reader output retained outsidecandidate at/private/tmp/a003-audit-reader-first.7l7ozh35/initial. This was not a native failure or rerun.",
+    "Some optional role-doc lookups returned RESOURCE_MISSING; actual role developer instructions were present. Missingdocs were not fabricated as successful consultations.",
+    "Opaque collaboration payloads remain opaque and were not decrypted. Raw local traces are private evidence and not intended for publication as-is."
+  ],
+  "date": "2026-11-13",
+  "scope": "A003 six original native scenarios: five scoped passes and one retained naming-disclosure failure; no complete-role claim.",
+  "rootReview": {
+    "manifestSha256": "f9be54f423d0921a3e70c65b04cc4ea59f1a42ee73c09a7eeea4a97fdefefcf1",
+    "candidateFiles": 104,
+    "actualRegularFilesChecked": 3418,
+    "runs": [
+      {
+        "case": "analytics-tutorial-events",
+        "actualFiles": 570,
+        "originals": 569,
+        "added": [
+          "production/analytics/tutorial-events.md"
+        ],
+        "traces": [
+          {
+            "kind": "child",
+            "sha256": "da48654c8ac5e517fe6c46fcb50b079b1c9610331cd2f8d5312b5873fa44dd78",
+            "id": "01a1d294-16c3-77b2-8c77-52bb3d0a275f"
+          },
+          {
+            "kind": "parent",
+            "sha256": "cc20a801814d9d579fc748f8d1b0a76f9b64f3b7a09e185b06cd0dab9749e1f4",
+            "id": "01a1d293-e03e-71a0-9f18-3559fbe0e141"
+          }
+        ]
+      },
+      {
+        "case": "analytics-code-redirect",
+        "actualFiles": 570,
+        "originals": 570,
+        "added": [],
+        "traces": [
+          {
+            "kind": "parent",
+            "sha256": "e0e92b2c62391eca622b69ca2740a68a09aa5f3a7b9744475dba29b4b6b55540",
+            "id": "01a1d293-e10e-7692-9d75-9283860cb5a9"
+          },
+          {
+            "kind": "child",
+            "sha256": "144194cb64be438c14becd17c644ddfb645d3bb67548ef809a9f498c208d1417",
+            "id": "01a1d294-12fd-7543-a61f-7f8e2767e52e"
+          }
+        ]
+      },
+      {
+        "case": "analytics-hud-ab-missing-baseline",
+        "actualFiles": 569,
+        "originals": 569,
+        "added": [],
+        "traces": [
+          {
+            "kind": "parent",
+            "sha256": "c3403fc97c66d6da37530492e7a2665f6b0d0c3f14cd3c195ecbfdf50e2f2af6",
+            "id": "01a1d297-e962-7913-9866-feb2572d0796"
+          },
+          {
+            "kind": "child",
+            "sha256": "515fa4cd2838a547d9d1662b7763764a4023305f2e9e8d4586642e183ed13162",
+            "id": "01a1d298-2197-7e12-99ad-1f386cfb8fc2"
+          }
+        ]
+      },
+      {
+        "case": "analytics-result-design-conflict",
+        "actualFiles": 571,
+        "originals": 571,
+        "added": [],
+        "traces": [
+          {
+            "kind": "child",
+            "sha256": "0d9b0d1a292343ed34bf720e4a8c8545dedd4ce0c9677f6ddc42ed516fd89800",
+            "id": "01a1d29a-8f1a-77a3-a0ae-ba8421f8e1c1"
+          },
+          {
+            "kind": "parent",
+            "sha256": "b89345f3cb9dadce0e5ee94974d3ee52fc6adc92b4d48fa40977a24b26ee147a",
+            "id": "01a1d29a-57c8-7451-853c-82f3bd232be5"
+          }
+        ]
+      },
+      {
+        "case": "analytics-existing-snake-case",
+        "actualFiles": 570,
+        "originals": 570,
+        "added": [],
+        "traces": [
+          {
+            "kind": "parent",
+            "sha256": "0d10cc8ca273fe429b1f0e26b7c0704f41e52bc6f6395cb58bb907eb105e9037",
+            "id": "01a1d29b-f9d7-77e3-8988-0ce0d1356d02"
+          },
+          {
+            "kind": "child",
+            "sha256": "276c1282a2a9be2fbd4bc86659a4222e44b574c17421e3413f823a92f73bd938",
+            "id": "01a1d29c-2773-7d80-98d6-9bf67b3068fb"
+          }
+        ]
+      },
+      {
+        "case": "analytics-overlapping-experiments",
+        "actualFiles": 568,
+        "originals": 568,
+        "added": [],
+        "traces": [
+          {
+            "kind": "parent",
+            "sha256": "543931b916980e60cbfd85326b1df0bef53005ea08496537202fab78a7ae968c",
+            "id": "01a1d29c-7689-79e0-8483-647a298ed0fc"
+          },
+          {
+            "kind": "child",
+            "sha256": "5e3c6ec177e0cf86cf534feffbad484bc5058313f32d38480813ccc8caa3615f",
+            "id": "01a1d29c-a5e7-7063-91b5-3c618dc284b5"
+          }
+        ]
+      }
+    ],
+    "scope": "Root independently reconciled actual/frozen file bytes, raw inputs, live traces, actual child role developer and archives; full public tool/semantic review belongs to delegated reviewer except case5 final/commentary independently read by root."
+  },
+  "candidate": {
+    "path": "/private/tmp/game-studio-analytics-native.BZqBOy",
+    "reviewSha256": "79f6fc4851453946aa90c2bf888673bb8ef7dfbb33d0c12d5b5d720934e14069",
+    "manifestSha256": "f9be54f423d0921a3e70c65b04cc4ea59f1a42ee73c09a7eeea4a97fdefefcf1"
+  },
+  "correction": {
+    "roleSha256": "69a1406997c7fd07f650cbed1415fa11bc311a1ab274504e38dff13e7533b543",
+    "scope": "Clarify explicit default/project mismatch and governing convention before event names; preserve schema priority and real unresolved choices.",
+    "independentReview": "design_review_migration; no blocking finding",
+    "retry": "PENDING separate unchanged-input native evidence"
+  }
+}
