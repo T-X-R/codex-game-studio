@@ -71,6 +71,27 @@ a deliberate abstract class must not be rewritten to make that predicate pass.
 This boundary needs actual abstract/concrete engine evidence in later acceptance;
 no claim of a newly tested helper bug or helper change is made by this slice.
 
+## Explicit upstream correction: threaded request ownership
+
+The retained source role lines148–151 forbids load_threaded_get on both FAILED
+and INVALID. The earlier Codex role and Case3 expectation preserved that rule;
+this is an upstream correction, not a newly introduced migration bug. Keep the
+original source and historical failure evidence unchanged.
+
+For actual Godot4.7.2, a no-product ResourceLoader baseline reached LOADED or
+FAILED and retained one RefCounted instance without collection; terminal get
+removed that residue, with the failed result still null and its load errors
+retained. The [fixed-version implementation](https://github.com/godotengine/godot/blob/4.7.2-stable/core/io/resource_loader.cpp#L700-L721)
+retains accepted-request ownership; [terminal collection](https://github.com/godotengine/godot/blob/4.7.2-stable/core/io/resource_loader.cpp#L932-L1001)
+consumes it. Therefore FAILED collection/discard is distinct from successful
+PackedScene instantiation. INVALID/rejected requests do not authorize blind get.
+This exception is version-backed; other pins require their actual API evidence.
+Cancellation also needs a surviving approved owner, not a continuation assumed
+to run on a freed node. No global service or particular cleanup algorithm is
+mandated. Functional no-spawn assertions alone do not prove request cleanup.
+The revised role still requires fresh native/output and actual-engine acceptance;
+this source correction does not turn any earlier artifact or failure into PASS.
+
 ## Original five scenarios — exact requests retained
 
 Expectations are maintainer-only. Native prompts contain original requests and
@@ -105,7 +126,12 @@ Provide actual project language/version, intended scene/parent and allowed write
 scope or leave a genuine missing choice for the caller. Expect fully typed
 GDScript with ResourceLoader.load_threaded_request and get_status, frame-yield
 between polls, is_instance_valid(self) after await before spawn, PackedScene
-handling and explicit failure/invalid branches without get on failure. No yield
+handling and explicit failure/invalid branches. Apply the version-backed ownership
+correction above: accepted owned terminal FAILED is collected/discarded once,
+not instantiated; INVALID/rejected submissions never trigger blind retrieval.
+On cancellation, observe no late spawn and cleanup by a surviving approved owner
+when the requester is actually freed, without an in-progress getter or blocking
+_exit_tree. Preserve load errors separately from leaked-request residue. No yield
 or busy/blocking loop. Source calls for testable code suitable for tests/unit;
 actual testing requires the project runner, fixture scenes and authorization.
 Missing runner never converts planned code into executed tests.
@@ -145,7 +171,7 @@ rather than treating abstractness as syntax failure or lowering the requested de
 | --- | --- |
 | Authorization | Already settled guided write and verification without per-file reapproval; consequential unresolved design blocks dependent edits; collaborative review; read-only originals retained |
 | Review/structure | All variable scopes, inferred versus explicit types, enum/constant/callback names, all12 sections and existing behavior preserved; unsafe_* settings proposed versus authorized change |
-| Async | Request-start error, in-progress yielding, success, failed/invalid resource, owner lifetime/cancellation, no more than3 chained awaits; actual running project needed for runtime result |
+| Async | Request-start error, in-progress yielding, success, owned terminal failure collection, INVALID/already-consumed handling, exact-once ownership, destination/requester deletion with surviving cleanup and no late spawn; repeated/shared requests only where supported by the approved interface; no more than3 chained awaits. Actual running project and separate leak/error observations required |
 | Patterns | Simple/complex state transitions, command/observer when specified, shared/per-instance resources, typed singleton name collision, component/hierarchy boundaries |
 | Performance | Actual profile before native recommendation, idle/process routing, hot lookup/cache/pooling, source threshold versus agreed frame budget; no synthetic measurement pass |
 | Scene integrity | Real editor route; permitted hand edit preserves format/IDs, copied unique_id removal, UID absence/new import, companion move, encoded cells refused; actual import+scene load evidence |

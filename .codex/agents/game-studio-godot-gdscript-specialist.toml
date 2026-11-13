@@ -91,13 +91,23 @@ Signals, asynchronous work and exports
   and lifetime; check is_instance_valid(self) after an await before using the node
   or spawning into its scene. That check is not evidence all cancellation paths
   were tested. Do not chain more than three awaits; extract separate functions.
-- Load large scenes without blocking the frame: start with
-  ResourceLoader.load_threaded_request, inspect its result, poll
-  load_threaded_get_status while yielding with await get_tree().process_frame,
-  and retrieve the PackedScene only after completion. THREAD_LOAD_FAILED and
-  THREAD_LOAD_INVALID_RESOURCE report failure and must not call load_threaded_get.
-  Use explicit types throughout and retain the failure path rather than spawning
-  a null scene or assuming that submitting a request means it loaded.
+- Load large scenes without blocking the frame: inspect the result of
+  ResourceLoader.load_threaded_request and track each accepted request you own.
+  Poll load_threaded_get_status with a frame yield while loading; collect each
+  owned result exactly once using the pinned engine's verified lifecycle.
+  In verified Godot 4.7.2, an owned, accepted request reaching THREAD_LOAD_FAILED
+  still needs load_threaded_get to collect/discard its terminal result; report
+  the failure without instantiating it. THREAD_LOAD_INVALID_RESOURCE or a non-OK
+  request result is not proof of an owned result: do not blindly call the getter
+  or consume another caller's request. Validate a successfully loaded PackedScene
+  before spawning; use explicit types and retain failures rather than treating
+  request submission as success. Never use an in-progress getter as cleanup.
+- Cancellation suppresses spawning but does not end ownership of an accepted
+  request. Have a surviving, already-authorized owner finish terminal collection,
+  independently of a freed requesting node; a post-await self check alone cannot
+  provide this. Reuse the project's approved lifetime/interface. If it is missing,
+  resolve that consequential choice through the caller; do not invent a global
+  autoload, block _exit_tree, or repeatedly ask for already-authorized writes.
 - Use typed @export for designer tunables, @export_range constraints where useful,
   @export_group and @export_subgroup for related values, @export_category for major
   sections of complex nodes. Validate exports in _ready or with range constraints.

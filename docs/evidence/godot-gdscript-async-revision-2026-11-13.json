@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-13",
+  "status": "implemented; fresh native/runtime acceptance pending",
+  "scope": "A015 async request ownership rule and acceptance contract correction",
+  "files": {
+    ".codex/agents/game-studio-godot-gdscript-specialist.toml": "7c8af70b869a362b01cb8cb0a756ed7395b4cbe3d740a1a3917dc7602146120b",
+    "studio-tests/roles/godot-gdscript-specialist-codex.md": "ad99731687881b24d1ab3c96299501154b3d343c20e533744672170dfe2596dd"
+  },
+  "candidate": {
+    "path": "/private/tmp/game-studio-a015-async-revision-c923p126/manifest.json",
+    "sha256": "3080a6aec9d6277021bad24cbb9a4e592e9ba86f17427892a43f48add7a7dcda"
+  },
+  "review": {
+    "path": "/private/tmp/game-studio-a015-async-root-review.md",
+    "sha256": "3492f03a1e1d5e64f60c79cefe3d5fcc2c1adfb50042381ad3c0829272b15e4f"
+  },
+  "independentAudit": {
+    "path": "/private/tmp/game-studio-a015-async-audit-fkyu3d04/review.md",
+    "sha256": "7d90e0b23cce0e3780497f88a8c43efc24c6094a846e355775124c30103564dc"
+  },
+  "reason": "Upstream forbids FAILED/INVALID get; actual 4.7.2 owned accepted terminal FAILED requires result collection to release the request. INVALID/rejected request does not establish ownership. Cancellation requires a surviving authorized owner.",
+  "officialSource": "https://github.com/godotengine/godot/blob/4.7.2-stable/core/io/resource_loader.cpp#L932-L1001",
+  "runtimeEvidence": "godot-gdscript-engine-2026-11-13.json",
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS",
+    "node24ContentTests": 38,
+    "node26ContentTests": 38,
+    "pack": "PASS",
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-a015-async-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-async-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-async-content.log",
+        "sha256": "ec5882ff3f418037a76fec844fceef64801bfc4547cbc4fc97508b672d3bb061"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-async-content24.log",
+        "sha256": "d723f18ae6d91d9c503f474106d6cb5079f7537686fd13fad7b0798f47f880c0"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-async-content26.log",
+        "sha256": "461c381d84804e216de0a9a0ed85320ac5130ec0c3be548871625a0b092440ce"
+      },
+      {
+        "path": "/private/tmp/game-studio-a015-async-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      }
+    ]
+  },
+  "pending": [
+    "Same-input native generation with corrected role",
+    "Actual nonblocking failure and cancellation cleanup on newly generated artifact",
+    "Other engine versions and unobserved request branches"
+  ],
+  "preservation": "No original source, native artifact, failing run or previous evidence was changed."
+}

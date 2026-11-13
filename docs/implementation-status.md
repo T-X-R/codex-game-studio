@@ -6,6 +6,25 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- [Shader native fixtures and explicit existing-file scope](evidence/godot-shader-fixtures-2026-11-13.json)
+  are integrated: six scenarios retain the five original requests, with separate
+  genuine compute intent. Both Node versions pass 532 full tests, eight focused
+  harness groups, build/typecheck/content and actual package checks. An initial
+  root build/test overlap failed on transient missing resources; unchanged stable
+  runs pass and both failures remain recorded. Native and renderer checks remain open.
+
+- [Actual GDScript engine tests](evidence/godot-gdscript-engine-2026-11-13.json)
+  pass selected typed-loop behavior (old and new artifacts tested separately) and
+  original abstract-class compilation/calls on Godot4.6.1. Async functional checks
+  pass, but five request residues remain a cleanup failure. An independently
+  reviewed [upstream rule correction](evidence/godot-gdscript-async-revision-2026-11-13.json)
+  is implemented and passes static/content/package checks; fresh native generation
+  and engine cleanup acceptance are pending. No previous artifact is repaired.
+
+- All seven [CI jobs at a3a7310](https://github.com/T-X-R/codex-game-studio/actions/runs/43373836223)
+  pass. This covers the preceding role integrations and rationale correction,
+  not the later Shader fixture and async ownership changes above.
+
 - [Godot shader](evidence/godot-shader-specialist-content-2026-11-13.json) and
   [Godot C#](evidence/godot-csharp-specialist-content-2026-11-13.json) roles now
   preserve their complete source authoring responsibilities and original five
