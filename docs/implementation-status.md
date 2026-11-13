@@ -6,6 +6,12 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Markdown section writes now have [integrated evidence](evidence/md-section-writers-2026-11-13.json):
+  replace, insert-before and set-field preserve the source transformations, with
+  explicit dry-run and project-scoped atomic writes. Build/typecheck/content/pack
+  and 362 tests per Node 24/26 pass, including 54 real Bash writer comparisons.
+  Real installed-resource writes pass; CI and native consuming workflows remain
+  separate. The implementation documents hardlink, permission and metadata limits.
 - Accessibility Specialist now has [reviewed native content and installed-byte evidence](evidence/accessibility-specialist-content-2026-11-13.json).
   The role distinguishes supplied design values from measured results, studio
   baselines from WCAG conditions, and issue severity from gate status. Build,
