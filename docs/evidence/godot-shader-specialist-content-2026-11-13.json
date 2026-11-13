@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A016 complete source-content migration, independent root review and actual global/restored archive checks; native and GPU behavior unassessed.",
+  "files": {
+    ".codex/agents/game-studio-godot-shader-specialist.toml": "15d243eba47259a72c636be17e5ba09fbf8405b9f371aa417a59af1d552dc347",
+    "studio-tests/roles/godot-shader-specialist-codex.md": "066eab8493383c61581ca433e263ac9269f52b6cbcb1b11ea7fbb8268a0570ee",
+    "studio-tests/catalog.yaml": "baaebcb24eb87456ece79ca4ab8c7fc931a542b7711cc9c55c6a186d1cd00d88",
+    "toolkit/test/packed-smoke.mjs": "91dac80185c2c58739796758385e4f09a020998c93a4abe80be7c3cb6fb5a015"
+  },
+  "source": {
+    ".claude/agents/godot-shader-specialist.md": "a1dfbad09f249122833d5357b070dbeddc101d8b468cc970b4cf112ffae55917",
+    "studio-tests/agents/engine/godot/godot-shader-specialist.md": "94ef53fb3daafc973ac10930401e60abb186198253413db4c262a9b2a9688df4",
+    ".claude/rules/scene-files.md": "c184c693e5f31a21faa66512d305881f446b62209aaabfaf6b78749907ea480c"
+  },
+  "review": {
+    "candidateManifest": {
+      "path": "/private/tmp/game-studio-godot-shader-specialist-hq3ev5u3/manifest.json",
+      "sha256": "05f0eb5c9f43bf5a709071cb0df89c2a223c879acdb65aeed6689882d13f5680"
+    },
+    "sourceMapping": {
+      "path": "/private/tmp/game-studio-godot-shader-specialist-hq3ev5u3/source-mapping.md",
+      "sha256": "e8b4c50436063532f83c793fe5dfd925019a0ce332d0fad37816f8ad7d4e68df"
+    },
+    "independentRoot": {
+      "path": "/private/tmp/game-studio-a016-root-review-nb91iqgz/review.md",
+      "sha256": "c450c5b7498774da10a58660d2167c2cc737ae03fb72594fbe5e1e7f93c2fde3"
+    },
+    "integrationDelta": "TOML unchanged. Specification labels now partial; nonexistent companion mapping reference points to this evidence instead."
+  },
+  "sourceCorrections": [
+    {
+      "claim": "Shader includes already exist in 4.0; do not require 4.3 solely for shared includes.",
+      "source": "https://docs.godotengine.org/en/4.0/tutorials/shaders/shader_reference/shader_preprocessor.html"
+    },
+    {
+      "claim": "Forward+ light capacity has configurable limits; actual renderer/target capabilities constrain effects.",
+      "source": "https://docs.godotengine.org/en/4.6/tutorials/3d/lights_and_shadows.html"
+    },
+    {
+      "claim": "Compute is a RenderingDevice/GLSL path distinct from material shaders; Compatibility is not supported.",
+      "source": "https://docs.godotengine.org/en/4.6/tutorials/shaders/compute_shaders.html"
+    },
+    {
+      "claim": "Compositor is a Resource assigned to WorldEnvironment/Camera3D, using supported Mobile/Forward+ rendering-thread execution.",
+      "source": "https://docs.godotengine.org/en/4.6/tutorials/rendering/compositor.html"
+    },
+    {
+      "claim": "Canvas NORMAL describes normal-map information; it does not alone define silhouette detection. This is an inference about the source outline recommendation.",
+      "source": "https://docs.godotengine.org/en/4.6/tutorials/shaders/shader_reference/canvas_item_shader.html"
+    },
+    {
+      "claim": "No compute support is not proof that all GPU particle features are absent; inspect feature-specific restrictions.",
+      "source": "https://docs.godotengine.org/en/4.6/classes/class_gpuparticles3d.html"
+    },
+    {
+      "claim": "3D depth and normal buffers cannot be assumed available to a 2D overlay.",
+      "source": "https://docs.godotengine.org/en/4.6/tutorials/shaders/screen-reading_shaders.html"
+    },
+    {
+      "claim": "Texture loop cost is workload-dependent, not universally exponential; precision/branch/blur speedups require measurement. Source budget maxima do not all fit the 120fps total.",
+      "basis": "Source arithmetic and performance reasoning; no GPU benchmark claim."
+    }
+  ],
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS; behaviorVerified false",
+    "node24Content": {
+      "tests": 38,
+      "pass": 38,
+      "fail": 0,
+      "skip": 0
+    },
+    "node26Content": {
+      "tests": 38,
+      "pass": 38,
+      "fail": 0,
+      "skip": 0
+    },
+    "package": "PASS: exact installed/restored role bytes, owned detach",
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-a016-build.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-content.log",
+        "sha256": "d98a24d18783118d2056d5c90ba82b3d67eb108bfc51dbfd9fe1a0799dc58b41"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-content24.log",
+        "sha256": "85d6f82644df3d160f0200df907b32c95e71ca5f8efefcffee2c76f36ee12eff"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-content26.log",
+        "sha256": "a2e16cf9b8b10c1ee74d6178e868e8d83e5a564c3f6236a052be2270a4edb6c7"
+      },
+      {
+        "path": "/private/tmp/game-studio-a016-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      }
+    ]
+  },
+  "catalogCounts": {
+    "skills": {
+      "partial": 18,
+      "pending": 57,
+      "verified": 0
+    },
+    "roles": {
+      "partial": 19,
+      "pending": 30,
+      "verified": 0
+    },
+    "aliases": {
+      "pending": 3
+    }
+  },
+  "limits": [
+    "All five original native cases and broader role coverage remain pending.",
+    "No shader compiler, selected-renderer visual test, GPU timing, scene import/open or desktop role dispatch is established.",
+    "A GDScript load/instantiability helper cannot certify shaders; headless dummy rendering and screenshots alone do not prove visual/performance acceptance.",
+    "Source .claude content and history remain unchanged; corrections are explicit Codex migration decisions."
+  ]
+}

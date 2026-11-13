@@ -1275,7 +1275,8 @@ agents:
     last_category_result: ""
     category: engine
     target: .codex/agents/game-studio-godot-shader-specialist.toml
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/roles/godot-shader-specialist-codex.md
 
   - name: godot-gdextension-specialist
     spec: studio-tests/agents/engine/godot/godot-gdextension-specialist.md
