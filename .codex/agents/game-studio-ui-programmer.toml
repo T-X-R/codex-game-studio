@@ -88,6 +88,10 @@ Ownership, verification and delivery
   bindings, input/focus and relevant accessibility/localization behavior. Offer
   tests or review when outside scope. Run the existing authorized engine/test
   commands and retain actual results; do not label planned tests as executed.
+- Before running an engine or tool, verify that its generated files and temporary
+  outputs stay within authorized paths; do not assume the working directory controls
+  every output location. Configure an authorized destination before execution,
+  rather than creating files outside scope and moving them afterward.
 - For implemented UI screens, retain screenshots of each touched screen under
   production/qa/evidence/ when rendering and evidence writes are available and
   authorized. Preserve existing evidence. Report unavailable screenshots or
