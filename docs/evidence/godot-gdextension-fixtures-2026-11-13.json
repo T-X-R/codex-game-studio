@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A014 original five native definitions and registration; native implementation acceptance pending.",
+  "files": {
+    "toolkit/test/fixtures/godot-gdextension-specialist-cases.mjs": "bc69058d893d4c788d2cc6245e7416d39d1339a587aa7b0276682ffe665cd805",
+    "toolkit/test/qa-role-host.mjs": "34d318121e9923e87b22d9eb6045132173b2dac6f50b612dc2d6f99c33402adc"
+  },
+  "candidate": {
+    "path": "/private/tmp/game-studio-gdextension-fixtures-0czuzrd1/manifest.json",
+    "sha256": "3c0d5001648c6262083c36fdbebbac2effd11c8f314922c6abe4c9ffd78d9295"
+  },
+  "sourceMapping": {
+    "path": "/private/tmp/game-studio-gdextension-fixtures-0czuzrd1/PLAN.md",
+    "sha256": "f3cdfd98aa0f67728ef7867aab74711e34ef4e51db79d71ae9a7930ce1b1d6e8"
+  },
+  "review": {
+    "independent": {
+      "path": "/private/tmp/game-studio-a014-fixture-review-1igk2zgf/review.md",
+      "sha256": "32b7079a3f2938d38b0c66f1c91076c0c0ec74307876b2a03a8167132f9a48ed"
+    },
+    "root": {
+      "path": "/private/tmp/game-studio-a014-fixture-root-review.md",
+      "sha256": "8c75ce8e3709aca1c74aa958d4932e130d77f62ec907aeed86ca2cdd80ccb9f1"
+    }
+  },
+  "validation": {
+    "originalRequestsAndExactScope": "PASS; five originals, four required new files, two optional exact build edits, library protected",
+    "node24HostHarness": 8,
+    "node26HostHarness": 8,
+    "fail": 0,
+    "skip": 0,
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-a014-fixture-host24.log",
+        "sha256": "ffe8bee30832d2a30265c8e3ccdc83e316286643028ddae98fba950eeb7fea41"
+      },
+      {
+        "path": "/private/tmp/game-studio-a014-fixture-host26.log",
+        "sha256": "15ed3d3752d4ac5c65d3c078db546e2585564333e92e51418b18b022ec3b17cd"
+      }
+    ]
+  },
+  "case1": "Real standard C++17 planar-body source with full methods, without prewritten wrapper/registration. No contact solver, successful compilation or measured speedup claimed.",
+  "historicalInputs": "Frozen reference JSON unchanged; newer canonical Quaternion correction does not rewrite original inputs.",
+  "pending": [
+    "Five actual native cases",
+    "C++ and Rust compiler/linker, extension registration/load and calls",
+    "Lifecycle/reload and agreed target-platform matrix",
+    "Desktop and complete source coverage"
+  ],
+  "limits": "No native/toolchain/engine execution, model/effort/policy override or new Hook trust."
+}

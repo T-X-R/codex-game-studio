@@ -25,9 +25,10 @@ import { godotSpecialistScenarios } from './fixtures/godot-specialist-cases.mjs'
 import { godotGDScriptScenarios } from './fixtures/godot-gdscript-specialist-cases.mjs';
 import { godotShaderScenarios } from './fixtures/godot-shader-specialist-cases.mjs';
 import { godotCSharpScenarios } from './fixtures/godot-csharp-specialist-cases.mjs';
+import { godotGDExtensionScenarios } from './fixtures/godot-gdextension-specialist-cases.mjs';
 
 const scenarioName = process.argv[2] ?? 'audit';
-const cases = { ...scenarios, ...leadScenarios, ...designerScenarios, ...programmerScenarios, ...gameplayScenarios, ...handoffScenarios, ...directorScenarios, ...uxDesignerScenarios, ...accessibilityScenarios, ...analyticsScenarios, ...audioDirectorScenarios, ...economyDesignerScenarios, ...godotSpecialistScenarios, ...godotGDScriptScenarios, ...godotShaderScenarios, ...godotCSharpScenarios };
+const cases = { ...scenarios, ...leadScenarios, ...designerScenarios, ...programmerScenarios, ...gameplayScenarios, ...handoffScenarios, ...directorScenarios, ...uxDesignerScenarios, ...accessibilityScenarios, ...analyticsScenarios, ...audioDirectorScenarios, ...economyDesignerScenarios, ...godotSpecialistScenarios, ...godotGDScriptScenarios, ...godotShaderScenarios, ...godotCSharpScenarios, ...godotGDExtensionScenarios };
 if (process.argv.length > 3 || (scenarioName !== 'godot' && !Object.hasOwn(cases, scenarioName))) throw new Error(`Choose ${[...Object.keys(cases), 'godot'].join(', ')}`);
 const scenario = scenarioName === 'godot' ? await godotScenario() : cases[scenarioName];
 const roleName = scenario.role ?? 'game-studio-qa-tester';
