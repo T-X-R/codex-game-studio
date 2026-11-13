@@ -15,6 +15,14 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
+2026-11-13: S051 foundations now include typed platform/performance/testing setup
+and rich-mirror preservation, four source-preserving Web starters, and direct
+page screenshot/console capture. See the three current evidence records linked
+from implementation-status.md. Node 24/26 each pass 447 tests; actual global and
+restored archives create all four starters. Real starter builds and selected
+unit/browser cases pass. Full S051, reference copy/refresh/upgrade, native host
+workflows and all parent checkpoints remain open; no migration row is promoted.
+
 The development source implements deterministic install and Web slices while C0 host verification remains open. This sequencing adjustment does not waive host acceptance. Seven project Skill entry points and nine roles (Game Designer, Lead Programmer, Gameplay Programmer, two QA roles, Creative Director, Art Director, Technical Director and Producer) exist, but their full behavioral migration rows remain open.
 
 2026-11-12: configuration reads now cover named-system workflow overrides and

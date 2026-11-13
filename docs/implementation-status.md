@@ -6,6 +6,21 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- The [engine settings/mirror](evidence/engine-settings-mirror-2026-11-13.json),
+  [four Web starters](evidence/web-starters-2026-11-13.json) and
+  [plain page capture](evidence/page-shot-2026-11-13.json) foundations are integrated.
+  Node 24/26 each pass 447 tests, with build/typecheck/content and actual installed
+  package checks passing. Initial localhost sandbox failures are retained. Global
+  and restored runtimes each create all four starters; their isolated real builds,
+  3 unit tests and 2 browser tests per starter pass. Independent review caught and
+  corrected archive omission of the ignore template, BOM duplication, three rich
+  mirror defects, corrupt-PNG selection and Windows executable discovery. The
+  Pixi missing-square observation was a review error: original pixels and root
+  viewing contradict it; full text/visual quality remains unassessed. Actual Chrome
+  also passes nine screenshot/replay checks. These are S051 foundations, not its
+  complete Skill, reference maintenance, native host or human play acceptance.
+  Exact-head CI for this integrated change remains separate.
+
 - [Portable Web detection](evidence/web-detection-2026-11-13.json) now ships as an installed resource: package managers/scripts, actual root names, language, bundlers, runners, libraries and lexical hook observations. Declared ranges never become fake pins; read limits and skipped links remain visible. Thirty focused tests per Node version, 46 unchanged source comparisons, 405 full tests per Node 24/26 and actual global/restored package checks pass. Full S051 workflow remains pending.
 - [UI output-scope retry](evidence/ui-programmer-output-retry-2026-11-13.json) remains FAIL: the prior root API export did not recur, but a relative-log auxiliary-directory attempt failed and independent empty-slot activation disagreed with native checks. No successful unauthorized write is established. Root checked 696 artifacts/668 actual files and viewed cold focus/empty-slot images. A single fixed diagnostic group could not reproduce the input discrepancy; no root cause or fix is claimed. Large-font verification remains unassessed.
 - [Economy Gold retry](evidence/economy-designer-retry-2026-11-13.json) now saves the complete skeleton first and sections 1–6 separately, but still batches closing sections 7–8. Arithmetic/domain/permission checks pass while incremental-authoring acceptance remains FAIL. Root checked 40 frozen artifacts and 573 preserved originals; no repeated retry or added instruction follows this result.

@@ -16,6 +16,7 @@ function command(entry, ...args) { return JSON.parse(execute(entry, [...args, '-
 try {
   const [packed] = JSON.parse(execute(npm, ['pack', packageRoot, '--pack-destination', temp, '--ignore-scripts', '--json']));
   assert.ok(packed.files.some(file => file.path === 'resources/studio/onboarding/game-studio/SKILL.md'));
+  assert.ok(packed.files.some(file => file.path === 'resources/studio/templates/web-setup/.gitignore.tmpl'));
   assert.ok(packed.files.every(file => !file.path.startsWith('src/') && !file.path.includes('.claude')));
   const archive = join(temp, packed.filename);
   const prefix = join(temp, 'cli');
@@ -231,6 +232,45 @@ try {
   assert.ok(restoredWebDetector.startsWith(join(project, '.game-studio/node_modules')));
   assert.deepEqual(JSON.parse(execute(restoredWebDetector, ['--project', existingWeb])), webFacts);
   assert.match(execute(restoredWebDetector, ['--project', existingWeb, '--text']), /engine_version\t-\tpackage.json \^5\.99\.0/);
+  const globalPageShot = command(globalCli, 'resource', 'path', 'studio/scripts/page-shot.mjs').data.path;
+  const restoredPageShot = JSON.parse(execute(launcher, ['resource', 'path', 'studio/scripts/page-shot.mjs', '--json'], project)).data.path;
+  assert.ok(restoredPageShot.startsWith(join(project, '.game-studio/node_modules')));
+  await writeFile(join(existingWeb, 'index.html'), '<h1>Existing page</h1>');
+  for (const helper of [globalPageShot, restoredPageShot]) {
+    assert.deepEqual(await readFile(helper), await readFile(join(packageRoot, '../studio/scripts/page-shot.mjs')));
+    assert.equal(execute(helper, ['--which', '--browser', process.execPath]).trim(), process.execPath);
+    const planned = JSON.parse(execute(helper, ['--project', existingWeb, 'index.html', 'shot', '--browser', process.execPath, '--dry-run']));
+    assert.equal(planned.status, 'planned'); assert.equal(planned.replayAssessed, false);
+    assert.equal(planned.qualityAssessed, false); assert.deepEqual(planned.attempts, []);
+    assert.equal(new URL(planned.url).searchParams.has('manual'), false);
+    assert.equal(await readFile(join(existingWeb, 'index.html'), 'utf8'), '<h1>Existing page</h1>');
+    await assert.rejects(readFile(join(existingWeb, 'shot/report.json')), { code: 'ENOENT' });
+  }
+  for (const [runtime, entry] of [['global', globalCli], ['restored', launcher]]) {
+    for (const starter of ['none', 'three', 'phaser', 'pixi']) {
+      const freshWeb = join(temp, `${runtime} ${starter} starter`);
+      await mkdir(freshWeb);
+      const configuration = 'engine:\n  name: Web\n  version: "8.3.4"\n  language: TypeScript\n';
+      await writeFile(join(freshWeb, 'project.yaml'), configuration);
+      const args = ['engine', 'scaffold', '--project', freshWeb, '--starter', starter, '--title', 'Packed <game>'];
+      const preview = command(entry, ...args, '--dry-run');
+      assert.equal(preview.data.outcome.state, 'planned');
+      assert.deepEqual(await readdir(freshWeb), ['project.yaml']);
+      const created = command(entry, ...args);
+      assert.equal(created.data.outcome.state, 'created');
+      assert.equal(created.data.verification.state, 'not_assessed');
+      assert.equal(created.data.changes.filter(c => c.action === 'create').length, 14);
+      assert.deepEqual(await readFile(join(freshWeb, '.gitignore')), await readFile(join(packageRoot, '../studio/templates/web-setup/.gitignore.tmpl')));
+      assert.match(await readFile(join(freshWeb, 'index.html'), 'utf8'), /<title>Packed &lt;game&gt;<\/title>/);
+      const source = starter === 'none' ? 'web-growth' : `web-starters/${starter}`;
+      for (const file of ['package.json', 'package-lock.json']) {
+        assert.deepEqual(await readFile(join(freshWeb, file)), await readFile(join(packageRoot, '../studio/templates', source, file)));
+      }
+      assert.equal(await readFile(join(freshWeb, 'project.yaml'), 'utf8'), configuration);
+      assert.ok(!(await readdir(freshWeb)).includes('node_modules'));
+      assert.throws(() => command(entry, ...args), error => error.status === 3);
+    }
+  }
   assert.ok(sectionHelper.startsWith(join(project, '.game-studio/node_modules')));
   assert.deepEqual(await readFile(sectionHelper), await readFile(join(packageRoot, '../studio/scripts/md-section.mjs')));
   const sectionText = '# Root\r\n## Rules\r\nfirst\r\n### Detail\r\nsecond\r\n## End\r\nlast';
@@ -365,7 +405,9 @@ try {
   const setupInput = 'engine-setup.json';
   await writeFile(join(project, setupInput), JSON.stringify({ engine: {
     name: 'Web', version: '7.3.1', language: 'TypeScript', code_root: 'src', test_root: 'tests',
-  }, naming: { variables: 'camelCase' } }));
+  }, naming: { variables: 'camelCase' }, platform: { targets: ['PC'], primary_input: 'Gamepad', gamepad_support: 'Full', touch_support: 'None' },
+  performance: { target_framerate: 60, frame_budget_ms: 16.6, draw_call_limit: 1200, memory_ceiling_mb: 512 },
+  testing: { framework: 'Vitest' }, qa: { coverage_minimum: null } }));
   const beforeSetup = await readFile(join(project, 'project.yaml'), 'utf8');
   const setupPreview = command(launcher, 'engine', 'setup', '--input', setupInput, '--dry-run', '--project', project);
   assert.deepEqual(setupPreview.data.changes.map(change => change.path), ['project.yaml', 'docs/technical-preferences.md']);
@@ -374,6 +416,9 @@ try {
   assert.equal(setup.status, 'ok'); assert.equal(setup.data.execution.state, 'not_assessed');
   assert.equal(command(launcher, 'config', 'get', 'engine.version', '--project', project).data.settings['engine.version'].value, '7.3.1');
   assert.match(await readFile(join(project, 'docs/technical-preferences.md'), 'utf8'), /\*\*Engine\*\*: Web 7\.3\.1/);
+  assert.equal(command(launcher, 'config', 'get', 'performance.frame_budget_ms', '--project', project).data.settings['performance.frame_budget_ms'].value, 16.6);
+  const technicalMirror = await readFile(join(project, 'docs/technical-preferences.md'), 'utf8');
+  for (const line of ['**Target Platforms**: PC', '**Primary Input**: Gamepad', '**Frame Budget**: 16.6', '**Framework**: Vitest', '**Minimum Coverage**: [TO BE CONFIGURED]']) assert.ok(technicalMirror.includes(line));
   assert.equal(command(launcher, 'engine', 'setup', '--input', setupInput, '--project', project).data.changes.length, 0);
   const unversionedInput = 'unversioned-web.json';
   await writeFile(join(project, unversionedInput), JSON.stringify({ engine: {
