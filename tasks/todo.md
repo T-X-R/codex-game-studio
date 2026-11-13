@@ -15,6 +15,13 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
+2026-11-13: S051 full content and source-mapped acceptance specification are
+installed and independently reviewed. Content/Skill checks and global/restored
+archive byte checks pass; all 11 original native cases plus broader branches
+remain pending. Catalog now has 17 partial Skills and 58 pending, still zero
+fully verified. Reference/coherence foundation CI passes all five jobs at
+01b4afd; this later content change needs its own CI.
+
 2026-11-13: S051 reference/coherence foundations are integrated: all 53 historical
 reference files, project-owned initial copy and stable AGENTS pointer, plus
 source-derived consistency observations. Node 24/26 each pass 496 tests and clean

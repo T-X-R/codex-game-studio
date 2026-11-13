@@ -6,6 +6,20 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- [Setup-engine content](evidence/setup-engine-content-2026-11-13.json) is now
+  installed with its entry point, 13 conditional references and complete source
+  acceptance mapping. Independent review corrected rich-language persistence,
+  browser selection order and non-Web handoff. Actual content lint caught two
+  pseudo-command examples; valid separate invocations now pass. Build, content,
+  Skill validation, 15 content tests per Node 24/26 and exact global/restored
+  package file checks pass. All 11 original native cases and broader branches
+  remain pending. Catalog: 17 partial Skills, 58 pending; 16 partial roles,
+  33 pending; none fully verified.
+
+- All five [CI jobs at 01b4afd](https://github.com/T-X-R/codex-game-studio/actions/runs/43362623876)
+  pass for the reference/coherence foundations below. This precedes the S051
+  content integration; the later head still requires its own result.
+
 - [Project coherence observations](evidence/project-coherence-2026-11-13.json)
   and [project-owned engine references](evidence/engine-references-2026-11-13.json)
   are integrated. Node 24/26 each pass 496 tests; build, typecheck, content and

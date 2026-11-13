@@ -1,0 +1,146 @@
+{
+  "date": "2026-11-13",
+  "scope": "S051 complete source-mapped Skill content, installed resources and acceptance specification; native behavior remains pending",
+  "status": "PARTIAL_CONTENT_INSTALLED",
+  "canonicalFiles": {
+    ".agents/skills/game-studio-setup-engine/SKILL.md": "f8659d03aec03f29b53abd23be5c55c5fd3f7d98e4d2a8a55b88d38c6f9e990c",
+    ".agents/skills/game-studio-setup-engine/references/commands.md": "244b2843acabf0d828689d1a96d4f3037a63549bf759ef2b976773476de1075c",
+    ".agents/skills/game-studio-setup-engine/references/configuration.md": "17f580f8d6be8a6f6584fec6a2dd714601ba75649132d469ad8d5e6ed75e3d2e",
+    ".agents/skills/game-studio-setup-engine/references/godot-language.md": "064a6ced72651efffb2b52ea4bb486d55df5e2dcf9aadee46d707844ae05cd3e",
+    ".agents/skills/game-studio-setup-engine/references/maintenance.md": "0376e4e18e413d650923c9bddfab4d42537e0c9bc10083c720655565b1b4e993",
+    ".agents/skills/game-studio-setup-engine/references/preferences.md": "3643aba461b007f670209b7130f83b8c0b8d549909b72168dccf4dac98a8002d",
+    ".agents/skills/game-studio-setup-engine/references/reference-docs.md": "0c5514a567f2645465898c5aa8c011c891206aaad89a161063a97e97505d0dcb",
+    ".agents/skills/game-studio-setup-engine/references/routing.md": "7173dabc66614a3f93191f008f22ebc7e119b233013437162bd0d2578ff7b1eb",
+    ".agents/skills/game-studio-setup-engine/references/scaffold.md": "6b48dcab3740221117b491461d0dec6a5c26d125e3e3f81d7faa52ef32f40938",
+    ".agents/skills/game-studio-setup-engine/references/selection.md": "e43a41cc51a72df0fa6ad8e6977df9281f4db5a19bcdd5286247d1f3936dce3c",
+    ".agents/skills/game-studio-setup-engine/references/verification.md": "2b0d3e67d124f263c4399580efcf70b0b406fb783414052235c9ecd4e9768038",
+    ".agents/skills/game-studio-setup-engine/references/version-and-risk.md": "949a0f296d4f00bd851464f157a14af496491de7d2c83bd68572c311259798dd",
+    ".agents/skills/game-studio-setup-engine/references/web-existing.md": "cb86639c9f66ffa8cd52373a8bb3ecee20394c35d4a1cdcac6a29739d3f80907",
+    ".agents/skills/game-studio-setup-engine/references/web-new.md": "22e93b0ccb3c7e64e12db688e4352d669ecc32613d76d90532ef60aa05b768d5",
+    "studio-tests/skills/utility/setup-engine-codex.md": "bb51629e51b43f308cd26f65ea34ffa28d4bd6eb016d3476bf5d8b81883bb765"
+  },
+  "sourceContracts": {
+    ".claude/skills/setup-engine/SKILL.md": "a5b6f8cf758aa9c2aa95b9e34163ad1f275262471457ebe511f3ce0c80049c19",
+    ".claude/skills/setup-engine/references/11-upgrade.md": "317bc0eb662673c6f8b3890827598432ce8c036539d957e98e041ce88586bcea",
+    ".claude/skills/setup-engine/references/12-output-summary.md": "cb997943c00a9e2de1e75bf76765b2ab022d5bd5910d8941545f2386db1f379e",
+    ".claude/skills/setup-engine/references/2-guided-mode.md": "a8c29bef998bad2fdd0c0041a0ca6ec2fb6e6f4f7b68d3378ca5691b4eb4c76d",
+    ".claude/skills/setup-engine/references/3-version.md": "3d8017fc0c9198915b017908b1d90fa486c4ceba43a0b6db8047056a2079af7c",
+    ".claude/skills/setup-engine/references/4-claude-md-stack.md": "8783e2b0bf80201f084f15ac47729dc9273e1dce1e3609a5c3b41d6ec668a0f1",
+    ".claude/skills/setup-engine/references/5-technical-preferences.md": "2bb1744c5bf557a58b1b80b2e5961c9fe5fdd0477269a34d2cceb666b06d6494",
+    ".claude/skills/setup-engine/references/5.5-project-yaml.md": "869d8fe7fced78b1eb0de241e5c4eae7c74ccd520c4ff03503fb3cea4bc70d4d",
+    ".claude/skills/setup-engine/references/6-knowledge-gap.md": "1c274bcfe1a986219b96fb863ada349c40c1d8b90bdfc6f6053c9ea1c7ea11f2",
+    ".claude/skills/setup-engine/references/7-reference-docs.md": "8e4642bcc0e043d0fc9076ce5a06153f653960524564466fc2c34b617c2101ce",
+    ".claude/skills/setup-engine/references/7.5-scaffold.md": "f27167c5c630b3e21c6d4182c5d543df85883e980c72ea29044a669853071bb0",
+    ".claude/skills/setup-engine/references/8-verify.md": "cc0d97051177e32d715816380898f54788283716929ec53cd8f383e564a982b4",
+    ".claude/skills/setup-engine/references/godot-language-config.md": "82b2aad2ad6a63616c30a5168f720eb6e83ca40e585bddf82dc13395a0a7d404",
+    ".claude/skills/setup-engine/references/web.md": "785d42767f422530302d9b57545c260ca467b01535be4fc075fb1cede604bc86",
+    "studio-tests/skills/utility/setup-engine.md": "62b9bb301d622f83c5cc4b032b15253c7b694836b726a5dd0bc7ccf552c5e040"
+  },
+  "coverage": {
+    "entryFiles": 1,
+    "conditionalReferences": 13,
+    "sourceCasesRetained": 11,
+    "sourceCasesNativeVerified": 0,
+    "broaderBranches": "studio-tests/skills/utility/setup-engine-codex.md"
+  },
+  "candidate": {
+    "path": "/private/tmp/game-studio-setup-engine-skill-revision-4qlzwvmy/manifest.json",
+    "sha256": "9aa6ceff6120bbd6d2cd422a606b04516601c14b937e98c93831dfc926c7f2cf"
+  },
+  "coverageMap": {
+    "path": "/private/tmp/game-studio-setup-engine-skill-revision-4qlzwvmy/capability-matrix.md",
+    "sha256": "516c71fd0f45d5c04e60e11de0f4d527b8cac78047a7786694b995009fed1bbc"
+  },
+  "initialIndependentReview": {
+    "path": "/private/tmp/game-studio-s051-content-review.FRVupM/review.md",
+    "sha256": "a8edb0aaae5e5195ce2fa3296a5f0039c7fbee9f761411f1694c3563532559c2"
+  },
+  "revisionReview": {
+    "path": "/private/tmp/game-studio-s051-revision-review-o9vt27ty/review.md",
+    "sha256": "e4058167755713be153f8748290973a41b06149db1be05c818956a8d7bdcdb67"
+  },
+  "sameInputLanguageEvidence": {
+    "path": "/private/tmp/game-studio-setup-engine-skill-revision-4qlzwvmy/revision-checks.json",
+    "sha256": "e0ddc351a3d71020273efd0e296533136b251b4aea48da72c86143f07d4f9a40"
+  },
+  "rootReview": "Read all 14 Skill files and the Codex specification, checked all 15 upstream hashes and installed helper contracts. Source coverage independently reviewed; no native acceptance inferred.",
+  "retainedFailures": [
+    "Original Both/C# rich-language wording flattened during actual engine setup planning; source parenthesized form preserves it on Node 24/26.",
+    "Initial integrated content lint rejected ellipsis command and pipe-separated --kind pseudo-invocation. Replaced by valid launcher explanation and three independent commands; independent reviewer confirmed only those two hunks changed."
+  ],
+  "validation": {
+    "build": "PASS",
+    "contentLint": "PASS",
+    "quickValidate": "PASS",
+    "focusedContentTests": {
+      "node24": {
+        "pass": 15,
+        "fail": 0,
+        "skip": 0
+      },
+      "node26": {
+        "pass": 15,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    "pack": "PASS: exact 14-file Skill closure after global install/attach and in restored runtime; helpers execute from both runtimes",
+    "logs": {
+      "content-build-final": {
+        "path": "/private/tmp/game-studio-s051-content-build-final.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      "content-lint-red": {
+        "path": "/private/tmp/game-studio-s051-content-lint-red.log",
+        "sha256": "57fc1a15b5062c961e0f1e54eddd2e70a42b145557ac00a06e46d1b76d28e65b"
+      },
+      "content-lint-final": {
+        "path": "/private/tmp/game-studio-s051-content-lint-final.log",
+        "sha256": "c1e8f0d4d41e21c0c003c76b68522d9bba5501f464ec6b73e593e22c7e93ad0f"
+      },
+      "content-checks": {
+        "path": "/private/tmp/game-studio-s051-content-checks.log",
+        "sha256": "bc4e919752e55715668e5fc6f1d326f58477e113b788a899d8c933af50e54dd4"
+      },
+      "content-checks26": {
+        "path": "/private/tmp/game-studio-s051-content-checks26.log",
+        "sha256": "0f290be73f54565fe9ba626039fd26d91b833a273951982ce1f2c166a6f2654c"
+      },
+      "content-pack-final": {
+        "path": "/private/tmp/game-studio-s051-content-pack-final.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      },
+      "quick-validate": {
+        "path": "/private/tmp/game-studio-s051-quick-validate.log",
+        "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0"
+      }
+    }
+  },
+  "foundationValidation": {
+    "head": "01b4afd4535e9042f0ceabdc7ee9427e3f12fd15",
+    "fullTestsPerNode": 496,
+    "ci": "https://github.com/T-X-R/codex-game-studio/actions/runs/43362623876",
+    "allFiveJobs": "PASS",
+    "scope": "Precedes S051 content additions; content head requires its own CI."
+  },
+  "remaining": [
+    "All eleven original native scenarios and broader branch matrix",
+    "Actual user-choice/dismissal and continuation behavior in CLI and desktop",
+    "Version-aware engine specialist roles still pending migration",
+    "Full refresh/upgrade sourcing, date preservation and failure recovery through native workflow",
+    "Actual .NET/Unity/Unreal and platform-specific original fixtures",
+    "Source parse-check, vendoring and downstream missing workflows remain separately tracked"
+  ],
+  "catalog": {
+    "skills": {
+      "partial": 17,
+      "pending": 58,
+      "verified": 0
+    },
+    "roles": {
+      "partial": 16,
+      "pending": 33,
+      "verified": 0
+    }
+  }
+}

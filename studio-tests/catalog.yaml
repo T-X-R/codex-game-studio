@@ -457,7 +457,8 @@ skills:
     priority: low
     category: utility
     target: .agents/skills/game-studio-setup-engine/SKILL.md
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/skills/utility/setup-engine-codex.md
 
   - name: quick-design
     spec: studio-tests/skills/authoring/quick-design.md
