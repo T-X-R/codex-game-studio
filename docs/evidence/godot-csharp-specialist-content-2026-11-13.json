@@ -1,0 +1,125 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A013 complete source-role content and actual package installation; native and .NET build/runtime cases remain pending.",
+  "files": {
+    ".codex/agents/game-studio-godot-csharp-specialist.toml": "e592d5d6a3d8504bbfb4b1ef359c09ac31c2707e43ce96452fc89d8a078bdfa7",
+    "studio-tests/roles/godot-csharp-specialist-codex.md": "4807aef44c5619c10dde7cfd61917c5d5f2bc6322724b35010d540612de3a330",
+    "studio-tests/catalog.yaml": "6030000b47eba6a0eadd8a8b8f38727b5b90e0f4762c16368a9eece09f906a5c",
+    "toolkit/test/packed-smoke.mjs": "bb113c49bf2e6211db7cee1c9bde8fd9d11f502fbaa60ad2ef6b37738eac2734"
+  },
+  "source": {
+    ".claude/agents/godot-csharp-specialist.md": "5c12cf49ecdfeefe8cc1316108eb5f58ceb2ec9c2e6df5088f93776867c3c920",
+    "studio-tests/agents/engine/godot/godot-csharp-specialist.md": "0018533052d4ad5e8d9f52782068dd1e0680893b5776bb6325db000c410959bf",
+    ".claude/rules/scene-files.md": "c184c693e5f31a21faa66512d305881f446b62209aaabfaf6b78749907ea480c"
+  },
+  "review": {
+    "candidateManifest": {
+      "path": "/private/tmp/game-studio-godot-csharp-specialist-i3z9dd1h/manifest.json",
+      "sha256": "85ca1cb9613f208d229767360bfb129697bfe5d2e79f3b2cc951f27a425a7828"
+    },
+    "sourceMapping": {
+      "path": "/private/tmp/game-studio-godot-csharp-specialist-i3z9dd1h/source-mapping.md",
+      "sha256": "a1f4fb0988202a848047f2a444f27dffc979986b99b33c510abaf7fcd42c65f9"
+    },
+    "independentRoot": {
+      "path": "/private/tmp/game-studio-a013-root-review-r20fm2bl/review.md",
+      "sha256": "03024a54effe49e278d1091f25bda31af6ec18123cd5433ed3e12a1c13b11935"
+    },
+    "integrationDelta": "TOML unchanged; specification labels and source-mapping pointers updated for integration."
+  },
+  "explicitSourceCorrections": [
+    {
+      "claim": "Missing partial has the documented GD0001 diagnostic; do not suppress or call all failures silent.",
+      "source": "https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/diagnostics/GD0001.html"
+    },
+    {
+      "claim": "Typed events remain preferred, but advanced Connect/Disconnect is supported; lifetime cleanup depends on signal and delegate ownership.",
+      "source": "https://docs.godotengine.org/en/4.7/tutorials/scripting/c_sharp/c_sharp_signals.html"
+    },
+    {
+      "claim": "Unsafe active-scene-tree worker mutation is rejected without banning every documented off-tree/thread-safe API.",
+      "source": "https://docs.godotengine.org/en/4.6/tutorials/performance/thread_safe_apis.html"
+    },
+    {
+      "claim": "Inspect actual SDK, framework, project pins and .NET-enabled editor; source net8/latest example is not a universal rewrite.",
+      "sources": [
+        "https://docs.godotengine.org/en/4.6/tutorials/scripting/c_sharp/c_sharp_basics.html",
+        "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version"
+      ]
+    },
+    {
+      "claim": "Godot collections are for actual API/Variant interop, not only exported fields; internal managed collections avoid needless marshalling.",
+      "source": "https://docs.godotengine.org/en/4.6/tutorials/scripting/c_sharp/c_sharp_collections.html"
+    },
+    {
+      "claim": "Three-layer design budget counts project-authored layers, excluding built-in ancestry; literal source conflicts with its CharacterBody3D example.",
+      "basis": "Explicit migration interpretation preserving the numeric design budget and engine base, not an official engine restriction."
+    }
+  ],
+  "validation": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "contentLint": "PASS; behaviorVerified false",
+    "node24Content": {
+      "tests": 38,
+      "pass": 38,
+      "fail": 0,
+      "skip": 0
+    },
+    "node26Content": {
+      "tests": 38,
+      "pass": 38,
+      "fail": 0,
+      "skip": 0
+    },
+    "package": "PASS: exact global/restored role bytes and owned detach",
+    "logs": [
+      {
+        "path": "/private/tmp/game-studio-a013-build-integrated.log",
+        "sha256": "b81b4435ef97f46a33dcf1732454fd6a97ae6629d564ca3e38a7021abdde0a28"
+      },
+      {
+        "path": "/private/tmp/game-studio-a013-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      {
+        "path": "/private/tmp/game-studio-a013-content.log",
+        "sha256": "ec5882ff3f418037a76fec844fceef64801bfc4547cbc4fc97508b672d3bb061"
+      },
+      {
+        "path": "/private/tmp/game-studio-a013-content24.log",
+        "sha256": "9d90ec4a9ec7263782cfbf1e871ddcf5b4703ea422c5f663d72d90774bf22823"
+      },
+      {
+        "path": "/private/tmp/game-studio-a013-content26.log",
+        "sha256": "e57c8a722d5b54b394f1b470460e8404be9747ddd27c983f686552973b0c8b76"
+      },
+      {
+        "path": "/private/tmp/game-studio-a013-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      }
+    ]
+  },
+  "catalogCounts": {
+    "skills": {
+      "partial": 18,
+      "pending": 57,
+      "verified": 0
+    },
+    "roles": {
+      "partial": 20,
+      "pending": 29,
+      "verified": 0
+    },
+    "aliases": {
+      "pending": 3
+    }
+  },
+  "limits": [
+    "Original five native cases and additional role matrix remain pending.",
+    "No compatible .NET SDK/editor, managed build, async/thread/signal runtime or platform export was executed for this role.",
+    "Successful content/package checks cannot substitute for actual compiled and loaded Godot C# behavior.",
+    "Original source history and attribution are preserved; factual corrections and interpretation are explicitly recorded."
+  ]
+}
