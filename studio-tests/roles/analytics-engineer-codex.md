@@ -2,8 +2,12 @@
 
 Migration row A003. Canonical target:
 `.codex/agents/game-studio-analytics-engineer.toml`.
-Source review is separate from behavioral acceptance; no native outcome is
-established by this specification.
+Status: partial. [Six original native scenarios](../../docs/evidence/analytics-engineer-native-2026-11-13.json)
+retain five scoped passes and one naming-disclosure failure. The
+[unchanged-input retry](../../docs/evidence/analytics-engineer-retry-2026-11-13.json)
+passes that disclosure check. Latest six selected cases pass across recorded
+revisions; full pipeline/dashboard, continuation, permission and desktop coverage
+remain open. Source review and this specification alone establish no native pass.
 
 ## Source and adaptation
 

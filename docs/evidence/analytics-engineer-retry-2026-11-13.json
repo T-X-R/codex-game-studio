@@ -1,0 +1,72 @@
+{
+  "scope": "A003 source Case5 same-input retry only",
+  "verdict": "PASS_SCOPED",
+  "initialAttempt": {
+    "candidate": "/private/tmp/game-studio-analytics-native.BZqBOy",
+    "verdict": "FAIL_EXPLICIT_NAMING_DIFFERENCE_DISCLOSURE",
+    "retained": true
+  },
+  "run": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-uKipmX",
+  "parent": "01a1d2a6-2aa9-7ef0-8bb8-ea1a8bbea50e",
+  "child": "01a1d2a6-5bdb-76b0-9969-676a8641ebc5",
+  "sameRequestSha256": true,
+  "requestSha256": "e0f57d0e801e1889e14b26252629bce11719d9666544cb7055293e5bfaae8cdc",
+  "rawInputBytesIdentical": true,
+  "finding": "Before proposing event names, actual child explicitly identified dot-separated role default versus existing snake_case project convention, selected project convention because existing reports depend on it and no migration is approved. All proposed event names consistently use snake_case; purposes, fields and triggers are specified. Existing consent and retention are preserved. No naming migration or collection launch claimed.",
+  "operations": "Five public exec calls only inspect project/role/installed guidance or resolve resources. Optional analytics role markdown resource lookup returned missing, accurately disclosed. No game execution, analytics query, writing or further delegation.",
+  "evidence": {
+    "preservedFiles": 574,
+    "oneTypedChild": true,
+    "fullRole": true,
+    "inheritedContext": true,
+    "parentNoExec": true,
+    "nativeExitCode": 0,
+    "hostExitCode": 3,
+    "hostVerdictRemains": "not_assessed"
+  },
+  "archiveChange": "archive-diff.json records added audio-director and economy-designer plus modified analytics-engineer; this was not a single-file package experiment.",
+  "limits": "Only original Case5 correction is retested. Other five retain first-attempt scoped judgments; broader role matrix remains pending. No runtime telemetry, human acceptance or deployment proof.",
+  "date": "2026-11-13",
+  "status": "partial",
+  "rootReview": {
+    "candidateArtifacts": 24,
+    "actualOriginalFilesChecked": 574,
+    "sameRawInputsAndRequest": true,
+    "liveTracesAndFullRoleChecked": true,
+    "actualTarMemberDifferencesChecked": true,
+    "semantics": "Root read full actual child final; explicit convention comparison precedes all proposed events and leaves project schema authoritative. Full public call review by design_review_migration."
+  },
+  "candidate": {
+    "directory": "/private/tmp/game-studio-analytics-retry.l979r6ae",
+    "manifestSha256": "2c9668cffec52d245ab9add49951585ef4f5afa39ca1560eb3b2578bec2989a9",
+    "reviewSha256": "39ce08b60263378b6afda06927714748440973d990c8786cd7f352a66fefd61f"
+  },
+  "archiveDifference": {
+    "oldArchiveSha256": "99e067d5e3802233d1efe3070de0aa730e3a9f0d4e84089761da6532f05e11b3",
+    "newArchiveSha256": "245fc32c7bedef210e1ea9141dcca85b25fa75ead9339faa5b2edffcdfd4a447",
+    "added": [
+      "package/resources/.codex/agents/game-studio-audio-director.toml",
+      "package/resources/.codex/agents/game-studio-economy-designer.toml"
+    ],
+    "removed": [],
+    "changed": [
+      "package/resources/.codex/agents/game-studio-analytics-engineer.toml"
+    ],
+    "scopeNote": "Exact archive content changes: two added audio/economy role files and one modified analytics role; no other file-content differences. Not an A003-only archive. Raw case5 fixture/request remains identical."
+  },
+  "aggregate": {
+    "historyRuns": 7,
+    "historyScopedPass": 6,
+    "historyScopedFail": 1,
+    "latestSixSelectedCases": "PASS across recorded revisions; no full role certification"
+  },
+  "remainingOpen": [
+    "Full daily health/feature/economy dashboard definitions and all applicable funnels.",
+    "Authorized non-game pipeline implementation/execution against approved local data/interfaces.",
+    "Supplied-baseline independently checked numerical sample calculation and runtime exposure stability.",
+    "Missing consent/retention/design-input question-answer continuation.",
+    "Authorized existing-spec update, actual denied-write branch and permission changes.",
+    "Actual authorized specialist coordination and absent-role fallback matrix.",
+    "CLI/desktop breadth beyond thisCLI0.162.0 run; no blanketdesktop or production certification."
+  ]
+}

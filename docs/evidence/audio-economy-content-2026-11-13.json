@@ -99,5 +99,18 @@
     "Economy chest first turn proves only discovery/options; full source case needs a real owner choice in the same conversation.",
     "Only the Economy Gold case permits one exact new analysis document; it does not approve price or earning changes.",
     "No balance, listening, simulation, human play, runtime safety or complete-role acceptance inferred from static or package checks."
-  ]
+  ],
+  "followupCi": {
+    "headSha": "a1ba139074a5db42c998f432bde8cfba330c273d",
+    "url": "https://github.com/T-X-R/codex-game-studio/actions/runs/43349701676",
+    "result": "PASS",
+    "jobs": [
+      "toolkit ubuntu Node24",
+      "toolkit ubuntu Node26",
+      "toolkit macos Node24",
+      "toolkit windows Node24",
+      "browser including actual Web growth"
+    ],
+    "scope": "Exact committed role-content and Analytics correction slice; does not establish native model behavior or later documentation-only revisions."
+  }
 }
