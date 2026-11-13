@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A040 fresh configured-input fixture only. Actual engine configuration parsing passes; native UI acceptance is separately running.",
+  "originalFailuresPreserved": [
+    "inventory missing gamepad accept",
+    "godot46 missing gamepad accept",
+    "empty-question unanswered initial-state choices and transient out-of-scope exports"
+  ],
+  "rawInputDifference": "Only project.godot input mappings and an explicit initial focus/selection/details paragraph differ from the original inventory fixture. Natural implementation request and all write boundaries remain unchanged.",
+  "preflight": {
+    "status": "PASS",
+    "scope": "Actual Godot4.7.2 configuration parse and InputMap event matching only; no native role, UI or hardware proof.",
+    "processExitCode": 0,
+    "command": [
+      "/Users/tori/Desktop/Project/Games/Shield-Dodge/.tools/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/private/tmp/game-studio-ui-inputmap-preflight.1OTiv6/project",
+      "--script",
+      "res://inputmap_probe.gd",
+      "--log-file",
+      "/private/tmp/game-studio-ui-inputmap-preflight.1OTiv6/engine.log",
+      "--",
+      "/private/tmp/game-studio-ui-inputmap-preflight.1OTiv6/inputmap-results.json"
+    ],
+    "binarySha256": "c7cccbf8fb143e34e02fd6521e09be2c2b974f0d5db080b19071c9c570718ccf",
+    "rawInputFilesUnchanged": 7,
+    "projectGodotSha256": "37f69a50db4f0491e3c19d10bb70943aa7e6be684c9f8294cfb3879c34f6661c",
+    "uxSpecSha256": "eccbf3bb42e05d08771bb28925d55abbf01796e933d63d6c7ee6ac2b99910c0f",
+    "resultSha256": "fa636722669c5f097851d0e936f0357e3443ebafb2cf9b731ab02eeda12f08d1",
+    "confirmedActions": [
+      "ui_left: Left + D-pad Left",
+      "ui_right: Right + D-pad Right",
+      "ui_accept: Enter + KP Enter + Space + gamepad bottom action button"
+    ],
+    "failures": []
+  },
+  "rootVerification": "Verified actual binary, seven original raw input files, config and result hashes; compared the new fixture inputs byte-for-byte with preflight inputs; reviewed actual probe source, parse result, InputMap events and engine log.",
+  "artifacts": {
+    "inputs.json": {
+      "path": "/private/tmp/game-studio-ui-inputmap-preflight.1OTiv6/inputs.json",
+      "sha256": "e99d48f01a9c9ea3f86ca128466efc139c2e984b4f96dd5b83acf09a088cf2c5"
+    },
+    "verification.json": {
+      "path": "/private/tmp/game-studio-ui-inputmap-preflight.1OTiv6/verification.json",
+      "sha256": "a2be9b5ffce44c586c623ef6295c6b9ebe95e0193a43e8b7221ed77276b9e644"
+    },
+    "inputmap-results.json": {
+      "path": "/private/tmp/game-studio-ui-inputmap-preflight.1OTiv6/inputmap-results.json",
+      "sha256": "fa636722669c5f097851d0e936f0357e3443ebafb2cf9b731ab02eeda12f08d1"
+    },
+    "project/inputmap_probe.gd": {
+      "path": "/private/tmp/game-studio-ui-inputmap-preflight.1OTiv6/project/inputmap_probe.gd",
+      "sha256": "c80361c83396d18c484c2db9d1e6be88e56b3a8076f5aa1f48aa44c5c93acd4f"
+    },
+    "engine.log": {
+      "path": "/private/tmp/game-studio-ui-inputmap-preflight.1OTiv6/engine.log",
+      "sha256": "8948bbf653b5b65769a6b7be30cf6b61409e7ee10c061d367858386985cbd908"
+    }
+  },
+  "fixture": {
+    "path": "toolkit/test/fixtures/ui-programmer-cases.mjs",
+    "sha256": "4a0eebe00853032e30d7daf2ad6acbf7ef44be2639fb01beeef5021e4d317bbd",
+    "case": "inventory-configured-input"
+  },
+  "limits": [
+    "Headless configuration parsing is not rendering, input delivery, human or physical-controller acceptance.",
+    "Cold-open focus must be observed before any observer focus override.",
+    "New complete input does not supply answers to any historical native session."
+  ]
+}

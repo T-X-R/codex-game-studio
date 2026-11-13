@@ -4,9 +4,14 @@ Migration row A040. Sources: `.claude/agents/ui-programmer.md` and
 `studio-tests/agents/specialists/ui-programmer.md`. Canonical candidate:
 `.codex/agents/game-studio-ui-programmer.toml`.
 
-This first slice preserves the role contract only. Every behavioral/native case
-below is **PENDING**. No host runner, engine execution, rendered UI, permission
-probe or independent role delegation is claimed by this document.
+Status: partial. The requirements below are the acceptance contract. Actual
+[Godot 4.7.2 inventory/bounce](../../docs/evidence/ui-programmer-interactions-2026-11-13.json),
+[Godot 4.6](../../docs/evidence/ui-programmer-godot46-2026-11-13.json) and
+[empty-slot continuation](../../docs/evidence/ui-programmer-empty-2026-11-13.json)
+retain selected successes and full-fixture failures. A fresh
+[configured-input case](../../docs/evidence/ui-programmer-inputmap-2026-11-13.json)
+provides approved game-owned mappings and initial state; only its engine preflight
+is accepted so far. No complete role, desktop or physical-device pass is claimed.
 
 ## Translation and source fidelity
 
