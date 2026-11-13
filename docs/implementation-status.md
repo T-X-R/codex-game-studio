@@ -6,15 +6,33 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- [Test setup and its portable scaffold](evidence/test-setup-content-2026-11-13.json)
+  now preserve all six source phases, four engine branches and original case
+  mappings. The installed helper previews or fills missing files, retains owner
+  files, and exposes unresolved tool/CI requirements. Independent same-input
+  review closed Unreal identity, engine fallback/UE5 and Web runtime-pin gaps;
+  root additionally restored source-specific Godot placeholder text. Build,
+  content, 524 tests per Node 24/26, 39 subsequent content checks per version and
+  actual global/restored archive checks pass. All five original native workflows
+  and actual engine test suites remain pending. Current catalog: 18 partial
+  Skills/57 pending, 17 partial roles/32 pending, none fully verified.
+
+- All seven [CI jobs at 94c1351](https://github.com/T-X-R/codex-game-studio/actions/runs/43366641583)
+  pass, including real Godot 4.7.2 on Linux and Windows. The
+  [artifact audit](evidence/godot-parse-ci-2026-11-13.json) verifies 12 process
+  records per OS, installed/source exit codes, mixed-case continuation and five
+  preserved source files. Root checked 61 frozen artifacts. Windows helper bytes
+  differ only by Git checkout CRLF; raw hashes are retained. This predates the
+  test-scaffold integration, whose new-head CI is still required.
+
 - The [Godot specialist role](evidence/godot-specialist-content-2026-11-13.json)
   now preserves the complete source architecture, API/version, language,
   configuration and delegation responsibilities in a native role definition.
   Independent review, build/typecheck/content, actual installed/restored role
   bytes and 496 tests per Node 24/26 pass. All five original native scenarios,
   the Unity mismatch variant and four subordinate-role routes remain open.
-  Current catalog: 17 partial Skills, 58 pending; 17 partial roles, 32 pending;
-  none fully verified. Linux/Windows Godot CI jobs have been added; their real
-  execution result must be checked separately.
+  At this slice: 17 partial Skills, 58 pending; 17 partial roles, 32 pending;
+  none fully verified. The separate Linux/Windows Godot CI result is recorded above.
 
 - The [Godot script-loading checker](evidence/godot-parse-check-2026-11-13.json)
   now ships as an installed resource with unchanged upstream executable logic.

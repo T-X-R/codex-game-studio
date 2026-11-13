@@ -1,0 +1,92 @@
+{
+  "status": "PASS_SCOPED",
+  "run": 43366641583,
+  "headSha": "94c13516b5a1346bb38c2c15f82da4188203cbac",
+  "runSnapshot": {
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": 7
+  },
+  "auditedJobsOnly": [
+    {
+      "platform": "Linux",
+      "jobId": 131692481398,
+      "jobUrl": "https://github.com/T-X-R/codex-game-studio/actions/runs/43366641583/job/131692481398",
+      "artifact": "godot-script-loading-ubuntu-latest",
+      "artifactId": 14010497502,
+      "zipSha256": "6408f96e9a1c03a99bc86e9e7994a356550f39761e86d4d55e596e3f9f1f8d1f",
+      "publishedDigestMatched": true,
+      "zipContentsEqualExtractedFiles": true,
+      "version": "4.7.2.stable.official.ed1daf0bf",
+      "processCount": 12,
+      "executable": "/home/runner/work/_temp/godot engine/Godot_v4.7.2-stable_linux.x86_64",
+      "runtime": "/home/runner/work/_temp/godot package/installed runtime/node_modules/@t-x-r/game-studio",
+      "helperSha256": "e9130c02a832fcbacb5292ecc8cf04ae18d9b747460f2a36fc75ab395deec629",
+      "sourceSha256": "c009f12256161f64d0eaf031ddbcf177dec4b02eb8ff469ab7e6d12632705c5e",
+      "checkoutEOL": "LF",
+      "commitBytesMatchWithRecordedEOL": true,
+      "reportSha256": "c5b4370878650c56daf08022d774ce85b7d8d028cc0d969bf539e6b7c512c1f8",
+      "processesSha256": "cbdfd21c0a13cddfe0e9b3566f2bb5fa0e9c2976dbb4e8fda44dcef4c585e891",
+      "packSha256": "48e618917b1a5e5c816a4f2fae00110885be0aa8960b9948706a5d6503ee3ecb",
+      "packEntries": 304,
+      "packageIntegrityReportedByNpm": "sha512-MV8oP7ttrM1yFheXbiHmK7xxUNzNq9XqWLHc+1d1pmHrafToYGvHnTBK78yZUAtCdP+NT/M00hViL+KH0eLf4A==",
+      "packageShasumReportedByNpm": "df40cc6603f3984716e9b1c550efd8cc2df5f9c6",
+      "knownFiveOriginalHashesMatch": true,
+      "expectedFailureCasesRetained": true,
+      "scopeVerdict": "PASS_SCOPED"
+    },
+    {
+      "platform": "Windows",
+      "jobId": 131692481417,
+      "jobUrl": "https://github.com/T-X-R/codex-game-studio/actions/runs/43366641583/job/131692481417",
+      "artifact": "godot-script-loading-windows-latest",
+      "artifactId": 14010178060,
+      "zipSha256": "b45a69d3978969d126ea93e4d918b0f970c548efe052fd2e3188c108a0479ce2",
+      "publishedDigestMatched": true,
+      "zipContentsEqualExtractedFiles": true,
+      "version": "4.7.2.stable.official.ed1daf0bf",
+      "processCount": 12,
+      "executable": "D:\\a\\_temp\\godot engine\\Godot_v4.7.2-stable_win64_console.exe",
+      "runtime": "D:\\a\\_temp\\godot package\\installed runtime\\node_modules\\@t-x-r\\game-studio",
+      "helperSha256": "a651ed097c6e4a4ff92892d8ff5f3a0e24d38c03807b67539505ae272f5fa22d",
+      "sourceSha256": "34f8259a32d5037cc928219c55d58224301915d91cdae07aa13ad82acc1dbc4c",
+      "checkoutEOL": "CRLF",
+      "commitBytesMatchWithRecordedEOL": true,
+      "reportSha256": "b84b35e8f2ac771307d2283a1d11b5519c49f112f164fc3af262a380c2e7db05",
+      "processesSha256": "d2297d0338d8f3ba55bd2cf5c7a3caf2cbac3faaa8bc773323ce77d8d8ceb6fc",
+      "packSha256": "d551cea13688b97d333b2be6517280a47cef4f576a081ae9559846634ae6d7b0",
+      "packEntries": 304,
+      "packageIntegrityReportedByNpm": "sha512-iHC3lb5DSJr4ZoQSJG4efPBDmGxjghOyXbFsAuTiowhrQcRHkp5m6ZfyqbZ57MKf1bny5ko7cXEEtJBqd22RGQ==",
+      "packageShasumReportedByNpm": "24641e4e0c4c64c137eded8d42f5790c50e68ea1",
+      "knownFiveOriginalHashesMatch": true,
+      "expectedFailureCasesRetained": true,
+      "scopeVerdict": "PASS_SCOPED"
+    }
+  ],
+  "method": "Downloaded only two small Godot artifacts plus job logs/run metadata; no engine download/execution, CI rerun, shared edits or build. All stdout/stderr read; programmatic exact exit/hash/path checks.",
+  "limits": [
+    "Only selected Godot source/install scenarios on recorded Linux and Windows runners; not native Codex roles/Skills, .NET/C#, complete game/project or human play.",
+    "Five original fixture source files preserved; new engine UID/cache/log artifacts allowed, no whole-tree or transient filesystem guarantee.",
+    "npm tarball itself not uploaded; pack listing/integrity and successful install logs provide package installation evidence, not an independently rehashed tarball.",
+    "Published artifact ZIP digests independently verified; downloaded Godot engine ZIP hashes are guarded by successful CI hash-check step, not independently downloaded/rehashed here.",
+    "Windows console path existence/usable stdout/stderr/exit demonstrated by12 actual processes; no listing of all engine ZIP contents claimed.",
+    "Windows helper/source raw hashes differ from Linux exactly by Git checkout CRLF; exact raw hashes retained, no evidence files normalized.",
+    "Original local root download partial1.5MB/network timeout was not executed and is not counted as any pass.",
+    "Run metadata snapshot now completed/success all7 jobs; this audit examines only the2 Godot job artifacts, not browser/toolkit semantic results."
+  ],
+  "infrastructure": [
+    {
+      "phase": "initial sandbox gh run view",
+      "exitCode": 1,
+      "error": "error connecting to api.github.com",
+      "resolution": "authorized escalated read/download succeeded; not a product failure"
+    }
+  ],
+  "date": "2026-11-13",
+  "rootAudit": {
+    "manifestFilesVerified": 61,
+    "independentReportSha256": "de2f948ce1fdaea117d39c83e27b7e4cabd936afb0b4ea46cada7b36d7a3de44",
+    "manifestSha256": "2bb02e0ef5d69880d1c952b02d4488efb6059ba86831d22ab60839d03f782536",
+    "checks": "Verified artifact ZIPs and extracted bytes, 12 records/OS, all exit codes and mixed continuation, actual engine version, five source files and exact commit helper bytes with recorded platform line endings."
+  }
+}

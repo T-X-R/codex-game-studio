@@ -15,12 +15,21 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
+S074 test setup and the installed four-engine scaffold are integrated as partial.
+Independent review findings, source differences and root's placeholder failure
+remain recorded in [content evidence](../docs/evidence/test-setup-content-2026-11-13.json).
+Node24/26 each pass 524 tests; 39 additional content checks per version and actual
+global/restored Skill/helper/template checks pass. All five original native
+workflows remain open. Catalog: 18 partial Skills/57 pending, 17 partial roles/32
+pending, zero fully verified. Seven CI jobs at 94c1351 pass, including actual
+Linux/Windows Godot; this later test-setup integration needs its own CI result.
+
 Godot specialist A017 is integrated as partial with independent source review,
 exact installed/restored role checks and 496 passing tests on each Node24/26.
 Its complete native matrix and four subordinate specialists remain open. Catalog:
 17 partial Skills/58 pending, 17 partial roles/32 pending, zero fully verified.
-The five-job CI at bb691b1 passed; new Linux/Windows actual-Godot jobs need their
-own observed result. See [role evidence](../docs/evidence/godot-specialist-content-2026-11-13.json).
+Seven-job CI at 94c1351 passes, including Linux/Windows actual-Godot checks.
+See [role evidence](../docs/evidence/godot-specialist-content-2026-11-13.json).
 
 2026-11-13: S051 initial selection and configured-engine identification have two
 root-audited native read-only scoped passes on 0c3f343; full cases remain pending.
@@ -408,7 +417,7 @@ Each S-row is an individual task owned by `codex-integration`.
 - [ ] S071 Migrate `test-evidence-review` to `game-studio-test-evidence-review`. Evidence: pending.
 - [ ] S072 Migrate `test-flakiness` to `game-studio-test-flakiness`. Evidence: pending.
 - [ ] S073 Migrate `test-helpers` to `game-studio-test-helpers`. Evidence: pending.
-- [ ] S074 Migrate `test-setup` to `game-studio-test-setup`. Evidence: pending.
+- [ ] S074 Migrate `test-setup` to `game-studio-test-setup`. Partial: all six phases, four engine references, source cases and portable missing-only helper are installed; [content and archive evidence](../docs/evidence/test-setup-content-2026-11-13.json) retains initial failures and independent corrections. Original five native cases, engine suites, CI and desktop branches remain open in [the Codex matrix](../studio-tests/skills/utility/test-setup-codex.md).
 - [ ] S075 Migrate `ux-design` to `game-studio-ux-design`. Evidence: pending.
 - [ ] S076 Migrate `ux-review` to `game-studio-ux-review`. Evidence: pending.
 - [ ] S077 Migrate `vertical-slice` to `game-studio-vertical-slice`. Evidence: pending.
