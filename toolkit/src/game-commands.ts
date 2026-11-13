@@ -26,7 +26,7 @@ const dryRun: Option = { type: 'boolean', description: 'Describe effects without
 async function root(input: Input) { return resolveProject(input.values.project as string | undefined); }
 export const gameCommands: Record<string, Command> = {
   'engine verify': { description: 'Verify a pinned Godot editor and run headless import with preserved logs', effect: 'process',
-    options: { project, 'dry-run': dryRun, executable: { type: 'string', description: 'Godot editor executable path or name (default godot)' },
+    options: { project, 'dry-run': dryRun, executable: { type: 'string', description: 'Godot editor executable path or name (overrides engine.path; fallback godot)' },
       output: { type: 'string', description: 'New project-relative evidence directory' },
       timeout: { type: 'string', description: 'Maximum time per process in milliseconds (100–600000, default 120000)' } },
     run: async input => {

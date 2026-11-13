@@ -7,7 +7,7 @@ const testTypes = ['logic', 'integration', 'visual', 'ui', 'config'];
 export const derivedDependencies: Record<string, string[]> = {
   gate_level: testTypes.map(type => `testing.strict.${type}`),
   review_gate: ['modes.review_mode'],
-  engine_values: ['engine.name', 'engine.version', 'engine.language'],
+  engine_values: ['engine.name', 'engine.version', 'engine.language', 'engine.path'],
   perf_budgets: ['performance.target_framerate', 'performance.frame_budget_ms',
     'performance.draw_call_limit', 'performance.memory_ceiling_mb'],
   engine_row: ['engine.name', 'engine.code_root', 'engine.test_root'],

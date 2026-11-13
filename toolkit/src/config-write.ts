@@ -8,7 +8,7 @@ import { metadata } from './metadata.js';
 // Keys from upstream effects-map headings and the complete project example.
 // Keeping this catalog in the runtime avoids a dependency on the retained .claude tree.
 const extraKeys = new Set(`schema_version project.name project.genre project.version project.kind
-engine.version engine.language engine.rendering engine.physics engine.code_root engine.test_root
+engine.path engine.version engine.language engine.rendering engine.physics engine.code_root engine.test_root
 testing.framework testing.strict strict_gate_checks qa.coverage_minimum platform.multiplayer
 platform.targets platform.primary_input platform.gamepad_support platform.touch_support
 cadence.sprint_length cadence.milestone_length performance.target_framerate performance.frame_budget_ms
@@ -34,6 +34,9 @@ function settingValue(key: string, raw: string): Json {
     throw new StudioError('INVALID_ARGUMENT', `Unknown configuration key: ${key}`);
   }
   if (raw === 'null') return null;
+  if (key === 'engine.path' && (!raw.trim() || /[\0\r\n]/.test(raw))) {
+    throw new StudioError('INVALID_ARGUMENT', 'engine.path requires a nonempty single-line executable path or name');
+  }
   const allowed = system ? enums['modes.workflow'] : enums[key];
   if (allowed && !allowed.includes(raw)) throw new StudioError('INVALID_ARGUMENT', `${key} must be one of: ${allowed.join(', ')}`);
   if (booleans.has(key) || allowed?.join('|') === 'true|false') {

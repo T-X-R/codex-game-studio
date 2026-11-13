@@ -406,6 +406,17 @@ try {
   assert.equal(command(godotLauncher, 'engine', 'scaffold', '--project', godotProject).data.outcome.state, 'created');
   assert.equal(command(godotLauncher, 'engine', 'scaffold', '--project', godotProject).data.outcome.state, 'already_present');
   assert.equal(command(godotLauncher, 'engine', 'verify', '--dry-run', '--project', godotProject).data.status, 'planned');
+  const configuredEditor = join(temp, 'missing editor 测试');
+  command(globalCli, 'config', 'set', 'engine.path', configuredEditor, '--project', godotProject);
+  const inspectedPath = command(godotLauncher, 'engine', 'inspect', '--project', godotProject).data.engine.path;
+  assert.equal(inspectedPath.value, configuredEditor);
+  assert.equal(inspectedPath.source, 'project.yaml');
+  assert.equal(command(godotLauncher, 'engine', 'verify', '--dry-run', '--project', godotProject).data.command.executable, configuredEditor);
+  assert.equal(command(godotLauncher, 'engine', 'verify', '--dry-run', '--executable', 'override-editor', '--project', godotProject).data.command.executable, 'override-editor');
+  command(godotLauncher, 'engine', 'setup', '--input', 'engine.json', '--project', godotProject);
+  assert.ok((await readFile(join(godotProject, 'docs/technical-preferences.md'), 'utf8')).includes(`**Engine Path**: ${configuredEditor}`));
+  command(godotLauncher, 'config', 'set', 'engine.path', 'null', '--project', godotProject);
+  assert.equal(command(godotLauncher, 'engine', 'verify', '--dry-run', '--project', godotProject).data.command.executable, 'godot');
   try {
     command(godotLauncher, 'engine', 'verify', '--executable', join(temp, 'missing-editor'), '--project', godotProject);
     assert.fail('A missing editor must not pass verification');

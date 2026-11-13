@@ -46,7 +46,7 @@ engines still require an explicit version string. A dependency range is a declar
 constraint, not proof of the installed version. Setup does not change package
 files, resolve dependencies or certify the existing game.
 
-Optional fields are `engine.rendering` and `engine.physics`; specialists
+Optional fields are `engine.path`, `engine.rendering` and `engine.physics`; specialists
 `primary`, `code`, `shader`, `ui`, and `additional` (a list); and naming
 `classes`, `variables`, `constants`, `signals`, `files`, and `scenes`.
 `commands` accepts `run`, `build`, `test`, and `smoke`. Each command is either a
@@ -61,12 +61,12 @@ conflict: reconcile that structure explicitly before running setup. The command
 does not silently replace it. Engine rendering, physics, role names and naming
 conventions are recorded as choices, not inferred or certified by this command.
 
-Paths must stay within the workspace, use their exact spelling and avoid
+Code and test roots must stay within the workspace, use their exact spelling and avoid
 symbolic links and framework directories. New directories may be recorded but
 are reported as `missing`; setup does not create them. `engine inspect` continues
 to flag a missing explicit root as invalid for execution until it exists.
 
-The preference document mirrors engine identity, language, rendering, physics,
+The preference document mirrors engine identity, executable path, language, rendering, physics,
 specialists and naming. If only the legacy `.claude/docs/technical-preferences.md`
 exists, setup copies its content into the canonical document and updates the
 known labels. It preserves the legacy source and custom notes; review retained
@@ -111,8 +111,23 @@ game-studio engine verify --executable /path/to/Godot --dry-run --json
 game-studio engine verify --executable /path/to/Godot --output production/evidence/godot-import --json
 ```
 
-The default executable name is `godot`. Use the actual executable inside the
-application bundle on macOS. The command checks `--version` against the configured
+The executable is selected from `--executable`, then `project.yaml`'s
+`engine.path`, then `godot` when the stored path is absent or null. Set an optional
+literal executable name or path during `engine setup`; omission preserves it and
+null clears it. Paths may be outside the workspace. Use the actual executable
+inside the application bundle on macOS. Spaces, Unicode and Windows backslashes
+are preserved; shell syntax, environment variables and `~` are not expanded.
+Empty or whitespace-only paths, NUL, CR and LF are rejected. A stale path reports
+`not_assessed` instead of silently trying another editor; use `--executable` to
+override a machine-specific path for one invocation. Dry-run reports the selected
+executable without launching it or writing evidence. `engine inspect` includes
+the recorded path and its configuration source.
+
+`config set engine.path` changes only the YAML setting; use `engine setup` to
+synchronize the preference document. Neither operation substitutes the path into
+`commands.*`; those complete command strings remain unchanged.
+
+The command checks `--version` against the configured
 Godot 4.x version and confirms that `--help` advertises the editor's `--import`
 operation before running `--headless --path <project> --import`. A C# project
 requires the .NET/mono edition. No editor is downloaded or installed by this

@@ -5,13 +5,13 @@ import { resolveEngineRow } from './engine.js';
 import { canonicalRoot, readText, safePath } from './files.js';
 
 const fields: Record<string, string[]> = {
-  engine: ['name', 'version', 'language', 'rendering', 'physics', 'code_root', 'test_root'],
+  engine: ['name', 'path', 'version', 'language', 'rendering', 'physics', 'code_root', 'test_root'],
   specialists: ['primary', 'code', 'shader', 'ui', 'additional'],
   naming: ['classes', 'variables', 'constants', 'signals', 'files', 'scenes'],
   commands: ['run', 'build', 'test', 'smoke'],
 };
 const labels: Record<string, string> = {
-  'engine.language': 'Language', 'engine.rendering': 'Rendering', 'engine.physics': 'Physics',
+  'engine.path': 'Engine Path', 'engine.language': 'Language', 'engine.rendering': 'Rendering', 'engine.physics': 'Physics',
   'specialists.primary': 'Primary', 'specialists.code': 'Language/Code Specialist',
   'specialists.shader': 'Shader Specialist', 'specialists.ui': 'UI Specialist', 'specialists.additional': 'Additional Specialists',
   'naming.classes': 'Classes', 'naming.variables': 'Variables', 'naming.constants': 'Constants',

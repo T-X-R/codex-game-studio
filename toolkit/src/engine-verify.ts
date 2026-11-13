@@ -1,5 +1,5 @@
 import { stat } from 'node:fs/promises';
-import { readSettings } from './config.js';
+import { readConfig, readSettings } from './config.js';
 import { StudioError } from './contract.js';
 import { canonicalRoot, safePath } from './files.js';
 import { exists } from './project.js';
@@ -32,10 +32,19 @@ export async function verifyEngine(root: string, output: string,
   const project = await canonicalRoot(root);
   const timeoutMs = options.timeoutMs ?? 120000;
   if (!Number.isSafeInteger(timeoutMs) || timeoutMs < 100 || timeoutMs > 600000) throw new StudioError('INVALID_ARGUMENT', 'Timeout must be 100–600000 milliseconds');
-  const executable = options.executable ?? 'godot';
-  if (!executable.trim() || executable.includes('\0')) throw new StudioError('INVALID_ARGUMENT', 'Provide an engine executable path or name');
   if (await exists(await safePath(project, output))) throw new StudioError('FILE_CONFLICT', 'Engine evidence requires a new output directory', 4);
   const { settings, warnings } = await readSettings(project, ['engine.name', 'engine.version', 'engine.language']);
+  let selectedExecutable: unknown = options.executable;
+  if (selectedExecutable === undefined) {
+    const config = await readConfig(await safePath(project, 'project.yaml'));
+    const engineConfig = config.engine;
+    const configuredPath = engineConfig && typeof engineConfig === 'object' && !Array.isArray(engineConfig) ? engineConfig.path : undefined;
+    selectedExecutable = configuredPath ?? 'godot';
+  }
+  if (typeof selectedExecutable !== 'string' || !selectedExecutable.trim() || /[\0\r\n]/.test(selectedExecutable)) {
+    throw new StudioError('INVALID_ARGUMENT', 'Provide a nonempty single-line engine executable path or name');
+  }
+  const executable = selectedExecutable;
   const engine = settings['engine.name']!.value;
   const declaredVersion = settings['engine.version']!.value;
   const expected = typeof declaredVersion === 'string' ? pin(declaredVersion) : null;
