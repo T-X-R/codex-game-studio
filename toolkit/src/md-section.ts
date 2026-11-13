@@ -19,12 +19,13 @@ function normalize(s: string): string {
   return trim(s).replace(/[A-Z]/g, c => c.toLowerCase()).replace(/[ \t]+/g, ' ').replace(/^[0-9]+[.)]? /, '');
 }
 /** Narrow retained md-section parser, not a Markdown renderer. Its status is an observation. */
-function parse(content: string) {
+export function parseMdSections(content: string) {
   const lines = content.split('\n'); if (lines.at(-1) === '') lines.pop();
-  const headings: Heading[] = [], text: boolean[] = [], marker: boolean[] = [];
+  const headings: Heading[] = [], text: boolean[] = [], marker: boolean[] = [], prose: boolean[] = [];
+  const commentStarts: (number | null)[] = [], visible: string[] = [];
   let fence = '', comment = false;
   for (const [index, raw] of lines.entries()) {
-    const line = raw.replace(/\r$/, ''); text[index] = false; marker[index] = false;
+    const line = raw.replace(/\r$/, ''); text[index] = false; marker[index] = false; prose[index] = false; commentStarts[index] = null; visible[index] = '';
     if (fence) {
       const close = line.match(/^ {0,3}(`+|~+)([ \t]*)$/);
       if (close && close[1]![0] === fence[0] && close[1]!.length >= fence.length) fence = '';
@@ -52,14 +53,17 @@ function parse(content: string) {
         rest += line.slice(cursor, after); cursor = after; continue;
       }
       if (start < 0) { rest += line.slice(cursor); break; }
+      commentStarts[index] ??= start;
       rest += line.slice(cursor, start); cursor = start + 4; comment = true;
     }
+    visible[index] = rest;
     const heading = line.match(/^ {0,3}(#{1,6})(?:[ \t](.*)|$)/);
     if (!startedInComment && !/^[ \t]*<!--/.test(line) && heading) {
       let title = trim(heading[2] ?? ''); if (/(^| )#+$/.test(title)) title = trim(title.replace(/#+$/, ''));
       headings.push({ level: heading[1]!.length, first: index + 1, last: lines.length, title }); continue;
     }
     text[index] = trim(rest) !== '' && !/^(---+|\*\*\*+|___+)$/.test(trim(rest));
+    prose[index] = text[index]! && !startedInComment;
     // Retain source behavior: its line-leading TODO test uses the original line,
     // even while a multiline HTML comment is open. Do not infer a quality verdict.
     marker[index] = /\[To be designed\]|\[TBD\]|\[To be written\]/.test(rest) || /^_?TODO/.test(line);
@@ -72,7 +76,7 @@ function parse(content: string) {
     return headings.filter(h => normalize(h.title) === wanted && (!level || level === h.level));
   };
   const section = (h: Heading): Section => ({ ...h, status: marker.slice(h.first, h.last).some(Boolean) ? 'PLACEHOLDER' : text.slice(h.first, h.last).some(Boolean) ? 'COMPLETE' : 'EMPTY' });
-  return { lines, headings, find, section, text };
+  return { lines, headings, find, section, text, prose, commentStarts, visible };
 }
 
 export interface MdSectionWriteInput {
@@ -161,7 +165,7 @@ export async function mdSectionCommand(root: string, args: string[], input: MdSe
       command === 'set-field' && (selectors.length !== 2 && selectors.length !== 4 || selectors.length === 4 && selectors[2] !== '--after' || selectors[1]?.includes('\n')) ||
       !writing && input.dryRun) return usage();
   const content = writing ? decodeInput(bytes, path, 1) : bytes.toString('utf8');
-  const parsed = parse(content), data: MdSectionObservation = { status: 'observed', qualityAssessed: false, command, path };
+  const parsed = parseMdSections(content), data: MdSectionObservation = { status: 'observed', qualityAssessed: false, command, path };
   if (writing) {
     let candidate = '', line = 0, action: NonNullable<MdSectionObservation['action']>;
     const raw = parsed.lines, out = (s: string) => `${s}${raw[0]?.endsWith('\r') ? '\r' : ''}\n`;

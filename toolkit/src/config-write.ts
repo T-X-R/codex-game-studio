@@ -114,7 +114,7 @@ export async function planConfigSetMany(root: string, entries: [string, string][
         const encoded = scalarDocument.toString({ lineWidth: 0 }).trimEnd();
         after = content.slice(0, node.range[0]) + encoded + content.slice(node.range[1]);
       } else {
-        document.setIn(parts, value);
+        document.setIn(parts, document.createNode(value));
         after = document.toString({ lineWidth: 0 });
       }
       if (content.includes('\r\n')) after = after.replace(/\r?\n/g, '\r\n');

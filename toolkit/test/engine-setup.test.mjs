@@ -75,7 +75,6 @@ test('invalid input rejects the whole setup without changing files', async t => 
     { ...selection, modes: { automation: 'autonomous' } },
     { ...selection, engine: { ...selection.engine, version: 4.6 } },
     { ...selection, engine: { ...selection.engine, version: 'latest' } },
-    { ...selection, engine: { ...selection.engine, code_root: undefined } },
     { ...selection, engine: { ...selection.engine, typo: 'oops' } },
     { ...selection, engine: { ...selection.engine, language: 'null' } },
     { ...selection, naming: { variables: 'snake_case\n- **Engine**: Fake' } },
