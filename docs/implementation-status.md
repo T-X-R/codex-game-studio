@@ -6,6 +6,16 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- The [Godot specialist role](evidence/godot-specialist-content-2026-11-13.json)
+  now preserves the complete source architecture, API/version, language,
+  configuration and delegation responsibilities in a native role definition.
+  Independent review, build/typecheck/content, actual installed/restored role
+  bytes and 496 tests per Node 24/26 pass. All five original native scenarios,
+  the Unity mismatch variant and four subordinate-role routes remain open.
+  Current catalog: 17 partial Skills, 58 pending; 17 partial roles, 32 pending;
+  none fully verified. Linux/Windows Godot CI jobs have been added; their real
+  execution result must be checked separately.
+
 - The [Godot script-loading checker](evidence/godot-parse-check-2026-11-13.json)
   now ships as an installed resource with unchanged upstream executable logic.
   Actual Godot 4.7.2 passes source/installed comparisons for valid autoload and
@@ -23,9 +33,9 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   Both fixtures explicitly used read-only scope; no actual reply or subsequent
   setup write was tested. Full source Cases 10/11 remain pending.
 
-- All five [CI jobs at 0c3f343](https://github.com/T-X-R/codex-game-studio/actions/runs/43363317808)
-  pass for the complete S051 content package. Later parse-check additions require
-  their own result.
+- All five [CI jobs at bb691b1](https://github.com/T-X-R/codex-game-studio/actions/runs/43364901648)
+  pass for the S051 content, parse-check helper and initial native evidence.
+  Later role and cross-platform engine additions require their own result.
 
 - [Setup-engine content](evidence/setup-engine-content-2026-11-13.json) is now
   installed with its entry point, 13 conditional references and complete source

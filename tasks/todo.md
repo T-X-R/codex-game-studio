@@ -15,6 +15,13 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
+Godot specialist A017 is integrated as partial with independent source review,
+exact installed/restored role checks and 496 passing tests on each Node24/26.
+Its complete native matrix and four subordinate specialists remain open. Catalog:
+17 partial Skills/58 pending, 17 partial roles/32 pending, zero fully verified.
+The five-job CI at bb691b1 passed; new Linux/Windows actual-Godot jobs need their
+own observed result. See [role evidence](../docs/evidence/godot-specialist-content-2026-11-13.json).
+
 2026-11-13: S051 initial selection and configured-engine identification have two
 root-audited native read-only scoped passes on 0c3f343; full cases remain pending.
 All five CI jobs for that content head pass. The source-derived Godot parse
@@ -433,7 +440,7 @@ Each A-row is an individual task owned by `codex-integration`.
 - [ ] A014 Migrate `godot-gdextension-specialist` to `game-studio-godot-gdextension-specialist`. Evidence: pending.
 - [ ] A015 Migrate `godot-gdscript-specialist` to `game-studio-godot-gdscript-specialist`. Evidence: pending.
 - [ ] A016 Migrate `godot-shader-specialist` to `game-studio-godot-shader-specialist`. Evidence: pending.
-- [ ] A017 Migrate `godot-specialist` to `game-studio-godot-specialist`. Evidence: pending.
+- [ ] A017 Migrate `godot-specialist` to `game-studio-godot-specialist`. Partial: complete independently reviewed source-role responsibilities and five original cases plus Unity variant; [installed/restored content evidence](../docs/evidence/godot-specialist-content-2026-11-13.json). Actual native identity, behavior, subordinate delegation and engine/desktop matrix remain open in [the Codex specification](../studio-tests/roles/godot-specialist-codex.md).
 - [ ] A018 Migrate `lead-programmer` to `game-studio-lead-programmer`. Partial: canonical role and two LP gates pass metadata/packed checks. Native code review returns APPROVE for sound combat, REJECT for armor addition, NOT ASSESSED for omitted GDD and CONCERNS for explicitly nonexistent GDD. Three real maintainer Node tests and an independent faulty-candidate run support the observations without being attributed to the native agent. A read-only feasibility task quantifies budgets/estimates, proposes unapproved alternatives and preserves creative versus technical ownership. Review preserves 338 original regular files and adds only its report; feasibility preserves 328 and adds none. A preparation reporter mismatch was corrected before native execution. See [behavior spec](../studio-tests/roles/lead-programmer-codex.md) and [evidence](../docs/evidence/lead-programmer-2026-11-12.json). Architecture/refactoring writes, broader specialist hand-offs, engine API validation, desktop and final validator remain open. The T19 sequential fixture additionally proves read-only review of a separately authored native implementation and QA suite.
 - [ ] A019 Migrate `level-designer` to `game-studio-level-designer`. Evidence: pending.
 - [ ] A020 Migrate `live-ops-designer` to `game-studio-live-ops-designer`. Evidence: pending.
