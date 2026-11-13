@@ -6,6 +6,9 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- Audio Director and Economy Designer now have [independently reviewed content and installed-package checks](evidence/audio-economy-content-2026-11-13.json). Their complete source-role responsibilities and ten original raw scenario fixtures are present. Build/typecheck/content/pack and 362 tests each on Node 24/26 pass. A restricted-sandbox preview-port failure is retained alongside the authorized successful rerun. Native runs have started separately; no full role, audio listening, economy balance, section persistence or desktop acceptance is claimed. Current catalog: sixteen partial Skills and sixteen partial roles; none fully verified.
+- Analytics has [six reviewed native scenarios](evidence/analytics-engineer-native-2026-11-13.json): five scoped passes and one naming-difference disclosure failure. The existing snake_case schema was preserved correctly, but the output did not explicitly contrast it with the role default. Root confirmed that narrow failure and independently reconciled 104 frozen artifacts and 3,418 actual regular files, inputs, live traces and installed roles. The instruction correction has a separate unchanged-input retry in progress.
+
 - Analytics Engineer has a [source-reviewed Codex role](evidence/analytics-engineer-content-2026-11-13.json)
   preserving telemetry, funnel, experiment, dashboard, privacy and design-insight
   responsibilities, including assigned non-game pipeline work. All six source
