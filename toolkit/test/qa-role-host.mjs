@@ -23,9 +23,10 @@ import { audioDirectorScenarios } from './fixtures/audio-director-cases.mjs';
 import { economyDesignerScenarios } from './fixtures/economy-designer-cases.mjs';
 import { godotSpecialistScenarios } from './fixtures/godot-specialist-cases.mjs';
 import { godotGDScriptScenarios } from './fixtures/godot-gdscript-specialist-cases.mjs';
+import { godotShaderScenarios } from './fixtures/godot-shader-specialist-cases.mjs';
 
 const scenarioName = process.argv[2] ?? 'audit';
-const cases = { ...scenarios, ...leadScenarios, ...designerScenarios, ...programmerScenarios, ...gameplayScenarios, ...handoffScenarios, ...directorScenarios, ...uxDesignerScenarios, ...accessibilityScenarios, ...analyticsScenarios, ...audioDirectorScenarios, ...economyDesignerScenarios, ...godotSpecialistScenarios, ...godotGDScriptScenarios };
+const cases = { ...scenarios, ...leadScenarios, ...designerScenarios, ...programmerScenarios, ...gameplayScenarios, ...handoffScenarios, ...directorScenarios, ...uxDesignerScenarios, ...accessibilityScenarios, ...analyticsScenarios, ...audioDirectorScenarios, ...economyDesignerScenarios, ...godotSpecialistScenarios, ...godotGDScriptScenarios, ...godotShaderScenarios };
 if (process.argv.length > 3 || (scenarioName !== 'godot' && !Object.hasOwn(cases, scenarioName))) throw new Error(`Choose ${[...Object.keys(cases), 'godot'].join(', ')}`);
 const scenario = scenarioName === 'godot' ? await godotScenario() : cases[scenarioName];
 const roleName = scenario.role ?? 'game-studio-qa-tester';
@@ -83,6 +84,16 @@ async function snapshot() {
   return files;
 }
 const before = await snapshot();
+const regularSnapshot = value => typeof value === 'string' && /^[a-f0-9]{64}$/.test(value);
+const expectedChangedFiles = scenario.expectedChangedFiles ?? [];
+assert.ok(Array.isArray(expectedChangedFiles), 'expectedChangedFiles must be an array');
+if (scenario.allowedChangedFile !== undefined) assert.equal(typeof scenario.allowedChangedFile, 'function');
+const allowedChangedPaths = inheritHostSettings && !readOnly
+  ? Object.keys(before).filter(path => scenario.allowedChangedFile?.(path) === true) : [];
+for (const path of allowedChangedPaths) assert.ok(regularSnapshot(before[path]), `Allowed edit must be an existing regular file: ${path}`);
+for (const path of expectedChangedFiles) {
+  assert.ok(inheritHostSettings && !readOnly && allowedChangedPaths.includes(path), `Required edit must be explicitly allowed on an existing regular file: ${path}`);
+}
 await writeFile(join(directory, 'before.json'), JSON.stringify(before, null, 2));
 const profileName = `game-studio-qa-${randomUUID()}`;
 const profilePath = join(process.env.CODEX_HOME ?? join(homedir(), '.codex'), `${profileName}.config.toml`);
@@ -110,6 +121,8 @@ try {
   await writeFile(join(directory, 'after.json'), JSON.stringify(after, null, 2));
   const changed = Object.keys(before).filter(path => before[path] !== after[path]);
   const added = Object.keys(after).filter(path => !(path in before));
+  const outOfScopeChanges = changed.filter(path => !allowedChangedPaths.includes(path)
+    || !regularSnapshot(before[path]) || !regularSnapshot(after[path]));
   const outsideScope = added.filter(path => {
     if (readOnly) return true;
     if (inheritHostSettings) {
@@ -130,10 +143,11 @@ try {
   }
   const report = { scenario: scenarioName, role: roleName, sandbox: inheritHostSettings ? null : scenario.sandbox, inheritHostSettings, readOnly, policyEvidence: 'Actual preflight-result.json and native trace; defaults are not inferred here', parseErrors, status: 'not_assessed', reason: `Review native parent/child trace and semantic output against ${scenario.behaviorSpec ?? 'studio-tests/roles/qa-tester-codex.md'}.`,
     client: version.stdout.trim(), exitCode: result.exitCode, threadId: events.find(event => event.type === 'thread.started')?.thread_id,
-    preservedFiles: Object.values(before).filter(value => value !== 'directory').length, snapshotIncludesDirectories: inheritHostSettings, changed, added, outsideScope, roleSha256: before[rolePath], roleHashes };
+    preservedFiles: Object.entries(before).filter(([path, value]) => value !== 'directory' && value === after[path]).length, snapshotIncludesDirectories: inheritHostSettings, changed, allowedChangedPaths, outOfScopeChanges, added, outsideScope, roleSha256: before[rolePath], roleHashes };
   await writeFile(join(directory, 'report.json'), JSON.stringify(report, null, 2));
   console.log(JSON.stringify({ directory, ...report }));
-  assert.deepEqual(changed, []); assert.deepEqual(outsideScope, []);
+  assert.deepEqual(outOfScopeChanges, []); assert.deepEqual(outsideScope, []);
+  for (const path of expectedChangedFiles) assert.ok(changed.includes(path), `Missing required existing-file edit: ${path}`);
   for (const path of scenario.expectedFiles) assert.ok(added.includes(path), `Missing expected artifact: ${path}`);
   if (readOnly) assert.deepEqual(added, []);
   process.exitCode = result.exitCode === 0 ? 3 : result.exitCode;

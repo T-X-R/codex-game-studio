@@ -29,7 +29,7 @@ export function execFileSync(executable,args,options){
  throw new Error('Unexpected attempted process '+command);
 }
 `;
-const processStub = `import {readFile,writeFile,mkdir,appendFile,symlink} from 'node:fs/promises';
+const processStub = `import {readFile,writeFile,mkdir,appendFile,symlink,rm} from 'node:fs/promises';
 import {join} from 'node:path';
 export async function runProcess(executable,args,options={}){
  if(executable==='git'){if(args[0]!=='init')throw new Error('Only fake git init allowed');await mkdir(join(args.at(-1),'.git'));return {exitCode:0,stdout:'',stderr:'',signal:null};}
@@ -46,6 +46,19 @@ export async function runProcess(executable,args,options={}){
  const put=async(path,bytes)=>{await mkdir(join(workspace,path,'..'),{recursive:true});await writeFile(join(workspace,path),bytes);};
  if(scenario==='godot-specialist-signals-guide'&&variant!=='missing')await put('docs/architecture/signals-and-calls.md','HARNESS GENERATED PLACEHOLDER, NOT ROLE OUTPUT\\n');
  if(scenario==='audit'){await put('production/qa/audit.md','HARNESS QA PLACEHOLDER');await put('production/qa/bugs/BUG-0008.md','HARNESS BUG PLACEHOLDER');}
+ if(['shader-dissolve','shader-hlsl-material'].includes(scenario))await put('shaders/spatial_enemy_dissolve.gdshader','HARNESS ONLY, NOT SHADER VALIDATION');
+ if(scenario==='shader-texture-api-44')await put('shaders/spatial_debug_noise.gdshader','HARNESS ONLY, NOT SHADER VALIDATION');
+ if(scenario==='shader-water-lod'){
+  const target=join(workspace,'shaders/spatial_env_water.gdshader');
+  if(variant!=='unchanged')await writeFile(target,(await readFile(target,'utf8'))+'// HARNESS authorized edit, not a shader solution\\n');
+  await put('shaders/spatial_env_water_far.gdshader','HARNESS ONLY, NOT SHADER VALIDATION');
+  if(variant!=='missing-new')await put('materials/water_far.tres','HARNESS ONLY, NOT MATERIAL VALIDATION');
+  if(variant==='deleted')await rm(target);
+  if(variant==='target-directory'){await rm(target);await mkdir(target);}
+  if(variant==='target-link'){await rm(target);await symlink(join(workspace,'materials'),target,process.platform==='win32'?'junction':'dir');}
+  if(variant==='prefix-extra')await put('shaders/spatial_env_water.gdshader.extra','not authorized');
+ }
+
  if(variant==='extra')await put('production/qa/unauthorized.md','not authorized');
  if(variant==='changed')await put('owner.txt','changed');
  if(variant==='directory')await mkdir(join(workspace,'unauthorized-empty-directory'));
@@ -60,6 +73,16 @@ async function runCase(scenario,variant='normal') {
  const root=await mkdtemp(join(tmpdir(),'qa host harness ')); const tool=join(root,'toolkit');
  await mkdir(join(tool,'test'),{recursive:true}); await mkdir(join(tool,'dist'));
  await cp(sourceFixtureDir,join(tool,'test/fixtures'),{recursive:true});
+ const shaderFixture=join(tool,'test/fixtures/godot-shader-specialist-cases.mjs');
+ const overrides={
+  'default-protection': "delete godotShaderScenarios['shader-water-lod'].allowedChangedFile; godotShaderScenarios['shader-water-lod'].expectedChangedFiles=[];",
+  'readonly-edit': "godotShaderScenarios['shader-water-lod'].readOnly=true; godotShaderScenarios['shader-water-lod'].expectedChangedFiles=[];",
+  'pre-missing': "godotShaderScenarios['shader-water-lod'].expectedChangedFiles=['shaders/missing.gdshader']; godotShaderScenarios['shader-water-lod'].allowedChangedFile=p=>p==='shaders/missing.gdshader';",
+  'pre-directory': "godotShaderScenarios['shader-water-lod'].expectedChangedFiles=['materials']; godotShaderScenarios['shader-water-lod'].allowedChangedFile=p=>p==='materials';",
+  'pre-link': "godotShaderScenarios['shader-water-lod'].prepare=async root=>{const fs=await import('node:fs/promises');await fs.rm(root+'/shaders/spatial_env_water.gdshader');await fs.symlink(root+'/materials',root+'/shaders/spatial_env_water.gdshader',process.platform==='win32'?'junction':'dir');};",
+ };
+ if(scenario==='shader-water-lod'&&overrides[variant])await writeFile(shaderFixture,(await readFile(shaderFixture,'utf8'))+'\n'+overrides[variant]+'\n');
+
  await mkdir(join(tool,'node_modules')); await cp(fileURLToPath(new URL('../node_modules/yaml/',import.meta.url)),join(tool,'node_modules/yaml'),{recursive:true});
  await mkdir(join(root,'.codex/agents'),{recursive:true}); await cp(roleSource,join(root,'.codex/agents'),{recursive:true});
  const raw=await readFile(source,'utf8');
@@ -102,4 +125,31 @@ test('read-only extra report, existing-file edit and unauthorized directory/link
 });
 test('authorized guide still rejects missing artifact, other new files and a symlink at exact allowed name (offline stub)',async()=>{
  for(const variant of ['missing','extra','guide-link']){const r=await runCase('godot-specialist-signals-guide',variant);assert.equal(r.status,1,r.stderr);assert.ok(r.report);if(variant!=='missing')assert.ok(r.report.outsideScope.length>0);}
+});
+
+const shaderCases=['shader-water-lod','shader-dissolve','shader-hlsl-material','shader-compute-intent','shader-texture-api-44','shader-glow-46-unknown'];
+test('shader source cases permit only named new artifacts or exact regular-file edits without policy overrides (offline stub)',async()=>{
+ for(const scenario of shaderCases){const r=await runCase(scenario);assert.equal(r.status,3,r.stderr);assert.equal(r.report.status,'not_assessed');assert.deepEqual(r.report.outsideScope,[]);assert.deepEqual(r.report.outOfScopeChanges,[]);
+  const target='shaders/spatial_env_water.gdshader';assert.deepEqual(r.report.changed,scenario==='shader-water-lod'?[target]:[]);
+  assert.deepEqual(r.report.allowedChangedPaths,scenario==='shader-water-lod'?[target]:[]);
+  const before=JSON.parse(await readFile(join(r.directory,'before.json'),'utf8'));
+  assert.equal(r.report.preservedFiles,Object.entries(before).filter(([p,v])=>v!=='directory'&&v===r.after[p]).length);
+  for(const call of r.calls.filter(c=>c.args[0]!=='--version')){
+   for(const flag of ['--sandbox','--model','-m','--config','-c','--enable','--disable','--ask-for-approval','--dangerously-bypass-approvals-and-sandbox'])assert.ok(!call.args.includes(flag),flag);
+   assert.equal(call.configuration,restoredConfig);assert.doesNotMatch(call.profileText,/model|sandbox|approval|hooks|features|max_concurrent/);
+  }
+ }
+});
+test('authorized existing-file scope rejects deletion, changed type, unrelated edits, absent required edit and other additions (offline stub)',async()=>{
+ for(const variant of ['deleted','target-directory','target-link','changed','default-protection','readonly-edit','unchanged','prefix-extra','missing-new']){
+  const r=await runCase('shader-water-lod',variant);assert.equal(r.status,1,r.stderr);assert.ok(r.report);assert.ok(r.after);
+  if(['deleted','target-directory','target-link','default-protection','readonly-edit'].includes(variant))assert.ok(r.report.outOfScopeChanges.includes('shaders/spatial_env_water.gdshader'));
+  if(variant==='changed')assert.ok(r.report.outOfScopeChanges.includes('owner.txt'));
+  if(variant==='unchanged'){assert.deepEqual(r.report.changed,[]);assert.match(r.stderr,/Missing required existing-file edit/);}
+  if(variant==='prefix-extra')assert.ok(r.report.outsideScope.includes('shaders/spatial_env_water.gdshader.extra'));
+  if(variant==='missing-new')assert.match(r.stderr,/Missing expected artifact/);
+ }
+});
+test('required edits reject missing, directory and symlink inputs before any Codex stub is called (offline stub)',async()=>{
+ for(const variant of ['pre-missing','pre-directory','pre-link']){const r=await runCase('shader-water-lod',variant);assert.equal(r.status,1,r.stderr);assert.equal(r.report,null);assert.equal(r.calls.length,0);assert.match(r.stderr,/existing regular file/);}
 });
