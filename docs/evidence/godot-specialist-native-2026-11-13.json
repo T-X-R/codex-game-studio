@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "Six actual A017 native consultations on the frozen pre-A015 runtime, retaining four failed selected contracts and two scoped passes.",
+  "client": "codex-cli 0.162.0",
+  "roleSha256": "c4cb4f5de4e99f1ea0ac9a3d037079ed322a030e291ab4d1bad17bee4c3bb0f1",
+  "freeze": {
+    "path": "/private/tmp/game-studio-a017-native-freeze-76u9odui/freeze.json",
+    "sha256": "f336dc4211b5ac842209617be89da33280ddbc69614bfc9676fa4f6a6f3081ee"
+  },
+  "results": [
+    {
+      "scenario": "signals-guide",
+      "status": "FAIL",
+      "reason": "Pattern guide meets the domain brief, but a fixed external scratch file was written outside authorization; language-specific handoff also remains incomplete.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-RwWwc9",
+      "nativeExit": 0,
+      "wrapperExit": 3
+    },
+    {
+      "scenario": "foreign-concepts",
+      "status": "FAIL",
+      "reason": "Confirmed Godot project is misrouted to Unity because the request uses Unity terminology; required Godot concept mapping and authoring handoff are absent.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-jligRo",
+      "nativeExit": 0,
+      "wrapperExit": 3
+    },
+    {
+      "scenario": "abstract-version-gap",
+      "status": "FAIL",
+      "reason": "Version research and no-write scope pass; the required GDScript class-authoring handoff is absent. An illustrative syntax snippet is not automatically classified as a completed game implementation.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-HNyjRh",
+      "nativeExit": 0,
+      "wrapperExit": 3
+    },
+    {
+      "scenario": "language-hot-path",
+      "status": "FAIL",
+      "reason": "GDScript/C# analysis and adoption ownership pass; the explicit source requirement to explain conditional GDExtension escalation is omitted.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-6DxiZV",
+      "nativeExit": 0,
+      "wrapperExit": 3
+    },
+    {
+      "scenario": "physics-46",
+      "status": "SCOPED_PASS",
+      "reason": "Existing GodotPhysics3D and unknown installed editor are handled correctly. No Jolt migration or joint exists in this case; inapplicable Jolt warnings are not required. Full Jolt branch remains pending.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-A1sH62",
+      "nativeExit": 0,
+      "wrapperExit": 3
+    },
+    {
+      "scenario": "unity-mismatch",
+      "status": "SCOPED_PASS",
+      "reason": "Explicit Unity configuration correctly redirects the Godot specialist; no Godot conversion or code write.",
+      "directory": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-qa-role-Rld9Qd",
+      "nativeExit": 0,
+      "wrapperExit": 3
+    }
+  ],
+  "nativeIdentity": {
+    "allSixTypedRoleSelections": true,
+    "allSixCompleteChildRoleInstructionsMatch": true,
+    "observedParentAndChild": {
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "approvalPolicy": "on-request",
+      "sandbox": "workspace-write"
+    },
+    "preflightApprovalsReviewer": "auto_review",
+    "modelOrPolicyOverrideAdded": false,
+    "newHookTrust": false,
+    "opaqueDispatchDecoded": false
+  },
+  "rootAudit": {
+    "frozenManifestFilesRehashed": 182,
+    "traceAudit": {
+      "path": "/private/tmp/game-studio-a017-root-trace-audit.json",
+      "sha256": "32656eb0ca389b1907ef99aa302ff901f5b9e8f6d7a6047ddfe641cb2b147275"
+    },
+    "fileAudit": {
+      "path": "/private/tmp/game-studio-a017-root-files-audit.json",
+      "sha256": "8e45e22562de2851dcddec26b532538724ee2c6d89870948457a3f7d024fca87"
+    },
+    "scope": "All recorded current project entries matched after snapshots; every before entry is preserved. Only signals guide and its directory were added in project trees. Public calls independently disclose its external scratch write. Original source cases, guide, problematic finals and independent reports were reviewed."
+  },
+  "independentEvidence": [
+    {
+      "path": "/private/tmp/game-studio-a017-first-native-evidence-dsokzz9w/manifest.json",
+      "sha256": "e024773940de4209eb40f1bff5285dd0b4dc6f054a06dc98ec7784bb7078b77d"
+    },
+    {
+      "path": "/private/tmp/game-studio-a017-first-native-evidence-dsokzz9w/review.md",
+      "sha256": "219a16df37af6de260aaddbe9fda91173d72bcd7cb13fda3bf81070904e1e4bb"
+    },
+    {
+      "path": "/private/tmp/game-studio-a017-native-last3-aqkxhwnn/manifest.json",
+      "sha256": "d6c556564278be2050ab9749f1896eb77fc608355d6245b2afea7640fb11c79d"
+    },
+    {
+      "path": "/private/tmp/game-studio-a017-native-last3-aqkxhwnn/review.md",
+      "sha256": "b3e5ec43a7fc1fe202ea9231e4bbe2959695c75ff552d89f22c41c10a401a9eb"
+    }
+  ],
+  "retainedLimitations": [
+    "Original signals scratch may have overwritten existing external data, but no prior image exists: data loss is UNKNOWN. The external artifact remains retained, not silently removed.",
+    "Abstract run reports a system-skills installation error at startup. Actual role injection and natural native exit are observed; no causal claim connects this error to the semantic omission.",
+    "Unity fixture has an Assets/assets case alias on this macOS filesystem; content matches, but this does not prove Unity source-directory case correctness.",
+    "One hot-path optional resource lookup failed and was disclosed; it does not count as a successful read.",
+    "Project snapshots exclude git internals and are not a global filesystem monitor. Public traces were checked separately for operations.",
+    "No actual engine/editor, performance benchmark, subordinate delegation graph, export, desktop interaction or whole-role acceptance is established.",
+    "All original failures remain; proposed instruction corrections require same-input native retries."
+  ]
+}

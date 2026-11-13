@@ -6,6 +6,31 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- The [GDScript specialist content](evidence/godot-gdscript-specialist-content-2026-11-13.json)
+  is installed with its complete authoring, typing, async, scene/resource and
+  version responsibilities. Independent review and actual global/restored archive
+  checks pass. [Five original native scenario definitions](evidence/godot-gdscript-fixtures-2026-11-13.json)
+  are integrated; Node 24/26 each pass 529 tests. Native execution is in progress;
+  engine compilation/runtime and desktop acceptance remain open. Current catalog:
+  18 partial Skills/57 pending, 18 partial roles/31 pending, none fully verified.
+
+- [Six Godot specialist native scenarios](evidence/godot-specialist-native-2026-11-13.json)
+  establish actual typed-role selection and inherited settings. Four selected
+  contracts fail: external scratch writing, foreign-engine concept routing,
+  missing language-author handoff and missing conditional native-extension
+  analysis. Existing-backend physics advice and explicit Unity mismatch have
+  scoped passes. Root checked all six project snapshots and complete role
+  injection; original failures and startup warnings remain recorded. Corrections
+  require unchanged-input retries; full role and engine acceptance remain open.
+
+- All seven [CI jobs at e20aab2](https://github.com/T-X-R/codex-game-studio/actions/runs/43368875096)
+  pass. The [Windows scaffold import fix](evidence/ci-scaffold-windows-2026-11-13.json)
+  restores all 24 failing tests; all 26
+  scaffold tests now pass, with 63 existing platform skips unchanged. macOS and
+  both Linux jobs each pass 529 tests; Windows passes 412 of 475 with those 63
+  skips. Browser and both actual Godot jobs also pass their scoped checks.
+  This run precedes the later GDScript role and fixture integration above.
+
 - [Test setup and its portable scaffold](evidence/test-setup-content-2026-11-13.json)
   now preserve all six source phases, four engine branches and original case
   mappings. The installed helper previews or fills missing files, retains owner
