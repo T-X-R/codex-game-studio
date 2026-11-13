@@ -6,13 +6,14 @@ import { canonicalRoot, readText, safePath } from './files.js';
 import { exists } from './project.js';
 import type { InstallPlan } from './install.js';
 import { metadata } from './metadata.js';
+import { planWebScaffold, type WebScaffoldOptions } from './web-scaffold.js';
 
 const renderers: Record<string, [string, string]> = {
   Compatibility: ['GL Compatibility', 'gl_compatibility'],
   'Forward+': ['Forward Plus', 'forward_plus'], Mobile: ['Mobile', 'mobile'],
 };
 
-export async function planEngineScaffold(root: string) {
+export async function planEngineScaffold(root: string, options: WebScaffoldOptions = {}) {
   const project = await canonicalRoot(root);
   const config = await readText(await safePath(project, 'project.yaml'));
   if (config === null) throw new StudioError('INVALID_CONFIG', 'Configure the engine in project.yaml before scaffolding');
@@ -20,6 +21,10 @@ export async function planEngineScaffold(root: string) {
   const engine = document.getIn(['engine', 'name']);
   if (typeof engine !== 'string' || !enums['engine.name']!.includes(engine)) {
     throw new StudioError('INVALID_CONFIG', 'Choose a supported engine in project.yaml before scaffolding');
+  }
+  if (engine === 'Web') return planWebScaffold(project, config, options);
+  if (options.starter !== undefined || options.title !== undefined || options.gitignore !== undefined) {
+    throw new StudioError('INVALID_ARGUMENT', '--starter, --title and --gitignore are Web-only options');
   }
   const plan: InstallPlan = { project, version: metadata.version, changes: [] };
   const verification = { state: 'not_assessed', reason: 'Creating or detecting a project file does not verify its editor, import, build, tests or gameplay.' };
@@ -34,8 +39,7 @@ export async function planEngineScaffold(root: string) {
   }
   if (engine !== 'Godot') {
     const reason = engine === 'Unity' ? 'Create the Unity project with Unity Hub using the selected version and 2D/3D template; then attach or inspect it.'
-      : engine === 'Unreal' ? 'Create the Unreal project with the selected Unreal Editor, then attach or inspect it.'
-      : 'Web scaffolding belongs to prototype growth, which remains under migration; no existing game files were changed.';
+      : 'Create the Unreal project with the selected Unreal Editor, then attach or inspect it.';
     return { plan, engine, outcome: { state: 'not_assessed', reason }, verification };
   }
   const version = document.getIn(['engine', 'version']);

@@ -43,11 +43,17 @@ export const gameCommands: Record<string, Command> = {
       }
       return result;
     } },
-  'engine scaffold': { description: 'Create a missing Godot project from explicit settings or report editor-owned scaffolding requirements', effect: 'write',
-    options: { project, 'dry-run': dryRun }, run: async input => {
-      const { plan, engine, outcome, verification } = await planEngineScaffold(await root(input));
+  'engine scaffold': { description: 'Create a missing Godot project or chosen Web starter; preserve existing projects and report editor-owned requirements', effect: 'write',
+    options: { project, 'dry-run': dryRun, starter: { type: 'string', description: 'Web starter: none, three, phaser or pixi (explicit choice required)' },
+      title: { type: 'string', description: 'Web page title; defaults to project.name or folder name' },
+      gitignore: { type: 'boolean', description: 'Authorize appending missing Web patterns to an existing .gitignore' } }, run: async input => {
+      const { plan, ...details } = await planEngineScaffold(await root(input), {
+        starter: input.values.starter as string | undefined, title: input.values.title as string | undefined,
+        gitignore: input.values.gitignore as boolean | undefined,
+      });
+      const { outcome } = details;
       if (!input.values['dry-run']) await applyInstall(plan);
-      const result = success('engine scaffold', { ...describePlan(plan), engine, verification, dryRun: !!input.values['dry-run'],
+      const result = success('engine scaffold', { ...describePlan(plan), ...details, dryRun: !!input.values['dry-run'],
         outcome: { ...outcome, state: outcome.state === 'planned' && !input.values['dry-run'] ? 'created' : outcome.state } });
       if (outcome.state === 'not_assessed') {
         process.exitCode = 3; result.status = 'not_assessed';
