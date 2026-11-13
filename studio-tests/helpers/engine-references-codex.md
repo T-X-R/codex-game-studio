@@ -1,0 +1,27 @@
+# Engine reference seed observer and copy helper
+
+Sources: upstream `docs/engine-reference/**` (53 files), `.claude/skills/setup-engine/SKILL.md`, references `7-reference-docs.md` and `11-upgrade.md`; all upstream reference hashes and canonical/project mapping are retained in the migration evidence. Canonical resources live in `studio/engine-reference/**`. Runtime does not load `.claude`.
+
+## Installed entry and observations
+
+Resolve `studio/scripts/engine-references.mjs` through the project's pinned `resource path`; invoke `node <returned-path> --project ROOT [--dry-run]`. It uses private `planEngineReferences(root)` and the existing guarded transaction, without a public command or schema addition. Explicit project `engine.name` selects Godot/Unity/Unreal/Web. No missing engine default, network, process, editor installation or quality judgment.
+
+JSON includes `engine`, raw `projectPin`, `reference` (`resourcePrefix`, `targetPrefix`, historical `templatePin`, existing `projectReferencePin`, declared-to-template `seriesRelation`), `outcome`, per-file state/hashes, warnings, `dryRun`, `applied`, and described transaction. Both `qualityAssessed` and `installedVersionAssessed` are false. Outcome is `planned` during preview, `created` after initial copy, `already_present` for matching expected files, or `preserved` for existing partial/different directories. Exit 0 only means the operation completed; unknown pin/applicability and preservation remain actionable observations. Usage/config errors follow existing code 2; missing bundle 3; unsafe paths/file conflicts 4; unexpected I/O errors 1.
+
+Non-Web pin metadata is read before the first subordinate heading. Web uses its real five-column table under the unique direct `## Pinned versions`, selecting Vite's second cell. Existing Markdown visibility excludes fences/comments. Duplicate/missing rows are unknown. Series comparison uses complete literal version strings, not digits embedded in historical sentences or dependency ranges; Unity 6000.N and 6.N alias. A Web template Vite pin is not evidence of the game's bundler. Major.minor agreement is not an exact-version or installed-version check.
+
+## Writes and ownership
+
+Only a completely absent selected engine directory gets its full snapshot; existing (including empty/partial) directories are preserved as a whole. README is created only when absent and never replaced. Other engines coexist. The copied docs belong to the game and never enter install.json; attach/detach preserve them. project.yaml remains byte-identical. Preview has no filesystem side effects. Known targets plus config/README before-images are guarded; no directory-level exclusivity or whole-tree snapshot is promised against unrelated external writes after planning. Existing directory checks occur at planning, so a new unexpected file created afterward is outside the shared transaction's guarantees.
+
+Copying never refreshes verification dates or rewrites pin/Installed-at-pin-time evidence. The source workflow remains responsible for actual official research, actual installed-version observations, sourced history-preserving refresh/upgrade decisions, and coordinated config/reference updates. A seeded historical pin must be reconciled with the selected project version before setup can be called complete. Removed upstream parse-check/vendor executables are explicitly unavailable, not replaced by an invented command.
+
+## Source mapping and separate integration pointer
+
+Every source document is preserved with attribution and a historical snapshot notice. Six bodies adapt old workflow/resource paths or explicitly mark unavailable helpers; all existing version/date metadata stays unchanged. No current model cutoff or latest-version recommendation is inferred. Source stage 4's engine-specific @import becomes a stable installer-owned AGENTS instruction pointing at project-owned configuration, preferences and the selected VERSION. Refresh/upgrade do not rewrite that stable pointer. Existing installer hash conflicts are retained, including edits outside its managed marker. Different toolkit runtime pins still require explicit migration and are not silently upgraded.
+
+## Acceptance scope
+
+Deterministic tests exercise the actual four VERSION resources, complete copying, no-op preview/idempotence, partial/empty/multi-engine preservation, unchanged config and README, literal/unknown version observations, target/config/README concurrent conflicts, path safety, real script behavior, ownership/detach and old-pointer/edited-owner conflicts. A real isolated archive additionally verifies all 53 resource hashes and four engine preview/create/repeat operations outside the maintainer tree. These are tooling checks only; fresh engine facts, engine specialist calls, actual editor behavior and S051 native workflow remain unassessed.
+
+Revision: require bundled VERSION.md before planning any copy (RESOURCE_MISSING/3). Web pin rows must belong to the matched header's contiguous five-column table with its separator; a separate later history table cannot supply the current pin. The required VERSION guard does not assert every possible optional module is known in a corrupt archive: normal full resource closure is separately verified against the 53-file manifest. The wrapper test uses fileURLToPath; Windows directory links use junctions. Windows execution remains unassessed locally.

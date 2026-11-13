@@ -17,6 +17,11 @@ Use \`--help\` for the installed command set. If the runtime is missing, run
 \`game-studio restore --project .\` explicitly; no command downloads it implicitly.
 Read installed \`.agents/skills/game-studio-*/SKILL.md\` for the relevant workflow.
 Use \`resource path studio/docs/integration.md\` for shared collaboration guidance.
+Read project-owned \`project.yaml\` and \`docs/technical-preferences.md\` for settled
+engine choices. For engine work, read \`docs/engine-reference/<engine>/VERSION.md\`
+using the selected engine.name in lower case; if absent, use the installed setup
+workflow. Bundled references are historical snapshots, not proof of the project's
+installed version. Keep project choices and research in those project-owned files.
 Respect existing project instructions and the user's confirmed scope. In guided
 mode, continue implementation and verification without per-file approvals.
 <!-- game-studio:end -->`;
