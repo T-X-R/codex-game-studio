@@ -62,6 +62,11 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
   full fixture acceptance still fails default gamepad confirmation (29/30 checks).
   Root verified 100 frozen artifacts, 640 actual files, 566 originals and the actual
   engine binary. No physical-device, human or complete accessibility acceptance is inferred.
+  [Empty-slot clarification and continuation](evidence/ui-programmer-empty-2026-11-13.json)
+  also proves the requested detail-clearing behavior in the same native parent/child.
+  Root verified 69 frozen artifacts, 603 current files and 568 preserved originals.
+  The complete fixture remains failed: missing gamepad input, unanswered initial
+  state decisions and transient exports outside allowed paths are retained.
 - Story closure now has [five native runs](evidence/story-done-skill-2026-11-13.json)
   covering four selected scenarios: four scoped passes and one retained failure.
   The failed run guessed a system identity from a brief; the instruction now uses

@@ -1,0 +1,249 @@
+{
+  "date": "2026-11-13",
+  "status": "partial",
+  "scope": "A040 source Case4 clarification and same-parent/child continuation; core selected behavior PASS, whole fixture FAIL.",
+  "candidate": {
+    "path": "/private/tmp/game-studio-ui-empty-evidence.q9pokk62",
+    "reviewSha256": "f839e868aca3a8c2e1e0632b52b58359a9c7b0e72e063b2ad736f94caed7d4ff",
+    "manifestSha256": "52ec329f74f2386f91f38d1a53053c113e32495acec6618dceb431c387efd00b"
+  },
+  "independentRootVerification": {
+    "frozenManifestFiles": 69,
+    "actualRegularFiles": 603,
+    "originalFilesPreserved": 568,
+    "symlinksPreserved": 2,
+    "sameParentChildTracePrefixesVerified": true,
+    "allFrozenAndLiveHashesMatch": true,
+    "limitation": "Full public tool/semantic audit by design_review_migration. Root hash/continuity audit does not override reported transient root writes, unresolved owner questions or gamepad failure."
+  },
+  "review": {
+    "scenario": "empty-question",
+    "sourceCase": 4,
+    "overall": "FAIL",
+    "sourceCase4Core": "PASS",
+    "questionRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-bd9ZoL",
+    "answerRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-answer-MdCTHW",
+    "observationRun": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-observation-h7fpDp",
+    "workspace": "/private/var/folders/9c/15n4n4352453j0stxgkrlkkr0000gn/T/game-studio-ui-role-bd9ZoL/UI game \u6d4b\u8bd5",
+    "nativeExitCodes": [
+      0,
+      0
+    ],
+    "nativeWrapperExitCodes": [
+      3,
+      3
+    ],
+    "observerExitCode": 0,
+    "observerWrapperExitCode": 3,
+    "rawReportsRemain": "not_assessed",
+    "roleSha256": "4b0d20be98016eaf0cb5888f5b3af9c77c34044e3357401ccc07086b71ab0290",
+    "packageIntegrity": "sha512-9uLC+jrmEv72Qk0rEh6TSvIzg0EGFOxlCY9ecwbIPcTpj5ijmyMHpbZUS6uimdMN+FBpTuk5eW3fRxcBB8FZ1Q==",
+    "traces": {
+      "parent": {
+        "kind": "parent",
+        "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-47-16-01a1d0de-fbdf-7fa0-ad17-4c62ae9c7287.jsonl",
+        "id": "01a1d0de-fbdf-7fa0-ad17-4c62ae9c7287",
+        "prefixBytes": 236623,
+        "prefixSha256": "7a9871ec573263bf13ec34d81136c372be35e4fee0b032fe2be4fa2b02cc16cd",
+        "context": {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        },
+        "afterBytes": 350072,
+        "afterSha256": "1fa13d9c6d25f67338c157da2cb11f373b32ebf113b5fd33dc9efee4728ec84e",
+        "prefixExact": true,
+        "appendedContexts": [
+          {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          }
+        ],
+        "actualTraceEqualsFrozenAfter": true
+      },
+      "child": {
+        "kind": "child",
+        "path": "/Users/tori/.codex/sessions/2026/11/13/rollout-2026-11-13T01-47-28-01a1d0df-29ef-72e1-b7ae-f2a630cd51f6.jsonl",
+        "id": "01a1d0df-29ef-72e1-b7ae-f2a630cd51f6",
+        "prefixBytes": 440194,
+        "prefixSha256": "95fa38a363de00cd1677efd9b7cd57bfee5392df54733fcf183fb1a538c3a4dc",
+        "context": {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "approval_policy": "on-request",
+          "sandbox_policy": {
+            "type": "workspace-write",
+            "network_access": false,
+            "exclude_tmpdir_env_var": false,
+            "exclude_slash_tmp": false
+          }
+        },
+        "afterBytes": 993416,
+        "afterSha256": "dd177bba9f805abe70981c054871d607751b2c4e82f2cc60d70226fe387cabec",
+        "prefixExact": true,
+        "appendedContexts": [
+          {
+            "model": "gpt-6.1-sol",
+            "effort": "high",
+            "approval_policy": "on-request",
+            "sandbox_policy": {
+              "type": "workspace-write",
+              "network_access": false,
+              "exclude_tmpdir_env_var": false,
+              "exclude_slash_tmp": false
+            }
+          }
+        ],
+        "actualTraceEqualsFrozenAfter": true
+      }
+    },
+    "continuity": {
+      "firstTurnFilesUnchanged": true,
+      "questionAfterEqualsAnswerBefore": true,
+      "protectedOriginalFiles": 568,
+      "allOriginalFilesStillExact": true,
+      "oldTracePrefixesImmutable": true,
+      "sameParentSameChild": true,
+      "sameModelEffortApprovalSandbox": true,
+      "frozenBeforeWorkspaceExact": true,
+      "currentWorkspaceEqualsObserverAfter": true,
+      "sourceEvidenceHashesUnchanged": true
+    },
+    "clarification": {
+      "actualQuestion": "After activating an empty slot, what should Details display, including any localization key?",
+      "additionalUnansweredQuestions": [
+        "initial Details content",
+        "initial focus"
+      ],
+      "onlySuppliedAnswer": "selecting an empty slot clears the detail panel; all other approved behavior is unchanged",
+      "noAdditionalOwnerAnswerIntroduced": true,
+      "observedInitialState": "No selection, blank Details, no focused button. These were not resolved by the supplied owner answer; not credited as approved creative decisions.",
+      "deliveryOmission": "Final parent summary and child evidence summary do not carry forward the initial Details/focus questions; that closure is not proven."
+    },
+    "scope": {
+      "terminalChanged": [],
+      "terminalOutsideScope": [],
+      "transientOutsideAllowedPaths": [
+        "extension_api.json",
+        "engine-api.log"
+      ],
+      "transientTimeline": {
+        "exportCommand": "2026-11-12T17:50:30.303Z",
+        "moveToEvidence": "2026-11-12T17:50:54.402Z"
+      },
+      "explanation": "Godot --path changed effective output location despite caller evidence workdir; export artifacts appeared at project root then were moved into allowed evidence. Terminal snapshots alone cannot pass full write-scope compliance."
+    },
+    "runtime": {
+      "version": "4.7.2.stable.official.ed1daf0bf",
+      "rendering": "Actual macOS OpenGL Compatibility Apple M4",
+      "screenshots": 9,
+      "captureErrors": 0,
+      "independentlyViewed": [
+        "initial.png",
+        "keyboard-right-and-accept.png",
+        "empty-slot-activation.png"
+      ],
+      "emptyDetails": "Observer shows Key x1 before empty activation, then command list [0,1,2] and Details empty; no spec/model/config edit.",
+      "remainingFailure": "Gamepad A under original ui_accept mapping adds no command. D-pad focus moves Slot0 toSlot1. Separate in-memory binding diagnostic is not original-input success.",
+      "finalAssertions": {
+        "total": 36,
+        "passed": 35,
+        "failed": 1
+      },
+      "firstFailuresPreserved": true
+    },
+    "limitations": [
+      "Initial owner questions have no new answer and are not silently settled.",
+      "Full-input integration remains failed; no original config change authorized.",
+      "Transient root writes retained as real scope violation despite relocation.",
+      "API export exited134 after writing version-matched JSON due inaccessible editor cache; first sandbox GUI launch also134, both retained.",
+      "No physical-device, screen-reader speech, human acceptance or measured performance proof.",
+      "Encrypted collaboration payloads were not decrypted. Parent/child identities come from metadata; permissions from original/appended contexts; behavior from actual tools/files/observer."
+    ]
+  },
+  "rootReview": "Root read actual first/continued parent finals, inspected independent empty-slot rendering and verified all frozen/live hashes and immutable trace prefixes. Full call/source/state audit by design_review_migration.",
+  "artifactHashes": {
+    "answer/after.json": "9bc2b8ee7f5e9c78c06c5a5bb255fb666a0094d52d53815ccb16e25a847ae790",
+    "answer/before.json": "7ed4194f5c5a758a50b027ca141477d5e1b7b94d4e21a7bc2ab2c5487707d9d2",
+    "answer/child-after.jsonl": "dd177bba9f805abe70981c054871d607751b2c4e82f2cc60d70226fe387cabec",
+    "answer/child-prefix.jsonl": "95fa38a363de00cd1677efd9b7cd57bfee5392df54733fcf183fb1a538c3a4dc",
+    "answer/continuity.json": "3baa7898ffe70bc5df873e887db1d7f3ae3f6db3861d2b75aacbb465986bc4bf",
+    "answer/engine-preflight.json": "33463c85c8e3c9b739cd0540c4603f4d6cd6be8d3dc00040d417b5d7a957a47a",
+    "answer/events.jsonl": "48401230ff55e78797aa53ca29e671c75137e633b817e763cd26a1f44a613faa",
+    "answer/final.txt": "df625836dfcfed57a4159293757196175e86af9fa0a20ddceaaf4969a36cfa99",
+    "answer/fixture.json": "149fd643c853239a33393c3ff770796c9e5afce78e71af376d42c81525f20c4a",
+    "answer/parent-after.jsonl": "1fa13d9c6d25f67338c157da2cb11f373b32ebf113b5fd33dc9efee4728ec84e",
+    "answer/parent-prefix.jsonl": "7a9871ec573263bf13ec34d81136c372be35e4fee0b032fe2be4fa2b02cc16cd",
+    "answer/report.json": "82d009b7ac6cec1f0e8afaeab41ad00cbf51811d922786372ba84613b6994c0b",
+    "answer/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/design/ux/inventory-flow.md": "fb0ded5a82f7483f9470b9f183eff975ded0eb586ba5982ddce4b96550321c09",
+    "artifacts/docs/coding-standards.md": "167cbaf2de9c9291e2960e827454f9132f96cac603f09701ada216eb0001611c",
+    "artifacts/docs/engine-reference/godot/VERSION.md": "1cc97d397d2f7c047d05cfb50c34ae2c222e63c4c33a3f1b3c93063a039afaf4",
+    "artifacts/i18n/en.po": "21be157aae706e3b38c739eb89d3af3ed87e7a894aba383c9f8f982bdfa9ba56",
+    "artifacts/production/qa/evidence/inventory-20261113-api/check-run-2.log": "6fc4b41ec5c31315a9fc16b59d98d0edda0b8ab2e89e6472c2e927d116a8f34d",
+    "artifacts/production/qa/evidence/inventory-20261113-api/check-run-3.log": "33261a3cc5d19ee54486e0c4df1095586814b103c24bf76a58192c7b22d89fc9",
+    "artifacts/production/qa/evidence/inventory-20261113-api/check-run.log": "fbfbfde4f1c2607cb3b28c49dc027afbc74d502913f257de434631376648ab2c",
+    "artifacts/production/qa/evidence/inventory-20261113-api/engine-api.log": "ba7d7dd18ea6cb6b46e1a7d47df099ecdfd6faab04eb859baef40606a2cfd268",
+    "artifacts/production/qa/evidence/inventory-20261113-api/extension_api.json": "4bea5bc77f39f1091f804dab656a355c63f3dd0284b37803dcbc840d808868a7",
+    "artifacts/production/qa/evidence/inventory-20261113-api/first-run.log": "f3e78be395495e9d5793ee774db7fc53d59b1cb0e6b33ca4c3ea69e1ad3627ef",
+    "artifacts/production/qa/evidence/inventory-20261113-api/render-run.log": "c1ed7695a7c077407164cd54e062b49387fbe3ee026d437f81ca76726c16937a",
+    "artifacts/production/qa/evidence/inventory-20261113-api/ui-api-reference.json": "80e5ce4f9c403aa33230d67f74edae272cce777e08e4de3c217073cf5b05be02",
+    "artifacts/production/qa/evidence/inventory-20261113-checks-2/checks.json": "2985b1267b59b84cd043e20e30d05727d15f66af8f464e4d9a6b3dc84a0898ab",
+    "artifacts/production/qa/evidence/inventory-20261113-checks-3/checks.json": "e832c762cd784d83e8858cab98e4f67d3b613ef0c604712d0be52df92c05ccb2",
+    "artifacts/production/qa/evidence/inventory-20261113-checks/checks.json": "c015b1bf931c96e514be34f76914bfe048ac9b113526e18b443ffec8d53adfd0",
+    "artifacts/production/qa/evidence/inventory-20261113-render/empty-slot-activation.png": "87d30434fe68437a8d5a230e3a2bb2f8b5b19e072e993e68ca6bb9b434301b53",
+    "artifacts/production/qa/evidence/inventory-20261113-render/first-slot-mouse-activation.png": "ceff3d487916ff9681f34f99c825eb622fc40805a60c3775f9e7c87cc7123975",
+    "artifacts/production/qa/evidence/inventory-20261113-render/game-side-quantity-change.png": "838e61e9ff00c8a6b95bf91ee069461e17b1bcba92c56b237d95d184ebd5c946",
+    "artifacts/production/qa/evidence/inventory-20261113-render/gamepad-accept.png": "fb55b09d6f7b335b33e48d340e884168fb1c00be665f6ad5ed2df62043b77161",
+    "artifacts/production/qa/evidence/inventory-20261113-render/gamepad-right-focus-before-confirm.png": "fb55b09d6f7b335b33e48d340e884168fb1c00be665f6ad5ed2df62043b77161",
+    "artifacts/production/qa/evidence/inventory-20261113-render/initial.png": "87d30434fe68437a8d5a230e3a2bb2f8b5b19e072e993e68ca6bb9b434301b53",
+    "artifacts/production/qa/evidence/inventory-20261113-render/keyboard-right-and-accept.png": "fb55b09d6f7b335b33e48d340e884168fb1c00be665f6ad5ed2df62043b77161",
+    "artifacts/production/qa/evidence/inventory-20261113-render/locked-slot-click.png": "87d30434fe68437a8d5a230e3a2bb2f8b5b19e072e993e68ca6bb9b434301b53",
+    "artifacts/production/qa/evidence/inventory-20261113-render/observations.json": "fb0ae08e89d0ecaab8db3ccb6a8550af8b44656f778abf53ec392288c128f5ed",
+    "artifacts/production/qa/evidence/inventory-20261113-render/pointer-over-first-slot.png": "b1a77c6b4382521271fb58f8b92f4149dfa9c982e7fc392e052331721f7640e8",
+    "artifacts/production/qa/evidence/inventory-20261113-summary.md": "bf8efea982eae63b81344fa9fe4ce4b46ba1234eace5a30b8ccd46fb09e75381",
+    "artifacts/production/qa/evidence/observer-09005362-aa2a-4954-8605-b676253e145c/empty-slot-activation.png": "87d30434fe68437a8d5a230e3a2bb2f8b5b19e072e993e68ca6bb9b434301b53",
+    "artifacts/production/qa/evidence/observer-09005362-aa2a-4954-8605-b676253e145c/first-slot-mouse-activation.png": "ceff3d487916ff9681f34f99c825eb622fc40805a60c3775f9e7c87cc7123975",
+    "artifacts/production/qa/evidence/observer-09005362-aa2a-4954-8605-b676253e145c/game-side-quantity-change.png": "838e61e9ff00c8a6b95bf91ee069461e17b1bcba92c56b237d95d184ebd5c946",
+    "artifacts/production/qa/evidence/observer-09005362-aa2a-4954-8605-b676253e145c/gamepad-accept.png": "fb55b09d6f7b335b33e48d340e884168fb1c00be665f6ad5ed2df62043b77161",
+    "artifacts/production/qa/evidence/observer-09005362-aa2a-4954-8605-b676253e145c/gamepad-right-focus-before-confirm.png": "fb55b09d6f7b335b33e48d340e884168fb1c00be665f6ad5ed2df62043b77161",
+    "artifacts/production/qa/evidence/observer-09005362-aa2a-4954-8605-b676253e145c/initial.png": "87d30434fe68437a8d5a230e3a2bb2f8b5b19e072e993e68ca6bb9b434301b53",
+    "artifacts/production/qa/evidence/observer-09005362-aa2a-4954-8605-b676253e145c/keyboard-right-and-accept.png": "fb55b09d6f7b335b33e48d340e884168fb1c00be665f6ad5ed2df62043b77161",
+    "artifacts/production/qa/evidence/observer-09005362-aa2a-4954-8605-b676253e145c/locked-slot-click.png": "87d30434fe68437a8d5a230e3a2bb2f8b5b19e072e993e68ca6bb9b434301b53",
+    "artifacts/production/qa/evidence/observer-09005362-aa2a-4954-8605-b676253e145c/observations.json": "c64dc2a20aac30ed6fba1f1f1eed2ee9ddaf0e2c806694256c7ea13e02bff859",
+    "artifacts/production/qa/evidence/observer-09005362-aa2a-4954-8605-b676253e145c/pointer-over-first-slot.png": "b1a77c6b4382521271fb58f8b92f4149dfa9c982e7fc392e052331721f7640e8",
+    "artifacts/project.godot": "7b69192910397c811604f87398ef4a2fb3d5c2d5ad5be526ee5b99ebf2fbaf4b",
+    "artifacts/project.yaml": "e00b60f8efddb11b99b040470152761f920e41798020437604872d15c1d48571",
+    "artifacts/src/inventory_model.gd": "1522e3fae8262a56b5bd1819311080bfc81bfa922b479216e49600fc8fd0f9e4",
+    "artifacts/src/ui/inventory_screen.gd": "2829a8b4c48671a9e44211385afcbb91c0ead7534032fe6d36626af59bd5565b",
+    "artifacts/src/ui/inventory_screen.tscn": "b4d21453fb0443ddbbdd3e8f2a2a8587c04aa0afd8c9dd3850ef433d467d627d",
+    "artifacts/tests/ui_inventory_checks.gd": "e519dad7cbaa05923ea79ed404cb4ef97774d3788f4f195f08c5e3395c23c9f5",
+    "observer/after.json": "187631322ad43b5810b58ecaf623f1bfb8c0331120167ff79ad624cb68eb2e1f",
+    "observer/before.json": "9bc2b8ee7f5e9c78c06c5a5bb255fb666a0094d52d53815ccb16e25a847ae790",
+    "observer/execution.json": "6ab51e404b587c37d34610dbc2a2c48f186b4e78fe622ba22b8ced421ac7bfa3",
+    "observer/report.json": "dd8fe68ea544305abb5e1619402113a09f7f1b7c8c68a2712ff139162cc5e900",
+    "question/after.json": "7ed4194f5c5a758a50b027ca141477d5e1b7b94d4e21a7bc2ab2c5487707d9d2",
+    "question/before.json": "7ed4194f5c5a758a50b027ca141477d5e1b7b94d4e21a7bc2ab2c5487707d9d2",
+    "question/engine-preflight.json": "33463c85c8e3c9b739cd0540c4603f4d6cd6be8d3dc00040d417b5d7a957a47a",
+    "question/events.jsonl": "a8bfd4a5fbd74fb012b7346f9f2bc87b3340d290ea75573ab1e8ead06abe890b",
+    "question/final.txt": "0542eba33f168aa1a5b35db794816b46b3e7c47360a848718a308ad4d4b86648",
+    "question/fixture.json": "09bb7d0bf0065f0442be86f63d73ca6596d8b20af219592fed3e41056b2fb7ab",
+    "question/inputs.json": "22807586fbf2fb2e0d496cdcfa058ba48795ae6d8f2a9fe94114814e67509c7c",
+    "question/report.json": "ee579695cda21c56c942953d555f0ca701e5a61168fdc0c4b4c2fdaeeb600b96",
+    "question/stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+    "review.json": "f839e868aca3a8c2e1e0632b52b58359a9c7b0e72e063b2ad736f94caed7d4ff"
+  }
+}
