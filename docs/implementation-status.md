@@ -6,6 +6,24 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- [Project coherence observations](evidence/project-coherence-2026-11-13.json)
+  and [project-owned engine references](evidence/engine-references-2026-11-13.json)
+  are integrated. Node 24/26 each pass 496 tests; build, typecheck, content and
+  clean installed-package checks pass. Global and restored runtimes each copy
+  all four reference trees with source-exact bytes, preserve configuration and
+  run static observations. A real Godot 4.7.2 version-only probe passes without
+  changing project files. The 53 reference files retain historical metadata;
+  copying is not fresh research or installed-engine acceptance. Full S051 and
+  this addition's exact-head CI remain open.
+
+- All five [CI jobs at 09ff4e2](https://github.com/T-X-R/codex-game-studio/actions/runs/43361842754)
+  pass, including the [corrected native Windows fixture](evidence/page-shot-windows-native-2026-11-13.json).
+  Actual diagnostics locate the reappearing ProgramFiles key between the supplied
+  parent environment and child entry; clearing it inside the child preserves the
+  original discovery assertion. The restoring runtime/OS component remains
+  unidentified. Windows reports 337 passes and 56 explicit skips; skipped POSIX
+  comparisons are not Windows evidence. Earlier failures remain below.
+
 - The [follow-up Windows fixture attempt](evidence/page-shot-child-environment-2026-11-13.json)
   still failed on `b36a2c5`, so the parent-environment explanation below is
   incomplete. The fixture now checks and clears browser-discovery environment

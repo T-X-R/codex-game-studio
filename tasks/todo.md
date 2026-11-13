@@ -15,6 +15,14 @@ Source identities and proposed dispositions: [migration-inventory.md](migration-
 
 ## Progress note
 
+2026-11-13: S051 reference/coherence foundations are integrated: all 53 historical
+reference files, project-owned initial copy and stable AGENTS pointer, plus
+source-derived consistency observations. Node 24/26 each pass 496 tests and clean
+global/restored package checks pass for all four engine trees. A real Godot
+version-only probe preserves project files. Full Skill/native/refresh/upgrade
+acceptance and parent tasks remain open. The preceding Windows fixture repair
+passes all five CI jobs at 09ff4e2; new foundations need their own exact-head CI.
+
 2026-11-13: S051 foundations now include typed platform/performance/testing setup
 and rich-mirror preservation, four source-preserving Web starters, and direct
 page screenshot/console capture. See the three current evidence records linked

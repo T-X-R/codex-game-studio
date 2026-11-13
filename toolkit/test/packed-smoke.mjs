@@ -247,6 +247,40 @@ try {
     await assert.rejects(readFile(join(existingWeb, 'shot/report.json')), { code: 'ENOENT' });
   }
   for (const [runtime, entry] of [['global', globalCli], ['restored', launcher]]) {
+    const referenceHelper = command(entry, 'resource', 'path', 'studio/scripts/engine-references.mjs', '--project', project).data.path;
+    const coherenceHelper = command(entry, 'resource', 'path', 'studio/scripts/project-coherence.mjs', '--project', project).data.path;
+    for (const [helper, name] of [[referenceHelper, 'engine-references'], [coherenceHelper, 'project-coherence']]) {
+      assert.deepEqual(await readFile(helper), await readFile(join(packageRoot, `../studio/scripts/${name}.mjs`)));
+      if (runtime === 'restored') assert.ok(helper.startsWith(join(project, '.game-studio/node_modules')));
+    }
+    for (const [engine, version] of [['Godot', '4.7'], ['Unity', '6000.3.26f1'], ['Unreal', '5.8'], ['Web', '8.3.4']]) {
+      const target = join(temp, `${runtime} ${engine} references`);
+      await mkdir(target);
+      const config = JSON.stringify({ engine: { name: engine, version } });
+      await writeFile(join(target, 'project.yaml'), config);
+      const preview = JSON.parse(execute(referenceHelper, ['--project', target, '--dry-run']));
+      assert.equal(preview.outcome.state, 'planned');
+      assert.equal(preview.applied, false);
+      assert.deepEqual(await readdir(target), ['project.yaml']);
+      const created = JSON.parse(execute(referenceHelper, ['--project', target]));
+      assert.equal(created.outcome.state, 'created');
+      assert.equal(created.installedVersionAssessed, false);
+      const source = join(packageRoot, '../studio/engine-reference', engine.toLowerCase());
+      for (const file of await readdir(source, { recursive: true, withFileTypes: true })) {
+        if (!file.isFile()) continue;
+        const name = relative(source, join(file.parentPath, file.name));
+        assert.deepEqual(await readFile(join(target, 'docs/engine-reference', engine.toLowerCase(), name)), await readFile(join(source, name)));
+      }
+      assert.deepEqual(await readFile(join(target, 'docs/engine-reference/README.md')), await readFile(join(packageRoot, '../studio/engine-reference/README.md')));
+      assert.equal(JSON.parse(execute(referenceHelper, ['--project', target])).outcome.state, 'already_present');
+      const observed = JSON.parse(execute(coherenceHelper, ['--project', target]));
+      assert.equal(observed.status, 'observed');
+      assert.equal(observed.qualityAssessed, false);
+      assert.deepEqual(observed.probes, []);
+      if (engine !== 'Web') assert.equal(observed.observations.find(row => row.check === 'reference-series').state, 'MATCH');
+      assert.match(execute(coherenceHelper, ['--project', target, '--text']), /Observations only/);
+      assert.equal(await readFile(join(target, 'project.yaml'), 'utf8'), config);
+    }
     for (const starter of ['none', 'three', 'phaser', 'pixi']) {
       const freshWeb = join(temp, `${runtime} ${starter} starter`);
       await mkdir(freshWeb);

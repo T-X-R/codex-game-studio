@@ -1,0 +1,593 @@
+{
+  "date": "2026-11-13",
+  "scope": "Initial project-owned engine reference copy and stable installed pointer",
+  "status": "PASS_SCOPED",
+  "canonicalFiles": {
+    "toolkit/src/engine-references.ts": "3fd896524d0bf70767e565306cffe054ef23dcfcd59b51118f4525a2eb7998b0",
+    "studio/scripts/engine-references.mjs": "0bf74af86207701bfd359dd7c5c72d8cda810fc9a79f277e8690dc69ded641ea",
+    "toolkit/src/attach.ts": "c0803771beb0de3c61cfb448b25c6d6a14721483b1642526d21bea3b4a586a99",
+    "toolkit/test/engine-references.test.mjs": "8563171a6945dfca9c68ce9534e5c3012d251798517e6a18acb993d1547a6822",
+    "toolkit/test/engine-reference-pointer.test.mjs": "76c4ff895c9ef1cbeb4fba2c3a172c469c694be5f2111095bb1f4a034eca4d77",
+    "studio-tests/helpers/engine-references-codex.md": "846b68c0a687f5080c393ad630c1d7d7a67bf4a8b71bbb18d51a316cd733f990"
+  },
+  "resourceMapping": [
+    {
+      "source": "docs/engine-reference/README.md",
+      "canonical": "studio/engine-reference/README.md",
+      "projectTarget": "docs/engine-reference/README.md",
+      "sourceSha256": "560b591a92ee7094f40368476c0f77f73b807121134abe1d31724282fe52c0e1",
+      "candidateSha256": "493460767f77c4fe5a48e5946942727f36ee3e3cf0c0bf3e88987aa355cedbf0",
+      "bodyChanged": true,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/godot/VERSION.md",
+      "canonical": "studio/engine-reference/godot/VERSION.md",
+      "projectTarget": "docs/engine-reference/godot/VERSION.md",
+      "sourceSha256": "ca3522430fd4e93d2d786f1d9292c5debb264208fc2067092e1cf6eafe44897f",
+      "candidateSha256": "2c29fa80e66496cebff866c23bd069a5b136ae10c498b3407fdc227322b4e463",
+      "bodyChanged": true,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/godot/breaking-changes.md",
+      "canonical": "studio/engine-reference/godot/breaking-changes.md",
+      "projectTarget": "docs/engine-reference/godot/breaking-changes.md",
+      "sourceSha256": "6d566ed89500235f1935aef48ddf66bb7677e16d0f98ea4de2a977e21eeafdca",
+      "candidateSha256": "7cb4375e8b343a32b2b3e9a433cdf5c876093cfcf80e161fb13961a25748f739",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/godot/current-best-practices.md",
+      "canonical": "studio/engine-reference/godot/current-best-practices.md",
+      "projectTarget": "docs/engine-reference/godot/current-best-practices.md",
+      "sourceSha256": "78785e6957f3f15dbff33a7563bfd0f8fa00a085e292dab1f082329413eb9ed5",
+      "candidateSha256": "60c008c1c288b2dad2395e9dbaeef5d849daa3257f3d0bb4d7c77bc8fcc599e5",
+      "bodyChanged": true,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/godot/deprecated-apis.md",
+      "canonical": "studio/engine-reference/godot/deprecated-apis.md",
+      "projectTarget": "docs/engine-reference/godot/deprecated-apis.md",
+      "sourceSha256": "1a66684256189c9e11900a9ce1e948a9ad84459dcaaa26ef76bc775499832f98",
+      "candidateSha256": "c9d4dd87d73f1d6d27799ab7c41e8fd423fd20f105554a4d398f15cffb00a89c",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/godot/modules/animation.md",
+      "canonical": "studio/engine-reference/godot/modules/animation.md",
+      "projectTarget": "docs/engine-reference/godot/modules/animation.md",
+      "sourceSha256": "3f309b298a442ee5e19b9d3f036a12f5f0d5cc8c70b76c9f148542471421ebbf",
+      "candidateSha256": "5bc9515897a4d842b945075e15f9528a7175f58c74fa1a50a27917dd3297178b",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/godot/modules/audio.md",
+      "canonical": "studio/engine-reference/godot/modules/audio.md",
+      "projectTarget": "docs/engine-reference/godot/modules/audio.md",
+      "sourceSha256": "e346e34f63b48d04b04d055bdc64f02767f06368065d959940d923212215b18f",
+      "candidateSha256": "85676116a2ddae045ecc1d51cb5752b92ca7080e2fb6d903fe841d7bc9c6fdbb",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/godot/modules/input.md",
+      "canonical": "studio/engine-reference/godot/modules/input.md",
+      "projectTarget": "docs/engine-reference/godot/modules/input.md",
+      "sourceSha256": "2aada941fbd899c7d16651d0fc29658010fd38f8ffa8b2c1b6587193e9d12dc4",
+      "candidateSha256": "7e1489d61b7f864a83c890139db294651cf7f8da48e5e19a414eebacfbc054fd",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/godot/modules/navigation.md",
+      "canonical": "studio/engine-reference/godot/modules/navigation.md",
+      "projectTarget": "docs/engine-reference/godot/modules/navigation.md",
+      "sourceSha256": "75bab2ba713a946ffe1dff6438179205b9743193b27013d791ca6d359fc748ef",
+      "candidateSha256": "9531227a2e5fa9f8cfdadf19f6b053f8f880e907ec4d7747631fa91d48188f52",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/godot/modules/networking.md",
+      "canonical": "studio/engine-reference/godot/modules/networking.md",
+      "projectTarget": "docs/engine-reference/godot/modules/networking.md",
+      "sourceSha256": "0c268b5fdeb6c592c19fb9e342a419ef3ed4436fbd490bd4c73e0bd7bad43259",
+      "candidateSha256": "cf31f6ed1f2215789f296b75014a5303da58f4118b31dc8e8fd2124b50638416",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/godot/modules/physics.md",
+      "canonical": "studio/engine-reference/godot/modules/physics.md",
+      "projectTarget": "docs/engine-reference/godot/modules/physics.md",
+      "sourceSha256": "c4a3ef5417e634a207e2ecedc1ff457512c50974534cae2d7636536bf52eef77",
+      "candidateSha256": "abe44fbd18f7b8c2c6f00aba6a65d71fc18101de693103e2aab96c63c5f736b8",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/godot/modules/rendering.md",
+      "canonical": "studio/engine-reference/godot/modules/rendering.md",
+      "projectTarget": "docs/engine-reference/godot/modules/rendering.md",
+      "sourceSha256": "a504d88f0536dda804e819373b11624669bce245f74c90292461c9efb9ec96aa",
+      "candidateSha256": "c10dadf4b33bcfc1d2c164fd1c7f3d177e4ba8910f9db2ff786b3a96d6b2fa8b",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/godot/modules/ui.md",
+      "canonical": "studio/engine-reference/godot/modules/ui.md",
+      "projectTarget": "docs/engine-reference/godot/modules/ui.md",
+      "sourceSha256": "cdd6f0d69706c057a7c051a80eb60262fc2c5348ffdc62d9f59139a2269dbb1c",
+      "candidateSha256": "412e232589bbc02725ca2a85517134288ed2af246222770609b9901dffe128a5",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/PLUGINS.md",
+      "canonical": "studio/engine-reference/unity/PLUGINS.md",
+      "projectTarget": "docs/engine-reference/unity/PLUGINS.md",
+      "sourceSha256": "e3fc38b36dc94ba19440a48c7e2d0cce75458f1bcaefc15fa9d1916b32d451ba",
+      "candidateSha256": "3a8561081a8dbf5a3ba7c7f9bcb72eddc2fb78ec31b8ad2cfa2b5ebd8ff77b7d",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/VERSION.md",
+      "canonical": "studio/engine-reference/unity/VERSION.md",
+      "projectTarget": "docs/engine-reference/unity/VERSION.md",
+      "sourceSha256": "115bd52ba5009cf3590c80ebba801fcccd15a3d460855b6a7dafcac1d3f321d2",
+      "candidateSha256": "a78331d257062dfca356d9065a0d2bf77cd56988467899ab295e89b6c2c3202f",
+      "bodyChanged": true,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/breaking-changes.md",
+      "canonical": "studio/engine-reference/unity/breaking-changes.md",
+      "projectTarget": "docs/engine-reference/unity/breaking-changes.md",
+      "sourceSha256": "18552463ef012450a493ec20046e0722bc53b629116caf1b482c0e076aa41391",
+      "candidateSha256": "64fb133cb2dc091965153a6db7503585920da2566e28f2d6583a9bd92190dd5b",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/current-best-practices.md",
+      "canonical": "studio/engine-reference/unity/current-best-practices.md",
+      "projectTarget": "docs/engine-reference/unity/current-best-practices.md",
+      "sourceSha256": "4a49203b4f33d35fded2771758d4dab0b0d28fc75de3a3191fc5a2c31b7af1e8",
+      "candidateSha256": "bf50610d272c40f3e4b38ec4de7167cc490a1002e642d3be533d024bfa64cdc5",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/deprecated-apis.md",
+      "canonical": "studio/engine-reference/unity/deprecated-apis.md",
+      "projectTarget": "docs/engine-reference/unity/deprecated-apis.md",
+      "sourceSha256": "e72ebe44b37c85aa9bf45123aad31425d3170889b59723ce3420cea2558ba691",
+      "candidateSha256": "7368f45d4adeb636296860dc19a5406d8935117fa303ffdc9c43c14a95b9692a",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/modules/animation.md",
+      "canonical": "studio/engine-reference/unity/modules/animation.md",
+      "projectTarget": "docs/engine-reference/unity/modules/animation.md",
+      "sourceSha256": "a34f5c692dee08f1f1f3d805fd79a14957ca5443ecf6a06e446ec5af5bdd882b",
+      "candidateSha256": "21667d118ac5874db8ea3bcb8e1be10efaeae60eea0383d76081610a51fa193d",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/modules/audio.md",
+      "canonical": "studio/engine-reference/unity/modules/audio.md",
+      "projectTarget": "docs/engine-reference/unity/modules/audio.md",
+      "sourceSha256": "a4b9cc6ea8d8e4d662698cebad19739d5d044440148e05bb37e82098ce971002",
+      "candidateSha256": "ce7479ad542834ce84b5578a05a9d3bad95477010af84f88f71ee1cd16012f70",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/modules/input.md",
+      "canonical": "studio/engine-reference/unity/modules/input.md",
+      "projectTarget": "docs/engine-reference/unity/modules/input.md",
+      "sourceSha256": "5763459442ecbbb843b90e6deb8955e76f4dcc5c44ce9911d2300994a1ad390a",
+      "candidateSha256": "6b4850f3d19296a432d7329aaa1c5a80170936bdd33acd5be8c04ae2af062abe",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/modules/navigation.md",
+      "canonical": "studio/engine-reference/unity/modules/navigation.md",
+      "projectTarget": "docs/engine-reference/unity/modules/navigation.md",
+      "sourceSha256": "fa9fa5e442a97282c83ab17a86a22b5afd610ab604f7f4c516953d77f32edcc2",
+      "candidateSha256": "57b6688f3b2355a378f9b64f262950a338d354ea0d9f1b6815c987a26e285f5f",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/modules/networking.md",
+      "canonical": "studio/engine-reference/unity/modules/networking.md",
+      "projectTarget": "docs/engine-reference/unity/modules/networking.md",
+      "sourceSha256": "bae4446e74e369bc0d854f3f1db0627a2c761a44414cb951d429547e4893be32",
+      "candidateSha256": "65eed1fcd9ee19e521966bb56f0f652230743ac1b094800b96028b793ae4db24",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/modules/physics.md",
+      "canonical": "studio/engine-reference/unity/modules/physics.md",
+      "projectTarget": "docs/engine-reference/unity/modules/physics.md",
+      "sourceSha256": "695a063419773551158803d264e2fea534cdab8f7638e4a4052af8e3201252b2",
+      "candidateSha256": "d7ce0a9ab05424b0584ab9bdcb4acc7e0ef13d9cc267189a4e28f39debbe78df",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/modules/rendering.md",
+      "canonical": "studio/engine-reference/unity/modules/rendering.md",
+      "projectTarget": "docs/engine-reference/unity/modules/rendering.md",
+      "sourceSha256": "0e92faf290529cf7d01512e40b501fb8fd908a5a65eb24512bd541aef875e47f",
+      "candidateSha256": "9c0a57cfcd256f13b674c3c0ce233adea5d8f208dd3d16e7ccc8ed78af5680d0",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/modules/ui.md",
+      "canonical": "studio/engine-reference/unity/modules/ui.md",
+      "projectTarget": "docs/engine-reference/unity/modules/ui.md",
+      "sourceSha256": "eb562e228579a79d5bd7cd90dbfe3b885098f413399a50e56b920811ecd0e34a",
+      "candidateSha256": "8d978302b767f0fc7894431a3db5d567d4b06c5d022da98367e9786195ee02b1",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/plugins/addressables.md",
+      "canonical": "studio/engine-reference/unity/plugins/addressables.md",
+      "projectTarget": "docs/engine-reference/unity/plugins/addressables.md",
+      "sourceSha256": "7d816932c765ddde59e1c0739ad813c9dccb3d8b9d098c761469300f8b9e8286",
+      "candidateSha256": "e55be9cb6856753ccceec7011d36a3e5b6a0e9bb45cfdad625c240a609f3c73a",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/plugins/cinemachine.md",
+      "canonical": "studio/engine-reference/unity/plugins/cinemachine.md",
+      "projectTarget": "docs/engine-reference/unity/plugins/cinemachine.md",
+      "sourceSha256": "015401a08d7e56729b57d58509ba73c31265134b6b75c33f9fb896e81192571a",
+      "candidateSha256": "ac850eba32ee0f3b492c8bdb32ae5c0ce8fd901ff323c99eadee39edca81a62c",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unity/plugins/dots-entities.md",
+      "canonical": "studio/engine-reference/unity/plugins/dots-entities.md",
+      "projectTarget": "docs/engine-reference/unity/plugins/dots-entities.md",
+      "sourceSha256": "2f25288586c23be8ab02d8d575fa4ec0ffda1bc9b767f60ccbe21d6c7fc7b9e1",
+      "candidateSha256": "2d8b8819908eb5c4c49af58fb0c9ae01bf3db1634f4a8090f67d17d855b5b0b3",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/PLUGINS.md",
+      "canonical": "studio/engine-reference/unreal/PLUGINS.md",
+      "projectTarget": "docs/engine-reference/unreal/PLUGINS.md",
+      "sourceSha256": "63858fb906de0d264df0e4accaf96d7ae972c1042a9b5f4cc001bc7cd2064ae2",
+      "candidateSha256": "9eadc7321f64b625e3d94146ab64292f36483808e338d0e59da1c47c505b267a",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/VERSION.md",
+      "canonical": "studio/engine-reference/unreal/VERSION.md",
+      "projectTarget": "docs/engine-reference/unreal/VERSION.md",
+      "sourceSha256": "ede0f05e5e932f9dd3c95f3cabb25922b20b6d8eff1001c8e995ad2d46b606da",
+      "candidateSha256": "ca0ab3a13f07cc9bf7b0c5f9297d63ffc8d43db5f3397cec4d201d21f2c7056c",
+      "bodyChanged": true,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/breaking-changes.md",
+      "canonical": "studio/engine-reference/unreal/breaking-changes.md",
+      "projectTarget": "docs/engine-reference/unreal/breaking-changes.md",
+      "sourceSha256": "a09644018f1d4a44d6230f4001d8bfb75e52c13dfabd068d2ee247a5e87c844c",
+      "candidateSha256": "aa12caeb647908816263ca6fb147b5fd5e9984468aa239a7c386c5ebc457214c",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/current-best-practices.md",
+      "canonical": "studio/engine-reference/unreal/current-best-practices.md",
+      "projectTarget": "docs/engine-reference/unreal/current-best-practices.md",
+      "sourceSha256": "3a368803c41a2d798b560a76633a18a7c684a9c538b33f08949897761a6856bd",
+      "candidateSha256": "ce86a303b3ab98214e2f98981035785adaba75e8df27ba54661466170cfa0865",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/deprecated-apis.md",
+      "canonical": "studio/engine-reference/unreal/deprecated-apis.md",
+      "projectTarget": "docs/engine-reference/unreal/deprecated-apis.md",
+      "sourceSha256": "0241d87b3e535fe5a9f01dff811534ada50073165e1caa3e4cdd5c36a4deb400",
+      "candidateSha256": "b2c03d02f5a3e2151a2e216eef093c4abfe5fe24bffc6124cdfa79e648bcd48b",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/modules/animation.md",
+      "canonical": "studio/engine-reference/unreal/modules/animation.md",
+      "projectTarget": "docs/engine-reference/unreal/modules/animation.md",
+      "sourceSha256": "cdcd87543de1af981725c3cd6f799a265d8d4c655cb597c6ada51199701b4212",
+      "candidateSha256": "8e558361c102f76a50ed82a42c2f904adc6a23f4d83e516ddb39e4dd5e8a19a0",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/modules/audio.md",
+      "canonical": "studio/engine-reference/unreal/modules/audio.md",
+      "projectTarget": "docs/engine-reference/unreal/modules/audio.md",
+      "sourceSha256": "9921b8365938258d013562260342024dbdb22124cd6b1af12cde41118e5881d2",
+      "candidateSha256": "f651a203618d92bbad24a5335efa905b90bfc06ac21776218f4500830197b020",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/modules/input.md",
+      "canonical": "studio/engine-reference/unreal/modules/input.md",
+      "projectTarget": "docs/engine-reference/unreal/modules/input.md",
+      "sourceSha256": "9028f94eba067676e67334ff45b243c00498e7a2ff8b040fee797a365f05707a",
+      "candidateSha256": "0a2db93441b31d0b9ce9d785130cbf074961c6b9181f567f848dbae2cef869a5",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/modules/navigation.md",
+      "canonical": "studio/engine-reference/unreal/modules/navigation.md",
+      "projectTarget": "docs/engine-reference/unreal/modules/navigation.md",
+      "sourceSha256": "36386a8039dd01cb2caf523721b7f24b99b7b8b43c52c727468daae9da67d2e8",
+      "candidateSha256": "224145116c205484cc40ce9a871bc9e2ea15d5df1174c10df670abfc412a9f16",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/modules/networking.md",
+      "canonical": "studio/engine-reference/unreal/modules/networking.md",
+      "projectTarget": "docs/engine-reference/unreal/modules/networking.md",
+      "sourceSha256": "7a93652c397952bc621db78835cf3b5625775b916846c4880bb41dcdbc273830",
+      "candidateSha256": "4c67a30c31cf00553296bf9157c82a682dd347c9fdf9ff63eba488eba41c09f9",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/modules/physics.md",
+      "canonical": "studio/engine-reference/unreal/modules/physics.md",
+      "projectTarget": "docs/engine-reference/unreal/modules/physics.md",
+      "sourceSha256": "1b6e37e0cfb7082801a84c9b6b388de3c72a4790f0c304a52be4d9b9f489574d",
+      "candidateSha256": "ca058d0861af985de8311f6f73e4d709c9c239d266598dff1107944e60215b23",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/modules/rendering.md",
+      "canonical": "studio/engine-reference/unreal/modules/rendering.md",
+      "projectTarget": "docs/engine-reference/unreal/modules/rendering.md",
+      "sourceSha256": "f482041dd302712d15d1dcccf4822ac8551c6359fbcfcbbbf119016626623c7b",
+      "candidateSha256": "0071c72843329e427b78c8ef7aa0c415c25bc067ba68b70a18fece1d3e58bc35",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/modules/ui.md",
+      "canonical": "studio/engine-reference/unreal/modules/ui.md",
+      "projectTarget": "docs/engine-reference/unreal/modules/ui.md",
+      "sourceSha256": "ce3dd69d610a7421c5310dbe92d64e6f07aed8e0c8b3b1c902726ea1f128c2a3",
+      "candidateSha256": "ceb8ed27c304c009895705021d24e3b44c9e6919e5c1f808a40ba2f172be7cab",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/plugins/common-ui.md",
+      "canonical": "studio/engine-reference/unreal/plugins/common-ui.md",
+      "projectTarget": "docs/engine-reference/unreal/plugins/common-ui.md",
+      "sourceSha256": "22670acf08273611d853bf8c5e54aa4c65247ddced56a596e49da12de8e16806",
+      "candidateSha256": "c78376f25ad36fe534e36047c709ef79c425811c9a6f50f01beece87fad11465",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/plugins/gameplay-ability-system.md",
+      "canonical": "studio/engine-reference/unreal/plugins/gameplay-ability-system.md",
+      "projectTarget": "docs/engine-reference/unreal/plugins/gameplay-ability-system.md",
+      "sourceSha256": "479e58deafd02521d7b1fc9172e0dd657004843d9660681307633762e0ff2624",
+      "candidateSha256": "58f2bb2cf6d7212b99b60394ea719cfe06d7d0ab75d5b875a8faa3b878575487",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/plugins/gameplay-camera-system.md",
+      "canonical": "studio/engine-reference/unreal/plugins/gameplay-camera-system.md",
+      "projectTarget": "docs/engine-reference/unreal/plugins/gameplay-camera-system.md",
+      "sourceSha256": "e5e7b45e383eba6f8c9d2f59bc58440e63edb360df6d49b7790997bb7dcac067",
+      "candidateSha256": "a9470b8435215d7e7ab04b7dca23d140e59ddf7a75e5fba3e3b004e58764e6e9",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/unreal/plugins/pcg.md",
+      "canonical": "studio/engine-reference/unreal/plugins/pcg.md",
+      "projectTarget": "docs/engine-reference/unreal/plugins/pcg.md",
+      "sourceSha256": "85d602c2457c95b8e484393a9ed6950e662a595e23fa8d5eadbb2e2390c0098f",
+      "candidateSha256": "46200047feb842521f578aeb808acfaff9f4fb4f3a0af5f782667e5e919a3227",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/web/VERSION.md",
+      "canonical": "studio/engine-reference/web/VERSION.md",
+      "projectTarget": "docs/engine-reference/web/VERSION.md",
+      "sourceSha256": "bab209fc097443133a6788571f7c8829aab19a00d3e39d641b477d63b1c237e2",
+      "candidateSha256": "bdbacc20c6f5208f6c50df7f7f8fa2a7d3093aa2eafc6cf170ec14ff325e4cd6",
+      "bodyChanged": true,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/web/breaking-changes.md",
+      "canonical": "studio/engine-reference/web/breaking-changes.md",
+      "projectTarget": "docs/engine-reference/web/breaking-changes.md",
+      "sourceSha256": "b85eb829bfef60ae01db3e7cc85f159029dd1348c7cc8bd92b92fb3090d0a30c",
+      "candidateSha256": "d485d6223a0a7abea3261b0dbb6af55d997bc0c4aab6e4b47537355fc890195e",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/web/current-best-practices.md",
+      "canonical": "studio/engine-reference/web/current-best-practices.md",
+      "projectTarget": "docs/engine-reference/web/current-best-practices.md",
+      "sourceSha256": "5e8325198ee808413e1a9abf11d2c6796740e1f5b6e63dcdcf26f38bc37ae623",
+      "candidateSha256": "f80a9992e68814a664927b7cf7942f80f8eb8f54fb355532ca1a8b33d92d3178",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/web/deprecated-apis.md",
+      "canonical": "studio/engine-reference/web/deprecated-apis.md",
+      "projectTarget": "docs/engine-reference/web/deprecated-apis.md",
+      "sourceSha256": "53b2b77643689099030f6d43cd61bb6ada30d7fbba762c7c3e5c6d4e4a57d8ba",
+      "candidateSha256": "c3c026b7635bf762a027124a36677395c13f90da64f49d6dd5fd15ea7e0f1166",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/web/phaser.md",
+      "canonical": "studio/engine-reference/web/phaser.md",
+      "projectTarget": "docs/engine-reference/web/phaser.md",
+      "sourceSha256": "6aa95f1e9f0fa6b6660419809c425ce863721bcd6356f3b2c16b2d85e538c6e9",
+      "candidateSha256": "85c1391bef9947ad7033f3cf7c387fc3818c0d4f08d7434487456a06b5c94160",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/web/pixijs.md",
+      "canonical": "studio/engine-reference/web/pixijs.md",
+      "projectTarget": "docs/engine-reference/web/pixijs.md",
+      "sourceSha256": "f772e3973cdcc1e0bc412fe1c32b0dd67ace5bd9425381d9f74347995b62fd88",
+      "candidateSha256": "601fb410510e81966d89b35f7d7e5e8e3a783783b6b2b45e541ac80ddcb7ccc2",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    },
+    {
+      "source": "docs/engine-reference/web/threejs.md",
+      "canonical": "studio/engine-reference/web/threejs.md",
+      "projectTarget": "docs/engine-reference/web/threejs.md",
+      "sourceSha256": "1cc64612b744fc9094a1f3a40dd603c4a72d2669a94550f70e838ae9e514090b",
+      "candidateSha256": "c8daf37d4cb9e5b59d423462bde224c57a48b6fadec6a5822d045c2a38d971b2",
+      "bodyChanged": false,
+      "upstreamCommit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a"
+    }
+  ],
+  "resourceCount": 53,
+  "historicalMetadataPreserved": true,
+  "freshEngineFactsVerified": false,
+  "candidateManifest": {
+    "path": "/private/tmp/game-studio-engine-references-revision-yi3b4b_q/SHA256SUMS",
+    "sha256": "5bc0c694af73629818c2328ca0e4f3794a03ffc4dc1482eee332c6c38981ae39"
+  },
+  "independentReview": {
+    "path": "/private/tmp/game-studio-reference-revision-review-f5hsyn5t/review.json",
+    "sha256": "679474f6c8400e8c630fb47787b8872deabcd6d0588681d04dae1b6ad63013cb"
+  },
+  "retainedRed": {
+    "path": "/private/tmp/game-studio-engine-references-revision-yi3b4b_q/revision-red.log",
+    "sha256": "14dfd690b3090b48c3f6c3c70ad812781726f27a4d3df337e82c9983358389ec"
+  },
+  "reviewFixes": [
+    "Require bundled VERSION before planning any copy",
+    "Reject unrelated historical Web table as current pin",
+    "Use fileURLToPath in wrapper tests",
+    "Use Windows directory junctions in portable tests"
+  ],
+  "focusedRoot": {
+    "node24": {
+      "pass": 21,
+      "fail": 0,
+      "skip": 0,
+      "log": {
+        "path": "/private/tmp/game-studio-reference-integrated24.log",
+        "sha256": "69a4c170d24b67c47afd91f2e8cd47f14f2f3d7e64936b413c6ce52321a478d7"
+      }
+    }
+  },
+  "integrated": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS",
+    "fullTests": {
+      "node24": {
+        "pass": 496,
+        "fail": 0,
+        "skip": 0
+      },
+      "node26": {
+        "pass": 496,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    "package": "PASS: actual npm install and project restore; both installed runtimes exercise the helpers",
+    "logs": {
+      "typecheck": {
+        "path": "/private/tmp/game-studio-coherence-reference-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      "content": {
+        "path": "/private/tmp/game-studio-coherence-reference-content.log",
+        "sha256": "7747b9ca37f5e28dc44a5feba5528ae2ac94362ad05996ab093071e1dc9d000d"
+      },
+      "pack": {
+        "path": "/private/tmp/game-studio-coherence-reference-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      },
+      "full24": {
+        "path": "/private/tmp/game-studio-coherence-reference-full24.log",
+        "sha256": "59c9bcbefd559988cc7ce1c3910c04367dfd97756448636de2750b11dc7b1765"
+      },
+      "full26": {
+        "path": "/private/tmp/game-studio-coherence-reference-full26.log",
+        "sha256": "ca3c9be3e7c545d31ce83adefd6f63e85e9274e10b863aa84bbfb16c9050d081"
+      }
+    }
+  },
+  "installedPackage": {
+    "runtimes": [
+      "global npm installation",
+      "project restored archive"
+    ],
+    "engines": [
+      "Godot",
+      "Unity",
+      "Unreal",
+      "Web"
+    ],
+    "projects": 8,
+    "operations": [
+      "side-effect-free preview",
+      "actual copy",
+      "repeat no-op",
+      "source-exact recursive content comparison",
+      "static coherence JSON and text"
+    ],
+    "all53ResourcesCompared": true,
+    "configBytesPreserved": true,
+    "networkEngineInstallation": false
+  },
+  "limits": [
+    "Initial copy only. Existing partial/empty directories stay preserved; refresh and upgrade require actual source research.",
+    "Known file before-images are guarded, not whole-directory exclusivity against external writers.",
+    "Historical snapshot does not prove installed engine, fresh version facts or S051 native workflow.",
+    "These additions need their own Windows/macOS/Linux CI."
+  ]
+}

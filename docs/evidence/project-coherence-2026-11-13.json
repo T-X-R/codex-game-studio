@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-13",
+  "scope": "Source-derived project consistency observations, not full setup-engine acceptance",
+  "status": "PASS_SCOPED",
+  "sourceContracts": {
+    ".claude/scripts/project-coherence.sh": "4e77559b6954e83509309deec73dcaa6e59aaa5b23dfc2088b1b6b220f7d5b79",
+    ".claude/skills/setup-engine/references/8-verify.md": "cc0d97051177e32d715816380898f54788283716929ec53cd8f383e564a982b4"
+  },
+  "canonicalFiles": {
+    "toolkit/src/project-coherence.ts": "cb7e716de1ac5988caaa9ca2773df2bac6f4c349ee22b75bc5ac7f8e5645ef97",
+    "studio/scripts/project-coherence.mjs": "7c9a74acc58d6a73add4e2c858ad34bec9d671afcdef646775b032382436e18d",
+    "toolkit/test/project-coherence.test.mjs": "17ce57e39cecd516e4177e275a9620e9da87f4a60f479ca1e4dd47890c1e3ddf",
+    "studio-tests/helpers/project-coherence-codex.md": "b1cb1ce7b40153fc945b9b9982d8e3874f19504152dd591f22ee91496768031d"
+  },
+  "review": "Root read full implementation, wrapper, contract and all 28 behavior tests; reviewed frozen independent corrections before integration.",
+  "candidateManifest": {
+    "path": "/private/tmp/game-studio-coherence-review.kbsPbw/frozen-web-table/manifest.json",
+    "sha256": "19872311795ba2dcf92c4ba5b6685b77b5f1a7176344745c9f5048f17c9895cd"
+  },
+  "retainedRegressionEvidence": [
+    {
+      "path": "/private/tmp/game-studio-coherence-review.kbsPbw/frozen-web-table/regression-red.log",
+      "sha256": "22bcd6f179751cf2006aafa122ddec971b34ab71e1d811090ad19cb65d7387da"
+    },
+    {
+      "path": "/private/tmp/game-studio-coherence-review.kbsPbw/frozen-web-table/web-table-red.log",
+      "sha256": "024ec19d3b58e860a8996607bf380b731653d4eb62bf501ce5dd8756fa8ddbac"
+    }
+  ],
+  "reviewFixes": [
+    "Only determinate version literals establish series agreement",
+    "Shared Markdown fence/comment visibility",
+    "Malformed duplicate INI targets remain unknown",
+    "Blank commands never select example defaults",
+    "Actual five-column Web reference table selects current Vite pin"
+  ],
+  "focused": {
+    "node24": {
+      "pass": 28,
+      "log": {
+        "path": "/private/tmp/game-studio-coherence-integrated24.log",
+        "sha256": "f2124a01c33f696af81f85a0296fe549ed54a3579e0ec905fa70c93ab95ae555"
+      }
+    },
+    "node26": {
+      "pass": 28,
+      "log": {
+        "path": "/private/tmp/game-studio-coherence-integrated26.log",
+        "sha256": "741fbff8a8fe187b8d8e20d7e6c09d6bff50dfa14f4a4b53b8e447ffaf3bf619"
+      }
+    }
+  },
+  "integrated": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "content": "PASS",
+    "fullTests": {
+      "node24": {
+        "pass": 496,
+        "fail": 0,
+        "skip": 0
+      },
+      "node26": {
+        "pass": 496,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    "package": "PASS: actual npm install and project restore; both installed runtimes exercise the helpers",
+    "logs": {
+      "typecheck": {
+        "path": "/private/tmp/game-studio-coherence-reference-typecheck.log",
+        "sha256": "dd4143c79cb92fd5c5746d81f752b29a811758992c6c0a284eddfe25b160f34b"
+      },
+      "content": {
+        "path": "/private/tmp/game-studio-coherence-reference-content.log",
+        "sha256": "7747b9ca37f5e28dc44a5feba5528ae2ac94362ad05996ab093071e1dc9d000d"
+      },
+      "pack": {
+        "path": "/private/tmp/game-studio-coherence-reference-pack.log",
+        "sha256": "5b65ce45d47f4e3970c844d08cbcc8cd87e9983888d062c9c64638d52fc34b38"
+      },
+      "full24": {
+        "path": "/private/tmp/game-studio-coherence-reference-full24.log",
+        "sha256": "59c9bcbefd559988cc7ce1c3910c04367dfd97756448636de2750b11dc7b1765"
+      },
+      "full26": {
+        "path": "/private/tmp/game-studio-coherence-reference-full26.log",
+        "sha256": "ca3c9be3e7c545d31ce83adefd6f63e85e9274e10b863aa84bbfb16c9050d081"
+      }
+    }
+  },
+  "liveGodot": {
+    "evidence": {
+      "path": "/private/tmp/game-studio-coherence-live-oNZxcs/evidence.json",
+      "sha256": "9c75f698671e27c67cab0bc1a1eab1ea227228ae23776d27a1c00a50469546ff"
+    },
+    "actualVersion": "4.7.2.stable.official.ed1daf0bf",
+    "processCount": 1,
+    "argv": [
+      "--version"
+    ],
+    "defaultStaticProbeCount": 0,
+    "projectFilesPreserved": true,
+    "importAssessed": false
+  },
+  "limits": [
+    "Major.minor observations are not exact patch import, rendering or game quality acceptance.",
+    "Real Unity/Unreal editor execution and full Codex host workflow not assessed.",
+    "Current source needs its own exact-head CI; earlier head does not cover these additions.",
+    "Known lexical, metadata-bound and command-inspection limits are recorded in helper contract."
+  ]
+}
