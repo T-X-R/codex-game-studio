@@ -901,7 +901,8 @@ skills:
     priority: low
     category: utility
     target: .agents/skills/game-studio-test-setup/SKILL.md
-    migration_state: pending
+    migration_state: partial
+    codex_spec: studio-tests/skills/utility/test-setup-codex.md
 
   - name: test-helpers
     spec: studio-tests/skills/utility/test-helpers.md
