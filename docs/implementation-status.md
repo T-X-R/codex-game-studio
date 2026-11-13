@@ -6,6 +6,13 @@ The owner authorized implementation and chose GitHub owner `T-X-R`, repository
 
 ## Implemented and exercised
 
+- The integrated `984f071` CI exposed a [Windows test-fixture environment leak](evidence/page-shot-windows-fixture-2026-11-13.json):
+  the test removed `PROGRAMFILES` but retained `ProgramFiles`, so normal discovery
+  selected installed Chrome. The fixture now removes case aliases before setting
+  its isolated PATH/cache; the original assertion and product code are unchanged.
+  Node 24/26 each pass the 14 focused checks. The old failure is retained; native
+  Windows acceptance requires the corrected head's CI result.
+
 - The [engine settings/mirror](evidence/engine-settings-mirror-2026-11-13.json),
   [four Web starters](evidence/web-starters-2026-11-13.json) and
   [plain page capture](evidence/page-shot-2026-11-13.json) foundations are integrated.

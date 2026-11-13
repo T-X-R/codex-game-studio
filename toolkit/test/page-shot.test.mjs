@@ -139,8 +139,11 @@ test('automatic Windows PATH discovery includes executable suffixes without requ
   const script = `Object.defineProperty(process, 'platform', { value: 'win32' });
     const { findBrowser } = await import(${JSON.stringify(module)});
     console.log(await findBrowser());`;
-  const env = { ...process.env, PATH: root, PLAYWRIGHT_BROWSERS_PATH: join(root, 'empty-cache') };
-  for (const key of ['GAME_STUDIO_BROWSER', 'PROGRAMFILES', 'PROGRAMFILES(X86)', 'LOCALAPPDATA']) delete env[key];
+  // A copied environment is a plain object: deleting PROGRAMFILES does not remove
+  // ProgramFiles. Windows resolves those aliases again when the child starts.
+  const isolated = new Set(['PATH', 'PLAYWRIGHT_BROWSERS_PATH', 'GAME_STUDIO_BROWSER', 'PROGRAMFILES', 'PROGRAMFILES(X86)', 'LOCALAPPDATA']);
+  const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => !isolated.has(key.toUpperCase())));
+  Object.assign(env, { PATH: root, PLAYWRIGHT_BROWSERS_PATH: join(root, 'empty-cache') });
   const run = spawnSync(process.execPath, ['--input-type=module', '-e', script], { env, encoding: 'utf8' });
   assert.equal(run.status, 0, run.stderr);
   assert.equal(run.stdout.trim(), join(root, 'msedge.exe'));
