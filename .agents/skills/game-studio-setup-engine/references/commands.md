@@ -45,9 +45,15 @@ Godot smoke is a boot check: exit0 may still contain SCRIPT ERROR. Without
 run/main_scene it may wait indefinitely; do not run it as a test of a scene that
 does not exist, and always bound execution. Headless import also needs log
 inspection. Source `--check-only` is not a complete parse check for scripts
-referencing autoloads. A specialized project parse helper must actually be
-installed before claiming that coverage; no retained-source path is executable
-runtime documentation.
+referencing autoloads. Resolve `studio/scripts/godot-parse-check.gd` through the
+pinned runtime and use the returned absolute path with the selected editor:
+`godot --headless --path . -s "<resolved-path>" -- res://<changed-script>.gd`.
+This retains the source script-loading check after autoload registration: 0 all
+supplied scripts load, 1 any fails, 2 no arguments. Run only under authorized
+project execution, with a bounded process and owned log path; autoloads and script
+initialization can execute code. Keep errors even when another script loads.
+This is not a whole-project, gameplay or .NET build verdict. No migration-source
+path is used by the installed workflow.
 
 ## Unity
 

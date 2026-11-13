@@ -256,6 +256,9 @@ try {
     await assert.rejects(readFile(join(existingWeb, 'shot/report.json')), { code: 'ENOENT' });
   }
   for (const [runtime, entry] of [['global', globalCli], ['restored', launcher]]) {
+    const parseHelper = command(entry, 'resource', 'path', 'studio/scripts/godot-parse-check.gd', '--project', project).data.path;
+    assert.deepEqual(await readFile(parseHelper), await readFile(join(packageRoot, '../studio/scripts/godot-parse-check.gd')));
+    if (runtime === 'restored') assert.ok(parseHelper.startsWith(join(project, '.game-studio/node_modules')));
     const referenceHelper = command(entry, 'resource', 'path', 'studio/scripts/engine-references.mjs', '--project', project).data.path;
     const coherenceHelper = command(entry, 'resource', 'path', 'studio/scripts/project-coherence.mjs', '--project', project).data.path;
     for (const [helper, name] of [[referenceHelper, 'engine-references'], [coherenceHelper, 'project-coherence']]) {

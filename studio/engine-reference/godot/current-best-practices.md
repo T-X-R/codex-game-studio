@@ -224,12 +224,15 @@ Observed on Godot 4.6.1 with gdUnit4 6.1.3, and the exits again on 4.7.2 with
   4.6.1 did not crash in 4 runs.
 - `--check-only` with `-s <file>` exits 1 on valid code that names an autoload
   (`Identifier not found`), and `--import` / `--quit-after` exit 0 on a parse
-  error — neither is a parse check. Upstream used a separate
-  `godot-parse-check.gd` runner (exit 1 when a script does not load). That
-  runner is not installed by this Codex bundle; no equivalent parse-acceptance
-  command is claimed. Consult the installed validation capabilities and report
-  missing parse coverage explicitly. The original recipe remains in the
-  upstream source linked above.
+  error — neither is a parse check. Resolve the installed resource
+  `studio/scripts/godot-parse-check.gd`, then run its returned absolute path with
+  the selected editor: `godot --headless --path . -s "<resolved-path>" -- res://<file>.gd`.
+  The retained upstream runner exits 1 when a supplied script cannot load or
+  instantiate, and 2 for no arguments. It starts project autoloads, so use
+  authorized project execution with bounded time and retained engine logs.
+  This does not certify a whole game or .NET compilation. The original recipe
+  remains in the upstream source linked above; these installation instructions
+  do not refresh the historical engine facts or verification dates.
 - On Windows, a quoted full path to the editor (`"C:/Program Files/Godot/…exe"`)
   runs from Git Bash with its stdout and exit code intact.
 

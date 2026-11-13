@@ -74,7 +74,9 @@ work completed with actual limitations, never a runnable game/QA certification.
   source skip-around-existing behavior; no partial mixed-version starter.
 - Page-shot output is a new evidence directory; installed browser env is
   GAME_STUDIO_BROWSER. Screenshot existence/PNG validity is not visual approval.
-- Source engine-specific parse checker/three-vendoring and unmigrated native
+- The source-derived Godot script-loading checker is an installed resource;
+  actual selected-script loading does not prove whole-game or .NET correctness.
+  Source three-vendoring and unmigrated native
   specialists/test-setup/sprint-plan/propagate-design-change remain explicit
   unavailable capabilities, not fake equivalents. This does not shrink their
   domain responsibilities or mark them verified.
