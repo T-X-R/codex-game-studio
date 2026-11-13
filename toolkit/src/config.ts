@@ -100,6 +100,7 @@ export async function readSettings(root: string, requested?: string[], options: 
   const local = flatten(await readConfig(join(root, 'project.local.yaml')));
   const warnings: string[] = [];
   const preferences = await readLegacyPreferences(root);
+  warnings.push(...preferences.warnings ?? []);
   for (const key of Object.keys(local)) {
     if (!localKeys.has(key) && key !== 'schema_version' && !key.startsWith('framework.')) warnings.push(`${key} in project.local.yaml is not locally overridable; ignored`);
   }
@@ -132,7 +133,14 @@ export async function readSettings(root: string, requested?: string[], options: 
       [key.startsWith('specialists.') && Object.hasOwn(rawProject, 'specialists') ? undefined : preferences.values[key], preferences.source],
       [derived[key], `rigor:${rigor}`], [defaults[key], 'default'],
     ];
-    const selected = candidates.find(([value, source]) => valid(key, value, source));
+    const normalized = candidates.map(([value, source]) => {
+      if (key === 'engine.name' && typeof value === 'string' && /^UE5$/i.test(value)) {
+        warnings.push(`Normalized legacy UE5 to Unreal from ${source}; source file is unchanged`);
+        return ['Unreal', source] as const;
+      }
+      return [value, source] as const;
+    });
+    const selected = normalized.find(([value, source]) => valid(key, value, source));
     settings[key] = selected ? { value: selected[0]!, source: selected[1] } : { value: null, source: 'unset' };
     if (selected?.[1] === '.claude/docs/technical-preferences.md') warnings.push('Using legacy technical preferences; migrate the project-owned record to docs/technical-preferences.md');
   }

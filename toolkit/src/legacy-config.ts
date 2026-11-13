@@ -4,7 +4,10 @@ import { exists } from './project.js';
 import type { Json } from './config.js';
 
 // Legacy files are optional import inputs, never bundled runtime dependencies.
-export async function readLegacyPreferences(root: string) {
+export async function readLegacyPreferences(root: string): Promise<{
+  values: Record<string, Json>; source: string; warnings?: string[];
+  input: { methods: string | null; primary: string | null };
+}> {
   for (const source of ['docs/technical-preferences.md', '.claude/docs/technical-preferences.md']) {
     if (!(await exists(join(root, source)))) continue;
     const content = await readFile(join(root, source), 'utf8');
@@ -14,11 +17,13 @@ export async function readLegacyPreferences(root: string) {
       if (value && !value.startsWith('[') && !labels.has(match[1]!)) labels.set(match[1]!, value);
     }
     const values: Record<string, Json> = {};
+    const warnings: string[] = [];
     const engine = labels.get('Engine');
     if (engine) {
-      const match = /^(Godot|Unity|Unreal(?: Engine)?|Web)(?:\s+(\d\S*))?$/i.exec(engine);
+      const match = /^(Godot|Unity|Unreal(?: Engine)?|UE5|Web)(?:\s+(\d\S*))?$/i.exec(engine);
       if (match) {
-        values['engine.name'] = ['Godot', 'Unity', 'Unreal', 'Web'].find(name => match[1]!.toLowerCase().startsWith(name.toLowerCase()))!;
+        values['engine.name'] = /^UE5$/i.test(match[1]!) ? 'Unreal' : ['Godot', 'Unity', 'Unreal', 'Web'].find(name => match[1]!.toLowerCase().startsWith(name.toLowerCase()))!;
+        if (/^UE5$/i.test(match[1]!)) warnings.push(`Normalized legacy UE5 to Unreal from ${source}; source file is unchanged`);
         if (match[2]) values['engine.version'] = match[2];
       }
     }
@@ -28,7 +33,7 @@ export async function readLegacyPreferences(root: string) {
     }
     const additional = labels.get('Additional Specialists');
     if (additional && additional.toLowerCase() !== 'none') values['specialists.additional'] = additional.split(',').map(value => value.trim());
-    return { values, source, input: { methods: labels.get('Input Methods') ?? null, primary: labels.get('Primary Input') ?? null } };
+    return { values, source, warnings, input: { methods: labels.get('Input Methods') ?? null, primary: labels.get('Primary Input') ?? null } };
   }
-  return { values: {} as Record<string, Json>, source: 'unset', input: { methods: null, primary: null } };
+  return { values: {} as Record<string, Json>, source: 'unset', warnings: [] as string[], input: { methods: null, primary: null } };
 }
