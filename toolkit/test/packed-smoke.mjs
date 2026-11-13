@@ -76,7 +76,7 @@ try {
     const id = `.agents/skills/game-studio-map-systems/${path}`;
     assert.equal(await readFile(join(project, id), 'utf8'), await readFile(join(packageRoot, '..', id), 'utf8'));
   }
-  for (const skill of ['design-system', 'design-review', 'architecture-decision', 'create-architecture', 'architecture-review', 'next-step', 'sprint-status', 'story-done', 'setup-engine']) {
+  for (const skill of ['design-system', 'design-review', 'architecture-decision', 'create-architecture', 'architecture-review', 'next-step', 'sprint-status', 'story-done', 'setup-engine', 'test-setup']) {
     const path = `.agents/skills/game-studio-${skill}`;
     const source = join(packageRoot, '..', path);
     const expected = [];
@@ -154,14 +154,16 @@ try {
   const restoredGodotRole = command(launcher, 'resource', 'path', godotRole, '--project', project).data.path;
   assert.ok(restoredGodotRole.startsWith(join(project, '.game-studio/node_modules')));
   assert.deepEqual(await readFile(restoredGodotRole), await readFile(join(packageRoot, '..', godotRole)));
-  const setupId = '.agents/skills/game-studio-setup-engine';
-  const restoredSetup = JSON.parse(execute(launcher, ['resource', 'path', setupId, '--json'], project)).data.path;
-  assert.ok(restoredSetup.startsWith(join(project, '.game-studio/node_modules')));
-  const setupFiles = (await readdir(restoredSetup, { recursive: true, withFileTypes: true })).filter(file => file.isFile());
-  assert.equal(setupFiles.length, 14);
-  for (const file of setupFiles) {
-    const name = relative(restoredSetup, join(file.parentPath, file.name));
-    assert.deepEqual(await readFile(join(restoredSetup, name)), await readFile(join(packageRoot, '..', setupId, name)));
+  for (const [skill, count] of [['setup-engine', 14], ['test-setup', 7]]) {
+    const setupId = `.agents/skills/game-studio-${skill}`;
+    const restoredSetup = JSON.parse(execute(launcher, ['resource', 'path', setupId, '--json'], project)).data.path;
+    assert.ok(restoredSetup.startsWith(join(project, '.game-studio/node_modules')));
+    const setupFiles = (await readdir(restoredSetup, { recursive: true, withFileTypes: true })).filter(file => file.isFile());
+    assert.equal(setupFiles.length, count);
+    for (const file of setupFiles) {
+      const name = relative(restoredSetup, join(file.parentPath, file.name));
+      assert.deepEqual(await readFile(join(restoredSetup, name)), await readFile(join(packageRoot, '..', setupId, name)));
+    }
   }
   const receipts = JSON.parse(execute(launcher, ['resource', 'path', 'studio/scripts/review-receipts.mjs', '--json'], project)).data.path;
   assert.ok(receipts.startsWith(join(project, '.game-studio/node_modules')));
