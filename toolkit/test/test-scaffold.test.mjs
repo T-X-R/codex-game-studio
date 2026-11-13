@@ -3,11 +3,11 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, writeFile, readFile, readdir, symlink, lstat } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { spawnSync } from 'node:child_process';
 
 const runtime = fileURLToPath(new URL('../dist/test-scaffold.js', import.meta.url));
-const call = async (...args) => (await import(runtime)).scaffoldTests(...args);
+const call = async (...args) => (await import(pathToFileURL(runtime).href)).scaffoldTests(...args);
 async function fixture(engine, extra = '', files = {}) {
   const root = await mkdtemp(join(tmpdir(), 'test scaffold '));
   await writeFile(join(root, 'project.yaml'), `engine:\n  name: ${engine}\n  version: ${engine === 'Godot' ? '4.7.2' : engine === 'Unity' ? '6000.3.1f1' : '5.7.1'}\n${extra}`);
