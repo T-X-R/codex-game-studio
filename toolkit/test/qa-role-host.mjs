@@ -18,9 +18,10 @@ import { handoffScenarios } from './fixtures/role-handoff-case.mjs';
 import { directorScenarios } from './fixtures/director-cases.mjs';
 import { uxDesignerScenarios } from './fixtures/ux-designer-cases.mjs';
 import { accessibilityScenarios } from './fixtures/accessibility-cases.mjs';
+import { analyticsScenarios } from './fixtures/analytics-engineer-cases.mjs';
 
 const scenarioName = process.argv[2] ?? 'audit';
-const cases = { ...scenarios, ...leadScenarios, ...designerScenarios, ...programmerScenarios, ...gameplayScenarios, ...handoffScenarios, ...directorScenarios, ...uxDesignerScenarios, ...accessibilityScenarios };
+const cases = { ...scenarios, ...leadScenarios, ...designerScenarios, ...programmerScenarios, ...gameplayScenarios, ...handoffScenarios, ...directorScenarios, ...uxDesignerScenarios, ...accessibilityScenarios, ...analyticsScenarios };
 if (process.argv.length > 3 || (scenarioName !== 'godot' && !Object.hasOwn(cases, scenarioName))) throw new Error(`Choose ${[...Object.keys(cases), 'godot'].join(', ')}`);
 const scenario = scenarioName === 'godot' ? await godotScenario() : cases[scenarioName];
 const roleName = scenario.role ?? 'game-studio-qa-tester';
